@@ -1,0 +1,32 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729025500-0782747> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Alessio Miaschi"@en ;
+    ns1:affiliation <https://w3id.org/atlas/1728999602-7282345>,
+        <https://w3id.org/atlas/1729013958-5402913> ;
+    ns1:identifier <https://orcid.org/0000-0002-0736-5411> ;
+    ns1:name "Alessio Miaschi"@en ;
+    ns1:sameAs <http://www.wikidata.org/entity/Q109778119> .
+
+<https://w3id.org/atlas/1729025500-0782747/> rdfs:label "Alessio Miaschi"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Alessio Miaschi"@en ;
+    prov:generatedAtTime "2024-10-17T22:18:10.618537"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q109778119> rdfs:label "Alessio Miaschi"^^xsd:string .
+
+<https://w3id.org/atlas/1728999602-7282345> rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+<https://w3id.org/atlas/1729013958-5402913> rdfs:label "Istituto di Linguistica Computazionale"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

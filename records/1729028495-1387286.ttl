@@ -1,0 +1,22 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729028495-1387286> a <http://purl.org/spar/fabio/ComputerProgram> ;
+    rdfs:label "Codice Pelavicino Digital Edition - EVT viewer (Computer Program)"@en ;
+    ns1:description "The EVT software (v 1.3) enables access to the XML content of the Codice Pelavicino Digital Edition, allowing users to view both the manuscript’s photographic reproductions and the transcribed text. It also includes added features such as a regesto (summary) and commentary on the text."@en ;
+    ns1:isBasedOn <https://w3id.org/atlas/1729010538-925614> ;
+    ns1:name "Codice Pelavicino Digital Edition - EVT viewer (Computer Program)"@en .
+
+<https://w3id.org/atlas/1729028495-1387286/> rdfs:label "Codice Pelavicino Digital Edition - EVT viewer (Computer Program)"@en ;
+    ns2:currentStatus "not modified"^^xsd:string ;
+    ns1:name "Codice Pelavicino Digital Edition - EVT viewer (Computer Program)"@en ;
+    prov:generatedAtTime "2024-10-15T22:05:59.002302"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> .
+
+<https://w3id.org/atlas/1729010538-925614> rdfs:label "Edition Visualization Technology (EVT)"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

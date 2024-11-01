@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729199229-7707717> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Renato Moro"@en ;
+    ns1:affiliation <https://w3id.org/atlas/1729199300-5442939> ;
+    ns1:identifier <https://orcid.org/0000-0002-2388-8431> ;
+    ns1:name "Renato Moro"@en ;
+    ns1:sameAs <http://www.wikidata.org/entity/Q3932730> .
+
+<https://w3id.org/atlas/1729199229-7707717/> rdfs:label "Renato Moro"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Renato Moro"@en ;
+    prov:generatedAtTime "2024-10-17T22:52:36.242132"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q3932730> rdfs:label "Renato Moro"^^xsd:string .
+
+<https://w3id.org/atlas/1729199300-5442939> rdfs:label "Roma Tre University"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

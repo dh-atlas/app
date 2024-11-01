@@ -1,0 +1,71 @@
+{
+    "charts": [
+        {
+            "id": "1",
+            "type": "counter",
+            "title": "Some random counters",
+            "description": "These counters can be set by members through SPARQL queries. These counters can be set by members through SPARQL queries. These counters can be set by members through SPARQL queries.",
+            "counters": [
+                {
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology/> SELECT (COUNT(DISTINCT ?entity) as ?count) WHERE { ?entity a ?class . }",
+                    "title": "Entities"
+                },
+                {
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology/> SELECT (COUNT(DISTINCT ?project) as ?count) WHERE { ?project a <http://xmlns.com/foaf/0.1/Agent>; a <https://schema.org/ResearchProject> . }",
+                    "title": "Research Projects"
+                },
+                {
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology/> SELECT (COUNT(DISTINCT ?product) as ?count) WHERE { ?product a <https://schema.org/Dataset> . }",
+                    "title": "Research Products"
+                },
+                {
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology/> SELECT (COUNT(DISTINCT ?organization) as ?count) WHERE { ?organization a <http://xmlns.com/foaf/0.1/Agent>; a <https://schema.org/Organization> . }",
+                    "title": "Organizations"
+                },
+                {
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology/> SELECT (COUNT(DISTINCT ?person) as ?count) WHERE { ?person a <http://xmlns.com/foaf/0.1/Agent>; a <https://schema.org/Person> . }",
+                    "title": "Researchers"
+                }
+
+            ]
+        },
+        {
+            "id": "2",
+            "type": "chart",
+            "chart_type": "bar",
+            "title": "A random bar-chart",
+            "description": "This a random bar-chart to show how bar-charts look like",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?authorName (COUNT(DISTINCT ?painting) AS ?numPaintings) \nWHERE { ?painting a <http://www.cidoc-crm.org/cidoc-crm/E65_Creation> . \n?painting <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> ?author . \n?author a <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .\n?author rdfs:label ?authorLabel . \nBIND(STR(?authorLabel) AS ?authorName) \n} \nGROUP BY ?authorName \nORDER BY ?authorName",
+            "x-axis": "?authorName,Authors",
+            "y-axis": "?numPaintings,Creations",
+            "categorical": "x",
+            "quantitative": "y"
+        },
+        {
+            "id": "3",
+            "type": "chart",
+            "chart_type": "bar",
+            "title": "A random sorted bar-chart",
+            "description": "This a random bar-chart to show how sorted bar-charts look like",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?authorName (COUNT(DISTINCT ?painting) AS ?numPaintings) \nWHERE { ?painting a <http://www.cidoc-crm.org/cidoc-crm/E65_Creation> . \n?painting <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> ?author . \n?author a <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .\n?author rdfs:label ?authorLabel . \nBIND(STR(?authorLabel) AS ?authorName) \n} \nGROUP BY ?authorName \nORDER BY ?authorName",
+            "x-axis": "?authorName,Authors",
+            "y-axis": "?numPaintings,Creations",
+            "sorted": "y",
+            "categorical": "x",
+            "quantitative": "y"
+        },
+        {
+            "id": "4",
+            "type": "chart",
+            "chart_type": "bar",
+            "title": "A random sorted bar-chart",
+            "description": "This a random bar-chart to show how y-sorted bar-charts look like",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?authorName (COUNT(DISTINCT ?painting) AS ?numPaintings) \nWHERE { ?painting a <http://www.cidoc-crm.org/cidoc-crm/E65_Creation> . \n?painting <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> ?author . \n?author a <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .\n?author rdfs:label ?authorLabel . \nBIND(STR(?authorLabel) AS ?authorName) \n} \nGROUP BY ?authorName \nORDER BY ?authorName",
+            "x-axis": "?numPaintings,Creations",
+            "y-axis": "?authorName,Authors",
+            "sorted": "x",
+            "categorical": "y",
+            "quantitative": "x"
+        }
+    ]
+}

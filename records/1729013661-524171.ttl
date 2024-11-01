@@ -1,0 +1,26 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729013661-524171> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Federica Spinelli"@en ;
+    ns1:affiliation <https://w3id.org/atlas/1728999602-7282345> ;
+    ns1:identifier <https://orcid.org/0000-0002-2195-3930> ;
+    ns1:name "Federica Spinelli"@en .
+
+<https://w3id.org/atlas/1729013661-524171/> rdfs:label "Federica Spinelli"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Federica Spinelli"@en ;
+    prov:generatedAtTime "2024-10-17T22:13:37.168871"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<https://w3id.org/atlas/1728999602-7282345> rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

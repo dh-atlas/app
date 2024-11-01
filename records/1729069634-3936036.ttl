@@ -1,0 +1,39 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729069634-3936036> a <http://purl.org/spar/fabio/ComputerProgram> ;
+    rdfs:label "LiLa Lemma Bank Query Interface"@en ;
+    ns1:additionalType <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> ;
+    ns1:description "The Lemma Bank Query Interface of LiLa is a friendly application that allows users to search the collection of Latin lemmas, which connects linguistic resources using Linked Data technology. By selecting and combining different query modules (e.g., PoS, Gender), users can refine their searches. Results can be downloaded as a CSV file or viewed as RDF/SPARQL queries. Users can also view detailed lemma descriptions or explore them through a graph interface for more in-depth analysis."@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/informationRetrieval>,
+        <https://vocabs.dariah.eu/tadirah/knowledgeExtraction>,
+        <https://vocabs.dariah.eu/tadirah/querying> ;
+    ns1:isBasedOn <https://w3id.org/atlas/1729038110-2824712> ;
+    ns1:name "LiLa Lemma Bank Query Interface"@en ;
+    ns1:url <https://lila-erc.eu/query/> ;
+    schema:usageInfo <https://lila-erc.eu/query/> .
+
+<https://w3id.org/atlas/1729069634-3936036/> rdfs:label "LiLa Lemma Bank Query Interface"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "LiLa Lemma Bank Query Interface"@en ;
+    prov:generatedAtTime "2024-10-18T17:07:51.703798"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/informationRetrieval> skos:prefLabel "Information Retrieval - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/knowledgeExtraction> skos:prefLabel "Knowledge Extraction - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/1729038110-2824712> rdfs:label "LiLa: Linking Latin - SPARQL endpoint"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

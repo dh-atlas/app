@@ -1,0 +1,31 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1730216280-3306644> a schema:Dataset ;
+    rdfs:label "Product"@en ;
+    dcterms:type <http://purl.org/spar/fabio/Anthology> ;
+    ns1:additionalType <http://purl.org/spar/fabio/Anthology> ;
+    ns1:creator <https://w3id.org/atlas/1730221548-813> ;
+    ns1:name "Product"@en ;
+    ns1:publisher <https://w3id.org/atlas/1730221565-221> .
+
+<https://w3id.org/atlas/1730216280-3306644/> rdfs:label "Product"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Product"@en ;
+    prov:generatedAtTime "2024-10-29T17:07:43.545204"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<https://w3id.org/atlas/1730221548-813> rdfs:label "Organization"^^xsd:string .
+
+<https://w3id.org/atlas/1730221565-221> rdfs:label "Person"^^xsd:string .
+
+<http://purl.org/spar/fabio/Anthology> rdfs:label "Text Collection"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729030640-1172316> a foaf:Agent,
+        schema:Organization ;
+    rdfs:label "Suor Orsola Benincasa University of Naples"@en ;
+    ns1:identifier <https://ror.org/021k2cy37> ;
+    ns1:location <https://sws.geonames.org/3172394> ;
+    ns1:name "Suor Orsola Benincasa University of Naples"@en ;
+    ns1:sameAs <http://www.wikidata.org/entity/Q3551499> ;
+    ns1:url <http://www.unisob.na.it/> .
+
+<https://w3id.org/atlas/1729030640-1172316/> rdfs:label "Suor Orsola Benincasa University of Naples"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Suor Orsola Benincasa University of Naples"@en ;
+    prov:generatedAtTime "2024-10-17T22:35:52.610870"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q3551499> rdfs:label "Suor Orsola Benincasa University of Naples"^^xsd:string .
+
+<https://sws.geonames.org/3172394> rdfs:label "Naples"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

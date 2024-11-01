@@ -1,0 +1,189 @@
+$def with (user, graphdata, graphID, title, stage, base,properties,is_git_auth,project,knowledge_extractor,inverses_by_class,inverses_by_properties)
+
+$var user = user
+$var is_git_auth = is_git_auth
+$var project = project
+
+<section class="row articleBox" vocab="https://schema.org/" typeof="Thing">
+	<section class="col-md-8 row">
+			<h2 class="articleTitle col-md-12" property="name" xml:lang="$title[1]">$title[0]
+			$if 'modified' in stage:
+				<span>draft</span>
+			</h2>
+			$for field,value in graphdata.items():
+				$ width_class = "col-md-12" if properties[field][1]=="WebsitePreview" else "col-md-5 col-sm-12" if (value and len(value[0]) <= 100) else 'col-md-12'
+				$ width_class += properties[field][2]
+				<section class="info-item $width_class">
+						$if isinstance(value[0],str):
+							<h4 class="articleSubtitle">$field </h4>
+							$if properties[field][1]=="Date" and (value[0].startswith("-") or len(value[0]) == 4):
+								$ value = value[0].replace("-", "") + " B.C." if value[0].startswith("-") else value[0].lstrip('0')
+							$else:
+								$ value = value[0]
+							<p property="$properties[field][0]">$value</p>
+						$elif isinstance(value[0],tuple):
+							<h4 class="articleSubtitle">$field </h4>
+							$for literal in value:
+								<p property="$properties[field][0]" xml:lang="$literal[1]">$literal[0]</p>
+						$else:
+							$if len(value[0][1]) > 0:
+								<h4 class="articleSubtitle">$field </h4>
+								$for uri_value in value:
+									$if uri_value[0].startswith('Q'):
+										<!-- wikidata uri -->
+										<p property="$properties[field][0]">
+											<link property="sameAs" url="http://www.wikidata.org/entity/$uri_value[0]"/>
+											<a class="wikiEntity" target='_blank' href="term-$uri_value[0]">
+												$uri_value[1]
+											</a>
+										</p>
+									$elif isnumeric(uri_value[0]):
+										<!-- geonames uri -->
+										<p property="$properties[field][0]">
+											<link property="sameAs" url="https://sws.geonames.org/$uri_value[0]"/>
+											<a class="geoEntity" target='_blank' href="term-$uri_value[0]">
+												$uri_value[1]
+											</a>
+										</p>
+									$elif uri_value[0].startswith("viaf"):
+										<!-- viaf uri -->
+										<p property="$properties[field][0]">
+											<link property="sameAs" url="http://www.viaf.org/viaf/$uri_value[0][4:]"/>
+											<a class="viafEntity" target='_blank'\
+											 href="term-$uri_value[0][4:]">
+												$uri_value[1]
+											</a>
+										</p>
+									$else:
+										$if 'http' in uri_value[0]:
+											<!-- external uri or external vocabulary terms -->
+											$ here = uri_value[1] if (uri_value[0] != uri_value[1] or (uri_value[0] == uri_value[1] and len(uri_value[0]) <= 30) ) else "link"
+											<p property="$properties[field][0]">
+												$if properties[field][1] == 'Multimedia':
+													<!-- multimedia -->
+													$ format = uri_value[1].split(".")[-1]
+													$if format in ["jpg","jpeg","png","gif","bmp","svg","tiff","ico"]:  
+														<link property="url" url="$uri_value[0]"/>
+														<img src='$uri_value[0]'>
+													$elif format in ["mp3","wav","flac","aac","ogg","wma","m4a","aiff","alac","ape","dts","mid","midi"]:
+														<audio controls><source src='$uri_value[0]''></source></audio>
+													$elif format in ["mp4","mov","avi","mkv","flv","wmv","webm","mpeg","mpg","3gp","rm","rmvb","vob","ts"]:
+														<video controls name='media'><source src='$uri_value[0]'></source></video>
+												$elif properties[field][1] == 'WebsitePreview':
+													<!-- website previews (iframe) -->
+													<link property="url" url="$uri_value[0]"/>
+													<a target='_blank' href="$uri_value[0]">$here</a>
+													$if properties[field][1] == "WebsitePreview":
+														<iframe allow='autoplay' class='col-md-11 iframePreview' src='$uri_value[0]' crossorigin></iframe>
+												$elif properties[field][1] == 'Vocab':
+													$ val = " - ".join(uri_value[1].split(" - ")[:-1])
+													<!-- skos Vocable -->
+													<link property="sameAs" url="$uri_value[0]"/>
+													<a class="skosEntity" target='_blank' href="term-$uri_value[0]">
+														$val
+													</a>
+												$else:
+													<!-- urls -->
+													$if properties[field][3] != "URL":
+														<link property="url" url="$uri_value[0]"/>
+														<a target='_blank' href="term-$uri_value[0]">
+															$here
+														</a>
+													$else:
+														<link property="url" url="$uri_value[0]"/>
+														<a target='_blank' href="$uri_value[0]">
+															$here
+														</a>
+											</p>
+										$else:
+											<!-- local resource -->
+											<p property="$properties[field][0]">
+												<link property="url" url="$base$uri_value[0]"/>
+												<a target='_blank' href="term-$uri_value[0]">$uri_value[1]</a>
+											</p>
+					</section>
+			$if graphID in knowledge_extractor and len(knowledge_extractor[graphID]) > 0:
+				$for field in knowledge_extractor[graphID]:
+					$if len(knowledge_extractor[graphID][field]) > 0:
+						<section class="info-item col-md-5 col-sm-12">
+							<h4 class="articleSubtitle">$knowledge_extractor[graphID+'_view']['field_name'] </h4>
+							$for n in range(len(knowledge_extractor[graphID][field])):
+								$for extracted_keyword in knowledge_extractor[graphID][field][n]["metadata"]["output"]:
+									<p property="$knowledge_extractor[graphID+'_view']['property']">
+										<link property="sameAs" url="$extracted_keyword['uri']['value']"/>
+										<a class="uri" target='_blank' href="/term-$extracted_keyword['uri']['value']">
+											$extracted_keyword['label']['value']
+										</a>
+									</p>
+						</section>
+	</section>
+	<section class="col-md-4 sideBoxes">
+		<section class="biblio">
+			<h3 class="biblio-label">Permalink</h3>
+				<p>$base$graphID</p>
+		</section>
+		<section class="biblio">
+			<h3 class="biblio-label">Would you like to modify this record?</h3>
+				<p>If you already have an account on $project</p>
+				<button type="button" class="btn btn-dark" name="button" onclick="window.location.href='modify-$graphID'">Click here</button>
+		</section>
+	</section>
+	<hr/>
+	<!-- <section class="info-item">
+		<h4 class="articleSubtitle">URI</h4>
+		<span class="small"></span>
+		<p></p>
+	</section> -->
+
+</section>
+$if inverses_by_class != {} and inverses_by_properties != {}:
+	<section class="col-md-12 inverses">
+		<section class="biblio">
+			<h3 class="biblio-label">Incoming properties</h3>
+			<ul class="corners nav nav-tabs mb-3 inverse-properties-tabs">
+				<li class="nav-item" role="presentation">
+					<a class="nav-link dark-nav active" id="template" href="#tab_template">Template</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link dark-nav" id="property" href="#tab_property">Property</a>
+				</li>
+			</ul>
+			<section class="inverse-section" id="inverse-section-template" style="display: block;">
+				$for res_type in inverses_by_class:
+					<section class="inverse-template">
+						<span class="inverse-subtitle">$res_type</span>
+						<br>
+						<section class="inverse-results-container">
+						$for property,results in inverses_by_class[res_type]['results'].items():
+							$ property_url, property_short, property_label = property.split(',')
+							<section class="inverse-property">
+								<span><h4 class="articleSubtitle">$property_label</h4><br><a href="$property_url">$property_short</a></span>
+							</section>
+							<section class="inverse-property">
+								$for result in results:
+									$ result_uri, result_label = result.split(',')
+									<span><label>$result_label</label> <a href="$result_uri"><i class="fas fa-external-link-alt"></i></a></span><br>
+							</section>
+						</section>
+					</section>
+			</section>
+			<section class="inverse-section" id="inverse-section-property" style="display: none;">
+				$for property,results in inverses_by_properties.items():
+					$ property_url, property_short = property.split(',')
+					<section class="inverse-properties">
+						<span class="inverse-subtitle">$property_short</span>
+						<br>
+						<section class="inverse-results-container">
+							<section class="inverse-property">
+								<span><a href="$property_url">$property_short</a></span>
+							</section>
+							<section class="inverse-property">
+								$for result in results:
+									$ result_uri, result_label = result.split(',')
+									<span><label>$result_label</label> <a href="$result_uri"><i class="fas fa-external-link-alt"></i></a></span><br>
+							</section>
+						</section>
+					</section>
+			</section>
+		</section>
+	</section>

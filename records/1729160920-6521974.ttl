@@ -1,0 +1,110 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://www.w3.org/dh-atlas/> .
+@prefix ns3: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729160920-6521974> a schema:Dataset ;
+    rdfs:label "Musisque Deoque (MQDQ)"@en ;
+    dcterms:type <http://purl.org/spar/fabio/Anthology> ;
+    ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-E> ;
+    ns1:additionalType <http://purl.org/spar/fabio/Anthology> ;
+    ns1:citation <https://dx.doi.org/10.30687/mag/2724-3923/2023/07/003>,
+        <https://hdl.handle.net/10278/5030281> ;
+    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns1:contributor <https://w3id.org/atlas/1729012784-159052>,
+        <https://w3id.org/atlas/1729169597-827242>,
+        <https://w3id.org/atlas/1729169710-397222>,
+        <https://w3id.org/atlas/1729169863-3928788>,
+        <https://w3id.org/atlas/1729170068-2115734> ;
+    ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
+    ns1:creator <https://w3id.org/atlas/1729161349-6181638>,
+        <https://w3id.org/atlas/1729169549-7938185>,
+        <https://w3id.org/atlas/1729169645-4338667>,
+        <https://w3id.org/atlas/1729169793-2088108>,
+        <https://w3id.org/atlas/1729169989-2397113>,
+        <https://w3id.org/atlas/1729170113-255162> ;
+    ns1:datePublished "2007-01-01"^^xsd:date ;
+    ns1:description "Musisque Deoque is a digital collection of Latin poetry from its origins to the 7th century, offering not only the texts but also critical apparatus variants. It enables advanced searches by lemma, includes a metrical analysis tool, and provides access to manuscripts with links to digitized versions. The collection also features specialized sections for Carmina Latina Epigraphica and Greek poetry through the Hellenica archive."@en ;
+    ns1:distribution <http://hdl.handle.net/20.500.11752/OPEN-555> ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+        <https://vocabs.dariah.eu/tadirah/contentAnalysis>,
+        <https://vocabs.dariah.eu/tadirah/discovering> ;
+    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ELL>,
+        <http://publications.europa.eu/resource/authority/language/LAT> ;
+    ns1:license <https://projects.dharc.unibo.it/knot/term-lc-C11_Unknown> ;
+    ns1:name "Musisque Deoque (MQDQ)"@en ;
+    ns1:producer <https://w3id.org/atlas/1729170710-624333> ;
+    ns1:publisher <https://w3id.org/atlas/1729012784-159052> ;
+    ns1:size "2300000 tokens"@en ;
+    ns1:url <https://www.mqdq.it/> ;
+    ns2:methodology <https://vocabs.dariah.eu/tadirah/annotating>,
+        <https://vocabs.dariah.eu/tadirah/gathering>,
+        <https://vocabs.dariah.eu/tadirah/structuralAnalysis> ;
+    ns2:servedBy <https://w3id.org/atlas/1729171368-5428727> .
+
+<https://w3id.org/atlas/1729160920-6521974/> rdfs:label "Musisque Deoque (MQDQ)"@en ;
+    ns3:currentStatus "modified"^^xsd:string ;
+    ns1:name "Musisque Deoque (MQDQ)"@en ;
+    prov:generatedAtTime "2024-10-17T13:53:00.495694"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ELL> skos:prefLabel "Greek - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/LAT> skos:prefLabel "Latin - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<https://projects.dharc.unibo.it/knot/term-lc-C11_Unknown> rdfs:label "Unknown"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/annotating> skos:prefLabel "Annotating - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/contentAnalysis> skos:prefLabel "Content Analysis - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/discovering> skos:prefLabel "Discovering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/gathering> skos:prefLabel "Gathering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/structuralAnalysis> skos:prefLabel "Structural Analysis - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/1729161349-6181638> rdfs:label "Luigi Tessarolo"^^xsd:string .
+
+<https://w3id.org/atlas/1729169549-7938185> rdfs:label "Paolo Mastandrea"^^xsd:string .
+
+<https://w3id.org/atlas/1729169597-827242> rdfs:label "University of Calabria"^^xsd:string .
+
+<https://w3id.org/atlas/1729169645-4338667> rdfs:label "Raffaele Perrelli"^^xsd:string .
+
+<https://w3id.org/atlas/1729169710-397222> rdfs:label "University of Parma"^^xsd:string .
+
+<https://w3id.org/atlas/1729169793-2088108> rdfs:label "Gilberto Biondi"^^xsd:string .
+
+<https://w3id.org/atlas/1729169863-3928788> rdfs:label "University of Perugia"^^xsd:string .
+
+<https://w3id.org/atlas/1729169989-2397113> rdfs:label "Loriano Zurli"^^xsd:string .
+
+<https://w3id.org/atlas/1729170068-2115734> rdfs:label "University of Naples Federico II"^^xsd:string .
+
+<https://w3id.org/atlas/1729170113-255162> rdfs:label "Valeria Viparelli"^^xsd:string .
+
+<https://w3id.org/atlas/1729170710-624333> rdfs:label "Musisque Deoque. A digital archive of Latin poetry, from its origins to the Italian Renaissance"^^xsd:string .
+
+<https://w3id.org/atlas/1729171368-5428727> rdfs:label "Musisque Deoque (MQDQ) - Search Interface"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-E> skos:prefLabel "Medieval latin and romance philologies and literatures - ACADEMIC FIELD"^^xsd:string .
+
+<http://purl.org/spar/fabio/Anthology> rdfs:label "Text Collection"^^xsd:string .
+
+<https://w3id.org/atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

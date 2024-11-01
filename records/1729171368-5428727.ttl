@@ -1,0 +1,33 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729171368-5428727> a <http://purl.org/spar/fabio/ComputerProgram> ;
+    rdfs:label "Musisque Deoque (MQDQ) - Search Interface"@en ;
+    ns1:additionalType <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> ;
+    ns1:description "The integrated search system in Musisque Deoque offers two main functions: general search and co-occurrence search. Users can search by words or phrases, specifying proximity and position within verse lines, and can also search by text variants, meter, authors, or works. Co-occurrence search identifies similarities between texts, helping researchers explore intertextual connections by comparing phrases across different poets, even accounting for inflectional variations."@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+        <https://vocabs.dariah.eu/tadirah/discovering> ;
+    ns1:name "Musisque Deoque (MQDQ) - Search Interface"@en ;
+    ns1:url <https://www.mqdq.it/public/ricerca/avanzata> ;
+    schema:usageInfo <https://www.mqdq.it/public/ricerca/avanzata> .
+
+<https://w3id.org/atlas/1729171368-5428727/> rdfs:label "Musisque Deoque (MQDQ) - Search Interface"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Musisque Deoque (MQDQ) - Search Interface"@en ;
+    prov:generatedAtTime "2024-10-17T13:52:34.259887"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/discovering> skos:prefLabel "Discovering - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

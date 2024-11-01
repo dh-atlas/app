@@ -1,0 +1,105 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://www.w3.org/dh-atlas/> .
+@prefix ns3: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1728948776-872414> a schema:Dataset ;
+    rdfs:label "Historical Context Ontology (HiCO)"@en ;
+    dcterms:conformsTo <https://www.w3.org/RDF/> ;
+    dcterms:references <http://purl.org/spar/cito>,
+        <http://purl.org/vocab/frbr/core>,
+        <http://www.w3.org/ns/prov>,
+        <https://w3id.org/atlas/1728948052-580608> ;
+    dcterms:type <http://purl.org/spar/fabio/OntologyDocument> ;
+    vann:preferredNamespaceUri <https://w3id.org/hico/> ;
+    ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-01>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-10>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-11> ;
+    ns1:additionalType <http://purl.org/spar/fabio/OntologyDocument> ;
+    ns1:citation <http://dx.doi.org/10.1007/978-3-319-24129-6_37>,
+        <https://hdl.handle.net/11585/487578> ;
+    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns1:contributor <https://w3id.org/atlas/1728943988-693>,
+        <https://w3id.org/atlas/1728944010-053> ;
+    ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    ns1:creator <https://w3id.org/atlas/1728943969-854> ;
+    ns1:datePublished "2014-01-01"^^xsd:date ;
+    ns1:description "The Historical Context Ontology (HiCO) is an OWL 2 DL ontology designed to represent the context of a claim, focusing on hermeneutical activities by scholars during interpretation. It helps evaluate argument reliability by considering motivations, source types, dates, and relationships between claims. HiCO deals with events in the life-cycle of cultural heritage objects, such as creation by an agent at a certain time, supported by primary sources and recorded in secondary ones. It extends the PROV Ontology with hermeneutical aspects and uses other ontologies like CiTO for linking sources."@en ;
+    ns1:distribution <http://marilenadaquino.github.io/hico/current/hico.owl> ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/linkedOpenData>,
+        <https://vocabs.dariah.eu/tadirah/mapping>,
+        <https://vocabs.dariah.eu/tadirah/modeling>,
+        <https://vocabs.dariah.eu/tadirah/semantification> ;
+    ns1:encodingFormat <http://publications.europa.eu/resource/authority/file-type/JSON_LD>,
+        <http://publications.europa.eu/resource/authority/file-type/OWL>,
+        <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> ;
+    ns1:name "Historical Context Ontology (HiCO)"@en ;
+    ns1:url <http://purl.org/emmedi/hico> ;
+    ns1:usageInfo <https://hico.sourceforge.net/> ;
+    ns1:version "2.0"@en ;
+    ns2:methodology <https://vocabs.dariah.eu/tadirah/mapping>,
+        <https://vocabs.dariah.eu/tadirah/semantification> .
+
+<https://w3id.org/atlas/1728948776-872414/> rdfs:label "Historical Context Ontology (HiCO)"@en ;
+    ns3:currentStatus "modified"^^xsd:string ;
+    ns1:name "Historical Context Ontology (HiCO)"@en ;
+    prov:generatedAtTime "2024-10-17T16:18:32.795103"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/JSON_LD> rdfs:label "JSON-LD"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/OWL> rdfs:label "OWL"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/RDF_XML> rdfs:label "RDF XML"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://purl.org/spar/cito> rdfs:label "CiTO"^^xsd:string .
+
+<http://purl.org/vocab/frbr/core> rdfs:label "FRBR"^^xsd:string .
+
+<http://www.w3.org/ns/prov> rdfs:label "PROV"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/linkedOpenData> skos:prefLabel "Linked Open Data - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/modeling> skos:prefLabel "Modeling - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/1728943969-854> rdfs:label "Marilena Daquino"^^xsd:string .
+
+<https://w3id.org/atlas/1728943988-693> rdfs:label "Francesca Tomasi"^^xsd:string .
+
+<https://w3id.org/atlas/1728944010-053> rdfs:label "Silvio Peroni"^^xsd:string .
+
+<https://w3id.org/atlas/1728948052-580608> rdfs:label "Semantic Publishing and Referencing Ontologies (SPAR)"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-01> skos:prefLabel "Mathematics and informatics - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-10> skos:prefLabel "Antiquities, philology, literary studies, art history - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-11> skos:prefLabel "History, philosophy, pedagogy and psychology - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> rdfs:label "Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0) - LICENSES"^^xsd:string .
+
+<https://www.w3.org/RDF/> rdfs:label "RDF"^^xsd:string .
+
+<http://purl.org/spar/fabio/OntologyDocument> rdfs:label "Ontology"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/mapping> skos:prefLabel "Mapping - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/semantification> skos:prefLabel "Semantification - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

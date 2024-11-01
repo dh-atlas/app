@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729190776-4336185> a foaf:Agent,
+        schema:Organization ;
+    rdfs:label "University of Bari Aldo Moro"@en ;
+    ns1:identifier <https://ror.org/027ynra39> ;
+    ns1:location <https://sws.geonames.org/3182351> ;
+    ns1:name "University of Bari Aldo Moro"@en ;
+    ns1:sameAs <http://www.wikidata.org/entity/Q1236136> ;
+    ns1:url <http://www.uniba.it/english-version> .
+
+<https://w3id.org/atlas/1729190776-4336185/> rdfs:label "University of Bari Aldo Moro"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "University of Bari Aldo Moro"@en ;
+    prov:generatedAtTime "2024-10-17T23:20:27.738569"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q1236136> rdfs:label "University of Bari"^^xsd:string .
+
+<https://sws.geonames.org/3182351> rdfs:label "Bari"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

@@ -1,0 +1,32 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1728999992-1851196> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Valentina Bartalesi"@en ;
+    ns1:affiliation <https://w3id.org/atlas/1728998303-4028718>,
+        <https://w3id.org/atlas/1728999602-7282345> ;
+    ns1:identifier <https://orcid.org/0000-0001-9024-0822> ;
+    ns1:name "Valentina Bartalesi"@en ;
+    ns1:sameAs <http://www.wikidata.org/entity/Q61483179> .
+
+<https://w3id.org/atlas/1728999992-1851196/> rdfs:label "Valentina Bartalesi"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Valentina Bartalesi"@en ;
+    prov:generatedAtTime "2024-10-17T22:09:51.728246"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q61483179> rdfs:label "Valentina Bartalesi"^^xsd:string .
+
+<https://w3id.org/atlas/1728998303-4028718> rdfs:label "Istituto di Scienza e Tecnologie dell’Informazione “Alessandro Faedo” (CNR)"^^xsd:string .
+
+<https://w3id.org/atlas/1728999602-7282345> rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

@@ -1,0 +1,26 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729012150-9691675> a foaf:Agent,
+        schema:Organization ;
+    rdfs:label "Laboratorio di Cultura Digitale (Università di Pisa)"@it ;
+    ns2:location <https://sws.geonames.org/3170647> ;
+    ns2:name "Laboratorio di Cultura Digitale (Università di Pisa)"@it ;
+    ns2:url <http://www.labcd.unipi.it/> .
+
+<https://w3id.org/atlas/1729012150-9691675/> rdfs:label "Laboratorio di Cultura Digitale (Università di Pisa)"@it ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "Laboratorio di Cultura Digitale (Università di Pisa)"@it ;
+    prov:generatedAtTime "2024-10-17T22:11:56.210053"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<https://sws.geonames.org/3170647> rdfs:label "Pisa"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

@@ -1,0 +1,36 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729025808-504942> a <http://purl.org/spar/fabio/WebSite> ;
+    rdfs:label "Codice Pelavicino Digital Edition - EVT viewer (Website)"@en ;
+    ns1:description "The EVT-based website enables access to the XML content of the Codice Pelavicino Digital Edition, allowing users to view both the manuscript’s photographic reproductions and the transcribed text. It also includes added features such as a regesto (summary) and commentary on the text."@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/browsing>,
+        <https://vocabs.dariah.eu/tadirah/contentAnalysis>,
+        <https://vocabs.dariah.eu/tadirah/searching> ;
+    ns1:isBasedOn <https://w3id.org/atlas/1729010538-925614> ;
+    ns1:name "Codice Pelavicino Digital Edition - EVT viewer (Website)"@en ;
+    ns1:url <https://pelavicino.labcd.unipi.it/evt/> ;
+    schema:usageInfo <https://pelavicino.labcd.unipi.it/il-progetto/il-software-evt/> .
+
+<https://w3id.org/atlas/1729025808-504942/> rdfs:label "Codice Pelavicino Digital Edition - EVT viewer (Website)"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Codice Pelavicino Digital Edition - EVT viewer (Website)"@en ;
+    prov:generatedAtTime "2024-10-18T17:22:01.620064"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<https://vocabs.dariah.eu/tadirah/browsing> skos:prefLabel "Browsing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/contentAnalysis> skos:prefLabel "Content Analysis - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/searching> skos:prefLabel "Searching - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/1729010538-925614> rdfs:label "Edition Visualization Technology (EVT)"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

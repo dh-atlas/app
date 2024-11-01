@@ -1,0 +1,40 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729003408-5163774> a <http://purl.org/spar/fabio/ComputerProgram> ;
+    rdfs:label "DanteSources RDF Dataset - SPARQL Endpoint"@en ;
+    ns2:additionalType <http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> ;
+    ns2:description "The DanteSources SPARQL endpoint allows querying data about Dante's primary sources, referenced authors, and thematic areas across his works. It enables users to retrieve information on where specific sources are cited in texts like Convivio, Monarchia, and Vita Nova, facilitating detailed analysis of Dante's literary references."@en ;
+    ns2:educationalUse <https://vocabs.dariah.eu/tadirah/dataMining>,
+        <https://vocabs.dariah.eu/tadirah/informationRetrieval>,
+        <https://vocabs.dariah.eu/tadirah/knowledgeDiscovery>,
+        <https://vocabs.dariah.eu/tadirah/knowledgeExtraction> ;
+    ns2:isBasedOn <https://virtuoso.openlinksw.com/> ;
+    ns2:name "DanteSources RDF Dataset - SPARQL Endpoint"@en ;
+    ns2:url <https://dantesources.dantenetwork.it/sparql> .
+
+<https://w3id.org/atlas/1729003408-5163774/> rdfs:label "DanteSources RDF Dataset - SPARQL Endpoint"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "DanteSources RDF Dataset - SPARQL Endpoint"@en ;
+    prov:generatedAtTime "2024-10-18T17:03:40.843871"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> rdfs:label "SPARQL endpoint - DATA SERVICE"^^xsd:string .
+
+<https://virtuoso.openlinksw.com/> rdfs:label "Virtuoso"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/dataMining> skos:prefLabel "Data Mining - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/informationRetrieval> skos:prefLabel "Information Retrieval - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/knowledgeDiscovery> skos:prefLabel "Knowledge Discovery - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/knowledgeExtraction> skos:prefLabel "Knowledge Extraction - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

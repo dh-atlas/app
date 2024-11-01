@@ -1,0 +1,45 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729003042-648742> a foaf:Agent,
+        schema:ResearchProject ;
+    rdfs:label "Per una Enciclopedia Dantesca Digitale"@it ;
+    ns1:description "Towards a Digital Dante Encyclopedia is an Italian National Research project supporting scholars in formally expressing the knowledge aboutprimary sources presented in Dante Alighieri’s works and more generally in literary texts."@en ;
+    ns1:dissolutionDate "2016-12-31"^^xsd:date ;
+    ns1:foundingDate "2013-01-01"^^xsd:date ;
+    ns1:funder <https://w3id.org/atlas/1729001319-1277974> ;
+    ns1:location <https://sws.geonames.org/3170647> ;
+    ns1:member <https://w3id.org/atlas/1728998303-4028718>,
+        <https://w3id.org/atlas/1728999602-7282345>,
+        <https://w3id.org/atlas/1728999743-8451648>,
+        <https://w3id.org/atlas/1728999885-461319> ;
+    ns1:name "Towards a Digital Dante Encyclopaedia"@en,
+        "Per una Enciclopedia Dantesca Digitale"@it ;
+    ns1:url <http://dante1.isti.cnr.it/> .
+
+<https://w3id.org/atlas/1729003042-648742/> rdfs:label "Per una Enciclopedia Dantesca Digitale"@it ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Per una Enciclopedia Dantesca Digitale"@it ;
+    prov:generatedAtTime "2024-10-15T14:40:41.714097"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<https://sws.geonames.org/3170647> rdfs:label "Pisa"^^xsd:string .
+
+<https://w3id.org/atlas/1728998303-4028718> rdfs:label "Istituto di Scienza e Tecnologie dell’Informazione “Alessandro Faedo” (CNR)"^^xsd:string .
+
+<https://w3id.org/atlas/1728999602-7282345> rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+<https://w3id.org/atlas/1728999743-8451648> rdfs:label "Dipartimento di Filologia, Letteratura e Linguistica (Università di Pisa)"^^xsd:string .
+
+<https://w3id.org/atlas/1728999885-461319> rdfs:label "University of Pisa"^^xsd:string .
+
+<https://w3id.org/atlas/1729001319-1277974> rdfs:label "Ministero dell'Università e della Ricerca"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

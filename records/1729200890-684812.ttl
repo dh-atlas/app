@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729200890-684812> a foaf:Agent,
+        schema:Organization ;
+    rdfs:label "University of Florence"@en ;
+    ns2:identifier <https://ror.org/04jr1s763> ;
+    ns2:location <https://sws.geonames.org/3176959> ;
+    ns2:name "University of Florence"@en ;
+    ns2:sameAs <http://www.wikidata.org/entity/Q820887> ;
+    ns2:url <http://www.unifi.it/> .
+
+<https://w3id.org/atlas/1729200890-684812/> rdfs:label "University of Florence"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "University of Florence"@en ;
+    prov:generatedAtTime "2024-10-17T23:20:15.213471"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q820887> rdfs:label "University of Florence"^^xsd:string .
+
+<https://sws.geonames.org/3176959> rdfs:label "Florence"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

@@ -1,0 +1,139 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix ns3: <http://www.w3.org/dh-atlas/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729030147-4807222> a schema:Dataset ;
+    rdfs:label "Archivio della Latinità Italiana del Medioevo (ALIM) Digital Library"@en ;
+    dcterms:conformsTo <http://www.tei-c.org/> ;
+    dcterms:type <http://purl.org/spar/fabio/Anthology> ;
+    ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-E> ;
+    ns1:additionalType <http://purl.org/spar/fabio/Anthology> ;
+    ns1:citation <http://digital.casalini.it/4634293>,
+        <https://alim.unisi.it/pubblicazioni/> ;
+    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns1:contributor <https://w3id.org/atlas/1729012784-159052>,
+        <https://w3id.org/atlas/1729029916-5401604>,
+        <https://w3id.org/atlas/1729030617-8635733>,
+        <https://w3id.org/atlas/1729030640-1172316>,
+        <https://w3id.org/atlas/1729030735-1800888>,
+        <https://w3id.org/atlas/1729030809-7798028>,
+        <https://w3id.org/atlas/1729032663-7360063> ;
+    ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
+    ns1:creator <https://w3id.org/atlas/1729012720-1356587>,
+        <https://w3id.org/atlas/1729030952-9811325>,
+        <https://w3id.org/atlas/1729031012-1601634>,
+        <https://w3id.org/atlas/1729031064-130052>,
+        <https://w3id.org/atlas/1729031165-1433907>,
+        <https://w3id.org/atlas/1729031327-2469063>,
+        <https://w3id.org/atlas/1729031468-1192098>,
+        <https://w3id.org/atlas/1729033922-912527>,
+        <https://w3id.org/atlas/1729034089-6786373>,
+        <https://w3id.org/atlas/1729034282-2231562> ;
+    ns1:description "The ALIM Digital Library offers access to all its resources via various filters (author, title, typology, period of composition, and genre) and search functions (advanced, proximity). All texts in the ALIM library are available for individual download in txt, PDF, HTML, and XML formats. Linguistic or grammatical analyses can also be conducted against the available texts using the Lexicon software, developed within the wider ALIM project."@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/discovering>,
+        <https://vocabs.dariah.eu/tadirah/structuralAnalysis> ;
+    ns1:encodingFormat <http://publications.europa.eu/resource/authority/file-type/HTML>,
+        <http://publications.europa.eu/resource/authority/file-type/PDF>,
+        <http://publications.europa.eu/resource/authority/file-type/TXT>,
+        <https://www.iana.org/assignments/media-types/application/tei+xml> ;
+    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ITA>,
+        <http://publications.europa.eu/resource/authority/language/LAT> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/B29_CCBYNDNC10> ;
+    ns1:name "Archivio della Latinità Italiana del Medioevo (ALIM) Digital Library"@en ;
+    ns1:producer <https://w3id.org/atlas/1729017470-5332708> ;
+    ns1:publisher <https://w3id.org/atlas/1729029916-5401604> ;
+    ns1:size "6654 documentary sources, 774 literary sources"@en ;
+    ns1:url <http://en.alim.unisi.it/dl/> ;
+    ns1:usageInfo <https://en.alim.unisi.it/documentation/> ;
+    ns3:methodology <https://vocabs.dariah.eu/tadirah/organizing>,
+        <https://vocabs.dariah.eu/tadirah/publishing>,
+        <https://vocabs.dariah.eu/tadirah/transcribing> ;
+    ns3:servedBy <https://w3id.org/atlas/1729271811-847781> .
+
+<https://w3id.org/atlas/1729030147-4807222/> rdfs:label "Archivio della Latinità Italiana del Medioevo (ALIM) Digital Library"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Archivio della Latinità Italiana del Medioevo (ALIM) Digital Library"@en ;
+    prov:generatedAtTime "2024-10-18T17:20:52.960420"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/HTML> rdfs:label "HTML"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/PDF> rdfs:label "PDF"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/TXT> rdfs:label "Plain text"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/LAT> skos:prefLabel "Latin - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.tei-c.org/> rdfs:label "TEI"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/discovering> skos:prefLabel "Discovering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/organizing> skos:prefLabel "Organizing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/publishing> skos:prefLabel "Publishing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/structuralAnalysis> skos:prefLabel "Structural Analysis - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/transcribing> skos:prefLabel "Transcribing - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/1729012720-1356587> rdfs:label "Roberto Rosselli Del Turco"^^xsd:string .
+
+<https://w3id.org/atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
+
+<https://w3id.org/atlas/1729017470-5332708> rdfs:label "Archivio della Latinità Italiana del Medioevo (ALIM) Project"^^xsd:string .
+
+<https://w3id.org/atlas/1729030617-8635733> rdfs:label "University of Basilicata"^^xsd:string .
+
+<https://w3id.org/atlas/1729030640-1172316> rdfs:label "Suor Orsola Benincasa University of Naples"^^xsd:string .
+
+<https://w3id.org/atlas/1729030735-1800888> rdfs:label "University of Verona"^^xsd:string .
+
+<https://w3id.org/atlas/1729030809-7798028> rdfs:label "University of Palermo"^^xsd:string .
+
+<https://w3id.org/atlas/1729030952-9811325> rdfs:label "Marina Buzzoni"^^xsd:string .
+
+<https://w3id.org/atlas/1729031012-1601634> rdfs:label "Fulvio Delle Donne"^^xsd:string .
+
+<https://w3id.org/atlas/1729031064-130052> rdfs:label "Antonio De Prisco"^^xsd:string .
+
+<https://w3id.org/atlas/1729031165-1433907> rdfs:label "Edoardo D’Angelo"^^xsd:string .
+
+<https://w3id.org/atlas/1729031327-2469063> rdfs:label "Giorgio Di Maria"^^xsd:string .
+
+<https://w3id.org/atlas/1729031468-1192098> rdfs:label "Francesco Stella"^^xsd:string .
+
+<https://w3id.org/atlas/1729032663-7360063> rdfs:label "Unione Accademica Nazionale"^^xsd:string .
+
+<https://w3id.org/atlas/1729033922-912527> rdfs:label "Paolo Monella"^^xsd:string .
+
+<https://w3id.org/atlas/1729034089-6786373> rdfs:label "Edoardo Ferrarini"^^xsd:string .
+
+<https://w3id.org/atlas/1729034282-2231562> rdfs:label "Gian Carlo Alessio"^^xsd:string .
+
+<https://w3id.org/atlas/1729271811-847781> rdfs:label "ALIM - Digital Library"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-E> skos:prefLabel "Medieval latin and romance philologies and literatures - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/licences/B29_CCBYNDNC10> rdfs:label "Creative Commons Attribuzione-NoDerivs-NonCommercial 1.0 Generic (CC BY-ND-NC 1.0)"^^xsd:string .
+
+<https://www.iana.org/assignments/media-types/application/tei+xml> rdfs:label "TEI XML"^^xsd:string .
+
+<http://purl.org/spar/fabio/Anthology> rdfs:label "Text Collection"^^xsd:string .
+
+<https://w3id.org/atlas/1729029916-5401604> rdfs:label "University of Siena"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

@@ -1,0 +1,59 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1728948052-580608> a schema:Dataset ;
+    rdfs:label "Semantic Publishing and Referencing Ontologies (SPAR)"@en ;
+    dcterms:type <http://purl.org/spar/fabio/OntologyDocument> ;
+    vann:preferredNamespaceUri <http://purl.org/spar/> ;
+    ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-01>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-10>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-11> ;
+    ns1:additionalType <http://purl.org/spar/fabio/OntologyDocument> ;
+    ns1:citation <https://doi.org/10.1007/978-3-030-00668-6_8> ;
+    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
+    ns1:creator <https://w3id.org/atlas/1728944010-053>,
+        <https://w3id.org/atlas/1729176887-282424> ;
+    ns1:description "The Semantic Publishing and Referencing (SPAR) Ontologies, form a suite of orthogonal and complementary OWL 2 DL ontology modules for the creation of comprehensive machine-readable RDF metadata for every aspect of semantic publishing and referencing: document description, bibliographic resource identifiers, types of citations and related contexts, bibliographic references, document parts and status, agents' roles and contributions, bibliometric data and workflow processes."@en ;
+    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:name "Semantic Publishing and Referencing Ontologies (SPAR)"@en ;
+    ns1:url <http://www.sparontologies.net/> ;
+    ns1:usageInfo <http://www.sparontologies.net/examples> .
+
+<https://w3id.org/atlas/1728948052-580608/> rdfs:label "Semantic Publishing and Referencing Ontologies (SPAR)"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Semantic Publishing and Referencing Ontologies (SPAR)"@en ;
+    prov:generatedAtTime "2024-10-29T09:24:06.517758"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<https://w3id.org/atlas/1728944010-053> rdfs:label "Silvio Peroni"^^xsd:string .
+
+<https://w3id.org/atlas/1729176887-282424> rdfs:label "David Shotton"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-01> skos:prefLabel "Mathematics and informatics - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-10> skos:prefLabel "Antiquities, philology, literary studies, art history - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-11> skos:prefLabel "History, philosophy, pedagogy and psychology - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> rdfs:label "Creative Commons Attribution 4.0 International (CC BY 4.0)"^^xsd:string .
+
+<http://purl.org/spar/fabio/OntologyDocument> rdfs:label "Ontology"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

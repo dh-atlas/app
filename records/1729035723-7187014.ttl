@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729035723-7187014> a foaf:Agent,
+        schema:Organization ;
+    rdfs:label "Università Cattolica del Sacro Cuore"@en ;
+    ns1:identifier <https://ror.org/03h7r5v07> ;
+    ns1:location <https://sws.geonames.org/3173435> ;
+    ns1:name "Università Cattolica del Sacro Cuore"@en ;
+    ns1:sameAs <http://www.wikidata.org/entity/Q229022> ;
+    ns1:url <https://www.unicatt.eu> .
+
+<https://w3id.org/atlas/1729035723-7187014/> rdfs:label "Università Cattolica del Sacro Cuore"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Università Cattolica del Sacro Cuore"@en ;
+    prov:generatedAtTime "2024-10-17T22:23:03.617505"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q229022> rdfs:label "Università Cattolica del Sacro Cuore"^^xsd:string .
+
+<https://sws.geonames.org/3173435> rdfs:label "Milan"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

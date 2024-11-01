@@ -1,0 +1,39 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1728987090-372862> a <http://purl.org/spar/fabio/ComputerProgram> ;
+    rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL endpoint"@en ;
+    ns1:additionalType <http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> ;
+    ns1:description "The Zeri&LODE SPARQL endpoint allows querying and retrieving data from the Zeri Photo Archive RDF Dataset, a LOD collection of art photography. It provides access to structured information on artworks, artists, and themes, enabling semantic exploration of relationships and the discovery of metadata."@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/dataMining>,
+        <https://vocabs.dariah.eu/tadirah/informationRetrieval>,
+        <https://vocabs.dariah.eu/tadirah/knowledgeExtraction>,
+        <https://vocabs.dariah.eu/tadirah/querying> ;
+    ns1:name "Zeri Photo Archive RDF Dataset - SPARQL endpoint"@en ;
+    ns1:url <http://data.fondazionezeri.unibo.it/sparql> ;
+    schema:usageInfo <http://data.fondazionezeri.unibo.it./index.html> .
+
+<https://w3id.org/atlas/1728987090-372862/> rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL endpoint"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Zeri Photo Archive RDF Dataset - SPARQL endpoint"@en ;
+    prov:generatedAtTime "2024-10-16T16:44:43.902422"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> rdfs:label "SPARQL endpoint - DATA SERVICE"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/dataMining> skos:prefLabel "Data Mining - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/informationRetrieval> skos:prefLabel "Information Retrieval - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/knowledgeExtraction> skos:prefLabel "Knowledge Extraction - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

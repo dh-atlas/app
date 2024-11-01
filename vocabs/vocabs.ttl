@@ -1,0 +1,6 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE" .
+
+<http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> rdfs:label "SPARQL endpoint - DATA SERVICE" .
+

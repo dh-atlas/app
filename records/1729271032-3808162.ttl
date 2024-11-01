@@ -1,0 +1,30 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729271032-3808162> a <http://purl.org/spar/fabio/ComputerProgram> ;
+    rdfs:label "Biblioteca Italiana - Search Interface"@en ;
+    ns1:additionalType <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> ;
+    ns1:description "The advanced search system provided by Biblioteca Italiana allows users to filter catalog content by author, period, works, genre, and collection, or by specific strings included in the title, place of publication, or publisher's name."@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+        <https://vocabs.dariah.eu/tadirah/discovering> ;
+    ns1:name "Biblioteca Italiana - Search Interface"@en ;
+    ns1:url <http://www.bibliotecaitaliana.it/ricercaAvanzata> .
+
+<https://w3id.org/atlas/1729271032-3808162/> rdfs:label "Biblioteca Italiana - Search Interface"@en ;
+    ns2:currentStatus "not modified"^^xsd:string ;
+    ns1:name "Biblioteca Italiana - Search Interface"@en ;
+    prov:generatedAtTime "2024-10-18T17:15:26.378002"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/discovering> skos:prefLabel "Discovering - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

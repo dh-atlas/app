@@ -1,0 +1,37 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729068820-1338987> a <http://purl.org/spar/fabio/WebSite> ;
+    rdfs:label "LiLa: Linking Latin - SPARQL query interface"@en ;
+    ns1:description "The LiLa (Linking Latin) Knowledge Base offers a SPARQL query interface, connected to the LiLa triplestore, that enables researchers and users to perform sophisticated queries on its interconnected linguistic resources and Natural Language Processing (NLP) tools for Latin. The interface includes a YASQE query editor, "@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/informationRetrieval>,
+        <https://vocabs.dariah.eu/tadirah/knowledgeExtraction>,
+        <https://vocabs.dariah.eu/tadirah/structuralAnalysis> ;
+    ns1:isBasedOn <https://w3id.org/atlas/1729038110-2824712>,
+        <https://yasgui.triply.cc/> ;
+    ns1:name "LiLa: Linking Latin - SPARQL query interface"@en ;
+    ns1:url <https://lila-erc.eu/sparql/> .
+
+<https://w3id.org/atlas/1729068820-1338987/> rdfs:label "LiLa: Linking Latin - SPARQL query interface"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "LiLa: Linking Latin - SPARQL query interface"@en ;
+    prov:generatedAtTime "2024-10-18T17:07:09.680403"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<https://vocabs.dariah.eu/tadirah/informationRetrieval> skos:prefLabel "Information Retrieval - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/knowledgeExtraction> skos:prefLabel "Knowledge Extraction - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/structuralAnalysis> skos:prefLabel "Structural Analysis - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/1729038110-2824712> rdfs:label "LiLa: Linking Latin - SPARQL endpoint"^^xsd:string .
+
+<https://yasgui.triply.cc/> rdfs:label "YASGUI"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

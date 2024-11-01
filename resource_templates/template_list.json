@@ -1,0 +1,68 @@
+[
+ {
+  "name": "Example template",
+  "short_name": "example_template",
+  "type": [
+   "http://example.org/ExampleClass"
+  ],
+  "template": "resource_templates/template-example_template.json",
+  "hidden": "False"
+ },
+ {
+  "name": "Person",
+  "short_name": "person",
+  "type": [
+   "http://xmlns.com/foaf/0.1/Agent",
+   "https://schema.org/Person"
+  ],
+  "template": "resource_templates/template-person.json",
+  "hidden": "False"
+ },
+ {
+  "name": "Research Project",
+  "short_name": "research_project",
+  "type": [
+   "http://xmlns.com/foaf/0.1/Agent",
+   "https://schema.org/ResearchProject"
+  ],
+  "template": "resource_templates/template-research_project.json",
+  "hidden": "False"
+ },
+ {
+  "name": "Organization",
+  "short_name": "organization",
+  "type": [
+   "http://xmlns.com/foaf/0.1/Agent",
+   "https://schema.org/Organization"
+  ],
+  "template": "resource_templates/template-organization.json",
+  "hidden": "False"
+ },
+ {
+  "name": "Research Product",
+  "short_name": "research_product",
+  "type": [
+   "https://schema.org/Dataset"
+  ],
+  "template": "resource_templates/template-research_product.json",
+  "hidden": "False"
+ },
+ {
+  "name": "Data Service",
+  "short_name": "data_service",
+  "type": [
+   "http://purl.org/spar/fabio/ComputerProgram"
+  ],
+  "template": "resource_templates/template-data_service.json",
+  "hidden": "False"
+ },
+ {
+  "name": "Web Site",
+  "short_name": "web_site",
+  "type": [
+   "http://purl.org/spar/fabio/WebSite"
+  ],
+  "template": "resource_templates/template-web_site.json",
+  "hidden": "False"
+ }
+]

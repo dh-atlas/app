@@ -1,0 +1,33 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729072548-6787405> a <http://purl.org/spar/fabio/ComputerProgram> ;
+    rdfs:label "LiLa Text Linker"@en ;
+    ns1:description "The LiLa Text Linker is a web application designed to assist users in the every step of the workflow to produce RDF editions of Latin texts fully integrated with the LiLa KB. The Text Linker integrates components to perform the text-processing stage, the manual editing and the creation of the RDF output."@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/lemmatizing>,
+        <https://vocabs.dariah.eu/tadirah/posTagging> ;
+    ns1:license <http://publications.europa.eu/resource/authority/licence/LGPL_3_0> ;
+    ns1:name "LiLa Text Linker"@en ;
+    ns1:url <https://lila-erc.eu/LiLaTextLinker/> ;
+    schema:usageInfo <https://github.com/CIRCSE/LiLa_TextLinker> .
+
+<https://w3id.org/atlas/1729072548-6787405/> rdfs:label "LiLa Text Linker"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "LiLa Text Linker"@en ;
+    prov:generatedAtTime "2024-10-18T17:06:40.004475"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/licence/LGPL_3_0> rdfs:label "GNU Lesser General Public License v3.0 only"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/lemmatizing> skos:prefLabel "Lemmatizing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/posTagging> skos:prefLabel "POS-Tagging - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

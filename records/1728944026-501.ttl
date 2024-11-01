@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1728944026-501> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Fabio Vitali"@en ;
+    ns2:affiliation <https://w3id.org/atlas/1728995806-349488> ;
+    ns2:identifier <https://orcid.org/0000-0002-7562-5203>,
+        "https://orcid.org/0000-0002-7562-5203"@en ;
+    ns2:name "Fabio Vitali"@en ;
+    ns2:sameAs <http://www.wikidata.org/entity/Q27942633> .
+
+<https://w3id.org/atlas/1728944026-501/> rdfs:label "Fabio Vitali"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "Fabio Vitali"@en ;
+    prov:generatedAtTime "2024-10-17T22:07:17.488985"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q27942633> rdfs:label "Fabio Vitali"^^xsd:string .
+
+<https://w3id.org/atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

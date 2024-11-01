@@ -1,0 +1,113 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://purl.org/atlas/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix ns3: <http://schema.org/> .
+@prefix ns4: <http://www.w3.org/dh-atlas/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729185052-855823> a schema:Dataset ;
+    rdfs:label "VaSto - Varchi, Storia fiorentina Digital Edition"@en ;
+    ns1:editionType ns4:CriticalEdition ;
+    ns1:notesOnSource "Original manuscript"@en ;
+    ns1:referencedAuthor <http://www.viaf.org/viaf/46868282> ;
+    ns1:referencedWorkType ns4:SingleWork ;
+    dcterms:conformsTo <http://www.tei-c.org/> ;
+    dcterms:references <https://w3id.org/atlas/Roma>,
+        <https://www.mirabileweb.it/manuscript/roma-accademia-nazionale-dei-lincei-biblioteca-(bi-manuscript/19567> ;
+    dcterms:type <http://purl.org/spar/fabio/MetadataDocument> ;
+    ns3:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-F> ;
+    ns3:additionalType <http://purl.org/spar/fabio/MetadataDocument> ;
+    ns3:citation <http://doi.org/10.30687/mag/2724-3923/2021/03/006> ;
+    ns3:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns3:contributor <https://w3id.org/atlas/1729185884-2858903>,
+        <https://w3id.org/atlas/1729185987-532705>,
+        <https://w3id.org/atlas/1729186168-953735> ;
+    ns3:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    ns3:creator <https://w3id.org/atlas/1728943988-693>,
+        <https://w3id.org/atlas/1729184595-8947213>,
+        <https://w3id.org/atlas/1729185527-9907804>,
+        <https://w3id.org/atlas/1729185781-6054392> ;
+    ns3:datePublished "2020-01-01"^^xsd:date ;
+    ns3:description "The Storia fiorentina by Benedetto Varchi (1503-1565) is presented as a genetic and annotated digital edition. It has been encoded following the TEI (Text Encoding Initiative) standard and made accessible through the EVT2 visualization software, which facilitates reading and exploring annotated texts."@en ;
+    ns3:distribution <https://github.com/ValentinaPasqual/ProgettoVasto/blob/master/evt2beta2/data/text/pilot_proemio.xml> ;
+    ns3:educationalUse <https://vocabs.dariah.eu/tadirah/contentAnalysis>,
+        <https://vocabs.dariah.eu/tadirah/structuralAnalysis> ;
+    ns3:encodingFormat <https://www.iana.org/assignments/media-types/application/tei+xml> ;
+    ns3:inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns3:license <http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0> ;
+    ns3:name "VaSto - Varchi, Storia fiorentina Digital Edition"@en ;
+    ns3:producer <https://w3id.org/atlas/1729272121-9284637> ;
+    ns3:publisher <https://w3id.org/atlas/1729185609-482096> ;
+    ns3:url <https://dharc-org.github.io/progetto-vasto/index.html> ;
+    ns3:usageInfo <https://dharc-org.github.io/progetto-vasto/Funzionalità.html> ;
+    ns4:methodology <https://vocabs.dariah.eu/tadirah/annotating>,
+        <https://vocabs.dariah.eu/tadirah/editing> ;
+    ns4:servedBy <https://w3id.org/atlas/1729272082-6618783> .
+
+<https://w3id.org/atlas/1729185052-855823/> rdfs:label "VaSto - Varchi, Storia fiorentina Digital Edition"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns3:name "VaSto - Varchi, Storia fiorentina Digital Edition"@en ;
+    prov:generatedAtTime "2024-10-18T17:34:25.207612"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0> rdfs:label "Creative Commons Attribution–NonCommercial–NoDerivs 3.0 Unported"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.tei-c.org/> rdfs:label "TEI"^^xsd:string .
+
+<http://www.viaf.org/viaf/46868282> rdfs:label "Benedetto Varchi"^^xsd:string .
+
+ns4:CriticalEdition rdfs:label "Critical Edition"^^xsd:string .
+
+ns4:SingleWork rdfs:label "Single work"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/annotating> skos:prefLabel "Annotating - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/contentAnalysis> skos:prefLabel "Content Analysis - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/editing> skos:prefLabel "Editing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/structuralAnalysis> skos:prefLabel "Structural Analysis - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/1728943988-693> rdfs:label "Francesca Tomasi"^^xsd:string .
+
+<https://w3id.org/atlas/1729184595-8947213> rdfs:label "Dario Brancato"^^xsd:string .
+
+<https://w3id.org/atlas/1729185527-9907804> rdfs:label "Paola Italia"^^xsd:string .
+
+<https://w3id.org/atlas/1729185609-482096> rdfs:label "/DH.ARC - Digital Humanities Advanced Research Centre"^^xsd:string .
+
+<https://w3id.org/atlas/1729185781-6054392> rdfs:label "Valentina Pasqual"^^xsd:string .
+
+<https://w3id.org/atlas/1729185884-2858903> rdfs:label "Roberta Priore"^^xsd:string .
+
+<https://w3id.org/atlas/1729185987-532705> rdfs:label "Daniela Santoro"^^xsd:string .
+
+<https://w3id.org/atlas/1729186168-953735> rdfs:label "Milena Corbellini"^^xsd:string .
+
+<https://w3id.org/atlas/1729272082-6618783> rdfs:label "VaSto - EVT viewer (Website)"^^xsd:string .
+
+<https://w3id.org/atlas/1729272121-9284637> rdfs:label "VaSto - Varchi, Storia fiorentina Project"^^xsd:string .
+
+<https://w3id.org/atlas/Roma> rdfs:label "Accademia Nazionale dei Lincei, Biblioteca (Biblioteca Corsiniana) 39.D.5 (Rossi 395; Cors. 1532)"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-F> skos:prefLabel "Italian studies and comparative literature - ACADEMIC FIELD"^^xsd:string .
+
+<https://www.iana.org/assignments/media-types/application/tei+xml> rdfs:label "TEI XML"^^xsd:string .
+
+<https://www.mirabileweb.it/manuscript/roma-accademia-nazionale-dei-lincei-biblioteca-(bi-manuscript/19567> rdfs:label "Roma, Accademia Nazionale dei Lincei, Biblioteca (Biblioteca Corsiniana) 39.D.5 (Rossi 395; Cors. 1532)"^^xsd:string .
+
+<http://purl.org/spar/fabio/MetadataDocument> rdfs:label "Digital Scholarly Edition"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729202008-1585104> a foaf:Agent,
+        schema:Organization ;
+    rdfs:label "Federico Zeri Foundation"@en ;
+    ns2:location <https://sws.geonames.org/3181928> ;
+    ns2:name "Federico Zeri Foundation"@en ;
+    ns2:sameAs <http://www.wikidata.org/entity/Q23687322> ;
+    ns2:url <http://www.fondazionezeri.unibo.it/en/homepage> .
+
+<https://w3id.org/atlas/1729202008-1585104/> rdfs:label "Federico Zeri Foundation"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "Federico Zeri Foundation"@en ;
+    prov:generatedAtTime "2024-10-17T22:55:49.579890"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q23687322> rdfs:label "Federico Zeri Foundation"^^xsd:string .
+
+<https://sws.geonames.org/3181928> rdfs:label "Bologna"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

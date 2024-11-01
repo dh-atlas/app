@@ -1,0 +1,26 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729190508-1462588> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Ayushi Khemka"@en ;
+    ns1:affiliation <https://w3id.org/atlas/1729188813-8956482> ;
+    ns1:identifier <https://orcid.org/0000-0003-1610-3074> ;
+    ns1:name "Ayushi Khemka"@en .
+
+<https://w3id.org/atlas/1729190508-1462588/> rdfs:label "Ayushi Khemka"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Ayushi Khemka"@en ;
+    prov:generatedAtTime "2024-10-17T22:50:36.947390"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<https://w3id.org/atlas/1729188813-8956482> rdfs:label "University of Alberta"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

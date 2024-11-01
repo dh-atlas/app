@@ -1,0 +1,39 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1728993673-7262628> a <http://purl.org/spar/fabio/WebSite> ;
+    rdfs:label "Zeri Photo Archive RDF Dataset - LodView RDF Browser"@en ;
+    ns1:description "The Zeri&LODE catalog, powered by LodView, serves as an RDF browser for the Zeri Photo Archive RDF Dataset, a Linked Open Data (LOD) collection of art photography. It enables users to explore structured information on artworks, artists, and themes, offering semantic navigation of relationships and the discovery of detailed metadata within the dataset."@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/browsing>,
+        <https://vocabs.dariah.eu/tadirah/disseminating>,
+        <https://vocabs.dariah.eu/tadirah/exploration> ;
+    ns1:isBasedOn <https://w3id.org/atlas/1728987090-372862>,
+        <https://www.w3.org/2001/sw/wiki/LodView> ;
+    ns1:name "Zeri Photo Archive RDF Dataset - LodView RDF Browser"@en ;
+    ns1:url <https://w3id.org/zericatalog/collection/zeri-photo-archive> ;
+    schema:usageInfo <https://data.fondazionezeri.unibo.it/> .
+
+<https://w3id.org/atlas/1728993673-7262628/> rdfs:label "Zeri Photo Archive RDF Dataset - LodView RDF Browser"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Zeri Photo Archive RDF Dataset - LodView RDF Browser"@en ;
+    prov:generatedAtTime "2024-10-15T12:24:32.252731"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<https://vocabs.dariah.eu/tadirah/browsing> skos:prefLabel "Browsing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/disseminating> skos:prefLabel "Disseminating - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/exploration> skos:prefLabel "Exploration - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/1728987090-372862> rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL endpoint"^^xsd:string .
+
+<https://www.w3.org/2001/sw/wiki/LodView> rdfs:label "LodView"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

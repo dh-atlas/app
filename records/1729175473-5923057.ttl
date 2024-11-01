@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729175473-5923057> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Teofilo De Angelis"@en ;
+    ns2:affiliation <https://w3id.org/atlas/1729030617-8635733> ;
+    ns2:identifier <https://orcid.org/0000-0002-2334-4637> ;
+    ns2:name "Teofilo De Angelis"@en ;
+    ns2:sameAs <http://www.wikidata.org/entity/Q98640321> .
+
+<https://w3id.org/atlas/1729175473-5923057/> rdfs:label "Teofilo De Angelis"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "Teofilo De Angelis"@en ;
+    prov:generatedAtTime "2024-10-17T22:41:30.483566"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q98640321> rdfs:label "Teofilo De Angelis"^^xsd:string .
+
+<https://w3id.org/atlas/1729030617-8635733> rdfs:label "University of Basilicata"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

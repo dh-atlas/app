@@ -1,0 +1,35 @@
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729271811-847781> a <http://purl.org/spar/fabio/ComputerProgram> ;
+    rdfs:label "ALIM - Digital Library"@en ;
+    ns1:additionalType <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> ;
+    ns1:description "The search system offered by the ALIM Digital Library allows users to filter catalog content by title, author, period, type, genre, and collection."@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+        <https://vocabs.dariah.eu/tadirah/discovering>,
+        <https://vocabs.dariah.eu/tadirah/exploration> ;
+    ns1:name "ALIM - Digital Library"@en ;
+    ns1:url <https://alim.unisi.it/dl/> ;
+    schema:usageInfo <https://alim.unisi.it/dl/> .
+
+<https://w3id.org/atlas/1729271811-847781/> rdfs:label "ALIM - Digital Library"@en ;
+    ns2:currentStatus "not modified"^^xsd:string ;
+    ns1:name "ALIM - Digital Library"@en ;
+    prov:generatedAtTime "2024-10-18T17:20:02.687154"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/discovering> skos:prefLabel "Discovering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/exploration> skos:prefLabel "Exploration - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

@@ -1,0 +1,25 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729025064-083151> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Edilio Riccardini"@en ;
+    ns1:affiliation <https://w3id.org/atlas/1729022507-5876055> ;
+    ns1:name "Edilio Riccardini"@en .
+
+<https://w3id.org/atlas/1729025064-083151/> rdfs:label "Edilio Riccardini"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Edilio Riccardini"@en ;
+    prov:generatedAtTime "2024-10-17T22:17:35.358422"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<https://w3id.org/atlas/1729022507-5876055> rdfs:label "University of Genoa"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

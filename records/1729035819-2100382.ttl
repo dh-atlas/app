@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729035819-2100382> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Marco Carlo Passarotti"@en ;
+    ns1:affiliation <https://w3id.org/atlas/1729035723-7187014> ;
+    ns1:identifier <https://orcid.org/0000-0002-9806-7187> ;
+    ns1:name "Marco Carlo Passarotti"@en ;
+    ns1:sameAs <http://www.wikidata.org/entity/Q117021986> .
+
+<https://w3id.org/atlas/1729035819-2100382/> rdfs:label "Marco Carlo Passarotti"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Marco Carlo Passarotti"@en ;
+    prov:generatedAtTime "2024-10-17T22:23:20.804682"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://www.wikidata.org/entity/Q117021986> rdfs:label "Marco Passarotti"^^xsd:string .
+
+<https://w3id.org/atlas/1729035723-7187014> rdfs:label "Università Cattolica del Sacro Cuore"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

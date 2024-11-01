@@ -1,0 +1,25 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729013749-8693962> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Jurgen Memaj"@en ;
+    ns2:affiliation <https://w3id.org/atlas/1728999885-461319> ;
+    ns2:name "Jurgen Memaj"@en .
+
+<https://w3id.org/atlas/1729013749-8693962/> rdfs:label "Jurgen Memaj"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "Jurgen Memaj"@en ;
+    prov:generatedAtTime "2024-10-17T22:13:46.481153"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<https://w3id.org/atlas/1728999885-461319> rdfs:label "University of Pisa"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

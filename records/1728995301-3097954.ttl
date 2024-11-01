@@ -1,0 +1,108 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://www.w3.org/dh-atlas/> .
+@prefix ns3: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1728995301-3097954> a schema:Dataset ;
+    rdfs:label "DanteSources RDF Dataset"@en ;
+    dcterms:conformsTo <https://www.w3.org/RDF/> ;
+    dcterms:references <https://w3id.org/atlas/1728948052-580608>,
+        <https://w3id.org/atlas/1728948736-9982028> ;
+    dcterms:type <http://purl.org/spar/fabio/DataFile> ;
+    ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-08>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-10>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-08> ;
+    ns1:additionalType <http://purl.org/spar/fabio/DataFile> ;
+    ns1:citation <https://doi.org/10.1093/llc/fqv044> ;
+    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    ns1:creator <https://w3id.org/atlas/1728997747-914>,
+        <https://w3id.org/atlas/1728999992-1851196>,
+        <https://w3id.org/atlas/1729000069-9110713>,
+        <https://w3id.org/atlas/1729000291-419657>,
+        <https://w3id.org/atlas/1729000815-901807> ;
+    ns1:datePublished "2015-01-01"^^xsd:date ;
+    ns1:description "The DanteSources RDF dataset includes information on Dante's primary sources, authors he references, and thematic areas. It details citations of specific sources in Dante's works such as Convivio, De vulgari eloquentia, Monarchia, Rime, and Vita Nova, allowing users to explore the relationships between sources and texts."@en ;
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/discovering>,
+        <https://vocabs.dariah.eu/tadirah/knowledgeDiscovery>,
+        <https://vocabs.dariah.eu/tadirah/knowledgeExtraction> ;
+    ns1:encodingFormat <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns1:name "DanteSources RDF Dataset"@en ;
+    ns1:producer <https://w3id.org/atlas/1729003042-648742> ;
+    ns1:publisher <https://w3id.org/atlas/1728998303-4028718>,
+        <https://w3id.org/atlas/1728999743-8451648> ;
+    ns1:url <https://dantesources.dantenetwork.it/> ;
+    ns1:usageInfo <https://dantesources.dantenetwork.it/> ;
+    ns2:methodology <https://vocabs.dariah.eu/tadirah/knowledgeExtraction>,
+        <https://vocabs.dariah.eu/tadirah/linkedOpenData>,
+        <https://vocabs.dariah.eu/tadirah/modeling> ;
+    ns2:servedBy <https://w3id.org/atlas/1729003408-5163774> .
+
+<https://w3id.org/atlas/1728995301-3097954/> rdfs:label "DanteSources RDF Dataset"@en ;
+    ns3:currentStatus "modified"^^xsd:string ;
+    ns1:name "DanteSources RDF Dataset"@en ;
+    prov:generatedAtTime "2024-10-18T17:02:33.659456"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/RDF_XML> rdfs:label "RDF XML"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/discovering> skos:prefLabel "Discovering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/knowledgeDiscovery> skos:prefLabel "Knowledge Discovery - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/linkedOpenData> skos:prefLabel "Linked Open Data - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/modeling> skos:prefLabel "Modeling - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/1728948052-580608> rdfs:label "Semantic Publishing and Referencing Ontologies (SPAR)"^^xsd:string .
+
+<https://w3id.org/atlas/1728948736-9982028> rdfs:label "CIDOC Conceptual Reference Model (CRM)"^^xsd:string .
+
+<https://w3id.org/atlas/1728997747-914> rdfs:label "Carlo Meghini"^^xsd:string .
+
+<https://w3id.org/atlas/1728998303-4028718> rdfs:label "Istituto di Scienza e Tecnologie dell’Informazione “Alessandro Faedo” (CNR)"^^xsd:string .
+
+<https://w3id.org/atlas/1728999743-8451648> rdfs:label "Dipartimento di Filologia, Letteratura e Linguistica (Università di Pisa)"^^xsd:string .
+
+<https://w3id.org/atlas/1728999992-1851196> rdfs:label "Valentina Bartalesi"^^xsd:string .
+
+<https://w3id.org/atlas/1729000069-9110713> rdfs:label "Daniele Metilli"^^xsd:string .
+
+<https://w3id.org/atlas/1729000291-419657> rdfs:label "Paola Andriani"^^xsd:string .
+
+<https://w3id.org/atlas/1729000815-901807> rdfs:label "Mirko Tavoni"^^xsd:string .
+
+<https://w3id.org/atlas/1729003042-648742> rdfs:label "Per una Enciclopedia Dantesca Digitale"^^xsd:string .
+
+<https://w3id.org/atlas/1729003408-5163774> rdfs:label "DanteSources RDF Dataset - SPARQL Endpoint"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-08> skos:prefLabel "Medieval and humanistic latin literature - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-10> skos:prefLabel "Italian literature - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-08> skos:prefLabel "Archival science, bibliography and librarianship - ACADEMIC FIELD"^^xsd:string .
+
+<https://www.w3.org/RDF/> rdfs:label "RDF"^^xsd:string .
+
+<http://purl.org/spar/fabio/DataFile> rdfs:label "Linked Open Data"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/knowledgeExtraction> skos:prefLabel "Knowledge Extraction - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+

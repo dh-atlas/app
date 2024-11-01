@@ -1,0 +1,117 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix ns3: <http://www.w3.org/dh-atlas/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/atlas/1729073242-5875242> a schema:Dataset ;
+    rdfs:label "Biflow-Toscana Bilingue RDF Dataset"@en ;
+    dcterms:conformsTo <http://erlangen-crm.org/efrbroo>,
+        <https://w3id.org/atlas/1728948736-9982028>,
+        <https://www.w3.org/RDF/> ;
+    dcterms:references <https://biflow.humanitiesdata.dev/rdf/biflow> ;
+    dcterms:type <http://purl.org/spar/fabio/DataFile> ;
+    ns2:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-10> ;
+    ns2:additionalType <http://purl.org/spar/fabio/DataFile> ;
+    ns2:citation <https://hdl.handle.net/10278/3735673> ;
+    ns2:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns2:contributor <https://w3id.org/atlas/1729083753-6934962>,
+        <https://w3id.org/atlas/1729083810-709449>,
+        <https://w3id.org/atlas/1729083887-1665394>,
+        <https://w3id.org/atlas/1729084059-738925> ;
+    ns2:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    ns2:creator <https://w3id.org/atlas/1729073143-2579954>,
+        <https://w3id.org/atlas/1729075021-273185>,
+        <https://w3id.org/atlas/1729075050-756241>,
+        <https://w3id.org/atlas/1729075077-7707038> ;
+    ns2:datePublished "2021-05-14"^^xsd:date ;
+    ns2:description "The BiFlow Catalogue offers an RDF dataset that documents texts written and translated between 1260 and 1430, focusing on those circulating in Tuscany. It organizes bilingual textual dossiers with source texts and their translated versions, identified by unique codes based on the author and title. Each dossier includes summaries, bibliographies, and graphical relationships. The dataset leveragesthe Biflow ontology, which is based on CIDOC CRM and eFRBRoo to model textual and manuscript traditions."@en ;
+    ns2:educationalUse <https://vocabs.dariah.eu/tadirah/contentAnalysis>,
+        <https://vocabs.dariah.eu/tadirah/knowledgeExtraction> ;
+    ns2:encodingFormat <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    ns2:identifier "ISSN 2784-9406"@en ;
+    ns2:inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns2:license <https://projects.dharc.unibo.it/knot/term-lc-C11_Unknown> ;
+    ns2:name "Biflow-Toscana Bilingue RDF Dataset"@en ;
+    ns2:producer <https://w3id.org/atlas/1729085919-254635> ;
+    ns2:publisher <https://w3id.org/atlas/1729012784-159052>,
+        <https://w3id.org/atlas/1729075089-3110056>,
+        <https://w3id.org/atlas/1729080893-1204488> ;
+    ns2:url <https://catalogobiflow.vedph.it/> ;
+    ns2:usageInfo <https://catalogobiflow.vedph.it/about/> ;
+    ns3:methodology <https://vocabs.dariah.eu/tadirah/cataloging>,
+        <https://vocabs.dariah.eu/tadirah/linkedOpenData>,
+        <https://vocabs.dariah.eu/tadirah/modeling> ;
+    ns3:servedBy <https://w3id.org/atlas/1729096487-9794765> .
+
+<https://w3id.org/atlas/1729073242-5875242/> rdfs:label "Biflow-Toscana Bilingue RDF Dataset"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "Biflow-Toscana Bilingue RDF Dataset"@en ;
+    prov:generatedAtTime "2024-10-18T16:57:48.777255"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+
+<http://erlangen-crm.org/efrbroo> rdfs:label "EFRBRoo"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/RDF_XML> rdfs:label "RDF XML"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<https://biflow.humanitiesdata.dev/rdf/biflow> rdfs:label "BiFlow ontology"^^xsd:string .
+
+<https://projects.dharc.unibo.it/knot/term-lc-C11_Unknown> rdfs:label "Unknown"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/cataloging> skos:prefLabel "Cataloging - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/contentAnalysis> skos:prefLabel "Content Analysis - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/knowledgeExtraction> skos:prefLabel "Knowledge Extraction - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/linkedOpenData> skos:prefLabel "Linked Open Data - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/modeling> skos:prefLabel "Modeling - TADIRAH"^^xsd:string .
+
+<https://w3id.org/atlas/1728948736-9982028> rdfs:label "CIDOC Conceptual Reference Model (CRM)"^^xsd:string .
+
+<https://w3id.org/atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
+
+<https://w3id.org/atlas/1729073143-2579954> rdfs:label "Tiziana Mancinelli"^^xsd:string .
+
+<https://w3id.org/atlas/1729075021-273185> rdfs:label "Antonio Montefusco"^^xsd:string .
+
+<https://w3id.org/atlas/1729075050-756241> rdfs:label "Sara Bischetti"^^xsd:string .
+
+<https://w3id.org/atlas/1729075077-7707038> rdfs:label "Cristiano Lorenzi"^^xsd:string .
+
+<https://w3id.org/atlas/1729075089-3110056> rdfs:label "Venice Centre for Digital and Public Humanities (VeDPH)"^^xsd:string .
+
+<https://w3id.org/atlas/1729080893-1204488> rdfs:label "École des hautes études en sciences sociales (EHESS)"^^xsd:string .
+
+<https://w3id.org/atlas/1729083753-6934962> rdfs:label "Laura Calvaresi"^^xsd:string .
+
+<https://w3id.org/atlas/1729083810-709449> rdfs:label "Agnese Macchiarelli"^^xsd:string .
+
+<https://w3id.org/atlas/1729083887-1665394> rdfs:label "Michele Lodone"^^xsd:string .
+
+<https://w3id.org/atlas/1729084059-738925> rdfs:label "Vera Ribaudo"^^xsd:string .
+
+<https://w3id.org/atlas/1729085919-254635> rdfs:label "Bilingualism in Florentine and Tuscan Works (BIFLOW)"^^xsd:string .
+
+<https://w3id.org/atlas/1729096487-9794765> rdfs:label "Biflow catalogue - SPARQL editor"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-10> skos:prefLabel "Antiquities, philology, literary studies, art history - ACADEMIC FIELD"^^xsd:string .
+
+<https://www.w3.org/RDF/> rdfs:label "RDF"^^xsd:string .
+
+<http://purl.org/spar/fabio/DataFile> rdfs:label "Linked Open Data"^^xsd:string .
+
+<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+
