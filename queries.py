@@ -30,10 +30,11 @@ def hello_blazegraph(q):
 # LIST OF RECORDS IN THE BACKEND
 
 
-def getRecords(res_class=None):
+def getRecords(res_class=None,res_subclasses=None):
 	""" get all the records created by users to list them in the backend welcome page """
+	extended_class_list = res_subclasses + res_class if res_subclasses != None and res_class != None else res_class if res_class != None else None
 	filter_class_exists = "\n".join([f"FILTER EXISTS {{ ?s a <{cls}> }}" for cls in res_class]) if res_class != None else ""
-	filter_class_not_exists = f"FILTER (NOT EXISTS {{ ?s a ?other_class FILTER (?other_class NOT IN ({', '.join([f'<{cls}>' for cls in res_class])})) }})" if res_class != None else ""
+	filter_class_not_exists = f"FILTER (NOT EXISTS {{ ?s a ?other_class FILTER (?other_class NOT IN ({', '.join([f'<{cls}>' for cls in extended_class_list])})) }})" if extended_class_list != None else ""
 
 	queryRecords = """
 		PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -44,7 +45,7 @@ def getRecords(res_class=None):
 			?s ?p ?o . ?s a ?class .
 			""" +filter_class_exists+filter_class_not_exists+ """
 			OPTIONAL { ?g rdfs:label ?title; prov:wasAttributedTo ?user; prov:generatedAtTime ?date ; <http://dbpedia.org/ontology/currentStatus> ?stage. ?user rdfs:label ?userLabel .
-				OPTIONAL {?g prov:wasInfluencedBy ?modifier. ?modifier rdfs:label ?modifierLabel .} }
+			OPTIONAL {?g prov:wasInfluencedBy ?modifier. ?modifier rdfs:label ?modifierLabel .} }
 			OPTIONAL {?g rdfs:label ?title; prov:generatedAtTime ?date ; <http://dbpedia.org/ontology/currentStatus> ?stage . }
 
 			BIND(COALESCE(?date, '-') AS ?date ).
@@ -67,12 +68,16 @@ def getRecords(res_class=None):
 	sparql = SPARQLWrapper(conf.myEndpoint)
 	sparql.setQuery(queryRecords)
 	sparql.setReturnFormat(JSON)
-	print("query: \n",queryRecords)
 	results = sparql.query().convert()
-	print("res: \n",results)
 
 	for result in results["results"]["bindings"]:
-		records.add( (result["g"]["value"], result["title"]["value"], result["userLabel"]["value"], result["modifierLabel"]["value"], result["date"]["value"], result["stage"]["value"], result["classes"]["value"] ))
+		classes = [cls.strip() for cls in result["classes"]["value"].split("; ")]
+		subclasses = [single_class for single_class in classes if single_class not in res_class]
+		for subclass in subclasses:
+			classes.remove(subclass)
+		subclasses = "; ".join(subclasses) if len(subclasses) > 0 else ""
+		classes = "; ".join(classes)
+		records.add( (result["g"]["value"], result["title"]["value"], result["userLabel"]["value"], result["modifierLabel"]["value"], result["date"]["value"], result["stage"]["value"], classes, subclasses))	
 	return records
 
 
@@ -152,9 +157,11 @@ def getCountings(filterRecords=''):
 	return all, notreviewed, underreview, published
 
 
-def countAll(res_class=None, exclude_unpublished=False):
-	filter_class_exists = "\n".join([f"FILTER EXISTS {{ ?s a <{cls}> }}" for cls in res_class]) if res_class != None else ""
-	filter_class_not_exists = f"FILTER (NOT EXISTS {{ ?s a ?other_class FILTER (?other_class NOT IN ({', '.join([f'<{cls}>' for cls in res_class])})) }})" if res_class != None else ""
+def countAll(res_class=None,res_subclasses=None,by_subclass=False,exclude_unpublished=False):
+	include_class_list = by_subclass + res_class if res_subclasses != None and res_class != None and by_subclass else res_class
+	exclude_class_list = res_subclasses + res_class if res_subclasses != None and res_class != None else res_class if res_class != None else None
+	filter_class_exists = "\n".join([f"FILTER EXISTS {{ ?s a <{cls}> }}" for cls in include_class_list]) if include_class_list != None else ""
+	filter_class_not_exists = f"FILTER (NOT EXISTS {{ ?s a ?other_class FILTER (?other_class NOT IN ({', '.join([f'<{cls}>' for cls in exclude_class_list])})) }})" if exclude_class_list != None else ""
 
 	exclude = "" if exclude_unpublished is False \
 		else "?g <http://dbpedia.org/ontology/currentStatus> ?anyValue . FILTER (isLiteral(?anyValue) && lcase(str(?anyValue))= 'published') ."
@@ -196,7 +203,49 @@ def getRecordCreator(graph_name):
 	return creatorIRI, creatorLabel
 
 
-# TRIPLE PATTERNS FROM THE FORM
+# UPDATE SUBCLASS VALUES TO AVOID INCONSISTENCIES
+def updateSubclassValue(data):
+	print("DATA:", data)
+
+	old_uri = urllib.parse.unquote(data.olduri)
+	insert_clause = ""
+	if "update" in data and data["update"] == "modify":
+		new_label = urllib.parse.unquote(data.newlabel)
+		new_uri = urllib.parse.unquote(data.newuri)
+		insert_clause = """INSERT { 
+				GRAPH ?g {
+					?s ?p <"""+new_uri+"""> .
+					<"""+new_uri+"""> rdfs:label '"""+new_label+"""'^^xsd:string . 
+				}
+			}"""
+
+	update_query = """PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+		DELETE {
+			GRAPH ?g {
+				?s ?p <"""+old_uri+"""> .
+				<"""+old_uri+"""> rdfs:label ?oldLabel .
+			}
+		}
+		"""+insert_clause+"""
+		WHERE {
+			GRAPH ?g {
+				?s ?p <"""+old_uri+"""> .
+				<"""+old_uri+"""> rdfs:label ?oldLabel .
+			}
+		}
+		"""
+	
+	print("update query:", update_query)
+	try:
+		sparql = SPARQLWrapper(conf.myEndpoint)
+		sparql.setQuery(update_query)
+		sparql.setMethod("POST")
+		sparql.query()
+	except Exception as e:
+		print(f"Error executing update: {e}")
+	return None
 
 
 
@@ -297,6 +346,7 @@ def getData(graph,res_template):
 	for result in results["results"]["bindings"]:
 		result.pop('subject',None)
 		graph_label = result.pop('graph_title',None)
+		print("LABEL:", graph_label)
 		for k,v in result.items():
 			if '_label' not in k and v['type'] == 'literal': # string values
 				value = v['value']
@@ -537,7 +587,7 @@ def retrieve_extractions(res_uri_list, view=False):
 			for n in range(len(res_dict[uri_id][field_id])):
 				graph_uri = res_dict[uri_id][field_id][n]["graph"]
 				idx = graph_uri.split('/extraction-')[-1][:-1]
-				res_dict[uri_id][field_id][n]["internalId"] = idx
+				res_dict[uri_id][field_id][n]["internalId"] = idx.replace(field_id+"-","")
 				retrieve_graph = """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 					SELECT DISTINCT ?uri ?label WHERE {GRAPH <"""+graph_uri+""">
 					{	?uri rdfs:label ?label .  }}"""
@@ -644,6 +694,7 @@ def geonames_geocoding(geonames_uri):
 	search_url = f'http://api.geonames.org/getJSON?geonameId={uri_id}&username=palread'
 	response = requests.get(search_url)
 	data = response.json()
+	print("geonames:", data)
 	latitude = data['lat']
 	longitude = data['lng']
 	return latitude, longitude

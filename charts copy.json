@@ -1,0 +1,114 @@
+{
+    "charts": [
+        {
+            "id": "0",
+            "type": "counter",
+            "title": "ATLAS in numbers",
+            "description": "",
+            "counters": [
+                {
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology/> SELECT (COUNT(DISTINCT ?entity) as ?count) WHERE { ?entity a ?class . }",
+                    "title": "Entities",
+                    "id": "0__1__Entities"
+                },
+                {
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology/> SELECT (COUNT(DISTINCT ?project) as ?count) WHERE { ?project a <http://xmlns.com/foaf/0.1/Agent>; a <https://schema.org/ResearchProject> . }",
+                    "title": "Research Projects",
+                    "id": "0__2__Research_Projects"
+                },
+                {
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology/> SELECT (COUNT(DISTINCT ?product) as ?count) WHERE { ?product a <https://schema.org/Dataset> . }",
+                    "title": "Research Products",
+                    "id": "0__3__Research_Products"
+                },
+                {
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology/> SELECT (COUNT(DISTINCT ?organization) as ?count) WHERE { ?organization a <http://xmlns.com/foaf/0.1/Agent>; a <https://schema.org/Organization> . }",
+                    "title": "Organizations",
+                    "id": "0__4__Organizations"
+                },
+                {
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology/> SELECT (COUNT(DISTINCT ?person) as ?count) WHERE { ?person a <http://xmlns.com/foaf/0.1/Agent>; a <https://schema.org/Person> . }",
+                    "title": "Researchers",
+                    "id": "0__5__Researchers"
+                }
+
+            ]
+        },
+        {
+            "id": "1",
+            "type": "chart",
+            "chart_type": "bar",
+            "title": "The characters: organizations",
+            "description": "A number of organizations from all over the world have been involved in projects related to <em style='font-weight:600'>Italian Digital Cultural Heritage</em>. Some of them have been taking part in several endeavours, especially thanks to the contributions of their domain's Research Centres and Working Groups.\nThis chart shows the ten organizations which had the main impacts in terms of research projects' partecipation.",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?organizationName (COUNT(DISTINCT ?researchProduct) AS ?dataset) \nWHERE { ?researchProduct a <https://schema.org/Dataset> . \n?researchProduct ?contributor ?organization . \n?organization a <https://schema.org/Organization> .\n?organization rdfs:label ?organizationLabel . \nBIND(STR(?organizationLabel) AS ?organizationName) \n} \nGROUP BY ?organizationName \nORDER BY ?organizationName \nLIMIT 10",
+            "x-axis": "?organizationName,Organization",
+            "y-axis": "?dataset,Research Product",
+            "categorical": "x",
+            "quantitative": "y",
+            "sorted": "y"
+        },
+        {
+            "id": "2",
+            "type": "chart",
+            "chart_type": "bar",
+            "title": "The characters: organizations (vertically sorted)",
+            "description": "A number of organizations from all over the world have been involved in projects related to <b>Italian Digital Cultural Heritage</b>. Some of them have been taking part in several endeavours, especially thanks to the contributions of their domain's Research Centres and Working Groups.\nThis chart shows the ten organizations which had the main impacts in terms of research projects' partecipation.<br><span style='color:#0075a3;'>This charts shows the main organizations sorted by the numbers of projects they took part in and vertically displayed.</span>",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?organizationName (COUNT(DISTINCT ?researchProduct) AS ?dataset) \nWHERE { ?researchProduct a <https://schema.org/Dataset> . \n?researchProduct ?contributor ?organization . \n?organization a <https://schema.org/Organization> .\n?organization rdfs:label ?organizationLabel . \nBIND(STR(?organizationLabel) AS ?organizationName) \n} \nGROUP BY ?organizationName \nORDER BY ?organizationName \nLIMIT 10",
+            "x-axis": "?dataset,Research Product",
+            "y-axis": "?organizationName,Organization",
+            "categorical": "y",
+            "quantitative": "x",
+            "sorted": "x"
+        },
+        {
+            "id": "3",
+            "type": "chart",
+            "chart_type": "pie",
+            "title": "The characters: cities (pie)",
+            "description": "A number of cities from across the globe host organizations actively involved in projects related to Italian Digital Cultural Heritage. Many of these organizations contribute significantly to research initiatives, supported by local Research Centres and Working Groups. <br>This chart highlights the cities with the highest concentrations of participating organizations, underscoring their impact on cultural heritage projects.<br><span style='color:#a30000;'>This chart displays the main cities, sorted by the number of projects in which their organizations are involved, with each city represented vertically.</span>",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?locationName (COUNT(DISTINCT ?organization) AS ?organizationCount) \nWHERE { ?organization a <https://schema.org/Organization> .\n?organization a <https://schema.org/Organization> .\n?organization <http://schema.org/location> ?location.\n?location rdfs:label ?locationLabel . \nBIND(STR(?locationLabel) AS ?locationName) \n} \nGROUP BY ?locationName \nORDER BY ?locationName LIMIT 10",
+            "y-axis": "?organizationCount,Organization",
+            "x-axis": "?locationName,Location",
+            "categorical": "x",
+            "quantitative": "y",
+            "sorted": "y",
+            "legend": "True"
+        },
+        {
+            "id": "4",
+            "type": "chart",
+            "chart_type": "donut",
+            "title": "The characters: cities (donut)",
+            "description": "A number of cities from across the globe host organizations actively involved in projects related to Italian Digital Cultural Heritage. Many of these organizations contribute significantly to research initiatives, supported by local Research Centres and Working Groups. <br>This chart highlights the cities with the highest concentrations of participating organizations, underscoring their impact on cultural heritage projects.<br><span style='color:#a30000; font-weight:bold'>This chart displays the main cities, sorted by the number of projects in which their organizations are involved, with each city represented vertically.</span>",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?locationName (COUNT(DISTINCT ?organization) AS ?organizationCount) \nWHERE { ?organization a <https://schema.org/Organization> .\n?organization a <https://schema.org/Organization> .\n?organization <http://schema.org/location> ?location.\n?location rdfs:label ?locationLabel . \nBIND(STR(?locationLabel) AS ?locationName) \n} \nGROUP BY ?locationName \nORDER BY ?locationName LIMIT 10",
+            "y-axis": "?organizationCount,Organization",
+            "x-axis": "?locationName,Location",
+            "categorical": "x",
+            "quantitative": "y",
+            "sorted": "y",
+            "legend": "True"
+        },
+        {
+            "id": "5",
+            "type": "chart",
+            "chart_type": "semi-circle",
+            "title": "The characters: organizations (provenance)",
+            "description": "A number of cities from across the globe host organizations actively involved in projects related to Italian Digital Cultural Heritage. Many of these organizations contribute significantly to research initiatives, supported by local Research Centres and Working Groups. <br>This chart highlights the cities with the highest concentrations of participating organizations, underscoring their impact on cultural heritage projects.<br><span style='color:#a30000;>This chart displays the main cities, sorted by the number of projects in which their organizations are involved, with each city represented vertically.</span>",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?locationName (COUNT(?organization) AS ?organizationCount) \nWHERE { ?organization a <https://schema.org/Organization> .\n?organization a <https://schema.org/Organization> .\n?organization <http://schema.org/location> ?location.\n?location rdfs:label ?locationLabel . \nBIND(STR(?locationLabel) AS ?locationName) \n} \nGROUP BY ?locationName \nORDER BY ?locationName LIMIT 10",
+            "y-axis": "?organizationCount,Organization",
+            "x-axis": "?locationName,Location",
+            "categorical": "x",
+            "quantitative": "y",
+            "sorted": "y",
+            "legend": "True"
+        },
+        {
+            "id": "6",
+            "type": "map",
+            "map_type": "common-map",
+            "title": "Provenance distribution",
+            "description": "This map displays the geographical distribution of cities involved in the projects, highlighting the global impact and regional density of research activities.",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?geonames ?title (COUNT(DISTINCT ?geonames) AS ?count) \nWHERE { ?organization a <https://schema.org/Organization> .\n?organization <http://schema.org/location> ?geonames. \n?geonames rdfs:label ?title} \nGROUP BY ?geonames ?title \nORDER BY ?geonames"
+        }
+    ]
+}

@@ -10,10 +10,17 @@ services:
         - .:/app
         - ./blaze_vm.properties:/RWStore.properties
       restart: always
+  sparqlanything:
+      container_name: sparqlanything
+      image: facadex/sparql-anything:latest
+      volumes:
+        - .:/app
+      restart: always
   web:
       container_name: web
       build: .
       depends_on: 
+        - sparqlanything
         - db
       volumes:
         - .:/app
@@ -25,3 +32,4 @@ services:
       environment: 
         - BLAZEGRAPH_ENDPOINT=http://db:8080/bigdata/sparql
         - PUBLIC_BLAZEGRAPH_ENDPOINT=http://localhost:8080/sparql
+        - SPARQLANYTHIN_ENDPOINT=http://sparqlanything:8080/sparql

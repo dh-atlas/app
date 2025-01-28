@@ -108,9 +108,7 @@ def split_uri(term):
 
 def get_LOV_labels(term, term_type=None):
 	""" get class/ property labels from the form"""
-	print("TERM:",term)
 	term, label = term, split_uri(term)
-	print("TERM2:",term, label)
 	lov_api = "https://lov.linkeddata.es/dataset/lov/api/v2/term/search?q="
 	t = "&type="+term_type if term_type else ''
 	label_en = "http://www.w3.org/2000/01/rdf-schema#label@en"
@@ -118,7 +116,6 @@ def get_LOV_labels(term, term_type=None):
 
 	if req.status_code == 200:
 		res = req.json()
-		print(res)
 		for result in res["results"]:
 			if result["uri"][0] in [term, term.replace("https","http")]:
 				label = result["highlight"][label_en][0] \
@@ -168,8 +165,9 @@ def fields_to_json(data, json_file, skos_file):
 	as modified via the web page *template* """
 
 	list_dicts = defaultdict(dict)
-	list_ids = sorted([k.split("__")[0] for k in data.keys()])
-	template_config = {'hidden': 'True'}
+	#list_ids = sorted([k.split("__")[0] for k in data.keys()])
+	template_config = {'hidden': 'True',
+					'subclasses': {}}
 
 	for k,v in data.items():
 		if k != 'action' and '__template__' not in k:
@@ -181,32 +179,34 @@ def fields_to_json(data, json_file, skos_file):
 		elif '__template__' in k:
 			if v == 'on':
 				template_config['hidden'] = 'False'
-	
-	with open(TEMPLATE_LIST, 'r') as file:
-		tpls = json.load(file)
-
-	# Modifica il contenuto
-	for tpl in tpls:
-		if tpl['template'] == json_file:
-			tpl['hidden'] = template_config['hidden']
-
-	with open(TEMPLATE_LIST, 'w') as file:
-		json.dump(tpls, file, indent=1)
 			
 	list_dicts = dict(list_dicts)
 	for n,d in list_dicts.items():
-		# cleanup existing k,v
-		if 'values' in d:
-			values_pairs = d['values'].replace('\r','').strip().split('\n')
+		
+		# Previous code:
+		#if 'values' in d:
+			#values_pairs = d['values'].replace('\r','').strip().split('\n')
+			#d["value"] = "URI"
+			#d['values'] = { pair.split(",")[0].strip():pair.split(",")[1].strip() for pair in values_pairs } if values_pairs[0] != "" else {}
+			
+		if d["type"] in ["Subclass", "Dropdown", "Checkbox"]:
+			values = [d[value_key] for value_key in d if value_key.startswith("value")]
+			print("b",values)
 			d["value"] = "URI"
-			d['values'] = { pair.split(",")[0].strip():pair.split(",")[1].strip() for pair in values_pairs } if values_pairs[0] != "" else {}
+			d["values"] = { urllib.parse.unquote(pair.split(",")[0]).strip():urllib.parse.unquote(pair.split(",")[1]).strip() for pair in values } if len(values) > 0 else {}
+			print("a:",d["values"])
+
+		# set subclasses
+		if d["type"] == "Subclass":
+			d["restricted"] = []
+			template_config["subclasses"] = d["values"]
+		else:
+			d["restricted"] = [urllib.parse.unquote(d[subclass_key]) for subclass_key in d if subclass_key.startswith("subclass")] 
+		
 		d["disambiguate"] = "True" if 'disambiguate' in d else "False"
 		d["browse"] = "True" if 'browse' in d else "False"
 		d["mandatory"] = "True" if 'mandatory' in d else "False" # add mandatory fields
 		d["hidden"] = "True" if 'hidden' in d else "False" # add hidden fields
-		print(d)
-		d["subclass"] = "True" if "subclass" in d else "False" # add subclass drodpown
-		d["restricted"] = "None" if d["subclass"] == "True" else d["restricted"] if "restricted" in d else "None" # do not restrict the subclass field
 		# default if missing
 		if d["type"] == "None":
 			d["type"] = "Textbox" if "values" not in d else "Dropdown"
@@ -274,6 +274,18 @@ def fields_to_json(data, json_file, skos_file):
 	with open(json_file, 'w') as fout:
 		fout.write(json.dumps(ordlist, indent=1))
 
+	with open(TEMPLATE_LIST, 'r') as file:
+		tpls = json.load(file)
+
+	# Modify the template status in tpl_list
+	for tpl in tpls:
+		if tpl['template'] == json_file:
+			tpl['hidden'] = template_config['hidden']
+			tpl['subclasses'] = template_config['subclasses']
+
+	with open(TEMPLATE_LIST, 'w') as file:
+		json.dump(tpls, file, indent=1)
+
 def validate_setup(data):
 	""" Validate user input in setup page and check errors / missing values"""
 
@@ -338,6 +350,7 @@ def updateTemplateList(res_name=None,res_type=None,remove=False):
 		res["type"] = res_type
 		res["template"] = RESOURCE_TEMPLATES+'template-'+res_name.replace(' ','_').lower()+'.json'
 		res["hidden"] = "False"
+		res["subclasses"] = {}
 		data.append(res)
 
 		with open(TEMPLATE_LIST,'w') as tpl_file:
@@ -371,6 +384,10 @@ def get_template_from_class(res_type):
 	with open(TEMPLATE_LIST,'r') as tpl_file:
 		data = json.load(tpl_file)
 
+	for t in data:
+		for s in t["subclasses"]:
+			if s in res_type:
+				res_type.remove(s)
 	res_template = [t["template"] for t in data if t["type"] == sorted(res_type)][0]
 	return res_template
 
@@ -640,13 +657,53 @@ def get_query_templates(res_tpl):
 
 
 # CHARTS CONFIG
-def charts_to_json(charts_file, data):
-	print("CHARTS DATA", data)
+def charts_to_json(charts_file, data, update_json=True):
 
-	""" with open(charts_file, 'w') as fout:
-		fout.write(json.dumps(charts, indent=1)) """
+	# initialize a blank list of dictionaries
+	charts = {"charts": []}
+
+	# parse data
+	list_dicts = defaultdict(dict)
+	for k,v in data.items():
+		if k != 'action':
+			# group k,v by number in the k to preserve the order
+			# e.g. '4__type__scope': 'Checkbox'
+			idx, json_key, field_id = k.split("__")
+			list_dicts[int(idx)]["id"] = idx
+			list_dicts[int(idx)][json_key] = v
+	
+	for idx,params in list_dicts.items():
+		# counters
+		counters = [{
+			"id": str(idx)+"__"+viz+"__"+str(idx),
+			"query": params[viz],
+			"title": " ".join(viz.split("_")[1:])
+		} for viz in params if viz.startswith("counter")]
+		counters = sorted(counters, key=lambda x: x["id"])
+		params["counters"] = counters
+
+		# sorted
+		if "y-sort" in params:
+			params["sorted"] = "y"
+		elif "x-sort" in params:
+			params["sorted"] = "x"
+
+		#legend
+		params["legend"] = "True" if "legend" in params else "False"		
+
+	# sort viz by index
+	ordict = OrderedDict(sorted(list_dicts.items()))
+	ordlist = [d for k,d in ordict.items()]
+	charts["charts"] = ordlist
+
+	# save json
+	if update_json:
+		with open(charts_file, 'w') as fout:
+			fout.write(json.dumps(charts, indent=4))
+	else:
+		return charts 
 
 def delete_charts(charts_file):
 	with open(charts_file, 'w') as fout:
-		fout.write(json.dumps({}, indent=1))
+		fout.write(json.dumps({}, indent=4))
 	

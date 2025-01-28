@@ -1,8 +1,9 @@
-$def with (graphdata,pageID,record_form,user,ids_dropdown,is_git_auth,invalid,project,template,query_templates,knowledge_extractor,extractions)
+$def with (graphdata,pageID,record_form,user,ids_dropdown,is_git_auth,invalid,project,template,query_templates,knowledge_extractor,extractions,main_lang)
 
 $var user = user
 $var is_git_auth = is_git_auth
 $var project = project
+$var main_lang = main_lang
 
 $if query_templates!=None:
 	<script type="text/javascript">
@@ -14,8 +15,7 @@ $if query_templates!=None:
 	<button id="scrollToTop"><i class="fas fa-arrow-up"></i> top</button>
 	<script type="text/javascript">
 		$$('#cbp-spmenu-s2').load( "./documentation #documentation", function() {
-			$$(".documentation").removeClass('col-md-7').addClass('col-md-12 col-sm-4');
-			$$("h2").css('font-size','2em');
+			setFormDocumentation();
 		} );
 	</script>
 	$if invalid == True:
@@ -42,19 +42,19 @@ $if query_templates!=None:
 					$for idx,input in enumerate(record_form.inputs):
 						$ id = input.get_default_id()
 						$if type(input) == Checkbox:
-							$if type(record_form.inputs[idx-1]) != Checkbox:
+							$if type(record_form.inputs[idx-1]) != Checkbox or record_form.inputs[idx-1].get_default_id().split("-")[0] != id.split("-")[0]:
 								<section class=" form_row block_field">
 									$:input.pre
 									$ i = 0
-									$while type(record_form.inputs[idx+i]) == Checkbox :
+									$ length_input_list = len(record_form.inputs)
+									$while idx+i < length_input_list and type(record_form.inputs[idx+i]) == Checkbox and record_form.inputs[idx+i].get_default_id().split("-")[0] == id.split("-")[0]:
 										<section class="col-md-12 col-sm-12 col-lg-12">
 											$:record_form.inputs[idx+i].render()
 											$:record_form.inputs[idx+i].description
 										</section>
 										$ i+=1	
 										<script type="text/javascript">
-											console.log("$id".split('-')[0])
-											var elements = $$("#"+"$id".split('-')[0])[0].attributes;
+											var elements = $$("[id='"+"$id".split('-')[0]+"']")[$i-1].attributes;
 											var attrsToChange = [];
 		
 											$$.each(elements, function(index, attr) {
@@ -64,18 +64,18 @@ $if query_templates!=None:
 											});
 											$$.each(attrsToChange, function(index, attr) {
 												var newName = attr.name.replace("data_", "data-");
-												$$('#$id'.split('-')[0]).attr(newName, attr.value);
-												$$('#$id'.split('-')[0]).removeAttr(attr.name);
+												$$("[id='"+"$id".split('-')[0]+"']").eq($i-1).attr(newName, attr.value);
+												$$("[id='"+"$id".split('-')[0]+"']").eq($i-1).removeAttr(attr.name);
 											});
 										</script>
 								</section>
-								$ checked_value = 'http'+id.split('_http')[1].split(',',1)[0]
-								$ field_base = id.split('_http')[0].rsplit('-',1)[0]
-								$ field_name = id.split('_http')[0]
-								$if any(checked_value in k_v for k_v in graphdata[field_base]):
-									<script type="text/javascript">
-										$$("input[name=$field_name]").attr("checked","checked");
-									</script>
+							$ checked_value = 'http'+id.split('_http')[1].split(',',1)[0]
+							$ field_base = id.split('_http')[0].rsplit('-',1)[0]
+							$ field_name = id.split('_http')[0]
+							$if any(checked_value in k_v for k_v in graphdata[field_base]):
+								<script type="text/javascript">
+									$$("input[name=$field_name]").attr("checked","checked");
+								</script>
 						$else:
 							<section class="form_row block_field">
 								<section class="label col-12">
@@ -100,7 +100,7 @@ $if query_templates!=None:
 											$:input.render()
 											$if len(graphdata[id]) > 0:
 												<script type="text/javascript">
-													$$('#$id').prepend($$('<option value="None">Select from the list</option>'));
+													$$('#$id').prepend($$('<option value="">Select from the list</option>'));
 													$$("#$id option[value$$='$graphdata[id][0][0]']").attr("selected","selected");
 												</script>
 
@@ -121,9 +121,9 @@ $if query_templates!=None:
 														$ lang = k_v[1]
 														$ lang_id = id+'_'+lang
 														$if input.type=="text":
-															<input type="text" value="$k_v[0]" id="$lang_id" name="$lang_id" class="$input.attrs['class']" lang="$lang" placeholder="$input.attrs['placeholder']" data-supertemplate="$input.attrs['data_supertemplate']" data-mandatory="$input.attrs['data_mandatory']"/>
+															<input type="text" value="$k_v[0]" id="$lang_id" name="$lang_id" class="$input.attrs['class']" lang="$lang" placeholder="$input.attrs['placeholder']" data-supertemplate="$input.attrs['data_supertemplate']" data-mandatory="$input.attrs['data_mandatory']" data-subclass="$input.attrs['data_subclass']"/>
 														$else:
-															<textarea value="$k_v[0]" id="$lang_id" name="$lang_id" class="$input.attrs['class']" lang="$lang" placeholder="$input.attrs['placeholder']" data-supertemplate="$input.attrs['data_supertemplate']" data-mandatory="$input.attrs['data_mandatory']">$k_v[0]</textarea>	
+															<textarea value="$k_v[0]" id="$lang_id" name="$lang_id" class="$input.attrs['class']" lang="$lang" placeholder="$input.attrs['placeholder']" data-supertemplate="$input.attrs['data_supertemplate']" data-mandatory="$input.attrs['data_mandatory']" data-subclass="$input.attrs['data_subclass']">$k_v[0]</textarea>	
 														$if len(k_v) == 3:
 															$ lang_id = id+'_mainLang'
 															<input type="hidden" value="$lang" id="$lang_id" name="$lang_id">
@@ -148,30 +148,46 @@ $if query_templates!=None:
 													<iframe allow='autoplay' class='col-md-11 iframePreview' src='$:k_v[1]' crossorigin></iframe>
 													<span class='tag $k_v[0]' data-input='$id' id='$k_v[0]'>$:k_v[1]</span>
 													<input type='hidden' class='hiddenInput $k_v[0]' name='$id-$k_v[0]' value="$k_v[0],$:k_v[1]"/>
+										<script type="text/javascript">
+											console.log('$id')
+											var elements = $$('#$id')[0].attributes;
+											var attrsToChange = [];
+			
+											$$.each(elements, function(index, attr) {
+												if (attr.name.startsWith("data_")) {
+													attrsToChange.push(attr);
+												}
+											});
+											$$.each(attrsToChange, function(index, attr) {
+												var newName = attr.name.replace("data_", "data-");
+												$$('#$id').attr(newName, attr.value);
+												$$('#$id').removeAttr(attr.name);
+											});
+										</script>
 									$else:
 										$:input.render()
 										$if type(input) == Dropdown:
 											<script type="text/javascript">
-												$$('#$id').prepend($$('<option selected=selected value="None">Select from the list</option>'));
+												$$('#$id').prepend($$('<option selected=selected value="">Select from the list</option>'));
 											</script>
+										<script type="text/javascript">
+											console.log('$id')
+											var elements = $$('#$id')[0].attributes;
+											var attrsToChange = [];
+			
+											$$.each(elements, function(index, attr) {
+												if (attr.name.startsWith("data_")) {
+													attrsToChange.push(attr);
+												}
+											});
+											$$.each(attrsToChange, function(index, attr) {
+												var newName = attr.name.replace("data_", "data-");
+												$$('#$id').attr(newName, attr.value);
+												$$('#$id').removeAttr(attr.name);
+											});
+										</script>
 								</section>
 							</section>
-							<script type="text/javascript">
-								console.log('$id')
-								var elements = $$('[id^="$id"]')[0].attributes;
-								var attrsToChange = [];
-
-								$$.each(elements, function(index, attr) {
-									if (attr.name.startsWith("data_")) {
-										attrsToChange.push(attr);
-									}
-								});
-								$$.each(attrsToChange, function(index, attr) {
-									var newName = attr.name.replace("data_", "data-");
-									$$('#$id').attr(newName, attr.value);
-									$$('#$id').removeAttr(attr.name);
-								});
-							</script>
 					$if type(knowledge_extractor) == type([]):
 						$ extractors_template_ids = [tpl[0] for tpl in knowledge_extractor]
 						$ extractors_names = [tpl[1] for tpl in knowledge_extractor]
@@ -211,68 +227,6 @@ $if query_templates!=None:
 		</form>
 	</section>
 	<section id="searchresult">
-	</section>
-	<section class="homeheading extraction_documentation col-md-3 col-sm-3 col-lg-3" style="display: none;">
-		<p class="caption">Tips</p>
-		<section class="extraction_documentation_api">
-			<p>To properly handle retrieved results, you must provide the keys pointing to the desired values (a URI and its label) within the query output. Results are usually organised as an array of sub-dictionaries within the query output dictionary. Consequently, three paths are needed: one to reach the array of results and the remaining two to access URIs and labels. In case of multiple keys to be accessed, they must be separated by a dot. Example:</p>
-			<p><code>  array</code>,results.results<br>
-			<code>  uri</code>,uri<br>
-			<code>  label</code>,prefLabel<br>
-			</p>
-		</section>
-		<section class="extraction_documentation_sparql">
-			<p>Remember to include necessary prefixes at the beginning of the query. Example: <code>PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;</code></p>
-		</section>
-		<section class="extraction_documentation_file">
-			<p>SPARQL Anything queries are based on the Facade-X meta-model, converting Static Files to RDF.</p>
-			<p>Given a <code>.json</code> file, each key corresponds to an <code>xyz:</code> property. Example:</code></p>
-			<div>
-			Data:<br>
-			<code>{</code><br>
-			<code>	"stringArg": "stringValue",</code><br>
-			<code>	"intArg": 1,</code><br>
-			<code>	"booleanArg": true,</code><br>
-			<code>  "nullArg": null,</code><br>
-			<code>  "arr": [ 0, 1 ]</code><br>
-			<code>}</code><br><br>
-			Facade-X RDF:<br>
-			<code>@prefix xyz: &lt;http://sparql.xyz/facade-x/data/&gt; .</code><br>																					
-			<code>@prefix fx: &lt;http://sparql.xyz/facade-x/ns/&gt; .</code><br>
-			<code>@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</code><br>
-			<code>@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .</code><br>
-			<code>[ a fx:root ; </code><br>
-			<code>	xyz:arr [</code><br>
-			<code>	rdf:_1  "0"^^xsd:int ;</code><br>
-			<code>	rdf:_2  "1"^^xsd:int ] ;</code><br>
-			<code>	xyz:booleanArg  true ;</code><br>
-			<code>	xyz:intArg "1"^^xsd:int ;</code><br>
-			<code>	xyz:stringArg "stringValue"</code><br>
-			<code>] .</code><br><br>
-						<p>Given a <code>.csv</code> file, each column corresponds to a numbered property starting from <code>rdf:_1</code>. Example:</code></p>
-						Data:<br>
-			<code>laura@example.com,2070,Laura</code><br>	
-			<code>craig@example.com,4081,Craigz</code><br>
-			<code>mary@example.com,9346,Mary</code><br><br>
-			Facade-X RDF:<br>
-			<code>@prefix fx: &lt;http://sparql.xyz/facade-x/ns/&gt; .</code><br>
-			<code>@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .</code><br>
-			<code>[ a fx:root ; </code><br>
-			<code>	rdf:_1  [ rdf:_1  "laura@example.com" ;</code><br>
-			<code>            rdf:_2  "2070" ;</code><br>
-			<code>            rdf:_3  "Laura" ;</code><br>
-			<code>          ] ;</code><br>
-			<code>	rdf:_2  [ rdf:_1  "craig@example.com" ;</code><br>
-			<code>            rdf:_2  "4081" ;</code><br>
-			<code>            rdf:_3  "Craig" ;</code><br>
-			<code>          ] ;</code><br>
-			<code>	rdf:_3  [ rdf:_1  "mary@example.com" ;</code><br>
-			<code>            rdf:_2  "9346" ;</code><br>
-			<code>            rdf:_3  "Mary" ;</code><br>
-			<code>          ] ;</code><br>
-			<code>] .</code><br>
-		</div>
-		</section>
 	</section>
 
 </section>

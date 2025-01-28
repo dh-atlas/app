@@ -26,5 +26,5 @@ def import_vocabs():
 					for uri,label in dict_vocab.items():
 						vocab.add(( URIRef( uri), RDFS.label, Literal(label) ))
 
-				vocab.serialize(destination='vocabs/vocabs.ttl', format='ttl', encoding='utf-8')
+				#vocab.serialize(destination='vocabs/vocabs.ttl', format='ttl', encoding='utf-8')
 				server.update('load <file:///'+dir_path+'/vocabs/vocabs.ttl> into graph <'+conf.base+'vocabularies/>')

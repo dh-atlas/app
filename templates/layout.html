@@ -28,6 +28,7 @@ $def with (content)
 		<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:wght@200..800&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script type="application/javascript">const mainLang = "$content.main_lang"</script>
 	</head>
 	<body class="cbp-spmenu-push">
 		<section class="container-fluid main_content">
@@ -41,7 +42,8 @@ $def with (content)
 				<!-- <a href="about">about</a> -->
 				<section class="col-md-8 col-sm-12 collapse navbar-collapse" id="navbarSupportedContent">
 					<span><a href="/" class="logo_header">$content.project</a>
-					<a href="records">Explore</a></span>
+					<a href="records">Explore</a>
+					<a href="charts-visualization">Charts</a></span>
 					$if content.user == 'anonymous' or content.user == 'unknown':
 						$if content.is_git_auth == True:
 							<button class="btn btn-dark" onclick="window.location.href='gitauth'"  role="button" id="dropdownMenuLink">Member area <i class="fab fa-github"></i></button>
@@ -69,25 +71,24 @@ $def with (content)
 			<footer class="row justify-content-md-center">
 
 				<section class="col-md-4 col-sm-12">
-						<p>$content.project is part of</p>
-						<p><a target="_blank" href="https://polifonia-project.eu/"><img src="static/imgs/logo.svg"></a> <img src="static/imgs/logoeu.jpg"></p>
-						<p>Polifonia has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N. 101004746</p>
+						<p><a target="_blank" href="https://dh-atlas.github.io/index.html"><img src="static/imgs/prin22logo.jpeg"/></a></p>
+						<p>The ATLAS project is funded by the European Union - Next Generation EU, Mission 4 Component 1 CUP J53D23013000006 (PRIN 2022).</p>
 						<p></p>
 				</section>
 
 				<section class="col-md-2 col-sm-10">
 					<p><a href="/">Home</a></p>
 					<p><a href="records">Explore</a></p>
+					<p><a href="charts-visualization">Charts</a></p>
 					<p><a href="sparql">SPARQL endpoint</a></p>
 					<p><a href="model">Data model</a></p>
 					<p><a href="documentation">Editorial guidelines</a></p>
 				</section>
 				<section class="col-md-2 col-sm-10">
 
-					<p><a href="https://github.com/polifonia-project/registry_app"><i class="fab fa-github"></i></a>
-						<a href="https://twitter.com/PolifoniaH2020"><i class="fab fa-twitter"></i></a>
-						<a href="https://www.linkedin.com/company/polifonia-h2020/"><i class="fab fa-linkedin-in"></i></a> </p>
-					<p>Become a collaborator! send us a request on <a href="https://github.com/polifonia-project/registry_app/issues">github</a></p>
+					<p><a href="https://github.com/dh-atlas/app"><i class="fab fa-github"></i></a>
+						<a href="https://dh-atlas.github.io/"><i class="fa fa-home"></i></a>
+					<p>Become a collaborator! send us a request on <a href="https://github.com/dh-atlas/app/issues">github</a></p>
 				</section>
 			</footer>
 		</section>

@@ -51,7 +51,11 @@ def getValuesFromFields(fieldPrefix, recordData, fields=None, field_type=None):
 				values = value.split(',', 1)
 				results.add(( values[0].strip(), urllib.parse.unquote(values[1]) )) # (id, label)
 		else:
+			# TODO: check the if statement
 			if key.startswith(fieldPrefix+'_') and ',' in value: # multiple values from text box (entities) and URL 
+				values = value.split(',', 1)
+				results.add(( values[0].strip(), urllib.parse.unquote(values[1]) )) # (id, label)
+			elif key.startswith(fieldPrefix+'-') and ',' in value: # multiple values from checkbox group
 				values = value.split(',', 1)
 				results.add(( values[0].strip(), urllib.parse.unquote(values[1]) )) # (id, label)
 			elif key == fieldPrefix: # uri from dropdown (single value from controlled vocabulary) and URL
@@ -64,6 +68,7 @@ def getValuesFromFields(fieldPrefix, recordData, fields=None, field_type=None):
 					for url in value.split(','):
 						results.add(( url.strip(), url.strip() ))
 	result_dict['results'] = results
+	print("resdict:", result_dict)
 	return result_dict
 
 def getLiteralValuesFromFields(fieldPrefix, recordData):
@@ -73,7 +78,7 @@ def getLiteralValuesFromFields(fieldPrefix, recordData):
 	results = set()
 	for key, value in recordData.items():
 		if key.startswith(fieldPrefix+'_'):
-			lang = key.rsplit('_')[1]
+			lang = key.rsplit('_',1)[1]
 			if lang == 'mainLang':
 				result_dict['mainLang'] = value
 			elif term._is_valid_langtag(lang):
@@ -103,13 +108,16 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 		tpl_list = json.load(tpl_file)
 
 	resource_class = next(t["type"] for t in tpl_list if t["template"] == tpl_form)
-	resource_subclass_field = next((f["id"] for f in fields if f.get("subclass") == "True"), None)
-	resource_subclass = urllib.parse.quote(getRightURIbase(recordData[resource_subclass_field]),safe='') if resource_subclass_field != None else resource_subclass_field
-	print("resource_subclass:", resource_subclass)
+	resource_subclass_field = next((f for f in fields if f.get("type") == "Subclass"), None)
+	resource_subclass_field_values = resource_subclass_field["values"] if resource_subclass_field != None else resource_subclass_field
+	resource_subclass_input_ids = [resource_subclass_field["id"]+"-"+str(idx) for idx in list(range(len(resource_subclass_field_values)))] if resource_subclass_field_values != None else []
+	resource_subclass_input_values = [recordData[input_id].split(",")[0] for input_id in resource_subclass_input_ids if input_id in recordData]
+
+	# exclude hidden input fields and unrequired ones (based on subclasses)
 	fields = [
 		input_field for input_field in fields 
 		if input_field["hidden"] == "False" and 
-		("restricted" not in input_field or input_field["restricted"] in ["None", resource_subclass])
+		(input_field["restricted"] == [] or any(resource_subclass in resource_subclass_input_values for resource_subclass in input_field["restricted"]) )
 	]
 
 	# CREATE/MODIFY A NAMED GRAPH for each new record
@@ -173,6 +181,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 			
 			# TODO disambiguate as URI, value
 			if field["disambiguate"] == 'True': # use the key 'disambiguate' as title of the graph
+				print("VALUE:", value)
 				main_lang = value['mainLang']
 				main_value = [label for label in value['results'] if label[1] == main_lang]
 				main_value = list(value['results']) if len(main_value) == 0 else main_value
@@ -207,11 +216,11 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 				elif value['type'] == 'URI': #object properties
 					rdf_property = SKOS.prefLabel if field['type'] == 'Skos' else RDFS.label
 					for entity in value['results']:
-						entityURI = getRightURIbase(entity[0]) # Wikidata or new entity 
+						entityURI = getRightURIbase(entity[0]) # Wikidata or new entity
 						wd.add(( URIRef(base+graph_name), URIRef(field['property']), URIRef(entityURI) ))
 						wd.add(( URIRef( entityURI ), rdf_property, Literal(entity[1].lstrip().rstrip(), datatype="http://www.w3.org/2001/XMLSchema#string") ))
-						if "subclass" in field and field["subclass"] != "False": # Subclass
-							wd.add(( URIRef(base+graph_name), DCTERMS.type, URIRef(entityURI) ))
+						if field["type"] == "Subclass": # Subclass
+							wd.add(( URIRef(base+graph_name), RDF.type, URIRef(entityURI) ))
 				elif value['type'] == 'Literal': #multi-language Literals
 					for literal in value['results']:
 						val, lang = literal
@@ -263,7 +272,8 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 
 				
 				# process extracted keywords
-				extracted_keywords = [item for item in recordData if item.startswith("keyword_"+recordID+"_"+field['id']+"-"+extraction_num)]
+				print("EXTRACT:", "keyword_"+recordID+"-"+field['id']+"-"+extraction_num)
+				extracted_keywords = [item for item in recordData if item.startswith("keyword_"+recordID+"-"+field['id']+"-"+extraction_num)]
 				print(field["id"], extracted_keywords)
 				if len(extracted_keywords) > 0:
 					# link the extraction graph to main Record graph
@@ -282,7 +292,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 					
 					# store the extraction output
 					for keyword in extracted_keywords:
-						label = keyword.replace("keyword_"+recordID+"_"+field['id']+"-"+extraction_num+"_","")
+						label = keyword.replace("keyword_"+recordID+"-"+field['id']+"-"+extraction_num+"_","")
 						wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDFS.label,  Literal(label)))
 					
 					# save the extraction graph
@@ -290,28 +300,27 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 					server.update('load <file:///'+dir_path+'/records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl> into graph <'+base+extraction_graph_name+'/>')
 		# SUBTEMPLATE
 		elif field['type']=="Subtemplate" and field['id'] in recordData:
-			if "," in recordData[field['id']] or ";" in recordData[field['id']]:
-				if type(recordData[field['id']]) != type([]) and field['id']+"-subrecords" in recordData:
-					# get the list of subrecords associated to a 'Subtemplate' field
-					subrecords = recordData[field['id']+"-subrecords"].split(",") \
-						if field['id']+"-subrecords" in recordData else []
-					for subrecord in subrecords:
-						if subrecord != "":
-							if ";" in subrecord:
-								subrecord_id, retrieved_label = subrecord.split(";",1)
-							else:
-								# process a new subrecord, send its data to the triplestore, and link it to the main record
-								subrecord_id = subrecord
-								allow_data_reuse = fields if 'dataReuse' in field and field['dataReuse']=='allowDataReuse' else False
-								processed_subrecord = process_new_subrecord(recordData,userID,stage,subrecord,supertemplate=None,allow_data_reuse=allow_data_reuse)
-								subrecord_id, retrieved_label = processed_subrecord
-							wd.add(( URIRef(base+graph_name), URIRef(field['property']), URIRef(base+subrecord_id) ))
-							wd.add(( URIRef(base+subrecord_id), RDFS.label, Literal(retrieved_label, datatype="http://www.w3.org/2001/XMLSchema#string")))
-				elif type(recordData[field['id']]) == type([]):
-					for entity in recordData[field['id']]:
-						entity_URI, entity_label = entity
-						wd.add(( URIRef(base+graph_name), URIRef(field['property']), URIRef(base+entity_URI) ))
-						wd.add(( URIRef(base+entity_URI), RDFS.label, Literal(entity_label, datatype="http://www.w3.org/2001/XMLSchema#string")))
+			if type(recordData[field['id']]) != type([]) and field['id']+"-subrecords" in recordData:
+				# get the list of subrecords associated to a 'Subtemplate' field
+				subrecords = recordData[field['id']+"-subrecords"].split(",") \
+					if field['id']+"-subrecords" in recordData else []
+				for subrecord in subrecords:
+					if subrecord != "":
+						if ";" in subrecord:
+							subrecord_id, retrieved_label = subrecord.split(";",1)
+						else:
+							# process a new subrecord, send its data to the triplestore, and link it to the main record
+							subrecord_id = subrecord
+							allow_data_reuse = fields if 'dataReuse' in field and field['dataReuse']=='allowDataReuse' else False
+							processed_subrecord = process_new_subrecord(recordData,userID,stage,subrecord,supertemplate=None,allow_data_reuse=allow_data_reuse)
+							subrecord_id, retrieved_label = processed_subrecord
+						wd.add(( URIRef(base+graph_name), URIRef(field['property']), URIRef(base+subrecord_id) ))
+						wd.add(( URIRef(base+subrecord_id), RDFS.label, Literal(retrieved_label, datatype="http://www.w3.org/2001/XMLSchema#string")))
+			elif type(recordData[field['id']]) == type([]):
+				for entity in recordData[field['id']]:
+					entity_URI, entity_label = entity
+					wd.add(( URIRef(base+graph_name), URIRef(field['property']), URIRef(base+entity_URI) ))
+					wd.add(( URIRef(base+entity_URI), RDFS.label, Literal(entity_label, datatype="http://www.w3.org/2001/XMLSchema#string")))
 
 	# get keywords (record modify)
 	if stage == 'modified' and any([k for k,v in recordData.items() if k.startswith('keywords')]):
@@ -433,7 +442,7 @@ def process_new_subrecord(data, userID, stage, subrecord_id, supertemplate=None,
 
 	print("#### DATA:\n",new_record_data)
 	store_data = storify(new_record_data)
-	grapht_to_clear = None if stage == 'not modified' else base+subrecord_id+"/"
-	inputToRDF(store_data,userID,stage,graphToClear=grapht_to_clear,tpl_form=subtemplate_path)
+	graph_to_clear = None if stage == 'not modified' else base+subrecord_id+"/"
+	inputToRDF(store_data,userID,stage,graphToClear=graph_to_clear,tpl_form=subtemplate_path)
 	result = [subrecord_id,label]
 	return result

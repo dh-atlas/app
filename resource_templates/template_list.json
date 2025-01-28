@@ -6,7 +6,8 @@
    "http://example.org/ExampleClass"
   ],
   "template": "resource_templates/template-example_template.json",
-  "hidden": "False"
+  "hidden": "True",
+  "subclasses": {}
  },
  {
   "name": "Person",
@@ -16,7 +17,8 @@
    "https://schema.org/Person"
   ],
   "template": "resource_templates/template-person.json",
-  "hidden": "False"
+  "hidden": "False",
+  "subclasses": {}
  },
  {
   "name": "Research Project",
@@ -26,7 +28,8 @@
    "https://schema.org/ResearchProject"
   ],
   "template": "resource_templates/template-research_project.json",
-  "hidden": "False"
+  "hidden": "False",
+  "subclasses": {}
  },
  {
   "name": "Organization",
@@ -36,7 +39,8 @@
    "https://schema.org/Organization"
   ],
   "template": "resource_templates/template-organization.json",
-  "hidden": "False"
+  "hidden": "False",
+  "subclasses": {}
  },
  {
   "name": "Research Product",
@@ -45,7 +49,14 @@
    "https://schema.org/Dataset"
   ],
   "template": "resource_templates/template-research_product.json",
-  "hidden": "False"
+  "hidden": "False",
+  "subclasses": {
+   "https://w3id.org/dh-atlas/Software": "Software",
+   "https://w3id.org/dh-atlas/Ontology": "Ontology",
+   "https://w3id.org/dh-atlas/TextCollection": "Text Collection",
+   "https://w3id.org/dh-atlas/LinkedOpenData": "Linked Open Data",
+   "https://w3id.org/dh-atlas/DigitalScholarlyEdition": "Digital Scholarly Edition"
+  }
  },
  {
   "name": "Data Service",
@@ -54,7 +65,8 @@
    "http://purl.org/spar/fabio/ComputerProgram"
   ],
   "template": "resource_templates/template-data_service.json",
-  "hidden": "False"
+  "hidden": "False",
+  "subclasses": {}
  },
  {
   "name": "Web Site",
@@ -63,6 +75,17 @@
    "http://purl.org/spar/fabio/WebSite"
   ],
   "template": "resource_templates/template-web_site.json",
-  "hidden": "False"
+  "hidden": "False",
+  "subclasses": {}
+ },
+ {
+  "name": "Computer Program",
+  "short_name": "computer_program",
+  "type": [
+   "https://computer.program"
+  ],
+  "template": "resource_templates/template-computer_program.json",
+  "hidden": "False",
+  "subclasses": {}
  }
 ]
