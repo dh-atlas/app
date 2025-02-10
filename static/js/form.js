@@ -503,10 +503,10 @@ function searchWorldcat(searchterm) {
 // SEARCH CATALOGUE
 // search bar menu
 function searchCatalogue(searchterm) {
-    $('#'+searchterm).keyup(function(e) {
+    $('#'+searchterm).off('keyup').on('keyup', function(e) {
         $("#searchresultmenu").show();
         var q = $('#'+searchterm).val();
-        var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (STR(?o) AS ?o_str) "+inGraph+" where { ?o bds:search '"+q+"*'. ?o bds:minRelevance '0.3'^^xsd:double . ?s rdfs:label ?o ; a ?class .}"
+        var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (STR(?o) AS ?o_str) "+inGraph+" where { ?o bds:search '"+q+"*'. ?o bds:minRelevance '0.3'^^xsd:double . graph ?g {?s rdfs:label ?o ; a ?class .}}"
         var encoded = encodeURIComponent(query)
         if (q == '') { $("#searchresultmenu").hide();}
         $.ajax({

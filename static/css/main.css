@@ -1305,6 +1305,7 @@ table.url-table i, table.extraction-table i {
 
 .counterNum {
   font-size: 3em;
+  height: 1.5em;
 }
 
 .chart-heading {
@@ -1320,7 +1321,6 @@ table.url-table i, table.extraction-table i {
 
 .map-chart {
   width: 100%;
-  background-color: #f8f8f8;
   height: 500px;
   overflow: hidden;
   border: 1px solid #332421;
@@ -1356,6 +1356,17 @@ table.url-table i, table.extraction-table i {
 
 .counters > p, .stats-block > p {
   font-size: 1.4em;
+}
+
+.section-fade {
+  opacity: 0;
+  transform: translateY(50px);  
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section-fade-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .subtemplateField:last-child {
@@ -1481,7 +1492,6 @@ table.url-table i, table.extraction-table i {
 }
 
 .inverse-subtitle {
-  padding-left: 1em;
   padding-top: 1em;
   text-transform: uppercase;
   font-weight: 600;
@@ -1494,8 +1504,14 @@ table.url-table i, table.extraction-table i {
   flex-wrap: wrap; 
   align-items: flex-start;
   gap: 20px; 
+}
+
+.inverse-template:not(:last-of-type) .inverse-results-container {
   border-bottom: 2px solid rgba(27, 27, 27, 0.12);
-  padding-left: 1em;
+}
+
+.inverse-results-container i {
+  padding-left: 0;
 }
 
 .inverse-property {
@@ -1512,13 +1528,12 @@ table.url-table i, table.extraction-table i {
 .inverse-property span {
   font-weight: 400;
   color: #333;
-
 }
 
 .inverses {
-  margin: 3em 0 -1em 0; 
-  max-height: 1000px;
-  background-color: silver;
+  margin: 3em 0 -0.8em 0; 
+  max-height: 100%;
+  background-color: lightgray;
 }
 
 .info-bio {
@@ -1526,7 +1541,7 @@ table.url-table i, table.extraction-table i {
 }
 
 .biblio:first-of-type {
-  background-color: silver;
+  background-color: lightgray;
   color: white;
 }
 

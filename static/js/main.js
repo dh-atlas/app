@@ -1289,7 +1289,7 @@ function searchResources(event, element) {
         }
           UNION 
         {
-          ?o ?p2 <${uri}> ; rdfs:label ?label . ${typePatterns} ${filterNotExists} .
+          GRAPH ?graph2 {?o ?p2 <${uri}> ; rdfs:label ?label . ${typePatterns} ${filterNotExists}} .
         } 
       }`
   if (offsetQuery === 0) {
