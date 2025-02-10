@@ -85,7 +85,7 @@
   "label": "Contributor",
   "property": "http://schema.org/contributor",
   "prepend": "Person or organization that has contributed to the realization of the research product.",
-  "type": "Textbox",
+  "type": "Subtemplate",
   "value": "URI",
   "placeholder": "",
   "restricted": "None",
@@ -100,11 +100,14 @@
   "searchSkos": "False",
   "url": "False",
   "skosThesauri": [],
-  "import_subtemplate": [],
+  "import_subtemplate": [
+    "resource_templates/template-person.json",
+    "resource_templates/template-organization.json"
+   ],
   "disabled": "False",
   "class": "col-md-12",
   "cache_autocomplete": "off",
-  "view_class": ""
+  "view_class": " subtemplateField"
  },
  {
   "id": "1727859544762",

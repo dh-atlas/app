@@ -77,15 +77,5 @@
   "template": "resource_templates/template-web_site.json",
   "hidden": "False",
   "subclasses": {}
- },
- {
-  "name": "Computer Program",
-  "short_name": "computer_program",
-  "type": [
-   "https://computer.program"
-  ],
-  "template": "resource_templates/template-computer_program.json",
-  "hidden": "False",
-  "subclasses": {}
  }
 ]
