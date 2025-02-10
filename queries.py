@@ -205,7 +205,6 @@ def getRecordCreator(graph_name):
 
 # UPDATE SUBCLASS VALUES TO AVOID INCONSISTENCIES
 def updateSubclassValue(data):
-	print("DATA:", data)
 
 	old_uri = urllib.parse.unquote(data.olduri)
 	insert_clause = ""
@@ -237,7 +236,6 @@ def updateSubclassValue(data):
 		}
 		"""
 	
-	print("update query:", update_query)
 	try:
 		sparql = SPARQLWrapper(conf.myEndpoint)
 		sparql.setQuery(update_query)
@@ -339,14 +337,12 @@ def getData(graph,res_template):
 	sparql.setQuery(queryNGraph)
 	sparql.setReturnFormat(JSON)
 	sparql.setMethod(POST)
-
 	results = sparql.query().convert()
 
 	data = defaultdict(list)
 	for result in results["results"]["bindings"]:
 		result.pop('subject',None)
 		graph_label = result.pop('graph_title',None)
-		print("LABEL:", graph_label)
 		for k,v in result.items():
 			if '_label' not in k and v['type'] == 'literal': # string values
 				value = v['value']
@@ -487,7 +483,7 @@ def get_subrecords(rdf_property,record_name):
 			<"""+conf.base+record_name+"""> <"""+rdf_property+"""> ?subrecord .
 		}} """
 	results = hello_blazegraph(q)
-	print(q,results)
+
 	subrecords_list = [subrecord['subrecord']['value'] for subrecord in results['results']['bindings']]
 	return subrecords_list
 
@@ -625,13 +621,18 @@ def saveHiddenTriples(graph, tpl):
 
 def get_records_from_object(graph_uri):
 	query = """
-		SELECT DISTINCT ?subject ?property ?class ?label
+		SELECT DISTINCT ?subject ?property ?label 
+       	(GROUP_CONCAT(DISTINCT ?class; separator="; ") AS ?classes)
 		WHERE {
-			?subject ?property <"""+graph_uri+""">.
-			?subject rdfs:label ?label .
-			?subject a ?class .
+			GRAPH ?graph {
+				?subject ?property <"""+graph_uri+""">.
+				?subject rdfs:label ?label.
+				?subject a ?class.
+			}
 		}
+		GROUP BY ?graph ?subject ?property ?label
 	"""
+
 	sparql = SPARQLWrapper(conf.myEndpoint)
 	sparql.setQuery(query)
 	sparql.setReturnFormat(JSON)
@@ -694,7 +695,6 @@ def geonames_geocoding(geonames_uri):
 	search_url = f'http://api.geonames.org/getJSON?geonameId={uri_id}&username=palread'
 	response = requests.get(search_url)
 	data = response.json()
-	print("geonames:", data)
 	latitude = data['lat']
 	longitude = data['lng']
 	return latitude, longitude
@@ -715,4 +715,55 @@ def SPARQLAnything(query_str):
 	sparql.setQuery(query)
 	sparql.setReturnFormat(JSON)
 	results = sparql.query().convert()
+	return results
+
+def getChartData(chart):
+
+	if chart["type"] == "map":
+		query_results = hello_blazegraph(chart["query"])["results"]["bindings"]
+		stats_result = []
+		for result in query_results:
+			if "geonames" in result:
+				geonames = result["geonames"]["value"]
+				lat, long = geonames_geocoding(geonames)
+				i = 0
+				while i < int(result["count"]["value"]):
+					stats_result.append({
+						"label" : result["label"]["value"],
+						"latitude": lat,
+						"longitude": long
+					})
+					i += 1
+		results = stats_result
+	elif chart["type"] == "chart":
+		stats_query = chart["query"]
+		x_var, x_name = chart["x-var"], chart["x-name"]
+		x_var = x_var.replace("?","")
+		y_var, y_name = chart["y-var"], chart["y-name"]
+		y_var = y_var.replace("?","")
+		query_results = hello_blazegraph(stats_query)
+		stats_result = []
+		for result in query_results["results"]["bindings"]:
+			x_value = int(result[x_var]["value"]) if "datatype" in result[x_var] and result[x_var]["datatype"] == "http://www.w3.org/2001/XMLSchema#integer" else result[x_var]["value"]
+			y_value = int(result[y_var]["value"]) if "datatype" in result[y_var] and result[y_var]["datatype"] == "http://www.w3.org/2001/XMLSchema#integer" else result[y_var]["value"]
+			stats_result.append({x_name: x_value, y_name: y_value})
+		if "sorted" in chart and chart["sorted"] != "None":
+			if chart["sorted"] == "x":
+				stats_result = list(reversed(sorted(stats_result, key=lambda x: x[x_name])))
+			elif chart["sorted"] == "y":
+				stats_result = list(reversed(sorted(stats_result, key=lambda x: x[y_name])))
+		results = stats_result
+	elif chart["type"] == "counter":
+		results = []
+		for counter in chart["counters"]:
+			counter_query = counter["query"]
+			try:
+				query_results = hello_blazegraph(counter_query)
+				count_result = [result["count"]["value"] for result in query_results["results"]["bindings"]]
+				count = int(count_result[0]) if len(count_result) > 0 else 0
+			except Exception as e:
+				count = 0
+			results.append(count)
+		
+	print("results:", results)
 	return results
