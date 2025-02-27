@@ -54,7 +54,7 @@ urls = (
 	prefix + '/logout', 'Logout',
 	prefix + '/gitauth', 'Gitauth',
 	prefix + '/oauth-callback', 'Oauthcallback',
-	prefix + '/welcome-(.+)','Index',
+	prefix + '/welcome-(.+)', 'Index',
 	prefix + '/record-(.+)', 'Record',
 	prefix + '/modify-(.+)', 'Modify',
 	prefix + '/review-(.+)', 'Review',
@@ -63,13 +63,14 @@ urls = (
 	prefix + '/model', 'DataModel',
 	prefix + '/view-(.+)', 'View',
 	prefix + '/term-(.+)', 'Term',
-	prefix + '/(sparql)','sparql',
-	prefix + '/savetheweb-(.+)','Savetheweb',
-	prefix + '/nlp','Nlp',
+	prefix + '/(sparql)', 'sparql',
+	prefix + '/savetheweb-(.+)', 'Savetheweb',
+	prefix + '/nlp', 'Nlp',
 	prefix + '/sparqlanything', 'Sparqlanything',
 	prefix + '/wd', 'Wikidata',
 	prefix + '/charts-visualization', 'Charts',
-	prefix + '/charts-template', 'ChartsTemplate'
+	prefix + '/charts-template', 'ChartsTemplate',
+	prefix + "/static/(.*)", "StaticFileHandler"  # Serve static files explicitly
 )
 
 app = web.application(urls, globals())
@@ -109,6 +110,18 @@ def internalerror():
 class Notfound:
 	def GET(self):
 		raise web.notfound()
+
+class StaticFileHandler:
+    def GET(self, file):
+        """Serve static files manually when using Gunicorn"""
+        static_path = os.path.join(os.path.dirname(__file__), "static")
+        file_path = os.path.join(static_path, file)
+
+        if os.path.exists(file_path):
+            return open(file_path, "rb").read()
+        else:
+            return web.notfound()
+
 
 app.notfound = notfound
 app.internalerror = internalerror

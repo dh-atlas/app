@@ -2,13 +2,18 @@ version: "3.8"
 services:
   db:
     container_name: db
-    image: "lyrasis/blazegraph:2.1.5"
+    build: 
+      context: .
+      dockerfile: Dockerfile.blazegraph.prod
+    # image: "lyrasis/blazegraph:2.1.5"
     # Uncomment if you want to access blazegraph interface in your browser (http://localhost:8888) 
     #  ports:
     #   - 8888:8080
     volumes:
-      - .:/app
-      - ./blaze_vm.properties:/RWStore.properties
+      - blazegraph_data:/app/data
+      - blazegraph_records:/app/records
+      - blazegraph_vocabs:/app/vocabs
+      # - .:/app
     restart: always
 
   sparqlanything:
@@ -27,8 +32,11 @@ services:
       - sparqlanything 
       - db
     volumes:
-      - .:/app
-      # - static_data:/app/static  # Share static files with nginx
+      # - .:/app
+      - blazegraph_data:/app/data
+      - blazegraph_records:/app/records
+      - blazegraph_vocabs:/app/vocabs
+      - static_data:/app/static  # Share static files with nginx
     ports:
       - "8080:8080"
     stdin_open: true
@@ -47,17 +55,27 @@ services:
       SPARQL_ANYTHING_ENDPOINT: "http://sparqlanything:3000/sparql.anything"
       PUBLIC_BLAZEGRAPH_ENDPOINT: "http://localhost:8080/sparql"
     restart: unless-stopped
+
+  init-static:
+    image: busybox
+    volumes:
+      - static_data:/app/static
+    command: ["/bin/sh", "-c", "cp -r /app/static_default/* /app/static || true"]
+
   nginx:
     container_name: nginx
     build: 
-      context: ./services/nginx
-      dockerfile: Dockerfile.prod
+      context: .
+      dockerfile: Dockerfile.nginx.prod
     volumes:
-      - ./static:/app/static
+      - static_data:/app/static
     ports:
       - 80:80
     depends_on:
       - web
     restart: unless-stopped
-# volumes:
-  # blazegraph_data:
+volumes:
+  blazegraph_data:
+  blazegraph_records:
+  blazegraph_vocabs:
+  static_data:
