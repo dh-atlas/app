@@ -1,7 +1,7 @@
 version: "3.8"
 services:
-  db:
-    container_name: db
+  atlas_db:
+    container_name: atlas_db
     build:
       context: .
       dockerfile: Dockerfile.blazegraph.prod
@@ -30,7 +30,7 @@ services:
       dockerfile: Dockerfile.prod
     depends_on:
       - sparqlanything
-      - db
+      - atlas_db
     volumes:
       # - .:/app
       - blazegraph_data:/app/data
@@ -43,7 +43,7 @@ services:
     tty: true
     command:
       - "/wait-for-it.sh"
-      - "db:8080"
+      - "atlas_db:8080"
       - "--"
       - "gunicorn"
       - "--workers=4"
@@ -51,7 +51,7 @@ services:
       - "--bind=0.0.0.0:8080"
       - "app:wsgiapp"
     environment:
-      BLAZEGRAPH_ENDPOINT: "http://db:8080/bigdata/sparql"
+      BLAZEGRAPH_ENDPOINT: "http://atlas_db:8080/bigdata/sparql"
       SPARQL_ANYTHING_ENDPOINT: "http://sparqlanything:3000/sparql.anything"
       PUBLIC_BLAZEGRAPH_ENDPOINT: "http://localhost:8080/sparql"
     restart: unless-stopped
