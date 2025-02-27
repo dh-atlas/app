@@ -4,8 +4,8 @@ services:
     container_name: atlas_db
     image: "lyrasis/blazegraph:2.1.5"
     # Uncomment if you want to access blazegraph interface in your browser (http://localhost:8888)
-    #  ports:
-    #   - 8888:8080
+    ports:
+      - "8112:8080"
     volumes:
       - .:/app
       - ./blaze_vm.properties:/RWStore.properties
@@ -16,7 +16,7 @@ services:
     image: facadex/sparql-anything:latest
     ports:
       #- "8081:3000"
-      - "8112:3000"
+      - "8113:3000"
     restart: always
 
   atlas:
@@ -32,7 +32,7 @@ services:
       # - static_data:/app/static  # Share static files with nginx
     ports:
       #- "8080:8080"
-      - "8113:8080"
+      - "8114:8080"
     stdin_open: true
     tty: true
     command:
@@ -58,7 +58,7 @@ services:
       - ./static:/app/static
     ports:
       #- 80:80
-      - "8114:80"
+      - "8115:80"
     depends_on:
       - atlas
     restart: unless-stopped
