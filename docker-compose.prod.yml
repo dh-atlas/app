@@ -16,7 +16,7 @@ services:
     image: facadex/sparql-anything:latest
     ports:
       #- "8081:3000"
-      - "8111:3000"
+      - "8112:3000"
     restart: always
 
   atlas:
@@ -32,7 +32,7 @@ services:
       # - static_data:/app/static  # Share static files with nginx
     ports:
       #- "8080:8080"
-      - "8112:8080"
+      - "8113:8080"
     stdin_open: true
     tty: true
     command:
@@ -58,7 +58,7 @@ services:
       - ./static:/app/static
     ports:
       #- 80:80
-      - "8113:80"
+      - "8114:80"
     depends_on:
       - atlas
     restart: unless-stopped
