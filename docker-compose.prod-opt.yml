@@ -5,6 +5,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.blazegraph.prod
+    image: dhatlas-db:${{ github.sha }}
     # image: "lyrasis/blazegraph:2.1.5"
     # Uncomment if you want to access blazegraph interface in your browser (http://localhost:8888) 
     #  ports:
@@ -28,6 +29,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
+    image: dhatlas-web:${{ github.sha }}
     depends_on:
       - sparqlanything 
       - db
@@ -67,6 +69,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.nginx.prod
+    image: dhatlas-nginx:${{ github.sha }}
     volumes:
       - static_data:/app/static
     ports:
