@@ -36,7 +36,7 @@ IP_LOGS = "ip_logs.log"
 RESOURCE_TEMPLATES = 'resource_templates/'
 TEMPLATE_LIST = RESOURCE_TEMPLATES+"template_list.json"
 ASK_CLASS = RESOURCE_TEMPLATES+"ask_class.json"
-SKOS_VOCAB = conf.skos_vocabularies 
+SKOS_VOCAB = conf.skos_vocabularies
 USER_AGENT = conf.sparql_wrapper_user_agent
 NER_EN = spacy.load("en_core_web_sm")
 NER_IT = spacy.load("it_core_news_sm")
@@ -120,6 +120,7 @@ class StaticFileHandler:
         if os.path.exists(file_path):
             return open(file_path, "rb").read()
         else:
+			print(file_path)
             return web.notfound()
 
 
@@ -518,7 +519,7 @@ class Index:
 		# create a new template
 		elif actions.action.startswith('createTemplate'):
 			is_git_auth = github_sync.is_git_auth()
-			res_type = sorted([ urllib.parse.unquote(actions[class_input].strip()) for class_input in actions if class_input.startswith("uri_class")]) 
+			res_type = sorted([ urllib.parse.unquote(actions[class_input].strip()) for class_input in actions if class_input.startswith("uri_class")])
 			res_type = conf.main_entity if res_type == [] else res_type
 			res_name = actions.class_name.replace(' ','_').lower() if "class_name" in actions else "not provided"
 
@@ -532,7 +533,7 @@ class Index:
 			res_n, adress = (actions.class_name, res_name) if (res_type not in types and res_name not in names) else (actions.class_name+'_'+now_time, res_name+'_'+now_time)
 			u.updateTemplateList(res_n,res_type)
 			raise web.seeother(prefixLocal+'template-'+adress)
-		
+
 		# delete existing template
 		elif actions.action.startswith('deleteTemplate'):
 			is_git_auth = github_sync.is_git_auth()
@@ -639,7 +640,7 @@ class Record(object):
 				if invalid_input:
 					f = forms.get_form(templateID)
 					query_templates = u.get_query_templates(recordData.res_name)
-					extractor = u.has_extractor(templateID) 
+					extractor = u.has_extractor(templateID)
 					return render.record(record_form=f, pageID=name, user=user, alert=block_user,
 									limit=limit, is_git_auth=is_git_auth,invalid=True,
 									project=conf.myProject,template=templateID,
@@ -695,7 +696,7 @@ class Modify(object):
 			with open(res_template) as tpl_form:
 				fields = json.load(tpl_form)
 			ids_dropdown = u.get_dropdowns(fields)
-			
+
 			query_templates=u.get_query_templates(res_template)
 			extractor = u.has_extractor(res_template)
 			previous_extractors = u.has_extractor(res_template, name)
@@ -809,7 +810,7 @@ class Review(object):
 			with open(res_template) as tpl_form:
 				fields = json.load(tpl_form)
 			ids_dropdown = u.get_dropdowns(fields) # TODO CHANGE
-			
+
 			query_templates = u.get_query_templates(res_template)
 			extractor = u.has_extractor(res_template)
 			previous_extractors = u.has_extractor(res_template, name)
@@ -857,7 +858,7 @@ class Review(object):
 				with open(templateID) as tpl_form:
 					fields = json.load(tpl_form)
 				ids_dropdown = u.get_dropdowns(fields) # TODO CHANGE
-				
+
 				query_templates = u.get_query_templates()
 				extractor = u.has_extractor(res_template)
 				previous_extractors = u.has_extractor(res_template, name)
@@ -899,7 +900,7 @@ class Review(object):
 				with open(templateID) as tpl_form:
 					fields = json.load(tpl_form)
 				ids_dropdown = u.get_dropdowns(fields)
-				
+
 				query_templates = u.get_query_templates()
 				extractor = u.has_extractor(res_template)
 				previous_extractors = u.has_extractor(res_template, name)
@@ -1035,9 +1036,9 @@ class View(object):
 			properties = {field["label"]:[field["property"], field["type"], field["view_class"], field["value"]] for field in fields if 'property' in field}
 
 			data_labels = {}
-			for k, v in data.items():  
-				for field in fields:  
-					if k == field['id']: 
+			for k, v in data.items():
+				for field in fields:
+					if k == field['id']:
 						if properties[field["label"]][3] == "URI":
 							data_labels[field['label']] = [[quote(val[0],safe=''), val[1]] for val in v]
 						else:
@@ -1148,7 +1149,7 @@ class Term(object):
 
 		count = len(appears_in)
 		map_coordinates = (queries.geonames_geocoding(uri)) if uri.startswith("https://sws.geonames.org/") else None
-		
+
 		return render.term(user=session['username'], label=label, count=count,
 						is_git_auth=is_git_auth,project=conf.myProject,base=conf.base,
 						uri=uri,name=name,results=results_by_class,map=map_coordinates,
@@ -1328,7 +1329,7 @@ class Nlp(object):
 			query_str_decoded = query_string.q.strip()
 
 		# parse string with spacy
-        
+
 		parsed = NER_IT(query_str_decoded) if query_string.lang == 'it' else NER_EN(query_str_decoded)
 		entities = {word.text for word in parsed.ents if word.label_ in ['PERSON','ORG','GPE','LOC']}
 		# prepare json
@@ -1350,9 +1351,9 @@ class Sparqlanything(object):
 			query_str_decoded = query_string.q.decode('utf-8').strip()
 		except Exception as e:
 			query_str_decoded = query_string.q.strip()
-		
+
 		action = query_string.action
-		
+
 		if action == "searchclasses":
 			if query_str_decoded.endswith(".xml"):
 				classes_query = "SELECT DISTINCT ?class WHERE { SERVICE <x-sparql-anything:"+query_str_decoded+"> { ?subj a ?class } }"
@@ -1369,7 +1370,7 @@ class Sparqlanything(object):
 					reader = csv.reader(csv_content)
 					results = next(reader)
 			return json.dumps(results)
-		
+
 		elif action == "searchentities":
 			results = queries.SPARQLAnything(query_str_decoded)
 			for result in results["results"]["bindings"]:
@@ -1381,7 +1382,7 @@ class Sparqlanything(object):
 					result["uri"]["value"] = queries.entity_reconciliation(uri,service)
 
 			return json.dumps(results)
-	
+
 class Wikidata(object):
 	def GET(self):
 		web.header('Content-Type', 'application/json')
@@ -1394,13 +1395,13 @@ class Wikidata(object):
 			query_str_decoded = query_string.query.decode('utf-8').strip()
 		except Exception as e:
 			query_str_decoded = query_string.query.strip()
-		
+
 		sparql = SPARQLWrapper(WIKIDATA_SPARQL,agent=USER_AGENT)
 		sparql.setQuery(query_str_decoded)
 		sparql.setReturnFormat(JSON)
 		results = sparql.query().convert()
 		return json.dumps(results)
-	
+
 class Charts(object):
 	def GET(self):
 		web.header("X-Forwarded-For", session['ip_address'])
@@ -1421,7 +1422,7 @@ class Charts(object):
 		else:
 			with open(conf.charts) as chart_file:
 				charts = json.load(chart_file)
-		
+
 		for chart in charts["charts"]:
 			if chart["type"] == "map":
 				chart_id = str(time.time()).replace('.','-')
@@ -1438,14 +1439,14 @@ class Charts(object):
 		return render.charts_visualization(user=session['username'], is_git_auth=is_git_auth,
 					   project=conf.myProject, charts=charts,
 					   main_lang=conf.mainLang)
-	
+
 	def POST(self):
 		web.header('Content-Type', 'application/json')
 		data = web.data()
 		json_data = json.loads(data)
 		results = queries.getChartData(json_data)
 		return json.dumps(results)
-	
+
 class ChartsTemplate(object):
 	def GET(self):
 		web.header("X-Forwarded-For", session['ip_address'])

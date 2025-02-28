@@ -42,7 +42,6 @@ services:
       - static_data:/app/static  # Share static files with nginx
     ports:
       - "8114:8080"
-      - "8115:80"
     stdin_open: true
     tty: true
     command:
@@ -66,19 +65,19 @@ services:
       - static_data:/app/static
     command: ["/bin/sh", "-c", "cp -r /app/static_default/* /app/static || true"]
 
-  # nginx:
-  #   container_name: atlas
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile.nginx.prod
-  #   image: nginx:0.1.1
-  #   volumes:
-  #     - static_data:/app/static
-  #   ports:
-  #     - 8115:80
-  #   depends_on:
-  #     - web
-  #   restart: unless-stopped
+  nginx:
+    container_name: atlas
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx.prod
+    image: nginx:0.1.1
+    volumes:
+      - static_data:/app/static
+    ports:
+      - "8115:80"
+    depends_on:
+      - web
+    restart: unless-stopped
 volumes:
   blazegraph_data:
   blazegraph_records:
