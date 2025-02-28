@@ -41,8 +41,7 @@ services:
       - blazegraph_vocabs:/app/vocabs
       - static_data:/app/static  # Share static files with nginx
     ports:
-      #- "8114:8080"
-      - "8115:8080"
+      - "8114:8080"
     stdin_open: true
     tty: true
     command:
