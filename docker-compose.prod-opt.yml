@@ -5,10 +5,11 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.blazegraph.prod
-    image: db:0.1.2
+    # image: atlas-db:0.1.2
     # image: "lyrasis/blazegraph:2.1.5"
     # Uncomment if you want to access blazegraph interface in your browser (http://localhost:8888) 
-    #  ports:
+    ports:
+      - "8112:8080"
     #   - 8888:8080
     volumes:
       - blazegraph_data:/app/data
@@ -21,7 +22,7 @@ services:
     # container_name: sparqlanything
     image: facadex/sparql-anything:latest
     ports:
-      - "8081:3000"
+      - "8113:3000"
     restart: always
 
   web:
@@ -40,7 +41,7 @@ services:
       - blazegraph_vocabs:/app/vocabs
       - static_data:/app/static  # Share static files with nginx
     ports:
-      - "8080:8080"
+      - "8114:8080"
     stdin_open: true
     tty: true
     command:
@@ -73,7 +74,7 @@ services:
     volumes:
       - static_data:/app/static
     ports:
-      - 80:80
+      - 8115:80
     depends_on:
       - web
     restart: unless-stopped
