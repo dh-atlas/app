@@ -99,6 +99,12 @@
           </ul>
           <li>ensure that your Docker engine is running</li>
           <li>run <code>docker compose up</code> (the first build might take couple of minutes)</li>
+          <ul>
+            <li>Production: docker-compose --project-name=atlas -f .\docker-compose.prod.yml up -d</li>
+            <li>-d ensures that it runs as a daemon on the background</li>
+            <li>-f specifies different file to build for production</li>
+            <li>project-name ensures that the containers are not prefixed with app-</li>
+          </ul>
           <li>access your web browser at <a href="http://localhost:8080">http://localhost:8080</a></li>
           <li>follow the instructions for <a href="#customization">customization</a></li>
         </ul>
