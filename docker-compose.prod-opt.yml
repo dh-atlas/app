@@ -42,6 +42,7 @@ services:
       - static_data:/app/static  # Share static files with nginx
     ports:
       - "8114:8080"
+      - "8115:80"
     stdin_open: true
     tty: true
     command:
