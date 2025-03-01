@@ -56,7 +56,7 @@ services:
     environment: 
       BLAZEGRAPH_ENDPOINT: "http://db:8080/bigdata/sparql"
       SPARQL_ANYTHING_ENDPOINT: "http://sparqlanything:3000/sparql.anything"
-      PUBLIC_BLAZEGRAPH_ENDPOINT: "http://localhost:8080/sparql"
+      PUBLIC_BLAZEGRAPH_ENDPOINT: "sparql"  #  or put https://projects.dharc.unibo.it/atlas/sparql
     restart: unless-stopped
 
   init-static:
