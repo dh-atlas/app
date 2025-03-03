@@ -112,14 +112,14 @@ class Notfound:
 		raise web.notfound()
 
 class StaticFileHandler:
-    def GET(self, file):
-        """Serve static files manually when using Gunicorn"""
-        static_path = os.path.join(os.path.dirname(__file__), "static")
-        file_path = os.path.join(static_path, file)
+	def GET(self, file):
+		"""Serve static files manually when using Gunicorn"""
+		static_path = os.path.join(os.path.dirname(__file__), "static")
+		file_path = os.path.join(static_path, file)
 
-        if os.path.exists(file_path):
-            return open(file_path, "rb").read()
-        else:
+		if os.path.exists(file_path):
+			return open(file_path, "rb").read()
+		else:
 			return web.notfound()
 
 
