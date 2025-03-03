@@ -120,8 +120,7 @@ class StaticFileHandler:
         if os.path.exists(file_path):
             return open(file_path, "rb").read()
         else:
-			print(file_path)
-            return web.notfound()
+			return web.notfound()
 
 
 app.notfound = notfound
