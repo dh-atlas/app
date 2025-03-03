@@ -77,6 +77,9 @@ services:
       - static_data:/app/static
       - templates:/app/templates
       - blazegraph_data:/app/data
+      - blazegraph_data:/app/data
+      - blazegraph_records:/app/records
+      - blazegraph_vocabs:/app/vocabs
     ports:
       - "8115:80"
     depends_on:
