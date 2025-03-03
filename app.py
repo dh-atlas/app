@@ -140,7 +140,7 @@ def create_record(data):
 	if data and 'action' in data and data.action.startswith('createRecord'):
 		record = data.action.split("createRecord",1)[1]
 		u.log_output('START NEW RECORD', session['logged_in'], session['username'])
-		raise web.seeother(prefixLocal+'record-'+record)
+		raise web.seeother('https://projects.dharc.unibo.it/atlas/record-'+record)
 	else:
 		u.log_output('ELSE', session['logged_in'], session['username'])
 		return internalerror()
