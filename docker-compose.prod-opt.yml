@@ -40,6 +40,7 @@ services:
       - blazegraph_records:/app/records
       - blazegraph_vocabs:/app/vocabs
       - static_data:/app/static  # Share static files with nginx
+      - templates:/app/templates
     ports:
       - "8114:8080"
     stdin_open: true
@@ -63,6 +64,7 @@ services:
     image: busybox
     volumes:
       - static_data:/app/static
+      - templates:/app/templates
     command: ["/bin/sh", "-c", "cp -r /app/static_default/* /app/static || true"]
 
   nginx:
@@ -73,6 +75,7 @@ services:
     image: nginx:0.1.1
     volumes:
       - static_data:/app/static
+      - templates:/app/templates
     ports:
       - "8115:80"
     depends_on:
@@ -83,3 +86,4 @@ volumes:
   blazegraph_records:
   blazegraph_vocabs:
   static_data:
+  templates:
