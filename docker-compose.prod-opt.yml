@@ -76,6 +76,7 @@ services:
     volumes:
       - static_data:/app/static
       - templates:/app/templates
+      - blazegraph_data:/app/data
     ports:
       - "8115:80"
     depends_on:
