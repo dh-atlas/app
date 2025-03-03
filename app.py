@@ -569,13 +569,13 @@ class Record(object):
 		session['ip_address'] = str(web.ctx['ip'])
 		user = session['username']
 		logged_in = True if user != 'anonymous' else False
-		block_user, limit = u.check_ip(str(web.ctx['ip']), str(datetime.datetime.now()) )
+		#block_user, limit = u.check_ip(str(web.ctx['ip']), str(datetime.datetime.now()) )
 		u.check_ask_class()
 		ask_form = u.change_template_names(is_git_auth)
 		f = forms.get_form(ask_form,True)
 
 		return render.record(record_form=f, pageID=name, user=user,
-							alert=block_user, limit=limit,
+							alert=False, limit=50,
 							is_git_auth=is_git_auth,invalid=False,
 							project=conf.myProject,template=None,
 							query_templates=None,knowledge_extractor=set(),
@@ -599,14 +599,14 @@ class Record(object):
 		user = session['username']
 		session['ip_address'] = str(web.ctx['ip'])
 		u.write_ip(str(datetime.datetime.now()), str(web.ctx['ip']), 'POST')
-		block_user, limit = u.check_ip(str(web.ctx['ip']), str(datetime.datetime.now()) )
+		#block_user, limit = u.check_ip(str(web.ctx['ip']), str(datetime.datetime.now()) )
 		whereto = prefixLocal+'/' if user == 'anonymous' else prefixLocal+'welcome-1'
 
 		# form validation (ask_class)
 		if not f.validates():
 			u.log_output('SUBMIT INVALID FORM', session['logged_in'], session['username'],name)
-			return render.record(record_form=f, pageID=name, user=user, alert=block_user,
-								limit=limit, is_git_auth=is_git_auth,invalid=True,
+			return render.record(record_form=f, pageID=name, user=user, alert=False,
+								limit=50, is_git_auth=is_git_auth,invalid=True,
 								project=conf.myProject,template=None,
 								query_templates=None,knowledge_extractor=set(),
 								main_lang=conf.mainLang)
@@ -619,8 +619,8 @@ class Record(object):
 					f = forms.get_form(recordData.res_name,processed_templates=[])
 					query_templates = u.get_query_templates(recordData.res_name)
 					extractor = u.has_extractor(recordData.res_name)
-					return render.record(record_form=f, pageID=name, user=user, alert=block_user,
-									limit=limit, is_git_auth=is_git_auth,invalid=False,
+					return render.record(record_form=f, pageID=name, user=user, alert=False,
+									limit=50, is_git_auth=is_git_auth,invalid=False,
 									project=conf.myProject,template=recordData.res_name,
 									query_templates=query_templates,knowledge_extractor=extractor,
 									main_lang=conf.mainLang)
@@ -640,8 +640,8 @@ class Record(object):
 					f = forms.get_form(templateID)
 					query_templates = u.get_query_templates(recordData.res_name)
 					extractor = u.has_extractor(templateID)
-					return render.record(record_form=f, pageID=name, user=user, alert=block_user,
-									limit=limit, is_git_auth=is_git_auth,invalid=True,
+					return render.record(record_form=f, pageID=name, user=user, alert=False,
+									limit=50, is_git_auth=is_git_auth,invalid=True,
 									project=conf.myProject,template=templateID,
 									query_templates=query_templates,knowledge_extractor=extractor,
 									main_lang=conf.mainLang)
