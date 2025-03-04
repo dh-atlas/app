@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729188813-8956482> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729188813-8956482> a foaf:Agent,
         schema:Organization ;
     rdfs:label "University of Alberta"@en ;
     ns1:identifier <https://ror.org/0160cpw27> ;
@@ -15,16 +15,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q640694> ;
     ns1:url <http://ualberta.ca/> .
 
-<https://w3id.org/atlas/1729188813-8956482/> rdfs:label "University of Alberta"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729188813-8956482/> rdfs:label "University of Alberta"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "University of Alberta"@en ;
     prov:generatedAtTime "2024-10-17T22:49:23.974844"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q640694> rdfs:label "University of Alberta"^^xsd:string .
 
 <https://sws.geonames.org/5883102> rdfs:label "Alberta"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

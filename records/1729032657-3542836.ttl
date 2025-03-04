@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729032657-3542836> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729032657-3542836> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Sapienza University of Rome"@en ;
     ns2:identifier <https://ror.org/02be6w209> ;
@@ -15,16 +15,16 @@
     ns2:sameAs <http://www.wikidata.org/entity/Q209344> ;
     ns2:url <http://www.uniroma1.it/> .
 
-<https://w3id.org/atlas/1729032657-3542836/> rdfs:label "Sapienza University of Rome"@en ;
-    ns1:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729032657-3542836/> rdfs:label "Sapienza University of Rome"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
     ns2:name "Sapienza University of Rome"@en ;
     prov:generatedAtTime "2024-10-17T22:21:48.383389"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q209344> rdfs:label "Sapienza University of Rome"^^xsd:string .
 
 <https://sws.geonames.org/3169070> rdfs:label "Rome"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

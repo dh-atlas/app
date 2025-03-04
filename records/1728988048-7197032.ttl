@@ -6,24 +6,24 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1728988048-7197032> a <http://purl.org/spar/fabio/ComputerProgram> ;
+<https://w3id.org/dh-atlas/1728988048-7197032> a <http://purl.org/spar/fabio/ComputerProgram> ;
     rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL query interface"@en ;
     ns1:additionalType <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> ;
     ns1:description "The Zeri&LODE web interface enables SPARQL querying via a query editor, allowing users to retrieve data from the Zeri Photo Archive RDF Dataset, a LOD collection of art photography. It provides access to structured information on artworks, artists, and themes, enabling semantic exploration of relationships and the discovery of metadata."@en ;
     ns1:educationalUse <https://vocabs.dariah.eu/tadirah/dataMining>,
         <https://vocabs.dariah.eu/tadirah/knowledgeDiscovery>,
         <https://vocabs.dariah.eu/tadirah/knowledgeExtraction> ;
-    ns1:isBasedOn <https://w3id.org/atlas/1728987090-372862> ;
+    ns1:isBasedOn <https://w3id.org/dh-atlas/1728987090-372862> ;
     ns1:name "Zeri Photo Archive RDF Dataset - SPARQL query interface"@en ;
     ns1:url <http://data.fondazionezeri.unibo.it/query/> ;
     schema:usageInfo <https://data.fondazionezeri.unibo.it/> .
 
-<https://w3id.org/atlas/1728988048-7197032/> rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL query interface"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1728988048-7197032/> rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL query interface"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Zeri Photo Archive RDF Dataset - SPARQL query interface"@en ;
     prov:generatedAtTime "2024-10-15T12:26:50.799153"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE"^^xsd:string .
 
@@ -33,7 +33,7 @@
 
 <https://vocabs.dariah.eu/tadirah/knowledgeExtraction> skos:prefLabel "Knowledge Extraction - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/1728987090-372862> rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL endpoint"^^xsd:string .
+<https://w3id.org/dh-atlas/1728987090-372862> rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL endpoint"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

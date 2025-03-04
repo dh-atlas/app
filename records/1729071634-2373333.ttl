@@ -5,7 +5,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729071634-2373333> a <http://purl.org/spar/fabio/ComputerProgram> ;
+<https://w3id.org/dh-atlas/1729071634-2373333> a <http://purl.org/spar/fabio/ComputerProgram> ;
     rdfs:label "LiLa Interactive Search Platform"@en ;
     ns1:additionalType <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> ;
     ns1:description "The LiLa Interactive Search Platform is a friendly application designed for exploring the LiLa: Linking Latin Knowledge Base. Users can filter and search content by Authors, Documents, Corpora, and Tokens, or access specific Textual and Lexical Resources."@en ;
@@ -15,12 +15,12 @@
     ns1:name "LiLa Interactive Search Platform"@en ;
     ns1:url <https://lila-erc.eu/LiLaLisp/> .
 
-<https://w3id.org/atlas/1729071634-2373333/> rdfs:label "LiLa Interactive Search Platform"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729071634-2373333/> rdfs:label "LiLa Interactive Search Platform"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "LiLa Interactive Search Platform"@en ;
     prov:generatedAtTime "2024-10-18T17:08:27.782460"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE"^^xsd:string .
 
@@ -30,5 +30,5 @@
 
 <https://vocabs.dariah.eu/tadirah/exploration> skos:prefLabel "Exploration - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

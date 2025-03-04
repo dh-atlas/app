@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729013958-5402913> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729013958-5402913> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Istituto di Linguistica Computazionale \"A. Zampolli\" (CNR)"@it ;
     ns1:identifier <https://ror.org/028g3pe33> ;
@@ -15,16 +15,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q61932915> ;
     ns1:url <http://www.ilc.cnr.it/> .
 
-<https://w3id.org/atlas/1729013958-5402913/> rdfs:label "Istituto di Linguistica Computazionale \"A. Zampolli\" (CNR)"@it ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729013958-5402913/> rdfs:label "Istituto di Linguistica Computazionale \"A. Zampolli\" (CNR)"@it ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Istituto di Linguistica Computazionale \"A. Zampolli\" (CNR)"@it ;
     prov:generatedAtTime "2024-10-17T22:14:02.622927"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q61932915> rdfs:label "Institute for Computational Linguistics “A. Zampolli”"^^xsd:string .
 
 <https://sws.geonames.org/3170647> rdfs:label "Pisa"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

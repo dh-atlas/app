@@ -6,35 +6,35 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729272121-9284637> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729272121-9284637> a foaf:Agent,
         schema:ResearchProject ;
     rdfs:label "VaSto - Varchi, Storia fiorentina Project"@en ;
     ns1:description "The VaSto project, carried out within the framework of /DH.arc at the University of Bologna, is the result of a collaboration between the University of Bologna, Concordia University in Montreal, and CarisBo. It presents, in an interactive digital environment, the genetic and annotated digital edition of Benedetto Varchi's Storia fiorentina (1503-1565). The VaSto project also represents, in a concrete digital setting, the places, events, and protagonists of Renaissance Florence from 1527 to 1530, of which this text offers an extraordinary and detailed account."@en ;
     ns1:dissolutionDate "2020-06-12"^^xsd:date ;
-    ns1:funder <https://w3id.org/atlas/1729272740-9272308> ;
+    ns1:funder <https://w3id.org/dh-atlas/1729272740-9272308> ;
     ns1:location <https://sws.geonames.org/3181928>,
         <https://sws.geonames.org/6077243> ;
-    ns1:member <https://w3id.org/atlas/1728995806-349488>,
-        <https://w3id.org/atlas/1729185419-1042829> ;
+    ns1:member <https://w3id.org/dh-atlas/1728995806-349488>,
+        <https://w3id.org/dh-atlas/1729185419-1042829> ;
     ns1:name "VaSto - Varchi, Storia fiorentina Project"@en ;
     ns1:url <https://dharc-org.github.io/progetto-vasto/Progetto.html> .
 
-<https://w3id.org/atlas/1729272121-9284637/> rdfs:label "VaSto - Varchi, Storia fiorentina Project"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729272121-9284637/> rdfs:label "VaSto - Varchi, Storia fiorentina Project"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "VaSto - Varchi, Storia fiorentina Project"@en ;
     prov:generatedAtTime "2024-10-18T17:33:55.490524"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <https://sws.geonames.org/3181928> rdfs:label "Bologna"^^xsd:string .
 
 <https://sws.geonames.org/6077243> rdfs:label "Montreal"^^xsd:string .
 
-<https://w3id.org/atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
+<https://w3id.org/dh-atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
 
-<https://w3id.org/atlas/1729185419-1042829> rdfs:label "Concordia University"^^xsd:string .
+<https://w3id.org/dh-atlas/1729185419-1042829> rdfs:label "Concordia University"^^xsd:string .
 
-<https://w3id.org/atlas/1729272740-9272308> rdfs:label "Fondazione Carisbo"^^xsd:string .
+<https://w3id.org/dh-atlas/1729272740-9272308> rdfs:label "Fondazione Carisbo"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

@@ -6,24 +6,24 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729190688-9406993> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729190688-9406993> a foaf:Agent,
         schema:Person ;
     rdfs:label "Lisa Goddard"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1729188813-8956482> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1729188813-8956482> ;
     ns1:identifier <https://orcid.org/0000-0002-4970-053X> ;
     ns1:name "Lisa Goddard"@en ;
     ns1:sameAs <http://www.wikidata.org/entity/Q57414738> .
 
-<https://w3id.org/atlas/1729190688-9406993/> rdfs:label "Lisa Goddard"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729190688-9406993/> rdfs:label "Lisa Goddard"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Lisa Goddard"@en ;
     prov:generatedAtTime "2024-10-17T22:51:25.403006"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q57414738> rdfs:label "Lisa Goddard"^^xsd:string .
 
-<https://w3id.org/atlas/1729188813-8956482> rdfs:label "University of Alberta"^^xsd:string .
+<https://w3id.org/dh-atlas/1729188813-8956482> rdfs:label "University of Alberta"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

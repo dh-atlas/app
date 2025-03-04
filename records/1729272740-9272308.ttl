@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729272740-9272308> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729272740-9272308> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Fondazione Carisbo"@en ;
     ns1:location <https://sws.geonames.org/3181928> ;
@@ -14,15 +14,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q25058104> ;
     ns1:url <https://fondazionecarisbo.it/> .
 
-<https://w3id.org/atlas/1729272740-9272308/> rdfs:label "Fondazione Carisbo"@en ;
-    ns2:currentStatus "not modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729272740-9272308/> rdfs:label "Fondazione Carisbo"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Fondazione Carisbo"@en ;
     prov:generatedAtTime "2024-10-18T17:33:45.404004"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q25058104> rdfs:label "Fondazione Carisbo"^^xsd:string .
 
 <https://sws.geonames.org/3181928> rdfs:label "Bologna"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

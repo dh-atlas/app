@@ -8,7 +8,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729034329-548886> a schema:Dataset ;
+<https://w3id.org/dh-atlas/1729034329-548886> a schema:Dataset ;
     rdfs:label "LiLa Knowledge Base"@en ;
     dcterms:conformsTo <https://www.w3.org/RDF/> ;
     dcterms:references <http://lari-datasets.ilc.cnr.it/lemonEty>,
@@ -22,10 +22,10 @@
     ns2:additionalType <http://purl.org/spar/fabio/DataFile> ;
     ns2:citation <https://lila-erc.eu/output/> ;
     ns2:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    ns2:contributor <https://w3id.org/atlas/1729035723-7187014>,
-        <https://w3id.org/atlas/1729035877-7734847> ;
+    ns2:contributor <https://w3id.org/dh-atlas/1729035723-7187014>,
+        <https://w3id.org/dh-atlas/1729035877-7734847> ;
     ns2:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
-    ns2:creator <https://w3id.org/atlas/1729035819-2100382> ;
+    ns2:creator <https://w3id.org/dh-atlas/1729035819-2100382> ;
     ns2:datePublished "2018-01-01"^^xsd:date ;
     ns2:description "A Linked Data-based Knowledge Base of Linguistic Resources and Natural Language Processing (NLP) tools for Latin. The Knowledge Base consists of different kinds of objects connected via an explicitly-declared vocabulary for knowledge description."@en ;
     ns2:distribution <https://lila-erc.eu/data-page/> ;
@@ -38,25 +38,25 @@
         <http://publications.europa.eu/resource/authority/language/LAT> ;
     ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40> ;
     ns2:name "LiLa Knowledge Base"@en ;
-    ns2:producer <https://w3id.org/atlas/1729036409-3468535> ;
-    ns2:publisher <https://w3id.org/atlas/1729035877-7734847> ;
+    ns2:producer <https://w3id.org/dh-atlas/1729036409-3468535> ;
+    ns2:publisher <https://w3id.org/dh-atlas/1729035877-7734847> ;
     ns2:url <https://lila-erc.eu/data-page/> ;
     ns2:usageInfo <https://lila-erc.eu/about/> ;
     ns1:methodology <https://vocabs.dariah.eu/tadirah/knowledgeExtraction>,
         <https://vocabs.dariah.eu/tadirah/modeling>,
         <https://vocabs.dariah.eu/tadirah/naturalLanguageProcessing> ;
-    ns1:servedBy <https://w3id.org/atlas/1729038110-2824712>,
-        <https://w3id.org/atlas/1729068820-1338987>,
-        <https://w3id.org/atlas/1729069634-3936036>,
-        <https://w3id.org/atlas/1729071634-2373333> ;
-    ns1:used <https://w3id.org/atlas/1729072548-6787405> .
+    ns1:servedBy <https://w3id.org/dh-atlas/1729038110-2824712>,
+        <https://w3id.org/dh-atlas/1729068820-1338987>,
+        <https://w3id.org/dh-atlas/1729069634-3936036>,
+        <https://w3id.org/dh-atlas/1729071634-2373333> ;
+    ns1:used <https://w3id.org/dh-atlas/1729072548-6787405> .
 
-<https://w3id.org/atlas/1729034329-548886/> rdfs:label "LiLa Knowledge Base"@en ;
-    ns3:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729034329-548886/> rdfs:label "LiLa Knowledge Base"@en ;
+    ns3:currentStatus "published"^^xsd:string ;
     ns2:name "LiLa Knowledge Base"@en ;
     prov:generatedAtTime "2024-10-18T16:44:10.767657"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://lari-datasets.ilc.cnr.it/lemonEty> rdfs:label "lemonEty"^^xsd:string .
 
@@ -88,21 +88,21 @@
 
 <https://vocabs.dariah.eu/tadirah/modeling> skos:prefLabel "Modeling - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/1729035723-7187014> rdfs:label "Università Cattolica del Sacro Cuore"^^xsd:string .
+<https://w3id.org/dh-atlas/1729035723-7187014> rdfs:label "Università Cattolica del Sacro Cuore"^^xsd:string .
 
-<https://w3id.org/atlas/1729035819-2100382> rdfs:label "Marco Carlo Passarotti"^^xsd:string .
+<https://w3id.org/dh-atlas/1729035819-2100382> rdfs:label "Marco Carlo Passarotti"^^xsd:string .
 
-<https://w3id.org/atlas/1729036409-3468535> rdfs:label "LiLa: Linking Latin"^^xsd:string .
+<https://w3id.org/dh-atlas/1729036409-3468535> rdfs:label "LiLa: Linking Latin"^^xsd:string .
 
-<https://w3id.org/atlas/1729038110-2824712> rdfs:label "LiLa: Linking Latin - SPARQL endpoint"^^xsd:string .
+<https://w3id.org/dh-atlas/1729038110-2824712> rdfs:label "LiLa: Linking Latin - SPARQL endpoint"^^xsd:string .
 
-<https://w3id.org/atlas/1729068820-1338987> rdfs:label "LiLa: Linking Latin - SPARQL query interface"^^xsd:string .
+<https://w3id.org/dh-atlas/1729068820-1338987> rdfs:label "LiLa: Linking Latin - SPARQL query interface"^^xsd:string .
 
-<https://w3id.org/atlas/1729069634-3936036> rdfs:label "LiLa Lemma Bank Query Interface"^^xsd:string .
+<https://w3id.org/dh-atlas/1729069634-3936036> rdfs:label "LiLa Lemma Bank Query Interface"^^xsd:string .
 
-<https://w3id.org/atlas/1729071634-2373333> rdfs:label "LiLa Interactive Search Platform"^^xsd:string .
+<https://w3id.org/dh-atlas/1729071634-2373333> rdfs:label "LiLa Interactive Search Platform"^^xsd:string .
 
-<https://w3id.org/atlas/1729072548-6787405> rdfs:label "LiLa Text Linker"^^xsd:string .
+<https://w3id.org/dh-atlas/1729072548-6787405> rdfs:label "LiLa Text Linker"^^xsd:string .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-04> skos:prefLabel "Latin language and literature - ACADEMIC FIELD"^^xsd:string .
 
@@ -116,7 +116,7 @@
 
 <https://vocabs.dariah.eu/tadirah/naturalLanguageProcessing> skos:prefLabel "Natural Language Processing - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/1729035877-7734847> rdfs:label "Centro Interdisciplinare di Ricerche per la Computerizzazione dei Segni dell’Espressione (CIRCSE)"^^xsd:string .
+<https://w3id.org/dh-atlas/1729035877-7734847> rdfs:label "Centro Interdisciplinare di Ricerche per la Computerizzazione dei Segni dell’Espressione (CIRCSE)"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

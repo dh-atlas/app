@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729030617-8635733> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729030617-8635733> a foaf:Agent,
         schema:Organization ;
     rdfs:label "University of Basilicata"@en ;
     ns1:identifier <https://ror.org/03tc05689> ;
@@ -15,16 +15,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q1084383> ;
     ns1:url <http://portale.unibas.it/site/home.html> .
 
-<https://w3id.org/atlas/1729030617-8635733/> rdfs:label "University of Basilicata"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729030617-8635733/> rdfs:label "University of Basilicata"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "University of Basilicata"@en ;
     prov:generatedAtTime "2024-10-17T22:18:49.987302"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q1084383> rdfs:label "University of Basilicata"^^xsd:string .
 
 <https://sws.geonames.org/3170027> rdfs:label "Potenza"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

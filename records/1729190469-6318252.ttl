@@ -6,20 +6,20 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729190469-6318252> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729190469-6318252> a foaf:Agent,
         schema:Person ;
     rdfs:label "Bennett Kuwan Tchoh"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1729188813-8956482> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1729188813-8956482> ;
     ns1:name "Bennett Kuwan Tchoh"@en .
 
-<https://w3id.org/atlas/1729190469-6318252/> rdfs:label "Bennett Kuwan Tchoh"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729190469-6318252/> rdfs:label "Bennett Kuwan Tchoh"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Bennett Kuwan Tchoh"@en ;
     prov:generatedAtTime "2024-10-17T22:50:28.252368"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
-<https://w3id.org/atlas/1729188813-8956482> rdfs:label "University of Alberta"^^xsd:string .
+<https://w3id.org/dh-atlas/1729188813-8956482> rdfs:label "University of Alberta"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

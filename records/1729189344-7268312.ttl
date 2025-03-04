@@ -6,21 +6,21 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729189344-7268312> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729189344-7268312> a foaf:Agent,
         schema:Person ;
     rdfs:label "Kaylin Land"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1729190413-9603288> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1729190413-9603288> ;
     ns1:identifier <https://orcid.org/0000-0002-9684-1976> ;
     ns1:name "Kaylin Land"@en .
 
-<https://w3id.org/atlas/1729189344-7268312/> rdfs:label "Kaylin Land"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729189344-7268312/> rdfs:label "Kaylin Land"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Kaylin Land"@en ;
     prov:generatedAtTime "2024-10-17T22:50:52.245399"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
-<https://w3id.org/atlas/1729190413-9603288> rdfs:label "McGill University"^^xsd:string .
+<https://w3id.org/dh-atlas/1729190413-9603288> rdfs:label "McGill University"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

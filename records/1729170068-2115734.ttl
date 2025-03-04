@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729170068-2115734> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729170068-2115734> a foaf:Agent,
         schema:Organization ;
     rdfs:label "University of Naples Federico II"@en ;
     ns1:identifier <https://ror.org/05290cv24> ;
@@ -15,16 +15,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q691851> ;
     ns1:url <http://www.unina.it/index.jsp> .
 
-<https://w3id.org/atlas/1729170068-2115734/> rdfs:label "University of Naples Federico II"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729170068-2115734/> rdfs:label "University of Naples Federico II"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "University of Naples Federico II"@en ;
     prov:generatedAtTime "2024-10-17T22:40:16.781421"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q691851> rdfs:label "University of Naples Federico II"^^xsd:string .
 
 <https://sws.geonames.org/3172394> rdfs:label "Naples"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

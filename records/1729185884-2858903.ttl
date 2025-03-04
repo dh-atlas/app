@@ -6,21 +6,21 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729185884-2858903> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729185884-2858903> a foaf:Agent,
         schema:Person ;
     rdfs:label "Roberta Priore"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1728995806-349488> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1728995806-349488> ;
     ns1:identifier <https://orcid.org/0000-0003-1713-178X> ;
     ns1:name "Roberta Priore"@en .
 
-<https://w3id.org/atlas/1729185884-2858903/> rdfs:label "Roberta Priore"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729185884-2858903/> rdfs:label "Roberta Priore"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Roberta Priore"@en ;
     prov:generatedAtTime "2024-10-17T22:48:33.713894"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
-<https://w3id.org/atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
+<https://w3id.org/dh-atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

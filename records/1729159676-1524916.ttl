@@ -6,38 +6,38 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729159676-1524916> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729159676-1524916> a foaf:Agent,
         schema:ResearchProject ;
     rdfs:label "Biblioteca Italiana Project"@en ;
     ns1:description "Biblioteca Italiana is a digital library offering over 3,500 texts from Italian cultural and literary tradition, spanning from the Middle Ages to the 20th century. Launched in 1996 by the Centro Interuniversitario Biblioteca Italiana Telematica (CIBIT), it is a key resource for scholars, students, and enthusiasts, providing access to preserved digital documents."@en ;
     ns1:foundingDate "1996-01-01"^^xsd:date ;
-    ns1:funder <https://w3id.org/atlas/1729158650-8172085>,
-        <https://w3id.org/atlas/1729160348-9926527>,
-        <https://w3id.org/atlas/1729160565-2741764> ;
+    ns1:funder <https://w3id.org/dh-atlas/1729158650-8172085>,
+        <https://w3id.org/dh-atlas/1729160348-9926527>,
+        <https://w3id.org/dh-atlas/1729160565-2741764> ;
     ns1:location <https://sws.geonames.org/3169070> ;
-    ns1:member <https://w3id.org/atlas/1729032657-3542836>,
-        <https://w3id.org/atlas/1729158569-0381424> ;
+    ns1:member <https://w3id.org/dh-atlas/1729032657-3542836>,
+        <https://w3id.org/dh-atlas/1729158569-0381424> ;
     ns1:name "Biblioteca Italiana Project"@en ;
     ns1:url <http://www.bibliotecaitaliana.it/> .
 
-<https://w3id.org/atlas/1729159676-1524916/> rdfs:label "Biblioteca Italiana Project"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729159676-1524916/> rdfs:label "Biblioteca Italiana Project"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Biblioteca Italiana Project"@en ;
     prov:generatedAtTime "2024-10-17T22:37:07.297872"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <https://sws.geonames.org/3169070> rdfs:label "Rome"^^xsd:string .
 
-<https://w3id.org/atlas/1729032657-3542836> rdfs:label "Sapienza University of Rome"^^xsd:string .
+<https://w3id.org/dh-atlas/1729032657-3542836> rdfs:label "Sapienza University of Rome"^^xsd:string .
 
-<https://w3id.org/atlas/1729158569-0381424> rdfs:label "Dipartimento di Lettere e Culture Moderne (Sapienza Università  di Roma)"^^xsd:string .
+<https://w3id.org/dh-atlas/1729158569-0381424> rdfs:label "Dipartimento di Lettere e Culture Moderne (Sapienza Università  di Roma)"^^xsd:string .
 
-<https://w3id.org/atlas/1729158650-8172085> rdfs:label "Direzione generale Biblioteche e diritto d'autore (Ministero della Cultura)"^^xsd:string .
+<https://w3id.org/dh-atlas/1729158650-8172085> rdfs:label "Direzione generale Biblioteche e diritto d'autore (Ministero della Cultura)"^^xsd:string .
 
-<https://w3id.org/atlas/1729160348-9926527> rdfs:label "Istituto Centrale per il Catalogo Unico (ICCU)"^^xsd:string .
+<https://w3id.org/dh-atlas/1729160348-9926527> rdfs:label "Istituto Centrale per il Catalogo Unico (ICCU)"^^xsd:string .
 
-<https://w3id.org/atlas/1729160565-2741764> rdfs:label "Biblioteca Europea di Informazione Cultura (BEIC)"^^xsd:string .
+<https://w3id.org/dh-atlas/1729160565-2741764> rdfs:label "Biblioteca Europea di Informazione Cultura (BEIC)"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

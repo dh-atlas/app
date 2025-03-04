@@ -6,7 +6,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729272082-6618783> a <http://purl.org/spar/fabio/WebSite> ;
+<https://w3id.org/dh-atlas/1729272082-6618783> a <http://purl.org/spar/fabio/WebSite> ;
     rdfs:label "VaSto - EVT viewer (Website)"@en ;
     ns1:description "The EVT-based website enables access to the XML content of the VaSto Digital Edition, allowing users to view both the manuscript’s photographic reproductions and the transcribed text. It also includes added features such as a indexes and commentary on the text."@en ;
     ns1:educationalUse <https://vocabs.dariah.eu/tadirah/browsing>,
@@ -16,11 +16,12 @@
     ns1:url <https://dharc-org.github.io/progetto-vasto/index.html#EVT> ;
     schema:usageInfo <https://dharc-org.github.io/progetto-vasto/index.html#EVT> .
 
-<https://w3id.org/atlas/1729272082-6618783/> rdfs:label "VaSto - EVT viewer (Website)"@en ;
-    ns2:currentStatus "not modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729272082-6618783/> rdfs:label "VaSto - EVT viewer (Website)"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "VaSto - EVT viewer (Website)"@en ;
     prov:generatedAtTime "2024-10-18T17:26:13.378469"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <https://vocabs.dariah.eu/tadirah/browsing> skos:prefLabel "Browsing - TADIRAH"^^xsd:string .
 
@@ -28,5 +29,5 @@
 
 <https://vocabs.dariah.eu/tadirah/searching> skos:prefLabel "Searching - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

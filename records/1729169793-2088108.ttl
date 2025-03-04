@@ -6,23 +6,23 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729169793-2088108> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729169793-2088108> a foaf:Agent,
         schema:Person ;
     rdfs:label "Gilberto Biondi"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1729169710-397222> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1729169710-397222> ;
     ns1:name "Gilberto Biondi"@en ;
     ns1:sameAs <http://www.wikidata.org/entity/Q113807777> .
 
-<https://w3id.org/atlas/1729169793-2088108/> rdfs:label "Gilberto Biondi"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729169793-2088108/> rdfs:label "Gilberto Biondi"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Gilberto Biondi"@en ;
     prov:generatedAtTime "2024-10-17T22:38:21.388609"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q113807777> rdfs:label "Giuseppe Gilberto Biondi"^^xsd:string .
 
-<https://w3id.org/atlas/1729169710-397222> rdfs:label "University of Parma"^^xsd:string .
+<https://w3id.org/dh-atlas/1729169710-397222> rdfs:label "University of Parma"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

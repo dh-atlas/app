@@ -6,21 +6,21 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1728944045-966> a foaf:Agent,
+<https://w3id.org/dh-atlas/1728944045-966> a foaf:Agent,
         schema:Person ;
     rdfs:label "Francesca Mambelli"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1728995806-349488> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1728995806-349488> ;
     ns1:identifier <https://orcid.org/0000-0002-2341-4375> ;
     ns1:name "Francesca Mambelli"@en .
 
-<https://w3id.org/atlas/1728944045-966/> rdfs:label "Francesca Mambelli"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1728944045-966/> rdfs:label "Francesca Mambelli"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Francesca Mambelli"@en ;
     prov:generatedAtTime "2024-10-17T22:07:53.827200"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
-<https://w3id.org/atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
+<https://w3id.org/dh-atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

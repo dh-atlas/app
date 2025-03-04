@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729187122-1272922> a schema:Dataset ;
+<https://w3id.org/dh-atlas/1729187122-1272922> a schema:Dataset ;
     rdfs:label "Voyant tools"@en ;
     dcterms:type <http://purl.org/spar/fabio/ComputerProgram> ;
     ns2:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-01-B>,
@@ -18,18 +18,18 @@
     ns2:archivedAt <https://github.com/voyanttools/Voyant> ;
     ns2:citation <https://voyant-tools.org/docs/#!/guide/gallery-section-conferences-and-workshops> ;
     ns2:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    ns2:contributor <https://w3id.org/atlas/1729188865-017393>,
-        <https://w3id.org/atlas/1729189344-7268312>,
-        <https://w3id.org/atlas/1729190469-6318252>,
-        <https://w3id.org/atlas/1729190508-1462588>,
-        <https://w3id.org/atlas/1729190550-8474212>,
-        <https://w3id.org/atlas/1729190593-8739011>,
-        <https://w3id.org/atlas/1729190637-1519997>,
-        <https://w3id.org/atlas/1729190688-9406993>,
-        <https://w3id.org/atlas/1729190727-838245> ;
+    ns2:contributor <https://w3id.org/dh-atlas/1729188865-017393>,
+        <https://w3id.org/dh-atlas/1729189344-7268312>,
+        <https://w3id.org/dh-atlas/1729190469-6318252>,
+        <https://w3id.org/dh-atlas/1729190508-1462588>,
+        <https://w3id.org/dh-atlas/1729190550-8474212>,
+        <https://w3id.org/dh-atlas/1729190593-8739011>,
+        <https://w3id.org/dh-atlas/1729190637-1519997>,
+        <https://w3id.org/dh-atlas/1729190688-9406993>,
+        <https://w3id.org/dh-atlas/1729190727-838245> ;
     ns2:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
-    ns2:creator <https://w3id.org/atlas/1729188763-9748292>,
-        <https://w3id.org/atlas/1729188871-7909553> ;
+    ns2:creator <https://w3id.org/dh-atlas/1729188763-9748292>,
+        <https://w3id.org/dh-atlas/1729188871-7909553> ;
     ns2:datePublished "2016-01-01"^^xsd:date ;
     ns2:description "Voyant Tools is a web-based text reading and analysis environment. It is a free suite of in-browser text analysis tools designed to facilitate reading and interpretive practices for digital humanities students and scholars as well as for the general public."@en ;
     ns2:distribution <https://github.com/voyanttools/VoyantServer/archive/refs/tags/2.6.14.zip> ;
@@ -52,7 +52,7 @@
         <http://publications.europa.eu/resource/authority/language/SRP> ;
     ns2:license <http://publications.europa.eu/resource/authority/licence/GPL_3_0> ;
     ns2:name "Voyant tools"@en ;
-    ns2:publisher <https://w3id.org/atlas/1729185478-0480285> ;
+    ns2:publisher <https://w3id.org/dh-atlas/1729185478-0480285> ;
     ns2:url <https://voyant-tools.org/> ;
     ns2:usageInfo <https://voyant-tools.org/docs/#!/guide> ;
     ns2:version "2.06.14"@en ;
@@ -72,12 +72,12 @@
     ns4:methodology <https://vocabs.dariah.eu/tadirah/interpreting>,
         <https://vocabs.dariah.eu/tadirah/programming> .
 
-<https://w3id.org/atlas/1729187122-1272922/> rdfs:label "Voyant tools"@en ;
-    ns3:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729187122-1272922/> rdfs:label "Voyant tools"@en ;
+    ns3:currentStatus "published"^^xsd:string ;
     ns2:name "Voyant tools"@en ;
     prov:generatedAtTime "2024-10-17T23:00:48.392891"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS"^^xsd:string .
 
@@ -145,29 +145,29 @@
 
 <https://vocabs.dariah.eu/tadirah/visualAnalysis> skos:prefLabel "Visual Analysis - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/1729185478-0480285> rdfs:label "Voyant Consortium"^^xsd:string .
+<https://w3id.org/dh-atlas/1729185478-0480285> rdfs:label "Voyant Consortium"^^xsd:string .
 
-<https://w3id.org/atlas/1729188763-9748292> rdfs:label "Geoffrey Rockwell"^^xsd:string .
+<https://w3id.org/dh-atlas/1729188763-9748292> rdfs:label "Geoffrey Rockwell"^^xsd:string .
 
-<https://w3id.org/atlas/1729188865-017393> rdfs:label "Andrew MacDonald"^^xsd:string .
+<https://w3id.org/dh-atlas/1729188865-017393> rdfs:label "Andrew MacDonald"^^xsd:string .
 
-<https://w3id.org/atlas/1729188871-7909553> rdfs:label "Stéfan Sinclair"^^xsd:string .
+<https://w3id.org/dh-atlas/1729188871-7909553> rdfs:label "Stéfan Sinclair"^^xsd:string .
 
-<https://w3id.org/atlas/1729189344-7268312> rdfs:label "Kaylin Land"^^xsd:string .
+<https://w3id.org/dh-atlas/1729189344-7268312> rdfs:label "Kaylin Land"^^xsd:string .
 
-<https://w3id.org/atlas/1729190469-6318252> rdfs:label "Bennett Kuwan Tchoh"^^xsd:string .
+<https://w3id.org/dh-atlas/1729190469-6318252> rdfs:label "Bennett Kuwan Tchoh"^^xsd:string .
 
-<https://w3id.org/atlas/1729190508-1462588> rdfs:label "Ayushi Khemka"^^xsd:string .
+<https://w3id.org/dh-atlas/1729190508-1462588> rdfs:label "Ayushi Khemka"^^xsd:string .
 
-<https://w3id.org/atlas/1729190550-8474212> rdfs:label "Catherine Bevan"^^xsd:string .
+<https://w3id.org/dh-atlas/1729190550-8474212> rdfs:label "Catherine Bevan"^^xsd:string .
 
-<https://w3id.org/atlas/1729190593-8739011> rdfs:label "Elliot Damasah"^^xsd:string .
+<https://w3id.org/dh-atlas/1729190593-8739011> rdfs:label "Elliot Damasah"^^xsd:string .
 
-<https://w3id.org/atlas/1729190637-1519997> rdfs:label "Cyril Briquet"^^xsd:string .
+<https://w3id.org/dh-atlas/1729190637-1519997> rdfs:label "Cyril Briquet"^^xsd:string .
 
-<https://w3id.org/atlas/1729190688-9406993> rdfs:label "Lisa Goddard"^^xsd:string .
+<https://w3id.org/dh-atlas/1729190688-9406993> rdfs:label "Lisa Goddard"^^xsd:string .
 
-<https://w3id.org/atlas/1729190727-838245> rdfs:label "Mark Turcato"^^xsd:string .
+<https://w3id.org/dh-atlas/1729190727-838245> rdfs:label "Mark Turcato"^^xsd:string .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-01-B> skos:prefLabel "Informatics - ACADEMIC FIELD"^^xsd:string .
 
@@ -177,5 +177,5 @@
 
 <https://publications.europa.eu/resource/authority/file-type/TXT> rdfs:label "Plain text"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729160348-9926527> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729160348-9926527> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Istituto Centrale per il Catalogo Unico (ICCU)"@en ;
     ns1:identifier <https://ror.org/027jzke82> ;
@@ -15,16 +15,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q3803707> ;
     ns1:url <http://www.iccu.sbn.it/opencms/opencms/en/> .
 
-<https://w3id.org/atlas/1729160348-9926527/> rdfs:label "Istituto Centrale per il Catalogo Unico (ICCU)"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729160348-9926527/> rdfs:label "Istituto Centrale per il Catalogo Unico (ICCU)"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Istituto Centrale per il Catalogo Unico (ICCU)"@en ;
     prov:generatedAtTime "2024-10-17T22:34:24.631645"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q3803707> rdfs:label "Istituto Centrale per il Catalogo Unico"^^xsd:string .
 
 <https://sws.geonames.org/3169070> rdfs:label "Rome"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

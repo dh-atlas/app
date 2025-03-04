@@ -6,24 +6,24 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729175545-28137> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729175545-28137> a foaf:Agent,
         schema:Person ;
     rdfs:label "Martina Pavoni"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1729030617-8635733> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1729030617-8635733> ;
     ns1:identifier <https://orcid.org/0000-0002-6417-6107> ;
     ns1:name "Martina Pavoni"@en ;
     ns1:sameAs <http://www.wikidata.org/entity/Q106618609> .
 
-<https://w3id.org/atlas/1729175545-28137/> rdfs:label "Martina Pavoni"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729175545-28137/> rdfs:label "Martina Pavoni"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Martina Pavoni"@en ;
     prov:generatedAtTime "2024-10-17T14:33:58.043066"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q106618609> rdfs:label "Martina Pavoni"^^xsd:string .
 
-<https://w3id.org/atlas/1729030617-8635733> rdfs:label "University of Basilicata"^^xsd:string .
+<https://w3id.org/dh-atlas/1729030617-8635733> rdfs:label "University of Basilicata"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

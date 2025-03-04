@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729030809-7798028> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729030809-7798028> a foaf:Agent,
         schema:Organization ;
     rdfs:label "University of Palermo"@en ;
     ns2:identifier <https://ror.org/044k9ta02> ;
@@ -15,16 +15,16 @@
     ns2:sameAs <http://www.wikidata.org/entity/Q1641504> ;
     ns2:url <http://portale.unipa.it/> .
 
-<https://w3id.org/atlas/1729030809-7798028/> rdfs:label "University of Palermo"@en ;
-    ns1:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729030809-7798028/> rdfs:label "University of Palermo"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
     ns2:name "University of Palermo"@en ;
     prov:generatedAtTime "2024-10-17T22:19:15.614578"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q1641504> rdfs:label "University of Palermo"^^xsd:string .
 
 <https://sws.geonames.org/2523920> rdfs:label "Palermo"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

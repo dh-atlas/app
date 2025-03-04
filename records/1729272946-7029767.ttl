@@ -6,7 +6,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729272946-7029767> a <http://purl.org/spar/fabio/WebSite> ;
+<https://w3id.org/dh-atlas/1729272946-7029767> a <http://purl.org/spar/fabio/WebSite> ;
     rdfs:label "National Edition of Aldo Moro's Works - Website"@en ;
     ns1:description "Through the website of the Digital Edition of the National Edition of Aldo Moro’s Works, users can access the texts, indices, and research tools made available for the study and investigation of Aldo Moro’s works."@en ;
     ns1:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
@@ -17,12 +17,12 @@
     ns1:url <https://aldomorodigitale.unibo.it/edition> ;
     schema:usageInfo <https://aldomorodigitale.unibo.it/about/docs/site#benchmark-section> .
 
-<https://w3id.org/atlas/1729272946-7029767/> rdfs:label "National Edition of Aldo Moro's Works - Website"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729272946-7029767/> rdfs:label "National Edition of Aldo Moro's Works - Website"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "National Edition of Aldo Moro's Works - Website"@en ;
     prov:generatedAtTime "2024-10-18T17:48:33.933811"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
 
@@ -32,5 +32,5 @@
 
 <https://vocabs.dariah.eu/tadirah/exploration> skos:prefLabel "Exploration - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

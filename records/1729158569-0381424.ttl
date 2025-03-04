@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729158569-0381424> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729158569-0381424> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Dipartimento di Lettere e Culture Moderne (Sapienza Università  di Roma)"@it ;
     ns1:location <https://sws.geonames.org/3169070> ;
@@ -14,16 +14,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q60650499> ;
     ns1:url <https://web.uniroma1.it/lcm/> .
 
-<https://w3id.org/atlas/1729158569-0381424/> rdfs:label "Dipartimento di Lettere e Culture Moderne (Sapienza Università  di Roma)"@it ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729158569-0381424/> rdfs:label "Dipartimento di Lettere e Culture Moderne (Sapienza Università  di Roma)"@it ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Dipartimento di Lettere e Culture Moderne (Sapienza Università  di Roma)"@it ;
     prov:generatedAtTime "2024-10-17T22:34:50.928957"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q60650499> rdfs:label "Department of Modern Letters and Cultures, Sapienza University of Rome"^^xsd:string .
 
 <https://sws.geonames.org/3169070> rdfs:label "Rome"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

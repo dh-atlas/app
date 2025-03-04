@@ -6,17 +6,17 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729190637-1519997> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729190637-1519997> a foaf:Agent,
         schema:Person ;
     rdfs:label "Cyril Briquet"@en ;
     ns1:name "Cyril Briquet"@en .
 
-<https://w3id.org/atlas/1729190637-1519997/> rdfs:label "Cyril Briquet"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729190637-1519997/> rdfs:label "Cyril Briquet"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Cyril Briquet"@en ;
     prov:generatedAtTime "2024-10-17T22:51:10.551449"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

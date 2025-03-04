@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729075089-3110056> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729075089-3110056> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Venice Centre for Digital and Public Humanities (VeDPH)"@en ;
     ns1:location <https://sws.geonames.org/3164603> ;
@@ -14,16 +14,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q112577990> ;
     ns1:url <https://www.unive.it/pag/37972/> .
 
-<https://w3id.org/atlas/1729075089-3110056/> rdfs:label "Venice Centre for Digital and Public Humanities (VeDPH)"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729075089-3110056/> rdfs:label "Venice Centre for Digital and Public Humanities (VeDPH)"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Venice Centre for Digital and Public Humanities (VeDPH)"@en ;
     prov:generatedAtTime "2024-10-17T22:31:03.934535"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q112577990> rdfs:label "Venice Centre for Digital and Public Humanities"^^xsd:string .
 
 <https://sws.geonames.org/3164603> rdfs:label "Venice"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

@@ -6,23 +6,23 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729161349-6181638> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729161349-6181638> a foaf:Agent,
         schema:Person ;
     rdfs:label "Luigi Tessarolo"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1729012784-159052> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1729012784-159052> ;
     ns1:name "Luigi Tessarolo"@en ;
     ns1:sameAs <http://www.wikidata.org/entity/Q104099665> .
 
-<https://w3id.org/atlas/1729161349-6181638/> rdfs:label "Luigi Tessarolo"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729161349-6181638/> rdfs:label "Luigi Tessarolo"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Luigi Tessarolo"@en ;
     prov:generatedAtTime "2024-10-17T22:36:22.166580"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q104099665> rdfs:label "Luigi Tessarolo"^^xsd:string .
 
-<https://w3id.org/atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
+<https://w3id.org/dh-atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

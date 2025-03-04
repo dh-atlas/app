@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729160565-2741764> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729160565-2741764> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Biblioteca Europea di Informazione Cultura (BEIC)"@en ;
     ns1:location <https://sws.geonames.org/3173435> ;
@@ -14,16 +14,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q3639582> ;
     ns1:url <https://www.beic.it> .
 
-<https://w3id.org/atlas/1729160565-2741764/> rdfs:label "Biblioteca Europea di Informazione Cultura (BEIC)"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729160565-2741764/> rdfs:label "Biblioteca Europea di Informazione Cultura (BEIC)"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Biblioteca Europea di Informazione Cultura (BEIC)"@en ;
     prov:generatedAtTime "2024-10-17T22:34:34.766076"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q3639582> rdfs:label "Biblioteca Europea di Informazione e Cultura"^^xsd:string .
 
 <https://sws.geonames.org/3173435> rdfs:label "Milan"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

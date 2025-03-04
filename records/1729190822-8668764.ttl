@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729190822-8668764> a schema:Dataset ;
+<https://w3id.org/dh-atlas/1729190822-8668764> a schema:Dataset ;
     rdfs:label "National Edition of Aldo Moro’s Works"@en ;
     ns3:editionType ns1:CriticalEdition ;
     ns3:notesOnSource "The current edition includes 1,398 works, many of which are transcriptions of speeches, making it difficult to provide adequate references to the documents used and source works."@en ;
@@ -24,7 +24,7 @@
     ns2:citation <http://dx.doi.org/10.17504/protocols.io.bupxnvpn> ;
     ns2:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
     ns2:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
-    ns2:creator <https://w3id.org/atlas/1729199229-7707717> ;
+    ns2:creator <https://w3id.org/dh-atlas/1729199229-7707717> ;
     ns2:datePublished "2021-01-01"^^xsd:date ;
     ns2:description "Critical edition of Aldo Moro's published and unpublished texts, with their historical introduction. Entirely available online, free and open. The edition is structured in three sections covering Moro's writing and speeches, his juridical works, and his correspondence."@en ;
     ns2:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
@@ -39,22 +39,22 @@
         <http://publications.europa.eu/resource/authority/language/ITA> ;
     ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> ;
     ns2:name "National Edition of Aldo Moro’s Works"@en ;
-    ns2:producer <https://w3id.org/atlas/1729199464-0104058> ;
-    ns2:publisher <https://w3id.org/atlas/1728995806-349488> ;
+    ns2:producer <https://w3id.org/dh-atlas/1729199464-0104058> ;
+    ns2:publisher <https://w3id.org/dh-atlas/1728995806-349488> ;
     ns2:url <https://aldomorodigitale.unibo.it/edition> ;
     ns2:usageInfo <https://aldomorodigitale.unibo.it/about/docs/workflow> ;
     ns1:methodology <https://vocabs.dariah.eu/tadirah/annotating>,
         <https://vocabs.dariah.eu/tadirah/editing>,
         <https://vocabs.dariah.eu/tadirah/enriching>,
         <https://vocabs.dariah.eu/tadirah/transcribing> ;
-    ns1:servedBy <https://w3id.org/atlas/1729272946-7029767> .
+    ns1:servedBy <https://w3id.org/dh-atlas/1729272946-7029767> .
 
-<https://w3id.org/atlas/1729190822-8668764/> rdfs:label "National Edition of Aldo Moro’s Works"@en ;
-    ns4:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729190822-8668764/> rdfs:label "National Edition of Aldo Moro’s Works"@en ;
+    ns4:currentStatus "published"^^xsd:string ;
     ns2:name "National Edition of Aldo Moro’s Works"@en ;
     prov:generatedAtTime "2024-10-18T17:40:14.944326"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS"^^xsd:string .
 
@@ -96,13 +96,13 @@ ns1:CriticalEdition rdfs:label "Critical Edition"^^xsd:string .
 
 <https://vocabs.dariah.eu/tadirah/transcribing> skos:prefLabel "Transcribing - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
+<https://w3id.org/dh-atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
 
-<https://w3id.org/atlas/1729199229-7707717> rdfs:label "Renato Moro"^^xsd:string .
+<https://w3id.org/dh-atlas/1729199229-7707717> rdfs:label "Renato Moro"^^xsd:string .
 
-<https://w3id.org/atlas/1729199464-0104058> rdfs:label "National Edition of Aldo Moro’s works - Research Project"^^xsd:string .
+<https://w3id.org/dh-atlas/1729199464-0104058> rdfs:label "National Edition of Aldo Moro’s works - Research Project"^^xsd:string .
 
-<https://w3id.org/atlas/1729272946-7029767> rdfs:label "National Edition of Aldo Moro's Works - Website"^^xsd:string .
+<https://w3id.org/dh-atlas/1729272946-7029767> rdfs:label "National Edition of Aldo Moro's Works - Website"^^xsd:string .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-F> skos:prefLabel "Italian studies and comparative literature - ACADEMIC FIELD"^^xsd:string .
 
@@ -112,5 +112,5 @@ ns1:CriticalEdition rdfs:label "Critical Edition"^^xsd:string .
 
 <http://purl.org/spar/fabio/MetadataDocument> rdfs:label "Digital Scholarly Edition"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

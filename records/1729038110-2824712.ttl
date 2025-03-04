@@ -5,7 +5,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729038110-2824712> a <http://purl.org/spar/fabio/ComputerProgram> ;
+<https://w3id.org/dh-atlas/1729038110-2824712> a <http://purl.org/spar/fabio/ComputerProgram> ;
     rdfs:label "LiLa: Linking Latin - SPARQL endpoint"@en ;
     ns1:additionalType <http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> ;
     ns1:description "The LiLa (Linking Latin) Knowledge Base offers a SPARQL endpoint that enables researchers and users to perform sophisticated queries on its interconnected linguistic resources and Natural Language Processing (NLP) tools for Latin."@en ;
@@ -15,12 +15,12 @@
     ns1:name "LiLa: Linking Latin - SPARQL endpoint"@en ;
     ns1:url <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> .
 
-<https://w3id.org/atlas/1729038110-2824712/> rdfs:label "LiLa: Linking Latin - SPARQL endpoint"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729038110-2824712/> rdfs:label "LiLa: Linking Latin - SPARQL endpoint"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "LiLa: Linking Latin - SPARQL endpoint"@en ;
     prov:generatedAtTime "2024-10-18T17:06:58.667204"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> rdfs:label "SPARQL endpoint - DATA SERVICE"^^xsd:string .
 
@@ -30,5 +30,5 @@
 
 <https://vocabs.dariah.eu/tadirah/structuralAnalysis> skos:prefLabel "Structural Analysis - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

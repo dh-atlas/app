@@ -6,23 +6,23 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729025155-4855695> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729025155-4855695> a foaf:Agent,
         schema:Person ;
     rdfs:label "Laura Balletto"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1729022507-5876055> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1729022507-5876055> ;
     ns1:name "Laura Balletto"@en ;
     ns1:sameAs <http://www.wikidata.org/entity/Q95649048> .
 
-<https://w3id.org/atlas/1729025155-4855695/> rdfs:label "Laura Balletto"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729025155-4855695/> rdfs:label "Laura Balletto"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Laura Balletto"@en ;
     prov:generatedAtTime "2024-10-17T22:17:41.649730"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q95649048> rdfs:label "Laura Balletto"^^xsd:string .
 
-<https://w3id.org/atlas/1729022507-5876055> rdfs:label "University of Genoa"^^xsd:string .
+<https://w3id.org/dh-atlas/1729022507-5876055> rdfs:label "University of Genoa"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

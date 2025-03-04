@@ -6,80 +6,80 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729199464-0104058> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729199464-0104058> a foaf:Agent,
         schema:ResearchProject ;
     rdfs:label "National Edition of Aldo Moro’s works - Research Project"@en ;
     ns1:description "The research project aims to produce a critical and philologically accurate edition of both published and unpublished texts by Aldo Moro. These texts will be accompanied by historical introductions and annotations."@en ;
     ns1:foundingDate "2016-12-06"^^xsd:date ;
-    ns1:funder <https://w3id.org/atlas/1729200946-0573153> ;
+    ns1:funder <https://w3id.org/dh-atlas/1729200946-0573153> ;
     ns1:member <http://www.wikidata.org/entity/Q131262>,
-        <https://w3id.org/atlas/1729012353-470491>,
-        <https://w3id.org/atlas/1729030640-1172316>,
-        <https://w3id.org/atlas/1729032657-3542836>,
-        <https://w3id.org/atlas/1729035723-7187014>,
-        <https://w3id.org/atlas/1729083936-4885452>,
-        <https://w3id.org/atlas/1729169710-397222>,
-        <https://w3id.org/atlas/1729190776-4336185>,
-        <https://w3id.org/atlas/1729196716-6306894>,
-        <https://w3id.org/atlas/1729199300-5442939>,
-        <https://w3id.org/atlas/1729199340-1807613>,
-        <https://w3id.org/atlas/1729200460-8540998>,
-        <https://w3id.org/atlas/1729200890-684812>,
-        <https://w3id.org/atlas/1729201133-9007797>,
-        <https://w3id.org/atlas/1729201350-793075>,
-        <https://w3id.org/atlas/1729201449-2764342>,
-        <https://w3id.org/atlas/1729201638-9413888>,
-        <https://w3id.org/atlas/1729201783-778153>,
-        <https://w3id.org/atlas/1729201913-7233987> ;
+        <https://w3id.org/dh-atlas/1729012353-470491>,
+        <https://w3id.org/dh-atlas/1729030640-1172316>,
+        <https://w3id.org/dh-atlas/1729032657-3542836>,
+        <https://w3id.org/dh-atlas/1729035723-7187014>,
+        <https://w3id.org/dh-atlas/1729083936-4885452>,
+        <https://w3id.org/dh-atlas/1729169710-397222>,
+        <https://w3id.org/dh-atlas/1729190776-4336185>,
+        <https://w3id.org/dh-atlas/1729196716-6306894>,
+        <https://w3id.org/dh-atlas/1729199300-5442939>,
+        <https://w3id.org/dh-atlas/1729199340-1807613>,
+        <https://w3id.org/dh-atlas/1729200460-8540998>,
+        <https://w3id.org/dh-atlas/1729200890-684812>,
+        <https://w3id.org/dh-atlas/1729201133-9007797>,
+        <https://w3id.org/dh-atlas/1729201350-793075>,
+        <https://w3id.org/dh-atlas/1729201449-2764342>,
+        <https://w3id.org/dh-atlas/1729201638-9413888>,
+        <https://w3id.org/dh-atlas/1729201783-778153>,
+        <https://w3id.org/dh-atlas/1729201913-7233987> ;
     ns1:name "National Edition of Aldo Moro’s works - Research Project"@en ;
     ns1:url <https://aldomorodigitale.unibo.it/> .
 
-<https://w3id.org/atlas/1729199464-0104058/> rdfs:label "National Edition of Aldo Moro’s works - Research Project"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729199464-0104058/> rdfs:label "National Edition of Aldo Moro’s works - Research Project"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "National Edition of Aldo Moro’s works - Research Project"@en ;
     prov:generatedAtTime "2024-10-17T22:54:46.375087"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q131262> rdfs:label "University of Bologna"^^xsd:string .
 
-<https://w3id.org/atlas/1729012353-470491> rdfs:label "University of Turin"^^xsd:string .
+<https://w3id.org/dh-atlas/1729012353-470491> rdfs:label "University of Turin"^^xsd:string .
 
-<https://w3id.org/atlas/1729030640-1172316> rdfs:label "Suor Orsola Benincasa University of Naples"^^xsd:string .
+<https://w3id.org/dh-atlas/1729030640-1172316> rdfs:label "Suor Orsola Benincasa University of Naples"^^xsd:string .
 
-<https://w3id.org/atlas/1729032657-3542836> rdfs:label "Sapienza University of Rome"^^xsd:string .
+<https://w3id.org/dh-atlas/1729032657-3542836> rdfs:label "Sapienza University of Rome"^^xsd:string .
 
-<https://w3id.org/atlas/1729035723-7187014> rdfs:label "Università Cattolica del Sacro Cuore"^^xsd:string .
+<https://w3id.org/dh-atlas/1729035723-7187014> rdfs:label "Università Cattolica del Sacro Cuore"^^xsd:string .
 
-<https://w3id.org/atlas/1729083936-4885452> rdfs:label "University of Modena and Reggio Emilia"^^xsd:string .
+<https://w3id.org/dh-atlas/1729083936-4885452> rdfs:label "University of Modena and Reggio Emilia"^^xsd:string .
 
-<https://w3id.org/atlas/1729169710-397222> rdfs:label "University of Parma"^^xsd:string .
+<https://w3id.org/dh-atlas/1729169710-397222> rdfs:label "University of Parma"^^xsd:string .
 
-<https://w3id.org/atlas/1729190776-4336185> rdfs:label "University of Bari Aldo Moro"^^xsd:string .
+<https://w3id.org/dh-atlas/1729190776-4336185> rdfs:label "University of Bari Aldo Moro"^^xsd:string .
 
-<https://w3id.org/atlas/1729196716-6306894> rdfs:label "IULM University"^^xsd:string .
+<https://w3id.org/dh-atlas/1729196716-6306894> rdfs:label "IULM University"^^xsd:string .
 
-<https://w3id.org/atlas/1729199300-5442939> rdfs:label "Roma Tre University"^^xsd:string .
+<https://w3id.org/dh-atlas/1729199300-5442939> rdfs:label "Roma Tre University"^^xsd:string .
 
-<https://w3id.org/atlas/1729199340-1807613> rdfs:label "D'Annunzio University of Chieti-Pescara"^^xsd:string .
+<https://w3id.org/dh-atlas/1729199340-1807613> rdfs:label "D'Annunzio University of Chieti-Pescara"^^xsd:string .
 
-<https://w3id.org/atlas/1729200460-8540998> rdfs:label "Gramsci Foundation"^^xsd:string .
+<https://w3id.org/dh-atlas/1729200460-8540998> rdfs:label "Gramsci Foundation"^^xsd:string .
 
-<https://w3id.org/atlas/1729200890-684812> rdfs:label "University of Florence"^^xsd:string .
+<https://w3id.org/dh-atlas/1729200890-684812> rdfs:label "University of Florence"^^xsd:string .
 
-<https://w3id.org/atlas/1729200946-0573153> rdfs:label "Ministero della Cultura"^^xsd:string .
+<https://w3id.org/dh-atlas/1729200946-0573153> rdfs:label "Ministero della Cultura"^^xsd:string .
 
-<https://w3id.org/atlas/1729201133-9007797> rdfs:label "Accademia di studi storici Aldo Moro"^^xsd:string .
+<https://w3id.org/dh-atlas/1729201133-9007797> rdfs:label "Accademia di studi storici Aldo Moro"^^xsd:string .
 
-<https://w3id.org/atlas/1729201350-793075> rdfs:label "Bruno Kessler Foundation"^^xsd:string .
+<https://w3id.org/dh-atlas/1729201350-793075> rdfs:label "Bruno Kessler Foundation"^^xsd:string .
 
-<https://w3id.org/atlas/1729201449-2764342> rdfs:label "Lelio e Lisli Basso Foundation"^^xsd:string .
+<https://w3id.org/dh-atlas/1729201449-2764342> rdfs:label "Lelio e Lisli Basso Foundation"^^xsd:string .
 
-<https://w3id.org/atlas/1729201638-9413888> rdfs:label "Giovanni XXIII Foundation for Religious studies"^^xsd:string .
+<https://w3id.org/dh-atlas/1729201638-9413888> rdfs:label "Giovanni XXIII Foundation for Religious studies"^^xsd:string .
 
-<https://w3id.org/atlas/1729201783-778153> rdfs:label "Istituto per la storia dell'Azione cattolica e del movimento cattolico in Italia Paolo VI (ISACEM)"^^xsd:string .
+<https://w3id.org/dh-atlas/1729201783-778153> rdfs:label "Istituto per la storia dell'Azione cattolica e del movimento cattolico in Italia Paolo VI (ISACEM)"^^xsd:string .
 
-<https://w3id.org/atlas/1729201913-7233987> rdfs:label "Luigi Sturzo Institute"^^xsd:string .
+<https://w3id.org/dh-atlas/1729201913-7233987> rdfs:label "Luigi Sturzo Institute"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

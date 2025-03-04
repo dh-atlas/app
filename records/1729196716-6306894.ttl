@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729196716-6306894> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729196716-6306894> a foaf:Agent,
         schema:Organization ;
     rdfs:label "IULM University"@en ;
     ns1:identifier <https://ror.org/04pp4xq32> ;
@@ -15,16 +15,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q1077639> ;
     ns1:url <https://www.iulm.it/> .
 
-<https://w3id.org/atlas/1729196716-6306894/> rdfs:label "IULM University"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729196716-6306894/> rdfs:label "IULM University"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "IULM University"@en ;
     prov:generatedAtTime "2024-10-17T23:20:21.909576"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q1077639> rdfs:label "IULM University of Milan"^^xsd:string .
 
 <https://sws.geonames.org/3173435> rdfs:label "Milan"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729190413-9603288> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729190413-9603288> a foaf:Agent,
         schema:Organization ;
     rdfs:label "McGill University"@en ;
     ns1:identifier <https://ror.org/01pxwe438> ;
@@ -15,16 +15,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q201492> ;
     ns1:url <http://www.mcgill.ca/> .
 
-<https://w3id.org/atlas/1729190413-9603288/> rdfs:label "McGill University"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729190413-9603288/> rdfs:label "McGill University"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "McGill University"@en ;
     prov:generatedAtTime "2024-10-17T23:20:08.677131"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q201492> rdfs:label "McGill University"^^xsd:string .
 
 <https://sws.geonames.org/6077243> rdfs:label "Montreal"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

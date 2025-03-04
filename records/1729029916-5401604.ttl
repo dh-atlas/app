@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729029916-5401604> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729029916-5401604> a foaf:Agent,
         schema:Organization ;
     rdfs:label "University of Siena"@en ;
     ns1:identifier <https://ror.org/01tevnk56> ;
@@ -16,12 +16,12 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q1245999> ;
     ns1:url <http://www.unisi.it/> .
 
-<https://w3id.org/atlas/1729029916-5401604/> rdfs:label "University of Siena"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729029916-5401604/> rdfs:label "University of Siena"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "University of Siena"@en ;
     prov:generatedAtTime "2024-10-17T22:18:36.342410"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q1245999> rdfs:label "University of Siena"^^xsd:string .
 
@@ -29,5 +29,5 @@
 
 <https://sws.geonames.org/3182884> rdfs:label "Arezzo"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

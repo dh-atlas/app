@@ -6,20 +6,20 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729188871-7909553> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729188871-7909553> a foaf:Agent,
         schema:Person ;
     rdfs:label "Stéfan Sinclair"@en ;
     ns1:name "Stéfan Sinclair"@en ;
     ns1:sameAs <http://www.wikidata.org/entity/Q126326791> .
 
-<https://w3id.org/atlas/1729188871-7909553/> rdfs:label "Stéfan Sinclair"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729188871-7909553/> rdfs:label "Stéfan Sinclair"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Stéfan Sinclair"@en ;
     prov:generatedAtTime "2024-10-17T22:49:46.695431"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q126326791> rdfs:label "Stéfan Sinclair"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

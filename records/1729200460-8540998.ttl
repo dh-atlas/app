@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729200460-8540998> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729200460-8540998> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Gramsci Foundation"@en ;
     ns2:location <https://sws.geonames.org/3169070> ;
@@ -14,16 +14,16 @@
     ns2:sameAs <http://www.wikidata.org/entity/Q24934777> ;
     ns2:url <https://www.fondazionegramsci.org/> .
 
-<https://w3id.org/atlas/1729200460-8540998/> rdfs:label "Gramsci Foundation"@en ;
-    ns1:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729200460-8540998/> rdfs:label "Gramsci Foundation"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
     ns2:name "Gramsci Foundation"@en ;
     prov:generatedAtTime "2024-10-17T22:54:02.965115"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q24934777> rdfs:label "Fondazione Istituto Gramsci"^^xsd:string .
 
 <https://sws.geonames.org/3169070> rdfs:label "Rome"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

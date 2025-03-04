@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729199340-1807613> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729199340-1807613> a foaf:Agent,
         schema:Organization ;
     rdfs:label "D'Annunzio University of Chieti-Pescara"@en ;
     ns1:identifier <https://ror.org/00qjgza05> ;
@@ -16,12 +16,12 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q2261128> ;
     ns1:url <http://www.unich.it/> .
 
-<https://w3id.org/atlas/1729199340-1807613/> rdfs:label "D'Annunzio University of Chieti-Pescara"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729199340-1807613/> rdfs:label "D'Annunzio University of Chieti-Pescara"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "D'Annunzio University of Chieti-Pescara"@en ;
     prov:generatedAtTime "2024-10-17T22:52:50.582893"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q2261128> rdfs:label "D'Annunzio University of Chieti–Pescara"^^xsd:string .
 
@@ -29,5 +29,5 @@
 
 <https://sws.geonames.org/3178796> rdfs:label "Chieti"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

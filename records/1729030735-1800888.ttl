@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729030735-1800888> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729030735-1800888> a foaf:Agent,
         schema:Organization ;
     rdfs:label "University of Verona"@en ;
     ns2:identifier <https://ror.org/039bp8j42> ;
@@ -15,16 +15,16 @@
     ns2:sameAs <http://www.wikidata.org/entity/Q2531629> ;
     ns2:url <http://www.univr.it/jsp/index.jsp> .
 
-<https://w3id.org/atlas/1729030735-1800888/> rdfs:label "University of Verona"@en ;
-    ns1:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729030735-1800888/> rdfs:label "University of Verona"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
     ns2:name "University of Verona"@en ;
     prov:generatedAtTime "2024-10-17T22:19:02.166483"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q2531629> rdfs:label "University of Verona"^^xsd:string .
 
 <https://sws.geonames.org/3164527> rdfs:label "Verona"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

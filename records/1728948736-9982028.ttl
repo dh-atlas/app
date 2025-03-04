@@ -9,7 +9,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1728948736-9982028> a schema:Dataset ;
+<https://w3id.org/dh-atlas/1728948736-9982028> a schema:Dataset ;
     rdfs:label "CIDOC Conceptual Reference Model (CRM)"@en ;
     dcterms:type <http://purl.org/spar/fabio/OntologyDocument> ;
     vann:preferredNamespaceUri <http://www.cidoc-crm.org/cidoc-crm/> ;
@@ -19,8 +19,8 @@
     ns1:additionalType <http://purl.org/spar/fabio/OntologyDocument> ;
     ns1:citation <https://cidoc-crm.org/publicationsPage> ;
     ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
-    ns1:creator <https://w3id.org/atlas/1729182289-8047254>,
-        <https://w3id.org/atlas/1729184439-6487114> ;
+    ns1:creator <https://w3id.org/dh-atlas/1729182289-8047254>,
+        <https://w3id.org/dh-atlas/1729184439-6487114> ;
     ns1:datePublished "1999-01-01"^^xsd:date ;
     ns1:description "The CIDOC-CRM ontology provides a formal structure for describing the implicit and explicit relationships between cultural heritage objects, their histories, and their contexts. It is the de facto golden standard for museum and cultural objects description."@en ;
     ns1:distribution <https://www.cidoc-crm.org/Version/version-7.1.3> ;
@@ -32,7 +32,7 @@
     ns1:identifier "ISO 21127"@en ;
     ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
     ns1:name "CIDOC Conceptual Reference Model (CRM)"@en ;
-    ns1:publisher <https://w3id.org/atlas/1729184439-6487114> ;
+    ns1:publisher <https://w3id.org/dh-atlas/1729184439-6487114> ;
     ns1:url <https://www.cidoc-crm.org/Version/version-7.1.3> ;
     ns1:version "7.01.03"@en ;
     ns3:methodology <https://vocabs.dariah.eu/tadirah/encoding>,
@@ -40,12 +40,12 @@
         <https://vocabs.dariah.eu/tadirah/organizing>,
         <https://vocabs.dariah.eu/tadirah/semantification> .
 
-<https://w3id.org/atlas/1728948736-9982028/> rdfs:label "CIDOC Conceptual Reference Model (CRM)"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1728948736-9982028/> rdfs:label "CIDOC Conceptual Reference Model (CRM)"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "CIDOC Conceptual Reference Model (CRM)"@en ;
     prov:generatedAtTime "2024-10-17T17:10:52.600945"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS"^^xsd:string .
 
@@ -57,7 +57,7 @@
 
 <https://vocabs.dariah.eu/tadirah/mapping> skos:prefLabel "Mapping - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/1729182289-8047254> rdfs:label "International Committee on Documentation (CIDOC)"^^xsd:string .
+<https://w3id.org/dh-atlas/1729182289-8047254> rdfs:label "International Committee on Documentation (CIDOC)"^^xsd:string .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-10> skos:prefLabel "Antiquities, philology, literary studies, art history - ACADEMIC FIELD"^^xsd:string .
 
@@ -73,7 +73,7 @@
 
 <https://vocabs.dariah.eu/tadirah/semantification> skos:prefLabel "Semantification - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/1729184439-6487114> rdfs:label "CIDOC Conceptual Reference Model Special Interest Group"^^xsd:string .
+<https://w3id.org/dh-atlas/1729184439-6487114> rdfs:label "CIDOC Conceptual Reference Model Special Interest Group"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

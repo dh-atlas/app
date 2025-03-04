@@ -6,7 +6,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729096487-9794765> a <http://purl.org/spar/fabio/ComputerProgram> ;
+<https://w3id.org/dh-atlas/1729096487-9794765> a <http://purl.org/spar/fabio/ComputerProgram> ;
     rdfs:label "Biflow catalogue - SPARQL editor"@en ;
     ns2:additionalType <http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> ;
     ns2:description "The BiFlow Catalogue provides an RDF store-js SPARQL endpoint that allows users to query a rich RDF dataset that models textual and manuscript traditions from 1260 to 1430. Based on the Biflow ontology, it integrates CIDOC-CRM, eFRBRoo, and Biblissima ontologies. The endpoint supports metadata interoperability and provides access to bilingual textual dossiers, including source texts and translations."@en ;
@@ -20,12 +20,12 @@
     ns2:url <https://catalogobiflow.vedph.it/sparql/> ;
     schema:usageInfo <https://catalogobiflow.vedph.it/ontology/> .
 
-<https://w3id.org/atlas/1729096487-9794765/> rdfs:label "Biflow catalogue - SPARQL editor"@en ;
-    ns1:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729096487-9794765/> rdfs:label "Biflow catalogue - SPARQL editor"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
     ns2:name "Biflow catalogue - SPARQL editor"@en ;
     prov:generatedAtTime "2024-10-18T16:47:58.100316"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> rdfs:label "SPARQL endpoint - DATA SERVICE"^^xsd:string .
 
@@ -41,5 +41,5 @@
 
 <https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

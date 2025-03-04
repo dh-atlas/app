@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729035877-7734847> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729035877-7734847> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Centro Interdisciplinare di Ricerche per la Computerizzazione dei Segni dell’Espressione (CIRCSE)"@en ;
     ns2:location <https://sws.geonames.org/3173435> ;
@@ -14,16 +14,16 @@
     ns2:sameAs <http://www.wikidata.org/entity/Q89883181> ;
     ns2:url <https://centridiricerca.unicatt.it/circse/en.html> .
 
-<https://w3id.org/atlas/1729035877-7734847/> rdfs:label "Centro Interdisciplinare di Ricerche per la Computerizzazione dei Segni dell’Espressione (CIRCSE)"@en ;
-    ns1:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729035877-7734847/> rdfs:label "Centro Interdisciplinare di Ricerche per la Computerizzazione dei Segni dell’Espressione (CIRCSE)"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
     ns2:name "Centro Interdisciplinare di Ricerche per la Computerizzazione dei Segni dell’Espressione (CIRCSE)"@en ;
     prov:generatedAtTime "2024-10-17T22:23:33.444760"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q89883181> rdfs:label "CIRCSE"^^xsd:string .
 
 <https://sws.geonames.org/3173435> rdfs:label "Milan"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

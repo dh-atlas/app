@@ -6,18 +6,18 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729201133-9007797> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729201133-9007797> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Accademia di studi storici Aldo Moro"@it ;
     ns2:name "Accademia di studi storici Aldo Moro"@it ;
     ns2:url <https://www.accademiaaldomoro.org/> .
 
-<https://w3id.org/atlas/1729201133-9007797/> rdfs:label "Accademia di studi storici Aldo Moro"@it ;
-    ns1:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729201133-9007797/> rdfs:label "Accademia di studi storici Aldo Moro"@it ;
+    ns1:currentStatus "published"^^xsd:string ;
     ns2:name "Accademia di studi storici Aldo Moro"@it ;
     prov:generatedAtTime "2024-10-17T22:53:42.732161"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

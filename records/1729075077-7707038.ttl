@@ -6,24 +6,24 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729075077-7707038> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729075077-7707038> a foaf:Agent,
         schema:Person ;
     rdfs:label "Cristiano Lorenzi"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1729012784-159052> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1729012784-159052> ;
     ns1:identifier <https://orcid.org/0000-0001-9008-5287> ;
     ns1:name "Cristiano Lorenzi"@en ;
     ns1:sameAs <http://www.wikidata.org/entity/Q107274106> .
 
-<https://w3id.org/atlas/1729075077-7707038/> rdfs:label "Cristiano Lorenzi"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729075077-7707038/> rdfs:label "Cristiano Lorenzi"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Cristiano Lorenzi"@en ;
     prov:generatedAtTime "2024-10-17T22:30:54.518952"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q107274106> rdfs:label "Cristiano Lorenzi"^^xsd:string .
 
-<https://w3id.org/atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
+<https://w3id.org/dh-atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

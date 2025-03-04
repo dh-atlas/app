@@ -6,24 +6,24 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729175360-5990732> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729175360-5990732> a foaf:Agent,
         schema:Person ;
     rdfs:label "Cristiano Amendola"@en ;
-    ns1:affiliation <https://w3id.org/atlas/1729170068-2115734> ;
+    ns1:affiliation <https://w3id.org/dh-atlas/1729170068-2115734> ;
     ns1:identifier <https://orcid.org/0000-0001-9146-2224> ;
     ns1:name "Cristiano Amendola"@en ;
     ns1:sameAs <http://www.wikidata.org/entity/Q116254278> .
 
-<https://w3id.org/atlas/1729175360-5990732/> rdfs:label "Cristiano Amendola"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729175360-5990732/> rdfs:label "Cristiano Amendola"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Cristiano Amendola"@en ;
     prov:generatedAtTime "2024-10-17T22:41:14.144294"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q116254278> rdfs:label "Cristiano Amendola"^^xsd:string .
 
-<https://w3id.org/atlas/1729170068-2115734> rdfs:label "University of Naples Federico II"^^xsd:string .
+<https://w3id.org/dh-atlas/1729170068-2115734> rdfs:label "University of Naples Federico II"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

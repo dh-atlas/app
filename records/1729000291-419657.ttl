@@ -6,20 +6,20 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729000291-419657> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729000291-419657> a foaf:Agent,
         schema:Person ;
     rdfs:label "Paola Andriani"@en ;
     ns1:name "Paola Andriani"@en ;
     ns1:sameAs <http://www.wikidata.org/entity/Q107345632> .
 
-<https://w3id.org/atlas/1729000291-419657/> rdfs:label "Paola Andriani"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729000291-419657/> rdfs:label "Paola Andriani"@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Paola Andriani"@en ;
     prov:generatedAtTime "2024-10-17T22:10:59.221235"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q107345632> rdfs:label "Paola Andriani"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

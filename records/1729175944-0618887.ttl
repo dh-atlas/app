@@ -7,18 +7,18 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729175944-0618887> a schema:Dataset ;
+<https://w3id.org/dh-atlas/1729175944-0618887> a schema:Dataset ;
     rdfs:label "BUP Basilicata University Press - Digital Humanities "@en ;
     dcterms:type <http://purl.org/spar/fabio/Anthology> ;
     ns1:additionalType <http://purl.org/spar/fabio/Anthology> ;
     ns1:citation <https://doi.org/10.36181/digitalia-00042> ;
     ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    ns1:contributor <https://w3id.org/atlas/1729174015-556427>,
-        <https://w3id.org/atlas/1729175360-5990732>,
-        <https://w3id.org/atlas/1729175473-5923057>,
-        <https://w3id.org/atlas/1729175545-28137> ;
+    ns1:contributor <https://w3id.org/dh-atlas/1729174015-556427>,
+        <https://w3id.org/dh-atlas/1729175360-5990732>,
+        <https://w3id.org/dh-atlas/1729175473-5923057>,
+        <https://w3id.org/dh-atlas/1729175545-28137> ;
     ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
-    ns1:creator <https://w3id.org/atlas/1729031012-1601634> ;
+    ns1:creator <https://w3id.org/dh-atlas/1729031012-1601634> ;
     ns1:datePublished "2020-01-01"^^xsd:date ;
     ns1:description "BUP - Digital Humanities offers a digital library collecting several scholarly editions and other resources. Texts are encoded in TEI/XML and include detailed bibliographic metadata. The digital critical editions are TEI compliant, encoded in a very rich markup, and are published by means of the open source software EVT"@en ;
     ns1:identifier "https://portal.issn.org/resource/ISSN/2724-2072"@en ;
@@ -26,16 +26,16 @@
         <http://publications.europa.eu/resource/authority/language/ITA> ;
     ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/B19_CCBYNCSA40> ;
     ns1:name "BUP Basilicata University Press - Digital Humanities "@en ;
-    ns1:publisher <https://w3id.org/atlas/1729030617-8635733>,
-        <https://w3id.org/atlas/1729175638-1024349> ;
+    ns1:publisher <https://w3id.org/dh-atlas/1729030617-8635733>,
+        <https://w3id.org/dh-atlas/1729175638-1024349> ;
     ns1:url <https://web.unibas.it/bup/omp/index.php/bup/catalog/series/DH> .
 
-<https://w3id.org/atlas/1729175944-0618887/> rdfs:label "BUP Basilicata University Press - Digital Humanities "@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729175944-0618887/> rdfs:label "BUP Basilicata University Press - Digital Humanities "@en ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "BUP Basilicata University Press - Digital Humanities "@en ;
     prov:generatedAtTime "2024-10-17T14:49:21.453769"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS"^^xsd:string .
 
@@ -45,23 +45,23 @@
 
 <http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
 
-<https://w3id.org/atlas/1729030617-8635733> rdfs:label "University of Basilicata"^^xsd:string .
+<https://w3id.org/dh-atlas/1729030617-8635733> rdfs:label "University of Basilicata"^^xsd:string .
 
-<https://w3id.org/atlas/1729031012-1601634> rdfs:label "Fulvio Delle Donne"^^xsd:string .
+<https://w3id.org/dh-atlas/1729031012-1601634> rdfs:label "Fulvio Delle Donne"^^xsd:string .
 
-<https://w3id.org/atlas/1729174015-556427> rdfs:label "Alessandro Di Muro"^^xsd:string .
+<https://w3id.org/dh-atlas/1729174015-556427> rdfs:label "Alessandro Di Muro"^^xsd:string .
 
-<https://w3id.org/atlas/1729175360-5990732> rdfs:label "Cristiano Amendola"^^xsd:string .
+<https://w3id.org/dh-atlas/1729175360-5990732> rdfs:label "Cristiano Amendola"^^xsd:string .
 
-<https://w3id.org/atlas/1729175473-5923057> rdfs:label "Teofilo De Angelis"^^xsd:string .
+<https://w3id.org/dh-atlas/1729175473-5923057> rdfs:label "Teofilo De Angelis"^^xsd:string .
 
-<https://w3id.org/atlas/1729175545-28137> rdfs:label "Martina Pavoni"^^xsd:string .
+<https://w3id.org/dh-atlas/1729175545-28137> rdfs:label "Martina Pavoni"^^xsd:string .
 
-<https://w3id.org/atlas/1729175638-1024349> rdfs:label "Basilicata University Press"^^xsd:string .
+<https://w3id.org/dh-atlas/1729175638-1024349> rdfs:label "Basilicata University Press"^^xsd:string .
 
 <https://w3id.org/italia/controlled-vocabulary/licences/B19_CCBYNCSA40> rdfs:label "Creative Commons Attribution–NonCommercial - ShareAlike 4.0 International"^^xsd:string .
 
 <http://purl.org/spar/fabio/Anthology> rdfs:label "Text Collection"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

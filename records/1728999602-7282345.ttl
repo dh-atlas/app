@@ -6,7 +6,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1728999602-7282345> a foaf:Agent,
+<https://w3id.org/dh-atlas/1728999602-7282345> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Consiglio Nazionale delle Ricerche"@it ;
     ns1:identifier "https://ror.org/04zaypm56"@en ;
@@ -16,15 +16,16 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q902464> ;
     ns1:url <https://www.cnr.it/> .
 
-<https://w3id.org/atlas/1728999602-7282345/> rdfs:label "Consiglio Nazionale delle Ricerche"@it ;
-    ns2:currentStatus "not modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1728999602-7282345/> rdfs:label "Consiglio Nazionale delle Ricerche"@it ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Consiglio Nazionale delle Ricerche"@it ;
     prov:generatedAtTime "2024-10-15T13:42:22.452631"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q902464> rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
 
 <https://sws.geonames.org/3169070> rdfs:label "Rome"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

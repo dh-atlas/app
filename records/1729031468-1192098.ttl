@@ -6,23 +6,23 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729031468-1192098> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729031468-1192098> a foaf:Agent,
         schema:Person ;
     rdfs:label "Francesco Stella"@en ;
-    ns2:affiliation <https://w3id.org/atlas/1729029916-5401604> ;
+    ns2:affiliation <https://w3id.org/dh-atlas/1729029916-5401604> ;
     ns2:name "Francesco Stella"@en ;
     ns2:sameAs <http://www.wikidata.org/entity/Q62729151> .
 
-<https://w3id.org/atlas/1729031468-1192098/> rdfs:label "Francesco Stella"@en ;
-    ns1:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729031468-1192098/> rdfs:label "Francesco Stella"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
     ns2:name "Francesco Stella"@en ;
     prov:generatedAtTime "2024-10-17T22:20:43.204372"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q62729151> rdfs:label "Francesco Stella"^^xsd:string .
 
-<https://w3id.org/atlas/1729029916-5401604> rdfs:label "University of Siena"^^xsd:string .
+<https://w3id.org/dh-atlas/1729029916-5401604> rdfs:label "University of Siena"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

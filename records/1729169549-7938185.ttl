@@ -6,23 +6,23 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1729169549-7938185> a foaf:Agent,
+<https://w3id.org/dh-atlas/1729169549-7938185> a foaf:Agent,
         schema:Person ;
     rdfs:label "Paolo Mastandrea"@en ;
-    ns2:affiliation <https://w3id.org/atlas/1729012784-159052> ;
+    ns2:affiliation <https://w3id.org/dh-atlas/1729012784-159052> ;
     ns2:name "Paolo Mastandrea"@en ;
     ns2:sameAs <http://www.wikidata.org/entity/Q55949940> .
 
-<https://w3id.org/atlas/1729169549-7938185/> rdfs:label "Paolo Mastandrea"@en ;
-    ns1:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1729169549-7938185/> rdfs:label "Paolo Mastandrea"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
     ns2:name "Paolo Mastandrea"@en ;
     prov:generatedAtTime "2024-10-17T22:37:16.929789"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://www.wikidata.org/entity/Q55949940> rdfs:label "Paolo Mastandrea"^^xsd:string .
 
-<https://w3id.org/atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
+<https://w3id.org/dh-atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 

@@ -8,13 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/atlas/1728943937-3007112> a schema:Dataset ;
+<https://w3id.org/dh-atlas/1728943937-3007112> a schema:Dataset ;
     rdfs:label "Zeri Photo Archive RDF Dataset"@en ;
     dcterms:conformsTo <https://cidoc-crm.org/>,
         <https://www.w3.org/RDF/> ;
-    dcterms:references <https://w3id.org/atlas/1728948052-580608>,
-        <https://w3id.org/atlas/1728948736-9982028>,
-        <https://w3id.org/atlas/1728948776-872414> ;
+    dcterms:references <https://w3id.org/dh-atlas/1728948052-580608>,
+        <https://w3id.org/dh-atlas/1728948736-9982028>,
+        <https://w3id.org/dh-atlas/1728948776-872414> ;
     dcterms:type <http://purl.org/spar/fabio/DataFile> ;
     ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-INF-01>,
         <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ART-02>,
@@ -23,11 +23,11 @@
     ns1:citation <https://doi.org/10.1145/3051487> ;
     ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
     ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
-    ns1:creator <https://w3id.org/atlas/1728943969-854>,
-        <https://w3id.org/atlas/1728943988-693>,
-        <https://w3id.org/atlas/1728944010-053>,
-        <https://w3id.org/atlas/1728944026-501>,
-        <https://w3id.org/atlas/1728944045-966> ;
+    ns1:creator <https://w3id.org/dh-atlas/1728943969-854>,
+        <https://w3id.org/dh-atlas/1728943988-693>,
+        <https://w3id.org/dh-atlas/1728944010-053>,
+        <https://w3id.org/dh-atlas/1728944026-501>,
+        <https://w3id.org/dh-atlas/1728944045-966> ;
     ns1:datePublished "2016-05-20"^^xsd:date ;
     ns1:description "The Zeri Photo Archive RDF dataset represents a considerable subset of data already available at Zeri Catalog web site and discoverable through the Europeana Portal, mostly regarding works of Modern Art (15th-16th centuries): about 19.000 works of art and more than 30.000 photographs depicting such works are accurately described by means of like 10 million of RDF triples."@en ;
     ns1:distribution <https://amsacta.unibo.it/id/eprint/5497/2/dump-complete-13-1-2017.zip> ;
@@ -39,24 +39,24 @@
     ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
     ns1:name "Zeri Photo Archive RDF Dataset"@en ;
-    ns1:producer <https://w3id.org/atlas/1728984604-1499374> ;
-    ns1:publisher <https://w3id.org/atlas/1728944565-1916842> ;
+    ns1:producer <https://w3id.org/dh-atlas/1728984604-1499374> ;
+    ns1:publisher <https://w3id.org/dh-atlas/1728944565-1916842> ;
     ns1:url <https://w3id.org/zericatalog> ;
     ns1:usageInfo <https://w3id.org/zericatalog> ;
     ns1:version "1.1"@en ;
     ns2:methodology <https://vocabs.dariah.eu/tadirah/disseminating>,
         <https://vocabs.dariah.eu/tadirah/linkedOpenData>,
         <https://vocabs.dariah.eu/tadirah/modeling> ;
-    ns2:servedBy <https://w3id.org/atlas/1728987090-372862>,
-        <https://w3id.org/atlas/1728988048-7197032>,
-        <https://w3id.org/atlas/1728993673-7262628> .
+    ns2:servedBy <https://w3id.org/dh-atlas/1728987090-372862>,
+        <https://w3id.org/dh-atlas/1728988048-7197032>,
+        <https://w3id.org/dh-atlas/1728993673-7262628> .
 
-<https://w3id.org/atlas/1728943937-3007112/> rdfs:label "Zeri Photo Archive RDF Dataset"@en ;
-    ns3:currentStatus "modified"^^xsd:string ;
+<https://w3id.org/dh-atlas/1728943937-3007112/> rdfs:label "Zeri Photo Archive RDF Dataset"@en ;
+    ns3:currentStatus "published"^^xsd:string ;
     ns1:name "Zeri Photo Archive RDF Dataset"@en ;
     prov:generatedAtTime "2024-10-17T16:15:58.268010"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/atlas/anonymous> .
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
 
 <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
 
@@ -82,31 +82,31 @@
 
 <https://vocabs.dariah.eu/tadirah/modeling> skos:prefLabel "Modeling - TADIRAH"^^xsd:string .
 
-<https://w3id.org/atlas/1728943969-854> rdfs:label "Marilena Daquino"^^xsd:string .
+<https://w3id.org/dh-atlas/1728943969-854> rdfs:label "Marilena Daquino"^^xsd:string .
 
-<https://w3id.org/atlas/1728943988-693> rdfs:label "Francesca Tomasi"^^xsd:string .
+<https://w3id.org/dh-atlas/1728943988-693> rdfs:label "Francesca Tomasi"^^xsd:string .
 
-<https://w3id.org/atlas/1728944010-053> rdfs:label "Silvio Peroni"^^xsd:string .
+<https://w3id.org/dh-atlas/1728944010-053> rdfs:label "Silvio Peroni"^^xsd:string .
 
-<https://w3id.org/atlas/1728944026-501> rdfs:label "Fabio Vitali"^^xsd:string .
+<https://w3id.org/dh-atlas/1728944026-501> rdfs:label "Fabio Vitali"^^xsd:string .
 
-<https://w3id.org/atlas/1728944045-966> rdfs:label "Francesca Mambelli"^^xsd:string .
+<https://w3id.org/dh-atlas/1728944045-966> rdfs:label "Francesca Mambelli"^^xsd:string .
 
-<https://w3id.org/atlas/1728944565-1916842> rdfs:label "Centro Risorse per la Ricerca (CRR-MM)"^^xsd:string .
+<https://w3id.org/dh-atlas/1728944565-1916842> rdfs:label "Centro Risorse per la Ricerca (CRR-MM)"^^xsd:string .
 
-<https://w3id.org/atlas/1728948052-580608> rdfs:label "Semantic Publishing and Referencing Ontologies (SPAR)"^^xsd:string .
+<https://w3id.org/dh-atlas/1728948052-580608> rdfs:label "Semantic Publishing and Referencing Ontologies (SPAR)"^^xsd:string .
 
-<https://w3id.org/atlas/1728948736-9982028> rdfs:label "CIDOC Conceptual Reference Model (CRM)"^^xsd:string .
+<https://w3id.org/dh-atlas/1728948736-9982028> rdfs:label "CIDOC Conceptual Reference Model (CRM)"^^xsd:string .
 
-<https://w3id.org/atlas/1728948776-872414> rdfs:label "Historical Context Ontology (HiCO)"^^xsd:string .
+<https://w3id.org/dh-atlas/1728948776-872414> rdfs:label "Historical Context Ontology (HiCO)"^^xsd:string .
 
-<https://w3id.org/atlas/1728984604-1499374> rdfs:label "Zeri & LODE"^^xsd:string .
+<https://w3id.org/dh-atlas/1728984604-1499374> rdfs:label "Zeri & LODE"^^xsd:string .
 
-<https://w3id.org/atlas/1728987090-372862> rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL endpoint"^^xsd:string .
+<https://w3id.org/dh-atlas/1728987090-372862> rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL endpoint"^^xsd:string .
 
-<https://w3id.org/atlas/1728988048-7197032> rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL query interface"^^xsd:string .
+<https://w3id.org/dh-atlas/1728988048-7197032> rdfs:label "Zeri Photo Archive RDF Dataset - SPARQL query interface"^^xsd:string .
 
-<https://w3id.org/atlas/1728993673-7262628> rdfs:label "Zeri Photo Archive RDF Dataset - LodView RDF Browser"^^xsd:string .
+<https://w3id.org/dh-atlas/1728993673-7262628> rdfs:label "Zeri Photo Archive RDF Dataset - LodView RDF Browser"^^xsd:string .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-INF-01> skos:prefLabel "Informatics - ACADEMIC FIELD"^^xsd:string .
 
@@ -118,5 +118,5 @@
 
 <http://purl.org/spar/fabio/DataFile> rdfs:label "Linked Open Data"^^xsd:string .
 
-<https://w3id.org/atlas/anonymous> rdfs:label "anonymous" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 
