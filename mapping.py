@@ -16,6 +16,7 @@ import conf , queries
 import utils as u
 
 u.reload_config()
+os.umask(0o002)  # Allows group write access (rw-rw-r--)
 
 # NAMESPACES
 WD = Namespace("http://www.wikidata.org/entity/")
@@ -52,7 +53,7 @@ def getValuesFromFields(fieldPrefix, recordData, fields=None, field_type=None):
 				results.add(( values[0].strip(), urllib.parse.unquote(values[1]) )) # (id, label)
 		else:
 			# TODO: check the if statement
-			if key.startswith(fieldPrefix+'_') and ',' in value: # multiple values from text box (entities) and URL 
+			if key.startswith(fieldPrefix+'_') and ',' in value: # multiple values from text box (entities) and URL
 				values = value.split(',', 1)
 				results.add(( values[0].strip(), urllib.parse.unquote(values[1]) )) # (id, label)
 			elif key.startswith(fieldPrefix+'-') and ',' in value: # multiple values from checkbox group
@@ -98,8 +99,8 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 	if tpl_form:
 		with open(tpl_form) as config_form:
 			fields = json.load(config_form)
-	else: 
-		#should this be deleted? 
+	else:
+		#should this be deleted?
 		with open(conf.myform) as config_form:
 			fields = json.load(config_form)
 
@@ -115,8 +116,8 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 
 	# exclude hidden input fields and unrequired ones (based on subclasses)
 	fields = [
-		input_field for input_field in fields 
-		if input_field["hidden"] == "False" and 
+		input_field for input_field in fields
+		if input_field["hidden"] == "False" and
 		(input_field["restricted"] == [] or any(resource_subclass in resource_subclass_input_values for resource_subclass in input_field["restricted"]) )
 	]
 
@@ -178,7 +179,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 			value = getValuesFromFields(field['id'], recordData, fields=fields) if 'value' in field and field['value'] in ['URI','Place','Researcher'] \
 					else getValuesFromFields(field['id'], recordData, field_type=field['value']) if 'value' in field and field['value'] == 'URL' \
 					else getLiteralValuesFromFields(field['id'], recordData) if 'value' in field and field['value'] == 'Literal' else recordData[field['id']]
-			
+
 			# TODO disambiguate as URI, value
 			if field["disambiguate"] == 'True': # use the key 'disambiguate' as title of the graph
 				print("VALUE:", value)
@@ -227,7 +228,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 						val = val.replace('\n','').replace('\r','')
 						if val != "":
 							wd.add(( URIRef(base+graph_name), URIRef(field['property']), Literal(val, lang=lang)))
-			
+
 			# now get also the entities associated to textareas (record creation)
 			if field['type'] == 'Textarea':
 				nlp_keywords = getValuesFromFields(field['id'], recordData, field_type='Textarea')
@@ -235,7 +236,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 					entityURI = getRightURIbase(entity[0])
 					wd.add(( URIRef(base+graph_name), SCHEMA.keywords, URIRef(entityURI) ))
 					wd.add(( URIRef( entityURI ), RDFS.label, Literal(entity[1].lstrip().rstrip(), datatype="http://www.w3.org/2001/XMLSchema#string") ))
-		
+
 		# KNOWLEDGE EXTRACTION
 		elif field['type']=="KnowledgeExtractor" and "extractions-dict" in recordData:
 			# process extraction parameters
@@ -270,7 +271,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 					encoded_query = urllib.parse.quote(query)
 					extraction_url = conf.sparqlAnythingEndpoint+"?query="+encoded_query
 
-				
+
 				# process extracted keywords
 				print("EXTRACT:", "keyword_"+recordID+"-"+field['id']+"-"+extraction_num)
 				extracted_keywords = [item for item in recordData if item.startswith("keyword_"+recordID+"-"+field['id']+"-"+extraction_num)]
@@ -289,15 +290,15 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 					wd_extraction.add(( URIRef(base+extraction_graph_name), PROV.used, URIRef(extraction_url)))
 					if extraction_access_keys:
 						wd_extraction.add(( URIRef(base+extraction_graph_name), RDFS.comment, Literal(extraction_access_keys)))
-					
+
 					# store the extraction output
 					for keyword in extracted_keywords:
 						label = keyword.replace("keyword_"+recordID+"-"+field['id']+"-"+extraction_num+"_","")
 						wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDFS.label,  Literal(label)))
-					
+
 					# save the extraction graph
 					wd_extraction.serialize(destination='records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl', format='ttl', encoding='utf-8')
-					server.update('load <file:///'+dir_path+'/records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl> into graph <'+base+extraction_graph_name+'/>')
+					server.update('load <file:///app/records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl> into graph <'+base+extraction_graph_name+'/>')
 		# SUBTEMPLATE
 		elif field['type']=="Subtemplate" and field['id'] in recordData:
 			if type(recordData[field['id']]) != type([]) and field['id']+"-subrecords" in recordData:
@@ -334,17 +335,17 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 
 	# DUMP TTL
 	wd.serialize(destination='records/'+recordID+'.ttl', format='ttl', encoding='utf-8')
+	os.chmod(dir_path+'/records/'+recordID+'.ttl', 0o664)
 
 	# UPLOAD TO TRIPLESTORE
-	server.update('load <file:///'+dir_path+'/records/'+recordID+'.ttl> into graph <'+base+graph_name+'/>')
-
+	server.update('load <file:///app/records/'+recordID+'.ttl> into graph <'+base+graph_name+'/>')
 	return 'records/'+recordID+'.ttl'
-	
+
 def process_new_subrecord(data, userID, stage, subrecord_id, supertemplate=None, allow_data_reuse=False):
 	# prepare a new dict to store data of subrecord-x
 	new_record_data = {'recordID': subrecord_id,}
 	label = 'No Label!'
-	
+
 	# retrieve the template path based on selected class
 	subrecord_class = data[subrecord_id+'-class']
 	with open(TEMPLATE_LIST) as templates:
@@ -406,7 +407,7 @@ def process_new_subrecord(data, userID, stage, subrecord_id, supertemplate=None,
 
 					# Label: disambiguate field
 					if subtemplate_field['disambiguate'] == "True":
-						main_lang_input_field = subfield_id+'_mainLang_'+subrecord_id 
+						main_lang_input_field = subfield_id+'_mainLang_'+subrecord_id
 						main_lang = data[main_lang_input_field] if main_lang_input_field in data else "No main lang"
 						label_input_field = subfield_id+"_"+main_lang+"_"+subrecord_id
 						label = data[label_input_field] if label_input_field in data else "No label"

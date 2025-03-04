@@ -452,7 +452,7 @@ class Index:
 		elif actions.action.startswith('createRecord'):
 			record = actions.action.split("createRecord",1)[1]
 			u.log_output('START NEW RECORD (LOGGED IN)', session['logged_in'], session['username'], record )
-			raise web.seeother(prefixLocal+'record-'+record)
+			raise web.seeother('https://projects.dharc.unibo.it/atlas/record-'+record)
 
 		# delete a record (but not the dump in /records folder)
 		elif actions.action.startswith('deleteRecord'):
@@ -600,7 +600,7 @@ class Record(object):
 		session['ip_address'] = str(web.ctx['ip'])
 		u.write_ip(str(datetime.datetime.now()), str(web.ctx['ip']), 'POST')
 		#block_user, limit = u.check_ip(str(web.ctx['ip']), str(datetime.datetime.now()) )
-		whereto = prefixLocal+'/' if user == 'anonymous' else prefixLocal+'welcome-1'
+		whereto = prefixLocal+'/atlas' if user == 'anonymous' else prefixLocal+'welcome-1'
 
 		# form validation (ask_class)
 		if not f.validates():

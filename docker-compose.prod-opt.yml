@@ -11,9 +11,11 @@ services:
     ports:
       - "8112:8080"
     #   - 8888:8080
+    stdin_open: true
+    tty: true 
     volumes:
       - blazegraph_data:/app/data
-      - blazegraph_records:/app/records
+      - /home/daquino/atlas/records:/app/records
       - blazegraph_vocabs:/app/vocabs
       # - .:/app
     restart: always
@@ -37,7 +39,7 @@ services:
     volumes:
       # - .:/app
       - blazegraph_data:/app/data
-      - blazegraph_records:/app/records
+      - /home/daquino/atlas/records:/app/records
       - blazegraph_vocabs:/app/vocabs
       - static_data:/app/static  # Share static files with nginx
       - templates:/app/templates
@@ -77,8 +79,7 @@ services:
       - static_data:/app/static
       - templates:/app/templates
       - blazegraph_data:/app/data
-      - blazegraph_data:/app/data
-      - blazegraph_records:/app/records
+      - /home/daquino/atlas/records:/app/records
       - blazegraph_vocabs:/app/vocabs
     ports:
       - "8115:80"
@@ -87,7 +88,6 @@ services:
     restart: unless-stopped
 volumes:
   blazegraph_data:
-  blazegraph_records:
   blazegraph_vocabs:
   static_data:
   templates:
