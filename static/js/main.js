@@ -1179,21 +1179,23 @@ function nlpText(searchterm) {
 
 // lookup when creating new records
 function checkPriorRecords(elem) {
-  $('.'+elem).keyup(function(e) {
+  $('.'+elem).off('keyup').on('keyup', function(e) {
 	  var q = $('.'+elem).val();
-    var classes = $(this).attr('class');
-    var expression =  /\(([^)]+)\)/i;
-    var regex = new RegExp(expression);
-    if (classes.match(regex)) {
-      var res_class = ' a <'+classes.match(regex)[1]+'> ; ';
-    } else {var res_class = ''};
-    var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s ?o "+inGraph+" where { ?s "+res_class+" rdfs:label ?o . ?o bds:search '"+q+"' .} LIMIT 5"
+    var classes = $(this).data('class').split("; ");
+    var res_class = '';
+
+    classes.forEach(function(cls) {
+      if (cls.trim() !== '') {
+        res_class += ' a <' + cls.trim() + '> ; ';
+      }
+    });
+    var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (sample(str(?o)) as ?label) "+inGraph+" where { ?s "+res_class+" rdfs:label ?o . ?o bds:search '"+q+"' .} GROUP BY ?s LIMIT 5"
     var encoded = encodeURIComponent(query);
 
-    var tooltip_save = '<span class="lookup-records" \
+    var tooltip_save = $('<span class="lookup-records" \
       data-toggle="popover" \
       data-container="body"\
-    ></span>';
+    ></span>');
 
     $.ajax({
   	    type: 'GET',
@@ -1202,10 +1204,10 @@ function checkPriorRecords(elem) {
   	    success: function(returnedJson) {
   			  if (!returnedJson.results.bindings.length) {
             $(".popover").remove();
-            $(".lookup-records").remove();  
+            tooltip_save.remove();  
     			} else {
             $(".popover").remove();
-            $(".lookup-records").remove();  
+            tooltip_save.remove();  
             let suggestRecords = "";
             for (i = 0; i < returnedJson.results.bindings.length; i++) {
 
@@ -1213,10 +1215,17 @@ function checkPriorRecords(elem) {
               var myUrl = returnedJson.results.bindings[i].s.value;
               if ( myUrl.substring(myUrl.length-1) != "/") {
                 var resID = myUrl.substr(myUrl.lastIndexOf('/') + 1)
-                suggestRecords += "<div class='wditem'><a class='blue orangeText' target='_blank' href='view-"+resID+"'><i class='fas fa-external-link-alt'></i></a> <a class='orangeText' data-id=" + returnedJson.results.bindings[i].s.value + "'>" + returnedJson.results.bindings[i].o.value + "</a></div>";
+                suggestRecords += "<div class='wditem'><a class='blue orangeText' target='_blank' href='view-"+resID+"'><i class='fas fa-external-link-alt'></i></a> <a class='orangeText' data-id=" + returnedJson.results.bindings[i].s.value + "'>" + returnedJson.results.bindings[i].label.value + "</a></div>";
               };
             };
+            
+            // prepend the content
+            var arrow = $('<div class="arrow"></div>');
             $('.'+elem).parent().prepend(tooltip_save);
+            $('.' + elem).parent().prepend(arrow);
+
+            // set the content of the popover
+            $('.' + elem).popover('dispose');
             $('.'+elem).popover({
               html: true,
               title: "<h4>We already have some resources that match with yours.</h4>",
@@ -1224,6 +1233,13 @@ function checkPriorRecords(elem) {
               placement: "bottom",
               container: 'body'
             }).popover('show');
+
+            // add popover close button
+            $('.popover').find('.popover-header').append('<span class="close-btn">&times;</span>');
+            $('.popover .close-btn').on('click', function() {
+              $('.popover').popover('dispose'); // Disattiva il popover
+            });
+
     			};
   	    }
   	});

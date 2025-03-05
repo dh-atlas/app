@@ -1945,12 +1945,12 @@ table.url-table i, table.extraction-table i {
 
 /* popovers */
 .popover {
-  max-height: 200px;
-  overflow-y: scroll;
+  overflow: visible;
   font-family: 'IBM Plex Sans', sans-serif;
   padding: 0 10px;
   z-index: 1000;
 }
+
 
 .popover-header {
   padding: 0rem .75rem !important;
@@ -1964,6 +1964,20 @@ table.url-table i, table.extraction-table i {
 .pop_item_title {
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+.popover .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.popover .close-btn:hover {
+  color: red;
 }
 
 .read_more {
