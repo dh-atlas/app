@@ -129,16 +129,13 @@ def get_LOV_labels(term, term_type=None):
 
 def get_LOV_namespace(term):
 	""" get prefixed name of a property"""
-	print("TERM:",term)
 	term, label = term, split_uri(term)
-	print("TERM2:",term, label)
 	lov_api = "https://lov.linkeddata.es/dataset/lov/api/v2/term/search?q="
 	label_en = "http://www.w3.org/2000/01/rdf-schema#label@en"
 	req = requests.get(lov_api+label+"&type=property")
 
 	if req.status_code == 200:
 		res = req.json()
-		print(res)
 		for result in res["results"]:
 			if result["uri"][0] in [term, term.replace("https","http")]:
 				prefixed_name = result["prefixedName"]
@@ -191,10 +188,8 @@ def fields_to_json(data, json_file, skos_file):
 			
 		if d["type"] in ["Subclass", "Dropdown", "Checkbox"]:
 			values = [d[value_key] for value_key in d if value_key.startswith("value")]
-			print("b",values)
 			d["value"] = "URI"
 			d["values"] = { urllib.parse.unquote(pair.split(",")[0]).strip():urllib.parse.unquote(pair.split(",")[1]).strip() for pair in values } if len(values) > 0 else {}
-			print("a:",d["values"])
 
 		# set subclasses
 		if d["type"] == "Subclass":
@@ -246,7 +241,7 @@ def fields_to_json(data, json_file, skos_file):
 		vocab_data = update_skos_vocabs(d, SKOS_VOCAB)
 		d['skosThesauri'] = vocab_data[0]
 		for idx in range(len(vocab_data[1])):
-			d['skos'+vocab_data[1][idx]] = d['skos'][idx] 
+			d['skos'+vocab_data[1][idx]] = d['skosThesauri'][idx] 
 
 		# imported subtemplates
 		d["import_subtemplate"] = [RESOURCE_TEMPLATES+field_key+".json" for field_key in d if field_key.startswith("template-")]
@@ -639,7 +634,6 @@ def get_query_templates(res_tpl):
 			field_thesauri = field['skosThesauri']
 			query_dict[field_id] = []
 			for thesaurus in field_thesauri:
-				print(query_dict[field_id])
 				if thesaurus in skos_file:
 					included_thesauri = query_dict[field_id]
 					included_thesauri.append({ thesaurus: skos_file[thesaurus] })

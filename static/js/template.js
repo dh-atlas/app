@@ -810,37 +810,43 @@ function add_skos_vocab(element) {
   
 function save_vocab(element) {
     // access the section containing the list of available vocabularies
-    var vocabs_section = $(element).parent().parent().children().eq(0).find(".col-md-8").eq(0);
+    var $blockField = $(element).closest(".block_field");
+    var $vocabsSection = $blockField.find(".skos_vocab_generator").eq(0).prev("section").find("section");
   
     // extract a label, a url, a query, and an endpoint to store a new vocab
-    var label = $('#vocabLabel').val();
-    var url = $('#vocabUrl').val();
-    var query = yasqe_to_hidden_field($(element).parent());
-    console.log(query)
+    var label = $blockField.find('#vocabLabel').val();
+    var url = $blockField.find('#vocabUrl').val();
+    var query = yasqe_to_hidden_field($(element), true);
     var endpoint = $('#vocabEndpoint').val();
+
     // combine the pieces of information together and check whether some info is missing
     var infoArray = [label, url, query, endpoint];
-    var infoTogether = infoArray.join("__"); 
-    if (check_input_form(infoArray)) {
-        return null
-    };
+    if (check_input_form(infoArray)) return null;
   
     // get the number of available vocabs (defined in template.html as a string)
-    var i = available_skos_vocabularies.split("//").length+1;
-    available_skos_vocabularies += "//" + label;
-    console.log(i);
+    var vocabCount = available_skos_vocabularies.split("//").length + 1;
+    available_skos_vocabularies += `//${label}`;
+
     // get the 'for' attribute of the label for the first vocab of the list (e.g.: "vocab6__1690443665556") 
     // to retrieve the id number of the field (e.g.: "1690443665556")
-    var temp_id_list = vocabs_section.find("label").eq((1)).attr('for').split("__");
-    var temp_id = temp_id_list[temp_id_list.length - 1];
+    var $firstLabel = $vocabsSection.find("label").eq(1);
+    var tempIdList = $firstLabel.attr('for')?.split("__") || [];
+    var tempId = tempIdList[tempIdList.length - 1] || "unknown";
+
     // get the index of the field in the template
-    var idx = parseInt(vocabs_section.find("label").eq((1)).attr('id'));
-    console.log(i, temp_id, idx);
+    var idx = parseInt($firstLabel.attr('id')) || 0;
+    console.log(vocabCount, tempId, idx);
   
     // generate a new checkbox to select the vocabulary and add it at the end of the list
-    var new_voc = "<label class='newVocab' for='vocab"+i+"__"+temp_id+"'>"+label.toUpperCase()+"<input type='checkbox' id='"+idx+"__vocab"+i+"__"+temp_id+"' name='"+idx+"__vocab"+i+"__"+temp_id+"' value='"+infoTogether+"' checked></label></br>";
-    var lastChild = vocabs_section.children().last();
-    lastChild.prev().after(new_voc);
+    var newVocab = `
+        <label class='newVocab' for='vocab${vocabCount}__${tempId}'>
+            ${label.toUpperCase()}
+            <input type='checkbox' id='${idx}__skos${vocabCount}__${tempId}' 
+                   name='${idx}__skos${vocabCount}__${tempId}' 
+                   value='${infoArray.join("__")}' checked>
+        </label><br>
+    `;
+    $vocabsSection.children().last().prev().after(newVocab);
   
     // delete the form
     $('.skos_vocab_generator').remove(); 
@@ -878,7 +884,7 @@ function yasqe_to_hidden_field(el,keep=false) {
         });
         value += '\n';
     });
-    if (keep===false){ yasqe_div.remove(); } else { yasqe_div.hide(); }
+    if (keep===false){ yasqe_div.remove(); }
     return value
 }
 
