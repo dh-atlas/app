@@ -3163,8 +3163,8 @@ h4.subrecord-title.closed-title {
 }
 
 /* extra */
-span > .material-icons, .fa-plus-circle, .fa-eye, .fa-trash, .fa-trash-alt, .fa-external-link-alt{color: var(--primary-color); cursor: pointer;}
-span > .material-icons {font-size: 1.5em;}
+.material-icons, .fa-plus-circle, .fa-eye, .fa-trash, .fa-trash-alt, .fa-external-link-alt{color: var(--primary-color);}
+.material-icons:hover, .fa-plus-circle:hover, .fa-eye:hover, .fa-trash:hover, .fa-trash-alt:hover, .fa-external-link-alt:hover{cursor: pointer !important;}
 .material-icons {font-size: 1em !important}
 .link_btn, .btn {white-space: nowrap; font-weight: 500;}
 .add_fields .link_btn {display: inline-block; margin-bottom: 8px}
