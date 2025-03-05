@@ -6,6 +6,10 @@ to create or modify explorative charts
 
 $(document).ready(function() {
 
+    // set the base URL for backend queries
+    let pageUrl = new URL(window.location.href);
+    let baseUrl = pageUrl.origin + pageUrl.pathname.substring(0, pageUrl.pathname.lastIndexOf('/'));
+
     // check section is in viewport (see window.on('scroll') below)
     function isElementInViewport(el) {
         var rect = el.getBoundingClientRect();
@@ -32,11 +36,11 @@ $(document).ready(function() {
     $(".counters").each(function() {
         var chartInfo = $(this).find("script[type='application/json']").html();
         var $currentCounter = $(this); 
-    
+
         // get data from the back-end api
         $.ajax({
             type: 'POST',
-            url: '/charts-visualization?action=getData',
+            url: baseUrl+'/charts-visualization?action=getData',
             data: chartInfo,
             contentType: 'application/json',
             dataType: 'json',
@@ -73,9 +77,11 @@ $(document).ready(function() {
     $(".chart-body").each(function() {
         var chartId = $(this).attr("id");
         var chartInfo = $("#"+chartId+"_data").html();
+        
+        // get data from the back-end api
         $.ajax({
             type: 'POST',
-            url: '/charts-visualization?action=getData',
+            url: baseUrl+'/charts-visualization?action=getData',
             data: chartInfo,
             contentType: 'application/json',
             dataType: 'json',

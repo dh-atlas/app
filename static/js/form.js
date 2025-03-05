@@ -1327,9 +1327,12 @@ function searchSkos(searchterm) {
 
                     // the string 'QUERY-TERM' inside the query must be replaced with the input value; special charachters must be checked 
                     var query = (obj[vocabulary_name].query).replace("QUERY-TERM", ("^" + $('#' + searchterm).val())).replace("&gt;", ">").replace("&lt;", "<").replace(/&quot;/g, '"');
+                    let url = new URL(window.location.href);
+                    let baseUrl = url.origin + url.pathname.substring(0, url.pathname.lastIndexOf('/'));
+
                     var request_parameters = {
                         type: 'GET',
-                        url: '/sparqlanything?action=searchentities&q=' + encodeURIComponent(query) + '&service=none'
+                        url: baseUrl+'/sparqlanything?action=searchentities&q=' + encodeURIComponent(query) + '&service=none'
                     }
                     const request = $.ajax(request_parameters);
 
@@ -1870,6 +1873,10 @@ function fileExtractionType(element) {
 
 // parse the static file 
 function parseFile(element) {
+    // get the URL to send the ajax query
+    let url = new URL(window.location.href);
+    let baseUrl = url.origin + url.pathname.substring(0, url.pathname.lastIndexOf('/'));
+
     var extractionBlockField = $(element).parent().parent();
     var fileUrl = extractionBlockField.find("#FileUrl").val();
     if (fileUrl !== "" && (fileUrl.endsWith(".xml") || fileUrl.endsWith(".csv") || fileUrl.endsWith(".json"))) {
@@ -1877,7 +1884,7 @@ function parseFile(element) {
         showLoadingPopup("We are parsing your file:", fileUrl);
         $.ajax({
             type: 'GET',
-            url: '/sparqlanything?action=searchclasses&q=' + encoded,
+            url: baseUrl+'/sparqlanything?action=searchclasses&q=' + encoded,
             success: function(resultsJsonObject) {
                 extractionBlockField.find(".manual-query").show();
                 parsedFile = resultsJsonObject;
@@ -2119,10 +2126,14 @@ function callSparqlanything(objectItem, id, recordId, type) {
         encoded = q.includes("SERVICE") ? encodeURIComponent(q) : encodeURIComponent(q.replace("{", "{ SERVICE <" + endpoint + "> {").replace("}", "}}"));
     };
 
+    // get the URL to send the query
+    let url = new URL(window.location.href);
+    let baseUrl = url.origin + url.pathname.substring(0, url.pathname.lastIndexOf('/'));
+
     // send the query to the back-end API and parse the results
     $.ajax({
         type: 'GET',
-        url: '/sparqlanything?action=searchentities&q=' + encoded + '&service=' + service,
+        url: baseUrl+'/sparqlanything?action=searchentities&q=' + encoded + '&service=' + service,
         success: function(resultsJsonObject) {
             // show results inside a table
             var bindings = showExtractionResult(resultsJsonObject,type,id,recordId);
