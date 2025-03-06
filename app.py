@@ -45,7 +45,7 @@ NER_IT = spacy.load("it_core_news_sm")
 
 # ROUTING
 
-prefix = ''
+prefix = 'https://projects.dharc.unibo.it/atlas/'
 prefixLocal = prefix # REPLACE IF IN SUBFOLDER
 urls = (
 	prefix + '/', 'Login',
