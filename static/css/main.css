@@ -478,7 +478,7 @@ article p {
   display: inline-block;
   margin: 0 auto;
   padding: 0px 0.2em;
-  font-size: 8vw;
+  font-size: 7vw;
   color: white;
   border: solid 0.5vw white;
   vertical-align: top;
@@ -487,10 +487,11 @@ article p {
 
 .homepage h1 {
   color: white;
-  font-size: 8vw;
+  font-size: 6.4vw;
   line-height: 1.2em;
   padding: 1em;
   font-weight: 300;
+  white-space: preserve;
 }
 
 .homepage h2,

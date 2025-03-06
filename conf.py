@@ -16,7 +16,9 @@ author_email = ""
 token = ""
 author = ""
 gitClientSecret = ""
-myPayoff = "The ATLAS of Italian Digital Humanities"
+myPayoff = """The Atlas of Digital
+Humanities Research on
+the Italian Cultural Heritage"""
 sparqlAnythingEndpoint = "http://sparqlanything:3000/sparql.anything"
 repo_name = ""
 gitClientID = ""
