@@ -448,8 +448,10 @@ $(document).ready(function() {
       $(this).parent().append(wdImgIcon);
     } else if ($(this).attr('href').startsWith('https://sws.geonames.org/')) {
       $(this).parent().append(geoImg);
-    } else if ($(this).attr('href').startsWith('http://www.viaf.org/viaf/')) {
+    } else if ($(this).attr('href').startsWith('http://viaf.org/viaf/')) {
       $(this).parent().append(viafImgIcon);
+    } else if ($(this).attr('href').startsWith('https://orcid.org/')) {
+      $(this).parent().append(orcidImgIcon);
     }
   })
   // show related resources in "term" page

@@ -58,7 +58,16 @@ $(document).ready(function() {
     // TEMPLATE SELECTION
     $("select.template-select").closest(".row").children("section").first().css({'padding': '1em 10em 0em 0em'});
     $("select.template-select").closest(".row").next(".buttonsSection").css({'padding-left': '0'});
+
+    // scroll to save button on Template Selection
+    $("select.template-select").on("change", function() {
+        var buttonOffset = $("input#save_record").offset().top;
+        $('html, body').animate({
+            scrollTop: buttonOffset - 500
+        }, 800);
+    })
     
+
     // SCROLL TO TOP
     if ($('#scrollToTop').length > 0) {
         var scrollToTop = $('#scrollToTop');
@@ -459,7 +468,7 @@ function searchOrcid(searchterm) {
                     var familyName = returnedJson["expanded-result"][i]["family-names"];
                     var affiliations = returnedJson["expanded-result"][i]["institution-name"];
                     console.log(affiliations)
-                    var item = "<div class='wditem'><a class='blue orangeText' target='_blank' href='https://orcid.org/"+orcid+"'>"+orcidImgIcon+"</a> <a class='blue' data-id='"+orcid+"'>"+givenName+" "+familyName+"</a>";
+                    var item = "<div class='wditem'><a class='blue orangeText' target='_blank' href='https://orcid.org/"+orcid+"'>"+orcidImgIcon+"</a> <a class='blue' data-id='"+orcid+"'>"+givenName+" "+familyName+" ("+orcid+")</a>";
                     if (affiliations.length) {
                         item += " - " + affiliations.join("; ");
                     }
@@ -472,8 +481,7 @@ function searchOrcid(searchterm) {
                     $(this).bind('click', function (e) {
                         e.preventDefault();
                         var orcid = this.getAttribute('data-id');
-                        var label = $(this).text();
-                        $('#' + searchterm).after("<span class='tag " + orcid + "' data-input='" + searchterm + "' data-id='" + orcid + "'>" + label + "</span><input type='hidden' class='hiddenInput " + orcid + "' name='" + searchterm + "_" + orcid + "' value=\"orcid" + orcid + "," + encodeURIComponent(label) + "\"/>");
+                        $('#' + searchterm).after("<span class='tag " + orcid + "' data-input='" + searchterm + "' data-id='" + orcid + "'>" + orcid + "</span><input type='hidden' class='hiddenInput " + orcid + "' name='" + searchterm + "_" + orcid + "' value=\"orcid" + orcid + "," + orcid + "\"/>");
                         $("#searchresult").hide();
                         $('#' + searchterm).val('');
                     });

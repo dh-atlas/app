@@ -309,7 +309,7 @@ def getData(graph,res_template):
 		if field['type'] != 'KnowledgeExtractor':
 			pattern = ""
 			if len(properties_dict[field['property']]) > 1:
-				pattern = disambiguate_pattern(properties_dict[field['property']],fields,field['id']) 
+				pattern = disambiguate_pattern(properties_dict[field['property']],fields,field['id'])
 			if pattern == "":
 				pattern = 'OPTIONAL {?subject <'+field['property']+'> ?'+field['id']+'. FILTER (lang(?'+field['id']+')!="")} ' if field['value'] == 'Literal' \
 					else 'OPTIONAL {?subject <'+field['property']+'> ?'+field['id']+'. FILTER (isURI(?'+field['id']+')) FILTER NOT EXISTS {?'+field['id']+' rdfs:label ?'+field['id']+'_label } FILTER NOT EXISTS { ?'+field['id']+' skos:prefLabel ?'+field['id']+'_label } } ' if field['value'] == 'URL' \
@@ -358,6 +358,8 @@ def getData(graph,res_template):
 						uri = v['value'].rsplit('/', 1)[-1]
 					elif 'viaf' in v['value']:
 						uri = "viaf"+v['value'].rsplit('/', 1)[-1] # Keep "viaf" at the beginning: needed in mapping.py (getRightURIbase)
+					elif 'orcid' in v['value']:
+						uri = "orcid"+v['value'].rsplit('/', 1)[-1] # Keep "orcid" at the beginning: needed in mapping.py (getRightURIbase)
 					else:
 						uri = v['value']
 					label = [value['value'] for key,value in result.items() if key == k+'_label'][0]

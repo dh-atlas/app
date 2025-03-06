@@ -50,7 +50,16 @@ $var main_lang = main_lang
 										<p property="$properties[field][0]">
 											<link property="sameAs" url="http://www.viaf.org/viaf/$uri_value[0][4:]"/>
 											<a class="viafEntity" target='_blank'\
-											 href="term-$uri_value[0][4:]">
+											 href="term-viaf$uri_value[0][4:]">
+												$uri_value[1]
+											</a>
+										</p>
+									$elif uri_value[0].startswith("orcid"):
+										<!-- orcid uri -->
+										<p property="$properties[field][0]">
+											<link property="sameAs" url="https://orcid.org/$uri_value[0][5:]"/>
+											<a class="orcidEntity" target='_blank'\
+											 href="term-orcid$uri_value[0][5:]">
 												$uri_value[1]
 											</a>
 										</p>

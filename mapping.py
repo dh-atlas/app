@@ -20,7 +20,7 @@ os.umask(0o002)  # Allows group write access (rw-rw-r--)
 
 # NAMESPACES
 WD = Namespace("http://www.wikidata.org/entity/")
-VIAF = Namespace("http://www.viaf.org/viaf/")
+VIAF = Namespace("http://viaf.org/viaf/")
 WDP = Namespace("http://www.wikidata.org/wiki/Property:")
 OL = Namespace("http://openlibrary.org/works/")
 ULAN = Namespace("http://vocab.getty.edu/ulan/")
