@@ -296,8 +296,11 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 						label = keyword.replace("keyword_"+recordID+"-"+field['id']+"-"+extraction_num+"_","")
 						wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDFS.label,  Literal(label)))
 
-					# save the extraction graph
+					# DUMP TTL
 					wd_extraction.serialize(destination='records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl', format='ttl', encoding='utf-8')
+					os.chmod(dir_path+'/records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl', 0o664)
+					
+					# UPLOAD TO TRIPLESTORE
 					server.update('load <file:///app/records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl> into graph <'+base+extraction_graph_name+'/>')
 		# SUBTEMPLATE
 		elif field['type']=="Subtemplate" and field['id'] in recordData:
