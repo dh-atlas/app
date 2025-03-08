@@ -673,6 +673,18 @@ article p {
   width: 25%;
 }
 
+#selectTemplateClassModal {
+  display: none;
+}
+
+#selectTemplateClass button {
+  border: none;
+  outline: none;
+  display: inline-block;
+  margin: 10px 10px 0px 0px !important;
+  position: relative;
+}
+
 #selectTemplateClassModal .modal-input {
   width: 86%;
   margin-left: 7%;
@@ -707,15 +719,6 @@ article p {
   color: var(--primary-color);
   font-size: 0.9em;
   cursor: pointer;
-}
-
-#selectTemplateClass button {
-  border: none;
-  outline: none;
-  display: inline-block;
-  margin: 10px 10px 0px 0px !important;
-  left: 60%;
-  position: relative;
 }
 
 #uri-container {
@@ -781,6 +784,10 @@ th {
 #recordsList td:nth-of-type(4),
 #recordsList td:nth-of-type(5) {
   font-size: 0.9em !important;
+}
+
+#templatesList i {
+  padding: 0;
 }
 
 .res_class_small {
@@ -1952,7 +1959,6 @@ table.url-table i, table.extraction-table i {
   z-index: 1000;
 }
 
-
 .popover-header {
   padding: 0rem .75rem !important;
   background-color: white !important;
@@ -2172,103 +2178,6 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
   opacity: 70%;
 }
 
-#selectTemplateClassModal {
-  display: none;
-}
-
-#selectTemplateClassModal.open-modal {
-  display: block;
-  position: fixed;
-  background-color: #F5F6FA !important;
-  z-index: 1022;
-  width: 600px;
-  height: 550px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  overflow-y: auto !important; 
-  position: fixed;
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
-#selectTemplateClassModal > form > section:first-of-type {
-  width: 100%;
-  padding: 15px 10px 10px 7%;
-  border-bottom: 3px solid var(--primary-color);
-  color: var(--primary-color);
-  font-size: 22px;
-}
-
-#selectTemplateClassModal .modal-input {
-  width: 86%;
-  margin-left: 7%;
-  background-color: inherit;
-}
-
-#selectTemplateClassModal .modal-input .label {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: black;
-  border-bottom:  none !important;
-  height: auto !important;
-}
-
-#selectTemplateClassModal .modal-input .comment {
-  font-size: 14px;
-}
-
-#selectTemplateClassModal .modal-input input {
-  margin-top: 10px;
-}
-
-#selectTemplateClassModal .modal-input:is(:nth-of-type(2), :nth-of-type(3)) { 
-  margin-top: 40px;
-}
-
-#selectTemplateClassModal .fa-times {
-  position: absolute;
-  right: 7%;
-  margin-top: 6px;
-  color: var(--primary-color);
-  font-size: 0.9em;
-  cursor: pointer;
-}
-
-#selectTemplateClass button {
-  border: none;
-  outline: none;
-  display: inline-block;
-  margin: 10px 10px 0px 0px !important;
-  left: 60%;
-  position: relative;
-}
-
-#uri-container {
-  height: 100px;
-  max-height: 100px;
-  overflow-y: auto;
-  border-bottom: 1pt #acacac solid;
-}
-
-#uri-container::before {
-  content: 'press return to add a URI';
-  font-size: 0.7em;
-  color: grey;
-  display: block;
-}
-
-button#showTemplates {
-  border: none;
-  outline: none;
-}
-
-#updateTemplate, #addChart {
-  margin-right: 1%;
-}
-
 .homeheading a.link_btn {
   margin-right: 1% !important;
 }
@@ -2379,6 +2288,11 @@ button#showTemplates {
     text-align: left;
   }
 
+  .filters > section > button {
+    display: -webkit-box;
+    text-align: left;
+  }
+
   .homeheadingtext {
     padding: 10% !important;
   }
@@ -2458,7 +2372,7 @@ button#showTemplates {
 
 
 
-  /* backend: force table columns to behave like rows */
+  /* backend: force Records' table columns to behave like rows */
 
   tr,
   td {
@@ -2496,28 +2410,53 @@ button#showTemplates {
     white-space: nowrap;
   }
 
-  td:nth-of-type(1):before {
+  #recordsList td:nth-of-type(1):before {
     content: "RECORD";
   }
 
-  td:nth-of-type(2):before {
+  #recordsList td:nth-of-type(2):before {
     content: "CREATED BY";
   }
 
-  td:nth-of-type(3):before {
+  #recordsList td:nth-of-type(3):before {
     content: "MODIFIED BY";
   }
 
-  td:nth-of-type(4):before {
+  #recordsList td:nth-of-type(4):before {
     content: "LAST MODIFIED";
   }
 
-  td:nth-of-type(5):before {
+  #recordsList td:nth-of-type(5):before {
     content: "STAGE";
   }
 
-  td:nth-of-type(6):before {
+  #recordsList td:nth-of-type(6):before {
     content: "ACTIONS";
+  }
+
+  /* backend: force Templates' table columns to behave like rows */
+
+  #showTemplateClassModal, #selectTemplateClassModal {
+    max-width: 90%;
+  }
+
+  #templatesList td:nth-of-type(1):before {
+    content: "TEMPLATES";
+  }
+
+  #templatesList td:nth-of-type(2):before {
+    content: "ACTIONS";
+    margin-top: 12px;
+  }
+
+  #templatesList td:nth-of-type(2) form {
+    display: flex;
+    gap: 10px
+  }
+
+  #templatesList .tip {
+    display: inline-block;
+    width: auto;
   }
 
   /* documentation */
@@ -2563,9 +2502,9 @@ button#showTemplates {
     padding: 1em;
   }
 
-  #create_form button {
+  /* #create_form button {
     margin-left: 33%;
-  }
+  } */
 
   .intro_explore * {
     padding-left: 0.5rem !important;
@@ -2597,10 +2536,6 @@ button#showTemplates {
     margin-top: 5% !important;
   }
 
-  .label {
-    padding-left: 5% !important;
-
-  }
   .suggested-vocabs-div {
     margin-left: -5px;
     margin-top: 0px !important;

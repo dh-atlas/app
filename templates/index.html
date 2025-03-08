@@ -34,15 +34,9 @@ $var main_lang = main_lang
 			<button class="btn btn-dark" name="action" value="createRecord$varIDpage" type="submit">Create a new record</button>
 		</form>
 		<button onclick="window.location.href='setup'" title="setup" class="menu_btn">Setup <i class="fas fa-cogs"></i></button>
-		<section class="btn-group">
-			<button id="showTemplateClassButton" title="form template" class="menu_btn">Templates <i class="fas fa-angle-down"></i></button>
-		</section>
-		<section class="btn-group">
-			<button id="selectTemplateClassButton" title="create a new template" class="menu_btn">New template <i class="fas fa-plus"></i></button>
-		</section>
-		<section class="btn-group">
-			<button onclick="window.location.href='charts-template'" title="visualization template" class="menu_btn">Charts <i class="fas fa-chart-area"></i></button>
-		</section>
+		<button id="showTemplateClassButton" title="form template" class="menu_btn">Templates <i class="fas fa-angle-down"></i></button>
+		<button id="selectTemplateClassButton" title="create a new template" class="menu_btn">New template <i class="fas fa-plus"></i></button>
+		<button onclick="window.location.href='charts-template'" title="visualization template" class="menu_btn">Charts <i class="fas fa-chart-area"></i></button>
 	</section>
 </section>
 
@@ -64,8 +58,11 @@ $var main_lang = main_lang
 						$ t_name = t['short_name']
 						$ t_class_str = "; ".join(t['type'])
 						<tr>
-							<td><span class="tip" data-toggle="tooltip" data-placement="bottom" title="$t_class_str"><i class="fas fa-info-circle"></i></span>
-								<span>$t["name"]</span></td>
+							<td>
+								<span>
+									<span class="tip" data-toggle="tooltip" data-placement="bottom" title="$t_class_str"><i class="fas fa-info-circle"></i></span>
+									<span>$t["name"]</span></td>
+								</span>
 							<td>
 								<form method="POST">
 									<button class="btn btn-dark delete" name="action" value="deleteTemplate$t_name" type="submit" title="modify" value="template-$t['short_name']" type="submit" title="delete"><i class="far fa-trash-alt"></i></button>
@@ -91,7 +88,7 @@ $var main_lang = main_lang
 			<input type="text" name="class_uri" value="" placeholder="e.g.: crm:E22_Man-made-object">
 			<section id="uri-container"></section>
 		</section>
-		<section class="modal-input-button">
+		<section class="modal-input">
 			<input type="hidden" class="hiddenInput" name="action" value="createTemplate">
 			<button class="btn btn-dark" name="action" value="createTemplate" type="submit">Create</button>
 			<button class="btn btn-dark discard" value="cancelTemplate" type="submit">Cancel</button>
