@@ -1318,12 +1318,12 @@ table.url-table i, table.extraction-table i {
 
 .chart-heading {
   display: block;
-  max-width: 45%;
   margin: 0 2em 0 1em;
 }
 
 .chart-heading.full-width {
   max-width: 100% !important;
+  flex: 100% !important;
   width: 100%;
 }
 
@@ -1362,8 +1362,8 @@ table.url-table i, table.extraction-table i {
   margin: 5em 0px;
 }
 
-.counters > p, .stats-block > p {
-  font-size: 1.4em;
+.stats-block > section > p {
+  font-size: 1.2em;
 }
 
 .section-fade {

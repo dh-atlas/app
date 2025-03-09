@@ -29,7 +29,7 @@ $var main_lang = main_lang
 					<p data-id="$chart['id']"></p>
 				</section>
 				$for counter in chart["counters"]:
-					<section class="counterBox col-md-2 col-sm-5">
+					<section class="counterBox col-lg-2 col-md-5 col-sm-5">
 						<p class="counterNum"> </p>
 						<p class="counterLabel">$counter["title"]</p>
 					</section>
@@ -47,11 +47,11 @@ $var main_lang = main_lang
 			$ info = chart["info"]
 			$ info_data = info + "_data"
 			<section class="row stats-block section-fade">
-				<section class="chart-heading $heading_class">
+				<section class="col-lg-5 col-md-12 col-sm-12 chart-heading $heading_class">
 					<h2>$chart["title"]</h2>
 					<p data-id="$chart['id']"></p>
 				</section>
-				<section class="col-md-6 col-sm-12">
+				<section class="col-lg-5 col-md-12 col-sm-12">
 					<div id="$info" class="chart-body map-chart" style="height:55vh">
 					</div>
 				</section>
@@ -67,11 +67,11 @@ $var main_lang = main_lang
 		$elif chart["type"] == "chart":
 			$ info = chart["info"]
 			<section class="row stats-block section-fade">
-				<section class="chart-heading $heading_class">
+				<section class="col-lg-5 col-md-12 col-sm-12 chart-heading $heading_class">
 					<h2>$chart["title"]</h2>
 					<p data-id="$chart['id']"></p>
 				</section>
-				<div id="$info[0]" class="chart-body col-md-6 col-sm-12" style="height:55vh"></div>
+				<div id="$info[0]" class="chart-body col-lg-5 col-md-12 col-sm-12" style="height:55vh"></div>
 			</section>
 			<script id="$info[0]_data" type="application/json">$:chart["json"]</script>
 			<script>
