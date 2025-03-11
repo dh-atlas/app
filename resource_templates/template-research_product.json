@@ -95,7 +95,7 @@
   "mandatory": "False",
   "hidden": "False",
   "subclass": "False",
-  "searchWikidata": "True",
+  "searchWikidata": "False",
   "searchGeonames": "False",
   "searchSkos": "False",
   "url": "False",
