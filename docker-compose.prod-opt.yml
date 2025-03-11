@@ -94,3 +94,4 @@ volumes:
   blazegraph_vocabs:
   static_data:
   templates:
+  resource_templates:
