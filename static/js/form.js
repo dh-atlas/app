@@ -56,7 +56,7 @@ $(document).ready(function() {
         
 
     // TEMPLATE SELECTION
-    $("select.template-select").closest(".row").children("section").first().css({'padding': '1em 10em 0em 0em'});
+    $("select.template-select").closest(".row").children("section").first().addClass('template-select-section');
     $("select.template-select").closest(".row").next(".buttonsSection").css({'padding-left': '0'});
 
     // scroll to save button on Template Selection
@@ -248,7 +248,7 @@ function checkMandatoryFields(subrecordButton=false){
 //////////////////////
 
 function setFormDocumentation() {
-    $(".documentation").removeClass('col-md-7').addClass('col-md-12 col-sm-4');
+    $(".documentation").removeClass('col-md-7').addClass('col-12');
     $(".documentation").find("section.articleSection").each(function() {
         $(this).find(".articleSubsection").hide();
         $(this).after($("<hr>"));

@@ -18,7 +18,7 @@ $var main_lang = main_lang
 <!-- Form and Tips -->
 <section class="corners row set_template_field">
     <!-- Charts generator Form -->
-	<section class="col-md-8 col-lg-8 col-sm-8">
+	<section class="col-lg-8 col-md-12 col-sm-12">
         <form id="chartForm" class="col-md-12 col-sm-12 col-lg-12" action="" method="POST">
             <section class="row">
                 <section class="sortable homeheading col-md-12 col-lg-12 col-sm-12">
@@ -187,7 +187,7 @@ $var main_lang = main_lang
                                     <!-- LEGEND -->
                                     <section class="row">
 										$ legend = "checked=checked" if "legend" in chart and chart["legend"] == "True" else ""
-										<label class="left col-md-11 col-sm-6" for="legend__$id">Show legend</label>
+										<label class="left col-11" for="legend__$id">Show legend</label>
 										<input $legend type="checkbox" id="legend__$id" name="legend__$id">
 									</section>
                                     <!-- SCRIPT -->
@@ -218,7 +218,7 @@ $var main_lang = main_lang
         </form>
     </section>
     <!-- Tips -->
-    <section class="homeheading col-md-4 col-sm-4 col-lg-4">
+    <section class="homeheading col-md-12 col-sm-12 col-lg-4">
 		<p class="caption">Tips</p>
         <p>You can create your charts template for data visualization in few easy steps! Select the visualization type you prefer and provide some information to shape your data.<br>Thanks to the preview function, you can check your visualizations in advance. Additionally, you can customize your captions by using HTML tags (e.g.:<code>&lt;a href=""&gt;&lt;/a&gt;</code> for links).</p>
 		<h5>Counter</h5>

@@ -264,20 +264,41 @@ $(document).ready(function() {
 
 	// Show documentation in the right sidebar
 	if ($('header').hasClass('needDoc')) {
-		var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-		showRight = document.getElementById( 'showRight' ),
-    tableOfContents = document.getElementById( 'table-of-contents' ),
-    formSection = document.getElementById( 'form-section' );
-		body = document.body;
-		showRight.onclick = function() {
-      classie.toggle(menuRight, 'cbp-spmenu-open');
-      var isOpen = $(menuRight).hasClass('cbp-spmenu-open');
-      $(showRight).html(isOpen ? '<i class="fas fa-times"></i> help' : '<i class="far fa-lightbulb"></i> help');
+		var menuRight = $('#cbp-spmenu-s2'),
+        showRight = $('#showRight'),
+        tableOfContents = $('#table-of-contents'),
+        formSection = $('#form-section'),
+        body = $('body');
+
+    // update help button position
+    function updateButtonPosition() {
+      showRight.hide();
+      setTimeout(function () {
+        let rect = menuRight[0].getBoundingClientRect();
+        showRight.css({ left: rect.left - 39 + 'px' });
+        showRight.show();
+      }, 300);
+    }
+
+		showRight.on('click', function () {
+      $('main').toggleClass('documentation-modal');
+      menuRight.toggleClass('cbp-spmenu-open');
+      var isOpen = menuRight.hasClass('cbp-spmenu-open');
+      showRight.html(isOpen ? '<i class="fas fa-times"></i> help' : '<i class="far fa-lightbulb"></i> help');
+
+      // opening animation
       var distance = isOpen ? '-=25.5vw' : '+=25.5vw';
-      $(tableOfContents).animate({ left: distance }, 300);
-      $(formSection).animate({ left: distance }, 300);
-      $(showRight).animate({ left: (isOpen ? '-=365px' : '+=365px') }, 50);
-    };
+      tableOfContents.animate({ left: distance }, 300);
+      formSection.animate({ left: distance }, 300);
+
+      if (isOpen) {
+        updateButtonPosition();
+        $(window).on('resize scroll', updateButtonPosition);
+      } else {
+        showRight.css({ left: 'auto' });
+        $(window).off('resize scroll', updateButtonPosition);
+      }
+    });
 	};
 
   // hide lookup when creating a record

@@ -231,7 +231,7 @@ function addVisualization(visualizationType, changeIndex=null) {
     </section>";
 
     var chartLegend = "<section class='row'>\
-        <label class='left col-md-11 col-sm-6' for='legend__"+newIndex+"'>Show legend</label>\
+        <label class='left col-11' for='legend__"+newIndex+"'>Show legend</label>\
         <input type='checkbox' id='legend__"+newIndex+"' name='legend__"+newIndex+"'>\
     </section>";
 

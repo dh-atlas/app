@@ -267,17 +267,17 @@ function add_field(field, res_type, backend_file=null) {
     </section>"
 
     var field_browse = "<section class='row'>\
-        <label class='col-md-11 col-sm-6' for='browse__"+temp_id+"'>Use this value as a filter in <em>Explore</em> page</label>\
+        <label class='left col-11' for='browse__"+temp_id+"'>Use this value as a filter in <em>Explore</em> page</label>\
         <input type='checkbox' id='browse__"+temp_id+"' name='browse__"+temp_id+"'>\
     </section>";
 
     var field_mandatory = "<section class='row'>\
-        <label class='col-md-11 col-sm-6' for='mandatory__"+temp_id+"'>Make this value mandatory</label>\
+        <label class='left col-11' for='mandatory__"+temp_id+"'>Make this value mandatory</label>\
         <input type='checkbox' id='mandatory__"+temp_id+"' name='mandatory__"+temp_id+"'>\
     </section>";
 
     var field_hide = "<section class='row'>\
-        <label class='col-md-11 col-sm-6' for='hidden__"+temp_id+"'>Hide this field from the front-end view</label>\
+        <label class='left col-11' for='hidden__"+temp_id+"'>Hide this field from the front-end view</label>\
         <input type='checkbox' id='hidden__"+temp_id+"' name='hidden__"+temp_id+"' onclick='hide_field(this)'>\
     </section>";
 
@@ -453,12 +453,12 @@ function change_fields(sel) {
 // if value == literal add disambiguate checkbox
 function add_disambiguate(temp_id, el) {
     var field_disambiguate = "<section class='row'>\
-      <label class='left col-md-11 col-sm-6' for='disambiguate__"+temp_id+"'>Use this value as primary label (e.g. book title)</label>\
+      <label class='left col-11' for='disambiguate__"+temp_id+"'>Use this value as primary label (e.g. book title)</label>\
       <input class='disambiguate' onClick='disable_other_cb(this)' type='checkbox' id='disambiguate__"+temp_id+"' name='disambiguate__"+temp_id+"'>\
       </section>";
   
     var field_browse = "<section class='row'>\
-      <label class='col-md-11 col-sm-6' for='browse__"+temp_id+"'>Use this value as a filter in <em>Explore</em> page</label>\
+      <label class='left col-11' for='browse__"+temp_id+"'>Use this value as a filter in <em>Explore</em> page</label>\
       <input type='checkbox' id='browse__"+temp_id+"' name='browse__"+temp_id+"'>\
     </section>";
   

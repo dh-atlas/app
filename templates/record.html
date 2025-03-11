@@ -31,14 +31,14 @@ $if alert == False:
 		</section>
 		$ form_section_id = ""
 		$if template:
-			<section class="col-md-3 col-lg-3 col-sm-3 homeheading" id="table-of-contents">
+			<section class="col-md-3 col-lg-3 col-sm-12 homeheading" id="table-of-contents">
 				<section>
 					<p class="caption">Table of contents</p>
 					<ul class="fields-list"></ul>
 				</section>
 			</section>
 			$ form_section_id += 'id=form-section'
-		<section class="col-md-8 col-lg-8 col-sm-8 homeheading" $form_section_id>
+		<section class="col-md-8 col-lg-8 col-sm-12 homeheading" $form_section_id>
 			<form id="recordForm" class="col-md-12 col-sm-12 col-lg-12" action="" method="POST">
 				<input type='hidden' name='recordID' value=$:pageID>
 				$if template:

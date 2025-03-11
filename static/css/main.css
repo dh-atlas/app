@@ -227,7 +227,7 @@ nav {
 }
 
 nav a {
-  margin-right: 2em;
+  margin-right: 0.6em;
   color: var(--primary-color) !important;
   text-decoration: none !important;
 }
@@ -285,7 +285,7 @@ footer img {
 }
 
 #dropdownMenuLink {
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 #create_form_menu {
@@ -333,7 +333,7 @@ footer img {
 }
 
 .searchmenu input {
-  width: 90% !important;
+  /* width: 90% !important; */
   padding-left: 5px;
   background-color: white !important;
 }
@@ -812,6 +812,10 @@ th {
 }
 
 /* create record */
+.template-select-section {
+  padding: 1em 10em 0em 0em !important;
+}
+
 #recordForm .row > section, #modifyForm .row > section {
   padding: 2em 2em 0em 4em
 }
@@ -891,13 +895,13 @@ th {
   margin-right: calc(8.5% - 15px + 0.1em);
 }
 
-#templateForm .buttonsSection {
+#templateForm .buttonsSection, #chartForm .buttonsSection {
   margin-bottom: 10em !important;
 }
 
 .buttonsSection {
   margin: 0 !important;
-  padding-left: 5.2%;
+  padding-left: 4em;
   padding-top: 3% !important;
 }
 
@@ -1007,7 +1011,7 @@ span[class^='tag Q']:hover {
 
 .hide-container {
   position: absolute;
-  right: 18.5%;
+  right: 5em;
   display: flex;
   align-items: center;
   margin-top: -31px;
@@ -1343,7 +1347,7 @@ table.url-table i, table.extraction-table i {
 }
 
 .documentation .articleTitle {
-  font-size: 3em;
+  font-size: clamp(2em, 3.2vw, 3em);
 }
 
 .articleSubtitle,
@@ -1776,6 +1780,7 @@ table.url-table i, table.extraction-table i {
   font-weight: bold;
   border-radius: 5px 0 0 5px;
   border: none;
+  z-index: 2;
 }
 
 #showRight:hover, #scrollToTop:hover {
@@ -2111,6 +2116,7 @@ select-selected.select-arrow-active:after {
 }
 
 .block_field label.inner-label {
+  text-align: left;
   font-weight: 600;
   color: grey;
 }
@@ -2188,7 +2194,7 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
 
 .homeheading .fields-list {
   list-style-type: none;
-  padding-left: 1%;
+  padding-left: 0%;
 }
 
 .homeheading .fields-list li {
@@ -2209,24 +2215,68 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
   to { padding-left: 0.5em; color: var(--primary-color); font-weight: 500;}  
 }
 
+@media screen and (min-width: 760px) and (max-width:992px) {
+    .navbar-expand-lg .navbar-toggler {
+      display: none;
+    }
+
+    #navbarSupportedContent {
+      display: flex;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+  /* documentation */
+  .documentation .articleTitle {
+    padding-top: 1em !important;
+    font-size: 2em !important;
+  }
+
+  .cbp-spmenu-vertical {
+    width: 70%;
+    border-left: solid 1px;
+  }
+
+  .cbp-spmenu-left {
+    left: -70%;
+  }
+
+  .cbp-spmenu-right {
+    right: -70%;
+  }
+
+  .cbp-spmenu-push-toright {
+    left: -70%;
+  }
+
+  .cbp-spmenu-push-toleft {
+    left: -70%;
+  }
+
+  .documentation-modal {
+    position: relative;
+    z-index: 0;
+  }
+  
+  .documentation-modal::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
 
 @media screen and (min-width: 320px) and (max-width: 760px) {
 
   /* menu */
   .logo_header:before {
     content: 'Home ';
-  }
-
-
-
-  .input_or_select {
-    padding-left: 2px !important;
-  }
-
-
-
-  #showRight {
-    top: 30%;
   }
 
   .biblio {
@@ -2321,14 +2371,12 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
     padding-right: 2% !important;
   }
 
-  .tip {
-    display: block;
+  .homeheading#form-section {
+    padding: 0% !important;
   }
 
-  .label {
-    padding-left: 0;
-    margin-bottom: 5%;
-
+  .tip {
+    display: block;
   }
 
   .homeheading h2 {
@@ -2368,8 +2416,6 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
     margin-left: -2px;
     margin-top: 0px !important;
   }
-
-
 
 
   /* backend: force Records' table columns to behave like rows */
@@ -2459,35 +2505,21 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
     width: auto;
   }
 
-  /* documentation */
-  .documentation {
-    margin-top: 8em;
-  }
-
-  .cbp-spmenu-vertical {
-    width: 70%;
-    border-left: solid 1px;
-  }
-
-  .cbp-spmenu-left {
-    left: -70%;
-  }
-
-  .cbp-spmenu-right {
-    right: -70%;
-  }
-
-  .cbp-spmenu-push-toright {
-    left: -70%;
-  }
-
-  .cbp-spmenu-push-toleft {
-    left: -70%;
-  }
-
   /* form */
   form .homeheading h2 {
     display: none;
+  }
+
+  .template-select-section {
+    padding: 1em 0em 0em 0em !important;
+  }
+
+  #recordForm > .row, #modifyForm > .row {  
+    margin-left: 20px;
+  }
+
+  #recordForm .row > section, #modifyForm .row > section {
+    padding: 0 !important;
   }
 
   #lookup {
@@ -2514,27 +2546,47 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
     height: 100px;
   }
 
-  input.following_checkbox {
-    margin-left: 0 !important;
+  /* template */
+  .inner-label {
+    text-align: right !important;
+    margin-right: 0 !important;
   }
 
+  #chartForm ul, #templateForm ul, #chartForm ul label, #templateForm ul label  {
+    padding-right: 0px !important;
+    text-align: right !important;
+  }
 
+  .set_template_field .homeheading, .set_template_field .homeheadingtext {
+    padding-top: 2em;
+    padding-left: 6% !important;
+    padding-right: 2% !important;
+  }
+
+  #chartForm .row, #templateForm .row {
+    text-align: right;
+  } 
+
+  #chartForm .center-checkbox, #chartForm .center-checkbox label {
+    display: block;
+  }
+
+  #chartForm .center-checkbox input[type="checkbox"] {
+    right: 0;
+  }
+
+  .hide-container {
+    right: 6%;
+    margin-top: -100px;
+  }
+
+  #templateForm .buttonsSection, #chartForm .buttonsSection {
+    margin-bottom: 3em !important;
+  }
 
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
-  input[type='text'] {
-    margin-top: 10%;
-  }
-
-  .buttonsSection {
-    padding-left: 10% !important;
-  }
-
-  .custom-select {
-    margin-top: 5% !important;
-  }
 
   .suggested-vocabs-div {
     margin-left: -5px;
@@ -2552,7 +2604,7 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
   position: fixed;
   top:0%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Colore scuro dell'overlay */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .modal-previewMM img,
 .modal-previewMM video, 
@@ -3159,8 +3211,8 @@ li.col-md-12 {
 }
 
 li.col-md-12 label, .inner-label {
-  text-align: left !important;
-  padding-left: 0 !important;
+  text-align: left;
+  padding-left: 0;
 }
 
 .yasqe-max {
