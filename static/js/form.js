@@ -606,6 +606,7 @@ function searchCatalogueByClass(searchterm,fieldId,singleValue) {
     var resource_class = $('#'+searchterm).attr('data-class');
     var resource_classes = resource_class.split(';').map(cls => cls.trim()).filter(cls => cls !== "");
     var class_triples = resource_classes.map(cls => `?s a <${cls}> .`).join(" ");
+    console.log(resource_classes, class_triples)
     var filter_clause = `FILTER NOT EXISTS { ?s a ?otherClass . FILTER (?otherClass NOT IN (${resource_classes.map(cls => `<${cls}>`).join(", ")})) }`;
 
     // other ids
@@ -648,7 +649,7 @@ function searchCatalogueByClass(searchterm,fieldId,singleValue) {
 
         // prepare the query
         var query_term = $('#'+searchterm).val();
-        var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (STR(?o) as ?o_str) where { ?o bds:search '"+query_term+"*'. ?o bds:minRelevance '0.3'^^xsd:double . ?s rdfs:label ?o . "+class_triples+filter_clause+"}";
+        var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (sample(str(?o)) as ?o_str) where { ?o bds:search '"+query_term+"*'. ?o bds:minRelevance '0.3'^^xsd:double . ?s rdfs:label ?o . "+class_triples+filter_clause+"} group by ?s";
         var encoded = encodeURIComponent(query);
 
         // send the query request to the catalogue
@@ -692,6 +693,7 @@ function searchCatalogueByClass(searchterm,fieldId,singleValue) {
                         </button>\
                         </section>");
                         subformHeading.find('button.delete').on('click', function() {
+                            $(this).closest(".block_field").find(".add-span").show();
                             cancelSubrecord($(this).parent());
                         })
                         
@@ -745,8 +747,8 @@ function searchCatalogueByClass(searchterm,fieldId,singleValue) {
 
                 });
             },
-            error: function (error) {
-                reject(error);
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error('Error:', textStatus, errorThrown);
             }
         });
     })
