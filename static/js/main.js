@@ -324,7 +324,7 @@ $(document).ready(function() {
   $('input~.autocompletion-container .switch').on('click', function() {
     $(this).parent().prev('div').toggleClass('active');
     if (! $(this).find('input').prop('checked')) {
-      var inputField = $(this).parent().prev().prev('.searchWikidata');
+      var inputField = $(this).closest("section").find('input.searchWikidata');
       var id = inputField.attr('id');
       inputField.hide();
       inputField.after($('<span class="manual-entity" data-target="'+id+'">URI</span><input class="col-md-12 manual-entity" id="'+id+'_uri" name="'+id+'_uri" type="text" value="" data-class="'+inputField.attr('data-class')+'" placeholder="https://www.wikidata.org/wiki/Q123">'));
