@@ -1741,6 +1741,10 @@ table.url-table i, table.extraction-table i {
   font-weight: 500;
 }
 
+.accordion-group .hidden {
+  display: none !important;
+}
+
 /* height: 300px; border-bottom: solid 1px var(--primary-color);*/
 .showMore {
   margin: 5px;
