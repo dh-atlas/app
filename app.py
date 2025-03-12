@@ -32,16 +32,14 @@ web.config.debug = False
 WIKIDATA_SPARQL = "https://query.wikidata.org/bigdata/namespace/wdq/sparql"
 DEFAULT_FORM_JSON = conf.myform
 DEFAULT_ENDPOINT = "http://127.0.0.1:3000/blazegraph/sparql"
-IP_LOGS = "ip_logs.log"
+IP_LOGS = "data/ip_logs.log"
 RESOURCE_TEMPLATES = 'resource_templates/'
 TEMPLATE_LIST = RESOURCE_TEMPLATES+"template_list.json"
 ASK_CLASS = RESOURCE_TEMPLATES+"ask_class.json"
 SKOS_VOCAB = conf.skos_vocabularies
-USER_AGENT = conf.sparql_wrapper_user_agent
+USER_AGENT = "polifonia/1.0 (https://github.com/polifonia-project; polifonia@example.org)"
 NER_EN = spacy.load("en_core_web_sm")
 NER_IT = spacy.load("it_core_news_sm")
-#KNOWLEDGE_EXTRACTION = conf.knowledge_extraction
-
 
 # ROUTING
 
@@ -218,13 +216,13 @@ class Setup:
 			file.writelines('status= "modified"\n')
 			file.writelines('main_entity = "https://schema.org/CreativeWork"\n')
 			file.writelines('myform = "'+DEFAULT_FORM_JSON+'"\n')
-			file.writelines('myEndpoint = "'+DEFAULT_ENDPOINT+'"\n')
 			file.writelines('log_file = "'+IP_LOGS+'"\n')
 			file.writelines('wikidataEndpoint = "'+WIKIDATA_SPARQL+'"\n')
 			file.writelines('resource_templates = "'+RESOURCE_TEMPLATES+'"\n')
 			file.writelines('template_list = "'+TEMPLATE_LIST+'"\n')
 			file.writelines('ask_form = "'+RESOURCE_TEMPLATES+'ask_class.json"\n')
 			file.writelines('skos_vocabularies = "skos_vocabs.json"\n')
+			file.writelines('sparql_wrapper_user_agent = "'+USER_AGENT+'"\n')
 			file.writelines('charts = "charts.json"\n')
 			data = u.validate_setup(data)
 

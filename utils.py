@@ -285,7 +285,7 @@ def validate_setup(data):
 	""" Validate user input in setup page and check errors / missing values"""
 
 	data["myEndpoint"] = data["myEndpoint"] if "myEndpoint" in data and data["myEndpoint"].startswith("http") else "http://127.0.0.1:3000/blazegraph/sparql"
-	data["myPublicEndpoint"] = data["myPublicEndpoint"] if data["myPublicEndpoint"].startswith("http") else "http://127.0.0.1:3000/blazegraph/sparql"
+	data["myPublicEndpoint"] = data["myPublicEndpoint"] if data["myPublicEndpoint"].startswith("http") else "http://127.0.0.1:8080/bigdata/sparql"
 	data["sparqlAnythingEndpoint"] = data["sparqlAnythingEndpoint"] if data["sparqlAnythingEndpoint"].startswith("http") else "http://127.0.0.1:8081/sparql.anything"
 	data["base"] = data["base"] if data["base"].startswith("http") else "http://example.org/base/"
 	# data["main_entity"] = data["main_entity"] if data["main_entity"].startswith("http") else "http://example.org/entity/"
