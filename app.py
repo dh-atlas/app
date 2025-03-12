@@ -234,7 +234,7 @@ class Setup:
 			u.init_js_config(data)
 			u.reload_config()
 
-			raise web.seeother(prefixLocal+'/welcome-1')
+			raise web.seeother(prefixLocal+'welcome-1')
 
 
 class Template:
@@ -294,13 +294,13 @@ class Template:
 				# os.remove(template_path) # remove json file
 				u.updateTemplateList(res_name,None,remove=True) # update tpl list
 				u.update_ask_class(template_path, res_name,remove=True) # update ask_class
-				raise web.seeother(prefixLocal+'/welcome-1')
+				raise web.seeother(prefixLocal+'welcome-1')
 			else:
 				u.fields_to_json(data, template_path, SKOS_VOCAB) # save the json template
 				u.reload_config()
 				vocabs.import_vocabs()
 				u.update_ask_class(template_path, res_name) # modify ask_class json
-				raise web.seeother(prefixLocal+'/welcome-1')
+				raise web.seeother(prefixLocal+'welcome-1')
 
 # LOGIN : Homepage
 
@@ -538,7 +538,7 @@ class Index:
 			template_path = RESOURCE_TEMPLATES+'template-'+res_name+'.json'
 			u.updateTemplateList(res_name,None,remove=True) # update tpl list
 			u.update_ask_class(template_path, res_name,remove=True) # update ask_class
-			raise web.seeother(prefixLocal+'/welcome-1')
+			raise web.seeother(prefixLocal+'welcome-1')
 
 		# login or create a new record
 		else:
@@ -1466,7 +1466,7 @@ class ChartsTemplate(object):
 			u.delete_charts(conf.charts)
 		elif 'action' in data and 'updateTemplate' in data.action:
 			u.charts_to_json(conf.charts, data)
-		raise web.seeother(prefixLocal+'/welcome-1')
+		raise web.seeother(prefixLocal+'welcome-1')
 
 
 if __name__ == "__main__":

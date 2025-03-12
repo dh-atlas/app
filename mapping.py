@@ -200,7 +200,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 					elif field['calendar'] == 'Month':
 						wd.add((URIRef(base+graph_name), URIRef(field['property']), Literal(value, datatype=XSD.gYearMonth)))
 					elif field['calendar'] == 'Year':
-						value = value.replace(" A.C.", "") if "A.C." in value else "-"+value.replace(" B.C.", "") if "B.C." in value else value
+						value = value.replace(" A.D.", "") if "A.D." in value else "-"+value.replace(" B.C.", "") if "B.C." in value else value
 						value = value if value.startswith("-") else "0000" + value.zfill(4)
 						wd.add((URIRef(base+graph_name), URIRef(field['property']), Literal(value, datatype=XSD.gYear)))
 				elif field['type'] == 'Multimedia':

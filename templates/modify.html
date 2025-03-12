@@ -90,7 +90,7 @@ $if query_templates!=None:
 												$if graphdata[id][0].startswith("-"):
 													$ value =  graphdata[id][0][1:] + " B.C."
 												$else:
-													$ value = graphdata[id][0].lstrip("0") + " A.C."
+													$ value = graphdata[id][0].lstrip("0") + " A.D."
 												$:input.set_value(value)
 											$else:
 												$:input.set_value(graphdata[id][0])

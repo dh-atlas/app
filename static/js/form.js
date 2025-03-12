@@ -1247,11 +1247,11 @@ function searchYear(searchYear) {
 
         let options = []; // create an empty array to be populated with the 'year' options
         let inputYearString = $('#'+searchYear).val();
-        // remove 'A.C.' or 'B.C.', if present, when the user presses backspace
-        if (e.which == 8 && (inputYearString.includes("A.C") || inputYearString.includes("B.C"))) {
-            var expression = / [AB].C/i;
-            var regex = new RegExp(expression);
-            var newValue = inputYearString.replace(regex, "");
+        // remove 'A.D.' or 'B.C.', if present, when the user presses backspace
+        console.log(e.which)
+        if (e.which == 8 && (inputYearString.includes("A.D") || inputYearString.includes("B.C"))) {
+            var expression = /\b(A\.D|B\.C)\b/gi;
+            var newValue = inputYearString.replace(expression, "").trim();
             $('#'+searchYear).val(newValue);
             inputYearString = newValue;
         }
@@ -1270,7 +1270,7 @@ function searchYear(searchYear) {
                 options.push(inputYearString+parseInt(i));
             }
             }
-        // generate options after one digit 'd' has been inserted (available options: 'd A.C.', 'd B.C.')
+        // generate options after one digit 'd' has been inserted (available options: 'd A.D.', 'd B.C.')
         } else if (inputYearString.length == 1) {
             options.push(inputYearString);
         } else if (inputYearString.length > 4) {
@@ -1284,9 +1284,9 @@ function searchYear(searchYear) {
         if (inputYearString.length > 0) {
             $.each(options, function(i, item) {
             $("#searchresult").append("<div class='yearOptions'><a data-id='"+item+"B.C.'>"+item+" B.C.</a></div>")
-            $("#searchresult").append("<div class='yearOptions'><a data-id='"+item+"A.C.'>"+item+" A.C.</div>")
+            $("#searchresult").append("<div class='yearOptions'><a data-id='"+item+"A.D.'>"+item+" A.D.</div>")
 
-            $('a[data-id="'+ item +'B.C."], a[data-id="'+ item +'A.C."]').each(function () {
+            $('a[data-id="'+ item +'B.C."], a[data-id="'+ item +'A.D."]').each(function () {
                 $(this).bind('click', function (e) {
                 e.preventDefault();
                 $("#searchresult").hide();

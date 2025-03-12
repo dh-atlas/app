@@ -926,6 +926,10 @@ th {
   border-bottom: none;
 }
 
+.yearOptions a:hover {
+  cursor: pointer;
+}
+
 .blue {
   color: var(--primary-color) !important;
   cursor: pointer;

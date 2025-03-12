@@ -123,12 +123,13 @@ $(document).ready(function() {
             $(this).find("textarea").remove();
         });
 
-        var url = "/charts-visualization?action=preview";
+        let pageUrl = new URL(window.location.href);
+        let baseUrl = pageUrl.origin + pageUrl.pathname.substring(0, pageUrl.pathname.lastIndexOf('/'));
+        var url = baseUrl+"/charts-visualization?action=preview";
         blockField.find('input, select').each(function() {
             url += "&" + encodeURIComponent($(this).attr("name")).replace(/'/g, '%27') + "=" + encodeURIComponent($(this).val()).replace(/'/g, '%27');
         });
         blockField.find('textarea').each(function() {
-            console.log($(this).text());
             url += "&" + encodeURIComponent($(this).attr("name")).replace(/'/g, '%27') + "=" + encodeURIComponent($(this).text()).replace(/'/g, '%27');
         });
         var modal = $("<div class='modal-previewMM'><span class='previewTitle'>This is a preview of your data visualization<br></span><span class='closePreview'></span><iframe src='" + url + "'></div>")
@@ -640,6 +641,13 @@ function piechart(elid,data_x,data_y,legend,data,donut=false,semi=false) {
             });
         }
         
+        series.labels.template.setAll({
+            wrap: true,        // Forza l'andata a capo
+            maxWidth: 100,     // Imposta una larghezza massima
+            oversizedBehavior: "wrap"  // Altri valori: "truncate", "hide"
+        });
+          
+
         series.slices.template.setAll({
             cornerRadius: 5
         });
