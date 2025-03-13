@@ -491,8 +491,15 @@ $(document).ready(function() {
 
   // remove fields from form TEMPLATE
   $(".trash").click(function(e){
-     e.preventDefault();
-     $(this).parent().remove();
+    e.preventDefault();
+    $(this).closest(".block_field").remove();
+    if ($(this).closest(".block_field").find("select").eq(0).val() === "Subclass") {
+      $(this).closest(".block_field").find("[id*='addons'] label > .fa-trash-alt").each(function() {
+
+        // TODO: complete iteration
+        $(this).click();
+      });
+    }
   });
 
   // language tags handling
@@ -1501,6 +1508,7 @@ function filterBySubclass(btn) {
   // hide excluded alphabet filters
   if (subclassURI !== "") {
     tab.find(".list > a.resource_collapse[data-subclass]").each(function() {
+      console.log(subclassURI, $(this).data("subclass"))
       if (! $(this).data("subclass").split("; ").includes(subclassURI)) {
         $(this).parent().addClass("hidden");
         if ($(this).closest(".toBeWrapped").find(".list:not(.hidden)").length == 0) {

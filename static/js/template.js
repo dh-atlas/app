@@ -134,7 +134,7 @@ function add_field(field, res_type, backend_file=null) {
     const isSubclassSelected = $('select').filter(function() {
         return $(this).val() === "Subclass";
     }).length > 0;
-    if (isSubclassSelected) {
+    if (isSubclassSelected && field==="Subclass") {
         showErrorPopup("Subclass field already exists", "Only one Subclass field is allowed.");
         return false;
     }
@@ -373,7 +373,7 @@ function add_field(field, res_type, backend_file=null) {
             });
         }
 
-        $(this).parent().remove();
+        $(this).closest(".block_field").remove();
     });
 };
 

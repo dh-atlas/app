@@ -84,10 +84,9 @@ $(document).ready(function() {
             contentType: 'application/json',
             dataType: 'json',
             success: function(jsondata) {
-                console.log(jsondata);
                 chartInfo = JSON.parse(chartInfo);       
                 if (chartInfo["type"] == "map") {
-                    if (chartInfo["map-type"] === "common-map") {
+                    if (chartInfo["mapType"] === "common-map") {
                         map(chartId,jsondata)
                     } else {
                         mapDrillDown(chartId,jsondata)
@@ -189,9 +188,9 @@ function addVisualization(visualizationType, changeIndex=null) {
             <label class='col-md-3'>TYPE</label>\
             <select onchange='changeVisualization(this)' class='col-md-8 custom-select' name='type__"+newIndex+"' id='type__"+newIndex+"'>\
                 <option value='None'>Select a visualization type</option>\
-                <option value='counter'>Counter</option>\
-                <option value='chart'>Chart</option>\
-                <option value='map'>Map</option>\
+                <option value='counter' "+is_selected('counter',visualizationType)+">Counter</option>\
+                <option value='chart' "+is_selected('chart',visualizationType)+">Chart</option>\
+                <option value='map' "+is_selected('map',visualizationType)+">Map</option>\
             </select>\
         </section>\
         <section class='row'>\
@@ -330,29 +329,29 @@ function changeChart(select) {
         var chartAxes = "<section class='row "+newClass+"'>"+firstVar+"\
             <section class='col-md-3'>\
                 <label class='inner-label'>SPARQL variable</label>\
-                <input type='text' id='x-var__"+index+"' name='x-var__"+index+"'/>\
+                <input type='text' id='"+index+"__x-var__"+index+"' name='"+index+"__x-var__"+index+"'/>\
             </section>\
             <section class='col-md-3'>\
                 <label class='inner-label'>Display name</label>\
-                <input type='text' id='x-name__"+index+"' name='x-name__"+index+"'/>\
+                <input type='text' id='"+index+"__x-name__"+index+"' name='"+index+"__x-name__"+index+"'/>\
             </section>\
             <section class='col-md-2 center-checkbox'>\
                 <label class='inner-label'>Sort by</label>\
-                <input type='checkbox' id='x-sort__"+index+"' name='x-sort__"+index+"' onclick='sortChart('"+index+"')'/>\
+                <input type='checkbox' id='"+index+"__x-sort__"+index+"' name='"+index+"__x-sort__"+index+"' onclick='sortChart('"+index+"')'/>\
             </section>\
         </section>\
         <section class='row "+newClass+"'>"+secondVar+"\
             <section class='col-md-3'>\
                 <label class='inner-label'>SPARQL variable</label>\
-                <input type='text' id='y-var__"+index+"' name='y-var__"+index+"'/>\
+                <input type='text' id='"+index+"__y-var__"+index+"' name='"+index+"__y-var__"+index+"'/>\
             </section>\
             <section class='col-md-3'>\
                 <label class='inner-label'>Display name</label>\
-                <input type='text' id='y-name__"+index+"' name='y-name__"+index+"'/>\
+                <input type='text' id='"+index+"__y-name__"+index+"' name='"+index+"__y-name__"+index+"'/>\
             </section>\
             <section class='col-md-2 center-checkbox'>\
                 <label class='inner-label'>Sort by</label>\
-                <input type='checkbox' id='y-sort__"+index+"' name='y-sort__"+index+"' onclick='sortChart('"+index+"')'/>\
+                <input type='checkbox' id='"+index+"__y-sort__"+index+"' name='"+index+"__y-sort__"+index+"' onclick='sortChart('"+index+"')'/>\
             </section>\
         </section>";
 
@@ -559,12 +558,13 @@ function invertedBarchart(elid,data_x,data_y,data) {
             minorGridEnabled: true
         });
         yRenderer.labels.template.setAll({
-            centerY: am5.p50,
-            centerX: am5.p100,
-            paddingRight: 15,
-            oversizedBehavior: "truncate",
-            maxWidth: 180
+            oversizedBehavior: "wrap",
+            textAlign: "right",
+            centerX: am5.p100,    
+            maxWidth: 180,
+            fontSize: 14       
         });
+        
         yRenderer.grid.template.set("location", 1);
         
         var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
@@ -642,9 +642,10 @@ function piechart(elid,data_x,data_y,legend,data,donut=false,semi=false) {
         }
         
         series.labels.template.setAll({
-            wrap: true,        // Forza l'andata a capo
-            maxWidth: 100,     // Imposta una larghezza massima
-            oversizedBehavior: "wrap"  // Altri valori: "truncate", "hide"
+            wrap: true,    
+            maxWidth: 140,
+            oversizedBehavior: "wrap",
+            fontSize: 14
         });
           
 
