@@ -103,22 +103,23 @@ $(document).ready(function() {
             var checked = $(this).prop("checked");
             var selectedValue = $(this).val().split(",")[0];
             var subclass = selectedValue.trim();
-            var supertemplate = $(this).data("supertemplate"); // warning: check whether this must be changed to data("subrecord");
-            
-            console.log(checked,subclass)
+            var subform = $(this).data("subform");
+            var supertemplate = $(this).data("supertemplate");
+            var subformFilter = subform !== undefined ? "[data-subform='"+subform+"']" : "[data-supertemplate='"+supertemplate+"']";
+            console.log(checked,subformFilter,subclass)
 
             if (checked) {
                 // show required fields
-                $("[data-supertemplate='"+supertemplate+"'][data-subclass*='"+subclass+"']").closest("section.form_row.block_field").each(function() {
+                $(subformFilter+"[data-subclass*='"+subclass+"']").closest("section.form_row.block_field").each(function() {
                     $(this).fadeIn(400);
-                    var inputId = $(this).find("input, textarea, select").first().attr("id");
+                    var inputId = $(this).find("input, textarea, select, .imported_graphs").first().attr("id");
                     $("li[data-id='"+inputId+"'").fadeIn(400);
                 });
             } else {
                 // hide unrequired fields
-                $("[data-supertemplate='"+supertemplate+"'][data-subclass*='"+subclass+"']").closest("section.form_row.block_field").each(function() {
+                $(subformFilter+"[data-subclass*='"+subclass+"']").closest("section.form_row.block_field").each(function() {
                     $(this).fadeOut(400);
-                    var inputId = $(this).find("input, textarea, select").first().attr("id");
+                    var inputId = $(this).find("input, textarea, select, .imported_graphs").first().attr("id");
                     $("li[data-id='"+inputId+"']").fadeOut(400);
                 })
             }
@@ -169,7 +170,8 @@ $(document).ready(function() {
     $('.import-form > section.label.col-12').each(function() {
         var section = $(this);
         var itemTitle = $(this).find(".title").text();
-        var listItem = $("<li>"+itemTitle+"</li>");
+        var itemId = $(this).closest('.import-form').find('.imported_graphs').eq(0).attr('id');
+        var listItem = $("<li data-id='"+itemId+"'>"+itemTitle+"</li>");
         listItem.on('click', function() {
             $('html, body').animate({
                 scrollTop: section.parent().offset().top - 100
@@ -1525,6 +1527,7 @@ function addMultimedia(searchterm) {
 // generate extraction input field (during form loading)
 function generateExtractionField(res, recordId, subtemplate=null) {
     // retrieve field's description and name
+    const subtemplateClone = subtemplate;
     extractorsArray.forEach((element, index) => {
 
         if (element === res) {
@@ -1533,6 +1536,9 @@ function generateExtractionField(res, recordId, subtemplate=null) {
             var fieldName = extractorsNames[resIndex];
             var fieldDescription = extractorsPrepend[resIndex];
             var fieldService = extractorsService[resIndex];
+            var fieldSubclassRestriction = extractorsRestriction[resIndex];
+            var dataSupertemplate = subtemplateClone ? subtemplateClone : "None" // modify for Subtemplate!!
+            console.log(subtemplate,dataSupertemplate)
 
             // predefined HTML node (extraction input field)
             var extractionRow = $('<section class="form_row block_field import-form">\
@@ -1550,13 +1556,13 @@ function generateExtractionField(res, recordId, subtemplate=null) {
                 </thead>\
                 <tbody></tbody>\
                 </table>\
-                <span class="imported_graphs add-span" id="imported-graphs-'+resId+'" data-reconciliation="'+fieldService+'" onclick="generateExtractor(\'imported-graphs-'+resId+'\', \''+recordId+'\')"><i class="material-icons">playlist_add</i><span> Extract Entities</span></span>\
+                <span class="imported_graphs add-span" id="imported-graphs-'+resId+'" data-supertemplate="'+dataSupertemplate+'" data-reconciliation="'+fieldService+'" data-subclass="'+fieldSubclassRestriction+'" onclick="generateExtractor(\'imported-graphs-'+resId+'\', \''+recordId+'\')"><i class="material-icons">playlist_add</i><span> Extract Entities</span></span>\
             </section>\
             </section>');
             console.log(extractionRow)
 
             // add the extraction node to the form
-            if (subtemplate===null) {
+            if (subtemplateClone===null) {
                 subtemplate = $('#recordForm > section.row > section , #modifyForm > section.row > section');
             }
             console.log(subtemplate)

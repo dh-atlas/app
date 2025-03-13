@@ -72,7 +72,7 @@ $if query_templates!=None:
 							$ checked_value = 'http'+id.split('_http')[1].split(',',1)[0]
 							$ field_base = id.split('_http')[0].rsplit('-',1)[0]
 							$ field_name = id.split('_http')[0]
-							$if any(checked_value in k_v for k_v in graphdata[field_base]):
+							$if any(checked_value in k_v for k_v in graphdata[field_base]) or any(checked_value.rsplit('/', 1)[-1] in k_v for k_v in graphdata[field_base]):
 								<script type="text/javascript">
 									$$("input[name=$field_name]").attr("checked","checked");
 								</script>
@@ -178,6 +178,7 @@ $if query_templates!=None:
 						$ extractors_prepend = [tpl[2] for tpl in knowledge_extractor]
 						$ extractors_id = [tpl[3] for tpl in knowledge_extractor]
 						$ extractors_service = [tpl[4] for tpl in knowledge_extractor]
+						$ extractors_subclass_restriction = [tpl[5] for tpl in knowledge_extractor]
 						$ extractions_object = extractions
 						<script type="text/javascript">
 							var extractionsString = `$extractions_object`.replace(/\n/g, "\\n").replace(/&quot;/g, "'").replace(/&#39;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
@@ -187,6 +188,7 @@ $if query_templates!=None:
 							const extractorsPrepend = JSON.parse('$extractors_prepend'.replace(/&#39;/g, '"'));
 							const extractorsIds = JSON.parse('$extractors_id'.replace(/&#39;/g, '"'));
 							const extractorsService = JSON.parse('$extractors_service'.replace(/&#39;/g, '"'));
+							const extractorsRestriction = JSON.parse('$extractors_subclass_restriction'.replace(/&#39;/g, '"'));
 							if (extractorsArray.includes('$template')) {
 								generateExtractionField('$template','$pageID');
 							}

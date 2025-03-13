@@ -51,8 +51,8 @@ $var main_lang = main_lang
 					<h2>$chart["title"]</h2>
 					<p data-id="$chart['id']"></p>
 				</section>
-				<section class="col-lg-5 col-md-12 col-sm-12">
-					<div id="$info" class="chart-body map-chart" style="height:55vh">
+				<section class="col-lg-6 col-md-12 col-sm-12">
+					<div id="$info" class="chart-body map-chart" style="height:65vh">
 					</div>
 				</section>
 			</section>
@@ -66,12 +66,14 @@ $var main_lang = main_lang
 			</script>
 		$elif chart["type"] == "chart":
 			$ info = chart["info"]
+			$ chart_heading_width = "col-lg-4" if "sorted" in chart and chart["sorted"] == "x" else "col-lg-5"
+			$ chart_body_width = "col-lg-7" if "sorted" in chart and chart["sorted"] == "x" else "col-lg-6"
 			<section class="row stats-block section-fade">
-				<section class="col-lg-5 col-md-12 col-sm-12 chart-heading $heading_class">
+				<section class="$chart_heading_width col-md-12 col-sm-12 chart-heading $heading_class">
 					<h2>$chart["title"]</h2>
 					<p data-id="$chart['id']"></p>
 				</section>
-				<div id="$info[0]" class="chart-body col-lg-5 col-md-12 col-sm-12" style="height:55vh"></div>
+				<div id="$info[0]" class="chart-body $chart_body_width col-md-12 col-sm-12" style="height: 65vh"></div>
 			</section>
 			<script id="$info[0]_data" type="application/json">$:chart["json"]</script>
 			<script>

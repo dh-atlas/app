@@ -129,6 +129,7 @@ function createSubrecord(subtemplateFieldId,label,el,dataReuse=false,subrecordId
                 cloneElement.find('textarea, select, input:not([type="checkbox"])').val('');
                 cloneElement.find('input.checkbox_group[type="checkbox"]').prop('checked', false);
                 cloneElement.find('.subform, .subrecord-title, .add-span, .subform_section').remove();
+                cloneElement.find('.tags-url').empty();
 
                 // associate proper identifiers to input fields belonging to the subrecord form
                 var inputId = cloneElement.find('textarea, select, input:not([type="hidden"]):not(label.switch input)').attr('id');

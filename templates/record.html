@@ -111,6 +111,7 @@ $if alert == False:
 							$ extractors_prepend = [tpl[2] for tpl in knowledge_extractor]
 							$ extractors_id = [tpl[3] for tpl in knowledge_extractor]
 							$ extractors_service = [tpl[4] for tpl in knowledge_extractor]
+							$ extractors_subclass_restriction = [tpl[5] for tpl in knowledge_extractor]
 							<script type="text/javascript">
 								const extractionsObj = {}
 								const extractorsArray = JSON.parse('$extractors_template_ids'.replace(/&#39;/g, '"'));
@@ -118,6 +119,7 @@ $if alert == False:
 								const extractorsPrepend = JSON.parse('$extractors_prepend'.replace(/&#39;/g, '"'));
 								const extractorsIds = JSON.parse('$extractors_id'.replace(/&#39;/g, '"'));
 								const extractorsService = JSON.parse('$extractors_service'.replace(/&#39;/g, '"'));
+								const extractorsRestriction = JSON.parse('$extractors_subclass_restriction'.replace(/&#39;/g, '"'));
 								if (extractorsArray.includes('$template')) {
 									generateExtractionField('$template','$pageID');
 								}
