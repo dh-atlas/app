@@ -52,7 +52,7 @@ function prepareSubtemplateForms(element) {
         // retrieve all existing subrecords for a given subtemplate field
         var subrecords = "";
         $('[data-input="'+subtemplateFieldId+'"').each(function() {
-            subrecords+=$(this).attr('id')+";"+$(this).text()+",";
+            subrecords+=$(this).attr('id')+";"+$(this).text().trim()+",";
             var subformSection = $("<section class='subform_section col-md-12 col-sm-12' data-target='"+$(this).attr('id')+"'>\
                 <h4 class='subrecord-title closed-title'>"+$(this).text()+"\
                     <section class='buttons-container'>\
@@ -274,11 +274,11 @@ function createSubrecord(subtemplateFieldId,label,el,dataReuse=false,subrecordId
         // generate a tag
         var isValid = checkMandatoryFields(this);
         if (isValid) {
-            var labelField = subrecordForm.find('.disambiguate').eq(0);
+            // TODO: check whether multiple subforms create any sort of problem
+            var labelField = subrecordForm.find('.disambiguate:visible').eq(0);
             var labelMainLang = $('#'+labelField.attr('id').replace(labelField.attr('lang'), 'mainLang')).val();
-            var tagLabel = subrecordForm.find('.disambiguate[lang="'+labelMainLang+'"]').val() || (label + "-" + subrecordId);
-            console.log(subrecordForm.find('.disambiguate[lang="'+labelMainLang+'"]'));
-            console.log(labelMainLang, tagLabel)
+            var tagLabel = subrecordForm.find('.disambiguate:visible[lang="'+labelMainLang+'"]').val() || (label + "-" + subrecordId);
+
             // restart from here
             toggleSubform(subrecordTitle,label=tagLabel);
     
@@ -366,8 +366,8 @@ function saveSubrecordClass(selectElement,subrecordId,singleOption=false) {
 function cancelSubrecord(subrecordSection) {
     const subform = $(subrecordSection).closest('.subform_section');
     var subrecordId =  subform.data('target');
-    var subrecordLabel = $(subrecordSection).find('h4').text();
-    let substring = subrecordId+";"+subrecordLabel ;
+    var subrecordLabel = subform.find('h4').text();
+    let substring = subrecordId+";"+subrecordLabel.trim() ;
     var fieldId = subform.siblings('select').attr('id');
 
     // remove cancelled subrecords from field values
@@ -380,8 +380,10 @@ function cancelSubrecord(subrecordSection) {
         } else {
             substring = ','+substring+',';
         }
-        currentSubrecords.replace(substring);
-        console.log(currentSubrecords);
+        console.log(currentSubrecords)
+        console.log(substring)
+        currentSubrecords = currentSubrecords.replace(substring, "");
+        console.log(currentSubrecords)
         $('[name="'+fieldId+'"').val(currentSubrecords);
     }
 
