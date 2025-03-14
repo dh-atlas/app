@@ -1124,10 +1124,18 @@ class Term(object):
 		uri = mapping.getRightURIbase(name)
 		label = queries.get_URI_label(uri)
 		data = queries.describe_term(uri)
-		appears_in = [ result["subject"]["value"] \
-					for result in data["results"]["bindings"] \
-					if (result["object"]["value"] == uri and result["object"]["type"] == 'uri') ] \
-					if data != None else []
+
+		if data is not None:
+			appears_in_set = {
+				result["subject"]["value"]
+				for result in data["results"]["bindings"]
+				if result["object"]["value"] == uri 
+				and result["object"]["type"] == "uri"
+			}
+			appears_in = list(appears_in_set)
+		else:
+			appears_in = []
+
 		# look for occurrences in Extraction Graphs
 		extractions_data = queries.describe_extraction_term(uri)
 		appears_in_extractions = [result["graph"]["value"][:-1] for result in extractions_data["results"]["bindings"] ] \
@@ -1136,13 +1144,17 @@ class Term(object):
 
 		with open(TEMPLATE_LIST) as tpl_list:
 			res_templates = json.load(tpl_list)
+
 		for res_uri in appears_in:
 			res_class = sorted(queries.getClass(res_uri))
-			res_type = next((t["name"] for t in res_templates if all(cls in (t["type"] + list(t["subclasses"].keys())) for cls in res_class)),None)
+			res_tpl = next((t for t in res_templates if all(cls in (t["type"] + list(t["subclasses"].keys())) for cls in res_class)),None)
+			res_type = res_tpl["name"] if res_tpl != None else None
+			tpl_sublcasses = list(res_tpl["subclasses"].keys()) if res_tpl != None else []
 			if res_type in results_by_class:
 				results_by_class[res_type]['results'].append(res_uri)
 			elif res_type != None:
-				results_by_class[res_type] = {'class':res_class, 'results':[res_uri]}
+				main_class = [cls for cls in res_class if cls  not in tpl_sublcasses]
+				results_by_class[res_type] = {'class':main_class, 'results':[res_uri], 'subclasses': tpl_sublcasses}
 
 		count = len(appears_in)
 		map_coordinates = (queries.geonames_geocoding(uri)) if uri.startswith("https://sws.geonames.org/") else None

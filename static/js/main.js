@@ -481,6 +481,7 @@ $(document).ready(function() {
         count: $(this).data("count"),
         uri: $(this).data("uri"),
         class: $(this).data("class"),
+        subclasses: $(this).data("subclasses"),
         limit_query: $(this).data("limit"),
         offset_query: $(this).data("offset")
     };
@@ -1309,16 +1310,22 @@ function searchResources(event, element) {
   var uri = event.data.uri;
   var count = event.data.count;
   var resClass = event.data.class;
+  var resSubclasses = event.data.subclasses;
   var offsetQuery = parseInt(event.data.offset_query, 10);
   var limitQuery = parseInt(event.data.limit_query, 10);
   console.log(offsetQuery,limitQuery)
   
   var classes = JSON.parse(resClass.replace(/'/g, '"'));
+  var subclasses = (typeof resSubclasses === "string") 
+    ? JSON.parse(resSubclasses.replace(/'/g, '"')) 
+    : resSubclasses;
+  let acceptedClasses = [...classes, ...subclasses];
+
   let typePatterns = classes.map(cls => `?o rdf:type <${cls}> .`).join(" ");
   let filterNotExists = `
       FILTER NOT EXISTS {
           ?o rdf:type ?otherClass .
-          FILTER(?otherClass NOT IN (${classes.map(cls => `<${cls}>`).join(", ")}))
+          FILTER(?otherClass NOT IN (${acceptedClasses.map(cls => `<${cls}>`).join(", ")}))
       }
   `;
   
