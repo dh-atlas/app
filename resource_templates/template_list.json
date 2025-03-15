@@ -6,7 +6,7 @@
    "http://example.org/ExampleClass"
   ],
   "template": "resource_templates/template-example_template.json",
-  "hidden": "True",
+  "hidden": "False",
   "subclasses": {}
  },
  {
@@ -51,11 +51,11 @@
   "template": "resource_templates/template-research_product.json",
   "hidden": "False",
   "subclasses": {
-   "https://w3id.org/dh-atlas/Software": "Software",
+   "https://w3id.org/dh-atlas/DigitalScholarlyEdition": "Digital Scholarly Edition",
    "https://w3id.org/dh-atlas/Ontology": "Ontology",
-   "https://w3id.org/dh-atlas/TextCollection": "Text Collection",
    "https://w3id.org/dh-atlas/LinkedOpenData": "Linked Open Data",
-   "https://w3id.org/dh-atlas/DigitalScholarlyEdition": "Digital Scholarly Edition"
+   "https://w3id.org/dh-atlas/Software": "Software",
+   "https://w3id.org/dh-atlas/TextCollection": "Text Collection"
   }
  },
  {
