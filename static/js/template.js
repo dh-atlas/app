@@ -475,7 +475,7 @@ function add_disambiguate(temp_id, el) {
         } else { $("section[id*='addons__"+temp_id+"']").after(field_browse); }
   
         // YASQE editor for SPARQL query patterns
-        if (el.value == 'URI') {
+        /* if (el.value == 'URI') {
             var field_SPARQL_constraint = $("<section class='row'>\
                 <label class='col-md-3'>SPARQL CONSTRAINTS <br><span class='comment'>select a service to modify, or add a constraint (optional)</span></label>\
                 <select class='custom-select col-md-8' name='service__"+temp_id+"'>\
@@ -489,7 +489,7 @@ function add_disambiguate(temp_id, el) {
                 SPARQL_constraint_editor(el,this,temp_id);
             });
             $(el).parent().after(field_SPARQL_constraint);
-        }
+        } */
   
         updateindex();
         moveUpAndDown() ;

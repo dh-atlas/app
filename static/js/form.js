@@ -146,9 +146,7 @@ $(document).ready(function() {
     // table of contents: input fields
     $('section.label.col-12').each(function() {
         var section = $(this);
-        console.log(section)
         if (section.next('.input_or_select').find('[data-supertemplate="None"]').length > 0 || section.hasClass("checkbox_group_label")) {
-            console.log(section)
             var itemTitle = section.find(".title").contents().filter(function() {
                 return this.nodeType === 3;
             }).text().trim();
@@ -2517,7 +2515,7 @@ function detectInputWebPage(input_elem) {
 };
   
 // destroy popovers for wayback machine
-function destroyPopover(el='savetheweb') {
+function destroyPopover(el='popover') {
     $("."+el).popover('hide');
   
 }
@@ -2525,10 +2523,10 @@ function destroyPopover(el='savetheweb') {
 // call an internal api to send a post request to Wayback machine
 function saveTheWeb(input_url) {
     console.log(input_url);
-    $(".savetheweb").popover('hide');
-    $(".savedtheweb").popover({
+    $(".popover").popover('hide');
+    $(".popover").popover({
         html: true,
-        title : "<span onclick=destroyPopover('savedtheweb')>x</span><h4>Thank you!</h4>",
+        title : "<span onclick=destroyPopover('popover')>x</span><h4>Thank you!</h4>",
         content: "<p>We sent a request to the Wayback machine.</p>",
         placement: "bottom",
     }).popover('show');
@@ -2537,7 +2535,11 @@ function saveTheWeb(input_url) {
         type: 'GET',
         url: "/savetheweb-"+encodeURI(input_url),
         success: function(returnedJson) {
+            $(".popover").popover('hide');
             console.log(returnedJson);
+        }, error: function(error) {
+            console.log(error);
+            
         }
     });
   
