@@ -96,7 +96,7 @@ $else:
 												$$("#value__$id option[value$$=$field['value']]").attr("selected","selected");
 											</script>
 										</section>
-										<!-- SPARQL CONSTRAINT -->
+										<!-- SPARQL CONSTRAINT
 										$if field['value'] == 'URI':
 											<section class='row'>
 												<label class='col-md-3'>SPARQL CONSTRAINTS <br><span class='comment'>select a service to modify or add a constraint (optional)</span></label>
@@ -115,7 +115,7 @@ $else:
 												<textarea class='hiddenInput' style='display: none;' name='catalogueConstraint__$id' value='$field["catalogueConstraint"]'></textarea>
 												<script type="text/javascript">
 													$$('[name*="catalogueConstraint__$id"]').val(`$field['catalogueConstraint']`)
-												</script>
+												</script> -->
 										<!-- PLACEHOLDER -->
 										<section class="row">
 											<label class='col-md-3'>PLACEHOLDER <br><span class="comment">an example value to be shown to the user (optional)</span></label>
