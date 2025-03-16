@@ -154,7 +154,6 @@ class Gitauth:
 		github_auth = "https://github.com/login/oauth/authorize"
 		clientId = conf.gitClientID
 		scope = "&scope=repo read:user"
-
 		return web.seeother(github_auth+"?client_id="+clientId+scope)
 
 class Oauthcallback:
@@ -163,11 +162,9 @@ class Oauthcallback:
 		After the user authenticates, get profile information (ask_user_permission).
 		Check the user is a collaborator of the repository (get_github_users)
 		"""
-
 		data = web.input()
 		code = data.code
 		res = github_sync.ask_user_permission(code)
-
 		if res:
 			userlogin, usermail, bearer_token = github_sync.get_user_login(res)
 			is_valid_user = github_sync.get_github_users(userlogin)
@@ -693,6 +690,7 @@ class Modify(object):
 			with open(res_template) as tpl_form:
 				fields = json.load(tpl_form)
 			ids_dropdown = u.get_dropdowns(fields)
+			ids_subtemplate = u.get_subtemplates(fields)
 
 			query_templates=u.get_query_templates(res_template)
 			extractor = u.has_extractor(res_template)
@@ -701,8 +699,8 @@ class Modify(object):
 
 			return render.modify(graphdata=data, pageID=recordID, record_form=f,
 							user=session['username'],ids_dropdown=ids_dropdown,
-							is_git_auth=is_git_auth,invalid=False,
-							project=conf.myProject,template=res_template,
+							ids_subtemplate=ids_subtemplate,is_git_auth=is_git_auth,
+							invalid=False,project=conf.myProject,template=res_template,
 							query_templates=query_templates,knowledge_extractor=extractor,
 							extractions=extractions_data,main_lang=conf.mainLang)
 		else:
@@ -743,6 +741,7 @@ class Modify(object):
 				with open(templateID) as tpl_form:
 					fields = json.load(tpl_form)
 				ids_dropdown = u.get_dropdowns(fields)
+				ids_subtemplate = u.get_subtemplates(fields)
 
 				query_templates = u.get_query_templates(templateID)
 				extractor = u.has_extractor(res_template)
@@ -751,8 +750,8 @@ class Modify(object):
 
 				return render.modify(graphdata=data, pageID=recordID, record_form=f,
 								user=session['username'],ids_dropdown=ids_dropdown,
-								is_git_auth=is_git_auth,invalid=True,
-								project=conf.myProject,template=res_template,
+								ids_subtemplate=ids_subtemplate,is_git_auth=is_git_auth,
+								invalid=True,project=conf.myProject,template=res_template,
 								query_templates=query_templates,knowledge_extractor=extractor,
 								extractions=extractions_data,main_lang=conf.mainLang)
 			else:
@@ -807,6 +806,7 @@ class Review(object):
 			with open(res_template) as tpl_form:
 				fields = json.load(tpl_form)
 			ids_dropdown = u.get_dropdowns(fields) # TODO CHANGE
+			ids_subtemplate = u.get_subtemplates(fields)
 
 			query_templates = u.get_query_templates(res_template)
 			extractor = u.has_extractor(res_template)
@@ -815,8 +815,9 @@ class Review(object):
 
 			return render.review(graphdata=data, pageID=recordID, record_form=f,
 								graph=graphToRebuild, user=session['username'],
-								ids_dropdown=ids_dropdown,is_git_auth=is_git_auth,
-								invalid=False,project=conf.myProject,template=res_template,
+								ids_dropdown=ids_dropdown,ids_subtemplate=ids_subtemplate,
+								is_git_auth=is_git_auth,invalid=False,
+								project=conf.myProject,template=res_template,
 								query_templates=query_templates,knowledge_extractor=extractor,
 								extractions=extractions_data,main_lang=conf.mainLang)
 		else:
@@ -855,6 +856,7 @@ class Review(object):
 				with open(templateID) as tpl_form:
 					fields = json.load(tpl_form)
 				ids_dropdown = u.get_dropdowns(fields) # TODO CHANGE
+				ids_subtemplate = u.get_subtemplates(fields)
 
 				query_templates = u.get_query_templates()
 				extractor = u.has_extractor(res_template)
@@ -863,8 +865,9 @@ class Review(object):
 
 				return render.review(graphdata=data, pageID=recordID, record_form=f,
 									graph=graphToRebuild, user=session['username'],
-									ids_dropdown=ids_dropdown,is_git_auth=is_git_auth,
-									invalid=True,project=conf.myProject,template=templateID,
+									ids_dropdown=ids_dropdown,ids_subtemplate=ids_subtemplate,
+									is_git_auth=is_git_auth,invalid=True,
+									project=conf.myProject,template=templateID,
 									query_templates=query_templates,knowledge_extractor=extractor,
 									extractions=extractions_data,main_lang=conf.mainLang)
 			else:
@@ -897,6 +900,7 @@ class Review(object):
 				with open(templateID) as tpl_form:
 					fields = json.load(tpl_form)
 				ids_dropdown = u.get_dropdowns(fields)
+				ids_subtemplate = u.get_subtemplates(fields)
 
 				query_templates = u.get_query_templates()
 				extractor = u.has_extractor(res_template)
@@ -905,8 +909,8 @@ class Review(object):
 
 				return render.review(graphdata=data, pageID=recordID, record_form=f,
 									graph=graphToRebuild, user=session['username'],
-									ids_dropdown=ids_dropdown,is_git_auth=is_git_auth,
-									invalid=True,project=conf.myProject,template=templateID,
+									ids_dropdown=ids_dropdown,ids_subtemplate=ids_subtemplate,
+									is_git_auth=is_git_auth,invalid=True,project=conf.myProject,template=templateID,
 									query_templates=query_templates,knowledge_extractor=extractor,
 									extractions=extractions_data,main_lang=conf.mainLang)
 			else:

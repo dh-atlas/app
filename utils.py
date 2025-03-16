@@ -88,6 +88,12 @@ def get_dropdowns(fields):
 	ids_dropdown= [field['id'] for field in fields if field['type'] == 'Dropdown']
 	return ids_dropdown
 
+def get_subtemplates(fields):
+	""" retrieve Subtemplates ids to render them properly
+	in Modify and Review form"""
+	ids_subtemplates= [field['id'] for field in fields if field['type'] == 'Subtemplate']
+	return ids_subtemplates
+
 def get_timestamp():
 	""" return timestamp when creating a new record """
 	return str(time.time()).replace('.','-')

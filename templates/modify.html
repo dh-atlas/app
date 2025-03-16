@@ -1,4 +1,4 @@
-$def with (graphdata,pageID,record_form,user,ids_dropdown,is_git_auth,invalid,project,template,query_templates,knowledge_extractor,extractions,main_lang)
+$def with (graphdata,pageID,record_form,user,ids_dropdown,ids_subtemplate,is_git_auth,invalid,project,template,query_templates,knowledge_extractor,extractions,main_lang)
 
 $var user = user
 $var is_git_auth = is_git_auth
@@ -115,6 +115,12 @@ $if query_templates!=None:
 														$ input_name = id+'_'+k_v[0]
 														<span class='tag $k_v[0]' data-input='$id' id='$k_v[0]'>$:k_v[1]</span>
 														<input type='hidden' class='hiddenInput $k_v[0]' name='$input_name' value="$k_v[0],$:k_v[1]"/>
+													$if id in ids_subtemplate:
+														$if len(graphdata[id]) > 0:
+															<script type="text/javascript">
+																$$('#$id').prepend($$('<option value="">Select from the list</option>'));
+																$$("#$id option[value$$='$graphdata[id][0][0]']").attr("selected","selected");
+															</script>
 												$elif type(graphdata[id][0]) is tuple:
 													<!-- Multi-lang Literals -->		
 													$for k_v in graphdata[id]:
@@ -149,7 +155,6 @@ $if query_templates!=None:
 													<span class='tag $k_v[0]' data-input='$id' id='$k_v[0]'>$:k_v[1]</span>
 													<input type='hidden' class='hiddenInput $k_v[0]' name='$id-$k_v[0]' value="$k_v[0],$:k_v[1]"/>
 										<script type="text/javascript">
-											console.log('$id')
 											var elements = $$('#$id')[0].attributes;
 											var attrsToChange = [];
 			
@@ -171,7 +176,6 @@ $if query_templates!=None:
 												$$('#$id').prepend($$('<option selected=selected value="">Select from the list</option>'));
 											</script>
 										<script type="text/javascript">
-											console.log('$id')
 											var elements = $$('#$id')[0].attributes;
 											var attrsToChange = [];
 			
