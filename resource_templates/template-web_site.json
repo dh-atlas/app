@@ -1,6 +1,6 @@
 [
  {
-  "id": "1728986856034",
+  "id": "1728986856035",
   "label": "Title",
   "value": "Literal",
   "placeholder": "",
@@ -100,7 +100,7 @@
   "view_class": ""
  },
  {
-  "id": "1728987011208",
+  "id": "1728987011209",
   "skos1": "tadirah",
   "vocables": "multipleVocables",
   "type": "Skos",
