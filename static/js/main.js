@@ -102,7 +102,9 @@ $(document).ready(function() {
   });
 
 	// tooltips
-	$('.tip').tooltip();
+	$('.tip').tooltip({
+    container: 'body'
+});
 
   // fields without tooltip
   $('.input_or_select').not(':has(.tip)').css("padding-left","3.2em");
@@ -1408,6 +1410,8 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
   } 
   else if ((typeProp=='Date' || typeProp=='gYear' || typeProp=='gYearMonth') && typeField == 'Date')  {
     var query = "select distinct ?o (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> ?o. "+class_restriction+" } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } GROUP BY ?o ORDER BY DESC(?count) lcase(?o)";
+  } else if (typeField=='KnowledgeExtractor') {
+    var query = "select distinct ?o ?oLabel (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?g <"+prop+"> ?extractionGraph. "+class_restriction+" } GRAPH ?extractionGraph { ?o rdfs:label ?oLabel } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } GROUP BY ?o ?oLabel ORDER BY DESC(?count) lcase(?oLabel)";
   } else {var query = "none"};
 
   const len = 10;
@@ -1434,7 +1438,8 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
               var xsdProp = typeProp;
             }
             var count = returnedJson.results.bindings[i].count.value;
-            var result = "<button onclick=getRecordsByPropValue(this,'."+elemID+"results','"+elemClass+"','"+elemSubclass+"','"+xsdProp+"') id='"+res+"' class='queryGroup' data-property='"+prop+"' data-value='"+res+"' data-toggle='collapse' data-target='#"+elemID+"results' aria-expanded='false' aria-controls='"+elemID+"results' class='info_collapse'>"+resLabel+" ("+count+")</button>";
+            var knowledgeExtractor = typeField=='KnowledgeExtractor' ? "fieldType='KnowledgeExtractor'" : ""
+            var result = "<button onclick=getRecordsByPropValue(this,'."+elemID+"results','"+elemClass+"','"+elemSubclass+"','"+xsdProp+"',"+knowledgeExtractor+") id='"+res+"' class='queryGroup' data-property='"+prop+"' data-value='"+res+"' data-toggle='collapse' data-target='#"+elemID+"results' aria-expanded='false' aria-controls='"+elemID+"results' class='info_collapse'>"+resLabel+" ("+count+")</button>";
             if (allresults.indexOf(result) === -1) {
               allresults.push(result);
               results.push($(result).hide());
@@ -1471,14 +1476,17 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
 };
 
 // get records by value and property in EXPLORE
-function getRecordsByPropValue(el, resElem, elemClass='', elemSubclass='', typeProp=false) {
+function getRecordsByPropValue(el, resElem, elemClass='', elemSubclass='', typeProp=false, fieldType=null) {
   if (elemClass.length) {var class_restriction = "?s a <"+elemClass+"> . "} else {var class_restriction = ''};
   if (elemSubclass.length) {class_restriction += "?s a <"+elemSubclass+"> . "};
   $(el).toggleClass("alphaActive");
   if ($(resElem).length) {$(resElem).empty();}
   var prop = $(el).data("property");
   console.log(prop);
-  if (typeProp == 'false') {
+  if (fieldType == 'KnowledgeExtractor') {
+    var val = $(el).data("value");
+    var query = "select distinct ?s ?sLabel "+inGraph+" where { GRAPH ?g { ?g <"+prop+"> ?extractionGraph . BIND(IRI(SUBSTR(STR(?g), 1, STRLEN(STR(?g)) - 1)) AS ?s) ?s rdfs:label ?sLabel . "+class_restriction+"  } GRAPH ?extractionGraph{ <"+val+"> rdfs:label ?entity } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } ORDER BY ?sLabel"
+  } else if (typeProp == 'false') {
     var val = $(el).data("value");
     var query = "select distinct ?s ?sLabel "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> <"+val+">; rdfs:label ?sLabel . "+class_restriction+" } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } ORDER BY ?sLabel"
   } else {

@@ -374,13 +374,14 @@ def updateTemplateList(res_name=None,res_type=None,remove=False):
 
 def get_template_from_class(res_type):
 	print("###res_type",res_type)
-	""" Return the template file path given the URI of the OWL class
+	""" Return the template file path and a list of subclasses given the URI of the OWL class
 
 	Parameters
 	----------
-	res_type: str
+	res_type: list
 		URI of the class associated to the template. Becomes dictionary value
 	"""
+	res_subclasses = []
 
 	with open(TEMPLATE_LIST,'r') as tpl_file:
 		data = json.load(tpl_file)
@@ -388,9 +389,10 @@ def get_template_from_class(res_type):
 	for t in data:
 		for s in t["subclasses"]:
 			if s in res_type:
+				res_subclasses.append(s) 
 				res_type.remove(s)
-	res_template = [t["template"] for t in data if t["type"] == sorted(res_type)][0]
-	return res_template
+	res_template = next((t["template"] for t in data if t["type"] == sorted(res_type)), None)
+	return res_template, res_subclasses
 
 def get_class_from_template(res_tpl):
 	print("###res_template",res_tpl)
@@ -547,7 +549,7 @@ def update_skos_vocabs(d, skos):
 
 
 # KNOWLEDGE EXTRACTION
-def has_extractor(res_template, record_name=None, processed_templates=[]):
+def has_extractor(res_template, record_name=None, processed_templates=[], res_subclasses=[]):
 	"""Return a list of Knowledge Extraction input fields (if record_name == None) 
 	or a list of named graphs that may contain extractions (if record_name != None)
 
@@ -572,7 +574,11 @@ def has_extractor(res_template, record_name=None, processed_templates=[]):
 
 			#check whether the Graph may contain any Extraction
 			if 'knowledgeExtractor' in field and field['knowledgeExtractor'] == 'True':
-				result.append((graph_uri, field['property'], field['label'], field['id']))
+				if res_subclasses != []:
+					if field['restricted'] == [] or any(res_subclass in field['restricted'] for res_subclass in res_subclasses):
+						result.append((graph_uri, field['property'], field['label'], field['id']))
+				else:
+					result.append((graph_uri, field['property'], field['label'], field['id']))
 
 			#check whether the Graph may contain any sub-Record
 			if 'import_subtemplate' in field and field['import_subtemplate'] != []:

@@ -154,6 +154,7 @@ class Gitauth:
 		github_auth = "https://github.com/login/oauth/authorize"
 		clientId = conf.gitClientID
 		scope = "&scope=repo read:user"
+		print("here")
 		return web.seeother(github_auth+"?client_id="+clientId+scope)
 
 class Oauthcallback:
@@ -162,9 +163,11 @@ class Oauthcallback:
 		After the user authenticates, get profile information (ask_user_permission).
 		Check the user is a collaborator of the repository (get_github_users)
 		"""
+		print("here2")
 		data = web.input()
 		code = data.code
 		res = github_sync.ask_user_permission(code)
+		print("RES:", res)
 		if res:
 			userlogin, usermail, bearer_token = github_sync.get_user_login(res)
 			is_valid_user = github_sync.get_github_users(userlogin)
@@ -681,7 +684,7 @@ class Modify(object):
 			graphToRebuild = conf.base+name+'/'
 			recordID = name
 			res_class = queries.getClass(conf.base+name)
-			res_template = u.get_template_from_class(res_class)
+			res_template, res_subclasses = u.get_template_from_class(res_class)
 			data = queries.getData(graphToRebuild, res_template)
 			u.log_output('START MODIFY RECORD', session['logged_in'], session['username'], recordID )
 
@@ -725,7 +728,7 @@ class Modify(object):
 		is_git_auth = github_sync.is_git_auth()
 		templateID = recordData.templateID if 'templateID' in recordData else None
 		res_class = queries.getClass(conf.base+name)
-		res_template = u.get_template_from_class(res_class)
+		res_template, res_subclasses = u.get_template_from_class(res_class)
 
 		if 'action' in recordData:
 			create_record(recordData)
@@ -796,7 +799,7 @@ class Review(object):
 			graphToRebuild = conf.base+name+'/'
 			recordID = name
 			res_class = queries.getClass(conf.base+name)
-			res_template = u.get_template_from_class(res_class)
+			res_template, res_subclasses = u.get_template_from_class(res_class)
 			data = queries.getData(graphToRebuild,res_template)
 			session['ip_address'] = str(web.ctx['ip'])
 			u.log_output('START REVIEW RECORD', session['logged_in'], session['username'], recordID )
@@ -848,7 +851,7 @@ class Review(object):
 				graphToRebuild = conf.base+name+'/'
 				recordID = name
 				res_class = queries.getClass(conf.base+name)
-				res_template = u.get_template_from_class(res_class)
+				res_template, res_subclasses = u.get_template_from_class(res_class)
 				data = queries.getData(graphToRebuild,templateID)
 				session['ip_address'] = str(web.ctx['ip'])
 				u.log_output('INVALID REVIEW RECORD', session['logged_in'], session['username'], recordID )
@@ -892,7 +895,7 @@ class Review(object):
 				graphToRebuild = conf.base+name+'/'
 				recordID = name
 				res_class = queries.getClass(conf.base+name)
-				res_template = u.get_template_from_class(res_class)
+				res_template, res_subclasses = u.get_template_from_class(res_class)
 				data = queries.getData(graphToRebuild,templateID)
 				session['ip_address'] = str(web.ctx['ip'])
 				u.log_output('INVALID REVIEW RECORD', session['logged_in'], session['username'], recordID )
@@ -1019,14 +1022,15 @@ class View(object):
 		res_class = queries.getClass(conf.base+name)
 		data, stage, title, properties, data_labels, extractions_data, new_dict_classes = None, None, None, None, {}, {}, {}
 		try:
-			res_template = u.get_template_from_class(res_class)
+			res_template, res_subclasses = u.get_template_from_class(res_class)
 			data = dict(queries.getData(record+'/',res_template))
 			stage = data['stage'][0] if 'stage' in data else 'draft'
-			previous_extractors = u.has_extractor(res_template, name)
+			previous_extractors = u.has_extractor(res_template, name, res_subclasses=res_subclasses)
 			extractions_data = queries.retrieve_extractions(previous_extractors,view=True)
 
 			with open(res_template) as tpl_form:
 				fields = json.load(tpl_form)
+			fields = [field for field in fields if field['restricted'] == [] or any(subclass in field['restricted'] for subclass in res_subclasses)] 
 			try:
 				title_field = [v for k,v in data.items() \
 					for field in fields if (field['disambiguate'] == "True" \
@@ -1082,7 +1086,13 @@ class View(object):
 					template_fields = json.load(tpl_file)
 				property_label = list(class_sorted[k].keys())[0]
 				property_name = next(f["label"] for f in template_fields if f["property"] == property_label.split(',',1)[0])
-				new_dict_classes[template_name] = {'class':k, 'results': { property_label+','+property_name : class_sorted[k][property_label]} }
+				if template_name in new_dict_classes:
+					if property_label+','+property_name in new_dict_classes[template_name]["results"]:
+						new_dict_classes[template_name]["results"][property_label+','+property_name].extend(class_sorted[k][property_label])
+					else:
+						new_dict_classes[template_name]["results"][property_label+','+property_name] = class_sorted[k][property_label]
+				else:
+					new_dict_classes[template_name] = {'results': { property_label+','+property_name : class_sorted[k][property_label]} }
 		except Exception as e:
 			pass
 
