@@ -392,6 +392,7 @@ def describe_term(name):
 	results = hello_blazegraph(ask)
 	if results["boolean"] == True: # new entity
 		describe = """DESCRIBE <"""+name+ """>"""
+		print("describe:", describe)
 		return hello_blazegraph(describe)
 	else: # vocab term
 		ask = """ASK { ?s ?p ?o .
@@ -590,7 +591,11 @@ def retrieve_extractions(res_uri_list, view=False):
 					SELECT DISTINCT ?uri ?label WHERE {GRAPH <"""+graph_uri+""">
 					{	?uri rdfs:label ?label .  }}"""
 				graph_results = hello_blazegraph(retrieve_graph)["results"]["bindings"]
-				res_dict[uri_id][field_id][n]["metadata"]['output'] = [{"uri": {"value": urllib.parse.quote(res["uri"]["value"],safe=""), "type":res["uri"]["type"]}, "label": {"value": res["label"]["value"], "type":res["label"]["type"]}} for res in graph_results]
+				if view:
+					res_dict[uri_id][field_id][n]["metadata"]['output'] = [{"uri": {"value": urllib.parse.quote(res["uri"]["value"],safe=""), "type":res["uri"]["type"]}, "label": {"value": res["label"]["value"], "type":res["label"]["type"]}} for res in graph_results]
+				else:
+					res_dict[uri_id][field_id][n]["metadata"]['output'] = [{"uri": {"value": res["uri"]["value"], "type":res["uri"]["type"]}, "label": {"value": res["label"]["value"], "type":res["label"]["type"]}} for res in graph_results]
+
 	print(res_dict)
 	return res_dict
 

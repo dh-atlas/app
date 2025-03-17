@@ -72,7 +72,7 @@ function prepareSubtemplateForms(element) {
 
         // store the existing subrecords' ids in a hidden input
         if (subrecords !== "") {
-            $('#modifyForm').append('<input type="hidden" name="'+subtemplateFieldId+'-subrecords" id="'+subtemplateFieldId+'-subrecords" value="'+subrecords.slice(0,-1)+'">');
+            $('#modifyForm').append('<input type="hidden" name="'+subtemplateFieldId+'-subrecords" id="'+subtemplateFieldId+'-subrecords" value="'+subrecords.slice(0,-2)+'">');
         }
     }
 

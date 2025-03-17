@@ -120,7 +120,7 @@ $var main_lang = main_lang
 								$for extracted_keyword in knowledge_extractor[graphID][field][n]["metadata"]["output"]:
 									<p property="$knowledge_extractor[graphID+'_view']['property']">
 										<link property="sameAs" url="$extracted_keyword['uri']['value']"/>
-										<a class="uri" target='_blank' href="/term-$extracted_keyword['uri']['value']">
+										<a class="uri" target='_blank' href="term-$extracted_keyword['uri']['value']">
 											$extracted_keyword['label']['value']
 										</a>
 									</p>
