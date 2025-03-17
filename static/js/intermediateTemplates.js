@@ -52,7 +52,7 @@ function prepareSubtemplateForms(element) {
         // retrieve all existing subrecords for a given subtemplate field
         var subrecords = "";
         $('[data-input="'+subtemplateFieldId+'"').each(function() {
-            subrecords+=$(this).attr('id')+";"+$(this).text().trim()+",";
+            subrecords+=$(this).attr('id')+";"+$(this).text().trim()+",,";
             var subformSection = $("<section class='subform_section col-md-12 col-sm-12' data-target='"+$(this).attr('id')+"'>\
                 <h4 class='subrecord-title closed-title'>"+$(this).text()+"\
                     <section class='buttons-container'>\
@@ -289,8 +289,8 @@ function createSubrecord(subtemplateFieldId,label,el,dataReuse=false,subrecordId
             var createdSubrecords = $('[name="'+subrecordBase+'-subrecords"]');
             if (createdSubrecords.length) {
                 var toExtendValue = createdSubrecords.val();
-                if (!createdSubrecords.val().split(',').includes(subrecordId)) {
-                    createdSubrecords.val(toExtendValue + "," + subrecordId);
+                if (!createdSubrecords.val().split(',,').includes(subrecordId)) {
+                    createdSubrecords.val(toExtendValue + ",," + subrecordId);
                 }
             } else {
                 const newSubrecord = $("<input type='hidden' name='"+subrecordBase+"-subrecords' value='"+subrecordId+"'>");
@@ -376,19 +376,19 @@ function cancelSubrecord(subrecordSection) {
     var currentSubrecords = $('[name="'+fieldId+'-subrecords"').val();
     if (currentSubrecords !== undefined) {
         if (currentSubrecords.endsWith(substring)) {
-            substring = currentSubrecords.endsWith(','+substring) ? ','+substring : substring;
+            substring = currentSubrecords.endsWith(',,'+substring) ? ',,'+substring : substring;
         } else if (currentSubrecords.startsWith(substring)) {
-            substring = currentSubrecords === substring ? substring : substring+',';
-        } else if (currentSubrecords.split(",").includes(subrecordId)) {
+            substring = currentSubrecords === substring ? substring : substring+',,';
+        } else if (currentSubrecords.split(",,").includes(subrecordId)) {
             console.log(subrecordId)
             console.log(currentSubrecords)
             currentSubrecords = currentSubrecords
-                .split(",")
+                .split(",,")
                 .filter(id => id !== subrecordId)
-                .join(","); 
+                .join(",,"); 
             console.log(currentSubrecords)
         } else {
-            substring = ','+substring+',';
+            substring = ',,'+substring+',,';
         }
         currentSubrecords = currentSubrecords.replace(substring, "");
         $('[name="'+fieldId+'-subrecords"').val(currentSubrecords);

@@ -306,7 +306,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 		elif field['type']=="Subtemplate" and field['id'] in recordData:
 			if type(recordData[field['id']]) != type([]) and field['id']+"-subrecords" in recordData:
 				# get the list of subrecords associated to a 'Subtemplate' field
-				subrecords = recordData[field['id']+"-subrecords"].split(",") \
+				subrecords = recordData[field['id']+"-subrecords"].split(",,") \
 					if field['id']+"-subrecords" in recordData else []
 				for subrecord in subrecords:
 					if subrecord != "":
@@ -373,7 +373,7 @@ def process_new_subrecord(data, userID, stage, subrecord_id, supertemplate=None,
 				if key+"-subrecords" in data:
 					new_record_data[subfield_id] = [[]]
 					data_reuse = subtemplate if 'dataReuse' in subtemplate_field and subtemplate_field['dataReuse']=='allowDataReuse' else False
-					for inner_subrecord in data[key+"-subrecords"].split(","):
+					for inner_subrecord in data[key+"-subrecords"].split(",,"):
 						if ";" in inner_subrecord:
 							processed_subrecord = inner_subrecord.split(";",1)
 						else:
