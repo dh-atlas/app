@@ -26,11 +26,19 @@ def ask_user_permission(code):
 		"client_secret" : clientSecret,
 		"code" : code
 	}
-	req = requests.post('https://github.com/login/oauth/access_token', data=body,
-                    headers={"accept": "application/json"})
 
-	print("GitHub Token Response:", req.text)  # Debugging output
+	print("OAuth Request URL: https://github.com/login/oauth/access_token")
+	print("Client ID:", clientId)
+	print("Client Secret:", clientSecret[:5] + "*****")  # Mask for security
+	print("Authorization Code:", code)
 
+	req = requests.post("https://github.com/login/oauth/access_token",
+	                    data=body,
+	                    headers={"Accept": "application/json"})
+
+	print("Response Status Code:", req.status_code)
+	print("Response Text:", req.text)
+	
 	if req.status_code == 200:
 	    res = req.json()
 	    if "error" in res:
