@@ -163,8 +163,12 @@ class Oauthcallback:
 		After the user authenticates, get profile information (ask_user_permission).
 		Check the user is a collaborator of the repository (get_github_users)
 		"""
-		print("here2")
 		data = web.input()
+		print("GitHub Response:", data)  # Debugging output
+
+		if "error" in data:
+			print("GitHub OAuth Error:", data.error)
+			return internalerror()
 		code = data.code
 		res = github_sync.ask_user_permission(code)
 		print("RES:", res)
@@ -1030,7 +1034,7 @@ class View(object):
 
 			with open(res_template) as tpl_form:
 				fields = json.load(tpl_form)
-			fields = [field for field in fields if field['restricted'] == [] or any(subclass in field['restricted'] for subclass in res_subclasses)] 
+			fields = [field for field in fields if field['restricted'] == [] or any(subclass in field['restricted'] for subclass in res_subclasses)]
 			try:
 				title_field = [v for k,v in data.items() \
 					for field in fields if (field['disambiguate'] == "True" \
@@ -1143,7 +1147,7 @@ class Term(object):
 			appears_in_set = {
 				result["subject"]["value"]
 				for result in data["results"]["bindings"]
-				if result["object"]["value"] == uri 
+				if result["object"]["value"] == uri
 				and result["object"]["type"] == "uri"
 			}
 			appears_in = list(appears_in_set)
