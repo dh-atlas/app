@@ -15,9 +15,9 @@
     ns1:sameAs <http://www.wikidata.org/entity/Q132131532> .
 
 <https://w3id.org/dh-atlas/1742292618-959493/> rdfs:label "Giacomini, Sebastiano"@en ;
-    ns2:currentStatus "modified"^^xsd:string ;
+    ns2:currentStatus "published"^^xsd:string ;
     ns1:name "Giacomini, Sebastiano"@en ;
-    prov:generatedAtTime "2025-03-18T10:47:40.133662"^^xsd:dateTime ;
+    prov:generatedAtTime "2025-03-18T10:48:16.052401"^^xsd:dateTime ;
     prov:wasAttributedTo <https://w3id.org/dh-atlas/marilena-dot-daquino2-at-unibo-dot-it> ;
     prov:wasInfluencedBy <https://w3id.org/dh-atlas/marilena-dot-daquino2-at-unibo-dot-it> .
 
