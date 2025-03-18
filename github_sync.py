@@ -26,11 +26,19 @@ def ask_user_permission(code):
 		"client_secret" : clientSecret,
 		"code" : code
 	}
-
 	req = requests.post('https://github.com/login/oauth/access_token', data=body,
-						headers={"accept": "application/json"})
+                    headers={"accept": "application/json"})
+
+	print("GitHub Token Response:", req.text)  # Debugging output
+
 	if req.status_code == 200:
-		res = req.json()
+	    res = req.json()
+	    if "error" in res:
+	        print("GitHub OAuth Token Error:", res["error"])
+	        return None  # Ensure failure is handled
+	else:
+	    print("Failed to get token, status code:", req.status_code)
+
 	return res
 
 
@@ -40,7 +48,7 @@ def get_user_login(res):
 	print("user requesting github login:", res)
 	access_token = res["access_token"]
 	req_user = requests.get("https://api.github.com/user",
-							headers={"Authorization": "token "+access_token})
+							headers={"Authorization": "Bearer "+access_token})
 
 	if req_user.status_code == 200:
 		res_user = req_user.json()
@@ -54,7 +62,7 @@ def get_github_users(userlogin):
 	is_valid_user = False
 	if conf.token != '' and conf.owner != '' and conf.repo_name != '':
 		req = requests.get("https://api.github.com/repos/"+conf.owner+"/"+conf.repo_name+"/collaborators",
-							headers={"Authorization": "token "+conf.token})
+							headers={"Authorization": "Bearer "+conf.token})
 		if req.status_code == 200:
 			users = [user['login'] for user in req.json()]
 			if userlogin in users:
