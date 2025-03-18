@@ -602,7 +602,7 @@ class Record(object):
 		session['ip_address'] = str(web.ctx['ip'])
 		u.write_ip(str(datetime.datetime.now()), str(web.ctx['ip']), 'POST')
 		#block_user, limit = u.check_ip(str(web.ctx['ip']), str(datetime.datetime.now()) )
-		whereto = 'https://projects.dharc.unibo.it/atlas' if user == 'anonymous' else 'https://projects.dharc.unibo.it/welcome-1'
+		whereto = 'https://projects.dharc.unibo.it/atlas' if user == 'anonymous' else 'https://projects.dharc.unibo.it/atlas/welcome-1'
 
 		# form validation (ask_class)
 		if not f.validates():
