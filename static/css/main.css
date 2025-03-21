@@ -640,7 +640,6 @@ article p {
   background-color: #F5F6FA !important;
   z-index: 1022;
   width: 600px;
-  height: 550px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -704,7 +703,7 @@ article p {
   font-size: 14px;
 }
 
-#selectTemplateClassModal .modal-input input {
+#selectTemplateClassModal .modal-input input, #selectTemplateClassModal .modal-input textarea {
   margin-top: 10px;
 }
 
@@ -811,6 +810,21 @@ th {
   background: transparent
 }
 
+#paginate > input[type="button"] {
+  width: 55px !important;
+  margin: 0px 5px !important;
+}
+
+.pagination input.btn.extractor_2 {
+  width: 50px;
+}
+
+.pagination > .active-page {
+  color: var(--primary-color) !important;
+  border: solid 1px var(--primary-color) !important;
+  box-shadow: 3px 4px var(--primary-color) !important;
+}
+
 /* create record */
 .template-select-section {
   padding: 1em 10em 0em 0em !important;
@@ -863,6 +877,11 @@ th {
 #lookup,
 #close_section {
   margin-top: 1em;
+}
+
+#templates-description {
+  margin-top: 1.5em;
+  margin-left: -6em;
 }
 
 /* modify record */
@@ -1776,7 +1795,7 @@ table.url-table i, table.extraction-table i {
 }
 
 /* sliding right menu */
-#showRight, #scrollToTop {
+#showRight, #scrollToTop, #saveForm {
   position: fixed;
   right: 35px;
   transition: 0.3s;
@@ -1796,13 +1815,17 @@ table.url-table i, table.extraction-table i {
 }
 
 #scrollToTop {
-  bottom: 85px;
+  bottom: 35px;
   display: none;
   transition: visibility 0.3s;
 }
 
 #showRight {
-  bottom: 35px;
+  bottom: 85px;
+}
+
+#saveForm {
+  bottom: 135px;
 }
 
 .cbp-spmenu {
@@ -2592,6 +2615,11 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
     margin-bottom: 3em !important;
   }
 
+  #templates-description {
+    padding: 0 3em;
+    margin-left: 0px;
+  }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -2697,10 +2725,6 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
 }
 
 /* knowledge extraction */
-.pagination input.btn.extractor_2 {
-  width: 50px;
-}
-
 .hidden-result {
   display: none!important;
 }
@@ -2734,10 +2758,6 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
 .import-form input,
 .import-form select {
   margin-top: 0 !important;
-}
-
-.import-form .row input.btn {
-  width: 44%;
 }
 
 .add-graph-button {

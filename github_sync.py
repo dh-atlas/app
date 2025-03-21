@@ -40,12 +40,12 @@ def ask_user_permission(code):
 	print("Response Text:", req.text)
 	
 	if req.status_code == 200:
-	    res = req.json()
-	    if "error" in res:
-	        print("GitHub OAuth Token Error:", res["error"])
-	        return None  # Ensure failure is handled
+		res = req.json()
+	if "error" in res:
+		print("GitHub OAuth Token Error:", res["error"])
+		return None  # Ensure failure is handled
 	else:
-	    print("Failed to get token, status code:", req.status_code)
+		print("Failed to get token, status code:", req.status_code)
 
 	return res
 

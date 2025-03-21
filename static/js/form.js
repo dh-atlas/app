@@ -65,6 +65,16 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: buttonOffset - 500
         }, 800);
+
+        var value = $(this).val();
+        $("#templates-description").empty();
+        if (value !== "" && templatesDescription[value]["description"] !== "") {
+            var title = $("option[value='" + value + "']").text();
+            var content = $("<div style='display: none;'><h3>" + title + "</h3><p>" + templatesDescription[value]["description"] + "</p></div>");
+        
+            $("#templates-description").append(content);
+            content.fadeIn(500);
+        }
     })
     
 
@@ -1665,7 +1675,7 @@ function generateExtractor(ul,recordId,modifyId=null) {
             </select>\
         </section>\
         <section class='row extractor-0'>\
-            <input id='sparql-back0' class='btn btn-dark extractor-0' style='margin-left:20px' value='Back' onClick='prevExtractor(this, \"block_field\", \"form_row\", true,\""+extractorId+'-'+extractionInternalId+"\")'>\
+            <input id='sparql-back0' class='btn btn-dark extractor-0' type='button' style='margin-left:20px' value='Back' onClick='prevExtractor(this, \"block_field\", \"form_row\", true,\""+extractorId+'-'+extractionInternalId+"\",\""+recordId+"\")'>\
         </section>\
     </section>");
     $('#'+ul).after(extractor);
@@ -1825,7 +1835,7 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
             </select>\
         </section>\
         <section class='row extractor-1 manual-extraction' style='display: none;'>\
-            <input id='parse-file' class='btn btn-dark extractor-1' style='margin-left:20px;' value='Parse File' onClick='parseFile(this)'>\
+            <input id='parse-file' class='btn btn-dark extractor-1' style='margin-left:20px;' type='button' value='Parse File' onClick='parseFile(this)'>\
         </section>\
         <section class='row extractor-1 sparql-extraction' style='display: none;'>\
             <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>QUERY<br><span class='comment'>a sparql query to be performed</span></label>\
@@ -1848,10 +1858,11 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
     }
 
     // navigation button
-    var buttons = $("<section class='row extractor-1'>\
-        <input id='"+extractionType+"-back-1' class='btn btn-dark extractor-1' style='margin-left:20px' value='Back' onClick='prevExtractor(this, \"extractor-1\", \"form_row\", true,\""+recordId+"\",\""+extractionId+"\")'>\
-        <input id='"+extractionType+"-next-1' class='btn btn-dark extractor-1' style='margin-left:20px' value='Next' onClick='nextExtractor(this, \""+recordId+"\", \""+extractionId+"\", \""+extractionType+"\")'>\
-    </section>");
+    var buttons = $("<hr class='extractor-1'>\
+        <section class='row extractor-1'>\
+            <input id='"+extractionType+"-back-1' class='btn btn-dark extractor-1' style='margin-left:20px' type='button' value='Back' onClick='prevExtractor(this, \"extractor-1\", \"form_row\", true,\""+extractionId+"\",\""+recordId+"\")'>\
+            <input id='"+extractionType+"-next-1' class='btn btn-dark extractor-1' style='margin-left:20px' type='button' value='Next' onClick='nextExtractor(this, \""+recordId+"\", \""+extractionId+"\", \""+extractionType+"\")'>\
+        </section>");
 
     // add event listener to form buttons
     form.find('.add-parameter').on('click', function() {
@@ -1887,6 +1898,8 @@ function fileExtractionType(element) {
 
 // parse the static file 
 function parseFile(element) {
+    $(element).blur();
+
     // get the URL to send the ajax query
     let url = new URL(window.location.href);
     let baseUrl = url.origin + url.pathname.substring(0, url.pathname.lastIndexOf('/'));
@@ -1941,6 +1954,8 @@ function parseFile(element) {
 
 // parse the extraction parameters and send requests
 function nextExtractor(element, recordId, id, type) {
+    $(element).blur();
+
     // retrieve extractor Id and extraction count
     var splitId = id.split('-');
     var extractionCount = parseInt(splitId[1]);
@@ -1973,7 +1988,7 @@ function nextExtractor(element, recordId, id, type) {
             objectItem["query"] = queryParameters
             objectItem["results"] = resultsParameters
         } else {
-            alert("Please, check your parameters before proceeding");
+            showErrorPopup("Error:","Please, check your query parameters before proceeding!");
             return null
         }
         console.log(objectItem);
@@ -2008,20 +2023,28 @@ function nextExtractor(element, recordId, id, type) {
     // extract data with provided queries
     if (type == "api") {
         // API QUERY:
-        $.getJSON(objectItem["url"], objectItem["query"],
-            function(data) {
-                // show the query results in a table
-                console.log(data)
-                var bindings = showExtractionResult(data,type,id,recordId,objectItem);
-                objectItem["output"] = bindings;
-        }).error(function(jqXHR, textStatus, errorThrown) {
-            showErrorPopup(("error: check your parameters"))
+        showLoadingPopup("Processing your request...", "Your query is being executed. This may take a few moments. Please wait...", true);
+
+        let request = $.getJSON(objectItem["url"], objectItem["query"], function(data) {
+            hidePopup();
+
+            // show the query results in a table
+            var bindings = showExtractionResult(data, type, id, recordId, objectItem);
+            objectItem["output"] = bindings;
+
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            hidePopup();
+            showErrorPopup("Error:", "Please, check your query parameters before proceeding!");
+        });
+
+        $("#cancelBtn").on("click", function() {
+            request.abort();  // abort query to API
+            hidePopup();
+            showErrorPopup("Query Canceled", "The query has been stopped by the user.");
         })
     } else if (type == "file" || type == 'sparql') {
         // FILE QUERY and SPARQL QUERY:
-        console.log(objectItem)
         callSparqlanything(objectItem,id,recordId,type);
-        console.log(objectItem)
     }
 
     // add the extraction information, including the results, to the Extractions Object
@@ -2127,7 +2150,6 @@ function getExtractionParameters(type,element) {
 
 // call back-end API to perform SPARQL.Anything queries
 function callSparqlanything(objectItem, id, recordId, type) {
-    console.log(objectItem)
     var q = objectItem.query;
     var endpoint = objectItem.url;
     var service = $("#imported-graphs-"+id.split("-")[0]).data("reconciliation");
@@ -2143,21 +2165,48 @@ function callSparqlanything(objectItem, id, recordId, type) {
     // get the URL to send the query
     let url = new URL(window.location.href);
     let baseUrl = url.origin + url.pathname.substring(0, url.pathname.lastIndexOf('/'));
+    let eventSource = new EventSource(baseUrl + '/sparqlanything?action=searchentities&q=' + encoded + '&service=' + service);
+    let length;
+    let swalInstance;
 
-    // send the query to the back-end API and parse the results
-    $.ajax({
-        type: 'GET',
-        url: baseUrl+'/sparqlanything?action=searchentities&q=' + encoded + '&service=' + service,
-        success: function(resultsJsonObject) {
-            // show results inside a table
-            var bindings = showExtractionResult(resultsJsonObject,type,id,recordId);
+    showLoadingPopup("Processing your request...", "Your query is being executed. This may take a few moments. Please wait...", true);
+    $("#cancelBtn").on("click", function() {
+        eventSource.close(); // abort query
+        hidePopup();
+        showErrorPopup("Query Canceled", "The query has been stopped by the user.");
+    })
+
+    eventSource.onmessage = function(event) {
+        let data = JSON.parse(event.data);
+
+        // Show the total number of retrieved entities
+        if (data.length !== undefined) {
+            hidePopup();
+            swalInstance = showLoadingPopup("Successful query!", "We are processing the results:\n0/" + data.length, true);
+            length = data.length;
+
+            // close the event on "Cancel" button click
+            $("#cancelBtn").on("click", function() {
+                eventSource.close();
+                hidePopup();
+            })
+        } 
+        // Display the number of processed results
+        else if (data.count !== undefined) {
+            // Update Swal text
+            $('.swal2-html-container').text("We are processing the results:\n" + data.count + "/" + length);
+        } 
+        // Close the event and save results
+        else if (data.data !== undefined) {
+            hidePopup();
+            showAutoCloseTimerPopup("Successful query!", "Query results have been processed")
+            eventSource.close();  // End connection
+            console.log(data.data)
+            var bindings = showExtractionResult(data.data,type,id,recordId);
             objectItem['output'] = bindings
             return objectItem;
-        },
-        error: function() {
-            alert(("error: check your parameters"))
         }
-    });
+    };
 }
 
 /* FILE */
@@ -2302,7 +2351,7 @@ function showExtractionResult(jsonData,type,extractionId,recordId,objectItem=nul
         });
         
         if (resultsArray === undefined) {
-            showErrorPopup(("error: check your parameters"))
+            showErrorPopup("Error:","Please, check your query parameters before proceeding!");
             return false;
         }
         resultsArray.forEach(function(res) {
@@ -2366,10 +2415,11 @@ function showExtractionResult(jsonData,type,extractionId,recordId,objectItem=nul
     });
 
     // manage navigation buttons 
-    var buttonList = "<section class='row extractor-2'>\
-        <input id='api-back2' class='btn btn-dark extractor-2' style='margin-left:20px' value='Back' onClick='prevExtractor(this, \"extractor-2\", \"extractor-1\")'>\
-        <input id='api-next2' class='btn btn-dark extractor-2' style='margin-left:20px' value='Import' onClick='prevExtractor(this, \"extractor-2\", \"form_row\", true,\""+extractionId+"\",\""+recordId+"\")'>\
-    </section>";
+    var buttonList = $("<hr class='extractor-2'>\
+        <section class='row extractor-2'>\
+            <input id='api-back2' class='btn btn-dark extractor-2' style='margin-left:20px' type='button' value='Back' onClick='prevExtractor(this, \"extractor-2\", \"extractor-1\")'>\
+            <input id='api-next2' class='btn btn-dark extractor-2' style='margin-left:20px' type='button' value='Import' onClick='prevExtractor(this, \"extractor-2\", \"form_row\", true,\""+extractionId+"\",\""+recordId+"\")'>\
+        </section>");
     $('.extractor-1').hide();
     $('.import-form.block_field .block_field').append(resultSection);
     $('.import-form.block_field .block_field').append(buttonList);
@@ -2441,8 +2491,9 @@ function extractorPagination(extractionId,results) {
     var page_section = $('<section id="paginate" class="pagination row justify-content-md-center justify-content-lg-center extractor-2"></section>')
     for (let n=0; n<total;n++) {
         var page_n = n + 1
-        var button=$('<input id="page_'+page_n+'" class="btn btn-dark extractor-2" value="'+page_n+'" onClick="changeResultsPage(\''+page_n+'\', \''+length+'\')">');
-        page_section.append(button)
+        var activeClass = page_n == 1 ? " active-page" : "";
+        var button=$('<input id="page_'+page_n+'" type="button" class="btn btn-dark extractor-2'+activeClass+'" value="'+page_n+'" onClick="changeResultsPage(\''+page_n+'\', \''+length+'\')">');
+        page_section.append(button);
     }
 
     var extractionFieldId = "imported-graphs-"+extractionId.split("-")[0];
@@ -2450,8 +2501,9 @@ function extractorPagination(extractionId,results) {
 }
 
 function changeResultsPage(page_n, length) {
+    $(".active-page").removeClass("active-page");
+    $("#page_"+page_n).addClass("active-page");
     var starting_result = 25 * (parseInt(page_n)-1);
-    console.log(page_n, starting_result)
 
     $('.extractor-2').find('tr').addClass('hidden-result');
     if (length >= starting_result+25) {

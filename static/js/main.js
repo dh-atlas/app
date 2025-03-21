@@ -104,7 +104,7 @@ $(document).ready(function() {
 	// tooltips
 	$('.tip').tooltip({
     container: 'body'
-});
+  });
 
   // fields without tooltip
   $('.input_or_select').not(':has(.tip)').css("padding-left","3.2em");
@@ -251,7 +251,8 @@ $(document).ready(function() {
 
 	// autoresize textarea
 	$('textarea').each(function () {
-    var styleAttr= 'height:' + (this.scrollHeight)/2 + 'px;overflow-y:hidden;';
+    var height = $(this).attr("name") == "class_description" ? 60 : (this.scrollHeight)/2;
+    var styleAttr= 'height:' + height + 'px;overflow-y:hidden;';
     if (this.classList.contains('hiddenInput')) { styleAttr += 'display:none;'}
 		this.setAttribute('style', styleAttr);
 	}).on('input', function () {
@@ -303,8 +304,6 @@ $(document).ready(function() {
     });
 	};
 
-  // hide lookup when creating a record
-  $("#lookup").hide();
 	// append WD icon to input fields
 	$('.searchWikidata').parent().prev().append(wdImg);
   $('.searchWikidata').parent().prev().append(viafImg);
@@ -1550,13 +1549,18 @@ function filterBySubclass(btn) {
 
 // Alerts
 
-function showLoadingPopup(title, text) {
-  Swal.fire({ 
+function showLoadingPopup(title, text, allowCancel = false) {
+  var footer = allowCancel ? '<button id="cancelBtn" class="swal2-confirm swal2-styled">Cancel</button>' : '';
+
+  return Swal.fire({
     title: title,
     text: text,
+    showConfirmButton: false,
+    allowOutsideClick: false,
     didOpen: () => {
       Swal.showLoading();
-    }
+    },
+    footer: footer
   });
 }
 
@@ -1567,6 +1571,17 @@ function showErrorPopup(title, text) {
     icon: "error"
   });
 }
+
+function showAutoCloseTimerPopup(title, text) {
+  Swal.fire({ 
+    title: title,
+    text: text,
+    icon: "success",
+    timer: 1500,
+    timerProgressBar: true,
+  });
+}
+
 
 function hidePopup() {
   Swal.close();
