@@ -1,4 +1,4 @@
-$def with(record_form,pageID,user,alert,limit,is_git_auth,invalid,project,template,query_templates,knowledge_extractor,main_lang)
+$def with(record_form,pageID,user,alert,limit,is_git_auth,invalid,project,template,query_templates,knowledge_extractor,main_lang,descriptions_dict)
 $var user = user
 $var is_git_auth = is_git_auth
 $var project = project
@@ -12,6 +12,7 @@ $if alert == False:
 		</script>
 	<header class="row needDoc">
 		<button id="showRight"><i class="far fa-lightbulb"></i> help</button>
+		<button id="saveForm" form="recordForm" type="submit"><i class="far fa-save"></i> save</button>
 		$if template:
 			<button id="scrollToTop"><i class="fas fa-arrow-up"></i> top</button>
 		<script type="text/javascript">
@@ -20,8 +21,15 @@ $if alert == False:
 			} );
 			setTimeout( function(){ document.getElementById( "recordForm" ).reset(); }, 5 );
 		</script>
+		<script type="text/javascript">
+			const templatesDescriptionString = '$descriptions_dict'.replace(/&#39;/g, '"');
+			const templatesDescription = JSON.parse(templatesDescriptionString);
+		</script>
 		$if invalid == True:
 			<h3>The form is not valid, please check mandatory fields</h3>
+		$elif template:
+			<h3 class="col-md-12 col-sm-12">$descriptions_dict[template]["name"]</h3>			
+			<p class="col-md-12 col-sm-12">$descriptions_dict[template]["description"]</p>
 		$else:
 			<h3>Thanks for helping $project to grow!</h3>
 	</header>
@@ -133,8 +141,9 @@ $if alert == False:
 		</section>
 		<section id="searchresult">
 		</section>
-		<section class="col-md-3" id="lookup">
-		</section>
+		$if not template:
+			<section class="col-lg-3 col-md-3 col-12" id="templates-description">
+			</section>
 	</section>
 	<link rel="stylesheet" type="text/css" href="./static/css/yasgui.css">
 	<script src='static/js/yasr.bundled.min.js'></script>

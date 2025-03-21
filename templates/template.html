@@ -452,7 +452,7 @@ $else:
 
 	<!-- CREATE SUBTEMPLATE FORM -->
 	<section id="selectTemplateClassModal" aria-labelledby="selectTemplateClassButton" role="menu">
-		<form id="selectTemplateClass" name="selectTemplateClass" class="">
+		<form id="selectTemplateClass" name="selectTemplateClass" class="" method="POST">
 			<section>
 				<span>New Template  <i class='fas fa-times'></i></span>
 			</section>
@@ -461,11 +461,15 @@ $else:
 				<input type="text" name="class_name" value="" placeholder="e.g.: Work of art">
 			</section>
 			<section class="modal-input">
+				<span class="label">Description</span><br><span class="comment">provide a description for this template</span>
+				<textarea name="class_description" value="" placeholder="e.g.: The Work of Art class includes paintings, sculptures, drawings, installations, photographs, and other creative pieces made by artists."></textarea>
+			</section>
+			<section class="modal-input">
 				<span class="label">Class</span><br><span class="comment">choose one or multiple OWL classes</span>
 				<input type="text" name="class_uri" value="" placeholder="e.g.: crm:E22_Man-made-object">
 				<section id="uri-container"></section>
 			</section>
-			<section class="modal-input-button">
+			<section class="modal-input">
 				<input type="hidden" class="hiddenInput" name="action" value="createTemplate">
 				<button class="btn btn-dark" name="action" value="createTemplate" type="submit">Create</button>
 				<button class="btn btn-dark discard" value="cancelTemplate" type="submit">Cancel</button>

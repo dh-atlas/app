@@ -11,8 +11,9 @@ $if query_templates!=None:
 		const query_templates = JSON.parse(query_templates_str);
 	</script>
 <header class="row needDoc">
-	<button id="showRight"><i class="far fa-lightbulb"></i> help</button>
 	<button id="scrollToTop"><i class="fas fa-arrow-up"></i> top</button>
+	<button id="showRight"><i class="far fa-lightbulb"></i> help</button>
+	<button id="saveForm" name="action" value="saveRecord$:graph" form="modifyForm" type="submit"><i class="far fa-save"></i> save</button>
 	<script type="text/javascript">
 		$$('#cbp-spmenu-s2').load( "./documentation #documentation", function() {
 			setFormDocumentation();
