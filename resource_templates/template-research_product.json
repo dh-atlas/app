@@ -644,7 +644,7 @@
   "template-web_site": "resource_templates/template-web_site.json",
   "prepend": "The data service (API, endpoint) or website that grants access to the research product.",
   "dataReuse": "denyDataReuse",
-  "template-data_service": "resource_templates/template-data_service.json",
+  "template-computer_program": "resource_templates/template-computer_program.json",
   "property": "https://w3id.org/dh-atlas/servedBy",
   "label": "Access point",
   "cardinality": "multipleValues",
@@ -662,7 +662,7 @@
   "skosThesauri": [],
   "import_subtemplate": [
    "resource_templates/template-web_site.json",
-   "resource_templates/template-data_service.json"
+   "resource_templates/template-computer_program.json"
   ],
   "disabled": "False",
   "class": "col-md-12",
