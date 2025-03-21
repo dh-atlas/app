@@ -523,6 +523,7 @@ class Index:
 			res_type = sorted([ urllib.parse.unquote(actions[class_input].strip()) for class_input in actions if class_input.startswith("uri_class")])
 			res_type = conf.main_entity if res_type == [] else res_type
 			res_name = actions.class_name.replace(' ','_').lower() if "class_name" in actions else "not provided"
+			res_description = actions.class_description if "class_description" in actions else ""
 
 			with open(TEMPLATE_LIST,'r') as tpl_file:
 				templates = json.load(tpl_file)
@@ -532,7 +533,7 @@ class Index:
 			now_time = str(time.time()).replace('.','-')
 			# check for duplicates
 			res_n, adress = (actions.class_name, res_name) if (res_type not in types and res_name not in names) else (actions.class_name+'_'+now_time, res_name+'_'+now_time)
-			u.updateTemplateList(res_n,res_type)
+			u.updateTemplateList(res_n,res_type,res_description)
 			raise web.seeother(prefixLocal+'template-'+adress)
 
 		# delete existing template
@@ -574,6 +575,7 @@ class Record(object):
 		#block_user, limit = u.check_ip(str(web.ctx['ip']), str(datetime.datetime.now()) )
 		u.check_ask_class()
 		ask_form = u.change_template_names(is_git_auth)
+		descriptions_dict = u.get_templates_description()
 		f = forms.get_form(ask_form,True)
 
 		return render.record(record_form=f, pageID=name, user=user,
@@ -581,7 +583,7 @@ class Record(object):
 							is_git_auth=is_git_auth,invalid=False,
 							project=conf.myProject,template=None,
 							query_templates=None,knowledge_extractor=set(),
-							main_lang=conf.mainLang)
+							main_lang=conf.mainLang,descriptions_dict=descriptions_dict)
 
 	def POST(self, name):
 		""" Submit a new record
@@ -603,6 +605,7 @@ class Record(object):
 		u.write_ip(str(datetime.datetime.now()), str(web.ctx['ip']), 'POST')
 		#block_user, limit = u.check_ip(str(web.ctx['ip']), str(datetime.datetime.now()) )
 		whereto = 'https://projects.dharc.unibo.it/atlas' if user == 'anonymous' else 'https://projects.dharc.unibo.it/atlas/welcome-1'
+		descriptions_dict= u.get_templates_description()
 
 		# form validation (ask_class)
 		if not f.validates():
@@ -611,7 +614,7 @@ class Record(object):
 								limit=50, is_git_auth=is_git_auth,invalid=True,
 								project=conf.myProject,template=None,
 								query_templates=None,knowledge_extractor=set(),
-								main_lang=conf.mainLang)
+								main_lang=conf.mainLang,descriptions_dict=descriptions_dict)
 		else:
 			recordData = web.input()
 
@@ -625,7 +628,7 @@ class Record(object):
 									limit=50, is_git_auth=is_git_auth,invalid=False,
 									project=conf.myProject,template=recordData.res_name,
 									query_templates=query_templates,knowledge_extractor=extractor,
-									main_lang=conf.mainLang)
+									main_lang=conf.mainLang,descriptions_dict=descriptions_dict)
 				else:
 					raise web.seeother(prefixLocal+'record-'+name)
 
@@ -646,7 +649,7 @@ class Record(object):
 									limit=50, is_git_auth=is_git_auth,invalid=True,
 									project=conf.myProject,template=templateID,
 									query_templates=query_templates,knowledge_extractor=extractor,
-									main_lang=conf.mainLang)
+									main_lang=conf.mainLang,descriptions_dict=descriptions_dict)
 				else:
 					#u.update_knowledge_extraction(recordData,KNOWLEDGE_EXTRACTION)
 					userID = user.replace('@','-at-').replace('.','-dot-')
@@ -1034,7 +1037,7 @@ class View(object):
 
 			with open(res_template) as tpl_form:
 				fields = json.load(tpl_form)
-			fields = [field for field in fields if field['restricted'] == [] or any(subclass in field['restricted'] for subclass in res_subclasses)]
+			fields = [field for field in fields if field['restricted'] == [] or any(subclass in field['restricted'] for subclass in res_subclasses)] 
 			try:
 				title_field = [v for k,v in data.items() \
 					for field in fields if (field['disambiguate'] == "True" \
@@ -1147,7 +1150,7 @@ class Term(object):
 			appears_in_set = {
 				result["subject"]["value"]
 				for result in data["results"]["bindings"]
-				if result["object"]["value"] == uri
+				if result["object"]["value"] == uri 
 				and result["object"]["type"] == "uri"
 			}
 			appears_in = list(appears_in_set)
@@ -1369,7 +1372,6 @@ class Nlp(object):
 
 class Sparqlanything(object):
 	def GET(self):
-		web.header('Content-Type', 'application/json')
 		web.header('Access-Control-Allow-Origin', '*')
 		web.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
 
@@ -1382,6 +1384,7 @@ class Sparqlanything(object):
 		action = query_string.action
 
 		if action == "searchclasses":
+			web.header('Content-Type', 'application/json')
 			if query_str_decoded.endswith(".xml"):
 				classes_query = "SELECT DISTINCT ?class WHERE { SERVICE <x-sparql-anything:"+query_str_decoded+"> { ?subj a ?class } }"
 				temp_results = queries.SPARQLAnything(classes_query)
@@ -1399,16 +1402,33 @@ class Sparqlanything(object):
 			return json.dumps(results)
 
 		elif action == "searchentities":
+			web.header('Content-Type', 'text/event-stream')
+			web.header('Cache-Control', 'no-cache')
+			web.header('Connection', 'keep-alive')
 			results = queries.SPARQLAnything(query_str_decoded)
-			for result in results["results"]["bindings"]:
-				if "uri" not in result:
-					result["uri"] = {"value": result["label"]["value"], "type": "uri"}
-				uri = result["uri"]["value"]
-				if not (uri.startswith("http://") or uri.startswith("https://")):
-					service = query_string.service if "service" in action else "wd"
-					result["uri"]["value"] = queries.entity_reconciliation(uri,service)
+			total_results = len(results["results"]["bindings"])
 
-			return json.dumps(results)
+			def stream():
+				# Invia la lunghezza totale all'inizio
+				yield f"data: {json.dumps({'length': total_results})}\n\n"
+
+				count = 0  # Contatore delle iterazioni
+				for result in results["results"]["bindings"]:
+					if "uri" not in result:
+						result["uri"] = {"value": result["label"]["value"], "type": "uri"}
+
+					uri = result["uri"]["value"]
+					if not (uri.startswith("http://") or uri.startswith("https://")):
+						service = query_string.service if "service" in query_string else "wd"
+						result["uri"]["value"] = queries.entity_reconciliation(uri, service)
+
+					count += 1
+					yield f"data: {json.dumps({'count': count})}\n\n"  # Invia il conteggio progressivo
+
+				# Invia i risultati completi alla fine
+				yield f"data: {json.dumps({'data': results})}\n\n"
+
+			return stream()
 
 class Wikidata(object):
 	def GET(self):

@@ -321,7 +321,7 @@ def init_js_config(data):
 		# TODO, support for data served in a single graph
 		jsfile.writelines('var graph = "";\n')
 
-def updateTemplateList(res_name=None,res_type=None,remove=False):
+def updateTemplateList(res_name=None,res_type=None,res_description=None,remove=False):
 	"""Update the list of resource templates.
 	If the list has not been created yet, it creates the file.
 
@@ -349,6 +349,7 @@ def updateTemplateList(res_name=None,res_type=None,remove=False):
 		res["name"] = res_name
 		res["short_name"] = res_name.replace(' ','_').lower()
 		res["type"] = res_type
+		res["description"] = res_description
 		res["template"] = RESOURCE_TEMPLATES+'template-'+res_name.replace(' ','_').lower()+'.json'
 		res["hidden"] = "False"
 		res["subclasses"] = {}
@@ -492,6 +493,14 @@ def change_template_names(is_git_auth=True):
 			else:
 				del ask_tpl[0]['values'][tpl_file]
 	return ask_tpl
+
+def get_templates_description():
+	""" Return a list of descriptions of available templates """
+	with open(TEMPLATE_LIST,'r') as tpl_file:
+		data = json.load(tpl_file)
+
+	descriptions_dict = {tpl["template"]: {"description": tpl.get("description", ""), "name": tpl.get("name", "")} for tpl in data}
+	return descriptions_dict
 
 # UTILS
 
