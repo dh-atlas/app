@@ -121,6 +121,22 @@
             "uri": "resource"
         }
     },
+    "licence": {
+        "type": "API",
+        "url": "https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence",
+        "endpoint": "https://data.europa.eu/api/hub/search/search?",
+        "query_term_key": "query",
+        "parameters": {
+            "q": "Query-term",
+            "filter": "vocabulary",
+            "vocabulary": "licence"
+        },
+        "results": {
+            "array": "result.results",
+            "label": "pref_label.en",
+            "uri": "resource"
+        }
+    },
     "licenses": {
         "type": "SPARQL",
         "url": "https://schema.gov.it/sparql",
