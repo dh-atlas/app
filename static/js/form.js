@@ -1923,7 +1923,7 @@ function parseFile(element) {
                         var key = keysInputField.val();
                         setSearchResult(null,searchtermElement=$(this));
                         parsedFile.forEach(function(element,index) {
-                            if (element.includes(key)) {
+                            if (key !== "" && element.includes(key)) {
                                 $("#searchresult").append("<div class='viafitem'><a class='blue' data-id='" + index + "'>" + element + "</a></div>")
                         
                                 // add tag if the user chooses an item
@@ -2064,6 +2064,8 @@ function prevExtractor(element, toHide, toShow, remove=false, id=null, recordId=
     extractionBlockField.find('.'+toShow).filter(function() {
         return $(this).find('.original-subtemplate').length === 0;
     }).show();
+    $('.manual-extraction, .sparql-extraction, .manual-query').hide(); // static file extraction
+    $('#ExtractionType').val("None");
 
     if (remove) {
 
@@ -2260,7 +2262,11 @@ function buildQuery(fileURL, keys, queryFilters) {
                 
                 FILTER(isLiteral(?namePart) && datatype(?namePart) = xsd:string)
                 }
-            } GROUP BY ?name`;
+            } GROUP BY ?name } 
+            #regexFilter 
+            }
+            #countFilter
+        `;
     } else if (fileFormat === "csv") {
         var keyProperties = keys.map(function(index, element) {
             return 'rdf:_' + decodeURIComponent($(element).val()) + '';
@@ -2273,8 +2279,12 @@ function buildQuery(fileURL, keys, queryFilters) {
                 ${valuesClause} .
                 
                 FILTER(isLiteral(?label) && datatype(?label) = xsd:string)
+                #regexFilter 
                 }
-            }`;
+                } 
+            }
+        } 
+        #countFilter`;
     } else if (fileFormat === "json") {
         var keyProperties = keys.map(function(index, element) {
             return 'xyz:' + decodeURIComponent($(element).val()) + '';
@@ -2289,6 +2299,7 @@ function buildQuery(fileURL, keys, queryFilters) {
                 {
                         ?name ${keyProperties.join('|')} ?label .
                         FILTER(isLiteral(?label) && datatype(?label) = xsd:string)
+                        #regexFilter
                     }
                     UNION {
                         ?name ?keyProperties ?node .
@@ -2297,33 +2308,34 @@ function buildQuery(fileURL, keys, queryFilters) {
                         ?descendantNode ?labelProperty ?label .
                         
                         FILTER(isLiteral(?label) && datatype(?label) = xsd:string)
+                        #regexFilter
                     }
                     
-                }
-            }`;
+                }   
+            }
+        }} 
+        #countFilter`;
         /* WARNING: when retrieving Array's items, the max. amount of retrievable items is set to 10.
         To get a higher number of values, further rdf:_n properties must included within the query */
     }
 
     // add query filters
     if (queryFilters.length > 0) {
-        query = `SELECT ?label WHERE { {` + query.replace("SELECT DISTINCT ","SELECT ") + `}` ;
+        query = `SELECT DISTINCT ?label WHERE { {` + query.replace("SELECT DISTINCT ","SELECT ") ;
         queryFilters.each(function(index, element) {
             var filterType = $(element).find('select').val();
             var filterValue = $(element).find('input').val();
             filtersArray.push({filterType: filterValue})
 
             if (filterType === "regex") {
-                query+= `FILTER(REGEX(?label, "${filterValue}", "i")) }`
+                query = query.replaceAll("#regexFilter", `FILTER(REGEX(?label, "${filterValue}", "i"))`)
             }
             else if (filterType === "counter") {
-                query+= `}
-                GROUP BY ?label
-                HAVING (COUNT(?label) >= ${filterValue})`;
+                query = query.replaceAll("#countFilter", `GROUP BY ?label HAVING (COUNT(?label) >= ${filterValue})`);
             }
         });
     }
-
+    console.log(query)
     return [query, keysArray, filtersArray]
 }
 
