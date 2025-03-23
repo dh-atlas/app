@@ -10,16 +10,21 @@
   "subclasses": {}
  },
  {
-  "name": "Person",
-  "short_name": "person",
-  "description": "An individual agent contributing to research activities, such as a researcher, scholar, or developer.",
+  "name": "Research Product",
+  "short_name": "research_product",
+  "description": "Research products are the tangible outcomes of research activities, including Digital Scholarly Editions, Text Collections, Linked Open Data, Software, Ontologies, and more.",
   "type": [
-   "http://xmlns.com/foaf/0.1/Agent",
-   "https://schema.org/Person"
+   "https://schema.org/Dataset"
   ],
-  "template": "resource_templates/template-person.json",
+  "template": "resource_templates/template-research_product.json",
   "hidden": "False",
-  "subclasses": {}
+  "subclasses": {
+   "https://w3id.org/dh-atlas/Software": "Software",
+   "https://w3id.org/dh-atlas/Ontology": "Ontology",
+   "https://w3id.org/dh-atlas/TextCollection": "Text Collection",
+   "https://w3id.org/dh-atlas/LinkedOpenData": "Linked Open Data",
+   "https://w3id.org/dh-atlas/DigitalScholarlyEdition": "Digital Scholarly Edition"
+  }
  },
  {
   "name": "Research Project",
@@ -46,21 +51,16 @@
   "subclasses": {}
  },
  {
-  "name": "Research Product",
-  "short_name": "research_product",
-  "description": "Research products are the tangible outcomes of research activities, including Digital Scholarly Editions, Text Collections, Linked Open Data, Software, Ontologies, and more.",
+  "name": "Person",
+  "short_name": "person",
+  "description": "An individual agent contributing to research activities, such as a researcher, scholar, or developer.",
   "type": [
-   "https://schema.org/Dataset"
+   "http://xmlns.com/foaf/0.1/Agent",
+   "https://schema.org/Person"
   ],
-  "template": "resource_templates/template-research_product.json",
+  "template": "resource_templates/template-person.json",
   "hidden": "False",
-  "subclasses": {
-   "https://w3id.org/dh-atlas/Software": "Software",
-   "https://w3id.org/dh-atlas/Ontology": "Ontology",
-   "https://w3id.org/dh-atlas/TextCollection": "Text Collection",
-   "https://w3id.org/dh-atlas/LinkedOpenData": "Linked Open Data",
-   "https://w3id.org/dh-atlas/DigitalScholarlyEdition": "Digital Scholarly Edition"
-  }
+  "subclasses": {}
  },
  {
   "name": "Computer Program",
