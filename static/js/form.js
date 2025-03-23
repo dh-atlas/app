@@ -1352,7 +1352,7 @@ function searchSkos(searchterm) {
 
                     var request_parameters = {
                         type: 'GET',
-                        url: baseUrl+'/sparqlanything?action=searchentities&q=' + encodeURIComponent(query) + '&service=none'
+                        url: baseUrl+'/sparqlanything?action=searchentities&q=' + encodeURIComponent(query) + '&service=skos'
                     }
                     const request = $.ajax(request_parameters);
 

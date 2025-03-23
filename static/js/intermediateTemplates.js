@@ -123,7 +123,9 @@ function createSubrecord(subtemplateFieldId,label,el,dataReuse=false,subrecordId
                 clonedElements.push($(this).attr("id").split("_")[0]);
 
                 // CREATE A CLONE ELEMENT (of the field's section)
+                const cloneTip = $(this).closest(".form_row.block_field").find(".tip").clone(false);
                 const cloneElement = $(this).closest(".form_row.block_field").clone(true);
+                cloneElement.find(".tip").replaceWith(cloneTip);
                 cloneElement.find('textarea, select:not([type="hidden"]), input:not([type="hidden"]):not(label.switch input)').attr('data-subform',subrecordId); // associate the input field with the subrecord id
                 cloneElement.find('textarea, select, input').addClass('hidden');
                 cloneElement.find('textarea, select, input').removeClass('original-template');
@@ -341,7 +343,12 @@ function createSubrecord(subtemplateFieldId,label,el,dataReuse=false,subrecordId
     });
     subrecordSection.append(subrecordForm);
     $(el).before(subrecordSection);
-    
+    var tooltipTriggerList = subrecordSection.find(".tip").toArray(); // Converte in array DOM
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl); // Ora tooltipTriggerEl è un nodo DOM
+    });
+
+
 }
 
 function activateTemplateSelection(select,subrecordId) {
