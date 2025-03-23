@@ -1402,33 +1402,37 @@ class Sparqlanything(object):
 			return json.dumps(results)
 
 		elif action == "searchentities":
-			web.header('Content-Type', 'text/event-stream')
-			web.header('Cache-Control', 'no-cache')
-			web.header('Connection', 'keep-alive')
 			results = queries.SPARQLAnything(query_str_decoded)
 			total_results = len(results["results"]["bindings"])
+			service = query_string.service if "service" in query_string else "wd"
+			if service == "skos":
+				web.header('Content-Type', 'application/json')
+				print("results:", results)
+				return json.dumps(results)
+			else:
+				def stream():
+					# Invia la lunghezza totale all'inizio
+					web.header('Content-Type', 'text/event-stream')
+					web.header('Cache-Control', 'no-cache')
+					web.header('Connection', 'keep-alive')
+					yield f"data: {json.dumps({'length': total_results})}\n\n"
 
-			def stream():
-				# Invia la lunghezza totale all'inizio
-				yield f"data: {json.dumps({'length': total_results})}\n\n"
+					count = 0  # Contatore delle iterazioni
+					for result in results["results"]["bindings"]:
+						if "uri" not in result:
+							result["uri"] = {"value": result["label"]["value"], "type": "uri"}
 
-				count = 0  # Contatore delle iterazioni
-				for result in results["results"]["bindings"]:
-					if "uri" not in result:
-						result["uri"] = {"value": result["label"]["value"], "type": "uri"}
+						uri = result["uri"]["value"]
+						if not (uri.startswith("http://") or uri.startswith("https://")):
+							result["uri"]["value"] = queries.entity_reconciliation(uri, service)
 
-					uri = result["uri"]["value"]
-					if not (uri.startswith("http://") or uri.startswith("https://")):
-						service = query_string.service if "service" in query_string else "wd"
-						result["uri"]["value"] = queries.entity_reconciliation(uri, service)
+						count += 1
+						yield f"data: {json.dumps({'count': count})}\n\n"  # Invia il conteggio progressivo
 
-					count += 1
-					yield f"data: {json.dumps({'count': count})}\n\n"  # Invia il conteggio progressivo
+					# Invia i risultati completi alla fine
+					yield f"data: {json.dumps({'data': results})}\n\n"
 
-				# Invia i risultati completi alla fine
-				yield f"data: {json.dumps({'data': results})}\n\n"
-
-			return stream()
+				return stream()
 
 class Wikidata(object):
 	def GET(self):
