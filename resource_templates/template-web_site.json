@@ -75,7 +75,7 @@
   "view_class": ""
  },
  {
-  "id": "1728986955848",
+  "id": "1728986955849",
   "prepend": "The URL of a document describing the operations, parameters etc. with respect to the dataset.",
   "value": "URL",
   "label": "Documentation",
@@ -129,7 +129,7 @@
   "view_class": ""
  },
  {
-  "id": "1728987062168",
+  "id": "1728987062169",
   "prepend": "Software component that is reused/extended in the current software. It can be a research product or the URL of the official page of the software.",
   "value": "URI",
   "type": "Textbox",
