@@ -1549,6 +1549,10 @@ table.url-table i, table.extraction-table i {
   padding-left: 0;
 }
 
+.tip {
+  position: relative;
+}
+
 .inverse-property {
   display: flex;
   flex-direction: column;
@@ -1556,8 +1560,12 @@ table.url-table i, table.extraction-table i {
   padding: 10px 30px 10px 0; 
 }
 
-.inverse-property:first-of-type {
-  width: 20%
+.inverse-property:nth-child(odd) {
+  width: 20%;
+}
+
+.inverse-property:nth-child(even) {
+  width: 70%;
 }
 
 .inverse-property span {
