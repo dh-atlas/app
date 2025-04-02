@@ -366,6 +366,20 @@ $(document).ready(function() {
   // change select aspect everywhere
   $('section > select').addClass('custom-select');
 
+  // sort alphabetical filters
+  $(".alphabet").each(function () {
+    var allValues = $(this).parent().find(".list").get();
+
+    allValues.sort(function (a, b) {
+      let textA = $(a).find("a").text().toUpperCase(); // Testo di <a> in maiuscolo
+      let textB = $(b).find("a").text().toUpperCase();
+      return textA.localeCompare(textB); // Confronta alfabeticamente
+    });
+
+    $(this).after(allValues);
+
+  })
+
   // sort alphabetically in EXPLORE
   $('.wrapAllparent').each(function () {
     $(this).append("<section class='accordion-group'></section>");

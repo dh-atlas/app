@@ -708,7 +708,7 @@ function searchCatalogueByClass(searchterm,fieldId,singleValue) {
                         })
                         
                         if ($('[name="'+fieldId+'-subrecords"]').length && $('[name="'+fieldId+'-subrecords"]').val()!="" && !singleValue) {
-                            $('[name="'+fieldId+'-subrecords"]').val($('[name="'+fieldId+'-subrecords"]').val()+","+oldID+";"+oldLabel);
+                            $('[name="'+fieldId+'-subrecords"]').val($('[name="'+fieldId+'-subrecords"]').val()+",,"+oldID+";"+oldLabel);
                         } else {
                             $('[name="'+fieldId+'-subrecords"]').remove();
                             const new_sub = $("<input type='hidden' name='"+fieldId+"-subrecords' value='"+oldID+";"+oldLabel+"'>")
