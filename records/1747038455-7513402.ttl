@@ -1,0 +1,82 @@
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://schema.org/> .
+@prefix ns3: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1747038455-7513402 a schema:Dataset,
+        ns1:TextCollection ;
+    rdfs:label "RIALFrI - Digital Repertory of Medieval Franco-Italian Literature"@en ;
+    ns2:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-09> ;
+    ns2:additionalType ns1:TextCollection ;
+    ns2:citation <https://hdl.handle.net/11577/2526042> ;
+    ns2:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns2:contributor ns1:1729161349-6181638,
+        ns1:1747040396-23 ;
+    ns2:creator ns1:1747039339-405 ;
+    ns2:datePublished "2022-01-01"^^xsd:date ;
+    ns2:description "RIALFrI (Digital Repertory of Medieval Franco-Italian Literature) is a collection of medieval Franco-Italian literary texts written in Northern Italy between the 13th and 15th centuries. These works feature a unique hybrid language that combines French and Italian dialects. The collection is accessible via a website that offers a comprehensive field bibliography, manuscript and early book reproductions, introductory notes to individual texts, philological apparatuses, and linguistic analyses. A search engine allows users to explore the texts."@en ;
+    ns2:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+        <https://vocabs.dariah.eu/tadirah/searching> ;
+    ns2:genre "poetry, letters, chivalric romance"@en ;
+    ns2:identifier "ISSN 2282-6920"@en ;
+    ns2:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/FRA>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns2:name "RIALFrI - Digital Repertory of Medieval Franco-Italian Literature"@en,
+        "RIALFrI - Repertorio Informatizzato Antica Letteratura Franco-Italiana"@it ;
+    ns2:publisher ns1:1747039653-148 ;
+    ns2:size "206 works"@en ;
+    ns2:url <https://www.rialfri.eu/> ;
+    ns2:version "2.0"@en ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/collecting>,
+        <https://vocabs.dariah.eu/tadirah/description>,
+        <https://vocabs.dariah.eu/tadirah/editing>,
+        <https://vocabs.dariah.eu/tadirah/encoding>,
+        <https://vocabs.dariah.eu/tadirah/lemmatizing> .
+
+<https://w3id.org/dh-atlas/1747038455-7513402/> rdfs:label "RIALFrI - Digital Repertory of Medieval Franco-Italian Literature"@en ;
+    ns3:currentStatus "not modified"^^xsd:string ;
+    ns2:name "RIALFrI - Digital Repertory of Medieval Franco-Italian Literature"@en ;
+    prov:generatedAtTime "2025-05-12T09:13:02.092650"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:chiaramartignano-at-gmail-dot-com .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/FRA> skos:prefLabel "French - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/collecting> skos:prefLabel "Collecting - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/description> skos:prefLabel "Description - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/editing> skos:prefLabel "Editing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/encoding> skos:prefLabel "Encoding - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/lemmatizing> skos:prefLabel "Lemmatizing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/searching> skos:prefLabel "Searching - TADIRAH"^^xsd:string .
+
+ns1:1729161349-6181638 rdfs:label "Tessarolo, Luigi"^^xsd:string .
+
+ns1:1747039339-405 rdfs:label "Francesca Gambino"^^xsd:string .
+
+ns1:1747039653-148 rdfs:label "University of Padua"^^xsd:string .
+
+ns1:1747040396-23 rdfs:label "Serena Modena"^^xsd:string .
+
+ns1:chiaramartignano-at-gmail-dot-com rdfs:label "chiaramartignano@gmail.com" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-09> skos:prefLabel "Romance philology and linguistics - ACADEMIC FIELD"^^xsd:string .
+
+ns1:TextCollection rdfs:label "Text Collection"^^xsd:string .
+
