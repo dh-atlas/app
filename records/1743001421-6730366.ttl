@@ -1,0 +1,36 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix default3: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743001421-6730366> a schema:Dataset,
+        <https://w3id.org/dh-atlas/Software> ;
+    rdfs:label "Omeka S"@en ;
+    :additionalType <https://w3id.org/dh-atlas/Software> ;
+    :description "Omeka S is a next-generation web publishing platform for institutions interested in connecting digital cultural heritage collections with other resources online."@en ;
+    :license <http://publications.europa.eu/resource/authority/licence/CC_BYNC_2_0>,
+        <http://publications.europa.eu/resource/authority/licence/GPL_2_0_OR_LATER> ;
+    :name "Omeka S"@en ;
+    :url <https://omeka.org/s/> ;
+    :usageInfo <https://omeka.org/s/docs/user-manual/> .
+
+<https://w3id.org/dh-atlas/1743001421-6730366/> rdfs:label "Omeka S"@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "Omeka S"@en ;
+    default2:generatedAtTime "2025-04-01T15:23:22.813000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/gianmarco-dot-spinaci2-at-unibo-dot-it> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<http://publications.europa.eu/resource/authority/licence/CC_BYNC_2_0> default3:prefLabel "Creative Commons Attribution–NonCommercial 2.0 Generic - LICENCE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/GPL_2_0_OR_LATER> default3:prefLabel "GNU General Public License v2.0 or later - LICENCE"^^xsd:string .
+
+<https://w3id.org/dh-atlas/gianmarco-dot-spinaci2-at-unibo-dot-it> rdfs:label "gianmarco.spinaci2@unibo.it" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/dh-atlas/Software> rdfs:label "Software"^^xsd:string .
+

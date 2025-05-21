@@ -1,0 +1,21 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743003368-076> a <http://purl.org/spar/fabio/WebSite> ;
+    rdfs:label "Paolo Bufalini's Notebook"@en ;
+    :name "Paolo Bufalini's Notebook"@en .
+
+<https://w3id.org/dh-atlas/1743003368-076/> rdfs:label "Paolo Bufalini's Notebook"@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "Paolo Bufalini's Notebook"@en ;
+    default2:generatedAtTime "2025-03-31T14:31:40.571000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/maria-dot-bocchi4-at-unibo-dot-it> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<https://w3id.org/dh-atlas/maria-dot-bocchi4-at-unibo-dot-it> rdfs:label "maria.bocchi4@unibo.it" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

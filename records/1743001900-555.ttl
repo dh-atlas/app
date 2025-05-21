@@ -1,0 +1,29 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743001900-555> a foaf:Agent,
+        schema:Organization ;
+    rdfs:label "LMU University of Munich"@en ;
+    :identifier <https://viaf.org/en/viaf/130908825> ;
+    :name "LMU University of Munich"@en ;
+    :sameAs <http://www.wikidata.org/entity/Q55044> ;
+    :url <https://www.lmu.de/> .
+
+<https://w3id.org/dh-atlas/1743001900-555/> rdfs:label "LMU University of Munich"@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "LMU University of Munich"@en ;
+    default2:generatedAtTime "2025-04-01T14:32:50.439000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/b-dot-sartini-at-lmu-dot-de> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<http://www.wikidata.org/entity/Q55044> rdfs:label "Ludwig-Maximilian-University in Munich"^^xsd:string .
+
+<https://w3id.org/dh-atlas/b-dot-sartini-at-lmu-dot-de> rdfs:label "b.sartini@lmu.de" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

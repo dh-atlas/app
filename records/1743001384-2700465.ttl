@@ -1,0 +1,25 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743001384-2700465> a foaf:Agent,
+        schema:ResearchProject ;
+    rdfs:label " ARIADNE Rerearch Infrastructure"@en ;
+    :description "The data infrastructure serving the archaeological community worldwide"@en ;
+    :name " ARIADNE Rerearch Infrastructure"@en .
+
+<https://w3id.org/dh-atlas/1743001384-2700465/> rdfs:label " ARIADNE Rerearch Infrastructure"@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name " ARIADNE Rerearch Infrastructure"@en ;
+    default2:generatedAtTime "2025-04-01T16:24:59.403000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/bianca-dot-gualandi4-at-unibo-dot-it> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<https://w3id.org/dh-atlas/bianca-dot-gualandi4-at-unibo-dot-it> rdfs:label "bianca.gualandi4@unibo.it" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

@@ -1,0 +1,28 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743001979-769> a foaf:Agent,
+        schema:Organization ;
+    rdfs:label "Inkless Editions"@en ;
+    :location <https://sws.geonames.org/6141256> ;
+    :name "Inkless Editions"@en ;
+    :url <https://www.inklesseditions.com/> .
+
+<https://w3id.org/dh-atlas/1743001979-769/> rdfs:label "Inkless Editions"@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "Inkless Editions"@en ;
+    default2:generatedAtTime "2025-04-01T15:42:53.772000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/elena-dot-spadini-at-unibas-dot-ch> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<https://sws.geonames.org/6141256> rdfs:label "Saskatoon"^^xsd:string .
+
+<https://w3id.org/dh-atlas/elena-dot-spadini-at-unibas-dot-ch> rdfs:label "elena.spadini@unibas.ch" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

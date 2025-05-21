@@ -1,0 +1,80 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://purl.org/dc/terms/> .
+@prefix default2: <https://w3id.org/dh-atlas/> .
+@prefix default3: <http://dbpedia.org/ontology/> .
+@prefix default4: <http://www.w3.org/ns/prov#> .
+@prefix default5: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+default2:1743002731-3952093 a schema:Dataset,
+        default2:DigitalScholarlyEdition ;
+    rdfs:label "Bellini Digital Correspondence"@en ;
+    default1:conformsTo <http://www.wikidata.org/entity/Q780920> ;
+    :about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ART-07> ;
+    :additionalType default2:DigitalScholarlyEdition ;
+    :conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    :contributor default2:1743001663-54,
+        default2:1743002123-776 ;
+    :creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    :creator default2:1729013826-8967187,
+        default2:1743001775-74 ;
+    :description "The Digital Scholarly Edition (DSE) of the correspondence written by the renowned composer Vincenzo Bellini (1801 - 1835) from Catania."@en ;
+    :encodingFormat <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    :genre <http://www.wikidata.org/entity/Q1784733> ;
+    :identifier "DOI 10.6092/issn.2532-8816/9162"@en ;
+    :inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
+    :license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    :name "Bellini Digital Correspondence"@en ;
+    :producer default2:1743001073-012622 ;
+    :publisher default2:1728999602-7282345 ;
+    :url <http://bellinicorrespondence.cnr.it/> ;
+    default2:editionType <http://www.w3id.org/dh-atlas/DigitalEdition> ;
+    default2:referencedWorkType <http://www.w3id.org/dh-atlas/Letter> .
+
+<https://w3id.org/dh-atlas/1743002731-3952093/> rdfs:label "Bellini Digital Correspondence"@en ;
+    default3:currentStatus "modified"^^xsd:string ;
+    :name "Bellini Digital Correspondence"@en ;
+    default4:generatedAtTime "2025-04-01T09:47:10.069000+00:00"^^xsd:dateTime ;
+    default4:wasAttributedTo default2:chiara-dot-manca5-at-unibo-dot-it ;
+    default4:wasInfluencedBy default2:sebastiano-dot-giacomin2-at-unibo-dot-it .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> default5:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/XML> default5:prefLabel "XML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> default5:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> default5:prefLabel "Creative Commons Attribution 4.0 International - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.w3id.org/dh-atlas/DigitalEdition> rdfs:label "Digital Edition"^^xsd:string .
+
+<http://www.w3id.org/dh-atlas/Letter> rdfs:label "Letter"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1784733> rdfs:label "correspondence"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q780920> rdfs:label "Text Encoding Initiative"^^xsd:string .
+
+default2:1728999602-7282345 rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+default2:1729013826-8967187 rdfs:label "Del Grosso, Angelo Mario"^^xsd:string .
+
+default2:1743001073-012622 rdfs:label "Bellini Digital Correspondence Project"^^xsd:string .
+
+default2:1743001663-54 rdfs:label "Capizzi, Erica"^^xsd:string .
+
+default2:1743001775-74 rdfs:label "Spampinato, Daria"^^xsd:string .
+
+default2:1743002123-776 rdfs:label "Seminara, Graziella"^^xsd:string .
+
+default2:chiara-dot-manca5-at-unibo-dot-it rdfs:label "chiara.manca5@unibo.it" .
+
+default2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ART-07> default5:prefLabel "Musicology and history of music - ACADEMIC FIELD"^^xsd:string .
+
+default2:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
+

@@ -1,0 +1,79 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://purl.org/dc/terms/> .
+@prefix default2: <https://w3id.org/dh-atlas/> .
+@prefix default3: <http://dbpedia.org/ontology/> .
+@prefix default4: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+default2:1743001846-6696072 a schema:Dataset,
+        default2:LinkedOpenData ;
+    rdfs:label "mythLOD Dataset"@en ;
+    default1:conformsTo <http://www.wikidata.org/entity/Q54872> ;
+    default1:references <http://www.wikidata.org/entity/Q5427036>,
+        <http://www.wikidata.org/entity/Q624610> ;
+    :about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-08> ;
+    :additionalType default2:LinkedOpenData ;
+    :citation <https://doi.org/10.2426/aibstudi-13301> ;
+    :conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    :creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    :creator default2:1729185781-6054392 ;
+    :datePublished "2021-03-31"^^xsd:date ;
+    :description "RDF version of the Mythologiae source data, containing 4260 cultural objects with different characteristics (e.g types, periods, authors, collocations) and references to literary sources, expressed in the nquads format."@en ;
+    :distribution <https://dharc-org.github.io/mythlod/dataset.nq> ;
+    :encodingFormat <http://publications.europa.eu/resource/authority/file-type/RDF_N_QUADS> ;
+    :identifier "10.5281/zenodo.4639821"@en ;
+    :inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    :license <http://publications.europa.eu/resource/authority/licence/CC_BYNCND_1_0> ;
+    :name "mythLOD Dataset"@en ;
+    :producer default2:1743001407-1913564 ;
+    :publisher default2:1729185609-482096 ;
+    :url <https://dharc-org.github.io/mythlod/static/dataset.html> ;
+    :usageInfo <https://dharc-org.github.io/mythlod/static/datamodel.html> ;
+    :version "1.0"@en ;
+    default2:methodology <https://vocabs.dariah.eu/tadirah/cataloging>,
+        <https://vocabs.dariah.eu/tadirah/modeling> .
+
+<https://w3id.org/dh-atlas/1743001846-6696072/> rdfs:label "mythLOD Dataset"@en ;
+    default3:currentStatus "modified"^^xsd:string ;
+    :name "mythLOD Dataset"@en ;
+    default4:generatedAtTime "2025-04-01T14:57:01.119000+00:00"^^xsd:dateTime ;
+    default4:wasAttributedTo default2:laurent-dot-fintoni2-at-unibo-dot-it ;
+    default4:wasInfluencedBy default2:sebastiano-dot-giacomin2-at-unibo-dot-it .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/RDF_N_QUADS> skos:prefLabel "RDF N-Quads - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/CC_BYNCND_1_0> skos:prefLabel "Creative Commons Attribution–NoDerivs–NonCommercial 1.0 Generic - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5427036> rdfs:label "FRBRoo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q54872> rdfs:label "Resource Description Framework"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q624610> rdfs:label "Dublin Core Metadata Element Set"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/cataloging> skos:prefLabel "Cataloging - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/modeling> skos:prefLabel "Modeling - TADIRAH"^^xsd:string .
+
+default2:1729185609-482096 rdfs:label "/DH.ARC - Digital Humanities Advanced Research Centre"^^xsd:string .
+
+default2:1729185781-6054392 rdfs:label "Pasqual, Valentina"^^xsd:string .
+
+default2:1743001407-1913564 rdfs:label "mythLOD"^^xsd:string .
+
+default2:laurent-dot-fintoni2-at-unibo-dot-it rdfs:label "laurent.fintoni2@unibo.it" .
+
+default2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-08> skos:prefLabel "Archival science, bibliography and librarianship - ACADEMIC FIELD"^^xsd:string .
+
+default2:LinkedOpenData rdfs:label "Linked Open Data"^^xsd:string .
+

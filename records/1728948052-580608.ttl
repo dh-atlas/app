@@ -1,0 +1,64 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://purl.org/vocab/vann/> .
+@prefix default2: <http://dbpedia.org/ontology/> .
+@prefix default3: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1728948052-580608> a schema:Dataset,
+        <https://w3id.org/dh-atlas/Ontology> ;
+    rdfs:label "Semantic Publishing and Referencing Ontologies (SPAR)"@en ;
+    default1:preferredNamespaceUri <http://purl.org/spar/> ;
+    :about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-01>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-10>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-11> ;
+    :additionalType <https://w3id.org/dh-atlas/Ontology> ;
+    :citation <https://doi.org/10.1007/978-3-030-00668-6_8> ;
+    :conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    :creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
+    :creator <https://w3id.org/dh-atlas/1728944010-053>,
+        <https://w3id.org/dh-atlas/1729013826-8967187>,
+        <https://w3id.org/dh-atlas/1729025155-4855695>,
+        <https://w3id.org/dh-atlas/1729176887-282424> ;
+    :description "The Semantic Publishing and Referencing (SPAR) Ontologies, form a suite of orthogonal and complementary OWL 2 DL ontology modules for the creation of comprehensive machine-readable RDF metadata for every aspect of semantic publishing and referencing: document description, bibliographic resource identifiers, types of citations and related contexts, bibliographic references, document parts and status, agents' roles and contributions, bibliometric data and workflow processes."@en ;
+    :inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    :license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    :name "Semantic Publishing and Referencing Ontologies (SPAR)"@en ;
+    :url <http://www.sparontologies.net/> ;
+    :usageInfo <http://www.sparontologies.net/examples> .
+
+<https://w3id.org/dh-atlas/1728948052-580608/> rdfs:label "Semantic Publishing and Referencing Ontologies (SPAR)"@en ;
+    default2:currentStatus "published"^^xsd:string ;
+    :name "Semantic Publishing and Referencing Ontologies (SPAR)"@en ;
+    default3:generatedAtTime "2024-11-26T14:55:14.582000+00:00"^^xsd:dateTime ;
+    default3:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    default3:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
+
+<http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS" .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE" .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access" .
+
+<https://w3id.org/dh-atlas/1728944010-053> rdfs:label "Peroni, Silvio" .
+
+<https://w3id.org/dh-atlas/1729013826-8967187> rdfs:label "Del Grosso, Angelo Mario" .
+
+<https://w3id.org/dh-atlas/1729025155-4855695> rdfs:label "Balletto, Laura" .
+
+<https://w3id.org/dh-atlas/1729176887-282424> rdfs:label "Shotton, David" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-01> skos:prefLabel "Mathematics and informatics - ACADEMIC FIELD" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-10> skos:prefLabel "Antiquities, philology, literary studies, art history - ACADEMIC FIELD" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/Area-11> skos:prefLabel "History, philosophy, pedagogy and psychology - ACADEMIC FIELD" .
+
+<https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> skos:prefLabel "Creative Commons Attribution 4.0 International (CC BY 4.0)" .
+
+<https://w3id.org/dh-atlas/Ontology> rdfs:label "Ontology"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+

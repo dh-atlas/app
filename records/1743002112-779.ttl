@@ -1,0 +1,30 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743002112-779> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Van Erp, Marieke "@en ;
+    :identifier <https://orcid.org/0000-0001-9195-8203> ;
+    :name "Van Erp, Marieke "@en ;
+    :sameAs <http://www.wikidata.org/entity/Q63973563> .
+
+<https://w3id.org/dh-atlas/1743002112-779/> rdfs:label "Van Erp, Marieke "@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "Van Erp, Marieke "@en ;
+    default2:generatedAtTime "2025-04-01T14:34:54.703000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/b-dot-sartini-at-lmu-dot-de> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<http://www.wikidata.org/entity/Q63973563> rdfs:label "Marieke van Erp"^^xsd:string .
+
+<https://orcid.org/0000-0001-9195-8203> rdfs:label "0000-0001-9195-8203"^^xsd:string .
+
+<https://w3id.org/dh-atlas/b-dot-sartini-at-lmu-dot-de> rdfs:label "b.sartini@lmu.de" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

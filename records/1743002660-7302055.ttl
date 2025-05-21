@@ -1,0 +1,29 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743002660-7302055> a schema:Dataset,
+        <https://w3id.org/dh-atlas/Software> ;
+    rdfs:label "OpenStreetMap"@en ;
+    :additionalType <https://w3id.org/dh-atlas/Software> ;
+    :description "Wikidata is a free knowledge base driven by a community and hosted by the Wikimedia Foundation."@en ;
+    :name "OpenStreetMap"@en ;
+    :url <https://www.openstreetmap.org> ;
+    :usageInfo <https://www.openstreetmap.org/help> .
+
+<https://w3id.org/dh-atlas/1743002660-7302055/> rdfs:label "OpenStreetMap"@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "OpenStreetMap"@en ;
+    default2:generatedAtTime "2025-04-01T09:32:29.832000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/gianmarco-dot-spinaci2-at-unibo-dot-it> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<https://w3id.org/dh-atlas/gianmarco-dot-spinaci2-at-unibo-dot-it> rdfs:label "gianmarco.spinaci2@unibo.it" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/dh-atlas/Software> rdfs:label "Software"^^xsd:string .
+

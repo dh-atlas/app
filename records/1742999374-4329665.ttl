@@ -1,0 +1,106 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://purl.org/dc/terms/> .
+@prefix default2: <http://purl.org/vocab/vann/> .
+@prefix default3: <https://w3id.org/dh-atlas/> .
+@prefix default4: <http://dbpedia.org/ontology/> .
+@prefix default5: <http://www.w3.org/ns/prov#> .
+@prefix default6: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+default3:1742999374-4329665 a schema:Dataset,
+        default3:Ontology ;
+    rdfs:label "ICON Ontology"@en ;
+    default1:conformsTo <http://www.wikidata.org/entity/Q54872>,
+        <http://www.wikidata.org/entity/Q826165> ;
+    default1:references <http://www.wikidata.org/entity/Q44955364>,
+        <http://www.wikidata.org/entity/Q624005>,
+        default3:1728948776-872414,
+        default3:MD1743002875338,
+        default3:MD1743002889316 ;
+    default2:preferredNamespaceUri <https://w3id.org/icon/ontology/> ;
+    :about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-B> ;
+    :additionalType default3:Ontology ;
+    :citation <https://ceur-ws.org/Vol-3540/paper4.pdf>,
+        <https://doi.org/10.1007/978-3-031-72437-4_10>,
+        <https://doi.org/10.1145/3594724> ;
+    :conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    :contributor default3:1743002112-779,
+        default3:1743002129-092 ;
+    :creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
+    :creator default3:1743001709-515,
+        default3:1743002063-46 ;
+    :datePublished "2022-04-12"^^xsd:date ;
+    :description "ICON is an ontology that represents artistic interpretations according to the 3-leveled theory of Erwin Panofsky (pre-iconographical - iconographical - iconological)"@en ;
+    :educationalUse <https://vocabs.dariah.eu/tadirah/dataMapping>,
+        <https://vocabs.dariah.eu/tadirah/informationRetrieval>,
+        <https://vocabs.dariah.eu/tadirah/interpreting>,
+        <https://vocabs.dariah.eu/tadirah/linkedOpenData> ;
+    :encodingFormat <http://publications.europa.eu/resource/authority/file-type/OWL> ;
+    :identifier "https://w3id.org/icon/ontology/"@en ;
+    :inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    :license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    :name "ICON Ontology"@en ;
+    :url <https://w3id.org/icon/docs/> ;
+    :usageInfo <https://w3id.org/docs/> ;
+    :version "2.2.0"@en ;
+    default3:used <http://www.wikidata.org/entity/Q2066865> .
+
+<https://w3id.org/dh-atlas/1742999374-4329665/> rdfs:label "ICON Ontology"@en ;
+    default4:currentStatus "modified"^^xsd:string ;
+    :name "ICON Ontology"@en ;
+    default5:generatedAtTime "2025-04-01T14:37:54.739000+00:00"^^xsd:dateTime ;
+    default5:wasAttributedTo default3:b-dot-sartini-at-lmu-dot-de ;
+    default5:wasInfluencedBy default3:sebastiano-dot-giacomin2-at-unibo-dot-it .
+
+<http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> default6:prefLabel "under development - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/OWL> default6:prefLabel "OWL - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> default6:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> default6:prefLabel "Creative Commons Attribution 4.0 International - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2066865> rdfs:label "Protégé"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q44955364> rdfs:label "Citation Typing Ontology"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q54872> rdfs:label "Resource Description Framework"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q624005> rdfs:label "CIDOC Conceptual Reference Model"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q826165> rdfs:label "Web Ontology Language"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/dataMapping> default6:prefLabel "Data Mapping - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/informationRetrieval> default6:prefLabel "Information Retrieval - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/interpreting> default6:prefLabel "Interpreting - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/linkedOpenData> default6:prefLabel "Linked Open Data - TADIRAH"^^xsd:string .
+
+default3:1728948776-872414 rdfs:label "Historical Context Ontology (HiCO)"^^xsd:string .
+
+default3:1743001709-515 rdfs:label "Sartini, Bruno"^^xsd:string .
+
+default3:1743002063-46 rdfs:label "Baroncini, Sofia"^^xsd:string .
+
+default3:1743002112-779 rdfs:label "Van Erp, Marieke"^^xsd:string .
+
+default3:1743002129-092 rdfs:label "Gangemi, Aldo"^^xsd:string .
+
+default3:MD1743002875338 rdfs:label "Simulation Ontology"^^xsd:string .
+
+default3:MD1743002889316 rdfs:label "Dolce Ontology"^^xsd:string .
+
+default3:b-dot-sartini-at-lmu-dot-de rdfs:label "b.sartini@lmu.de" .
+
+default3:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-B> default6:prefLabel "Art history - ACADEMIC FIELD"^^xsd:string .
+
+default3:Ontology rdfs:label "Ontology"^^xsd:string .
+

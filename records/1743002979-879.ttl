@@ -1,0 +1,23 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743002979-879> a <http://purl.org/spar/fabio/WebSite> ;
+    rdfs:label "I Capricci di un Re DIGITAL (Website)"@en ;
+    :description "Website of the resource"@en ;
+    :name "I Capricci di un Re DIGITAL (Website)"@en ;
+    :url <https://www.operestefanopulvirenti.it/evt_ICDR1/index.html#doc=1&page=ICDR3> .
+
+<https://w3id.org/dh-atlas/1743002979-879/> rdfs:label "I Capricci di un Re DIGITAL (Website)"@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "I Capricci di un Re DIGITAL (Website)"@en ;
+    default2:generatedAtTime "2025-03-31T15:30:37.112000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/tommaso-dot-battisti5-at-unibo-dot-it> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/dh-atlas/tommaso-dot-battisti5-at-unibo-dot-it> rdfs:label "tommaso.battisti5@unibo.it" .
+

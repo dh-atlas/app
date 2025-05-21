@@ -1,0 +1,33 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix default3: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743002402-9617045> a schema:Dataset,
+        <https://w3id.org/dh-atlas/Software> ;
+    rdfs:label "OpenSeaDragon"@en ;
+    :additionalType <https://w3id.org/dh-atlas/Software> ;
+    :description "An open-source, web-based viewer for high-resolution zoomable images, implemented in pure JavaScript, for desktop and mobile. "@en ;
+    :license <http://publications.europa.eu/resource/authority/licence/BSD_3_CLAUSE> ;
+    :name "OpenSeaDragon"@en ;
+    :url <https://openseadragon.github.io/> ;
+    :usageInfo <https://openseadragon.github.io/docs/> .
+
+<https://w3id.org/dh-atlas/1743002402-9617045/> rdfs:label "OpenSeaDragon"@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "OpenSeaDragon"@en ;
+    default2:generatedAtTime "2025-04-01T15:38:12.913000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/gianmarco-dot-spinaci2-at-unibo-dot-it> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<http://publications.europa.eu/resource/authority/licence/BSD_3_CLAUSE> default3:prefLabel "3-Clause BSD License - LICENCE"^^xsd:string .
+
+<https://w3id.org/dh-atlas/gianmarco-dot-spinaci2-at-unibo-dot-it> rdfs:label "gianmarco.spinaci2@unibo.it" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/dh-atlas/Software> rdfs:label "Software"^^xsd:string .
+

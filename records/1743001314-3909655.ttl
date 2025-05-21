@@ -1,0 +1,28 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <https://schema.org/> .
+@prefix default2: <http://dbpedia.org/ontology/> .
+@prefix default3: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743001314-3909655> a <http://purl.org/spar/fabio/WebSite> ;
+    rdfs:label "Wiki Leopardi - Website"@en ;
+    :description "La piattaforma WIKI LEOPARDI accoglie alcuni progetti di lavoro sull'opera di Giacomo Leopardi"@it ;
+    :isBasedOn <http://www.wikidata.org/entity/Q11920> ;
+    :name "Wiki Leopardi - Website"@en ;
+    :url <https://wikileopardi.altervista.org/wiki_leopardi/index.php?title=Wiki_Leopardi> ;
+    default1:usageInfo <https://wikileopardi.altervista.org/wiki_leopardi/index.php?title=Bibliografia_dei_Canti> .
+
+<https://w3id.org/dh-atlas/1743001314-3909655/> rdfs:label "Wiki Leopardi - Website"@en ;
+    default2:currentStatus "modified"^^xsd:string ;
+    :name "Wiki Leopardi - Website"@en ;
+    default3:generatedAtTime "2025-04-01T15:16:16.747000+00:00"^^xsd:dateTime ;
+    default3:wasAttributedTo <https://w3id.org/dh-atlas/valentina-dot-rossetti7-at-unibo-dot-it> ;
+    default3:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<http://www.wikidata.org/entity/Q11920> rdfs:label "Italian Wikipedia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/dh-atlas/valentina-dot-rossetti7-at-unibo-dot-it> rdfs:label "valentina.rossetti7@unibo.it" .
+

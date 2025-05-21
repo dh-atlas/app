@@ -1,0 +1,68 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <https://w3id.org/dh-atlas/> .
+@prefix default2: <http://dbpedia.org/ontology/> .
+@prefix default3: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+default1:1743001433-3181107 a schema:Dataset,
+        default1:DigitalScholarlyEdition ;
+    rdfs:label "Le avventure di Pinocchio (PhiloEditor)"@it ;
+    :additionalType default1:DigitalScholarlyEdition ;
+    :conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    :contributor default1:1729185527-9907804,
+        default1:1743002143-237,
+        default1:1743002434-048,
+        default1:1743002508-564 ;
+    :creator default1:1728943988-693,
+        default1:1728944026-501,
+        default1:1729185527-9907804 ;
+    :description "Le avventure di Pinocchio è una edizione scientifica digitale contenuta all'interno della piattaforma digitale PhiloEditor e utilizzata come testing della piattaforma."@it ;
+    :encodingFormat <http://publications.europa.eu/resource/authority/file-type/HTML5>,
+        <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    :identifier "https://projects.dharc.unibo.it/philoeditor/"@en ;
+    :inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
+    :license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    :name "Le avventure di Pinocchio (PhiloEditor)"@it ;
+    :version "6.6"@en ;
+    default1:editionType <http://www.w3id.org/dh-atlas/CriticalEdition> .
+
+<https://w3id.org/dh-atlas/1743001433-3181107/> rdfs:label "Le avventure di Pinocchio (PhiloEditor)"@it ;
+    default2:currentStatus "modified"^^xsd:string ;
+    :name "Le avventure di Pinocchio (PhiloEditor)"@it ;
+    default3:generatedAtTime "2025-03-31T16:22:49.379000+00:00"^^xsd:dateTime ;
+    default3:wasAttributedTo default1:enrica-dot-bruno2-at-unibo-dot-it ;
+    default3:wasInfluencedBy default1:sebastiano-dot-giacomin2-at-unibo-dot-it .
+
+<http://publications.europa.eu/resource/authority/file-type/HTML5> skos:prefLabel "HTML5 - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/XML> skos:prefLabel "XML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> skos:prefLabel "Creative Commons Attribution 4.0 International - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.w3id.org/dh-atlas/CriticalEdition> rdfs:label "Critical Edition"^^xsd:string .
+
+default1:1728943988-693 rdfs:label "Tomasi, Francesca"^^xsd:string .
+
+default1:1728944026-501 rdfs:label "Vitali, Fabio"^^xsd:string .
+
+default1:1743002143-237 rdfs:label "Bonsi, Claudia"^^xsd:string .
+
+default1:1743002434-048 rdfs:label "Gargano, Teresa"^^xsd:string .
+
+default1:1743002508-564 rdfs:label "Russo, Ersilia"^^xsd:string .
+
+default1:enrica-dot-bruno2-at-unibo-dot-it rdfs:label "enrica.bruno2@unibo.it" .
+
+default1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+default1:1729185527-9907804 rdfs:label "Italia, Paola"^^xsd:string .
+
+default1:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
+

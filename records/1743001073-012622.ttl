@@ -1,0 +1,51 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743001073-012622> a foaf:Agent,
+        schema:ResearchProject ;
+    rdfs:label "Bellini Digital Correspondence Project"@en ;
+    :description "The Digital Scholarly Edition (DSE) of the letters written by the renowned composer Vincenzo Bellini (1801 - 1835) preserved at the Museo Civico Belliniano of Catania."@en ;
+    :funder <http://www.wikidata.org/entity/Q81169659> ;
+    :identifier "ISBN: 978-88-8080-562-5 DOI: 10.6092/issn.2532-8816/9162"@en ;
+    :member <https://w3id.org/dh-atlas/1729013826-8967187>,
+        <https://w3id.org/dh-atlas/1743001663-54>,
+        <https://w3id.org/dh-atlas/1743001775-74>,
+        <https://w3id.org/dh-atlas/1743002123-776>,
+        <https://w3id.org/dh-atlas/1743002209-425>,
+        <https://w3id.org/dh-atlas/1743002558-144>,
+        <https://w3id.org/dh-atlas/1743002617-611> ;
+    :name "Bellini Digital Correspondence Project"@en ;
+    :url <https://bellinicorrespondence.cnr.it/> .
+
+<https://w3id.org/dh-atlas/1743001073-012622/> rdfs:label "Bellini Digital Correspondence Project"@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "Bellini Digital Correspondence Project"@en ;
+    default2:generatedAtTime "2025-04-01T09:46:51.852000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/chiara-dot-manca5-at-unibo-dot-it> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<http://www.wikidata.org/entity/Q81169659> rdfs:label "Comune di Catania, Catania (CT)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729013826-8967187> rdfs:label "Del Grosso, Angelo Mario"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743001663-54> rdfs:label "Capizzi, Erica"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743001775-74> rdfs:label "Spampinato, Daria"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743002123-776> rdfs:label "Seminara, Graziella"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743002209-425> rdfs:label "Pellino, Santa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743002558-144> rdfs:label "Congiu, Carla"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743002617-611> rdfs:label "Sichera, Pietro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/chiara-dot-manca5-at-unibo-dot-it> rdfs:label "chiara.manca5@unibo.it" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

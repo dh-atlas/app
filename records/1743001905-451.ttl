@@ -1,0 +1,27 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743001905-451> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Magni, Isabella"@en ;
+    :affiliation <https://w3id.org/dh-atlas/1743002196-391> ;
+    :name "Magni, Isabella"@en .
+
+<https://w3id.org/dh-atlas/1743001905-451/> rdfs:label "Magni, Isabella"@en ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "Magni, Isabella"@en ;
+    default2:generatedAtTime "2025-04-01T10:18:50.023000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/cecilia-dot-tamagnini7-at-unibo-dot-it> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<https://w3id.org/dh-atlas/1743002196-391> rdfs:label "University of Sheffield"^^xsd:string .
+
+<https://w3id.org/dh-atlas/cecilia-dot-tamagnini7-at-unibo-dot-it> rdfs:label "cecilia.tamagnini7@unibo.it" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

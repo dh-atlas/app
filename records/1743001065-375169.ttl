@@ -1,0 +1,102 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://purl.org/dc/terms/> .
+@prefix default2: <https://w3id.org/dh-atlas/> .
+@prefix default3: <http://dbpedia.org/ontology/> .
+@prefix default4: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+default2:1743001065-375169 a schema:Dataset,
+        default2:DigitalScholarlyEdition ;
+    rdfs:label "Paolo Bufalini's Notebook, 1981–1991 - The digital edition"@en ;
+    default1:conformsTo <http://www.wikidata.org/entity/Q95728930> ;
+    :about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-13> ;
+    :additionalType default2:DigitalScholarlyEdition ;
+    :conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    :contributor default2:1743002062-872 ;
+    :creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    :creator default2:1728943969-854,
+        default2:1728943988-693 ;
+    :datePublished "2019-01-01"^^xsd:date ;
+    :distribution <https://amsacta.unibo.it/id/eprint/6415/1/bufalinis-notebook-master.zip> ;
+    :encodingFormat <http://publications.europa.eu/resource/authority/file-type/RDF>,
+        <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    :genre <http://www.wikidata.org/entity/Q43013>,
+        <http://www.wikidata.org/entity/Q57946701>,
+        <http://www.wikidata.org/entity/Q74217> ;
+    :identifier "DOI 10.6092/unibo/amsacta/6415"@en ;
+    :inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
+    :license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    :name "Paolo Bufalini's Notebook, 1981–1991 - The digital edition"@en,
+        "Il quaderno di Paolo Bufalini - Edizione digitale"@it ;
+    :publisher default2:1729185609-482096 ;
+    :url <https://projects.dharc.unibo.it/bufalini-notebook/> ;
+    :usageInfo <https://projects.dharc.unibo.it/bufalini-notebook/specifications> ;
+    :version "1.0"@en ;
+    default2:editionType <http://www.w3id.org/dh-atlas/CriticalEdition>,
+        <http://www.w3id.org/dh-atlas/DigitalEdition>,
+        <http://www.w3id.org/dh-atlas/DocumentaryEdition> ;
+    default2:referencedAuthor <http://www.wikidata.org/entity/Q3893821> ;
+    default2:referencedWorkType <http://www.w3id.org/dh-atlas/Paper>,
+        <http://www.w3id.org/dh-atlas/SingleManuscript> ;
+    default2:servedBy default2:1743003368-076 .
+
+<https://w3id.org/dh-atlas/1743001065-375169/> rdfs:label "Paolo Bufalini's Notebook, 1981–1991 - The digital edition"@en ;
+    default3:currentStatus "modified"^^xsd:string ;
+    :name "Paolo Bufalini's Notebook, 1981–1991 - The digital edition"@en ;
+    default4:generatedAtTime "2025-03-31T14:29:02.253000+00:00"^^xsd:dateTime ;
+    default4:wasAttributedTo default2:maria-dot-bocchi4-at-unibo-dot-it ;
+    default4:wasInfluencedBy default2:sebastiano-dot-giacomin2-at-unibo-dot-it .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/RDF> skos:prefLabel "RDF - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/XML> skos:prefLabel "XML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> skos:prefLabel "Creative Commons Attribution 4.0 International - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.w3id.org/dh-atlas/CriticalEdition> rdfs:label "Critical Edition"^^xsd:string .
+
+<http://www.w3id.org/dh-atlas/DigitalEdition> rdfs:label "Digital Edition"^^xsd:string .
+
+<http://www.w3id.org/dh-atlas/DocumentaryEdition> rdfs:label "Documentary Edition"^^xsd:string .
+
+<http://www.w3id.org/dh-atlas/Paper> rdfs:label "Paper"^^xsd:string .
+
+<http://www.w3id.org/dh-atlas/SingleManuscript> rdfs:label "Single Manuscript"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3893821> rdfs:label "Paolo Bufalini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q43013> rdfs:label "notebook"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q57946701> rdfs:label "Latin Literature"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q74217> rdfs:label "Italian literature"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q95728930> rdfs:label "TEI P5"^^xsd:string .
+
+default2:1728943969-854 rdfs:label "Daquino, Marilena"^^xsd:string .
+
+default2:1728943988-693 rdfs:label "Tomasi, Francesca"^^xsd:string .
+
+default2:1729185609-482096 rdfs:label "/DH.ARC - Digital Humanities Advanced Research Centre"^^xsd:string .
+
+default2:1743002062-872 rdfs:label "Dello Buono, Martina"^^xsd:string .
+
+default2:1743003368-076 rdfs:label "Paolo Bufalini's Notebook"^^xsd:string .
+
+default2:maria-dot-bocchi4-at-unibo-dot-it rdfs:label "maria.bocchi4@unibo.it" .
+
+default2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-13> skos:prefLabel "Philology of italian literature - ACADEMIC FIELD"^^xsd:string .
+
+default2:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
+

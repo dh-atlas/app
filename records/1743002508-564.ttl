@@ -1,0 +1,27 @@
+@prefix : <http://schema.org/> .
+@prefix default1: <http://dbpedia.org/ontology/> .
+@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1743002508-564> a foaf:Agent,
+        schema:Person ;
+    rdfs:label "Russo, Ersilia"@it ;
+    :affiliation <https://w3id.org/dh-atlas/1729200890-684812> ;
+    :name "Russo, Ersilia"@it .
+
+<https://w3id.org/dh-atlas/1743002508-564/> rdfs:label "Russo, Ersilia"@it ;
+    default1:currentStatus "modified"^^xsd:string ;
+    :name "Russo, Ersilia"@it ;
+    default2:generatedAtTime "2025-03-31T16:15:44.050000+00:00"^^xsd:dateTime ;
+    default2:wasAttributedTo <https://w3id.org/dh-atlas/enrica-dot-bruno2-at-unibo-dot-it> ;
+    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+
+<https://w3id.org/dh-atlas/1729200890-684812> rdfs:label "University of Florence"^^xsd:string .
+
+<https://w3id.org/dh-atlas/enrica-dot-bruno2-at-unibo-dot-it> rdfs:label "enrica.bruno2@unibo.it" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+
