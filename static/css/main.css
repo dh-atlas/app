@@ -68,6 +68,20 @@ header,
   border-bottom-left-radius: 60px;
 }
 
+.primary {
+  background-color: var(--primary-color) !important;
+}
+
+.secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.primary .btn {
+  background-image: none !important;
+  background-color: var(--secondary-color) !important;
+  color: black !important
+}
+
 a {
   text-decoration: underline !important;
   color: black !important;
@@ -1594,10 +1608,6 @@ table.url-table i, table.extraction-table i {
   padding: 1em 3em 3em 3em;
 }
 
-.biblio:nth-of-type(3) {
-  background-color: var(--primary-color)
-}
-
 .biblio-label {
   color: white !important;
   text-align: left;
@@ -2809,31 +2819,34 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
   cursor: pointer;
 }
 
-.extraction-form-label:nth-child(2) {
-  margin-left: 3% !important;
-}
-
-.extraction-form-label, .extraction-form-input {
-  width: 48% !important;
+.import-form .extraction-form-input-large, .extraction-form-label-large {
+  width: 47.5%;
   display: inline-block;
 }
 
-.import-form input.extraction-form-input,
-.import-form select.extraction-form-input {
-  margin-top: 0.1em !important;
+.import-form .extraction-form-input-small, .extraction-form-label-small {
+  width: 30%;
+  display: inline-block;
 }
 
-.block_field input[type="text"].extraction-form-input:first-child,
-.block_field select.extraction-form-input:first-child {
+.block_field.form_row input[type="text"].extraction-form-input-large:first-child,
+.block_field.form_row select.extraction-form-input-small:first-child,
+.extraction-form-input-large:first-child, .extraction-form-label-small:first-child {
+  margin-top: 0.1em !important;
   margin-left: 0px !important;
 }
 
-.block_field input[type="text"].extraction-form-input {
+.block_field input[type="text"].extraction-form-input-large:nth-child(2),
+.block_field input[type="text"].extraction-form-input-small:nth-child(2),
+.block_field input[type="text"].extraction-form-input-small:nth-child(3),
+.extraction-form-label-large:nth-child(2),
+.extraction-form-label-small:nth-child(2),
+.extraction-form-label-small:nth-child(3) {
   margin-left: 3% !important;
   padding-top: 0.4em;
 }
 
-.add-parameter {
+.add-parameter, .add-filter {
   display: block;
   margin-left: 5%;
   margin-bottom: 1.2em;
