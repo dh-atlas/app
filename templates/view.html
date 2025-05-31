@@ -136,6 +136,19 @@ $var main_lang = main_lang
 				<p>If you already have an account on $project</p>
 				<button type="button" class="btn btn-dark" name="button" onclick="window.location.href='modify-$graphID'">Click here</button>
 		</section>
+		<section class="biblio primary">
+			<h3 class="biblio-label">Download the graph</h3>
+			<p>
+				<button type="button" class="btn btn-dark" name="button" onclick="window.location.href='serialization?format=ttl&id=$graphID'">Turtle</button>
+				<button type="button" class="btn btn-dark" name="button" onclick="window.location.href='serialization?format=ttl&id=$graphID'">RDF/XML</button>
+				<button type="button" class="btn btn-dark" name="button" onclick="window.location.href='serialization?format=ttl&id=$graphID'">JSON-LD</button>
+				<!-- <a href="serialization?format=ttl&id=$graphID" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL"></a>
+				<a href="serialization?format=rdf&id=$graphID" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML"></a>
+				<a href="serialization?format=jsonld&id=$graphID" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD"></a>
+				 -->
+			</p>
+		</section>
+		
 	</section>
 	<hr/>
 	<!-- <section class="info-item">

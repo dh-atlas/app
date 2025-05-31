@@ -68,6 +68,7 @@ urls = (
 	prefix + '/wd', 'Wikidata',
 	prefix + '/charts-visualization', 'Charts',
 	prefix + '/charts-template', 'ChartsTemplate',
+	prefix + '/serialization', 'Serialization',
 	prefix + "/static/(.*)", "StaticFileHandler"  # Serve static files explicitly
 )
 
@@ -654,6 +655,7 @@ class Record(object):
 					#u.update_knowledge_extraction(recordData,KNOWLEDGE_EXTRACTION)
 					userID = user.replace('@','-at-').replace('.','-dot-')
 					file_path = mapping.inputToRDF(recordData, userID, 'not modified', tpl_form=templateID)
+					session["records"] = session["records"] + recordID+'/' if recordID != None else ''
 					if conf.github_backup == "True":
 						try:
 							github_sync.push(file_path,"main", session['gituser'], session['username'], session['bearer_token'])
@@ -1358,7 +1360,7 @@ class Nlp(object):
 		except Exception as e:
 			query_str_decoded = query_string.q.strip()
 
-		# parse string with spacy
+		# parse string with spacy
 
 		parsed = NER_IT(query_str_decoded) if query_string.lang == 'it' else NER_EN(query_str_decoded)
 		entities = {word.text for word in parsed.ents if word.label_ in ['PERSON','ORG','GPE','LOC']}
@@ -1411,13 +1413,13 @@ class Sparqlanything(object):
 				return json.dumps(results)
 			else:
 				def stream():
-					# Invia la lunghezza totale all'inizio
+					
 					web.header('Content-Type', 'text/event-stream')
 					web.header('Cache-Control', 'no-cache')
 					web.header('Connection', 'keep-alive')
-					yield f"data: {json.dumps({'length': total_results})}\n\n"
+					yield f"data: {json.dumps({'length': total_results})}\n\n" # total length
 
-					count = 0  # Contatore delle iterazioni
+					count = 0 
 					for result in results["results"]["bindings"]:
 						if "uri" not in result:
 							result["uri"] = {"value": result["label"]["value"], "type": "uri"}
@@ -1427,10 +1429,9 @@ class Sparqlanything(object):
 							result["uri"]["value"] = queries.entity_reconciliation(uri, service)
 
 						count += 1
-						yield f"data: {json.dumps({'count': count})}\n\n"  # Invia il conteggio progressivo
+						yield f"data: {json.dumps({'count': count})}\n\n" # current count
 
-					# Invia i risultati completi alla fine
-					yield f"data: {json.dumps({'data': results})}\n\n"
+					yield f"data: {json.dumps({'data': results})}\n\n" # data
 
 				return stream()
 
@@ -1521,6 +1522,23 @@ class ChartsTemplate(object):
 		elif 'action' in data and 'updateTemplate' in data.action:
 			u.charts_to_json(conf.charts, data)
 		raise web.seeother(prefixLocal+'welcome-1')
+	
+class Serialization:
+	def GET(self):
+		user_data = web.input(id=None)
+		format = user_data.format or 'TURTLE' # TURTLE set as default
+		graph_id = user_data.id
+		mime_map = {
+            'ttl': 'text/turtle',
+            'jsonld': 'application/ld+json',
+            'rdf': 'application/rdf+xml'
+        }
+		accept = mime_map.get(format, 'text/turtle')
+		graph = queries.get_serialization_file(format,graph_id)
+		web.header('Content-Type', accept)
+		web.header('Content-Disposition', f'attachment; filename="graph-{graph_id}.{format}"')
+
+		return graph 
 
 
 if __name__ == "__main__":

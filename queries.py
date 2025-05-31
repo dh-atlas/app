@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import conf , os , operator , pprint , ssl , rdflib , json
-from SPARQLWrapper import SPARQLWrapper, JSON, POST
+from SPARQLWrapper import SPARQLWrapper, JSON, RDFXML, POST
 from collections import defaultdict
-from rdflib import URIRef , XSD, Namespace , Literal
-from rdflib.namespace import OWL, DC , DCTERMS, RDF , RDFS
+from rdflib import URIRef, XSD, Namespace, Literal, Graph
+from rdflib.namespace import OWL, DC, DCTERMS, RDF, RDFS
 from rdflib.plugins.sparql import prepareQuery
 from pymantic import sparql
 import utils as u
@@ -774,3 +774,33 @@ def getChartData(chart):
 		
 	print("results:", results)
 	return results
+
+# GET RECORDS' SERIALIZATIONS	
+def get_serialization_file(format, graph_id):
+	from rdflib import Graph
+	from SPARQLWrapper import SPARQLWrapper, RDFXML
+	graph_uri = conf.base + graph_id
+
+	query = f"""
+	CONSTRUCT {{
+		?s ?p ?o
+	}}
+	WHERE {{
+		GRAPH <{graph_uri}/> {{
+			?s ?p ?o
+		}}
+	}}
+	"""
+
+	sparql = SPARQLWrapper(conf.myEndpoint)
+	sparql.setQuery(query)
+	sparql.setReturnFormat(RDFXML)
+	results = sparql.query().convert() 
+	serialize_format = {
+		'ttl': 'turtle',
+		'jsonld': 'json-ld',
+		'rdf': 'xml'
+	}
+
+	return results.serialize(format=serialize_format.get(format, 'turtle'))
+
