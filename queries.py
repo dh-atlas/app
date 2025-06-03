@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import conf , os , operator , pprint , ssl , rdflib , json
-from SPARQLWrapper import SPARQLWrapper, JSON, RDFXML, POST
+from SPARQLWrapper import SPARQLWrapper, JSON, RDFXML,POST
 from collections import defaultdict
-from rdflib import URIRef, XSD, Namespace, Literal, Graph
-from rdflib.namespace import OWL, DC, DCTERMS, RDF, RDFS
+from rdflib import URIRef , XSD, Namespace , Literal, Graph
+from rdflib.namespace import OWL, DC , DCTERMS, RDF , RDFS
 from rdflib.plugins.sparql import prepareQuery
 from pymantic import sparql
 import utils as u
@@ -655,7 +655,8 @@ def entity_reconciliation(uri,service):
 	base_url = ""
 	params = {}
 	if service == "wd":
-		base_url = "https://wikidata.org/w/api.php" 
+		base_url = "https://wikidata.org/w/api.php"
+		headers = {}
 		params = {
 			"action": "wbsearchentities",
 			"search": uri,
@@ -664,9 +665,14 @@ def entity_reconciliation(uri,service):
 		}
 	elif service == "viaf":
 		base_url = "https://www.viaf.org/viaf/AutoSuggest"
-		params = {
-			"query": uri
+		headers = {
+			"Accept": "application/json",
+			"Accept-Encoding": "deflate, br, identity",
+			"User-Agent": "Mozilla/5.0 (compatible; VIAFbot/1.0)",
 		}
+		params = {"query": uri}
+		
+		""" response = requests.get("https://www.viaf.org/viaf/AutoSuggest", headers=headers, params=params) """
 	elif service == "geonames":
 		base_url = "http://api.geonames.org/searchJSON"
 		params = {
@@ -677,7 +683,7 @@ def entity_reconciliation(uri,service):
 	
 	# execute the query and retrieve the URI
 	try:
-		response = requests.get(base_url, params=params)
+		response = requests.get(base_url, params=params, headers=headers)
 		response.raise_for_status()  # Check if the request was successful
 		data = response.json()  # Parse the JSON response
 		print(data)
@@ -718,7 +724,6 @@ def SPARQLAnything(query_str):
 	"""+query_str.replace("&lt;", "<").replace("&gt;", ">")
 
 	print(query)
-	# Retrieve all results so that user can verify them
 	sparql.setQuery(query)
 	sparql.setReturnFormat(JSON)
 	results = sparql.query().convert()
