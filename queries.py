@@ -713,20 +713,52 @@ def geonames_geocoding(geonames_uri):
 	return latitude, longitude
 
 
-def SPARQLAnything(query_str):
-	sparql = SPARQLWrapper(conf.sparqlAnythingEndpoint)
-	query = """PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-	PREFIX xyz: <http://sparql.xyz/facade-x/data/>
-	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-	PREFIX sa: <http://w3id.org/sparql-anything#>
-	PREFIX ex: <http://example.org/>
-	"""+query_str.replace("&lt;", "<").replace("&gt;", ">")
+def SPARQLAnything(query_str,endpoint=None):
+	def prepare_query(query, endpoint_wrap=False):
+		if endpoint_wrap and endpoint:
+			query = query.replace('{', '{ SERVICE <'+endpoint+'>', 1) 
+			idx = query.rfind('}')
+			if idx != -1:
+				query = query[:idx] + '}}' + query[idx+1:]
+		return query_prefixes + query.replace("&lt;", "<").replace("&gt;", ">")
+	
+
+	results = {}
+	query_prefixes = """PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+		PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+		PREFIX sa: <http://w3id.org/sparql-anything#>
+		PREFIX ex: <http://example.org/>
+	"""
+	if "SERVICE <x-sparql-anything:>" in query_str:
+		
+		sparql = SPARQLWrapper(conf.sparqlAnythingEndpoint)
+		sparql.setMethod(POST)
+		sparql.setReturnFormat(JSON)  # o "json", a seconda del tipo di query
+		query_str.replace("&lt;", "<").replace("&gt;", ">")
+		sparql.setQuery(query_str)
+		results = sparql.query().convert()
+		return results
+	elif "SERVICE" in query_str or not endpoint:
+		# Use default endpoint
+		sparql = SPARQLWrapper(conf.sparqlAnythingEndpoint)
+		query = prepare_query(query_str)
+	else:
+		try:
+			# Use specified endpoint
+			sparql = SPARQLWrapper(endpoint)
+			query = prepare_query(query_str)
+		except Exception as e:
+			# Use SPARQL Anything
+			sparql = SPARQLWrapper(conf.sparqlAnythingEndpoint)
+			query = prepare_query(query_str,endpoint_wrap=True) 
 
 	print(query)
 	sparql.setQuery(query)
 	sparql.setReturnFormat(JSON)
 	results = sparql.query().convert()
+	
 	return results
 
 def getChartData(chart):

@@ -1409,7 +1409,7 @@ class Sparqlanything(object):
 			return json.dumps(results)
 
 		elif action == "searchentities":
-			results = queries.SPARQLAnything(query_str_decoded)
+			results = queries.SPARQLAnything(query_str_decoded,endpoint=endpoint)
 			total_results = len(results["results"]["bindings"])
 			service = query_string.service if "service" in query_string else "wd"
 			if service == "skos":
