@@ -1792,24 +1792,31 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
         <section class='row extractor-1'>\
             <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>QUERY PARAMETERS<br><span class='comment'>write one value per row</span></label>\
             <div class='extraction-form-div'>\
-                <span class='extraction-form-label'>KEY</span><span class='extraction-form-label'>VALUE</span>\
+                <span class='extraction-form-label-large'>KEY</span><span class='extraction-form-label-large'>VALUE</span>\
             </div>\
             <p class='extractor-comment'>No parameters available: add a new one</p><span class='add-parameter'>Add new <i class='fas fa-plus'></i></span>\
         </section>\
         <section class='row extractor-1'>\
             <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>RESULT DICTIONARY<br><span class='comment'>write one value per row</span></label>\
             <div class='extraction-form-div'>\
-                <span class='extraction-form-label'>KEY</span><span class='extraction-form-label'>VALUE</span>\
+                <span class='extraction-form-label-large'>KEY</span><span class='extraction-form-label-large'>VALUE</span>\
             </div>\
             <div class='extraction-form-div api-results-parameter'>\
-                <input type='text' class='extraction-form-input' value='Array'><input type='text' class='extraction-form-input'>\
+                <input type='text' class='extraction-form-input-large' value='Array'><input type='text' class='extraction-form-input-large'>\
             </div>\
             <div class='extraction-form-div api-results-parameter'>\
-                <input type='text' class='extraction-form-input' value='URI'><input type='text' class='extraction-form-input'>\
+                <input type='text' class='extraction-form-input-large' value='URI'><input type='text' class='extraction-form-input-large'>\
             </div>\
             <div class='extraction-form-div api-results-parameter'>\
-                <input type='text' class='extraction-form-input' value='Label'><input type='text' class='extraction-form-input'>\
+                <input type='text' class='extraction-form-input-large' value='Label'><input type='text' class='extraction-form-input-large'>\
             </div>\
+        </section>\
+        <section class='row extractor-1'>\
+            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>FILTER RESULTS<br><span class='comment'>write one value per row</span></label>\
+            <div class='extraction-form-div'>\
+                <span class='extraction-form-label-small'>TYPE</span><span class='extraction-form-label-small'>VARIABLE</span><span class='extraction-form-label-small'>VALUE</span>\
+            </div>\
+            <p class='extractor-comment'>No parameters available: add a new one</p><span class='add-filter'>Add new <i class='fas fa-plus'></i></span>\
         </section>\
         ")
     } else if (extractionType == 'sparql') {
@@ -1851,7 +1858,7 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
             <div class='extraction-form-div'>\
                 <span class='extraction-form-label'>TYPE</span><span class='extraction-form-label'>VALUE</span>\
             </div>\
-            <p class='extractor-comment'>No filter available: add a new one</p><span class='add-parameter'>Add new <i class='fas fa-plus'></i></span>\
+            <p class='extractor-comment'>No filter available: add a new one</p><span class='add-filter'>Add new <i class='fas fa-plus'></i></span>\
         </section>");
     } else {
         var form = "";
@@ -1865,12 +1872,12 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
         </section>");
 
     // add event listener to form buttons
-    form.find('.add-parameter').on('click', function() {
-        if (extractionType === 'api') {         
-            generateExtractionParameter(this); 
-        } else if (extractionType === 'file')  {
-            generateExtractionFilter(this);
-        }
+    form.find('.add-parameter').on('click', function() {       
+        generateExtractionParameter(this);
+    });
+
+    form.find('.add-filter').on('click', function() {
+        generateExtractionFilter(this, extractionType);
     });
 
     // add the new form to the webpage and show YASQE editor when needed
@@ -1983,14 +1990,10 @@ function nextExtractor(element, recordId, id, type) {
         objectItem["url"] = extractionBlockField.find('#ApiUrl').val();
         var queryParameters = getExtractionParameters('query',element);
         var resultsParameters = getExtractionParameters('results',element);
-
-        if (queryParameters !== false && resultsParameters !== false) {
-            objectItem["query"] = queryParameters
-            objectItem["results"] = resultsParameters
-        } else {
-            showErrorPopup("Error:","Please, check your query parameters before proceeding!");
-            return null
-        }
+        var filters = getExtractionFilters(element)
+        objectItem["query"] = queryParameters
+        objectItem["results"] = resultsParameters
+        objectItem["filters"] = filters
         console.log(objectItem);
     } else if (type == "sparql") {
         objectItem["type"] = "sparql";
@@ -2009,7 +2012,7 @@ function nextExtractor(element, recordId, id, type) {
             // retrieve parameters elements
             var fileUrl = extractionBlockField.find('#FileUrl').val();
             var rawKeys = extractionBlockField.find('.tags-extraction input');
-            var rawFilters = extractionBlockField.find('.manual-query .file-query-parameter')
+            var rawFilters = extractionBlockField.find('.manual-query .file-query-filter')
 
             var manualQuery, keysArray, filtersArray;
             [manualQuery, keysArray, filtersArray] = buildQuery(fileUrl,rawKeys,rawFilters);
@@ -2090,6 +2093,41 @@ function prevExtractor(element, toHide, toShow, remove=false, id=null, recordId=
     }  
 }
 
+// add filters for API and Static Files queries
+function generateExtractionFilter(element,extractorType) {
+    // hide the comment "no filter available"
+    if ($(element).prev('.extractor-comment').length>0) {
+        $(element).prev('.extractor-comment').hide();
+    }
+    let newFilterDiv;
+
+    // add a new couple (type,value) of input fields 
+    if (extractorType === "file") {
+        newFilterDiv = $("<div class='extraction-form-div file-query-filter'>\
+            <select class='custom-select extraction-form-input' id='extractor-filter' name='extractor-filter'>\
+                <option value='None'>Select</option>\
+                <option value='regex'>Regex</option>\
+                <option value='counter'>Min. count</option>\
+            </select>\
+            <input type='text' class='extraction-form-input'>\
+            <i class='fas fa-times' onclick='removeExtractionParameter(this)'></i>\
+        </div>");
+    } else if (extractorType === "api") {
+        newFilterDiv = $("<div class='extraction-form-div api-query-filter'>\
+            <select class='custom-select extraction-form-input-small' id='extractor-filter' name='extractor-filter'>\
+                <option value='None'>Select</option>\
+                <option value='regex'>Regex</option>\
+                <option value='mincounter'>Greater than</option>\
+                <option value='maxcounter'>Lower than</option>\
+            </select>\
+            <input type='text' class='extraction-form-input-small'>\
+            <input type='text' class='extraction-form-input-small'>\
+            <i class='fas fa-times' onclick='removeExtractionParameter(this)'></i>\
+        </div>");
+    }
+    $(element).before(newFilterDiv);
+}
+
 /* API */
 
 // generate a couple of input fields to add a query parameter
@@ -2101,8 +2139,8 @@ function generateExtractionParameter(element) {
 
     // add a new couple (key,value) of input fields 
     var newParameterDiv = $("<div class='extraction-form-div api-query-parameter'>\
-        <input type='text' class='extraction-form-input' id='"+ new Date().valueOf() +"'>\
-        <input type='text' class='extraction-form-input'>\
+        <input type='text' class='extraction-form-input-large' id='"+ new Date().valueOf() +"'>\
+        <input type='text' class='extraction-form-input-large'>\
         <i class='fas fa-times' onclick='removeExtractionParameter(this)'></i>\
     </div>");
     $(element).before(newParameterDiv);
@@ -2119,10 +2157,9 @@ function removeExtractionParameter(element) {
 
 // get parameters for API query
 function getExtractionParameters(type,element) {
-    var extractionForm = $(element).parent().parent();
+    var extractionForm = $(element).closest(".block_field");
     var extractionQueryParameters = extractionForm.find('.api-'+type+'-parameter');
     var parametersObj = new Object();
-    var hasEmptyParameter = false;
 
     extractionQueryParameters.each(function() {
         console.log($(this).find('input').eq(0));
@@ -2135,17 +2172,35 @@ function getExtractionParameters(type,element) {
                 parameterKey = parameterKey.toLowerCase();
             }
             parametersObj[parameterKey] = parameterValue;
-        } else {
-            hasEmptyParameter = true;
-            return false
         }
     });
 
-    if (hasEmptyParameter) {
-        return false;
-    } else {
-        return parametersObj; 
-    }
+    return parametersObj;
+}
+
+// retrieve filters for API and Static Files queries
+function getExtractionFilters(element) {
+    var extractionForm = $(element).closest(".block_field");
+    var extractionQueryFilters = extractionForm.find('.api-query-filter');
+    var filtersArray = []
+
+    extractionQueryFilters.each(function() {
+        var filterObj = new Object();
+        console.log($(this).find('input').eq(0));
+
+        var filterKey = $(this).find('input').eq(0).val();
+        var filterType = $(this).find('select').eq(0).val();
+        var filterValue = $(this).find('input').eq(1).val();
+
+
+        if (filterKey !== '' && filterValue !== '') {
+            filterObj["key"] = filterKey;
+            filterObj["type"] = filterType;
+            filterObj["value"] = filterValue;
+            filtersArray.push(filterObj);
+        }
+    });
+    return filtersArray
 }
 
 /* SPARQL, File */
@@ -2161,13 +2216,13 @@ function callSparqlanything(objectItem, id, recordId, type) {
     if (type === 'file') {
         encoded = encodeURIComponent(q.includes("<x-sparql-anything:"+endpoint+">") ? q : q.replace("{", "{ SERVICE <x-sparql-anything:"+endpoint+"> {").replace("}", "}}"));
     } else if (type === 'sparql') {
-        encoded = q.includes("SERVICE") ? encodeURIComponent(q) : encodeURIComponent(q.replace("{", "{ SERVICE <" + endpoint + "> {").replace("}", "}}"));
+        encoded = encodeURIComponent(q);
     };
 
     // get the URL to send the query
     let url = new URL(window.location.href);
     let baseUrl = url.origin + url.pathname.substring(0, url.pathname.lastIndexOf('/'));
-    let eventSource = new EventSource(baseUrl + '/sparqlanything?action=searchentities&q=' + encoded + '&service=' + service);
+    let eventSource = new EventSource(baseUrl + '/sparqlanything?action=searchentities&q=' + encoded + '&service=' + service + '&endpoint=' +encodeURIComponent(endpoint) );
     let length;
     let swalInstance;
 
@@ -2209,28 +2264,6 @@ function callSparqlanything(objectItem, id, recordId, type) {
             return objectItem;
         }
     };
-}
-
-/* FILE */
-
-// add filters for manual queries
-function generateExtractionFilter(element) {
-    // hide the comment "no filter available"
-    if ($(element).prev('.extractor-comment').length>0) {
-        $(element).prev('.extractor-comment').hide();
-    }
-
-    // add a new couple (type,value) of input fields 
-    var newParameterDiv = $("<div class='extraction-form-div file-query-parameter'>\
-        <select class='custom-select extraction-form-input' id='extractor-filter' name='extractor-filter'>\
-            <option value='None'>Select</option>\
-            <option value='regex'>Regex</option>\
-            <option value='counter'>Min. count</option>\
-        </select>\
-        <input type='text' class='extraction-form-input'>\
-        <i class='fas fa-times' onclick='removeExtractionParameter(this)'></i>\
-    </div>");
-    $(element).before(newParameterDiv);
 }
 
 // build SPARQL query from manual paramaters
@@ -2354,36 +2387,67 @@ function showExtractionResult(jsonData,type,extractionId,recordId,objectItem=nul
         resultTable.append("<tr><th>LABEL</th><th>URI</th></tr>");
 
         // set the results paths
+        let resultsArray = jsonData;        
         var jsonResults = objectItem["results"];
-        console.log(jsonResults)
-        var mainPath = jsonResults.array.split(".");
-        let resultsArray = jsonData;
-        mainPath.forEach(key => {
-            resultsArray = resultsArray[key];
-        });
+        var jsonFitlers = objectItem["filters"];
+        if ('array' in jsonResults) { 
+            var mainPath = jsonResults.array.split(".");
+            
+            mainPath.forEach(key => {
+                resultsArray = resultsArray[key];
+            });
+        }
         
         if (resultsArray === undefined) {
             showErrorPopup("Error:","Please, check your query parameters before proceeding!");
             return false;
         }
         resultsArray.forEach(function(res) {
-            // extract a label for each term
-            let labelPath = jsonResults.label.split(".");
-            let label = res;
-            labelPath.forEach(key => {
-                label = label[key];
-            });
-            // extract the URI value for each term
-            let uriPath = jsonResults.uri.split(".");
-            let uri = res;
-            uriPath.forEach(key => {
-                uri = uri[key];
-            });
+            let moveOn = true;
+            // check filters
+            jsonFitlers.forEach(function(filter) {
+                let filterPath = filter.key.split(".");
+                let filterKey = res;
+                filterPath.forEach(key => {
+                    filterKey = filterKey[key];
+                });
+                if (filter.type === "mincounter") {
+                    if (!(parseInt(filterKey) > parseInt(filter.value))) {
+                        moveOn = false;
+                    }
+                } else if (filter.type === "maxcounter") {
+                    if (!(parseInt(filterKey) < parseInt(filter.value))) {
+                        moveOn = false;
+                    }
+                } else if (filter.type === "regex") {
+                    let regex = new RegExp(filter.value);
+                    if (!regex.test(filterKey)) {
+                        moveOn = false;
+                    }
+                }
             
-            // create a new table row, append it to the table, and store each term information
-            var resultTableRow = $('<tr><td><span>' + label + '</span><i class="far fa-edit"></i></td><td><a href="' + uri + '">' + uri + '</a><i class="far fa-edit"></i></td></tr>');
-            resultTable.append(resultTableRow);
-            bindings.push({"uri": {'value':uri, 'type':'uri'}, 'label': {'value':label, 'type':'literal'}});
+            })
+
+            if (moveOn) {
+                // extract a label for each term
+                let labelPath = jsonResults.label.split(".");
+                let label = res;
+                labelPath.forEach(key => {
+                    label = label[key];
+                });
+                label = typeof(label) === "object" ? label[0] : label 
+                // extract the URI value for each term
+                let uriPath = jsonResults.uri.split(".");
+                let uri = res;
+                uriPath.forEach(key => {
+                    uri = uri[key];
+                });
+                
+                // create a new table row, append it to the table, and store each term information
+                var resultTableRow = $('<tr><td><span>' + label + '</span><i class="far fa-edit"></i></td><td><a href="' + uri + '">' + uri + '</a><i class="far fa-edit"></i></td></tr>');
+                resultTable.append(resultTableRow);
+                bindings.push({"uri": {'value':uri, 'type':'uri'}, 'label': {'value':label, 'type':'literal'}});
+            }
         });
 
     } else if (type==='sparql' || type==='file') {
@@ -2404,7 +2468,6 @@ function showExtractionResult(jsonData,type,extractionId,recordId,objectItem=nul
 
             for (let i=0; i<labels.length; i++){
                 var label = labels[i];
-                console.log(label)
                 if (result[label].value !== null && result[label].value !== "") {
                     if (result[label].value.startsWith("https://") || result[label].value.startsWith("http://")) {
                         var item = "<a href='"+result[label].value+"' target='_blank'>"+result[label].value+"</a><i class='far fa-edit'></i>";
