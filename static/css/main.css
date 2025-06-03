@@ -2831,6 +2831,7 @@ section.dropdown-menu.gradient_dropbox.show input[type='text'] {
 
 .block_field.form_row input[type="text"].extraction-form-input-large:first-child,
 .block_field.form_row select.extraction-form-input-small:first-child,
+.block_field.form_row select.extraction-form-input-large:first-child,
 .extraction-form-input-large:first-child, .extraction-form-label-small:first-child {
   margin-top: 0.1em !important;
   margin-left: 0px !important;

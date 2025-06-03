@@ -1863,7 +1863,7 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
         <section class='row extractor-1 manual-query' style='display: none;'>\
             <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>FILTERS<br><span class='comment'>filter your keys</span></label>\
             <div class='extraction-form-div'>\
-                <span class='extraction-form-label'>TYPE</span><span class='extraction-form-label'>VALUE</span>\
+                <span class='extraction-form-label-large'>TYPE</span><span class='extraction-form-label-large'>VALUE</span>\
             </div>\
             <p class='extractor-comment'>No filter available: add a new one</p><span class='add-filter'>Add new <i class='fas fa-plus'></i></span>\
         </section>");
@@ -2114,12 +2114,12 @@ function generateExtractionFilter(element,extractorType) {
     // add a new couple (type,value) of input fields 
     if (extractorType === "file") {
         newFilterDiv = $("<div class='extraction-form-div file-query-filter'>\
-            <select class='custom-select extraction-form-input' id='extractor-filter' name='extractor-filter'>\
+            <select class='custom-select extraction-form-input-large' id='extractor-filter' name='extractor-filter'>\
                 <option value='None'>Select</option>\
                 <option value='regex'>Regex</option>\
                 <option value='counter'>Min. count</option>\
             </select>\
-            <input type='text' class='extraction-form-input'>\
+            <input type='text' class='extraction-form-input-large' id='extractor-value' name='extractor-value'>\
             <i class='fas fa-times' onclick='removeExtractionParameter(this)'></i>\
         </div>");
     } else if (extractorType === "api") {
@@ -2130,8 +2130,8 @@ function generateExtractionFilter(element,extractorType) {
                 <option value='mincounter'>Greater than</option>\
                 <option value='maxcounter'>Lower than</option>\
             </select>\
-            <input type='text' class='extraction-form-input-small'>\
-            <input type='text' class='extraction-form-input-small'>\
+            <input type='text' class='extraction-form-input-small' id='extractor-variable' name='extractor-variable'>\
+            <input type='text' class='extraction-form-input-small' id='extractor-value' name='extractor-value'>\
             <i class='fas fa-times' onclick='removeExtractionParameter(this)'></i>\
         </div>");
     }
