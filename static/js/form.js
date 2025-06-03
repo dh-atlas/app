@@ -1841,6 +1841,13 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
                 <option value='sparql'>SPARQL</option>\
             </select>\
         </section>\
+        <section class='row extractor-1'>\
+            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>CSV HEADER (CSV only)</label>\
+            <div class='col-md-12' style='text-align: left !important; margin-left: 5px'>\
+                <input type='checkbox' id='hasHeader' name='hasHeader'>\
+                <span class='comment'>tick this box if the first row of your CSV file contains column names</span>\
+            </div>\
+        </section>\
         <section class='row extractor-1 manual-extraction' style='display: none;'>\
             <input id='parse-file' class='btn btn-dark extractor-1' style='margin-left:20px;' type='button' value='Parse File' onClick='parseFile(this)'>\
         </section>\
@@ -1912,13 +1919,14 @@ function parseFile(element) {
     let baseUrl = url.origin + url.pathname.substring(0, url.pathname.lastIndexOf('/'));
 
     var extractionBlockField = $(element).parent().parent();
+    var hasCSVHeader = extractionBlockField.find("#hasHeader").prop('checked');
     var fileUrl = extractionBlockField.find("#FileUrl").val();
     if (fileUrl !== "" && (fileUrl.endsWith(".xml") || fileUrl.endsWith(".csv") || fileUrl.endsWith(".json"))) {
         var encoded = encodeURIComponent(fileUrl);
         showLoadingPopup("We are parsing your file:", fileUrl);
         $.ajax({
             type: 'GET',
-            url: baseUrl+'/sparqlanything?action=searchclasses&q=' + encoded,
+            url: baseUrl+'/sparqlanything?action=searchclasses&q=' + encoded + '&csvheader=' + hasCSVHeader,
             success: function(resultsJsonObject) {
                 extractionBlockField.find(".manual-query").show();
                 parsedFile = resultsJsonObject;
@@ -2003,7 +2011,9 @@ function nextExtractor(element, recordId, id, type) {
         objectItem["type"] = "file";
         objectItem["url"] = extractionBlockField.find('#FileUrl').val();
         var extractionType = extractionBlockField.find('#ExtractionType').val();
+        var hasCSVHeader = extractionBlockField.find("#hasHeader").prop('checked');
         objectItem["extractionType"] = extractionType;
+        objectItem["hasCSVHeader"] = hasCSVHeader;
 
         // manual query or sparql.anything query 
         if (extractionType === "sparql") {

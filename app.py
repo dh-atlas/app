@@ -1380,8 +1380,12 @@ class Sparqlanything(object):
 		query_string = web.input()
 		try:
 			query_str_decoded = query_string.q.decode('utf-8').strip()
+			endpoint = query_string.endpoint.decode('utf-8').strip() if "endpoint" in query_string else None
+			has_csv_header = query_string.csvheader.decode('utf-8').strip() if "csvheader" in query_string else None
 		except Exception as e:
 			query_str_decoded = query_string.q.strip()
+			endpoint = query_string.endpoint.strip() if "endpoint" in query_string else None
+			has_csv_header = query_string.csvheader.strip() if "csvheader" in query_string else None
 
 		action = query_string.action
 
@@ -1400,7 +1404,8 @@ class Sparqlanything(object):
 				if response.status_code == 200:
 					csv_content = StringIO(response.text)
 					reader = csv.reader(csv_content)
-					results = next(reader)
+					first_row = next(reader)
+					results = first_row if has_csv_header == "true" else [str(i) for i in range(len(first_row))]
 			return json.dumps(results)
 
 		elif action == "searchentities":
