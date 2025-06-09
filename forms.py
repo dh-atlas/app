@@ -214,7 +214,7 @@ def get_form(json_form, from_dict=False, supertemplate=False, processed_template
 					data_subclass=subclass_restriction,
 					data_supertemplate=data_supertemplate), )
 
-			if field['type'] == 'Dropdown':
+			if field['type'] in ['Dropdown', 'Subclass']:
 				params = params + (form.Dropdown(myid,
 				description = description,
 				args=dropdown_values,
@@ -225,10 +225,11 @@ def get_form(json_form, from_dict=False, supertemplate=False, processed_template
 				data_property = rdf_property,
 				data_mandatory = mandatory,
 				data_class=res_class,
+				data_subclassdropdown = is_subclass_field,
 				data_subclass=subclass_restriction,
 				data_supertemplate=data_supertemplate), )
 
-			if field['type'] in ['Checkbox', 'Subclass']:
+			if field['type'] == 'Checkbox':
 				prepend_title = '<section class="checkbox_group_label label col-12">'+prepend+"\n"+'<span class="title">'+description+'</span></section>'
 				i = 0
 				params = params + (form.Checkbox(myid+'-'+str(i),
@@ -241,7 +242,6 @@ def get_form(json_form, from_dict=False, supertemplate=False, processed_template
 				data_property = rdf_property,
 				data_mandatory = mandatory,
 				data_class=res_class,
-				data_subclassck = is_subclass_field,
 				data_subclass=subclass_restriction,
 				data_supertemplate=data_supertemplate), )
 
@@ -257,7 +257,6 @@ def get_form(json_form, from_dict=False, supertemplate=False, processed_template
 					data_property = rdf_property,
 					data_mandatory = mandatory,
 					data_class=res_class,
-					data_subclassck = is_subclass_field,
 					data_subclass=subclass_restriction,
 					data_supertemplate=data_supertemplate), )
 

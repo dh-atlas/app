@@ -104,51 +104,44 @@ $(document).ready(function() {
         $(this).closest("section.form_row.block_field").hide();
     });
 
-    $("[data-subclassck='True']").each(function() {
-        var checked = $(this).prop("checked");
-        console.log(checked)
+    $("[data-subclassdropdown='True']").each(function() {
+
         // on change function
-        $(this).on("click", function() {
+        $(this).on("change", function() {
             console.log("here")
-            var checked = $(this).prop("checked");
             var selectedValue = $(this).val().split(",")[0];
             var subclass = selectedValue.trim();
             var subform = $(this).data("subform");
             var supertemplate = $(this).data("supertemplate");
             var subformFilter = subform !== undefined ? "[data-subform='"+subform+"']" : "[data-supertemplate='"+supertemplate+"']";
-            console.log(checked,subformFilter,subclass)
+                
+            // hide all fields
+            $(subformFilter+"[data-subclass!='']").closest("section.form_row.block_field").each(function() {
+                $(this).fadeOut(400);
+                var inputId = $(this).find("input, textarea, select, .imported_graphs").first().attr("id");
+                $("li[data-id='"+inputId+"']").fadeOut(400);
+            })
 
-            if (checked) {
-                // show required fields
-                $(subformFilter+"[data-subclass*='"+subclass+"']").closest("section.form_row.block_field").each(function() {
-                    $(this).fadeIn(400);
-                    var inputId = $(this).find("input, textarea, select, .imported_graphs").first().attr("id");
-                    $("li[data-id='"+inputId+"'").fadeIn(400);
-                });
-            } else {
-                // hide unrequired fields
-                $(subformFilter+"[data-subclass*='"+subclass+"']").closest("section.form_row.block_field").each(function() {
-                    $(this).fadeOut(400);
-                    var inputId = $(this).find("input, textarea, select, .imported_graphs").first().attr("id");
-                    $("li[data-id='"+inputId+"']").fadeOut(400);
-                })
-            }
+            // show required fields
+            $(subformFilter+"[data-subclass*='"+subclass+"']").closest("section.form_row.block_field").each(function() {
+                $(this).fadeIn(400);
+                var inputId = $(this).find("input, textarea, select, .imported_graphs").first().attr("id");
+                $("li[data-id='"+inputId+"'").fadeIn(400);
+            });
         });
 
         // trigger the on change function to show subclass restricted fields (modify and review page)
         if ($("#modifyForm").length > 0) {
-            if ($(this).prop("checked") === true) {
-                var selectedValue = $(this).val().split(",")[0];
-                var subclass = selectedValue.trim();
-                var supertemplate = $(this).data("supertemplate");
+            var selectedValue = $(this).val().split(",")[0];
+            var subclass = selectedValue.trim();
+            var supertemplate = $(this).data("supertemplate");
 
-                // show required fields
-                $("[data-supertemplate='"+supertemplate+"'][data-subclass*='"+subclass+"']").closest("section.form_row.block_field").each(function() {
-                    $(this).fadeIn(400);
-                    var inputId = $(this).find("input, textarea, select").first().attr("id");
-                    $("li[data-id='"+inputId+"'").fadeIn(400);
-                });
-            }
+            // show required fields
+            $("[data-supertemplate='"+supertemplate+"'][data-subclass*='"+subclass+"']").closest("section.form_row.block_field").each(function() {
+                $(this).fadeIn(400);
+                var inputId = $(this).find("input, textarea, select").first().attr("id");
+                $("li[data-id='"+inputId+"'").fadeIn(400);
+            });
         }
     });
 

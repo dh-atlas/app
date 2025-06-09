@@ -85,7 +85,7 @@ def check_ip(ip_add, current_time):
 def get_dropdowns(fields):
 	""" retrieve Dropdowns ids to render them properly
 	in Modify and Review form"""
-	ids_dropdown= [field['id'] for field in fields if field['type'] == 'Dropdown']
+	ids_dropdown= [field['id'] for field in fields if field['type'] in ['Dropdown', 'Subclass']]
 	return ids_dropdown
 
 def get_subtemplates(fields):

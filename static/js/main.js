@@ -413,11 +413,10 @@ $(document).ready(function() {
     };
     $(this).parent().find('[data-letter="'+ encoded_letter +'"]').append(this);
     $('.toBeWrapped.'+res_id).each(function() {
-    console.log(res_id)
-    if (!$(this).parent().hasClass('accordion-group')) {
-      $(this).wrapAll("<section class='accordion-group'></section>");
+      if (!$(this).parent().hasClass('accordion-group')) {
+        $(this).wrapAll("<section class='accordion-group'></section>");
 
-    }
+      }
     });
 
   });
