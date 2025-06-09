@@ -153,7 +153,12 @@ $(document).ready(function() {
             var itemTitle = section.find(".title").contents().filter(function() {
                 return this.nodeType === 3;
             }).text().trim();
-            var itemId = section.next('.input_or_select').find("input, textarea, select").first().attr("id");
+            let itemId;
+            if (section.hasClass("checkbox_group_label")) {
+                itemId = section.next('section.col-md-12').find("input").first().attr("id");
+            } else {
+                itemId = section.next('.input_or_select').find("input, textarea, select").first().attr("id");
+            }
             var listItem = $("<li data-id='"+itemId+"'>"+itemTitle+"</li>");
             listItem.on('click', function() {
                 $('html, body').animate({
