@@ -88,6 +88,8 @@ def get_form(json_form, from_dict=False, supertemplate=False, processed_template
 			# subclass restriction
 			subclass_restriction = " ".join(field['restricted']) if 'restricted' in field and field['restricted'] != "None" else ''
 			is_subclass_field = 'True' if field['type'] == 'Subclass' else ''
+			classes = classes+' showOtherSubclass' if 'showOther' in field and field['showOther'] == 'showOther' else classes
+
 
 			# text box
 			placeholder = field['placeholder'] if 'placeholder' in field else None

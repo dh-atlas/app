@@ -1038,8 +1038,11 @@ class View(object):
 			extractions_data = queries.retrieve_extractions(previous_extractors,view=True)
 
 			with open(res_template) as tpl_form:
-				fields = json.load(tpl_form)
-			fields = [field for field in fields if field['restricted'] == [] or any(subclass in field['restricted'] for subclass in res_subclasses)] 
+				all_fields = json.load(tpl_form)
+			fields = []
+			for field in all_fields:
+				if field['restricted'] in [ [], ["other"] ] or any(subclass in field['restricted'] for subclass in res_subclasses):
+					fields.append(field)
 			try:
 				title_field = [v for k,v in data.items() \
 					for field in fields if (field['disambiguate'] == "True" \

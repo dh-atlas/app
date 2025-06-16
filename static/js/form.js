@@ -99,7 +99,9 @@ $(document).ready(function() {
         });
     }
 
-    // SUBCLASS RESTRICTED FIELD
+    // SUBCLASS RESTRICTED FIELD - Create and Modify
+    $(".showOtherSubclass").append("<option value='other' class='valid-value'>Other</option>");
+
     $("[data-subclass]:not([data-subclass=''])").each(function() {
         $(this).closest("section.form_row.block_field").hide();
     });
@@ -108,8 +110,8 @@ $(document).ready(function() {
 
         // on change function
         $(this).on("change", function() {
-            console.log("here")
-            var selectedValue = $(this).val().split(",")[0];
+            var selectedVal = $(this).val();
+            var selectedValue = selectedVal.split(",")[0];
             var subclass = selectedValue.trim();
             var subform = $(this).data("subform");
             var supertemplate = $(this).data("supertemplate");
@@ -132,8 +134,11 @@ $(document).ready(function() {
 
         // trigger the on change function to show subclass restricted fields (modify and review page)
         if ($("#modifyForm").length > 0) {
-            var selectedValue = $(this).val().split(",")[0];
-            var subclass = selectedValue.trim();
+            var selectedText = $(this).find("option:selected").text();
+            var selectedVal = $(this).val();
+            var selectedValue = selectedText.toLowerCase() === "other" && selectedVal === ""
+                ? "other"
+                : selectedVal.split(",")[0];            var subclass = selectedValue.trim();
             var supertemplate = $(this).data("supertemplate");
 
             // show required fields
@@ -144,6 +149,24 @@ $(document).ready(function() {
             });
         }
     });
+
+    // SUBCLASS RESTRICTED FIELD - Modify only
+
+    // check if any value exists for "other"-restricted fields
+    $("#modifyForm [data-subclass='other']").each(function() {
+        var isOther = false;
+
+        if ($(this).is('textarea, select, input:not([type="checkbox"])') && $(this).val() !== "") {
+            isOther = true;
+            $("[data-subclassdropdown='True']").val("other").change();
+        } else if ($(this).is('input:not([type="checkbox"])')) {
+            var fieldId = $(this).attr("id");
+            if ($("span[data-input='"+fieldId+"']")) {
+                isOther = true;
+                $("[data-subclassdropdown='True']").val("other").change();
+            }
+        }
+    })
 
     // TABLE OF CONTENTS
     // table of contents: input fields
@@ -227,7 +250,7 @@ function checkMandatoryFields(subrecordButton=false){
 
     if (subrecordButton) { var fields = $(subrecordButton).parent().parent().find('[data-mandatory="True"]:visible'); } else { var fields = $('[data-mandatory="True"]:visible'); }
     fields.each(function() {
-        if ($(this).val() === '' && !$('[data-input="'+$(this).attr('id')+'"]').length) {
+        if ($(this).val() === '' && (! $(this).find("option:selected").hasClass("valid-value")) && !$('[data-input="'+$(this).attr('id')+'"]').length) {
             console.log($(this));
             /* in principle, the header could be changed through the back-end application. 
             However, this would cause the loss of all inserted values. */

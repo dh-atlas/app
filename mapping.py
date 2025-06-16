@@ -108,17 +108,20 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 	with open(TEMPLATE_LIST) as tpl_file:
 		tpl_list = json.load(tpl_file)
 
-	resource_class = next(t["type"] for t in tpl_list if t["template"] == tpl_form)
-	resource_subclass_field = next((f for f in fields if f.get("type") == "Subclass"), None)
-	resource_subclass_field_values = resource_subclass_field["values"] if resource_subclass_field != None else resource_subclass_field
-	resource_subclass_input_ids = [resource_subclass_field["id"]+"-"+str(idx) for idx in list(range(len(resource_subclass_field_values)))] if resource_subclass_field_values != None else []
-	resource_subclass_input_values = [recordData[input_id].split(",")[0] for input_id in resource_subclass_input_ids if input_id in recordData]
+	resource_class = next(t["type"] for t in tpl_list if t["template"] == tpl_form) # main class
+	resource_subclass_field = next((f for f in fields if f.get("type") == "Subclass"), None) # subclass field (if any)
+	resource_subclass_input_id = resource_subclass_field["id"] if resource_subclass_field != None else None # subclass field id (if any)
+	resource_subclass = recordData[resource_subclass_input_id].split(",")[0] if resource_subclass_input_id != None else None # subclass value
+
+	# reset subclass value in case "other" has been selected
+	if resource_subclass == "other":
+		recordData[resource_subclass_input_id] = ""
 
 	# exclude hidden input fields and unrequired ones (based on subclasses)
 	fields = [
 		input_field for input_field in fields
 		if input_field["hidden"] == "False" and
-		(input_field["restricted"] == [] or any(resource_subclass in resource_subclass_input_values for resource_subclass in input_field["restricted"]) )
+		(input_field["restricted"] in [ [], ["other"] ] or any(restriction_subclass == resource_subclass for restriction_subclass in input_field["restricted"]) )
 	]
 
 	# CREATE/MODIFY A NAMED GRAPH for each new record

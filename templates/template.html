@@ -303,6 +303,19 @@ $else:
 												</ul>
 											</section>
 										</section>
+										<section class='row'>
+											<label class='col-md-3'>OTHER <br><span class='comment'>add "Other" option to the Subclass dropdown</span></label>
+											<section class='col-md-8'>
+												<label for='showOther__$id'>
+													Show "Other" option
+													<input type='radio' id='showOther__$id' name='showOther__$id' value='showOther' onclick='updateSubclassRestrictionField("",this,true)'>
+													</label><br>
+												<label for='hideOther__$id'>
+													Hide "Other" option
+													<input type='radio' id='hideOther__$id' name='showOther__$id' value='hideOther' onclick='updateSubclassRestrictionField("",this,false)' checked>
+													</label><br>
+											</section>
+										</section>
 									$if subclass_field and id != subclass_field["id"]:
 										<!-- SUBCLASS RESTRICTION -->
 										<section class="row subclass">

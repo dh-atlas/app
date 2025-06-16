@@ -326,6 +326,20 @@ function add_field(field, res_type, backend_file=null) {
         </section>\
     </section>";
 
+    var field_subclass_other = "<section class='row'>\
+        <label class='col-md-3'>OTHER <br><span class='comment'>add \"Other\" option to the Subclass dropdown</span></label>\
+        <section class='col-md-8'>\
+            <label for='showOther__"+temp_id+"'>\
+                Show \"Other\" option\
+                <input type='radio' id='showOther__"+temp_id+"' name='showOther__"+temp_id+"' value='showOther' onclick='updateSubclassRestrictionField(\"\",this,true)'>\
+            </label><br>\
+            <label for='hideOther__"+temp_id+"'>\
+                Hide \"Other\" option\
+                <input type='radio' id='hideOther__"+temp_id+"' name='showOther__"+temp_id+"' value='hideOther' onclick='updateSubclassRestrictionField(\"\",this,false)' checked>\
+            </label>\
+        </section>\
+    </section>";
+
     // todo: modify the following script
     var field_subclass_restriction = "";
     if (is_subclass_active) {
@@ -356,7 +370,7 @@ function add_field(field, res_type, backend_file=null) {
     else if (field =='Multimedia') { contents += field_multimedia + field_placeholder + field_subclass_restriction + field_mandatory + field_hide; }
     else if (field =='WebsitePreview') { contents += field_placeholder + field_subclass_restriction + field_mandatory + field_hide; }
     else if (field =='Subtemplate') { contents += field_subtemplate_import + field_cardinality + field_data_inheritance + field_subclass_restriction + field_mandatory + field_hide + field_browse; }
-    else if (field =='Subclass') { contents += field_subclass_values + field_mandatory + field_hide; }
+    else if (field =='Subclass') { contents += field_subclass_values + field_subclass_other + field_mandatory + field_hide; }
     else if (field =='KnowledgeExtractor') { contents += open_addons + field_reconciliation + field_subclass_restriction; }
     else {contents += field_values + field_subclass_restriction + field_mandatory + field_hide + field_browse; };
     contents += close_addons + up_down;
@@ -1005,7 +1019,7 @@ function removeLabelURI(btn) {
     }
 }
 
-function saveLabelURI(btn,fieldId,modifySubclass=null) {
+function saveLabelURI(btn,fieldId,modifySubclass=null,otherSubclass=null) {
     // save input values then update the list
     console.log(modifySubclass)
     var ul = $(btn).closest("ul"); 
@@ -1018,10 +1032,11 @@ function saveLabelURI(btn,fieldId,modifySubclass=null) {
     if (label === "") {
         showErrorPopup("Invalid label", "Please, provide a label");
         return false;
-    } else if (uri === "") {
+    }   else if (uri === "") {
         showErrorPopup("Invalid URI", "Please, provide a URI");
         return false;
-    } else if (uri in subclasses && uri !== modifySubclass) {
+    } 
+    else if (uri in subclasses && uri !== modifySubclass) {
         // alert in case the uri is already in use, except for subclass value modifying
         showErrorPopup("Invalid URI", "This URI is already in use. Please, provide a new one");
         return false;
@@ -1098,7 +1113,17 @@ function storeLabelURI(index, fieldId, uri, label, ul, block) {
 }
 
 // subclass list update
-function updateSubclassRestrictionField(currentIndex) {
+function updateSubclassRestrictionField(currentIndex,obj=null,showOther=null) {
+
+    // generate currentIndex when modifying "Other" option
+    currentIndex = currentIndex != "" ? currentIndex : $(obj).closest("section.block_field").data("id");
+    if (showOther === true) {
+        subclasses["other"] = "Other";
+    } else if (showOther === false) {
+        delete subclasses["other"];
+    }
+
+    // modify input fields "subclass restriction" options
     $(".block_field").each(function() {
         var tempId = $(this).data("id");
         if (tempId !== currentIndex) {
@@ -1136,7 +1161,8 @@ function updateSubclassRestrictionField(currentIndex) {
             fieldSubclassRestriction.find("select").attr("id", newId);
             lastInputRow.after(fieldSubclassRestriction);
         }
-    })
+    });
+    updateindex();
 
 }
 
