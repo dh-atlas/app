@@ -39,7 +39,7 @@ def initialize_session(app):
 	Sessions are pickled in folder /sessions"""
 	if web.config.get('_session') is None:
 		store = web.session.DiskStore('sessions')
-		session = web.session.Session(app, store, initializer={'logged_in': 'False', 'username': 'anonymous', 'gituser': 'None', 'bearer_token': 'None', 'ip_address': 'None'})
+		session = web.session.Session(app, store, initializer={'logged_in': 'False', 'username': 'anonymous', 'gituser': 'None', 'bearer_token': 'None', 'ip_address': 'None', 'records': ''})
 		web.config._session = session
 		session_data = session._initializer
 	else:
@@ -201,6 +201,7 @@ def fields_to_json(data, json_file, skos_file):
 		if d["type"] == "Subclass":
 			d["restricted"] = []
 			template_config["subclasses"] = d["values"]
+			template_config["other_subclass"] = "True" if d["showOther"] == "showOther" else "False"
 		else:
 			d["restricted"] = [urllib.parse.unquote(d[subclass_key]) for subclass_key in d if subclass_key.startswith("subclass")] 
 		
@@ -283,6 +284,8 @@ def fields_to_json(data, json_file, skos_file):
 		if tpl['template'] == json_file:
 			tpl['hidden'] = template_config['hidden']
 			tpl['subclasses'] = template_config['subclasses']
+			if 'other_subclass' in template_config:
+				tpl['other_subclass'] = template_config["other_subclass"]
 
 	with open(TEMPLATE_LIST, 'w') as file:
 		json.dump(tpls, file, indent=1)
@@ -353,6 +356,7 @@ def updateTemplateList(res_name=None,res_type=None,res_description=None,remove=F
 		res["template"] = RESOURCE_TEMPLATES+'template-'+res_name.replace(' ','_').lower()+'.json'
 		res["hidden"] = "False"
 		res["subclasses"] = {}
+		res["other_subclass"] = "False"
 		data.append(res)
 
 		with open(TEMPLATE_LIST,'w') as tpl_file:

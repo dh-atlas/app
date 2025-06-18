@@ -3221,6 +3221,13 @@ h4.subrecord-title.closed-title {
 .link_btn, .btn {white-space: nowrap; font-weight: 500;}
 .add_fields .link_btn {display: inline-block; margin-bottom: 8px}
 .leaflet-popup-close-button,.leaflet-control-zoom-in,.leaflet-control-zoom-out {text-decoration: none !important;}
+#other-filters {
+  padding-top: 0 !important;
+  display: none;
+  opacity: 0;
+  position: relative;
+  top: -30px;
+}
 
 /* Animations */
 @keyframes fadeIn {

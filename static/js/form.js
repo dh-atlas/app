@@ -145,7 +145,7 @@ $(document).ready(function() {
             $("[data-supertemplate='"+supertemplate+"'][data-subclass*='"+subclass+"']").closest("section.form_row.block_field").each(function() {
                 $(this).fadeIn(400);
                 var inputId = $(this).find("input, textarea, select").first().attr("id");
-                $("li[data-id='"+inputId+"'").fadeIn(400);
+                $("li[data-id='"+inputId+"']").fadeIn(400);
             });
         }
     });

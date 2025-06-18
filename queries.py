@@ -184,6 +184,46 @@ def countAll(res_class=None,res_subclasses=None,by_subclass=False,exclude_unpubl
 	alll = results["results"]["bindings"][0]['count']['value']
 	return alll
 
+# ATLAS - "Other" values
+def countAllOtherValues(res_class=None,res_subclasses=None):
+	include_class_list = res_class
+	exclude_class_list = res_subclasses + res_class
+	filter_class_exists = "\n".join([f"FILTER EXISTS {{ ?s a <{cls}> }}" for cls in include_class_list])
+	filter_class_not_exists = f"FILTER (NOT EXISTS {{ ?s a ?other_class FILTER (?other_class NOT IN ({', '.join([f'<{cls}>' for cls in exclude_class_list])})) }})"
+
+	countall = """
+		PREFIX prov: <http://www.w3.org/ns/prov#>
+		PREFIX base: <"""+conf.base+""">
+		PREFIX dcterms: <http://purl.org/dc/terms/>
+		PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+		SELECT (COUNT(DISTINCT ?g) AS ?count) ?s ?uri ?label
+		WHERE
+		{ GRAPH ?g { ?s ?p ?o .
+			"""+filter_class_exists+"""
+				?s dcterms:type ?uri .
+  				?uri skos:prefLabel ?label .
+			"""+filter_class_not_exists+"""
+		}
+			FILTER( str(?g) != '"""+conf.base+"""vocabularies/' && !CONTAINS(STR(?g), "/extraction-")) .
+		}
+		GROUP BY ?s ?uri ?label
+	"""
+	sparql = SPARQLWrapper(conf.myEndpoint)
+	sparql.setQuery(countall)
+	sparql.setReturnFormat(JSON)
+	results = sparql.query().convert()
+	alll = {}
+	records_value = {}
+	for val in results["results"]["bindings"]:
+		subj = val['s']['value']
+		uri = val['uri']['value']
+		if uri not in alll:
+			alll[uri] = {
+				"label": val['label']['value'],
+				"count": val['count']['value']
+			}
+		records_value[subj+"/"] = uri
+	return alll, records_value
 
 def getRecordCreator(graph_name):
 	""" get the label of the creator of a record """

@@ -19,6 +19,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from rdflib import Graph
 from rdflib.namespace import OWL, DC , DCTERMS, RDF , RDFS
 from io import StringIO
+
 #import subprocess
 
 import forms, mapping, conf, queries , vocabs  , github_sync
@@ -985,15 +986,33 @@ class Records:
 				res_class=template["type"]
 				res_subclass_dict = template["subclasses"]
 				res_subclasses = list(res_subclass_dict.keys())
-				records = queries.getRecords(res_class,res_subclasses)
+				records = list(queries.getRecords(res_class,res_subclasses))
 				records_by_template[template["name"]] = records
 				alll = queries.countAll(res_class,res_subclasses,False,False)
 				count_by_template[template["name"]] = alll
+				init_count_subclass = int(alll)
 				if len(res_subclasses) > 0:
 					count_by_subclass[template["name"]] = {}
 				for res_subclass in res_subclasses:
 					count_subclass = queries.countAll(res_class,res_subclasses,[res_subclass],False)
+					init_count_subclass -= int(count_subclass)
 					count_by_subclass[template["name"]][res_subclass] = {"label": res_subclass_dict[res_subclass], "count": count_subclass}
+				
+				# show other subclass
+				if "other_subclass" in template and template["other_subclass"] == "True":
+					count_by_subclass[template["name"]]["other"] = {"label": "Other", "count": str(init_count_subclass)}
+
+					# ATLAS - show additional values from taxonomies
+					count_by_other_values,records_other_value = queries.countAllOtherValues(res_class,res_subclasses)
+					count_by_subclass[template["name"]]["other"]["other"] = count_by_other_values
+					print(records_other_value)
+					for i, record in enumerate(records_by_template[template["name"]]):
+						if record[7] == "" and record[0] in records_other_value:
+							print(record)
+							record_info_list = list(record)
+							record_info_list[7] = "other-"+records_other_value[record[0]]
+							records_by_template[template["name"]][i] = tuple(record_info_list)
+
 				for template_name in count_by_subclass:
 					count_by_subclass[template_name] = dict(sorted(count_by_subclass[template_name].items(), key=lambda item: item[1]['count'], reverse=True))
 

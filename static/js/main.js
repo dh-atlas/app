@@ -1414,7 +1414,17 @@ function sortList(ul) {
 // get values by property in EXPLORE page, e.g. creators
 function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemSubclass='') {
   if (elemClass.length) {var class_restriction = "?s a <"+elemClass+"> . "} else {var class_restriction = ''};
-  if (elemSubclass.length) {class_restriction += "?s a <"+elemSubclass+"> . "};
+  if (elemSubclass.length) {
+    if (!elemSubclass.startsWith("other")) { class_restriction += "?s a <"+elemSubclass+"> . "; }
+    // ATLAS only - filters for "Other" values
+    else if (elemSubclass === "other" || elemSubclass === "other-all") { class_restriction += "FILTER NOT EXISTS { ?s a ?otherType . FILTER (?otherType != <"+elemClass+">) }" } 
+    else if (elemSubclass.startsWith("other-")) { 
+      console.log("here", class_restriction)
+      class_restriction += "FILTER NOT EXISTS { ?s a ?otherType . FILTER (?otherType != <"+elemClass+">) }"
+      class_restriction += "?s <http://purl.org/dc/terms/type> <"+elemSubclass.substring(6)+"> .";
+    }
+
+  };
   if ((typeProp == 'URI' || typeProp == 'Place' || typeProp == 'URL') && (typeField == 'Textbox' || typeField == 'Dropdown'|| typeField == 'Checkbox' || typeField == 'Subtemplate' || typeField == 'Subclass') ) {
     var query = "select distinct ?o ?oLabel (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> ?o. "+class_restriction+" ?o rdfs:label ?oLabel . } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } GROUP BY ?o ?oLabel ORDER BY DESC(?count) lcase(?oLabel)";
   } else if (typeProp == 'URI' && typeField == 'Skos') {
@@ -1528,22 +1538,61 @@ function filterBySubclass(btn) {
   tab.find("[data-target]").show();
   tab.find(".hidden").removeClass("hidden");
   
+
   // active filter button
   $(btn).siblings().removeClass("active");
   $(btn).addClass("active");
 
-  // hide excluded alphabet filters
-  if (subclassURI !== "") {
-    tab.find(".list > a.resource_collapse[data-subclass]").each(function() {
-      console.log(subclassURI, $(this).data("subclass"))
-      if (! $(this).data("subclass").split("; ").includes(subclassURI)) {
-        $(this).parent().addClass("hidden");
-        if ($(this).closest(".toBeWrapped").find(".list:not(.hidden)").length == 0) {
-          var target = $(this).parent().attr("id");
-          $("[data-target='#"+target+"']").hide();
-        }
+  // hide "other" filters (for ATLAS only)
+  if (! subclassURI.startsWith("other")) {
+    $(btn).closest(".change_background").find("#other-filters").animate(
+      { opacity: 0, top: "-30px" }, 500, function () {
+        $(btn).closest(".change_background").find("#other-filters").css("display", "none");
       }
-    });
+    );
+
+    // hide excluded alphabet filters
+    if (subclassURI !== "") {
+      console.log(subclassURI)
+      tab.find(".list > a.resource_collapse[data-subclass]").each(function() {
+        if (! $(this).data("subclass").split("; ").includes(subclassURI)) {
+          $(this).parent().addClass("hidden");
+          if ($(this).closest(".toBeWrapped").find(".list:not(.hidden)").length == 0) {
+            var target = $(this).parent().attr("id");
+            $("[data-target='#"+target+"']").hide();
+          }
+        }
+      });
+    }
+  } else {
+    console.log(subclassURI)
+    // show "other" filters (for ATLAS only)
+    if (subclassURI === "other") {
+      $(btn).closest(".change_background").find("#other-filters")
+          .css({ display: "block", opacity: 0, top: "-30px" })
+          .animate({ opacity: 1, top: "0px" }, 600);
+      
+      tab.find(".list > a.resource_collapse[data-subclass]").each(function() {
+        console.log(subclassURI, $(this).data("subclass"))
+        if (! $(this).data("subclass").startsWith("other-")) {
+          $(this).parent().addClass("hidden");
+          if ($(this).closest(".toBeWrapped").find(".list:not(.hidden)").length == 0) {
+            var target = $(this).parent().attr("id");
+            $("[data-target='#"+target+"']").hide();
+          }
+        }
+      });
+    } else {
+      tab.find(".list > a.resource_collapse[data-subclass]").each(function() {
+        if (! $(this).data("subclass").split("; ").includes(subclassURI)) {
+          $(this).parent().addClass("hidden");
+          if ($(this).closest(".toBeWrapped").find(".list:not(.hidden)").length == 0) {
+            var target = $(this).parent().attr("id");
+            $("[data-target='#"+target+"']").hide();
+          }
+        }
+      });
+    }
   }
 
   // generate new property-value filters
