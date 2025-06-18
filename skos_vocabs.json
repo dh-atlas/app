@@ -29,6 +29,21 @@
             "uri": "resource"
         }
     },
+    "knot": {
+        "type": "API",
+        "url": "https://lab.dharc.unibo.it/skosmos/en/",
+        "endpoint": "https://lab.dharc.unibo.it/skosmos/rest/v1/ktx/search?",
+        "parameters": {
+            "query": "Query-term*",
+            "unique": "true",
+            "lang": "en"
+        },
+        "results": {
+            "array": "results",
+            "label": "prefLabel",
+            "uri": "uri"
+        }
+    },
     "language": {
         "type": "API",
         "url": "https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/language",
