@@ -1013,11 +1013,20 @@ class Records:
 							record_info_list[7] = "other-"+records_other_value[record[0]]
 							records_by_template[template["name"]][i] = tuple(record_info_list)
 
-				for template_name in count_by_subclass:
-					count_by_subclass[template_name] = dict(sorted(count_by_subclass[template_name].items(), key=lambda item: item[1]['count'], reverse=True))
-
 				filtersBrowse = queries.getBrowsingFilters(template["template"])
 				filters_by_template[template["name"]] = filtersBrowse
+
+		for template_name in count_by_subclass:
+			items = {
+				k: v for k, v in sorted(
+					((k, v) for k, v in count_by_subclass[template_name].items() if k != 'other'),
+					key=lambda item: int(item[1]['count']),
+					reverse=True
+				)
+			}
+			if 'other' in count_by_subclass[template_name]:
+				items['other'] = count_by_subclass[template_name]['other']
+			count_by_subclass[template_name] = items
 
 		return render.records(user=session['username'], data=records_by_template,
 							subclass_data=count_by_subclass,title='Latest resources', r_base=conf.base,
