@@ -532,7 +532,7 @@ $(document).ready(function() {
     visualize_subrecord($(this));
   });
 
-  $('textarea').each(function() {
+  $('#recordForm textarea, #modifyForm textarea').each(function() {
     $(this).on('click', nlpText($(this).attr('id')))
   })
 
@@ -1541,6 +1541,7 @@ function filterBySubclass(btn) {
 
   // active filter button
   $(btn).siblings().removeClass("active");
+  $("#other-filters button").removeClass("active");
   $(btn).addClass("active");
 
   // hide "other" filters (for ATLAS only)
@@ -1568,6 +1569,7 @@ function filterBySubclass(btn) {
     console.log(subclassURI)
     // show "other" filters (for ATLAS only)
     if (subclassURI === "other") {
+      $("#other-filters button:first-of-type").addClass("active");
       $(btn).closest(".change_background").find("#other-filters")
           .css({ display: "block", opacity: 0, top: "-30px" })
           .animate({ opacity: 1, top: "0px" }, 600);

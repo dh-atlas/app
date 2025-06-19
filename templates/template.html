@@ -34,6 +34,10 @@ $else:
 				<section class="sortable homeheading col-md-12 col-lg-12 col-sm-12">
 					$if f:
 						$ subclass_field = next((field for field in f if "type" in field and field["type"] == "Subclass"), None)
+						<!-- OTHER SUBCLASS -->
+						$if subclass_field != None and subclass_field["showOther"] == "showOther":
+							$ subclass_field["values"]["other"] = "Other"
+
 						$for field in f:
 							$ hidden_style = "style=opacity:0.6" if "hidden" in field and field["hidden"] == "True" else ""
 							$ id = field["id"]
@@ -293,12 +297,13 @@ $else:
 													<li><label class="inner-label col-md-12">Subclasses List</label></li>
 													$ idx = 0
 													$for uri,lab in field["values"].items():
-														$ idx +=1
-														$ value_id = "value" + str(idx) + "__" + id
-														<li>
-															<label>$lab.strip() <i class="far fa-edit" onclick="modifyLabelURI(this)"></i> <i class="far fa-trash-alt" onclick="removeLabelURI(this)"></i></label>
-															<input type="hidden" id="$value_id" name="$value_id" value="$uri.strip(),$lab.strip()">
-														</li>
+														$if uri != "other":
+															$ idx +=1
+															$ value_id = "value" + str(idx) + "__" + id
+															<li>
+																<label>$lab.strip() <i class="far fa-edit" onclick="modifyLabelURI(this)"></i> <i class="far fa-trash-alt" onclick="removeLabelURI(this)"></i></label>
+																<input type="hidden" id="$value_id" name="$value_id" value="$uri.strip(),$lab.strip()">
+															</li>
 													<li><label class="add-option">ADD NEW VALUE <i class="fas fa-plus-circle" onclick="addLabelURI(this, '$id')"></i></label></li>
 												</ul>
 											</section>
@@ -309,12 +314,15 @@ $else:
 												<label for='showOther__$id'>
 													Show "Other" option
 													<input type='radio' id='showOther__$id' name='showOther__$id' value='showOther' onclick='updateSubclassRestrictionField("",this,true)'>
-													</label><br>
+												</label><br>
 												<label for='hideOther__$id'>
 													Hide "Other" option
-													<input type='radio' id='hideOther__$id' name='showOther__$id' value='hideOther' onclick='updateSubclassRestrictionField("",this,false)' checked>
-													</label><br>
+													<input type='radio' id='hideOther__$id' name='showOther__$id' value='hideOther' onclick='updateSubclassRestrictionField("",this,false)'>
+												</label><br>
 											</section>
+											<script type="text/javascript">
+												$$("[value='"+"$field['showOther']"+"']").prop("checked", true);
+											</script>
 										</section>
 									$if subclass_field and id != subclass_field["id"]:
 										<!-- SUBCLASS RESTRICTION -->
@@ -329,7 +337,7 @@ $else:
 										<script type="text/javascript">
 											subclasses = JSON.parse('$subclass_field["values"]'.replace(/&#39;/g, '"'));
 											var rawSelectedSubclass = '$field["restricted"]';
-											var selectedSubclass = rawSelectedSubclass.replace(/^\[&#39;|&#39;\]$$/g, "").split(/&#39;, &#39;/); 
+											var selectedSubclass = rawSelectedSubclass.replace(/^\[&#39;|&#39;\]$$/g, "").split(/&#39;, &#39;/);
 											var idx = 1;
 											$$.each(subclasses, function(uri, label) {
 												var encodedURI = encodeURIComponent(uri);
@@ -401,7 +409,7 @@ $else:
 					<span class="toggle-comment">Show this Template to users</span>    
 					<label class="switch">      
 						<input id="hidden__template__input" name="hidden__template__input" type="checkbox">      
-						<span class="slider round"></span>    
+						<span class="slider round"></span>
 					</label>
 				</div>
 			</section>
