@@ -19,19 +19,21 @@
   "template": "resource_templates/template-research_product.json",
   "hidden": "False",
   "subclasses": {
-   "https://w3id.org/dh-atlas/Software": "Software",
    "https://w3id.org/dh-atlas/Ontology": "Ontology",
+   "https://w3id.org/dh-atlas/3DDigitalTwin": "3D Digital Twin",
+   "https://w3id.org/dh-atlas/DigitalScholarlyEdition": "Digital Scholarly Edition",
    "https://w3id.org/dh-atlas/TextCollection": "Text Collection",
+   "https://w3id.org/dh-atlas/Software": "Software",
    "https://w3id.org/dh-atlas/LinkedOpenData": "Linked Open Data",
-   "https://w3id.org/dh-atlas/DigitalScholarlyEdition": "Digital Scholarly Edition"
-  }
+   "https://w3id.org/dh-atlas/LanguageModel": "LanguageModel"
+  },
+  "other_subclass": "True"
  },
  {
   "name": "Research Project",
   "short_name": "research_project",
   "description": "A research project is an organized collaborative initiative that oversees the development of one or more research products, involving the participation of multiple agents.",
   "type": [
-   "http://xmlns.com/foaf/0.1/Agent",
    "https://schema.org/ResearchProject"
   ],
   "template": "resource_templates/template-research_project.json",
@@ -43,7 +45,6 @@
   "short_name": "organization",
   "description": "A structured entity, such as a university, research institute, or company, coordinating and supporting research projects and activities.",
   "type": [
-   "http://xmlns.com/foaf/0.1/Agent",
    "https://schema.org/Organization"
   ],
   "template": "resource_templates/template-organization.json",
@@ -55,7 +56,6 @@
   "short_name": "person",
   "description": "An individual agent contributing to research activities, such as a researcher, scholar, or developer.",
   "type": [
-   "http://xmlns.com/foaf/0.1/Agent",
    "https://schema.org/Person"
   ],
   "template": "resource_templates/template-person.json",
@@ -67,7 +67,7 @@
   "short_name": "computer_program",
   "description": "A software application, script, or service, that processes, analyzes, or interacts with research products, enabling users to access and manipulate their content.",
   "type": [
-   "http://purl.org/spar/fabio/ComputerProgram"
+   "https://schema.org/SoftwareApplication"
   ],
   "template": "resource_templates/template-computer_program.json",
   "hidden": "False",
@@ -78,7 +78,7 @@
   "short_name": "web_site",
   "description": "A digital platform that provides access to information, resources, or services, typically hosted on the internet and accessible via a URL.",
   "type": [
-   "http://purl.org/spar/fabio/WebSite"
+   "https://schema.org/WebSite"
   ],
   "template": "resource_templates/template-web_site.json",
   "hidden": "False",

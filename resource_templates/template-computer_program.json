@@ -1,7 +1,7 @@
 [
  {
   "id": "1728986844644",
-  "property": "http://schema.org/additionalType",
+  "property": "https://schema.org/additionalType",
   "value1": "http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION,Human interaction service - DATA SERVICE",
   "label": "Type",
   "prepend": "The type of the described service",
@@ -36,7 +36,7 @@
   "placeholder": "",
   "label": "Title",
   "value": "Literal",
-  "property": "http://schema.org/name",
+  "property": "https://schema.org/name",
   "disambiguate": "True",
   "mandatory": "True",
   "restricted": [],
@@ -56,7 +56,7 @@
  },
  {
   "id": "1728986895073",
-  "property": "http://schema.org/description",
+  "property": "https://schema.org/description",
   "placeholder": "",
   "label": "Description",
   "prepend": "A summary of what the software allows users to do.",
@@ -84,7 +84,7 @@
   "placeholder": "",
   "prepend": "The URL of the service or software to generate, deploy, access, or manipulate the dataset. Do not include the official page of a software.",
   "type": "Textbox",
-  "property": "http://schema.org/url",
+  "property": "https://schema.org/url",
   "value": "URL",
   "label": "Access URL",
   "restricted": [],
@@ -131,7 +131,7 @@
  },
  {
   "id": "1728987011208",
-  "property": "http://schema.org/educationalUse",
+  "property": "https://schema.org/educationalUse",
   "prepend": "The type of research activities afforded by the service or software with respect to the dataset.",
   "placeholder": "",
   "skos1": "tadirah",
@@ -160,7 +160,7 @@
  },
  {
   "id": "1728987030593",
-  "property": "http://schema.org/license",
+  "property": "https://schema.org/license",
   "service": "None",
   "prepend": "The terms under which the software or service is available.",
   "placeholder": "",
@@ -190,7 +190,7 @@
   "value": "URI",
   "prepend": "Software component that is reused/extended in the current software. It can be a research product or the URL of the official page of the software.",
   "service": "None",
-  "property": "http://schema.org/isBasedOn",
+  "property": "https://schema.org/isBasedOn",
   "placeholder": "",
   "label": "Based On",
   "restricted": [],
