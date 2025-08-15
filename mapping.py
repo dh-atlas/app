@@ -14,6 +14,8 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from pymantic import sparql
 import conf , queries
 import utils as u
+import tempfile
+import shutil
 
 u.reload_config()
 os.umask(0o002)  # Allows group write access (rw-rw-r--)
@@ -36,6 +38,8 @@ base = conf.base
 # DATA ENDPOINT AND DIRECTORY
 server = sparql.SPARQLServer(conf.myEndpoint)
 dir_path = os.path.dirname(os.path.realpath(__file__))
+records_path = os.path.join(dir_path, 'records')
+tempfile.tempdir = records_path
 RESOURCE_TEMPLATES = conf.resource_templates
 ASK_CLASS = conf.ask_form
 TEMPLATE_LIST = conf.template_list
@@ -299,12 +303,25 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 						label = keyword.replace("keyword_"+recordID+"-"+field['id']+"-"+extraction_num+"_","")
 						wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDFS.label,  Literal(label)))
 
-					# DUMP TTL
-					wd_extraction.serialize(destination='records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl', format='ttl', encoding='utf-8')
-					os.chmod(dir_path+'/records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl', 0o664)
-					
+					# DUMP TTL: prepare the records directory and filename for the extraction
+					filename = f"{recordID}-extraction-{field['id']}-{extraction_num}.ttl"
+					dest_file = os.path.join(records_path, filename)
+
+					# Create a temporary file on the same filesystem
+					temp_file = tempfile.NamedTemporaryFile(delete=False, dir=records_path, suffix='.ttl')
+					temp_file_path = temp_file.name
+					temp_file.close()
+
+					# Serialize RDF extraction graph into the temporary file, then move it to the records directory
+					wd_extraction.serialize(destination=temp_file_path, format='ttl', encoding='utf-8')
+					shutil.move(temp_file_path, dest_file, copy_function=shutil.copy)
+					os.chmod(dest_file, 0o664)
+
 					# UPLOAD TO TRIPLESTORE
 					server.update('load <file:///app/records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl> into graph <'+base+extraction_graph_name+'/>')
+
+					return f'records/{filename}'
+
 		# SUBTEMPLATE
 		elif field['type']=="Subtemplate" and field['id'] in recordData:
 			if type(recordData[field['id']]) != type([]) and field['id']+"-subrecords" in recordData:
@@ -339,13 +356,25 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 			wd.add(( URIRef(base+graph_name), SCHEMA.keywords, URIRef(entityURI) ))
 			wd.add(( URIRef( entityURI ), RDFS.label, Literal(entity[1].lstrip().rstrip(), datatype="http://www.w3.org/2001/XMLSchema#string") ))
 
-	# DUMP TTL
-	wd.serialize(destination='records/'+recordID+'.ttl', format='ttl', encoding='utf-8')
-	os.chmod(dir_path+'/records/'+recordID+'.ttl', 0o664)
+	# DUMP TTL: prepare the records directory and filename
+	filename = f"{recordID}.ttl"
+	dest_file = os.path.join(records_path, filename)
+
+	# Create a temporary file on the same filesystem
+	temp_file = tempfile.NamedTemporaryFile(delete=False, dir=records_path, suffix='.ttl')
+	temp_file_path = temp_file.name
+	temp_file.close()
+
+	# Serialize RDF graph into the temporary file, then move it to the records directory
+	wd.serialize(destination=temp_file_path, format='ttl', encoding='utf-8')
+	shutil.move(temp_file_path, dest_file, copy_function=shutil.copy)
+	os.chmod(dest_file, 0o664)
 
 	# UPLOAD TO TRIPLESTORE
 	server.update('load <file:///app/records/'+recordID+'.ttl> into graph <'+base+graph_name+'/>')
-	return 'records/'+recordID+'.ttl'
+
+	return f'records/{filename}'
+
 
 def process_new_subrecord(data, userID, stage, subrecord_id, supertemplate=None, allow_data_reuse=False):
 	# prepare a new dict to store data of subrecord-x
