@@ -192,7 +192,7 @@ def fields_to_json(data, json_file, skos_file):
 			#d["value"] = "URI"
 			#d['values'] = { pair.split(",")[0].strip():pair.split(",")[1].strip() for pair in values_pairs } if values_pairs[0] != "" else {}
 			
-		if d["type"] in ["Subclass", "Dropdown", "Checkbox"]:
+		if d["type"] in ["Subclass", "Dropdown", "Checkbox", "KnowledgeExtractor"]:
 			values = [d[value_key] for value_key in d if value_key.startswith("value")]
 			d["value"] = "URI"
 			d["values"] = { urllib.parse.unquote(pair.split(",")[0]).strip():urllib.parse.unquote(pair.split(",")[1]).strip() for pair in values } if len(values) > 0 else {}
@@ -230,7 +230,7 @@ def fields_to_json(data, json_file, skos_file):
 			d["value"] = "Literal"
 		if d['type'] == 'KnowledgeExtractor':
 			d['knowledgeExtractor'] = "True"
-			d["value"] = "undefined"
+			d["value"] = "URI"
 		else:
 			if len(d["label"]) == 0:
 				d["label"] = "no label"

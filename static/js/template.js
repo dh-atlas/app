@@ -256,6 +256,18 @@ function add_field(field, res_type, backend_file=null) {
         </section>\
     </section>";
 
+    var field_extraction_classes = "<section class='row'>\
+        <label class='col-md-3'>CLASSES<br><span class='comment'>define values as URI, label pairs</span></label>\
+        <section class='col-md-8'>\
+            <ul class='col-md-12 values-list' id='values__"+temp_id+"'>\
+                <li>\
+                    <label class='inner-label col-md-12'>Values List</label>\
+                </li>\
+                <li><label class='add-option'>ADD NEW VALUE <i class='fas fa-plus-circle' onclick='addLabelURI(this, "+temp_id+")'></i></label></li>\
+            </ul>\
+        </section>\
+    </section>";
+
     var field_reconciliation = "<section class='row'>\
         <label class='col-md-3'>URI RECONCILIATION <br><span class='comment'>select an entity reconciliation service for missing URIs</span></label>\
         <select class='col-md-8 ("+res_type+") custom-select' id='service__"+temp_id+"' name='service__"+temp_id+"'>\
@@ -371,7 +383,7 @@ function add_field(field, res_type, backend_file=null) {
     else if (field =='WebsitePreview') { contents += field_placeholder + field_subclass_restriction + field_mandatory + field_hide; }
     else if (field =='Subtemplate') { contents += field_subtemplate_import + field_cardinality + field_data_inheritance + field_subclass_restriction + field_mandatory + field_hide + field_browse; }
     else if (field =='Subclass') { contents += field_subclass_values + field_subclass_other + field_mandatory + field_hide; }
-    else if (field =='KnowledgeExtractor') { contents += open_addons + field_reconciliation + field_subclass_restriction; }
+    else if (field =='KnowledgeExtractor') { contents += open_addons + field_extraction_classes + field_reconciliation + field_subclass_restriction; }
     else {contents += field_values + field_subclass_restriction + field_mandatory + field_hide + field_browse; };
     contents += close_addons + up_down;
     $(".sortable").append("<section class='block_field' data-id='"+temp_id+"'>"+contents+"</section>");
@@ -1114,7 +1126,6 @@ function storeLabelURI(index, fieldId, uri, label, ul, block) {
 
 // subclass list update
 function updateSubclassRestrictionField(currentIndex,obj=null,showOther=null) {
-
     // generate currentIndex when modifying "Other" option
     currentIndex = currentIndex != "" ? currentIndex : $(obj).closest("section.block_field").data("id");
     if (showOther === true) {
