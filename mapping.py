@@ -256,6 +256,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 				extraction_num = str(extraction['internalId'])
 				extraction_type = extraction['metadata']['type']
 				extraction_url = extraction['metadata']['url']
+				extraction_class = extraction['metadata']['class'] if 'class' in extraction['metadata'] else None
 				extraction_access_keys = False
 				if extraction_type == 'api':
 					if 'query' in extraction['metadata']:
@@ -302,6 +303,8 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 					for keyword in extracted_keywords:
 						label = keyword.replace("keyword_"+recordID+"-"+field['id']+"-"+extraction_num+"_","")
 						wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDFS.label,  Literal(label)))
+						if extraction_class:
+							wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDF.type,  URIRef(extraction_class)))
 
 					# DUMP TTL: prepare the records directory and filename for the extraction
 					filename = f"{recordID}-extraction-{field['id']}-{extraction_num}.ttl"
@@ -319,8 +322,6 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 
 					# UPLOAD TO TRIPLESTORE
 					server.update('load <file:///app/records/'+recordID+"-extraction-"+field["id"]+"-"+extraction_num+'.ttl> into graph <'+base+extraction_graph_name+'/>')
-
-					return f'records/{filename}'
 
 		# SUBTEMPLATE
 		elif field['type']=="Subtemplate" and field['id'] in recordData:

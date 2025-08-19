@@ -616,10 +616,11 @@ def has_extractor(res_template, record_name=None, processed_templates=[], res_su
 					pre = field['prepend'] if 'prepend' in field else ""
 					field_id = field['id'] if 'id' in field else ""
 					service = field['service'] if 'service' in field else ""
+					classes = field['values'] if 'values' in field else {}
 					subclass_restriction = "; ".join(field['restricted']) if 'restricted' in field else ""
 
 					# store the extractor details as a tuple
-					result.append((res_template, label, pre, field_id, service, subclass_restriction))
+					result.append((res_template, label, pre, field_id, service, classes, subclass_restriction))
 
 				elif 'import_subtemplate' in field and field['import_subtemplate'] != []:
 					# iterate over sub-templates

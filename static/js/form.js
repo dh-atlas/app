@@ -1585,7 +1585,7 @@ function generateExtractionField(res, recordId, subtemplate=null) {
                 </thead>\
                 <tbody></tbody>\
                 </table>\
-                <span class="imported_graphs add-span" id="imported-graphs-'+resId+'" data-supertemplate="'+dataSupertemplate+'" data-reconciliation="'+fieldService+'" data-subclass="'+fieldSubclassRestriction+'" onclick="generateExtractor(\'imported-graphs-'+resId+'\', \''+recordId+'\')"><i class="material-icons">playlist_add</i><span> Extract Entities</span></span>\
+                <span class="imported_graphs add-span" id="imported-graphs-'+resId+'" data-supertemplate="'+dataSupertemplate+'" data-reconciliation="'+fieldService+'" data-extractor-index="'+resIndex+'" data-subclass="'+fieldSubclassRestriction+'" onclick="generateExtractor(\'imported-graphs-'+resId+'\', \''+recordId+'\')"><i class="material-icons">playlist_add</i><span> Extract Entities</span></span>\
             </section>\
             </section>');
             console.log(extractionRow)
@@ -1804,9 +1804,28 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
     var extractionId = extractorId+'-'+extractionInternalId.toString(); // it will be used to create hidden inputs later
     var extractionType = $(element).find(":selected").val(); // selected option (API, SPARQL, or static file)
 
+    var extractorIndex = $('#imported-graphs-'+extractorId).data('extractor-index');
+    var classes = extractorsClasses[extractorIndex]; // get optional classes for extracted entities
+
     $(element).parent().parent().find(".extractor-1, hr").remove() // remove previously created forms (in case the user changes the selected option)
+    var prepend = "<hr>";
+    if (Object.keys(classes).length) {
+        var classOptions = "<option value='None'>Select</option>";
+        $.each(classes, function(key, value) {
+        classOptions += "<option value='" + key + "'>" + value + "</option>";
+        });
+
+        prepend += "<section class='row extractor-1'>\
+            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>Select entity type</label>\
+            <select class='custom-select' id='extract-entity-type' name='extract-entity-type'>"+
+                classOptions +
+            "</select>\
+        </section><hr>";
+    }
+    
+
     if (extractionType == 'api') {
-        var form = $("<hr><section class='row extractor-1'>\
+        var form = $(prepend+"<section class='row extractor-1'>\
             <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>API access point<br><span class='comment'>url of the API</span></label>\
             <input type='text' id='ApiUrl' placeholder='e.g.: https://exampleApi.org/search'></input>\
         </section>\
@@ -1841,7 +1860,7 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
         </section>\
         ")
     } else if (extractionType == 'sparql') {
-        var form = $("<hr><section class='row extractor-1'>\
+        var form = $(prepend+"<section class='row extractor-1'>\
             <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>SPARQL endpoint<br><span class='comment'>url of the endpoint</span></label>\
             <input type='text' id='SparqlUrl' placeholder='e.g.: https://exampleSparql.org/sparql'></input>\
         </section>\
@@ -1850,7 +1869,7 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
             <div id='yasqe' class='col-md-12' data-id='"+extractionId+"'>\
         </section>");
     } else if (extractionType == 'file') {
-        var form = $("<hr><section class='row extractor-1'>\
+        var form = $(prepend+"<section class='row extractor-1'>\
             <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>FILE URL<br><span class='comment'>a URL to an external resource (.json, .csv, and .xml formats allowed)</span></label>\
             <input type='text' id='FileUrl' placeholder='http://externalResource.csv'></input>\
         </section>\
@@ -2051,6 +2070,11 @@ function nextExtractor(element, recordId, id, type) {
             objectItem["keys"] = keysArray;
             objectItem["filters"] = filtersArray
         }
+    }
+
+    // get selected entity class (if any)
+    if (extractionBlockField.find('#extract-entity-type').length > 0) {
+        objectItem["class"] = extractionBlockField.find('#extract-entity-type').val();
     }
 
 
