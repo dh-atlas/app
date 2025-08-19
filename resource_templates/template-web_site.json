@@ -153,5 +153,36 @@
   "class": "col-md-12",
   "cache_autocomplete": "off",
   "view_class": ""
+ },
+ {
+  "id": "1755592326795",
+  "property": "https://schema.org/license",
+  "skos9": "licence",
+  "skos10": "licenses",
+  "type": "Skos",
+  "vocables": "oneVocable",
+  "prepend": "The terms under which the website is available.",
+  "label": "License",
+  "placeholder": "",
+  "restricted": [],
+  "disambiguate": "False",
+  "browse": "False",
+  "mandatory": "False",
+  "hidden": "False",
+  "value": "URI",
+  "searchWikidata": "False",
+  "searchGeonames": "False",
+  "searchOrcid": "False",
+  "searchSkos": "True",
+  "url": "False",
+  "skosThesauri": [
+   "licence",
+   "licenses"
+  ],
+  "import_subtemplate": [],
+  "disabled": "False",
+  "class": "col-md-12",
+  "cache_autocomplete": "off",
+  "view_class": ""
  }
 ]

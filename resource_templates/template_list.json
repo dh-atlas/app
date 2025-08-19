@@ -25,7 +25,7 @@
    "https://w3id.org/dh-atlas/TextCollection": "Text Collection",
    "https://w3id.org/dh-atlas/Software": "Software",
    "https://w3id.org/dh-atlas/LinkedOpenData": "Linked Open Data",
-   "https://w3id.org/dh-atlas/LanguageModel": "LanguageModel"
+   "https://w3id.org/dh-atlas/LanguageModel": "Language Model"
   },
   "other_subclass": "True"
  },

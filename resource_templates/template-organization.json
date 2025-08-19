@@ -124,5 +124,30 @@
   "class": "col-md-12",
   "cache_autocomplete": "off",
   "view_class": ""
+ },
+ {
+  "id": "1755551796938",
+  "type": "Textbox",
+  "label": "Has Member",
+  "property": "https://schema.org/member",
+  "value": "URI",
+  "prepend": "A member of an Organization (e.g. a Person or an Organization)",
+  "placeholder": "",
+  "restricted": [],
+  "disambiguate": "False",
+  "browse": "False",
+  "mandatory": "False",
+  "hidden": "False",
+  "searchWikidata": "True",
+  "searchGeonames": "False",
+  "searchOrcid": "False",
+  "searchSkos": "False",
+  "url": "False",
+  "skosThesauri": [],
+  "import_subtemplate": [],
+  "disabled": "False",
+  "class": "col-md-12",
+  "cache_autocomplete": "off",
+  "view_class": ""
  }
 ]

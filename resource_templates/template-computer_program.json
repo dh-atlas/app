@@ -1,7 +1,7 @@
 [
  {
   "id": "1728986844644",
-  "property": "https://schema.org/additionalType",
+  "property": "https://schema.org/applicationCategory",
   "value1": "http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION,Human interaction service - DATA SERVICE",
   "label": "Type",
   "prepend": "The type of the described service",
