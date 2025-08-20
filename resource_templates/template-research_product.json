@@ -1584,7 +1584,7 @@
   "label": "Reproduces Creative Work",
   "prepend": "The Cultural Heritage Object represented by the 3D Digital Twin",
   "restricted": [
-   "https://w3id.org/dh-atlas/LanguageModel"
+   "https://w3id.org/dh-atlas/3DDigitalTwin"
   ],
   "disambiguate": "False",
   "browse": "False",
