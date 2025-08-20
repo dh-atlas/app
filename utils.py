@@ -589,9 +589,9 @@ def has_extractor(res_template, record_name=None, processed_templates=[], res_su
 			if 'knowledgeExtractor' in field and field['knowledgeExtractor'] == 'True':
 				if res_subclasses != []:
 					if field['restricted'] == [] or any(res_subclass in field['restricted'] for res_subclass in res_subclasses):
-						result.append((graph_uri, field['property'], field['label'], field['id']))
+						result.append((graph_uri, field['property'], field['label'], field['id'], field['value']))
 				else:
-					result.append((graph_uri, field['property'], field['label'], field['id']))
+					result.append((graph_uri, field['property'], field['label'], field['id'], field['value']))
 
 			#check whether the Graph may contain any sub-Record
 			if 'import_subtemplate' in field and field['import_subtemplate'] != []:

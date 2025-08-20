@@ -531,7 +531,7 @@ def get_subrecords(rdf_property,record_name):
 	return subrecords_list
 
 def retrieve_extractions(res_uri_list, view=False):
-	"""Return a dictionary of Extractions given a list of tuples: [(named_graph_uri, extraction_rdf_property, extraction_field_name)]'
+	"""Return a dictionary of Extractions given a list of tuples: [(named_graph_uri, extraction_rdf_property, extraction_field_name, extraction_field_classes)]'
 	
 	Parameters
 	----------
@@ -544,7 +544,7 @@ def retrieve_extractions(res_uri_list, view=False):
 
 
 	# Retrieve the extraction graphs (URI) for each Record/Subrecord
-	for uri, rdf_property, field_name, field_id in res_uri_list:
+	for uri, rdf_property, field_name, field_id, field_classes in res_uri_list:
 		uri_id = uri.replace(conf.base,'')[:-1]
 		query_var_id = uri.rsplit('/',2)[1].replace('-','_')
 		query_pattern = """<"""+uri+"""> <"""+rdf_property+"""> ?extraction_graph_"""+query_var_id+"""."""+\
@@ -628,9 +628,17 @@ def retrieve_extractions(res_uri_list, view=False):
 				idx = graph_uri.split('/extraction-')[-1][:-1]
 				res_dict[uri_id][field_id][n]["internalId"] = idx.replace(field_id+"-","")
 				retrieve_graph = """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-					SELECT DISTINCT ?uri ?label WHERE {GRAPH <"""+graph_uri+""">
-					{	?uri rdfs:label ?label .  }}"""
+					SELECT DISTINCT ?uri ?label ?class WHERE {GRAPH <"""+graph_uri+""">
+					{	?uri rdfs:label ?label .  
+						OPTIONAL { ?uri a ?class }
+					}}"""
 				graph_results = hello_blazegraph(retrieve_graph)["results"]["bindings"]
+
+				# find class for extracted entities
+				entity_class = next((result.get("class", {}).get("value") 
+					for result in graph_results if result.get("class", {}).get("value") is not None ), "None")
+				res_dict[uri_id][field_id][n]["metadata"]["class"] = entity_class
+
 				if view:
 					res_dict[uri_id][field_id][n]["metadata"]['output'] = [{"uri": {"value": urllib.parse.quote(res["uri"]["value"],safe=""), "type":res["uri"]["type"]}, "label": {"value": res["label"]["value"], "type":res["label"]["type"]}} for res in graph_results]
 				else:

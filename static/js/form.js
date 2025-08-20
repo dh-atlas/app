@@ -1733,7 +1733,7 @@ function modifyExtractor(event,extractionField,id) {
     var extractions = extractionsObj[record][extractionField];
     const extraction = extractions.find(obj => obj.internalId == extractionNumber);
     const extractionParameters = extraction ? extraction["metadata"] : undefined;
-    const extractorType = extractionParameters.type
+    const extractorType = extractionParameters.type;
 
     // hide the extraction table row
     if ($("#graph-"+id).parent().parent().find('tr').length == 1) {
@@ -1747,6 +1747,10 @@ function modifyExtractor(event,extractionField,id) {
     var extractor = $('#extractor');
     extractor.val(extractorType);
     addExtractionForm(extractor,record,extractionField,extractionNumber);
+
+    // OPTIONAL: select extracted entities' class 
+    const extractorClass = extractionParameters.class;
+    $("#extract-entity-type").val(extractorClass);
 
     // fill the extraction form with previously provided values
     if (extractorType == 'api') {
