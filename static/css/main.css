@@ -1778,6 +1778,13 @@ table.url-table i, table.extraction-table i {
   font-weight: 500;
 }
 
+
+
+.change_background:last-of-type .resultAccordion {
+  top: 0;
+  margin-bottom: 20px;
+}
+
 .accordion-group .hidden {
   display: none !important;
 }
@@ -3280,4 +3287,12 @@ li.col-md-12 label, .inner-label {
 
 .articleBox.chartsBox > section:first-child {
   padding: 5em;
+}
+
+.mini-chart {
+  min-height: 300px;
+}
+
+.mini-chart > div {
+  height: 60% !important;
 }
