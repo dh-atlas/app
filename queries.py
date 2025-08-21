@@ -472,7 +472,18 @@ def describe_extraction_term(name):
 def getBrowsingFilters(res_template_path):
 	with open(res_template_path) as config_form:
 		fields = json.load(config_form)
-	props = [(f["property"], f["label"], f["type"], f["value"]) for f in fields if ("browse" in f and f["browse"] == "True") or ("disambiguate" in f and f["disambiguate"] == "True")]
+	props = [
+		(
+			f["property"],
+			f["label"],
+			f["type"],
+			f["value"],
+			f.get("values", "")
+		)
+		for f in fields
+		if ("browse" in f and f["browse"] == "True")
+		or ("disambiguate" in f and f["disambiguate"] == "True")
+	]
 	return props
 
 

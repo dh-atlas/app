@@ -1412,7 +1412,7 @@ function sortList(ul) {
 
 
 // get values by property in EXPLORE page, e.g. creators
-function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemSubclass='') {
+function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemSubclass='',extractionClasses=null) {
   if (elemClass.length) {var class_restriction = "?s a <"+elemClass+"> . "} else {var class_restriction = ''};
   if (elemSubclass.length) {
     if (!elemSubclass.startsWith("other")) { class_restriction += "?s a <"+elemSubclass+"> . "; }
@@ -1433,7 +1433,7 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
   else if ((typeProp=='Date' || typeProp=='gYear' || typeProp=='gYearMonth') && typeField == 'Date')  {
     var query = "select distinct ?o (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> ?o. "+class_restriction+" } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } GROUP BY ?o ORDER BY DESC(?count) lcase(?o)";
   } else if (typeField=='KnowledgeExtractor') {
-    var query = "select distinct ?o ?oLabel (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?g <"+prop+"> ?extractionGraph. "+class_restriction+" } GRAPH ?extractionGraph { ?o rdfs:label ?oLabel } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } GROUP BY ?o ?oLabel ORDER BY DESC(?count) lcase(?oLabel)";
+    var query = "select distinct ?o ?oLabel ?class (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?g <"+prop+"> ?extractionGraph. "+class_restriction+" } GRAPH ?extractionGraph { ?o rdfs:label ?oLabel . OPTIONAL {?o a ?class}} ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } GROUP BY ?o ?oLabel ?class ORDER BY DESC(?count) lcase(?oLabel)";
   } else {var query = "none"};
 
   const len = 10;
@@ -1447,6 +1447,7 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
           console.log(returnedJson);
           var allresults = [];
           var results = [];
+          var countresults = [];
           for (i = 0; i < returnedJson.results.bindings.length; i++) {
             var res = returnedJson.results.bindings[i].o.value;
             if (typeProp != 'Date' && typeProp != 'gYear' && typeProp != 'gYearMonth') {
@@ -1460,8 +1461,14 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
               var xsdProp = typeProp;
             }
             var count = returnedJson.results.bindings[i].count.value;
-            var knowledgeExtractor = typeField=='KnowledgeExtractor' ? "fieldType='KnowledgeExtractor'" : ""
-            var result = "<button onclick=getRecordsByPropValue(this,'."+elemID+"results','"+elemClass+"','"+elemSubclass+"','"+xsdProp+"',"+knowledgeExtractor+") id='"+res+"' class='queryGroup' data-property='"+prop+"' data-value='"+res+"' data-toggle='collapse' data-target='#"+elemID+"results' aria-expanded='false' aria-controls='"+elemID+"results' class='info_collapse'>"+resLabel+" ("+count+")</button>";
+
+            var extractionClass = "";
+            var knowledgeExtractor = "";
+            if (typeField=='KnowledgeExtractor' && extractionClasses != "") {
+              extractionClass = "data-extraction-class='"+returnedJson.results.bindings[i].class.value+"'";
+              knowledgeExtractor = "fieldType='KnowledgeExtractor'";
+            }
+            var result = "<button onclick=getRecordsByPropValue(this,'."+elemID+"results','"+elemClass+"','"+elemSubclass+"','"+xsdProp+"',"+knowledgeExtractor+") id='"+res+"' class='queryGroup' data-property='"+prop+"' data-value='"+res+"' data-toggle='collapse' data-target='#"+elemID+"results' aria-expanded='false' aria-controls='"+elemID+"results' class='info_collapse' "+extractionClass+">"+resLabel+" ("+count+")</button>";
             if (allresults.indexOf(result) === -1) {
               allresults.push(result);
               results.push($(result).hide());
@@ -1491,6 +1498,17 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
             $("#"+elemID).find("button:not(.showMore)").show('smooth');
           };
 
+          // group extracted entities by class (KNOWLEDGE EXTRACTOR only)
+          if (extractionClasses) {
+            for (const [key, value] of Object.entries(extractionClasses)) {
+              var extractedEntitiesByClass = $("#"+elemID).find("[data-extraction-class='"+key+"']");
+              if (extractedEntitiesByClass.length) {
+                const groupEntity = $("<section style='margin-bottom: 1.5em'><h4>"+value+"</h4></section>");
+                extractedEntitiesByClass.detach().appendTo(groupEntity);
+                $("#"+elemID).append(groupEntity);
+              }
+            }
+          }
         } // end function
 
   });
