@@ -1461,6 +1461,7 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
               var xsdProp = typeProp;
             }
             var count = returnedJson.results.bindings[i].count.value;
+            if (countresults.length < 5) {countresults.push({count: parseInt(count), label: resLabel });}
 
             var extractionClass = "";
             var knowledgeExtractor = "";
@@ -1509,6 +1510,13 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
               }
             }
           }
+          
+          // prepare charts
+          $("#"+elemID).closest(".change_background").find(".col-md-5").eq(0).append($("<div id='"+elemID+"-chart' class='mini-chart'></div>"));
+          console.log(countresults)
+          barchart(elemID+"-chart","label","count",countresults);
+
+
         } // end function
 
   });
