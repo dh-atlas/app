@@ -473,7 +473,7 @@ function removeCounter(element) {
 /////////////////////
 
 // Charts (bar-chart, pie-chart, donut-chart, semicircle-chart)
-function barchart(elid,data_x,data_y, data) {
+function barchart(elid,data_x,data_y, data, miniChart=false) {
     console.log(elid,data_x,data_y, data)
     am5.ready(function() {
     var root = am5.Root.new(elid);
@@ -489,12 +489,12 @@ function barchart(elid,data_x,data_y, data) {
     cursor.lineY.set("visible", false);
     var xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 30 });
     xRenderer.labels.template.setAll({
-        rotation: -30,
+        rotation: -45,
         centerY: am5.p50,
         centerX: am5.p100,
         paddingRight: 15,
         oversizedBehavior: "truncate",
-        maxWidth: 120
+        maxWidth: 200
     });
 
     var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
@@ -520,8 +520,23 @@ function barchart(elid,data_x,data_y, data) {
         labelText:"{valueY}"
         })
     }));
+    console.log(miniChart)
 
-    series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5 });
+    if (miniChart) {
+        console.log("here")
+        chart.set("colors", am5.ColorSet.new(root, {
+            colors: [
+                am5.color(0x352300), // marrone molto scuro
+                am5.color(0x554400), // marrone oliva
+                am5.color(0x7c661d), // verde/marrone
+                am5.color(0xa48b41), // sabbia scura
+                am5.color(0xceb266)  // ecru oro
+            ],
+            reuse: true
+        }));
+    } else {
+        series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5 });
+    }
     series.columns.template.adapters.add("fill", function(fill, target) {
         return chart.get("colors").getIndex(series.columns.indexOf(target));
     });

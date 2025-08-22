@@ -1512,9 +1512,10 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
           }
           
           // prepare charts
-          $("#"+elemID).closest(".change_background").find(".col-md-5").eq(0).append($("<div id='"+elemID+"-chart' class='mini-chart'></div>"));
+          $("#"+elemID).closest(".change_background").find(".col-md-4").eq(0).append($("<div id='"+elemID+"-chart' class='mini-chart'></div>"));
+          $("#"+elemID).closest(".change_background").css({minHeight: "95vh"})
           console.log(countresults)
-          barchart(elemID+"-chart","label","count",countresults);
+          barchart(elemID+"-chart","label","count",countresults,true);
 
 
         } // end function
