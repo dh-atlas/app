@@ -242,6 +242,57 @@ def getRecordCreator(graph_name):
 		creatorIRI, creatorLabel = result["creatorIRI"]["value"],result["creatorLabel"]["value"]
 	return creatorIRI, creatorLabel
 
+# DASHBOARD RECORDS
+def getDashboardRecords(record_str):
+	"""Retrieve metadata about records created during the current session
+
+	Parameters
+	----------
+	record_str: str
+		A string to be split into a list of records' identifiers.
+	"""
+	record_list = record_str.split("/")
+	values_clause = " ".join(f"<{conf.base}{uri}/>" for uri in record_list)
+	query = """
+		PREFIX prov: <http://www.w3.org/ns/prov#>
+		PREFIX base: <"""+conf.base+""">
+		SELECT DISTINCT ?g ?title ?userLabel ?modifierLabel ?date ?stage (GROUP_CONCAT(DISTINCT ?class; SEPARATOR=";  ") AS ?classes)
+		WHERE  { 
+			VALUES ?g {"""+values_clause+"""}
+			GRAPH ?g {
+				?s ?p ?o ; a ?class .
+				OPTIONAL { ?g rdfs:label ?title; prov:wasAttributedTo ?user; prov:generatedAtTime ?date ; <http://dbpedia.org/ontology/currentStatus> ?stage. ?user rdfs:label ?userLabel .
+					OPTIONAL {?g prov:wasInfluencedBy ?modifier. ?modifier rdfs:label ?modifierLabel .} }
+				OPTIONAL {?g rdfs:label ?title; prov:generatedAtTime ?date ; <http://dbpedia.org/ontology/currentStatus> ?stage . }
+
+				BIND(COALESCE(?date, '-') AS ?date ).
+				BIND(COALESCE(?stage, '-') AS ?stage ).
+				BIND(COALESCE(?userLabel, '-') AS ?userLabel ).
+				BIND(COALESCE(?modifierLabel, '-') AS ?modifierLabel ).
+				BIND(COALESCE(?title, 'none', '-') AS ?title ).
+				filter not exists {
+				?g prov:generatedAtTime ?date2
+				filter (?date2 > ?date)
+				}
+
+			}
+			FILTER( str(?g) != '"""+conf.base+"""vocabularies/' )
+
+		}
+		GROUP BY ?g ?title ?userLabel ?modifierLabel ?date ?stage
+		ORDER BY DESC(?date)
+	"""
+	print("query:", query)
+	records = list()
+	sparql = SPARQLWrapper(conf.myEndpoint)
+	sparql.setQuery(query)
+	sparql.setReturnFormat(JSON)
+	results = sparql.query().convert()
+	for result in results["results"]["bindings"]:
+		records.append( (result["g"]["value"], result["title"]["value"], result["userLabel"]["value"], result["modifierLabel"]["value"], result["date"]["value"], result["stage"]["value"] , result["classes"]["value"].split(";  ") ))
+
+	return records
+
 
 # UPDATE SUBCLASS VALUES TO AVOID INCONSISTENCIES
 def updateSubclassValue(data):
@@ -333,6 +384,7 @@ def getData(graph,res_template):
 
 	properties_dict = {}
 	patterns = []
+	keyword_patterns = [] # looking for textareas' keywords
 	res_class = getClass(graph[:-1])
 	class_patterns = ".".join(['''?subject a <'''+single_class+'''>''' for single_class in res_class]) 
 
@@ -351,13 +403,19 @@ def getData(graph,res_template):
 			if len(properties_dict[field['property']]) > 1:
 				pattern = disambiguate_pattern(properties_dict[field['property']],fields,field['id'])
 			if pattern == "":
-				pattern = 'OPTIONAL {?subject <'+field['property']+'> ?'+field['id']+'. FILTER (lang(?'+field['id']+')!="")} ' if field['value'] == 'Literal' \
+				pattern = 'OPTIONAL {?subject <'+field['property']+'> ?'+field['id']+'. FILTER (lang(?'+field['id']+')!="") }' if field['value'] == 'Literal' \
 					else 'OPTIONAL {?subject <'+field['property']+'> ?'+field['id']+'. FILTER (isURI(?'+field['id']+')) FILTER NOT EXISTS {?'+field['id']+' rdfs:label ?'+field['id']+'_label } FILTER NOT EXISTS { ?'+field['id']+' skos:prefLabel ?'+field['id']+'_label } } ' if field['value'] == 'URL' \
 					else 'OPTIONAL {?subject <'+field['property']+'> ?'+field['id']+'. FILTER (datatype(?'+field['id']+') = xsd:'+field['value'][0].lower() + field['value'][1:]+') } ' if field['value'] in ['Date', 'gYear', 'gYearMonth'] \
 					else 'OPTIONAL {?subject <'+field['property']+'> ?'+field['id']+'. ?'+field['id']+' skos:prefLabel ?'+field['id']+'_label .} .' if 'type' in field and field['type'] == 'Skos' \
 					else 'OPTIONAL {?subject <'+field['property']+'> ?'+field['id']+'. ?'+field['id']+' rdfs:label ?'+field['id']+'_label } .'
 			patterns.append(pattern)
+
+			if field['type'] == 'Textarea':
+				keyword_pattern = 'OPTIONAL {<'+graph+'> schema:keywords <'+graph+'extraction-'+field['id']+'/> . GRAPH <'+graph+'extraction-'+field['id']+'/> { ?keywords_'+field['id']+' rdfs:label ?keywords_'+field['id']+'_label . } }'
+				keyword_patterns.append(keyword_pattern)
+
 	patterns_string = ''.join(patterns)
+	keyword_patterns_string = ''.join(keyword_patterns)
 
 	queryNGraph = '''
 		PREFIX base: <'''+conf.base+'''>
@@ -369,7 +427,7 @@ def getData(graph,res_template):
 				GRAPH <'''+graph+'''>
 				{	'''+class_patterns+'''.
 					'''+patterns_string+'''
-					OPTIONAL {?subject schema:keywords ?keywords . ?keywords rdfs:label ?keywords_label . } }
+				} '''+keyword_patterns_string+'''
 		}
 		'''
 	print(queryNGraph)

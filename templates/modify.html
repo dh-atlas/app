@@ -131,6 +131,11 @@ $if query_templates!=None:
 															<input type="text" value="$k_v[0]" id="$lang_id" name="$lang_id" class="$input.attrs['class']" lang="$lang" placeholder="$input.attrs['placeholder']" data-class="$input.attrs['data_class']" data-supertemplate="$input.attrs['data_supertemplate']" data-mandatory="$input.attrs['data_mandatory']" data-subclass="$input.attrs['data_subclass']"/>
 														$else:
 															<textarea value="$k_v[0]" id="$lang_id" name="$lang_id" class="$input.attrs['class']" lang="$lang" placeholder="$input.attrs['placeholder']" data-class="$input.attrs['data_class']" data-supertemplate="$input.attrs['data_supertemplate']" data-mandatory="$input.attrs['data_mandatory']" data-subclass="$input.attrs['data_subclass']">$k_v[0]</textarea>	
+															$if "keywords_"+id in graphdata:
+																$for kw in graphdata["keywords_"+id]:
+																	$ name = id+'_'+kw[0]
+																	<span class='tag nlp $kw[0]' data-input='$id'>$:kw[1]</span>
+																	<input type='hidden' class='hiddenInput $kw[0]' name='$name' value="$kw[0],$:kw[1]"/>
 														$if len(k_v) == 3:
 															$ lang_id = id+'_mainLang'
 															<input type="hidden" value="$lang" id="$lang_id" name="$lang_id">
@@ -217,17 +222,6 @@ $if query_templates!=None:
 							}
 						</script>
 				</section>
-				<!-- <section class="homeheading col-md-4 col-sm-4 col-lg-4">
-					<h2>Remember to save!</h2>
-					$ has_keywords = ['yes' for k,v in graphdata.items() if 'keywords' in k]
-					$if len(has_keywords) > 0:
-						<p>Here are the keywords you saved</p>
-						$for k,v in graphdata.items():
-							$if 'keywords' in k:
-								$for k_v in graphdata[k]:
-									<span class='tag $k_v[0]' data-input='keywords' id='$k_v[0]'>$:k_v[1]</span>
-									<input type='hidden' class='hiddenInput $k_v[0]' name='keywords-$k_v[0]' value="$k_v[0],$:k_v[1]"/>
-				</section> -->
 			</section>
 
 			<section class="buttonsSection">

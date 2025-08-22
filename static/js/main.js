@@ -114,9 +114,12 @@ $(document).ready(function() {
 
 	// Named Entity Recognition in long texts
   const areas = document.querySelectorAll('#recordForm textarea, #modifyForm textarea');
-  var tags = document.createElement('div');
-  tags.setAttribute('class','tags-nlp');
-  areas.forEach(element => {  element.after(tags); });
+  console.log(areas)
+  areas.forEach(element => {
+    const tags = document.createElement('div');
+    tags.setAttribute('class','tags-nlp');
+    element.after(tags);
+  });
 
   // Textbox > URL: suggestion
   const textboxURL = document.querySelectorAll('#recordForm input.urlField, #modifyForm input.urlField, #recordForm input.multimediaField, #modifyForm input.multimediaField, #recordForm input.websitePreview, #modifyForm input.websitePreview, #recordForm input.searchWikidata, #modifyForm input.searchWikidata');

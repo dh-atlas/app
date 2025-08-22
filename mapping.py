@@ -180,6 +180,8 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 	if len(is_any_disambiguate) == 0:
 		wd.add(( URIRef(base+graph_name+'/'), RDFS.label, Literal("no title") ))
 
+
+	# PARSE DATA
 	for field in fields:
 		if field['type'] not in ['KnowledgeExtractor', 'Subtemplate']:
 			# URI, Textarea (only text at this stage), Literals
@@ -239,10 +241,39 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 			# now get also the entities associated to textareas (record creation)
 			if field['type'] == 'Textarea':
 				nlp_keywords = getValuesFromFields(field['id'], recordData, field_type='Textarea')
-				for entity in nlp_keywords['results']:
-					entityURI = getRightURIbase(entity[0])
-					wd.add(( URIRef(base+graph_name), SCHEMA.keywords, URIRef(entityURI) ))
-					wd.add(( URIRef( entityURI ), RDFS.label, Literal(entity[1].lstrip().rstrip(), datatype="http://www.w3.org/2001/XMLSchema#string") ))
+				
+				# generate a graph containing extracted keywords
+				if len (nlp_keywords['results']) > 0:
+					extraction_graph_name = graph_name + "/extraction-" +field["id"]
+					wd.add(( URIRef(base+graph_name+'/'), SCHEMA.keywords, URIRef(base+extraction_graph_name+'/') ))
+					wd_extraction_keywords = rdflib.Graph(identifier=URIRef(base+extraction_graph_name+'/'))
+
+					# add metadata
+					wd_extraction_keywords.add(( URIRef(base+extraction_graph_name+'/'), PROV.wasAttributedTo, URIRef(base+userID) ))
+					wd_extraction_keywords.add(( URIRef(base+extraction_graph_name+'/'), PROV.generatedAtTime, Literal(datetime.datetime.now(),datatype=XSD.dateTime)  ))
+					
+					# add keywords
+					for entity in nlp_keywords['results']:
+						entityURI = getRightURIbase(entity[0])
+						wd_extraction_keywords.add(( URIRef( entityURI ), RDFS.label, Literal(entity[1].lstrip().rstrip(), datatype="http://www.w3.org/2001/XMLSchema#string") ))
+						
+					# DUMP TTL: prepare the records directory and filename for the extraction
+					filename = f"{recordID}-extraction-{field['id']}.ttl"
+					dest_file = os.path.join(records_path, filename)
+
+					# Create a temporary file on the same filesystem
+					temp_file = tempfile.NamedTemporaryFile(delete=False, dir=records_path, suffix='.ttl')
+					temp_file_path = temp_file.name
+					temp_file.close()
+
+					# Serialize RDF extraction graph into the temporary file, then move it to the records directory
+					wd_extraction_keywords.serialize(destination=temp_file_path, format='ttl', encoding='utf-8')
+					shutil.move(temp_file_path, dest_file, copy_function=shutil.copy)
+					os.chmod(dest_file, 0o664)
+
+					# UPLOAD TO TRIPLESTORE
+					server.update('load <file:///app/records/'+recordID+"-extraction-"+field["id"]+'.ttl> into graph <'+base+extraction_graph_name+'/>')
+
 
 		# KNOWLEDGE EXTRACTION
 		elif field['type']=="KnowledgeExtractor" and "extractions-dict" in recordData:
