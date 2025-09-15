@@ -386,16 +386,8 @@ function cancelSubrecord(subrecordSection) {
             substring = currentSubrecords.endsWith(',,'+substring) ? ',,'+substring : substring;
         } else if (currentSubrecords.startsWith(substring)) {
             substring = currentSubrecords === substring ? substring : substring+',,';
-        } else if (currentSubrecords.split(",,").includes(subrecordId)) {
-            console.log(subrecordId)
-            console.log(currentSubrecords)
-            currentSubrecords = currentSubrecords
-                .split(",,")
-                .filter(id => id !== subrecordId)
-                .join(",,"); 
-            console.log(currentSubrecords)
         } else {
-            substring = ',,'+substring+',,';
+            substring = ',,'+substring;
         }
         currentSubrecords = currentSubrecords.replace(substring, "");
         $('[name="'+fieldId+'-subrecords"').val(currentSubrecords);

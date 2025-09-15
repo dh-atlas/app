@@ -70,23 +70,31 @@ $(document).ready(function() {
     e.preventDefault();
 
     // make sure the primary key is mandatory 
-    var primary_key = $('.disambiguate[checked="checked"');
-    primary_key.parent().parent().find('input[id*="mandatory"]').attr("checked", "checked");
+    var primary_key = $('.disambiguate:checked');
+    primary_key.parent().parent().find('input[id*="mandatory"]').prop("checked", true);
 
     // prevent mandatory fields to be hidden 
-    var mandatory_fields = $('input[type="checkbox"][id*="mandatory"][checked="checked"]');
+    var mandatory_fields = $('input[type="checkbox"][id*="mandatory"]:checked');
     mandatory_fields.each(function() {
       var hidden_field_checkbox = $(this).parent().parent().find('input[type="checkbox"][id*="hidden"]');
-      if (hidden_field_checkbox.attr('checked') == 'checked') {
+      if (hidden_field_checkbox.prop('checked')) {
         Swal.fire({ title:"Hidden fields cannot be mandatory"});
         return false;
-      }; 
+      } 
     });
+
+    // save action value
+    $('<input>').attr({
+        type: 'hidden',
+        name: 'action',
+        value: $(this).val()
+    }).appendTo('#templateForm');
 
     // save the template in case everything is ok
     Swal.fire({ title: 'Saved!'});
     setTimeout(function() { document.getElementById('templateForm').submit();}, 500);
   });
+
 
   // disable forms
   $(".disabled").attr("disabled","disabled");
@@ -114,7 +122,6 @@ $(document).ready(function() {
 
 	// Named Entity Recognition in long texts
   const areas = document.querySelectorAll('#recordForm textarea, #modifyForm textarea');
-  console.log(areas)
   areas.forEach(element => {
     const tags = document.createElement('div');
     tags.setAttribute('class','tags-nlp');
@@ -1197,26 +1204,115 @@ function nlpText(searchterm) {
 			    url: 'nlp?q=' + encoded + '&lang=' + lang,
 			    success: function(listTopics) {
             console.log(listTopics);
-            for (var i = 0; i < listTopics.length; i++) {
-              console.log("listTopics[i]",listTopics[i]);
-      				// query WD for reconciliation
-      				$.getJSON("https://www.wikidata.org/w/api.php?callback=?", {
-      			      search: listTopics[i].result,
-      			      action: "wbsearchentities",
-      			      language: "en",
-      			      limit: 1,
-      			      uselang: "en",
-      			      format: "json",
-      			      strictlanguage: true,
-      			    },
-      			    function(data) {
-                  console.log(data);
-      			    	$.each(data.search, function(i, item) {
-      				        $('textarea#'+searchterm).parent().find('.tags-nlp').append('<span class="tag nlp '+item.title+'" data-input="'+baseID+'" data-id="'+item.title+'">'+item.label+'</span><input type="hidden" class="hiddenInput '+item.title+'" name="'+baseID+'_'+item.title+'" value="'+item.title+','+encodeURIComponent(item.label)+'"/>');
-      			    	});
-      			    });
-      			};
+            if (listTopics.length) {
+              $('body').append($("<div class='modal-bg'>"));
+              $('main').append($('<section id="modifyNlp" class="open-modal">\
+                <section>\
+                <span>Extracted kewyords</span>\
+              </section>'));
+              const table = $('<table id="modifyNlpTable"><tr><th>ENTITY</th><th>CLASS</th></tr></table>');
+              for (var i = 0; i < listTopics.length; i++) {
 
+                // query WD for reconciliation
+                $.getJSON("https://www.wikidata.org/w/api.php?callback=?", {
+                    search: listTopics[i].result,
+                    action: "wbsearchentities",
+                    language: "en",
+                    limit: 3,
+                    uselang: "en",
+                    format: "json",
+                    strictlanguage: true,
+                  },
+                  function(data) {
+                    console.log(data);
+
+                    // create a custom-select to choose the best result
+                    const row = $("<tr>");
+                    const customSelect = $("<div class='custom-select custom-select-wrapper'>\
+                        <div class='custom-select-trigger'>"+data.search[0].label+"</div>\
+                        <div class='custom-options'></div>\
+                      </div>");
+                    const optionsContainer = customSelect.find(".custom-options");
+
+                    // toggle open/close
+                    customSelect.find(".custom-select-trigger").on("click", function() {
+                      $(this).siblings(".custom-options").toggle();
+                      $(this).closest("tr").siblings("tr").find(".custom-options").hide();
+                    });
+
+                    $.each(data.search, function(i, item) {
+
+                      var selected = i === 0; // default value
+
+                      // create custom option
+                      const option = $("<div class='custom-option'>");
+                      option.append(
+                        "<div class='wditem' data-id='" + item.title + "' data-label='" + item.label + "'>\
+                          <a class='blue' target='_blank' href='http://www.wikidata.org/entity/" + item.title + "'>" + wdImgIcon + "</a> \
+                          <a class='blue'>" + item.label + "</a>" +
+                          (item.description ? " - " + item.description : "") +
+                        "</div>"
+                      );                      
+                      if (selected) option.addClass("selected");
+
+                      // select option
+                      option.on("click", function() {
+                        $(this).siblings().removeClass("selected");
+                        $(this).addClass("selected");
+                        $(this).closest(".custom-select-wrapper").find(".custom-select-trigger").text(item.label);
+                        $(this).closest(".custom-select-wrapper").data("value", item.title);
+                        $(this).parent().hide(); // close menu
+                      });
+
+                      optionsContainer.append(option);
+
+                    });
+                    row.append($("<td>").append(customSelect));
+
+                    // select class based on available extraction classes
+                    const selectClass = $("<select class='custom-select'><option value=''>Select from the list</option></select>")
+                    if (keywords_classes) {
+                      $.each(keywords_classes, function(value, text) {
+                        selectClass.append($("<option>", { value: value, text: text }));
+                      });
+                    }
+                    
+                    row.append($("<td>").append(selectClass));
+
+                    // append to DOM
+                    table.append(row)
+                  });
+              };
+
+              $("#modifyNlp").append(table)
+              $("#modifyNlp").append('<section class="modal-input">\
+                      <button class="btn btn-dark" name="action" value="saveKeywords" type="submit">Save</button>\
+                      <button class="btn btn-dark discard" value="cancelKeywords" type="submit">Delete</button>\
+              </section>');
+
+              $("button[value='saveKeywords']").on('click', function() {
+                $("#modifyNlpTable > tbody > tr:gt(0)").each(function() {
+                  // retrieve select elements
+                  var values = $(this).find(".custom-select");
+
+                  // retrieve wd entity info
+                  var selectedEntity = values.eq(0).find(".selected > .wditem");
+                  var selectedEntityId = selectedEntity.data("id");
+                  var selectedEntityLabel = selectedEntity.data("label");
+                  var selectedEntityClass = values.eq(1).val();
+
+                  // append keyword span to DOM
+                  $('textarea#'+searchterm).parent().find('.tags-nlp').append('<span class="tag nlp '+selectedEntityId+'" data-input="'+baseID+'" data-id="'+selectedEntityId+'">'+selectedEntityLabel+'</span><input type="hidden" class="hiddenInput '+selectedEntityId+'" name="'+baseID+'_'+selectedEntityId+'" value="'+selectedEntityId+','+encodeURIComponent(selectedEntityLabel)+','+encodeURIComponent(selectedEntityClass)+'"/>');
+                
+                  // remove modal
+                  $(".modal-bg, .open-modal").remove();
+                })
+              });
+              $("button[value='cancelKeywords']").on('click', function() {
+                // remove modal
+                $(".modal-bg, .open-modal").remove();
+              });
+            }
             // return something or message
 			    }
 		    });
@@ -1224,6 +1320,37 @@ function nlpText(searchterm) {
 
 	}) );
 };
+
+// NLP: display keywords in View
+function loadKeywords(graphId, prop) {
+  var query = 'SELECT DISTINCT ?keyword ?label WHERE { <'+graphId+'/> <'+prop+'> ?keywordGraph . GRAPH ?keywordGraph { ?keyword rdfs:label ?label } }'
+  $.ajax({
+    type: 'GET',
+    url: myPublicEndpoint + '?query=' + encodeURIComponent(query),
+    headers: { Accept: 'application/sparql-results+json; charset=utf-8' },
+    success: function(returnedJson) {
+      console.log(returnedJson)
+      if (returnedJson.results.bindings.length) {
+        var section = $(".keywords");
+        const subtitle = $('<h4 class="articleSubtitle">Subjects</h4>');
+        section.append(subtitle);
+        for (let i=0; i<returnedJson.results.bindings.length; i++) {
+          var result = returnedJson.results.bindings[i];
+          var keywordUri = result.keyword.value;
+          var keywordLabel = result.label.value;
+          const keyword = $('<p property="'+prop+'">\
+              <link property="sameAs" url="'+keywordUri+'"/>\
+              <a class="wikiEntity" target="_blank" href="term-'+keywordUri.split("/")[keywordUri.split("/").length - 1]+'">'+keywordLabel+'</a>\
+            </p>');
+          keyword.append(wdImgIcon)
+          section.append(keyword);
+        }
+
+      }
+    } 
+  });
+
+}
 
 // lookup when creating new records
 function checkPriorRecords(elem) {
@@ -1531,6 +1658,119 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
 
 };
 
+// get all extracted key enitities
+function getKeywordsValue(elemID, elemClass, extractionClasses, extractionProperties, elemSubclass='') {
+  console.log(elemSubclass)
+  $('.extraction-class').remove();
+  if (elemClass.length) {var class_restriction = "?s a <"+elemClass+"> . "} else {var class_restriction = ''};
+  if (elemSubclass.length) {
+    if (!elemSubclass.startsWith("other")) { class_restriction += "?s a <"+elemSubclass+"> . "; }
+    // ATLAS only - filters for "Other" values
+    else if (elemSubclass === "other" || elemSubclass === "other-all") { class_restriction += "FILTER NOT EXISTS { ?s a ?otherType . FILTER (?otherType != <"+elemClass+">) }" } 
+    else if (elemSubclass.startsWith("other-")) { 
+      console.log("here", class_restriction)
+      class_restriction += "FILTER NOT EXISTS { ?s a ?otherType . FILTER (?otherType != <"+elemClass+">) }"
+      class_restriction += "?s <http://purl.org/dc/terms/type> <"+elemSubclass.substring(6)+"> .";
+    }
+  };
+  var query = "select distinct ?o ?oLabel ?class (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?g ?prop ?extractionGraph. "+class_restriction+" } GRAPH ?extractionGraph { ?o rdfs:label ?oLabel . OPTIONAL {?o a ?class}} ?g <http://dbpedia.org/ontology/currentStatus> ?stage .     FILTER(CONTAINS(STR(?extractionGraph), 'extraction')) } GROUP BY ?o ?oLabel ?class ORDER BY DESC(?count) lcase(?oLabel)";
+  const len = 10;
+  var encoded = encodeURIComponent(query);
+  console.log(query);
+  $.ajax({
+        type: 'GET',
+        url: myPublicEndpoint+'?query=' + encoded,
+        headers: { Accept: 'application/sparql-results+json'},
+        success: function(returnedJson) {
+          console.log(returnedJson);
+          var allresults = [];
+          var results = [];
+          var countresults = [];
+          for (i = 0; i < returnedJson.results.bindings.length; i++) {
+            var res = returnedJson.results.bindings[i].o.value;
+            var resLabel = returnedJson.results.bindings[i].oLabel.value;
+            var count = returnedJson.results.bindings[i].count.value;
+            if (countresults.length < 5) {countresults.push({count: parseInt(count), label: resLabel });}
+
+            var extractionClass = "data-extraction-class='"+returnedJson.results.bindings[i].class.value+"'";;
+            var knowledgeExtractor = "fieldType='KnowledgeExtractor'";
+            var result = "<button onclick=getRecordsByPropValue(this,'."+elemID+"results','"+elemClass+"','','"+JSON.stringify(extractionProperties)+"',"+knowledgeExtractor+") id='"+res+"' class='queryGroup' data-value='"+res+"' data-toggle='collapse' data-target='#"+elemID+"results' aria-expanded='false' aria-controls='"+elemID+"results' class='info_collapse' "+extractionClass+">"+resLabel+" ("+count+")</button>";
+            if (allresults.indexOf(result) === -1) {
+              allresults.push(result);
+              results.push($(result).hide());
+              $("#"+elemID).append($(result).hide());
+            };
+          };
+
+          // group extracted entities by class (KNOWLEDGE EXTRACTOR only)
+          if (extractionClasses) {
+            console.log(extractionClasses)
+            for (const [key, value] of Object.entries(extractionClasses)) {
+              var extractedEntitiesByClass = $("#"+elemID).find("[data-extraction-class='"+key+"']");
+              if (extractedEntitiesByClass.length) {
+                const groupEntity = $("<section class='extraction-class' data-class='"+key+"' style='margin-bottom: 1.5em'><h4>"+value+"</h4></section>");
+                $("#"+elemID).append(groupEntity);
+                extractedEntitiesByClass.detach().appendTo(groupEntity);
+                
+
+                // show first batch
+                if (extractedEntitiesByClass.length > len) {
+                  groupEntity.find("button:lt("+len+")").show('smooth');
+                  groupEntity.append($('<button class="showMore" type="button" data-counter="1">show more</button>'));
+                
+                  // show more based on var len
+                  groupEntity.find(".showMore").on("click", function() {
+                    var counter = $(this).data("counter");
+                    ++counter;
+                    var offset = counter*len;
+                    var limit = offset+len;
+                    console.log(counter, offset, limit);
+                    groupEntity.find("button:lt("+limit+")").show('smooth');
+                    groupEntity.find(".showMore").data("counter", counter);
+                  }); 
+                } else if (extractedEntitiesByClass.length > 0 && extractedEntitiesByClass.length <= len) {
+                  groupEntity.find("button:not(.showMore)").show('smooth');
+                };
+              }
+            }
+          } else {
+            // show more in EXPLORE
+            if (results.length > len) {
+              // show first batch
+              $("#"+elemID).find("button:lt("+len+")").show('smooth');
+              $("#"+elemID).next(".showMore").show();
+
+              // show more based on var len
+              let counter = 1;
+              $("#"+elemID).next(".showMore").on("click", function() {
+                ++counter;
+                var offset = counter*len;
+                var limit = offset+len;
+                console.log(counter, offset, limit);
+                $("#"+elemID).find("button:lt("+limit+")").show('smooth');
+              });
+
+            } else if (results.length > 0 && results.length <= len) {
+              $("#"+elemID).find("button:not(.showMore)").show('smooth');
+            };
+          }
+          
+          /* // prepare charts
+          if (! ($("#"+elemID+"-chart").length)) {
+            $("#"+elemID).closest(".change_background").find(".col-md-4").eq(0).append($("<div id='"+elemID+"-chart' class='mini-chart'></div>"));
+          } else {
+            $("#"+elemID+"-chart").replaceWith($("<div id='"+elemID+"-chart' class='mini-chart'></div>"));
+          } 
+          $("#"+elemID).closest(".change_background").css({minHeight: "95vh"})
+          console.log(countresults)
+          barchart(elemID+"-chart","label","count",countresults,true); */
+
+
+        } // end function
+
+  });
+}
+
 // get records by value and property in EXPLORE
 function getRecordsByPropValue(el, resElem, elemClass='', elemSubclass='', typeProp=false, fieldType=null) {
   if (elemClass.length) {var class_restriction = "?s a <"+elemClass+"> . "} else {var class_restriction = ''};
@@ -1538,10 +1778,9 @@ function getRecordsByPropValue(el, resElem, elemClass='', elemSubclass='', typeP
   $(el).toggleClass("alphaActive");
   if ($(resElem).length) {$(resElem).empty();}
   var prop = $(el).data("property");
-  console.log(prop);
   if (fieldType == 'KnowledgeExtractor') {
     var val = $(el).data("value");
-    var query = "select distinct ?s ?sLabel "+inGraph+" where { GRAPH ?g { ?g <"+prop+"> ?extractionGraph . BIND(IRI(SUBSTR(STR(?g), 1, STRLEN(STR(?g)) - 1)) AS ?s) ?s rdfs:label ?sLabel . "+class_restriction+"  } GRAPH ?extractionGraph{ <"+val+"> rdfs:label ?entity } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } ORDER BY ?sLabel"
+    var query = "select distinct ?s ?sLabel ?prop "+inGraph+" where { GRAPH ?g { ?g ?prop ?extractionGraph . BIND(IRI(SUBSTR(STR(?g), 1, STRLEN(STR(?g)) - 1)) AS ?s) ?s rdfs:label ?sLabel . "+class_restriction+"  } GRAPH ?extractionGraph{ <"+val+"> rdfs:label ?entity } ?g <http://dbpedia.org/ontology/currentStatus> ?stage .  } ORDER BY ?sLabel"
   } else if (typeProp == 'false') {
     var val = $(el).data("value");
     var query = "select distinct ?s ?sLabel "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> <"+val+">; rdfs:label ?sLabel . "+class_restriction+" } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } ORDER BY ?sLabel"
@@ -1560,7 +1799,18 @@ function getRecordsByPropValue(el, resElem, elemClass='', elemSubclass='', typeP
             var res = returnedJson.results.bindings[i].s.value;
             var resID = res.substr(res.lastIndexOf('/') + 1)
             var resLabel = returnedJson.results.bindings[i].sLabel.value;
-            $(resElem).append("<section><a href='view-"+resID+"'>"+resLabel+"</a></section>");
+            var record = $("<section><a href='view-"+resID+"'>"+resLabel+"</a></section>");
+            if (returnedJson.results.bindings[i].prop) {
+              var propDict = JSON.parse(typeProp);
+              var propUri = returnedJson.results.bindings[i].prop.value;
+              console.log(propDict, propUri)
+              var propLabel = propUri in propDict ? propDict[propUri] : "";
+              if (propLabel.length) {
+                record.append("<span class='tip' data-toggle='tooltip' data-placement='bottom' title='' data-original-title='"+propLabel+"'><i class='fas fa-info-circle'></i></span>")
+              }
+            }
+            $(resElem).append(record);
+            $('.tip').tooltip();
           };
         }
   });
@@ -1636,9 +1886,13 @@ function filterBySubclass(btn) {
   $(".resultAccordion .collapse").empty();
   $(".collapse.show").toggleClass("show");
   scripts.each(function() {
-    $(this).prev().prev().empty();
+    $(this).parent().find(".indexURI").empty();
     let scriptContent = $(this).html();
-    scriptContent = scriptContent.replace('")', '", "'+subclassURI+'")');
+    scriptContent = scriptContent.replace(
+        /(get(?:KeywordsValue|PropertyValue))\s*\(([^)]*)\)/g,
+        '$1($2, "'+subclassURI+'")'
+    );
+    console.log(scriptContent)
     let dynamicFunction = new Function(scriptContent);
     dynamicFunction();
   })

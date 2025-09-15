@@ -161,7 +161,7 @@ $(document).ready(function() {
             $("[data-subclassdropdown='True']").val("other").change();
         } else if ($(this).is('input:not([type="checkbox"])')) {
             var fieldId = $(this).attr("id");
-            if ($("span[data-input='"+fieldId+"']")) {
+            if ($("span[data-input='"+fieldId+"']").length) {
                 isOther = true;
                 $("[data-subclassdropdown='True']").val("other").change();
             }
@@ -212,6 +212,17 @@ $(document).ready(function() {
         $('.fields-list').append(listItem);
     });
 
+    // FORMS - disable search suggestion on blur
+    let clickInsideResult = false;
+    $("#searchresult").on("mousedown", function() {
+        clickInsideResult = true;
+    });
+    $("input").on("blur", function() {
+        if (!clickInsideResult) {
+            $("#searchresult").empty();
+        }
+        clickInsideResult = false; // reset
+    });
 
     // DETECT URLs - wayback machine popup
     detectInputWebPage("detect_web_page");
@@ -414,7 +425,8 @@ function searchGeonames(searchterm) {
                                 e.preventDefault();
                                 var oldID = this.getAttribute('data-id').substr(this.getAttribute('data-id').lastIndexOf('/') + 1);
                                 var oldLabel = $(this).text();
-                                $('#'+searchterm).after("<span class='tag "+oldID+"' data-input='"+searchterm+"' data-id='"+oldID+"'>"+oldLabel+"</span><input type='hidden' class='hiddenInput "+oldID+"' name='"+searchterm+"_"+oldID+"' value=\" "+oldID+","+encodeURIComponent(oldLabel)+"\"/>");
+                                var fieldName = (searchterm.split('_').length == 2) ? searchterm.split('_')[0] + "_" + oldID + "_" + searchterm.split('_')[1] : searchterm + '_' + oldID;
+                                $('#'+searchterm).after("<span class='tag "+oldID+"' data-input='"+searchterm+"' data-id='"+oldID+"'>"+oldLabel+"</span><input type='hidden' class='hiddenInput "+oldID+"' name='"+fieldName+"' value=\" "+oldID+","+encodeURIComponent(oldLabel)+"\"/>");
                                 $("#searchresult").hide();
                                 $('#'+searchterm).val('');
                             });
@@ -512,7 +524,8 @@ function searchOrcid(searchterm) {
                     $(this).bind('click', function (e) {
                         e.preventDefault();
                         var orcid = this.getAttribute('data-id');
-                        $('#' + searchterm).after("<span class='tag " + orcid + "' data-input='" + searchterm + "' data-id='" + orcid + "'>" + orcid + "</span><input type='hidden' class='hiddenInput " + orcid + "' name='" + searchterm + "_" + orcid + "' value=\"orcid" + orcid + "," + orcid + "\"/>");
+                        var inputName = (searchterm.split('_').length == 2) ? searchterm.split('_')[0] + "_" + orcid + "_" + searchterm.split('_')[1] : searchterm + '_' + orcid;
+                        $('#' + searchterm).after("<span class='tag " + orcid + "' data-input='" + searchterm + "' data-id='" + orcid + "'>" + orcid + "</span><input type='hidden' class='hiddenInput " + orcid + "' name='" + inputName + "' value=\"orcid" + orcid + "," + orcid + "\"/>");
                         $("#searchresult").hide();
                         $('#' + searchterm).val('');
                     });
@@ -864,8 +877,8 @@ function searchWD(searchterm) {
                             $('a[data-id="' + item.viafid + '"]').each(function () {
                             $(this).bind('click', function (e) {
                                 e.preventDefault();
-                                var input_name = (searchterm.split('_').length == 2) ? searchterm.split('')[0] + item.viafid + searchterm.split('_')[1] : searchterm + '-' + item.viafid;
-                                $('#' + searchterm).next('div').append("<span class='tag " + item.viafid + "' data-input='" + searchterm + "' data-id='" + item.viafid + "'>" + item.term + "</span><input type='hidden' class='hiddenInput " + item.viafid + "' name='" + input_name + "' value=\"viaf" + item.viafid + "," + encodeURIComponent(item.term) + "\"/>");
+                                var inputName = (searchterm.split('_').length == 2) ? searchterm.split('')[0] + item.viafid + searchterm.split('_')[1] : searchterm + '-' + item.viafid;
+                                $('#' + searchterm).next('div').append("<span class='tag " + item.viafid + "' data-input='" + searchterm + "' data-id='" + item.viafid + "'>" + item.term + "</span><input type='hidden' class='hiddenInput " + item.viafid + "' name='" + inputName + "' value=\"viaf" + item.viafid + "," + encodeURIComponent(item.term) + "\"/>");
                                 $("#searchresult").hide();
                                 $('#' + searchterm).val('');
                                 //colorForm();
@@ -894,8 +907,8 @@ function searchWD(searchterm) {
             $('a[data-id="' + item.title + '"]').each(function () {
                 $(this).bind('click', function (e) {
                     e.preventDefault();
-                    var input_name = (searchterm.split('_').length == 2) ? searchterm.split('_')[0] + "_" + item.title + "_" + searchterm.split('_')[1] : searchterm + '_' + item.title;
-                    $('#' + searchterm).next('div').append("<span class='tag " + item.title + "' data-input='" + searchterm + "' data-id='" + item.title + "'>" + item.label + "</span><input type='hidden' class='hiddenInput " + item.title + "' name='" + input_name + "' value=\"" + item.title + "," + encodeURIComponent(item.label) + "\"/>");
+                    var inputName = (searchterm.split('_').length == 2) ? searchterm.split('_')[0] + "_" + item.title + "_" + searchterm.split('_')[1] : searchterm + '_' + item.title;
+                    $('#' + searchterm).next('div').append("<span class='tag " + item.title + "' data-input='" + searchterm + "' data-id='" + item.title + "'>" + item.label + "</span><input type='hidden' class='hiddenInput " + item.title + "' name='" + inputName + "' value=\"" + item.title + "," + encodeURIComponent(item.label) + "\"/>");
                     $("#searchresult").hide();
                     $('#' + searchterm).val('');
                     //colorForm();
@@ -931,7 +944,8 @@ function searchWD(searchterm) {
                     e.preventDefault();
                     var oldID = this.getAttribute('data-id').substr(this.getAttribute('data-id').lastIndexOf('/') + 1);
                     var oldLabel = $(this).text();
-                    $('#' + searchterm).next('div').append("<span class='tag " + oldID + "' data-input='" + searchterm + "' data-id='" + oldID + "'>" + oldLabel + "</span><input type='hidden' class='hiddenInput " + oldID + "' name='" + searchterm + "_" + oldID + "' value=\" " + oldID + "," + encodeURIComponent(oldLabel) + "\"/>");
+                    var inputName = (searchterm.split('_').length == 2) ? searchterm.split('')[0] + oldID + searchterm.split('_')[1] : searchterm + '-' + oldID;
+                    $('#' + searchterm).next('div').append("<span class='tag " + oldID + "' data-input='" + searchterm + "' data-id='" + oldID + "'>" + oldLabel + "</span><input type='hidden' class='hiddenInput " + oldID + "' name='" + inputName + "' value=\" " + oldID + "," + encodeURIComponent(oldLabel) + "\"/>");
                     $("#searchresult").hide();
                     $('#' + searchterm).val('');
                 });
@@ -1006,8 +1020,8 @@ function searchWDAdvanced(searchterm) {
                     $('a[data-id="' + item.viafid + '"]').each(function () {
                         $(this).bind('click', function (e) {
                         e.preventDefault();
-                        var input_name = (searchterm.split('_').length == 2) ? searchterm.split('')[0] + item.viafid + searchterm.split('_')[1] : searchterm + '-' + item.viafid;
-                        $('#' + searchterm).next('.tags-url').append("<span class='tag " + item.viafid + "' data-input='" + searchterm + "' data-id='" + item.viafid + "'>" + item.term + "</span><input type='hidden' class='hiddenInput " + item.viafid + "' name='" + input_name + "' value=\"viaf" + item.viafid + "," + encodeURIComponent(item.term) + "\"/>");
+                        var inputName = (searchterm.split('_').length == 2) ? searchterm.split('')[0] + item.viafid + searchterm.split('_')[1] : searchterm + '-' + item.viafid;
+                        $('#' + searchterm).next('.tags-url').append("<span class='tag " + item.viafid + "' data-input='" + searchterm + "' data-id='" + item.viafid + "'>" + item.term + "</span><input type='hidden' class='hiddenInput " + item.viafid + "' name='" + inputName + "' value=\"viaf" + item.viafid + "," + encodeURIComponent(item.term) + "\"/>");
                         $("#searchresult").hide();
                         $('#' + searchterm).val('');
                         });
@@ -1103,8 +1117,8 @@ function searchWDCatalogueAdvanced(searchterm){
                     $('a[data-id="' + item.viafid + '"]').each(function () {
                         $(this).bind('click', function (e) {
                         e.preventDefault();
-                        var input_name = (searchterm.split('_').length == 2) ? searchterm.split('')[0] + item.viafid + searchterm.split('_')[1] : searchterm + '-' + item.viafid;
-                        $('#' + searchterm).next('.tags-url').append("<span class='tag " + item.viafid + "' data-input='" + searchterm + "' data-id='" + item.viafid + "'>" + item.term + "</span><input type='hidden' class='hiddenInput " + item.viafid + "' name='" + input_name + "' value=\"viaf" + item.viafid + "," + encodeURIComponent(item.term) + "\"/>");
+                        var inputName = (searchterm.split('_').length == 2) ? searchterm.split('')[0] + item.viafid + searchterm.split('_')[1] : searchterm + '-' + item.viafid;
+                        $('#' + searchterm).next('.tags-url').append("<span class='tag " + item.viafid + "' data-input='" + searchterm + "' data-id='" + item.viafid + "'>" + item.term + "</span><input type='hidden' class='hiddenInput " + item.viafid + "' name='" + inputName + "' value=\"viaf" + item.viafid + "," + encodeURIComponent(item.term) + "\"/>");
                         $("#searchresult").hide();
                         $('#' + searchterm).val('');
                         //colorForm();
@@ -1186,32 +1200,34 @@ function addURL(searchterm, iframe=false) {
         var newID = 'MD'+now;
         // check the input value against the regex
         if ($('#'+searchterm).val().length > 0 && regexURL.test($('#'+searchterm).val()) ) {
+            var newSearchTerm = (searchterm.split('_').length == 2) ? searchterm.split('_')[0] + "_" + newID + "_" + searchterm.split('_')[1] : searchterm + '_' + newID;
+
             // generate iframe if requested 
             if (iframe) {
-            var url;
-            if (!$('#'+searchterm).val().startsWith("https://") && !$('#'+searchterm).val().startsWith("http://")) {
-                url = "https://" + $('#'+searchterm).val();
-            } else {
-                url = $('#'+searchterm).val();
-            }
-            itemTable.find('tbody').append($("<tr>\
-                <td><span class='"+newID+"' data-input='"+searchterm+"' data-id='"+newID+"'><a href='"+url+"'>"+$('#'+searchterm).val()+"</a></span><input type='hidden' class='hiddenInput "+newID+"' name='"+searchterm+"_"+newID+"' value=\""+newID+","+encodeURIComponent(url)+"\"/></td>\
-                <td>\
-                <button class='btn btn-dark delete' title='delete-iframe' onclick='deleteUrlInput(this)'><i class='far fa-trash-alt'></i></button>\
-                <button class='btn btn-dark' title='expand-iframe' onclick='expandUrlInput(event, this)'><i class='fa fa-expand'></i></button>\
-                </td>\
-            </tr>"));
-            $('#'+searchterm).next('.tags-url').prepend(itemTable);
+                var url;
+                if (!$('#'+searchterm).val().startsWith("https://") && !$('#'+searchterm).val().startsWith("http://")) {
+                    url = "https://" + $('#'+searchterm).val();
+                } else {
+                    url = $('#'+searchterm).val();
+                }
+                itemTable.find('tbody').append($("<tr>\
+                    <td><span class='"+newID+"' data-input='"+searchterm+"' data-id='"+newID+"'><a href='"+url+"'>"+$('#'+searchterm).val()+"</a></span><input type='hidden' class='hiddenInput "+newID+"' name='"+newSearchTerm+"' value=\""+newID+","+encodeURIComponent(url)+"\"/></td>\
+                    <td>\
+                    <button class='btn btn-dark delete' title='delete-iframe' onclick='deleteUrlInput(this)'><i class='far fa-trash-alt'></i></button>\
+                    <button class='btn btn-dark' title='expand-iframe' onclick='expandUrlInput(event, this)'><i class='fa fa-expand'></i></button>\
+                    </td>\
+                </tr>"));
+                $('#'+searchterm).next('.tags-url').prepend(itemTable);
             }
             else {
-            itemTable.find('tbody').append($("<tr>\
-                <td><span class='"+newID+"' data-input='"+searchterm+"' data-id='"+newID+"'><a href='"+$('#'+searchterm).val()+"'>"+$('#'+searchterm).val()+"</a></span><input type='hidden' class='hiddenInput "+newID+"' name='"+searchterm+"_"+newID+"' value=\""+newID+","+encodeURIComponent($('#'+searchterm).val())+"\"/></td>\
-                <td>\
-                <button class='btn btn-dark delete' title='delete-url' onclick='deleteUrlInput(this)'><i class='far fa-trash-alt'></i></button>\
-                <button class='btn btn-dark' title='open-url' onclick='expandUrlInput(event, this)'><i class='fa fa-expand'></i></button>\
-                </td>\
-            </tr>"));
-            $('#'+searchterm).next('.tags-url').append(itemTable);        
+                itemTable.find('tbody').append($("<tr>\
+                    <td><span class='"+newID+"' data-input='"+searchterm+"' data-id='"+newID+"'><a href='"+$('#'+searchterm).val()+"'>"+$('#'+searchterm).val()+"</a></span><input type='hidden' class='hiddenInput "+newID+"' name='"+newSearchTerm+"' value=\""+newID+","+encodeURIComponent($('#'+searchterm).val())+"\"/></td>\
+                    <td>\
+                    <button class='btn btn-dark delete' title='delete-url' onclick='deleteUrlInput(this)'><i class='far fa-trash-alt'></i></button>\
+                    <button class='btn btn-dark' title='open-url' onclick='expandUrlInput(event, this)'><i class='fa fa-expand'></i></button>\
+                    </td>\
+                </tr>"));
+                $('#'+searchterm).next('.tags-url').append(itemTable);        
             }
 
             // popover Wayback Machine
@@ -1451,17 +1467,17 @@ function searchSkos(searchterm) {
                         $("#searchresult").append("<div class='vocableitem'><a class='blue' data-id='"+uri+"'>"+label+"</a> - "+vocabulary_noun+"</div>")
 
                         $('a[data-id="'+ uri +'"]').each(function () {
-                        $(this).bind('click', function (e) {
-                            e.preventDefault();
-                            if (!skos_vocabs.includes("oneVocableAccepted") || $('#' + searchterm).nextAll("span").length == 0) {
-                            $('#' + searchterm).after("<span class='tag " + uri + "' data-input='" + searchterm + "' data-id='" + uri + "'>" + label+" - "+vocabulary_noun + "</span><input type='hidden' class='hiddenInput " + uri + "' name='" + searchterm + "_" + uri + "' value=\"" + uri + "," + label + " - " + vocabulary_noun + "\"/>");
-                            }
-                            else if (skos_vocabs.includes("oneVocableAccepted") && $('#' + searchterm).nextAll("span").length > 0) {
-                            alert("Only one term is accepted!");
-                            }
-                            $("#searchresult").hide();
-                            $('#' + searchterm).val("");
-                        });
+                            $(this).bind('click', function (e) {
+                                e.preventDefault();
+                                if (!skos_vocabs.includes("oneVocableAccepted") || $('#' + searchterm).nextAll("span").length == 0) {
+                                    $('#' + searchterm).after("<span class='tag " + uri + "' data-input='" + searchterm + "' data-id='" + uri + "'>" + label+" - "+vocabulary_noun + "</span><input type='hidden' class='hiddenInput " + uri + "' name='" + searchterm + "_" + uri + "' value=\"" + uri + "," + label + " - " + vocabulary_noun + "\"/>");
+                                }
+                                else if (skos_vocabs.includes("oneVocableAccepted") && $('#' + searchterm).nextAll("span").length > 0) {
+                                    alert("Only one term is accepted!");
+                                }
+                                $("#searchresult").hide();
+                                $('#' + searchterm).val("");
+                            });
                         });
                     });
 
@@ -1807,9 +1823,8 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
     $(element).parent().parent().parent().find('.block_field.col-md-12 section').not(":first").remove();
     var extractionId = extractorId+'-'+extractionInternalId.toString(); // it will be used to create hidden inputs later
     var extractionType = $(element).find(":selected").val(); // selected option (API, SPARQL, or static file)
-
-    var extractorIndex = $('#imported-graphs-'+extractorId).data('extractor-index');
-    var classes = extractorsClasses[extractorIndex]; // get optional classes for extracted entities
+    var classes = keywords_classes; // get optional classes for extracted entities
+    console.log(classes)
 
     $(element).parent().parent().find(".extractor-1, hr").remove() // remove previously created forms (in case the user changes the selected option)
     var prepend = "<hr>";
