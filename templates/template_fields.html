@@ -1,19 +1,26 @@
-$def with(f,user,res_type,res_name,res_status,is_git_auth,project,skos_vocabs,templates,main_lang)
+$def with(f,user,res_config,is_git_auth,project,skos_vocabs,templates,main_lang)
 $var user = user
 $var is_git_auth = is_git_auth
 $var project = project
 $var main_lang = main_lang
 
+$ res_name = res_config['name']
+$ res_type = '; '.join(res_config['type'])
+$ res_subclasses = res_config['subclasses']
+$ has_other_subclass = res_config['other_subclass']
+$if has_other_subclass == "True":
+	$ res_subclasses["other"] = "Other"
+
 <!-- Subtemplates list -->
 $if templates:
 	<script type="text/javascript">
-		var templatesObject = JSON.parse('$templates'.replace(/&#39;/g, '"'));
-		var subclasses = {};
+		var templates = '$templates'.replace(/&#39;/g, '"')
+		console.log(templates);
+		var templatesObject = JSON.parse(templates);
 	</script>
 $else:
 	<script type="text/javascript">
 		var templatesObject = {};
-		var subclasses = {};
 	</script>
 
 <header class="row">
@@ -29,14 +36,27 @@ $else:
 
 	<!-- TEMPLATE FORM -->
 	<section class="col-lg-8 col-md-12 col-sm-12">
+
 		<form id="templateForm" class="col-md-12 col-sm-12 col-lg-12" action="" method="POST">
 			<section class="row">
 				<section class="sortable homeheading col-md-12 col-lg-12 col-sm-12">
+
+					<section id="stepper">
+						<div class="stepper">
+							<div class="step-wrapper">
+								<div class="step">1</div>
+								<span class="stepper-label">Step 1: Initial settings</span>
+							</div>
+							<div class="line"></div>
+							<div class="step-wrapper active">
+								<div class="step">2</div>
+								<span class="stepper-label">Step 2: Configure fields</span>
+							</div>
+						</div>
+					</section>
+
 					$if f:
 						$ subclass_field = next((field for field in f if "type" in field and field["type"] == "Subclass"), None)
-						<!-- OTHER SUBCLASS -->
-						$if subclass_field != None and subclass_field["showOther"] == "showOther":
-							$ subclass_field["values"]["other"] = "Other"
 
 						$for field in f:
 							$ hidden_style = "style=opacity:0.6" if "hidden" in field and field["hidden"] == "True" else ""
@@ -256,27 +276,6 @@ $else:
 												$$('[id*="$id"][value="$value"]').attr('checked', 'checked');
 											</script>
 									$elif field['type'] == 'KnowledgeExtractor':
-										<!-- GROUP ENTITIES BY CLASS -->
-										<section class="row">
-											<label class='col-md-3'>ASSIGN TYPE <br><span class='comment'>a list of classes that can be assigned to extracted entities </span></label>
-											<section class="col-md-8">
-												<ul id="values__$id" class="col-md-12 values-list">
-													<li><label class="inner-label col-md-12">Classes List</label></li>
-													$ idx = 0
-													$for uri,lab in field["values"].items():
-														$ idx +=1
-														$ value_id = "value" + str(idx) + "__" + id
-														<li>
-															<label>$lab.strip() <i class="far fa-edit" onclick="modifyLabelURI(this)"></i> <i class="far fa-trash-alt" onclick="removeLabelURI(this)"></i></label>
-															<input type="hidden" id="$value_id" name="$value_id" value="$uri.strip(),$lab.strip()">
-														</li>
-													<li><label class="add-option">ADD NEW VALUE <i class="fas fa-plus-circle" onclick="addLabelURI(this, '$id')"></i></label></li>
-												</ul>
-											</section>
-											<script type="text/javascript">
-												$$("#service__$id option[value$$=$field['service']]").attr("selected","selected");
-											</script>
-										</section>
 										<!-- ENTITY RECONCILATION SERVICE -->
 										<section class="row">
 											<label class='col-md-3'>URI RECONCILATION <br><span class='comment'>select an entity reconciliation service for missing URIs</span></label>
@@ -308,43 +307,7 @@ $else:
 													<li><label class="add-option">ADD NEW VALUE <i class="fas fa-plus-circle" onclick="addLabelURI(this, '$id')"></i></label></li>
 												</ul>
 											</section>
-										</section>
-									$elif field['type'] == 'Subclass':
-										<!-- VALUES -->
-										<section class="row">
-											<label class='col-md-3'>SUBCLASSES <br><span class="comment">define values as URI, label pairs</span></label>
-											<section class="col-md-8">
-												<ul id="subclass__$id" class="col-md-12 values-list">
-													<li><label class="inner-label col-md-12">Subclasses List</label></li>
-													$ idx = 0
-													$for uri,lab in field["values"].items():
-														$if uri != "other":
-															$ idx +=1
-															$ value_id = "value" + str(idx) + "__" + id
-															<li>
-																<label>$lab.strip() <i class="far fa-edit" onclick="modifyLabelURI(this)"></i> <i class="far fa-trash-alt" onclick="removeLabelURI(this)"></i></label>
-																<input type="hidden" id="$value_id" name="$value_id" value="$uri.strip(),$lab.strip()">
-															</li>
-													<li><label class="add-option">ADD NEW VALUE <i class="fas fa-plus-circle" onclick="addLabelURI(this, '$id')"></i></label></li>
-												</ul>
-											</section>
-										</section>
-										<section class='row'>
-											<label class='col-md-3'>OTHER <br><span class='comment'>add "Other" option to the Subclass dropdown</span></label>
-											<section class='col-md-8'>
-												<label for='showOther__$id'>
-													Show "Other" option
-													<input type='radio' id='showOther__$id' name='showOther__$id' value='showOther' onclick='updateSubclassRestrictionField("",this,true)'>
-												</label><br>
-												<label for='hideOther__$id'>
-													Hide "Other" option
-													<input type='radio' id='hideOther__$id' name='showOther__$id' value='hideOther' onclick='updateSubclassRestrictionField("",this,false)'>
-												</label><br>
-											</section>
-											<script type="text/javascript">
-												$$("[value='"+"$field['showOther']"+"']").prop("checked", true);
-											</script>
-										</section>
+										</section>										
 									$if subclass_field and id != subclass_field["id"]:
 										<!-- SUBCLASS RESTRICTION -->
 										<section class="row subclass">
@@ -356,7 +319,7 @@ $else:
 											</section>
 										</section>
 										<script type="text/javascript">
-											subclasses = JSON.parse('$subclass_field["values"]'.replace(/&#39;/g, '"'));
+											var subclasses = JSON.parse('$res_subclasses'.replace(/&#39;/g, '"'));
 											var rawSelectedSubclass = '$field["restricted"]';
 											var selectedSubclass = rawSelectedSubclass.replace(/^\[&#39;|&#39;\]$$/g, "").split(/&#39;, &#39;/);
 											var idx = 1;
@@ -426,18 +389,7 @@ $else:
 			<section class="buttonsSection">
 				<button id="updateTemplate" name="action" value="updateTemplate-$res_name" class="btn btn-dark" type="submit">Save</button>
 				<button class="btn btn-dark delete_template" data-toggle="modal" data-target="#popup" name="action" value="deleteTemplate-$res_name" type="submit" title="delete">Delete <i class="far fa-trash-alt"></i></button>
-				<div class="hide-container">    
-					<span class="toggle-comment">Show this Template to users</span>    
-					<label class="switch">      
-						<input id="hidden__template__input" name="hidden__template__input" type="checkbox">      
-						<span class="slider round"></span>
-					</label>
-				</div>
 			</section>
-			$if res_status == "False":
-				<script type="text/javascript">
-					$$("#hidden__template__input").attr('checked', 'checked')
-				</script>
 		</form>
 	</section>
 
@@ -502,10 +454,10 @@ $else:
 				<span class="label">Name</span><br><span class="comment">choose a name for this template</span>
 				<input type="text" name="class_name" value="" placeholder="e.g.: Work of art">
 			</section>
-			<section class="modal-input">
+<!-- 			<section class="modal-input">
 				<span class="label">Description</span><br><span class="comment">provide a description for this template</span>
 				<textarea name="class_description" value="" placeholder="e.g.: The Work of Art class includes paintings, sculptures, drawings, installations, photographs, and other creative pieces made by artists."></textarea>
-			</section>
+			</section> -->
 			<section class="modal-input">
 				<span class="label">Class</span><br><span class="comment">choose one or multiple OWL classes</span>
 				<input type="text" name="class_uri" value="" placeholder="e.g.: crm:E22_Man-made-object">

@@ -326,32 +326,6 @@ function add_field(field, res_type, backend_file=null) {
         </section>\
     </section>";
 
-    var field_subclass_values = "<section class='row'>\
-        <label class='col-md-3'>SUBCLASSES <br><span class='comment'>define values as URI, label pairs</span></label>\
-        <section class='col-md-8'>\
-            <ul class='col-md-12 values-list' id='subclass__"+temp_id+"'>\
-                <li>\
-                    <label class='inner-label col-md-12'>Subclasses List</label>\
-                </li>\
-                <li><label class='add-option'>ADD NEW VALUE <i class='fas fa-plus-circle' onclick='addLabelURI(this, "+temp_id+")'></i></label></li>\
-            </ul>\
-        </section>\
-    </section>";
-
-    var field_subclass_other = "<section class='row'>\
-        <label class='col-md-3'>OTHER <br><span class='comment'>add \"Other\" option to the Subclass dropdown</span></label>\
-        <section class='col-md-8'>\
-            <label for='showOther__"+temp_id+"'>\
-                Show \"Other\" option\
-                <input type='radio' id='showOther__"+temp_id+"' name='showOther__"+temp_id+"' value='showOther' onclick='updateSubclassRestrictionField(\"\",this,true)'>\
-            </label><br>\
-            <label for='hideOther__"+temp_id+"'>\
-                Hide \"Other\" option\
-                <input type='radio' id='hideOther__"+temp_id+"' name='showOther__"+temp_id+"' value='hideOther' onclick='updateSubclassRestrictionField(\"\",this,false)' checked>\
-            </label>\
-        </section>\
-    </section>";
-
     // todo: modify the following script
     var field_subclass_restriction = "";
     if (is_subclass_active) {
@@ -382,8 +356,8 @@ function add_field(field, res_type, backend_file=null) {
     else if (field =='Multimedia') { contents += field_multimedia + field_placeholder + field_subclass_restriction + field_mandatory + field_hide; }
     else if (field =='WebsitePreview') { contents += field_placeholder + field_subclass_restriction + field_mandatory + field_hide; }
     else if (field =='Subtemplate') { contents += field_subtemplate_import + field_cardinality + field_data_inheritance + field_subclass_restriction + field_mandatory + field_hide + field_browse; }
-    else if (field =='Subclass') { contents += field_subclass_values + field_subclass_other + field_mandatory + field_hide; }
-    else if (field =='KnowledgeExtractor') { contents += open_addons + field_extraction_classes + field_reconciliation + field_subclass_restriction; }
+    else if (field =='Subclass') { contents += field_mandatory + field_hide; }
+    else if (field =='KnowledgeExtractor') { contents += open_addons + field_reconciliation + field_subclass_restriction; }
     else {contents += field_values + field_subclass_restriction + field_mandatory + field_hide + field_browse; };
     contents += close_addons + up_down;
     $(".sortable").append("<section class='block_field' data-id='"+temp_id+"'>"+contents+"</section>");
