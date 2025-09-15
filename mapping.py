@@ -53,8 +53,11 @@ def getValuesFromFields(fieldPrefix, recordData, fields=None, field_type=None):
 		if field_type == 'Textarea':
 			# textarea: NLP keywords
 			if key.startswith(fieldPrefix+'_Q') and ',' in value and key.split('_')[1] == value.split(',')[0]:
-				values = value.split(',', 1)
-				results.add(( values[0].strip(), urllib.parse.unquote(values[1]) )) # (id, label)
+				values = value.split(',')
+				if len(values) == 2:
+					results.add(( values[0].strip(), urllib.parse.unquote(values[1]), None )) # (id, label, None)
+				else:
+					results.add(( values[0].strip(), urllib.parse.unquote(values[1]), urllib.parse.unquote(values[2]) )) # (id, label, class)
 		else:
 			# TODO: check the if statement
 			if key.startswith(fieldPrefix+'_') and ',' in value: # multiple values from text box (entities) and URL
@@ -66,8 +69,10 @@ def getValuesFromFields(fieldPrefix, recordData, fields=None, field_type=None):
 			elif key == fieldPrefix: # uri from dropdown (single value from controlled vocabulary) and URL
 				if fields:
 					field = next(field for field in fields if field["id"] == fieldPrefix)
-					label = field['values'][value] if value and value != 'None' and 'values' in field else None
-					if label:
+					label = ""
+					if value != "":
+						label = field['values'][value] if value and value != 'None' and 'values' in field else None
+					if label != "":
 						results.add(( value, label ))
 				elif field_type == 'URL':
 					for url in value.split(','):
@@ -256,7 +261,10 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 					for entity in nlp_keywords['results']:
 						entityURI = getRightURIbase(entity[0])
 						wd_extraction_keywords.add(( URIRef( entityURI ), RDFS.label, Literal(entity[1].lstrip().rstrip(), datatype="http://www.w3.org/2001/XMLSchema#string") ))
-						
+						if entity[2]:
+							wd_extraction_keywords.add(( URIRef( entityURI ), RDF.type, URIRef(entity[2] )))
+
+
 					# DUMP TTL: prepare the records directory and filename for the extraction
 					filename = f"{recordID}-extraction-{field['id']}.ttl"
 					dest_file = os.path.join(records_path, filename)
@@ -333,7 +341,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 					# store the extraction output
 					for keyword in extracted_keywords:
 						label = keyword.replace("keyword_"+recordID+"-"+field['id']+"-"+extraction_num+"_","")
-						wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDFS.label,  Literal(label)))
+						wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDFS.label,  Literal(label, datatype="http://www.w3.org/2001/XMLSchema#string")))
 						if extraction_class != "None":
 							wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDF.type,  URIRef(extraction_class)))
 
@@ -465,11 +473,14 @@ def process_new_subrecord(data, userID, stage, subrecord_id, supertemplate=None,
 						new_record_data[keyword_key]=keyword_value
 
 			# Multiple values fields: Literals or URI
-			elif 'value' in subtemplate_field and (subtemplate_field['value'] == 'Literal' or subtemplate_field['value'] in ['URI','URL','Place']):
+			elif 'value' in subtemplate_field and (subtemplate_field['value'] == 'Literal' or subtemplate_field['value'] in ['URI','URL','Place','Researcher']):
+				print(data.keys())
 				keys = [input_id for input_id in data.keys() if input_id.startswith(subtemplate_field['id']+"_") and input_id.endswith("_"+subrecord_id)]
+				print("keys:", keys)
 				if len(keys) > 0:
 					for key in keys:
 						shortened_key = key.rsplit("_",1)[0]
+						print("shortened_key", shortened_key)
 						new_record_data[shortened_key] = data[key]
 
 					# Label: disambiguate field

@@ -50,8 +50,13 @@ def get_form(json_form, from_dict=False, supertemplate=False, processed_template
 	with open(conf.template_list) as tpl_file:
 		tpl_list = json.load(tpl_file)
 
-	res_class = [t["type"] for t in tpl_list if t["template"] == json_form]
+	res_dict = next((t for t in tpl_list if t["template"] == json_form), None) 
+	res_class = [res_dict["type"]] if res_dict else [] 
 	res_class = ";  ".join(res_class[0]) if len(res_class) > 0 else "none"
+	if res_dict:
+		res_subclass = res_dict["subclasses"] if "subclasses" in res_dict else {}
+		if "other_subclass" in res_dict and res_dict["other_subclass"] == "True":
+			res_subclass["other"] = "Other"
 	processed_templates.append(json_form)
 
 	for field in fields:
@@ -95,7 +100,12 @@ def get_form(json_form, from_dict=False, supertemplate=False, processed_template
 			placeholder = field['placeholder'] if 'placeholder' in field else None
 			default = field['defaultvalue'] if 'defaultvalue' in field else ''
 			# dropdown
-			dropdown_values = [(k,v) for k,v in field['values'].items()] if 'values' in field else None
+			if 'values' in field:
+				dropdown_values = [(k,v) for k,v in field['values'].items()]  
+			elif field['type'] == 'Subclass':
+				dropdown_values = [(k,v) for k,v in res_subclass.items()]  
+			else:
+				None
 			# subtemplate
 			data_supertemplate = 'True' if supertemplate else 'None'
 
@@ -285,6 +295,14 @@ def get_form(json_form, from_dict=False, supertemplate=False, processed_template
 				data_subclass=subclass_restriction,
 				data_subtemplate=myid,
 				data_supertemplate=data_supertemplate), )
+
+			# Color (setup only)
+			if field['type'] == 'Color':
+				params = params + (form.Color(myid,
+				description = description,
+				id=myid,
+				pre = prepend,
+				class_= classes),)
 
 	if supertemplate:
 		return params

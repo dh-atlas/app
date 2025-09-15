@@ -163,6 +163,39 @@ def toid(s):
 	s = s.replace(" ", "_")
 	return s
 
+def config_template(tpl_name,data):
+	""" save initial settings about the new template in template_list.json
+	
+	Parameters
+	----------
+	tpl_name: string
+		the name of the configured template
+	data: dict
+		initial settings from front-end
+	"""
+	with open(TEMPLATE_LIST, 'r', encoding='utf-8') as tpl_file:
+		tpl_list = json.load(tpl_file)
+
+	tpl = next(tpl_item for tpl_item in tpl_list if tpl_item['short_name'] == tpl_name)
+
+	for k, v in data.items():
+		if "description" in k:
+			tpl["description"] = v
+		elif "hideTemplate" in k:
+			tpl["hidden"] = "True"
+		elif "subclass" in k and v:
+			uri, label = v.split(",", 1)
+			tpl["subclasses"][uri.strip()] = label.strip()
+		elif "otherSubclass" in k:
+			tpl["other_subclass"] = "True"
+		elif "keyword-class" in k and v:
+			uri, label = v.split(",", 1)
+			tpl["keywords_classes"][uri.strip()] = label.strip()
+
+	with open(TEMPLATE_LIST, 'w', encoding='utf-8') as tpl_file:
+		json.dump(tpl_list, tpl_file, indent=1)
+
+
 def fields_to_json(data, json_file, skos_file):
 	""" setup/update the json file with the form template
 	as modified via the web page *template* """
@@ -170,7 +203,8 @@ def fields_to_json(data, json_file, skos_file):
 	list_dicts = defaultdict(dict)
 	#list_ids = sorted([k.split("__")[0] for k in data.keys()])
 	template_config = {'hidden': 'True',
-					'subclasses': {}}
+					'subclasses': {},
+					'keywords_classes': {}}
 
 	for k,v in data.items():
 		if k != 'action' and '__template__' not in k:
@@ -192,16 +226,15 @@ def fields_to_json(data, json_file, skos_file):
 			#d["value"] = "URI"
 			#d['values'] = { pair.split(",")[0].strip():pair.split(",")[1].strip() for pair in values_pairs } if values_pairs[0] != "" else {}
 			
-		if d["type"] in ["Subclass", "Dropdown", "Checkbox", "KnowledgeExtractor"]:
+		if d["type"] in ["Dropdown", "Checkbox"]:
 			values = [d[value_key] for value_key in d if value_key.startswith("value")]
 			d["value"] = "URI"
 			d["values"] = { urllib.parse.unquote(pair.split(",")[0]).strip():urllib.parse.unquote(pair.split(",")[1]).strip() for pair in values } if len(values) > 0 else {}
 
 		# set subclasses
 		if d["type"] == "Subclass":
+			d["value"] = "URI"
 			d["restricted"] = []
-			template_config["subclasses"] = d["values"]
-			template_config["other_subclass"] = "True" if d["showOther"] == "showOther" else "False"
 		else:
 			d["restricted"] = [urllib.parse.unquote(d[subclass_key]) for subclass_key in d if subclass_key.startswith("subclass")] 
 		
@@ -229,8 +262,8 @@ def fields_to_json(data, json_file, skos_file):
 		if d["type"] in ["Textarea"]:
 			d["value"] = "Literal"
 		if d['type'] == 'KnowledgeExtractor':
-			d['knowledgeExtractor'] = "True"
 			d["value"] = "URI"
+			d['knowledgeExtractor'] = "True"
 		else:
 			if len(d["label"]) == 0:
 				d["label"] = "no label"
@@ -279,14 +312,6 @@ def fields_to_json(data, json_file, skos_file):
 	with open(TEMPLATE_LIST, 'r') as file:
 		tpls = json.load(file)
 
-	# Modify the template status in tpl_list
-	for tpl in tpls:
-		if tpl['template'] == json_file:
-			tpl['hidden'] = template_config['hidden']
-			tpl['subclasses'] = template_config['subclasses']
-			if 'other_subclass' in template_config:
-				tpl['other_subclass'] = template_config["other_subclass"]
-
 	with open(TEMPLATE_LIST, 'w') as file:
 		json.dump(tpls, file, indent=1)
 
@@ -324,7 +349,7 @@ def init_js_config(data):
 		# TODO, support for data served in a single graph
 		jsfile.writelines('var graph = "";\n')
 
-def updateTemplateList(res_name=None,res_type=None,res_description=None,remove=False):
+def updateTemplateList(res_name=None,res_type=None,remove=False):
 	"""Update the list of resource templates.
 	If the list has not been created yet, it creates the file.
 
@@ -352,11 +377,11 @@ def updateTemplateList(res_name=None,res_type=None,res_description=None,remove=F
 		res["name"] = res_name
 		res["short_name"] = res_name.replace(' ','_').lower()
 		res["type"] = res_type
-		res["description"] = res_description
 		res["template"] = RESOURCE_TEMPLATES+'template-'+res_name.replace(' ','_').lower()+'.json'
 		res["hidden"] = "False"
 		res["subclasses"] = {}
 		res["other_subclass"] = "False"
+		res["keywords_classes"] = {}
 		data.append(res)
 
 		with open(TEMPLATE_LIST,'w') as tpl_file:
@@ -506,6 +531,15 @@ def get_templates_description():
 	descriptions_dict = {tpl["template"]: {"description": tpl.get("description", ""), "name": tpl.get("name", "")} for tpl in data}
 	return descriptions_dict
 
+
+def get_keywords_classes(tpl_name):
+	""" Returns a dictionary of classes that can be assigned to keywords. """
+	with open(conf.template_list) as tpl_file:
+		tpl_list = json.load(tpl_file)
+
+	keywords_classes = next((t["keywords_classes"] for t in tpl_list if t["template"] == tpl_name), None)
+	return keywords_classes
+
 # UTILS
 
 def key(s):
@@ -616,11 +650,10 @@ def has_extractor(res_template, record_name=None, processed_templates=[], res_su
 					pre = field['prepend'] if 'prepend' in field else ""
 					field_id = field['id'] if 'id' in field else ""
 					service = field['service'] if 'service' in field else ""
-					classes = field['values'] if 'values' in field else {}
 					subclass_restriction = "; ".join(field['restricted']) if 'restricted' in field else ""
 
 					# store the extractor details as a tuple
-					result.append((res_template, label, pre, field_id, service, classes, subclass_restriction))
+					result.append((res_template, label, pre, field_id, service, subclass_restriction))
 
 				elif 'import_subtemplate' in field and field['import_subtemplate'] != []:
 					# iterate over sub-templates

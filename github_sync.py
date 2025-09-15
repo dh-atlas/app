@@ -27,26 +27,11 @@ def ask_user_permission(code):
 		"code" : code
 	}
 
-	print("OAuth Request URL: https://github.com/login/oauth/access_token")
-	print("Client ID:", clientId)
-	print("Client Secret:", clientSecret[:5] + "*****")  # Mask for security
-	print("Authorization Code:", code)
-
-	req = requests.post("https://github.com/login/oauth/access_token",
-	                    data=body,
-	                    headers={"Accept": "application/json"})
-
-	print("Response Status Code:", req.status_code)
-	print("Response Text:", req.text)
-	
+	req = requests.post('https://github.com/login/oauth/access_token', data=body,
+						headers={"accept": "application/json"})
 	if req.status_code == 200:
 		res = req.json()
-	if "error" in res:
-		print("GitHub OAuth Token Error:", res["error"])
-		return None  # Ensure failure is handled
-	else:
-		print("Failed to get token, status code:", req.status_code)
-
+		print(res)
 	return res
 
 
@@ -56,12 +41,30 @@ def get_user_login(res):
 	print("user requesting github login:", res)
 	access_token = res["access_token"]
 	req_user = requests.get("https://api.github.com/user",
-							headers={"Authorization": "Bearer "+access_token})
+							headers={"Authorization": "token "+access_token})
 
 	if req_user.status_code == 200:
 		res_user = req_user.json()
 		userlogin = res_user["login"]
 		usermail = res_user["email"]
+
+		# new call in case no email is returned
+		if not usermail:
+			req_emails = requests.get(
+				"https://api.github.com/user/emails",
+				headers={"Authorization": f"token {access_token}"}
+			)
+			emails = req_emails.json()
+
+			if req_emails.status_code == 200:
+				emails = req_emails.json()
+				primary_email = next(
+					(e["email"] for e in emails if e.get("primary")),
+					None
+				)
+				if primary_email:
+					usermail = primary_email
+
 	return userlogin, usermail, access_token
 
 
@@ -70,7 +73,7 @@ def get_github_users(userlogin):
 	is_valid_user = False
 	if conf.token != '' and conf.owner != '' and conf.repo_name != '':
 		req = requests.get("https://api.github.com/repos/"+conf.owner+"/"+conf.repo_name+"/collaborators",
-							headers={"Authorization": "Bearer "+conf.token})
+							headers={"Authorization": "token "+conf.token})
 		if req.status_code == 200:
 			users = [user['login'] for user in req.json()]
 			if userlogin in users:
