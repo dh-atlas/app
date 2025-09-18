@@ -332,7 +332,7 @@ function setSearchResult(searchtermId,searchtermElement=null){
     var leftpos = searchtermId !== "search" ? offset.left+15 : offset.left;
     var height = element.height();
     var width = element.width();
-    var top = offset.top + height + 15 + "px";
+    var top = searchtermId !== "search" ? offset.top + height + 15 + "px" : height + 40 + "px";
 
     $('#searchresult, #searchresultmenu').css( {
         'position': 'absolute',
@@ -446,7 +446,8 @@ function searchGeonames(searchterm) {
                 $('a[data-id="'+ item.geonameId+'"]').each( function() {
                     $(this).bind('click', function(e) {
                         e.preventDefault();
-                        $('#'+searchterm).after("<span class='tag "+item.geonameId+"' data-input='"+searchterm+"' data-id='"+item.geonameId+"'>"+item.name+"</span><input type='hidden' class='hiddenInput "+item.geonameId+"' name='"+searchterm+"_"+item.geonameId+"' value=\""+item.geonameId+","+encodeURIComponent(item.name)+"\"/>");
+                        var fieldName = (searchterm.split('_').length == 2) ? searchterm.split('_')[0] + "_" + item.geonameId + "_" + searchterm.split('_')[1] : searchterm + '_' + item.geonameId;
+                        $('#'+searchterm).after("<span class='tag "+item.geonameId+"' data-input='"+searchterm+"' data-id='"+item.geonameId+"'>"+item.name+"</span><input type='hidden' class='hiddenInput "+item.geonameId+"' name='"+fieldName+"' value=\""+item.geonameId+","+encodeURIComponent(item.name)+"\"/>");
                         $("#searchresult").hide();
                         $('#'+searchterm).val('');
                         //colorForm();
@@ -558,7 +559,7 @@ function searchCatalogue(searchterm) {
     $('#'+searchterm).off('keyup').on('keyup', function(e) {
         $("#searchresultmenu").show();
         var q = $('#'+searchterm).val();
-        var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (STR(?o) AS ?o_str) "+inGraph+" where { ?o bds:search '"+q+"*'. ?o bds:minRelevance '0.3'^^xsd:double . graph ?g {?s rdfs:label ?o ; a ?class .}}"
+        var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (STR(?o) AS ?o_str) "+inGraph+" where { ?o bds:search '"+q+"*'. ?o bds:minRelevance '0.3'^^xsd:double . graph ?g {?g rdfs:label ?gLabel . ?s rdfs:label ?o ; a ?class .}}"
         var encoded = encodeURIComponent(query)
         if (q == '') { $("#searchresultmenu").hide();}
         $.ajax({
@@ -651,7 +652,6 @@ function searchCatalogueByClass(searchterm,fieldId,singleValue) {
     var resource_classes = resource_class.split(';').map(cls => cls.trim()).filter(cls => cls !== "");
     var class_triples = resource_classes.map(cls => `?s a <${cls}> .`).join(" ");
     console.log(resource_classes, class_triples)
-    var filter_clause = `FILTER NOT EXISTS { ?s a ?otherClass . FILTER (?otherClass NOT IN (${resource_classes.map(cls => `<${cls}>`).join(", ")})) }`;
 
     // other ids
     var dataSubform = $("#"+searchterm).attr('data-subform');
@@ -664,14 +664,23 @@ function searchCatalogueByClass(searchterm,fieldId,singleValue) {
     $('.disambiguate[data-class="' + resource_class + '"]:not([data-subform="'+dataSubform+'"]').each(function() {
         yet_to_save_keys.push($(this).val());
         var key_id = $(this).attr('id');
-        var subrecord = $('input[type="hidden"][value*="'+key_id+'"]');
-        yet_to_save_resources.push(subrecord.attr('id'));
+        var subrecord_id = key_id.split("_")[2];
+        yet_to_save_resources.push(subrecord_id);
     });
+    console.log(yet_to_save_keys, yet_to_save_resources)
 
     // on key up look for suggestions based on the new input string
     $('#'+searchterm).off('keyup').on('keyup', function(e) {
-        var useful_yet_to_save_keys = yet_to_save_keys.filter(function(value) {
-            return value.toLowerCase().includes($('#'+searchterm).val().toLowerCase()) && value.trim() !== '';
+        var useful_yet_to_save_keys = [];
+        var useful_yet_to_save_resources = [];
+        yet_to_save_keys.forEach(function(value, index) {
+            if (
+                value.toLowerCase().includes($('#'+searchterm).val().toLowerCase()) &&
+                value.trim() !== ''
+            ) {
+                useful_yet_to_save_keys.push(value);
+                useful_yet_to_save_resources.push(yet_to_save_resources[index]);
+            }
         });
 
         // autocomplete positioning;
@@ -693,7 +702,7 @@ function searchCatalogueByClass(searchterm,fieldId,singleValue) {
 
         // prepare the query
         var query_term = $('#'+searchterm).val();
-        var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (sample(str(?o)) as ?o_str) where { ?o bds:search '"+query_term+"*'. ?o bds:minRelevance '0.3'^^xsd:double . ?s rdfs:label ?o . "+class_triples+filter_clause+"} group by ?s";
+        var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (sample(str(?o)) as ?o_str) where { ?o bds:search '"+query_term+"*'. ?o bds:minRelevance '0.3'^^xsd:double . ?s rdfs:label ?o . "+class_triples+"} group by ?s";
         var encoded = encodeURIComponent(query);
 
         // send the query request to the catalogue
@@ -754,13 +763,13 @@ function searchCatalogueByClass(searchterm,fieldId,singleValue) {
 
                 // once external resources have been added, include newly created resources (yet to be saved)
                 for (let j = 0; j < useful_yet_to_save_keys.length; j++) {
-                    var resource_id = yet_to_save_resources[j];
+                    var resource_id = useful_yet_to_save_resources[j];
                     var resource_name = useful_yet_to_save_keys[j];
                     $('#searchresult').append("<div class='wditem'><a class='blue orangeText unsaved' target='"+resource_id+"'>"+resource_name+"</a></div>")
                 }
 
                 // add tag if the user chooses an item from yet to save resources
-                $('.unsaved a[target]').each(function () {
+                $('a[target].unsaved').each(function () {
                     $(this).bind('click', function (e) {
                         e.preventDefault();
                         var target = $(this).attr('target');
@@ -781,10 +790,11 @@ function searchCatalogueByClass(searchterm,fieldId,singleValue) {
                             cancelSubrecord($(this).parent());
                         })
                         
-                        if ($('[name="'+fieldId+'-subrecords"]').length) {
-                            $('[name="'+fieldId+'-subrecords"]').val($('[name="'+fieldId+'-subrecords"]').val()+","+target+";"+label);
+                        if ($('[name="'+fieldId+'-subrecords"]').length && $('[name="'+fieldId+'-subrecords"]').val()!="" && !singleValue) {
+                            $('[name="'+fieldId+'-subrecords"]').val($('[name="'+fieldId+'-subrecords"]').val()+",,"+target+";"+label);
                         } else {
-                            const new_sub = $("<input type='hidden' name='"+fieldId+"-subrecords' value='"+target+";"+label+"'>")
+                            $('[name="'+fieldId+'-subrecords"]').remove();
+                            const new_sub = $("<input type='hidden' id='"+fieldId+"-subrecords' name='"+fieldId+"-subrecords' value='"+target+";"+label+"'>")
                             $('#recordForm, #modifyForm').append(new_sub)
                         }
                     });
