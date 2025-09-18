@@ -6,7 +6,7 @@
             "description": "",
             "counter3_Research_Products": "PREFIX dbpedia: <http://dbpedia.org/ontology> SELECT (COUNT(DISTINCT ?product) as ?count) WHERE { ?product a <https://schema.org/Dataset> . }",
             "counter4_Organizations": "PREFIX dbpedia: <http://dbpedia.org/ontology> SELECT (COUNT(DISTINCT ?organization) as ?count) WHERE { ?organization a <https://schema.org/Organization> . }",
-            "counter5_Researchers": "PREFIX dbpedia: <http://dbpedia.org/ontology> SELECT (COUNT(DISTINCT ?person) as ?count) WHERE { ?person a <https://schema.org/Person> . }",
+            "counter5_Researchers": "PREFIX dbpedia: <http://dbpedia.org/ontology> SELECT (COUNT(DISTINCT ?person) as ?count) WHERE { GRAPH ?graph {?graph rdfs:label ?label . ?person a <https://schema.org/Person> . }}",
             "type": "counter",
             "counter5_Subjects": "PREFIX dbpedia: <http://dbpedia.org/ontology> SELECT (COUNT(DISTINCT ?subject) as ?count) WHERE { ?subject a <https://schema.org/Organization> . }",
             "counter2_Research_Projects": "PREFIX dbpedia: <http://dbpedia.org/ontology> SELECT (COUNT(DISTINCT ?project) as ?count) WHERE { ?project a <https://schema.org/ResearchProject> . }",
@@ -28,7 +28,7 @@
                 },
                 {
                     "id": "0__counter5_Researchers__0",
-                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology> SELECT (COUNT(DISTINCT ?person) as ?count) WHERE { ?person a <https://schema.org/Person> . }",
+                    "query": "PREFIX dbpedia: <http://dbpedia.org/ontology> SELECT (COUNT(DISTINCT ?person) as ?count) WHERE { GRAPH ?graph {?graph rdfs:label ?label . ?person a <https://schema.org/Person> . }}",
                     "title": "Researchers"
                 },
                 {
@@ -41,12 +41,12 @@
         },
         {
             "id": "1",
-            "description": "These data represent the quantities of research products divided by category. The <span style='font-weight:600'>Text Collection</span> and <span style='font-weight:600'>Linked Open Data</span> categories both have 4 items, making them the most represented categories. The <span style='font-weight:600'>Digital Scholarly Edition</span> and <span style='font-weight:600'>Ontology</span> categories follow, each containing 3 products and reflecting similar levels of output in these areas. Finally, the <span style='font-weight:600'>Software</span> category has 2 products, representing a lower output compared to the others. These quantities offer an overview of the most active areas and those with lower production, highlighting differences in research activity across categories.",
+            "description": "<p>The <span style='font-weight:600'>ATLAS Knowledge Graph</span> shows the diversity of <span style='font-weight:600'>Digital Humanities Research Products</span> related to Italian Cultural Heritage. The largest share belongs to the <span style='font-weight:600'>artistic-literary domain</span> — including <a target='_blank'href='/term-DigitalScholarlyEdition'>Digital Scholarly Editions</a> (34.62%), <a target='_blank'href='/term-TextCollection'>Text Collections</a> (19.23%), and <a target='_blank'href='/term-3DDigitalTwin'>3D Digital Twins</a> (1.92%). The <span style='font-weight:600'>software field</span> — <a target='_blank'href='/term-Software'>Software</a> (19.23%) and <a target='_blank'href='/term-LanguageModel'>Language Models</a> (1.92%) — also plays an important role, while the <span style='font-weight:600'>semantic web area</span> — <a target='_blank'href='/term-LinkedOpenData'>Linked Open Data</a> (11.54%) and <a target='_blank'href='/term-Ontology'>Ontology</a> (7.69%) — contributes a relevant share. Smaller categories, such as <span style='font-weight:600'>Other</span> (3.85%), reflect more niche directions.</p><p style='font-weight: 600 !important; color: #C0972D'>This distribution highlights the richness and variety of DH research — for a clearer view, take a look at the chart on the side <span style='color:#C0972D'><i class='fa-solid fa-magnifying-glass-arrow-right'></i></span></p>",
             "y-var": "?count",
             "x-name": "Type Label",
-            "title": "Research products: different perspectives on Digital Cultural Heritage",
+            "title": "Research Products: different perspectives on Digital Cultural Heritage",
             "x-var": "?label",
-            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> \r\nSELECT ?label (COUNT(?item) AS ?count) \r\nWHERE { GRAPH ?g {\r\n ?item a <https://schema.org/Dataset> .\r\n ?item <https://schema.org/additionalType> ?additionalType .\r\n ?additionalType rdfs:label ?label\r\n}}\r\nGROUP BY ?label\r\nORDER BY DESC(?count)",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX schema: <https://schema.org/>\r\nSELECT ?label (COUNT(?item) AS ?count)\nWHERE {\n  GRAPH ?g {\n    ?item a schema:Dataset .\n    OPTIONAL {\n      ?item schema:additionalType ?additionalType .\n      ?additionalType rdfs:label ?label .\n    }\n    BIND(COALESCE(?label, \"Other\") AS ?label)\n  }\n}\nGROUP BY ?label\nORDER BY DESC(?count)",
             "legend": "True",
             "y-name": "Type",
             "y-sort": "on",
@@ -58,25 +58,25 @@
         {
             "id": "2",
             "y-name": "Research Product",
-            "title": "The characters: organizations",
+            "title": "Who shapes Italian Digital Humanities?",
             "x-sort": "on",
-            "description": "<em>Which are the most influencial organizations?</em><br> A number of organizations from all over the world have been involved in projects related to <em style='font-weight:600'>Italian Digital Cultural Heritage</em>. Some of them have been taking part in several endeavours, especially thanks to the contributions of their domain's Research Centres and Working Groups.\r\n",
+            "description": "<p>The <span style='font-weight:600'>most influential organizations</span> involved in <span style='font-weight:600'>Italian Digital Cultural Heritage</span> projects include <span style='font-weight:600'>universities</span> (e.g., <a target='_blank'href='https://w3id.org/dh-atlas/1728995806-349488' >University of Bologna</a>), <span style='font-weight:600'>research centres and labs</span> (e.g., <a target='_blank'href='https://w3id.org/dh-atlas/1757614943-767' >Visual Computing Lab</a>), and <span style='font-weight:600'>public institutions</span> (e.g., <a target='_blank'href='https://w3id.org/dh-atlas/1728999602-7282345' >CNR</a>, regional bodies like <a target='_blank'href='https://w3id.org/dh-atlas/1757509355-78' >Regione Lombardia</a>). Alongside them, <span style='font-weight:600'>private companies</span> (e.g., <a target='_blank'href='https://w3id.org/dh-atlas/1757973620-587' >NVIDIA Italy</a>) and numerous <span style='font-weight:600'>international universities and labs</span> (e.g., <a target='_blank'href='https://w3id.org/dh-atlas/1757942324-092951' >King’s Digital Lab</a>) contribute, highlighting the collaborative and global nature of these projects.</p><p style='font-weight: 600 !important; color: #C0972D'>This mix of organizations shows how Italian DH research connects institutions and scholars worldwide — explore the chart on the side <span style='color:#C0972D'><i class='fa-solid fa-magnifying-glass-arrow-right'></i></span></p>",
             "legend": "True",
             "type": "chart",
-            "x-var": "?count",
+            "x-var": "?label",
             "x-name": "Organization",
-            "y-var": "?label",
-            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\nSELECT ?label (COUNT(DISTINCT ?researchProduct) AS ?count) \r\nWHERE { \r\n ?researchProduct a <https://schema.org/Dataset> . \r\n ?researchProduct ?contributor ?organization . \r\n GRAPH ?g { ?organization a <https://schema.org/Organization> .\r\n ?organization rdfs:label ?organizationLabel . \r\n BIND(STR(?organizationLabel) AS ?label) \r\n}} \r\nGROUP BY ?label \r\nORDER BY DESC(?count) \r\nLIMIT 6",
+            "y-var": "?count",
+            "query": "PREFIX schema: <https://schema.org/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?organization (SAMPLE(?label) AS ?label) (COUNT(DISTINCT ?researchProduct) AS ?count) WHERE { ?researchProduct a schema:Dataset . { ?researchProduct ?p ?org . FILTER(?p IN (schema:contributor, schema:creator, schema:publisher)) ?org a schema:Organization ; rdfs:label ?label . BIND(?org AS ?organization) } UNION { ?researchProduct ?p ?member . FILTER(?p IN (schema:contributor, schema:creator, schema:publisher)) ?member schema:affiliation ?org . ?org a schema:Organization ; rdfs:label ?label . BIND(?org AS ?organization) } } GROUP BY ?organization ORDER BY DESC(?count) LIMIT 8",
             "chartType": "bar",
             "counters": [],
-            "sorted": "x"
+            "sorted": "y"
         },
         {
             "id": "3",
-            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\nSELECT ?geonames ?label (COUNT(DISTINCT ?geonames) AS ?count) \r\nWHERE { ?organization a <https://schema.org/Organization> .\r\n?organization <https://schema.org/location> ?geonames. \r\n?geonames rdfs:label ?label} \r\nGROUP BY ?geonames ?label \r\nORDER BY ?geonames",
+            "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?geonames (SAMPLE(?label) AS ?label) (COUNT(DISTINCT ?geonames) AS ?count) WHERE { ?organization a <https://schema.org/Organization> . ?organization <https://schema.org/location> ?geonames . ?geonames rdfs:label ?label . } GROUP BY ?geonames ORDER BY ?geonames",
             "title": "International scholarly research on Italian Digital Cultural Heritage",
             "mapType": "common-map",
-            "description": "This map illustrates the geographical spread of cities actively participating in various projects, offering a clear visualization of the global reach and concentrated regional involvement in these research activities. By showcasing each location, it emphasizes both the widespread nature and the specific clustering of initiatives around the world. Each city marks a point of engagement, revealing the diversity of regions committed to advancing the project\u2019s objectives. The map\u2019s visual distribution not only highlights the project's global influence but also provides insights into areas with high activity, making it easier to identify regional trends and collaborative hubs.",
+            "description": "<p>The <span style='font-weight:600'>geographical spread of cities</span> involved in <span style='font-weight:600'>Italian Digital Cultural Heritage</span> projects illustrates the <span style='font-weight:600'>global reach</span> of these initiatives. While many activities are concentrated in Italy, researchers and institutions from around the world — including <a target='_blank'href='/term-2800866'>Brussels</a>, <a target='_blank'href='/term-3067696'>Prague</a>, <a target='_blank'href='/term-2950159'>Berlin</a>, <a target='_blank'href='/term-6077243'>Baltimore</a>, and <a target='_blank'href='/term-2643743'>London</a> — also participate, highlighting the international nature of this research network.</p><p>Each city marks a point of engagement, showing both widespread involvement and concentrated regional activity. The map’s visual distribution emphasizes collaborative hubs and areas with high activity, making it easier to identify global trends in DH research.</p><p style='font-weight: 600 !important; color: #C0972D'>This map highlights how Italian DH research connects cities worldwide — explore it on the side <span style='color:#C0972D'><i class='fa-solid fa-magnifying-glass-arrow-right'></i></span></p>",
             "type": "map",
             "counters": [],
             "legend": "False"
@@ -84,18 +84,18 @@
         {
             "id": "4",
             "chartType": "bar",
-            "y-var": "?label",
-            "x-var": "?count",
+            "y-var": "?count",
+            "x-var": "?label",
             "x-sort": "on",
             "x-name": "Count",
             "legend": "True",
-            "description": "Understanding how research happens in the Digital Humanities starts with documenting methodologies. <a href='https://vocabs.dariah.eu/tadirah/en/'><em style='font-weight:600'>TaDiRAH</em></a> (Taxonomy of Digital Research Activities in the Humanities) helps classify these methods, making research more transparent and reproducible. This chart maps the most used TaDiRAH terms, revealing the distribution of key methodologies and shedding light on dominant and emerging research practices.",
+            "description": "<p>Understanding how research unfolds in the Digital Humanities begins with documenting methodologies. <a target='_blank'href='https://vocabs.dariah.eu/tadirah/' ><span style='font-weight:600'>TaDiRAH</span></a> (Taxonomy of Digital Research Activities in the Humanities) helps classify these methods, making research more transparent and reproducible. This chart maps the most frequently used TaDiRAH terms, showing the distribution of key methodologies and highlighting both dominant and emerging research practices.</p>",
             "title": "Research patterns and Methodologies",
             "query": "PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\r\nSELECT ?label (COUNT(?label) AS ?count) WHERE { \r\n {\r\n SELECT (REPLACE(STR(?rawLabel), \" - TADIRAH$\", \"\") AS ?label) WHERE { \r\n ?s <https://w3id.org/dh-atlas/methodology> ?o.\r\n ?o skos:prefLabel ?rawLabel .\r\n }\r\n }\r\n} \r\nGROUP BY ?label\r\nORDER BY DESC(?count)\r\nLIMIT 8",
             "type": "chart",
             "y-name": "Methodology",
             "counters": [],
-            "sorted": "x"
+            "sorted": "y"
         },
         {
             "id": "5",
@@ -105,13 +105,28 @@
             "chartType": "pie",
             "y-name": "Count",
             "y-sort": "on",
-            "description": "Digital Humanities research is a growing field, with many projects still in development. This graph shows the status of documented research products, revealing that works-in-progress outnumber completed ones. This trend highlights the field\u2019s continuous evolution, where new methodologies, tools, and discoveries drive ongoing innovation and expansion.",
+            "description": "<p>Digital Humanities research on Italian cultural heritage continues to grow, with roughly one-third of research products still in development. Despite this, the field already counts a substantial number of completed works, some of which have set benchmarks for subsequent projects. Notable examples include the <a href='https://w3id.org/dh-atlas/1729019160-8370216'>Codice Pelavicino Digital Edition</a> and the software <a href='https://w3id.org/dh-atlas/1729010538-925614'>EVT</a>, demonstrating excellence and serving as models for ongoing and future research.</p><p style='font-weight: 600 !important; color: #C0972D'>The pie chart on the side shows the distribution of research products by creation status — completed versus in-progress <span style='color:#C0972D'><i class='fa-solid fa-magnifying-glass-arrow-right'></i></span></p>",
             "type": "chart",
             "query": "PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\r\nSELECT ?label (COUNT(?label) AS ?count) WHERE { \r\n {\r\n SELECT (REPLACE(STR(?rawLabel), \" - DATASET STATUS$\", \"\") AS ?label) WHERE { \r\n ?s <https://schema.org/creativeWorkStatus> ?o.\r\n ?o skos:prefLabel ?rawLabel .\r\n }\r\n }\r\n} \r\nGROUP BY ?label",
             "x-name": "Status",
-            "title": "Ongoing Research",
+            "title": "Completed and Ongoing Research",
             "counters": [],
             "sorted": "y"
+        },
+        {
+            "id": "6",
+            "type": "tree",
+            "query":  "PREFIX schema: <https://schema.org/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\nSELECT ?entity ?label ?classLabel (COUNT(?entity) AS ?count)\nWHERE {\n  GRAPH ?g1 {\n    ?g1 ?p ?g2 .\n  }\n  GRAPH ?g2 {\n    ?entity a ?class .\n    FILTER (?class IN (schema:Person, schema:Place, schema:Thing, schema:CreativeWork, schema:Time))\n    OPTIONAL { ?entity rdfs:label ?label }\r\n    BIND(\n      IF(?class = schema:Person, \"Person\",\n        IF(?class = schema:Place, \"Place\",\n          IF(?class = schema:Thing, \"Thing\",\n            IF(?class = schema:CreativeWork, \"Creative Work\",\n              IF(?class = schema:Time, \"Time\", \"Other\")\n            )\n          )\n        )\n      ) AS ?classLabel\n    )\n  }\n}\nGROUP BY ?entity ?label ?classLabel\nORDER BY DESC(?count)",
+            "description": "<p>This network highlights the <span style='font-weight:600'>most important Subjects</span> extracted from the ATLAS Knowledge Graph, based on descriptions or the content of the Research Products. The chart on the side shows these central entities, which include <span style='font-weight:600'>Persons</span> (e.g., <a href='/term-Q1067'>Dante Alighieri</a>), <span style='font-weight:600'>Places</span> (e.g., <a href='/term-Q1273'>Tuscany</a>), <span style='font-weight:600'>Things</span> (e.g., <a href='/term-Q2063'>JSON</a> and <a href='/term-Q826165'>Web Ontology Language</a>), and <span style='font-weight:600'>Creative Works</span> (e.g., <a href='/term-Q40185'>The Divine Comedy</a>). </p><p style='font-weight: 600 !important; color: #C0972D'>Explore the chart on the side to see the most central subjects in DH research <span style='color:#C0972D'><i class='fa-solid fa-magnifying-glass-arrow-right'></i></span></p>",
+            "title": "Core Subjects of Italian Digital Cultural Heritage",
+            "mainClass": "Subjects"
+        },
+        {
+            "id": "7",
+            "type": "timeline",
+            "query": "SELECT DISTINCT ?time ?g ?label WHERE { GRAPH ?g { ?s <https://schema.org/temporalCoverage> ?time . ?g rdfs:label ?label } }",
+            "title": "Discovering Italian Cultural Heritage through the millennia",
+            "description": ""
         }
     ]
 }

@@ -14,7 +14,11 @@ $var main_lang = main_lang
 <script src="https://cdn.amcharts.com/lib/5/percent.js"></script> <!-- pie charts -->
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script> <!-- maps -->
 <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script> <!-- maps -->
+<script src="https://cdn.amcharts.com/lib/5/hierarchy.js"></script> <!-- direct tree -->
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script> <!-- timeline -->
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css"> <!-- timeline style -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 
 <!-- Charts -->
@@ -83,7 +87,33 @@ $var main_lang = main_lang
 					.replace(/&#39;/g, "'");
 				$$("[data-id='$chart['id']']").html(htmlContent);
 			</script>
-		<hr class="charthr">	
-		
+		$elif chart["type"] == "timeline":
+			$ info = chart["info"]
+			$ info_data = info + "_data"
+			<section class="row stats-block section-fade">
+				<section class="col-lg-12 col-md-12 col-sm-12 chart-heading $heading_class">
+					<div id="$info" class="chart-body timeline" style="height: 65vh"></div>
+				</section>
+			</section>
+			<script id="$info_data" type="application/json">$:chart["json"]</script>
+		$elif chart["type"] == "tree":
+			$ info = chart["info"]
+			$ info_data = info + "_data"
+			<section class="row stats-block section-fade">
+				<section class="col-lg-4 col-md-12 col-sm-12 chart-heading $heading_class">
+					<h2>$chart["title"]</h2>
+					<p data-id="$chart['id']"></p>
+				</section>
+				<div id="$info" class="col-lg-7 chart-body" style="height: 65vh"></div>
+			</section>
+			<script>
+				var htmlContent = `$chart['description']`
+					.replace(/&lt;/g, "<")
+					.replace(/&gt;/g, ">")
+					.replace(/&#39;/g, "'");
+				$$("[data-id='$chart['id']']").html(htmlContent);
+			</script>
+			<script id="$info_data" type="application/json">$:chart["json"]</script>
+		<hr class="charthr">
 	</section>
 </section>
