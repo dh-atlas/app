@@ -558,7 +558,8 @@ def getBrowsingFilters(res_template_path):
 			f["label"],
 			f["type"],
 			f["value"],
-			f.get("values", "")
+			f.get("values", ""),
+			f["restricted"]
 		)
 		for f in fields
 		if ("browse" in f and f["browse"] == "True")
@@ -972,7 +973,33 @@ def getChartData(chart):
 			else:
 				lookup[time] = {"uri":[uri], "label":[label], "time":time}
 		results = list(lookup.values())
+	elif chart["type"] == "tree":
+		query_results = hello_blazegraph(chart["query"])["results"]["bindings"]
+		tot_value = 0
+		tree = {"name": chart["mainClass"], "children": []}
+		class_map = {}
 
+		for row in query_results:
+			class_name = row["classLabel"]["value"]
+			label = row.get("label", {}).get("value", row["entity"]["value"])
+			count = int(row["count"]["value"])
+			tot_value += count
+
+			# Create category
+			if class_name not in class_map:
+				class_map[class_name] = {"name": class_name, "children": [], "value": count}
+				tree["children"].append(class_map[class_name])
+			else:
+				class_map[class_name]["value"] += count
+
+			# Add entity
+			class_map[class_name]["children"].append({
+				"name": label,
+				"value": count
+			})
+
+		tree["value"] = tot_value		
+		results = tree
 		
 	print("results:", results)
 	return results

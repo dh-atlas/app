@@ -46,7 +46,7 @@ NER_IT = spacy.load("it_core_news_sm")
 # ROUTING
 
 prefix = ''
-prefixLocal = '' # REPLACE IF IN SUBFOLDER
+prefixLocal = 'https://projects.dharc.unibo.it/atlas/' # REPLACE IF IN SUBFOLDER
 urls = (
 	prefix + '/', 'Login',
 	prefix + '/setup', 'Setup',
@@ -142,7 +142,7 @@ def create_record(data):
 	if data and 'action' in data and data.action.startswith('createRecord'):
 		record = data.action.split("createRecord",1)[1]
 		u.log_output('START NEW RECORD', session['logged_in'], session['username'])
-		raise web.seeother('/record-'+record)
+		raise web.seeother('https://projects.dharc.unibo.it/atlas/record-'+record)
 	else:
 		u.log_output('ELSE', session['logged_in'], session['username'])
 		return internalerror()
@@ -360,7 +360,7 @@ class Login:
 			raise web.seeother(prefixLocal+'welcome-1')
 		else:
 			u.log_output('HOMEPAGE ANONYMOUS', session['logged_in'], session['username'])
-			return render.login(user='anonymous',records=session['records'],is_git_auth=is_git_auth,
+			return render.login(user='anonymous',is_git_auth=is_git_auth,
 					   project=conf.myProject,payoff=conf.myPayoff,
 					   github_repo_name=github_repo_name,main_lang=conf.mainLang)
 
@@ -512,7 +512,7 @@ class Index:
 		elif actions.action.startswith('createRecord'):
 			record = actions.action.split("createRecord",1)[1]
 			u.log_output('START NEW RECORD (LOGGED IN)', session['logged_in'], session['username'], record )
-			raise web.seeother('/record-'+record)
+			raise web.seeother('https://projects.dharc.unibo.it/atlas/record-'+record)
 
 		# delete a record (but not the dump in /records folder)
 		elif actions.action.startswith('deleteRecord'):
@@ -833,13 +833,15 @@ class Modify(object):
 				extractor = u.has_extractor(res_template)
 				previous_extractors = u.has_extractor(res_template, name)
 				extractions_data = queries.retrieve_extractions(previous_extractors)
+				keywords_classes = u.get_keywords_classes(res_template)
 
 				return render.modify(graphdata=data, pageID=recordID, record_form=f,
 								user=session['username'],ids_dropdown=ids_dropdown,
 								ids_subtemplate=ids_subtemplate,is_git_auth=is_git_auth,
 								invalid=True,project=conf.myProject,template=res_template,
 								query_templates=query_templates,knowledge_extractor=extractor,
-								extractions=extractions_data,main_lang=conf.mainLang)
+								extractions=extractions_data,main_lang=conf.mainLang,
+								keywords_classes=keywords_classes)
 			else:
 				recordID = recordData.recordID
 				#u.update_knowledge_extraction(recordData,KNOWLEDGE_EXTRACTION)
@@ -907,6 +909,7 @@ class Review(object):
 			extractor = u.has_extractor(res_template)
 			previous_extractors = u.has_extractor(res_template, name)
 			extractions_data = queries.retrieve_extractions(previous_extractors)
+			keywords_classes = u.get_keywords_classes(res_template)
 
 			return render.review(graphdata=data, pageID=recordID, record_form=f,
 								graph=graphToRebuild, user=session['username'],
@@ -914,7 +917,8 @@ class Review(object):
 								is_git_auth=is_git_auth,invalid=False,
 								project=conf.myProject,template=res_template,
 								query_templates=query_templates,knowledge_extractor=extractor,
-								extractions=extractions_data,main_lang=conf.mainLang)
+								extractions=extractions_data,main_lang=conf.mainLang,
+								keywords_classes=keywords_classes)
 		else:
 			session['logged_in'] = 'False'
 			raise web.seeother(prefixLocal+'/')
@@ -957,6 +961,7 @@ class Review(object):
 				extractor = u.has_extractor(res_template)
 				previous_extractors = u.has_extractor(res_template, name)
 				extractions_data = queries.retrieve_extractions(previous_extractors)
+				keywords_classes = u.get_keywords_classes(res_template)
 
 				return render.review(graphdata=data, pageID=recordID, record_form=f,
 									graph=graphToRebuild, user=session['username'],
@@ -964,7 +969,8 @@ class Review(object):
 									is_git_auth=is_git_auth,invalid=True,
 									project=conf.myProject,template=templateID,
 									query_templates=query_templates,knowledge_extractor=extractor,
-									extractions=extractions_data,main_lang=conf.mainLang)
+									extractions=extractions_data,main_lang=conf.mainLang,
+									keywords_classes=keywords_classes)
 			else:
 				recordData = web.input()
 				recordID = recordData.recordID
@@ -1001,13 +1007,15 @@ class Review(object):
 				extractor = u.has_extractor(res_template)
 				previous_extractors = u.has_extractor(res_template, name)
 				extractions_data = queries.retrieve_extractions(previous_extractors)
+				keywords_classes = u.get_keywords_classes(res_template)
 
 				return render.review(graphdata=data, pageID=recordID, record_form=f,
 									graph=graphToRebuild, user=session['username'],
 									ids_dropdown=ids_dropdown,ids_subtemplate=ids_subtemplate,
 									is_git_auth=is_git_auth,invalid=True,project=conf.myProject,template=templateID,
 									query_templates=query_templates,knowledge_extractor=extractor,
-									extractions=extractions_data,main_lang=conf.mainLang)
+									extractions=extractions_data,main_lang=conf.mainLang,
+									keywords_classes=keywords_classes)
 			else:
 				recordData = web.input()
 				#u.update_knowledge_extraction(recordData,KNOWLEDGE_EXTRACTION)
@@ -1146,7 +1154,7 @@ class View(object):
 		data, stage, title, properties, data_labels, extractions_data, new_dict_classes = None, None, None, None, {}, {}, {}
 		try:
 			res_template, res_subclasses = u.get_template_from_class(res_class)
-			data = dict(queries.getData(record+'/',res_template))
+			data = dict(queries.getData(record+'/',res_template,res_subclasses))
 			stage = data['stage'][0] if 'stage' in data else 'draft'
 			previous_extractors = u.has_extractor(res_template, name, res_subclasses=res_subclasses)
 			extractions_data = queries.retrieve_extractions(previous_extractors,view=True)
@@ -1281,6 +1289,7 @@ class Term(object):
 		appears_in_extractions = [result["graph"]["value"][:-1] for result in extractions_data["results"]["bindings"] ] \
 			if extractions_data != None else []
 		appears_in.extend(appears_in_extractions)
+		appears_in = list(set(appears_in))
 
 		with open(TEMPLATE_LIST) as tpl_list:
 			res_templates = json.load(tpl_list)
@@ -1600,8 +1609,8 @@ class Charts(object):
 				charts = json.load(chart_file)
 
 		for chart in charts["charts"]:
-			if chart["type"] == "map":
-				chart_id = str(time.time()).replace('.','-')
+			if chart["type"] in ["map", "timeline", "tree"]:
+				chart_id = str(time.time()).replace('.','-') + chart["id"]
 				chart["info"] = chart_id
 			elif chart["type"] == "chart":
 				chart_id = str(time.time()).replace('.','-')
@@ -1610,9 +1619,6 @@ class Charts(object):
 				y_var, y_name = chart["y-var"], chart["y-name"]
 				y_var = y_var.replace("?","")
 				chart["info"] = (chart_id, x_name, y_name)
-			elif chart["type"] == "timeline":
-				chart_id = str(time.time()).replace('.','-')
-				chart["info"] = chart_id
 			chart["json"] = json.dumps(chart)
 
 		return render.charts_visualization(user=session['username'], is_git_auth=is_git_auth,

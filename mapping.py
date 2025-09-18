@@ -231,11 +231,12 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 				elif value['type'] == 'URI': #object properties
 					rdf_property = SKOS.prefLabel if field['type'] == 'Skos' else RDFS.label
 					for entity in value['results']:
-						entityURI = getRightURIbase(entity[0]) # Wikidata or new entity
-						wd.add(( URIRef(base+graph_name), URIRef(field['property']), URIRef(entityURI) ))
-						wd.add(( URIRef( entityURI ), rdf_property, Literal(entity[1].lstrip().rstrip(), datatype="http://www.w3.org/2001/XMLSchema#string") ))
-						if field["type"] == "Subclass": # Subclass
-							wd.add(( URIRef(base+graph_name), RDF.type, URIRef(entityURI) ))
+						if entity[0] and entity[1]:
+							entityURI = getRightURIbase(entity[0]) # Wikidata or new entity
+							wd.add(( URIRef(base+graph_name), URIRef(field['property']), URIRef(entityURI) ))
+							wd.add(( URIRef( entityURI ), rdf_property, Literal(entity[1].lstrip().rstrip(), datatype="http://www.w3.org/2001/XMLSchema#string") ))
+							if field["type"] == "Subclass": # Subclass
+								wd.add(( URIRef(base+graph_name), RDF.type, URIRef(entityURI) ))
 				elif value['type'] == 'Literal': #multi-language Literals
 					for literal in value['results']:
 						val, lang = literal
