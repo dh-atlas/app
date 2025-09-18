@@ -1218,10 +1218,11 @@ function nlpText(searchterm) {
                     search: listTopics[i].result,
                     action: "wbsearchentities",
                     language: "en",
-                    limit: 3,
+                    limit: 5,
                     uselang: "en",
                     format: "json",
-                    strictlanguage: true,
+                    type: "item",
+                    strictlanguage: false
                   },
                   function(data) {
                     console.log(data);
@@ -1542,121 +1543,156 @@ function sortList(ul) {
 
 
 // get values by property in EXPLORE page, e.g. creators
-function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemSubclass='',extractionClasses=null) {
-  if (elemClass.length) {var class_restriction = "?s a <"+elemClass+"> . "} else {var class_restriction = ''};
+const sparqlQueue = [];
+let sparqlRunning = false;
+
+// run next query
+function runNextQuery() {
+  if (sparqlRunning || sparqlQueue.length === 0) return;
+  sparqlRunning = true;
+
+  const { query, elemID, prop, typeProp, typeField, elemClass, elemSubclass, extractionClasses } = sparqlQueue.shift();
+
+  $.ajax({
+    type: 'GET',
+    url: myPublicEndpoint + '?query=' + encodeURIComponent(query),
+    headers: { Accept: 'application/sparql-results+json' },
+    success: function(returnedJson) {
+      processQueryResults(returnedJson, elemID, prop, typeProp, typeField, elemClass, elemSubclass, extractionClasses);
+    },
+    error: function(err) {
+      console.error("Errore SPARQL:", err);
+    },
+    complete: function() {
+      sparqlRunning = false;
+      runNextQuery(); // lancia la prossima query
+    }
+  });
+}
+
+// add query to the queries queue
+function enqueueSparqlQuery(query, elemID, prop, typeProp, typeField, elemClass='', elemSubclass='', extractionClasses=null) {
+  sparqlQueue.push({ query, elemID, prop, typeProp, typeField, elemClass, elemSubclass, extractionClasses });
+  runNextQuery();
+}
+
+// get property value: generate a queue of ajax queries
+function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemSubclass='', extractionClasses=null) {
+  let class_restriction = '';
+  if (elemClass.length) class_restriction = `?s a <${elemClass}> . `;
   if (elemSubclass.length) {
-    if (!elemSubclass.startsWith("other")) { class_restriction += "?s a <"+elemSubclass+"> . "; }
-    // ATLAS only - filters for "Other" values
-    else if (elemSubclass === "other" || elemSubclass === "other-all") { class_restriction += "FILTER NOT EXISTS { ?s a ?otherType . FILTER (?otherType != <"+elemClass+">) }" } 
-    else if (elemSubclass.startsWith("other-")) { 
-      console.log("here", class_restriction)
-      class_restriction += "FILTER NOT EXISTS { ?s a ?otherType . FILTER (?otherType != <"+elemClass+">) }"
-      class_restriction += "?s <http://purl.org/dc/terms/type> <"+elemSubclass.substring(6)+"> .";
+    if (!elemSubclass.startsWith("other")) {
+      class_restriction += `?s a <${elemSubclass}> . `;
+    } else if (elemSubclass === "other" || elemSubclass === "other-all") {
+      class_restriction += `FILTER NOT EXISTS { ?s a ?otherType . FILTER (?otherType != <${elemClass}>) } `;
+    } else if (elemSubclass.startsWith("other-")) {
+      class_restriction += `FILTER NOT EXISTS { ?s a ?otherType . FILTER (?otherType != <${elemClass}>) } `;
+      class_restriction += `?s <http://purl.org/dc/terms/type> <${elemSubclass.substring(6)}> . `;
+    }
+  }
+
+  let query;
+  if ((typeProp === 'URI' || typeProp === 'Place' || typeProp === 'URL') &&
+      ['Textbox','Dropdown','Checkbox','Subtemplate','Subclass'].includes(typeField)) {
+    query = `select ?o (SAMPLE(?oLabel) AS ?oLabel) (COUNT(?s) AS ?count) ${inGraph} where { GRAPH ?g { ?s <${prop}> ?o. ${class_restriction} ?o rdfs:label ?oLabel . } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER(str(?stage) != 'not modified') } GROUP BY ?o ORDER BY DESC(?count)`;
+  } else if (typeProp === 'URI' && typeField === 'Skos') {
+    query = `select ?o (SAMPLE(?oLabel) AS ?oLabel) (COUNT(?s) AS ?count) ${inGraph} where { GRAPH ?g { ?s <${prop}> ?o. ${class_restriction} ?o <http://www.w3.org/2004/02/skos/core#prefLabel> ?oLabel . } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER(str(?stage) != 'not modified') } GROUP BY ?o ORDER BY DESC(?count)`;
+  } else if (['Date','gYear','gYearMonth'].includes(typeProp) && typeField === 'Date') {
+    query = `select distinct ?o (COUNT(?s) AS ?count) ${inGraph} where { GRAPH ?g { ?s <${prop}> ?o. ${class_restriction} } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER(str(?stage) != 'not modified') } GROUP BY ?o ORDER BY DESC(?count) lcase(?o)`;
+  } else if (typeField === 'KnowledgeExtractor') {
+    query = `select distinct ?o ?oLabel ?class (COUNT(?s) AS ?count) ${inGraph} where { GRAPH ?g { ?g <${prop}> ?extractionGraph. ${class_restriction} } GRAPH ?extractionGraph { ?o rdfs:label ?oLabel . OPTIONAL {?o a ?class}} ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER(str(?stage) != 'not modified') } GROUP BY ?o ?oLabel ?class ORDER BY DESC(?count) lcase(?oLabel)`;
+  } else {
+    query = "none";
+  }
+
+  if (query !== "none") {
+    enqueueSparqlQuery(query, elemID, prop, typeProp, typeField, elemClass, elemSubclass, extractionClasses);
+  }
+}
+
+// process ajax query results
+function processQueryResults(returnedJson, elemID, prop, typeProp, typeField, elemClass, elemSubclass, extractionClasses) {
+  const len = 10;
+  console.log(returnedJson);
+  const allresults = [];
+  const results = [];
+  const countresults = [];
+
+  returnedJson.results.bindings.forEach((binding) => {
+    const res = binding.o.value;
+    let resLabel;
+    let xsdProp = false;
+
+    if (!['Date','gYear','gYearMonth'].includes(typeProp)) {
+      resLabel = binding.oLabel.value;
+    } else if (typeProp === 'gYear') {
+      resLabel = parseInt(binding.o.value);
+      xsdProp = typeProp;
+    } else {
+      resLabel = binding.o.value;
+      xsdProp = typeProp;
     }
 
-  };
-  if ((typeProp == 'URI' || typeProp == 'Place' || typeProp == 'URL') && (typeField == 'Textbox' || typeField == 'Dropdown'|| typeField == 'Checkbox' || typeField == 'Subtemplate' || typeField == 'Subclass') ) {
-    var query = "select distinct ?o ?oLabel (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> ?o. "+class_restriction+" ?o rdfs:label ?oLabel . } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } GROUP BY ?o ?oLabel ORDER BY DESC(?count) lcase(?oLabel)";
-  } else if (typeProp == 'URI' && typeField == 'Skos') {
-    var query = "select distinct ?o ?oLabel (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> ?o. "+class_restriction+" ?o <http://www.w3.org/2004/02/skos/core#prefLabel> ?oLabel . } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } GROUP BY ?o ?oLabel ORDER BY DESC(?count) lcase(?oLabel)";
-  } 
-  else if ((typeProp=='Date' || typeProp=='gYear' || typeProp=='gYearMonth') && typeField == 'Date')  {
-    var query = "select distinct ?o (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> ?o. "+class_restriction+" } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } GROUP BY ?o ORDER BY DESC(?count) lcase(?o)";
-  } else if (typeField=='KnowledgeExtractor') {
-    var query = "select distinct ?o ?oLabel ?class (COUNT(?s) AS ?count) "+inGraph+" where { GRAPH ?g { ?g <"+prop+"> ?extractionGraph. "+class_restriction+" } GRAPH ?extractionGraph { ?o rdfs:label ?oLabel . OPTIONAL {?o a ?class}} ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } GROUP BY ?o ?oLabel ?class ORDER BY DESC(?count) lcase(?oLabel)";
-  } else {var query = "none"};
+    const count = parseInt(binding.count.value);
+    if (countresults.length < 5 || ["Subclass","Dropdown"].includes(typeField)) {
+      countresults.push({count, label: resLabel});
+    }
 
-  const len = 10;
-  var encoded = encodeURIComponent(query);
-  console.log(query);
-  $.ajax({
-        type: 'GET',
-        url: myPublicEndpoint+'?query=' + encoded,
-        headers: { Accept: 'application/sparql-results+json'},
-        success: function(returnedJson) {
-          console.log(returnedJson);
-          var allresults = [];
-          var results = [];
-          var countresults = [];
-          for (i = 0; i < returnedJson.results.bindings.length; i++) {
-            var res = returnedJson.results.bindings[i].o.value;
-            if (typeProp != 'Date' && typeProp != 'gYear' && typeProp != 'gYearMonth') {
-              var resLabel = returnedJson.results.bindings[i].oLabel.value;
-              var xsdProp = false;
-            } else if (typeProp == 'gYear') {
-              var resLabel = parseInt(returnedJson.results.bindings[i].o.value);
-              var xsdProp = typeProp;
-            } else {
-              var resLabel = returnedJson.results.bindings[i].o.value;
-              var xsdProp = typeProp;
-            }
-            var count = returnedJson.results.bindings[i].count.value;
-            if (countresults.length < 5) {countresults.push({count: parseInt(count), label: resLabel });}
+    let extractionClass = "";
+    let knowledgeExtractor = "";
+    if (typeField === 'KnowledgeExtractor' && extractionClasses != "") {
+      extractionClass = `data-extraction-class='${binding.class.value}'`;
+      knowledgeExtractor = "fieldType='KnowledgeExtractor'";
+    }
 
-            var extractionClass = "";
-            var knowledgeExtractor = "";
-            if (typeField=='KnowledgeExtractor' && extractionClasses != "") {
-              extractionClass = "data-extraction-class='"+returnedJson.results.bindings[i].class.value+"'";
-              knowledgeExtractor = "fieldType='KnowledgeExtractor'";
-            }
-            var result = "<button onclick=getRecordsByPropValue(this,'."+elemID+"results','"+elemClass+"','"+elemSubclass+"','"+xsdProp+"',"+knowledgeExtractor+") id='"+res+"' class='queryGroup' data-property='"+prop+"' data-value='"+res+"' data-toggle='collapse' data-target='#"+elemID+"results' aria-expanded='false' aria-controls='"+elemID+"results' class='info_collapse' "+extractionClass+">"+resLabel+" ("+count+")</button>";
-            if (allresults.indexOf(result) === -1) {
-              allresults.push(result);
-              results.push($(result).hide());
-              $("#"+elemID).append($(result).hide());
-            };
-
-
-          };
-
-          // show more in EXPLORE
-          if (results.length > len) {
-            // show first batch
-            $("#"+elemID).find("button:lt("+len+")").show('smooth');
-            $("#"+elemID).next(".showMore").show();
-
-            // show more based on var len
-            let counter = 1;
-            $("#"+elemID).next(".showMore").on("click", function() {
-              ++counter;
-              var offset = counter*len;
-              var limit = offset+len;
-              console.log(counter, offset, limit);
-              $("#"+elemID).find("button:lt("+limit+")").show('smooth');
-            });
-
-          } else if (results.length > 0 && results.length <= len) {
-            $("#"+elemID).find("button:not(.showMore)").show('smooth');
-          };
-
-          // group extracted entities by class (KNOWLEDGE EXTRACTOR only)
-          if (extractionClasses) {
-            for (const [key, value] of Object.entries(extractionClasses)) {
-              var extractedEntitiesByClass = $("#"+elemID).find("[data-extraction-class='"+key+"']");
-              if (extractedEntitiesByClass.length) {
-                const groupEntity = $("<section style='margin-bottom: 1.5em'><h4>"+value+"</h4></section>");
-                extractedEntitiesByClass.detach().appendTo(groupEntity);
-                $("#"+elemID).append(groupEntity);
-              }
-            }
-          }
-          
-          // prepare charts
-          if (! ($("#"+elemID+"-chart").length)) {
-            $("#"+elemID).closest(".change_background").find(".col-md-4").eq(0).append($("<div id='"+elemID+"-chart' class='mini-chart'></div>"));
-          } else {
-            $("#"+elemID+"-chart").replaceWith($("<div id='"+elemID+"-chart' class='mini-chart'></div>"));
-          } 
-          $("#"+elemID).closest(".change_background").css({minHeight: "95vh"})
-          console.log(countresults)
-          barchart(elemID+"-chart","label","count",countresults,true);
-
-
-        } // end function
-
+    const result = `<button onclick=getRecordsByPropValue(this,'.${elemID}results','${elemClass}','${elemSubclass}','${xsdProp}',${knowledgeExtractor}) id='${res}' class='queryGroup' data-property='${prop}' data-value='${res}' data-toggle='collapse' data-target='#${elemID}results' aria-expanded='false' aria-controls='${elemID}results' class='info_collapse' ${extractionClass}>${resLabel} (${count})</button>`;
+    if (!allresults.includes(result)) {
+      allresults.push(result);
+      results.push($(result).hide());
+      $(`#${elemID}`).append($(result).hide());
+    }
   });
 
-};
+  // showMore
+  if (results.length > len) {
+    $("#"+elemID).find("button:lt("+len+")").show('smooth');
+    $("#"+elemID).next(".showMore").show();
+    let counter = 1;
+    $("#"+elemID).next(".showMore").off("click").on("click", function() {
+      ++counter;
+      const limit = counter*len+len;
+      $("#"+elemID).find("button:lt("+limit+")").show('smooth');
+    });
+  } else if (results.length > 0 && results.length <= len) {
+    $("#"+elemID).find("button:not(.showMore)").show('smooth');
+  }
+
+  if (extractionClasses) {
+    for (const [key, value] of Object.entries(extractionClasses)) {
+      const extractedEntitiesByClass = $(`#${elemID}`).find(`[data-extraction-class='${key}']`);
+      if (extractedEntitiesByClass.length) {
+        const groupEntity = $(`<section style='margin-bottom: 1.5em'><h4>${value}</h4></section>`);
+        extractedEntitiesByClass.detach().appendTo(groupEntity);
+        $(`#${elemID}`).append(groupEntity);
+      }
+    }
+  }
+
+  // generate mini-charts
+  if (!$(`#${elemID}-chart`).length) {
+    $("#"+elemID).closest(".change_background").find(".col-md-4").eq(0).append($(`<div id='${elemID}-chart' class='mini-chart'></div>`));
+  } else {
+    $(`#${elemID}-chart`).replaceWith($(`<div id='${elemID}-chart' class='mini-chart'></div>`));
+  }
+  $("#"+elemID).closest(".change_background").css({minHeight: "95vh", maxHeight: "130vh", overflow: "scroll"});
+
+  if (["Dropdown","Subclass"].includes(typeField)) {
+    piechart(elemID+"-chart","label","count","True",countresults,true);
+  } else if (countresults.length) {
+    barchart(elemID+"-chart","label","count",countresults,true);
+  }
+}
+
 
 // get all extracted key enitities
 function getKeywordsValue(elemID, elemClass, extractionClasses, extractionProperties, elemSubclass='') {
@@ -1821,7 +1857,10 @@ function filterBySubclass(btn) {
   var tab = $(btn).closest(".articleBox");
   tab.find("[data-target]").show();
   tab.find(".hidden").removeClass("hidden");
-  
+
+  // show subclass-restricted filters
+  $("section[data-subclass*='"+subclassURI+"']").show();
+  $("section[data-subclass]").not("[data-subclass*='" + subclassURI + "']").not("[data-subclass='']").hide();
 
   // active filter button
   $(btn).siblings().removeClass("active");
