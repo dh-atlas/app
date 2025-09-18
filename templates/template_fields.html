@@ -17,10 +17,12 @@ $if templates:
 		var templates = '$templates'.replace(/&#39;/g, '"')
 		console.log(templates);
 		var templatesObject = JSON.parse(templates);
+		var subclasses = JSON.parse('$res_subclasses'.replace(/&#39;/g, '"'));
 	</script>
 $else:
 	<script type="text/javascript">
 		var templatesObject = {};
+		var subclasses = JSON.parse('$res_subclasses'.replace(/&#39;/g, '"'));
 	</script>
 
 <header class="row">
@@ -319,7 +321,6 @@ $else:
 											</section>
 										</section>
 										<script type="text/javascript">
-											var subclasses = JSON.parse('$res_subclasses'.replace(/&#39;/g, '"'));
 											var rawSelectedSubclass = '$field["restricted"]';
 											var selectedSubclass = rawSelectedSubclass.replace(/^\[&#39;|&#39;\]$$/g, "").split(/&#39;, &#39;/);
 											var idx = 1;
