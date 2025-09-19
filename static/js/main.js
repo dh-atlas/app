@@ -1596,7 +1596,8 @@ function getPropertyValue(elemID, prop, typeProp, typeField, elemClass='', elemS
       ['Textbox','Dropdown','Checkbox','Subtemplate','Subclass'].includes(typeField)) {
     query = `select ?o (SAMPLE(?oLabel) AS ?oLabel) (COUNT(?s) AS ?count) ${inGraph} where { GRAPH ?g { ?s <${prop}> ?o. ${class_restriction} ?o rdfs:label ?oLabel . } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER(str(?stage) != 'not modified') } GROUP BY ?o ORDER BY DESC(?count)`;
   } else if (typeProp === 'URI' && typeField === 'Skos') {
-    query = `select ?o (SAMPLE(?oLabel) AS ?oLabel) (COUNT(?s) AS ?count) ${inGraph} where { GRAPH ?g { ?s <${prop}> ?o. ${class_restriction} ?o <http://www.w3.org/2004/02/skos/core#prefLabel> ?oLabel . } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER(str(?stage) != 'not modified') } GROUP BY ?o ORDER BY DESC(?count)`;
+    var addReplace = typeField === 'Skos' ? 'REPLACE(STR(?oLabel), " - .*?$", "")' : '';
+    query = `select ?o (SAMPLE(${addReplace}) AS ?oLabel) (COUNT(?s) AS ?count) ${inGraph} where { GRAPH ?g { ?s <${prop}> ?o. ${class_restriction} ?o <http://www.w3.org/2004/02/skos/core#prefLabel> ?oLabel . } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER(str(?stage) != 'not modified') } GROUP BY ?o ORDER BY DESC(?count)`;
   } else if (['Date','gYear','gYearMonth'].includes(typeProp) && typeField === 'Date') {
     query = `select distinct ?o (COUNT(?s) AS ?count) ${inGraph} where { GRAPH ?g { ?s <${prop}> ?o. ${class_restriction} } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER(str(?stage) != 'not modified') } GROUP BY ?o ORDER BY DESC(?count) lcase(?o)`;
   } else if (typeField === 'KnowledgeExtractor') {
