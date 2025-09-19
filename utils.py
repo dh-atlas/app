@@ -202,9 +202,9 @@ def fields_to_json(data, json_file, skos_file):
 
 	list_dicts = defaultdict(dict)
 	#list_ids = sorted([k.split("__")[0] for k in data.keys()])
-	template_config = {'hidden': 'True',
-					'subclasses': {},
-					'keywords_classes': {}}
+	with open(TEMPLATE_LIST, 'r') as file:
+		tpls = json.load(file)
+	tpl_config = next(template for template in tpls if template["template"] == json_file)
 
 	for k,v in data.items():
 		if k != 'action' and '__template__' not in k:
@@ -213,9 +213,6 @@ def fields_to_json(data, json_file, skos_file):
 			idx, json_key , field_id = k.split("__")
 			list_dicts[int(idx)]["id"] = field_id
 			list_dicts[int(idx)][json_key] = v
-		elif '__template__' in k:
-			if v == 'on':
-				template_config['hidden'] = 'False'
 			
 	list_dicts = dict(list_dicts)
 	for n,d in list_dicts.items():
@@ -235,6 +232,10 @@ def fields_to_json(data, json_file, skos_file):
 		if d["type"] == "Subclass":
 			d["value"] = "URI"
 			d["restricted"] = []
+			d["values"] = tpl_config["subclasses"]
+			if tpl_config["other_subclass"] == "True":
+				d["values"]["other"] = "Other"
+
 		else:
 			d["restricted"] = [urllib.parse.unquote(d[subclass_key]) for subclass_key in d if subclass_key.startswith("subclass")] 
 		

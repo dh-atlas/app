@@ -9,7 +9,8 @@
   "hidden": "False",
   "subclasses": {},
   "description": "Descrizione",
-  "keywords_classes": {}
+  "keywords_classes": {},
+  "other_subclass": "False"
  },
  {
   "name": "Research Product",
@@ -59,7 +60,8 @@
   "template": "resource_templates/template-organization.json",
   "hidden": "False",
   "subclasses": {},
-  "keywords_classes": {}
+  "keywords_classes": {},
+  "other_subclass": "False"
  },
  {
   "name": "Person",
@@ -71,7 +73,8 @@
   "template": "resource_templates/template-person.json",
   "hidden": "False",
   "subclasses": {},
-  "keywords_classes": {}
+  "keywords_classes": {},
+  "other_subclass": "False"
  },
  {
   "name": "Computer Program",
@@ -83,7 +86,8 @@
   "template": "resource_templates/template-computer_program.json",
   "hidden": "False",
   "subclasses": {},
-  "keywords_classes": {}
+  "keywords_classes": {},
+  "other_subclass": "False"
  },
  {
   "name": "Web Site",
@@ -95,6 +99,7 @@
   "template": "resource_templates/template-web_site.json",
   "hidden": "False",
   "subclasses": {},
-  "keywords_classes": {}
+  "keywords_classes": {},
+  "other_subclass": "False"
  }
 ]
