@@ -304,7 +304,6 @@ class Template:
 
 		data = web.input()
 		template_path = RESOURCE_TEMPLATES+'template-'+res_name+'.json'
-		print("data:", data)
 		# save template initial settings then modify fields
 		if 'action' in data and 'modifyFields' in data.action:
 
@@ -721,7 +720,6 @@ class Record(object):
 					#u.update_knowledge_extraction(recordData,KNOWLEDGE_EXTRACTION)
 					userID = user.replace('@','-at-').replace('.','-dot-')
 					file_path = mapping.inputToRDF(recordData, userID, 'not modified', tpl_form=templateID)
-					session["records"] = session["records"] + recordID+'/' if recordID != None else ''
 					if conf.github_backup == "True":
 						try:
 							github_sync.push(file_path,"main", session['gituser'], session['username'], session['bearer_token'])
@@ -1650,6 +1648,7 @@ class Charts(object):
 
 		else:
 			return json.dumps({"error": f"Unsupported Content-Type: {ctype}"})
+
 
 class ChartsTemplate(object):
 	def GET(self):
