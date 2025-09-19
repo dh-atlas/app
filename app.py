@@ -1627,10 +1627,29 @@ class Charts(object):
 
 	def POST(self):
 		web.header('Content-Type', 'application/json')
-		data = web.data()
-		json_data = json.loads(data)
-		results = queries.getChartData(json_data)
-		return json.dumps(results)
+		raw_data = web.data()  # bytes
+		ctype = web.ctx.env.get("CONTENT_TYPE", "")
+
+		# form-urlencoded (submit button)
+		if ctype.startswith("application/x-www-form-urlencoded"):
+			params = web.input()  # già dict
+			if "action" in params and params.action.startswith("createRecord"):
+				create_record(params)
+			else:
+				return json.dumps({"error": "missing or invalid action"})
+
+		# JSON (AJAX)
+		elif ctype.startswith("application/json"):
+			try:
+				data = json.loads(raw_data.decode("utf-8"))
+			except Exception as e:
+				return json.dumps({"error": "invalid json", "details": str(e)})
+
+			results = queries.getChartData(data)
+			return json.dumps(results)
+
+		else:
+			return json.dumps({"error": f"Unsupported Content-Type: {ctype}"})
 
 class ChartsTemplate(object):
 	def GET(self):
