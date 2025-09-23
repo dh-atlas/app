@@ -13,9 +13,10 @@
     schema:url <http://www.regione.piemonte.it/> .
 
 <https://w3id.org/dh-atlas/1758641728-9738483/> rdfs:label "Piedmont Region"@en ;
-    ns1:currentStatus "not modified"^^xsd:string ;
-    prov:generatedAtTime "2025-09-23T15:37:02.259551"^^xsd:dateTime ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-23T15:37:23.726141"^^xsd:dateTime ;
     prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
     schema:name "Piedmont Region"@en .
 
 <http://www.wikidata.org/entity/Q1216> rdfs:label "Piedmont"^^xsd:string .
