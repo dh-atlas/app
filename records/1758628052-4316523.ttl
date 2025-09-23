@@ -70,9 +70,10 @@ ns1:1758628052-4316523 a schema:Dataset,
     ns1:servedBy ns1:1758635086-782 .
 
 <https://w3id.org/dh-atlas/1758628052-4316523/> rdfs:label "Digital library of Late-Antique Latin Texts (digilibLT)"@en ;
-    ns2:currentStatus "not modified"^^xsd:string ;
-    prov:generatedAtTime "2025-09-23T13:50:47.829976"^^xsd:dateTime ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-23T16:39:54.705700"^^xsd:dateTime ;
     prov:wasAttributedTo ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
     schema:name "Digital library of Late-Antique Latin Texts (digilibLT)"@en .
 
 <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
@@ -165,11 +166,11 @@ ns1:1758629655-954 rdfs:label "digilibLT - Research Project"^^xsd:string .
 
 ns1:1758635086-782 rdfs:label "digilibLT - Search Interface"^^xsd:string .
 
-ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
-
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-04> skos:prefLabel "Latin language and literature - ACADEMIC FIELD"^^xsd:string .
 
 <https://www.w3id.org/dh-atlas-vocabularies/etv/CriticalEdition> rdfs:label "Critical Edition"^^xsd:string .
 
 ns1:TextCollection rdfs:label "Text Collection"^^xsd:string .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
 
