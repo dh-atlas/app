@@ -1,0 +1,175 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1758628052-4316523 a schema:Dataset,
+        ns1:TextCollection ;
+    rdfs:label "Digital library of Late-Antique Latin Texts (digilibLT)"@en ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    dcterms:conformsTo <http://www.wikidata.org/entity/Q95728930> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-04> ;
+    schema:additionalType ns1:TextCollection ;
+    schema:citation <https://ceur-ws.org/Vol-3246/02_paper-6317.pdf> ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns1:1758628397-862,
+        ns1:1758628716-808,
+        ns1:1758628758-362,
+        ns1:1758629188-59,
+        ns1:1758629283-915,
+        ns1:1758629344-939 ;
+    schema:datePublished "2021-01-01"^^xsd:date ;
+    schema:description "The Digital library of Late-Antique Latin Texts (digilibLT) is an open-access online collection of secular Latin prose works from Late Antiquity (2nd century – 7th century), annotated in XML-TEI.Since its launch in 2010, the library has grown well beyond its initial canon of authors and works. It now includes grammatical texts, incorporated on the basis of the most reliable and up-to-date critical editions, and, since 2019, a steadily expanding corpus of legal writings. Throughout this development, the library has remained faithful to its founding principles: transparent indication of the editions used and any editorial interventions, enriched entries with content summaries, discussions of critical issues, and bibliographic references, all supported by robust consultation and search tools."@en ;
+    schema:distribution <https://digiliblt.uniupo.it/g_bulk_opere.php> ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+        <https://vocabs.dariah.eu/tadirah/discovering> ;
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/EPUB>,
+        <http://publications.europa.eu/resource/authority/file-type/PDF>,
+        <http://publications.europa.eu/resource/authority/file-type/TXT>,
+        <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    schema:genre <http://sparql.cwrc.ca/ontologies/genre#epistolary>,
+        <http://sparql.cwrc.ca/ontologies/genre#grammar>,
+        <http://sparql.cwrc.ca/ontologies/genre#legalWriting>,
+        <http://sparql.cwrc.ca/ontologies/genre#medicalWriting>,
+        <http://sparql.cwrc.ca/ontologies/genre#musicalWriting>,
+        <http://sparql.cwrc.ca/ontologies/genre#myth>,
+        <http://sparql.cwrc.ca/ontologies/genre#philosophy>,
+        <http://sparql.cwrc.ca/ontologies/genre#religious>,
+        <http://sparql.cwrc.ca/ontologies/genre#scientificWriting>,
+        <http://sparql.cwrc.ca/ontologies/genre#translation>,
+        <https://sparql.cwrc.ca/ontologies/genre#architecturalWriting>,
+        <https://sparql.cwrc.ca/ontologies/genre#biography> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA>,
+        <http://publications.europa.eu/resource/authority/language/LAT> ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/CC_BYNCSA_3_0> ;
+    schema:name "Digital library of Late-Antique Latin Texts (digilibLT)"@en,
+        "Biblioteca digitale di testi latini tardoantichi (digilibLT)"@it ;
+    schema:producer ns1:1758629655-954 ;
+    schema:publisher ns1:1758628459-229 ;
+    schema:size "Near 400 texts"@en ;
+    schema:temporalCoverage <http://www.wikidata.org/entity/Q217050>,
+        <http://www.wikidata.org/entity/Q8089>,
+        <http://www.wikidata.org/entity/Q8090>,
+        <http://www.wikidata.org/entity/Q8095>,
+        <http://www.wikidata.org/entity/Q8099>,
+        <http://www.wikidata.org/entity/Q8101>,
+        <http://www.wikidata.org/entity/Q8103> ;
+    schema:url <https://digiliblt.uniupo.it/index.php> ;
+    schema:usageInfo <https://digiliblt.uniupo.it/guida.php> ;
+    schema:version "2.22"@en ;
+    ns1:editionType <https://www.w3id.org/dh-atlas-vocabularies/etv/CriticalEdition> ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/annotating>,
+        <https://vocabs.dariah.eu/tadirah/collecting>,
+        <https://vocabs.dariah.eu/tadirah/digitalPublishing>,
+        <https://vocabs.dariah.eu/tadirah/encoding> ;
+    ns1:servedBy ns1:1758635086-782 .
+
+<https://w3id.org/dh-atlas/1758628052-4316523/> rdfs:label "Digital library of Late-Antique Latin Texts (digilibLT)"@en ;
+    ns2:currentStatus "not modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-23T13:50:47.829976"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "Digital library of Late-Antique Latin Texts (digilibLT)"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/EPUB> skos:prefLabel "EPUB - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/PDF> skos:prefLabel "PDF - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/TXT> skos:prefLabel "Plain text - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/XML> skos:prefLabel "XML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/LAT> skos:prefLabel "Latin - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/CC_BYNCSA_3_0> skos:prefLabel "Creative Commons Attribution–NonCommercial–ShareAlike 3.0 Unported - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#epistolary> rdfs:label "Epistolary"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#grammar> rdfs:label "Grammar"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#legalWriting> rdfs:label "Legal Writing"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#medicalWriting> rdfs:label "Medical Writing"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#musicalWriting> rdfs:label "Musical Writing"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#myth> rdfs:label "Myth"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#philosophy> rdfs:label "Philosophy"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#religious> rdfs:label "Religious"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#scientificWriting> rdfs:label "Scientific Writing"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#translation> rdfs:label "Translation"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q217050> rdfs:label "late antiquity"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8089> rdfs:label "7th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8090> rdfs:label "6th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8095> rdfs:label "5th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8099> rdfs:label "4th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8101> rdfs:label "3rd century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8103> rdfs:label "2nd century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q95728930> rdfs:label "TEI P5"^^xsd:string .
+
+<https://sparql.cwrc.ca/ontologies/genre#architecturalWriting> rdfs:label "Architectural Writing"^^xsd:string .
+
+<https://sparql.cwrc.ca/ontologies/genre#biography> rdfs:label "Biography"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/annotating> skos:prefLabel "Annotating - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/collecting> skos:prefLabel "Collecting - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/digitalPublishing> skos:prefLabel "Digital Publishing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/discovering> skos:prefLabel "Discovering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/encoding> skos:prefLabel "Encoding - TADIRAH"^^xsd:string .
+
+ns1:1758628397-862 rdfs:label "Tabacco, Raffaella"^^xsd:string .
+
+ns1:1758628459-229 rdfs:label "University of Piemonte Orientale Amedeo Avogadro"^^xsd:string .
+
+ns1:1758628716-808 rdfs:label "Lana, Maurizio"^^xsd:string .
+
+ns1:1758628758-362 rdfs:label "Balbo, Andrea"^^xsd:string .
+
+ns1:1758629188-59 rdfs:label "Borgna, Alice"^^xsd:string .
+
+ns1:1758629283-915 rdfs:label "Malaspina, Ermanno"^^xsd:string .
+
+ns1:1758629344-939 rdfs:label "Rosso, Nadia"^^xsd:string .
+
+ns1:1758629655-954 rdfs:label "digilibLT - Research Project"^^xsd:string .
+
+ns1:1758635086-782 rdfs:label "digilibLT - Search Interface"^^xsd:string .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-04> skos:prefLabel "Latin language and literature - ACADEMIC FIELD"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/CriticalEdition> rdfs:label "Critical Edition"^^xsd:string .
+
+ns1:TextCollection rdfs:label "Text Collection"^^xsd:string .
+
