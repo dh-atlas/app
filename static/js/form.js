@@ -356,7 +356,7 @@ function searchGeonames(searchterm) {
     $("#searchresult").show();
     var q = $('#'+searchterm).val();
 
-    $.getJSON("http://api.geonames.org/searchJSON", {
+    $.getJSON("https://secure.geonames.org/searchJSON", {
         q: q,
         username: "palread",
         maxRows: 10,
