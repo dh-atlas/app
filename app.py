@@ -62,7 +62,7 @@ urls = (
 	prefix + '/records', 'Records',
 	prefix + '/model', 'DataModel',
 	prefix + '/view-(.+)', 'View',
-	prefix + '/term-(.+)', 'Term',
+	prefix + '/term', 'Term',
 	prefix + '/(sparql)', 'sparql',
 	prefix + '/savetheweb-(.+)', 'Savetheweb',
 	prefix + '/nlp', 'Nlp',
@@ -1249,27 +1249,22 @@ class View(object):
 # TERM : vocabulary terms and newly created entities
 
 class Term(object):
-	def GET(self, name):
-		""" controlled vocabulary term web page
-
-		Parameters
-		----------
-		name: str
-			the ID of the term, generally the last part of the URL
-		"""
-		try:
-			name = unquote(name)
-		except Exception as e:
-			name = name
-
+	def GET(self):
 		web.header("Cache-Control", "no-cache, max-age=0, must-revalidate, no-store")
 		is_git_auth = github_sync.is_git_auth()
-		results_by_class = {}
+		
+		params = web.input(id=None)
+		if params.id:
+			name = unquote(params.id)
+		else:
+			raise web.notfound()
+
 
 		# look for occurrences in Record Graphs
 		uri = mapping.getRightURIbase(name)
 		label = queries.get_URI_label(uri)
 		data = queries.describe_term(uri)
+		results_by_class = {}
 
 		if data is not None:
 			appears_in_set = {
@@ -1485,11 +1480,8 @@ class Nlp(object):
 			query_str_decoded = query_string.q.strip()
 
 		# parse string with spacy
-		print(query_string.lang)
 		parsed = NER_IT(query_str_decoded) if query_string.lang == 'it' else NER_EN(query_str_decoded)
 		entities = {word.text for word in parsed.ents if word.label_ in ['PERSON','ORG','GPE','LOC']}
-		print(parsed)
-		print(parsed.ents)
 		# prepare json
 		results = []
 		for e in list(entities):

@@ -1341,7 +1341,7 @@ function loadKeywords(graphId, prop) {
           var keywordLabel = result.label.value;
           const keyword = $('<p property="'+prop+'">\
               <link property="sameAs" url="'+keywordUri+'"/>\
-              <a class="wikiEntity" target="_blank" href="term-'+keywordUri.split("/")[keywordUri.split("/").length - 1]+'">'+keywordLabel+'</a>\
+              <a class="wikiEntity" target="_blank" href="term?id='+keywordUri.split("/")[keywordUri.split("/").length - 1]+'">'+keywordLabel+'</a>\
             </p>');
           keyword.append(wdImgIcon)
           section.append(keyword);

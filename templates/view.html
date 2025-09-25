@@ -1,5 +1,6 @@
 $def with (user, graphdata, graphID, title, stage, base,properties,is_git_auth,project,knowledge_extractor,inverses_by_class,main_lang)
 $var user = user
+$var records = '' #modify 
 $var is_git_auth = is_git_auth
 $var project = project
 $var main_lang = main_lang
@@ -33,7 +34,7 @@ $var main_lang = main_lang
 										<!-- wikidata uri -->
 										<p property="$properties[field][0]">
 											<link property="sameAs" url="http://www.wikidata.org/entity/$uri_value[0]"/>
-											<a class="wikiEntity" target='_blank' href="term-$uri_value[0]">
+											<a class="wikiEntity" target='_blank' href="term?id=$uri_value[0]">
 												$uri_value[1]
 											</a>
 										</p>
@@ -41,7 +42,7 @@ $var main_lang = main_lang
 										<!-- geonames uri -->
 										<p property="$properties[field][0]">
 											<link property="sameAs" url="https://sws.geonames.org/$uri_value[0]"/>
-											<a class="geoEntity" target='_blank' href="term-$uri_value[0]">
+											<a class="geoEntity" target='_blank' href="term?id=$uri_value[0]">
 												$uri_value[1]
 											</a>
 										</p>
@@ -50,7 +51,7 @@ $var main_lang = main_lang
 										<p property="$properties[field][0]">
 											<link property="sameAs" url="http://www.viaf.org/viaf/$uri_value[0][4:]"/>
 											<a class="viafEntity" target='_blank'\
-											 href="term-viaf$uri_value[0][4:]">
+											 href="term?id=viaf$uri_value[0][4:]">
 												$uri_value[1]
 											</a>
 										</p>
@@ -59,7 +60,7 @@ $var main_lang = main_lang
 										<p property="$properties[field][0]">
 											<link property="sameAs" url="https://orcid.org/$uri_value[0][5:]"/>
 											<a class="orcidEntity" target='_blank'\
-											 href="term-orcid$uri_value[0][5:]">
+											 href="term?id=orcid$uri_value[0][5:]">
 												$uri_value[1]
 											</a>
 										</p>
@@ -88,14 +89,14 @@ $var main_lang = main_lang
 													$ val = " - ".join(uri_value[1].split(" - ")[:-1])
 													<!-- skos Vocable -->
 													<link property="sameAs" url="$uri_value[0]"/>
-													<a class="skosEntity" target='_blank' href="term-$uri_value[0]">
+													<a class="skosEntity" target='_blank' href="term?id=$uri_value[0]">
 														$val
 													</a>
 												$else:
 													<!-- urls -->
 													$if properties[field][3] != "URL":
 														<link property="url" url="$uri_value[0]"/>
-														<a target='_blank' href="term-$uri_value[0]">
+														<a target='_blank' href="term?id=$uri_value[0]">
 															$here
 														</a>
 													$else:
@@ -108,7 +109,7 @@ $var main_lang = main_lang
 											<!-- local resource -->
 											<p property="$properties[field][0]">
 												<link property="url" url="$base$uri_value[0]"/>
-												<a target='_blank' href="term-$uri_value[0]">$uri_value[1]</a>
+												<a target='_blank' href="term?id=$uri_value[0]">$uri_value[1]</a>
 											</p>
 					</section>
 			$if graphID in knowledge_extractor and len(knowledge_extractor[graphID]) > 0:
@@ -120,11 +121,16 @@ $var main_lang = main_lang
 								$for extracted_keyword in knowledge_extractor[graphID][field][n]["metadata"]["output"]:
 									<p property="$knowledge_extractor[graphID+'_view']['property']">
 										<link property="sameAs" url="$extracted_keyword['uri']['value']"/>
-										<a class="uri" target='_blank' href="term-$extracted_keyword['uri']['value']">
+										<a class="uri" target='_blank' href="term?id=$extracted_keyword['uri']['value']">
 											$extracted_keyword['label']['value']
 										</a>
 									</p>
 						</section>
+			<section class="info-item col-md-5 col-sm-12 keywords">
+				<script type="text/javascript">
+					loadKeywords("$base$graphID","https://schema.org/keywords")
+				</script>
+			</section>
 	</section>
 	<section class="col-md-4 sideBoxes">
 		<section class="biblio light">
@@ -140,8 +146,8 @@ $var main_lang = main_lang
 			<h3 class="biblio-label">Download the graph</h3>
 			<p>
 				<button type="button" class="btn btn-dark" name="button" onclick="window.location.href='serialization?format=ttl&id=$graphID'">Turtle</button>
-				<button type="button" class="btn btn-dark" name="button" onclick="window.location.href='serialization?format=ttl&id=$graphID'">RDF/XML</button>
-				<button type="button" class="btn btn-dark" name="button" onclick="window.location.href='serialization?format=ttl&id=$graphID'">JSON-LD</button>
+				<button type="button" class="btn btn-dark" name="button" onclick="window.location.href='serialization?format=rdf&id=$graphID'">RDF/XML</button>
+				<button type="button" class="btn btn-dark" name="button" onclick="window.location.href='serialization?format=jsonld&id=$graphID'">JSON-LD</button>
 				<!-- <a href="serialization?format=ttl&id=$graphID" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL"></a>
 				<a href="serialization?format=rdf&id=$graphID" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML"></a>
 				<a href="serialization?format=jsonld&id=$graphID" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD"></a>
