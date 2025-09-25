@@ -1,0 +1,34 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758629655-954> a schema:ResearchProject ;
+    rdfs:label "digilibLT - Research Project"@en ;
+    schema:description "Conceived by Raffaella Tabacco and developed with Maurizio Lana, the project creates a freely accessible digital corpus of late-antique Latin literary texts (2nd–5th centuries AD). It continues the work of the Packard Humanities Institute (PHI), which in the 1990s produced a CD-ROM database of Latin texts up to the 2nd century AD but subsequently ceased updates. As a result, no searchable digital corpus has been available for the pivotal transitional period from Antiquity to the Middle Ages—a gap this project seeks to fill."@en ;
+    schema:foundingDate "2019-01-01"^^xsd:date ;
+    schema:funder <https://w3id.org/dh-atlas/1758641728-9738483>,
+        <https://w3id.org/dh-atlas/1758641845-8765323> ;
+    schema:member <https://w3id.org/dh-atlas/1729012353-470491>,
+        <https://w3id.org/dh-atlas/1758628459-229> ;
+    schema:name "digilibLT - Research Project"@en ;
+    schema:url <https://digiliblt.uniupo.it/progetto.php> .
+
+<https://w3id.org/dh-atlas/1758629655-954/> rdfs:label "digilibLT - Research Project"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-23T15:51:30.806253"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "digilibLT - Research Project"@en .
+
+<https://w3id.org/dh-atlas/1729012353-470491> rdfs:label "University of Turin"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1758628459-229> rdfs:label "University of Piemonte Orientale Amedeo Avogadro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1758641728-9738483> rdfs:label "Piedmont Region"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1758641845-8765323> rdfs:label "Fondazione Cassa di Risparmio di Vercelli"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

@@ -1,0 +1,23 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758641845-8765323> a schema:Organization ;
+    rdfs:label "Fondazione Cassa di Risparmio di Vercelli"@it ;
+    schema:name "Fondazione Cassa di Risparmio di Vercelli"@it ;
+    schema:sameAs <http://www.wikidata.org/entity/Q23073338> ;
+    schema:url <https://www.fondazionecrvercelli.it/> .
+
+<https://w3id.org/dh-atlas/1758641845-8765323/> rdfs:label "Fondazione Cassa di Risparmio di Vercelli"@it ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-23T15:43:42.180338"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Fondazione Cassa di Risparmio di Vercelli"@it .
+
+<http://www.wikidata.org/entity/Q23073338> rdfs:label "Cassa di Risparmio di Vercelli"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

@@ -1,0 +1,25 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758628459-229> a schema:Organization ;
+    rdfs:label "University of Piemonte Orientale Amedeo Avogadro"@en ;
+    schema:identifier <https://ror.org/04387x656> ;
+    schema:name "University of Piemonte Orientale Amedeo Avogadro"@en,
+        " Università degli Studi del Piemonte Orientale “Amedeo Avogadro”"@it ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1235561> ;
+    schema:url <https://www.uniupo.it/> .
+
+<https://w3id.org/dh-atlas/1758628459-229/> rdfs:label "University of Piemonte Orientale Amedeo Avogadro"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-23T15:51:01.828099"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "University of Piemonte Orientale Amedeo Avogadro"@en .
+
+<http://www.wikidata.org/entity/Q1235561> rdfs:label "University of Eastern Piedmont"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

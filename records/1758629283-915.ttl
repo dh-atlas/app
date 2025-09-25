@@ -1,0 +1,28 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758629283-915> a schema:Person ;
+    rdfs:label "Malaspina, Ermanno"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1729012353-470491> ;
+    schema:identifier <https://orcid.org/0000-0001-5604-895X> ;
+    schema:name "Malaspina, Ermanno"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q57758475> .
+
+<https://w3id.org/dh-atlas/1758629283-915/> rdfs:label "Malaspina, Ermanno"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-23T15:32:16.416132"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Malaspina, Ermanno"@en .
+
+<http://www.wikidata.org/entity/Q57758475> rdfs:label "Ermanno Malaspina"^^xsd:string .
+
+<https://orcid.org/0000-0001-5604-895X> rdfs:label "0000-0001-5604-895X"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729012353-470491> rdfs:label "University of Turin"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

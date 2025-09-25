@@ -1,0 +1,29 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758635086-782> a schema:SoftwareApplication ;
+    rdfs:label "digilibLT - Search Interface"@en ;
+    schema:applicationCategory <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> ;
+    schema:description "Users can search for words or phrases within the texts using Boolean operators (all/any), exact phrases (enclosed in quotes), exclusions, and proximity searches. Queries can also be restricted to specific textual sections, such as headings, verse, or foreign phrases.Users can refine results based on title, author, text type, and chronological period (2nd–7th centuries or uncertain date)."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/querying> ;
+    schema:name "digilibLT - Search Interface"@en ;
+    schema:url <https://digiliblt.uniupo.it/xtf/search?smode=advanced&lang=en> ;
+    schema:usageInfo <https://digiliblt.uniupo.it/guida.php#how%20can%20i%20search> .
+
+<https://w3id.org/dh-atlas/1758635086-782/> rdfs:label "digilibLT - Search Interface"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-23T16:40:43.084983"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "digilibLT - Search Interface"@en .
+
+<http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

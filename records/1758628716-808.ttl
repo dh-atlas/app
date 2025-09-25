@@ -1,0 +1,28 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758628716-808> a schema:Person ;
+    rdfs:label "Lana, Maurizio"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1758628459-229> ;
+    schema:identifier <https://orcid.org/0000-0002-7520-1195> ;
+    schema:name "Lana, Maurizio"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q103916573> .
+
+<https://w3id.org/dh-atlas/1758628716-808/> rdfs:label "Lana, Maurizio"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-23T15:31:52.223607"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Lana, Maurizio"@en .
+
+<http://www.wikidata.org/entity/Q103916573> rdfs:label "Maurizio Lana"^^xsd:string .
+
+<https://orcid.org/0000-0002-7520-1195> rdfs:label "0000-0002-7520-1195"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1758628459-229> rdfs:label "University of Piemonte Orientale Amedeo Avogadro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

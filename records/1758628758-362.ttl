@@ -1,0 +1,28 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758628758-362> a schema:Person ;
+    rdfs:label "Balbo, Andrea"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1729012353-470491> ;
+    schema:identifier <https://orcid.org/0000-0002-2227-7217> ;
+    schema:name "Balbo, Andrea"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q109288628> .
+
+<https://w3id.org/dh-atlas/1758628758-362/> rdfs:label "Balbo, Andrea"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-23T15:31:59.249493"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Balbo, Andrea"@en .
+
+<http://www.wikidata.org/entity/Q109288628> rdfs:label "Andrea Balbo"^^xsd:string .
+
+<https://orcid.org/0000-0002-2227-7217> rdfs:label "0000-0002-2227-7217"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729012353-470491> rdfs:label "University of Turin"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+
