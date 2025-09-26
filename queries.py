@@ -973,7 +973,7 @@ def getChartData(chart):
 			else:
 				lookup[time] = {"uri":[uri], "label":[label], "time":time}
 		results = list(lookup.values())
-	elif chart["type"] == "tree":
+	elif chart["type"] == "network":
 		query_results = hello_blazegraph(chart["query"])["results"]["bindings"]
 		tot_value = 0
 		tree = {"name": chart["mainClass"], "children": []}

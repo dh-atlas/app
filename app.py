@@ -1252,7 +1252,7 @@ class Term(object):
 	def GET(self):
 		web.header("Cache-Control", "no-cache, max-age=0, must-revalidate, no-store")
 		is_git_auth = github_sync.is_git_auth()
-		
+
 		params = web.input(id=None)
 		if params.id:
 			name = unquote(params.id)
@@ -1599,7 +1599,7 @@ class Charts(object):
 				charts = json.load(chart_file)
 
 		for chart in charts["charts"]:
-			if chart["type"] in ["map", "timeline", "tree"]:
+			if chart["type"] in ["map", "timeline", "network"]:
 				chart_id = str(time.time()).replace('.','-') + chart["id"]
 				chart["info"] = chart_id
 			elif chart["type"] == "chart":

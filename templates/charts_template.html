@@ -35,6 +35,8 @@ $var main_lang = main_lang
                                         <option value="counter">Counter</option>
                                         <option value="chart">Chart</option>
                                         <option value="map">Map</option>
+                                        <option value="network">Network</option>
+                                        <option value="timeline">Timeline</option>
                                     </select>
                                 </section>
                                 <script>
@@ -195,6 +197,33 @@ $var main_lang = main_lang
                                         <script type="text/javascript">
                                             $$("#$chart['sorted']-sort__$id").prop("checked", true);
                                         </script>
+                                $elif type == "network":
+                                    <!-- MAIN CLASS -->
+                                    <section class="row">
+                                        <label class="col-md-3">MAIN CLASS<br><span class="comment">a label describing all collected individuals</span></label>
+                                        <input type="text" id="mainClass__$id" class="col-md-8 align-self-start" name="mainClass__$id" value="$chart['mainClass']"/>
+                                    </section>
+                                    <!-- QUERY -->
+                                    <section class="row">
+                                        <label class="col-md-3">QUERY<br><span class="comment">set a SPARQL query to retrieve data (three variables required)</span></label>
+                                        <section class="col-md-8 align-self-start">
+                                            <div id="yasqe-$id" class="col-md-12 charts-yasqe"></div>
+                                        </section>
+                                    </section>
+                                    <script type="text/javascript">
+                                        generateYASQE("yasqe-$id", `$chart['query']`);
+                                    </script>
+                                $elif type == "timeline":
+                                    <!-- QUERY -->
+                                    <section class="row">
+                                        <label class="col-md-3">QUERY<br><span class="comment">set a SPARQL query to retrieve data (three variables required)</span></label>
+                                        <section class="col-md-8 align-self-start">
+                                            <div id="yasqe-$id" class="col-md-12 charts-yasqe"></div>
+                                        </section>
+                                    </section>
+                                    <script type="text/javascript">
+                                        generateYASQE("yasqe-$id", `$chart['query']`);
+                                    </script>
                                 <!-- ARROW + DELETE BUTTONS -->
                                 <a href="#" class="up"><i class="fas fa-arrow-up"></i></a> 
                                 <a href="#" class="down"><i class="fas fa-arrow-down"></i></a>
@@ -207,6 +236,8 @@ $var main_lang = main_lang
                     <a class="link_btn" onclick="addVisualization('counter')" name="add_counter">Add Counter</a>
                     <a class="link_btn" onclick="addVisualization('chart')" name="add_chart">Add Chart</a>
                     <a class="link_btn" onclick="addVisualization('map')" name="add_map">Add Map</a>
+                    <a class="link_btn" onclick="addVisualization('network')" name="add_network">Add Network</a>
+                    <a class="link_btn" onclick="addVisualization('timeline')" name="add_timeline">Add Timeline</a>
                 </section>
             </section>
             <!-- Buttons section -->

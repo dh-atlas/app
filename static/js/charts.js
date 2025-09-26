@@ -95,7 +95,7 @@ $(document).ready(function() {
                       "This timeline shows how <span style='font-weight:600'>Digital Humanities research products</span> reflect <span style='font-weight:600'>real-world Italian Cultural Heritage</span> produced across the millennia, highlighting trends, key periods, and the evolving focus of research."
                     );
                   })();
-                } else if (chartInfo["type"] == "tree"){
+                } else if (chartInfo["type"] == "network"){
                   forceDirectedTree(chartId, [jsondata], jsondata["name"])
                 } else if (chartInfo["type"] == "map") {
                     if (chartInfo["mapType"] === "common-map") {
