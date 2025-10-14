@@ -1,0 +1,25 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757973719-452> a schema:Person ;
+    rdfs:label "Orlandini, Sergio"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1757973756-061> ;
+    schema:identifier <https://orcid.org/0000-0003-2865-6418> ;
+    schema:name "Orlandini, Sergio"@en .
+
+<https://w3id.org/dh-atlas/1757973719-452/> rdfs:label "Orlandini, Sergio"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T22:04:36.603585"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Orlandini, Sergio"@en .
+
+<https://orcid.org/0000-0003-2865-6418> rdfs:label "0000-0003-2865-6418"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757973756-061> rdfs:label "CINECA"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

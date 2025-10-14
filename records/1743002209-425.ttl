@@ -1,7 +1,7 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://dbpedia.org/ontology/> .
-@prefix default2: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -9,15 +9,15 @@
 <https://w3id.org/dh-atlas/1743002209-425> a foaf:Agent,
         schema:Person ;
     rdfs:label "Pellino, Santa"@en ;
-    :affiliation <https://w3id.org/dh-atlas/1728999885-461319> ;
-    :name "Pellino, Santa"@en .
+    ns2:affiliation <https://w3id.org/dh-atlas/1728999885-461319> ;
+    ns2:name "Pellino, Santa"@en .
 
 <https://w3id.org/dh-atlas/1743002209-425/> rdfs:label "Pellino, Santa"@en ;
-    default1:currentStatus "modified"^^xsd:string ;
-    :name "Pellino, Santa"@en ;
-    default2:generatedAtTime "2025-04-01T09:59:07.489000+00:00"^^xsd:dateTime ;
-    default2:wasAttributedTo <https://w3id.org/dh-atlas/chiara-dot-manca5-at-unibo-dot-it> ;
-    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "Pellino, Santa"@en ;
+    prov:generatedAtTime "2025-04-01T09:59:07.489350"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/chiara-dot-manca5-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
 
 <https://w3id.org/dh-atlas/1728999885-461319> rdfs:label "University of Pisa"^^xsd:string .
 

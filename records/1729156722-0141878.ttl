@@ -1,54 +1,67 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <http://schema.org/> .
-@prefix ns2: <http://www.w3.org/dh-atlas/> .
-@prefix ns3: <http://dbpedia.org/ontology/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/dh-atlas/1729156722-0141878> a schema:Dataset ;
+ns1:1729156722-0141878 a schema:Dataset,
+        ns1:TextCollection ;
     rdfs:label "Biblioteca Italiana"@en ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
     dcterms:conformsTo <http://www.loc.gov/standards/mods/>,
         <http://www.tei-c.org/>,
         <https://www.iccu.sbn.it/it/normative-standard/linee-guida-per-la-digitalizzazione-e-metadati/standard-mag-versione-2.0.1/index.html>,
         <https://www.loc.gov/standards/mix/> ;
-    dcterms:type <http://purl.org/spar/fabio/Anthology> ;
-    ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-F> ;
-    ns1:additionalType <http://purl.org/spar/fabio/Anthology> ;
-    ns1:citation <https://doi.org/10.6092/issn.1721-4777/12360> ;
-    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    ns1:contributor <https://w3id.org/dh-atlas/1729032657-3542836>,
-        <https://w3id.org/dh-atlas/1729158569-0381424> ;
-    ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
-    ns1:creator <https://w3id.org/dh-atlas/1729158312-7097268>,
-        <https://w3id.org/dh-atlas/1729158364-944431> ;
-    ns1:datePublished "1996-01-01"^^xsd:date ;
-    ns1:description "Biblioteca Italiana is a digital library of texts representative of the Italian cultural and literary tradition from the Middle Ages to the 20th century, with more than 3,500 titles in its catalog. It is divided into three main collections: BibIt, Incunaboli, Scrittori d'Italia."@en ;
-    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/concordance>,
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-F> ;
+    schema:additionalType ns1:TextCollection ;
+    schema:citation <https://doi.org/10.6092/issn.1721-4777/12360> ;
+    schema:contributor ns1:1729032657-3542836,
+        ns1:1729158569-0381424 ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
+    schema:creator ns1:1729158312-7097268,
+        ns1:1729158364-944431 ;
+    schema:datePublished "1996-01-01"^^xsd:date ;
+    schema:description "Biblioteca Italiana is a digital library of texts representative of the cultural and literary tradition of Italy from the Middle Ages to the 20th century, with more than 3,500 titles in its catalog. It is divided into three main collections: BibIt, Incunaboli, Scrittori d'Italia."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/concordance>,
         <https://vocabs.dariah.eu/tadirah/discovering> ;
-    ns1:encodingFormat <https://www.iana.org/assignments/media-types/application/tei+xml> ;
-    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
-    ns1:license <https://projects.dharc.unibo.it/knot/term-lc-C11_Unknown> ;
-    ns1:name "Biblioteca Italiana"@en ;
-    ns1:producer <https://w3id.org/dh-atlas/1729159676-1524916> ;
-    ns1:publisher <https://w3id.org/dh-atlas/1729032657-3542836> ;
-    ns1:size "3523 titles"@en ;
-    ns1:url <http://www.bibliotecaitaliana.it/catalogo> ;
-    ns1:usageInfo <http://www.bibliotecaitaliana.it/page/722> ;
-    ns2:methodology <https://vocabs.dariah.eu/tadirah/annotating>,
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
+    schema:license <https://projects.dharc.unibo.it/knot/term-lc-C11_Unknown> ;
+    schema:name "Biblioteca Italiana"@en ;
+    schema:producer ns1:1729159676-1524916 ;
+    schema:publisher ns1:1729032657-3542836 ;
+    schema:size "3523 titles"@en ;
+    schema:temporalCoverage <http://www.wikidata.org/entity/Q1404472>,
+        <http://www.wikidata.org/entity/Q212976>,
+        <http://www.wikidata.org/entity/Q51122>,
+        <http://www.wikidata.org/entity/Q6927>,
+        <http://www.wikidata.org/entity/Q6955>,
+        <http://www.wikidata.org/entity/Q7015>,
+        <http://www.wikidata.org/entity/Q7016>,
+        <http://www.wikidata.org/entity/Q7017>,
+        <http://www.wikidata.org/entity/Q7018>,
+        <http://www.wikidata.org/entity/Q7034>,
+        <http://www.wikidata.org/entity/Q7049> ;
+    schema:url <http://www.bibliotecaitaliana.it/catalogo> ;
+    schema:usageInfo <http://www.bibliotecaitaliana.it/page/722> ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/annotating>,
         <https://vocabs.dariah.eu/tadirah/gathering>,
         <https://vocabs.dariah.eu/tadirah/imaging> ;
-    ns2:servedBy <https://w3id.org/dh-atlas/1729271032-3808162> ;
-    ns2:used <http://www.muruca.org/> .
+    ns1:servedBy ns1:1729271032-3808162 ;
+    ns1:used <http://www.muruca.org/> .
 
 <https://w3id.org/dh-atlas/1729156722-0141878/> rdfs:label "Biblioteca Italiana"@en ;
-    ns3:currentStatus "published"^^xsd:string ;
-    ns1:name "Biblioteca Italiana"@en ;
-    prov:generatedAtTime "2024-10-18T17:16:17.007745"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
+    ns2:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-10-03T15:14:06.050627"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:anonymous ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:keywords <https://w3id.org/dh-atlas/1729156722-0141878/extraction-1727854052731/> ;
+    schema:mentions <https://w3id.org/dh-atlas/1729156722-0141878/extraction-1755592940896-1/>,
+        <https://w3id.org/dh-atlas/1729156722-0141878/extraction-1755592940896-2/>,
+        <https://w3id.org/dh-atlas/1729156722-0141878/extraction-1755592940896-3/> ;
+    schema:name "Biblioteca Italiana"@en .
 
 <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS"^^xsd:string .
 
@@ -62,7 +75,29 @@
 
 <http://www.tei-c.org/> rdfs:label "TEI"^^xsd:string .
 
-<https://projects.dharc.unibo.it/knot/term-lc-C11_Unknown> rdfs:label "Unknown"^^xsd:string .
+<http://www.wikidata.org/entity/Q1404472> rdfs:label "Italian Renaissance"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q212976> rdfs:label "Late Middle Ages"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51122> rdfs:label "Unification of Italy"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6927> rdfs:label "20th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6955> rdfs:label "19th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7015> rdfs:label "18th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7016> rdfs:label "17th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7017> rdfs:label "16th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7018> rdfs:label "15th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7034> rdfs:label "14th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7049> rdfs:label "13th century"^^xsd:string .
+
+<https://projects.dharc.unibo.it/knot/term-lc-C11_Unknown> skos:prefLabel "Unknown"^^xsd:string .
 
 <https://vocabs.dariah.eu/tadirah/annotating> skos:prefLabel "Annotating - TADIRAH"^^xsd:string .
 
@@ -74,27 +109,27 @@
 
 <https://vocabs.dariah.eu/tadirah/imaging> skos:prefLabel "Imaging - TADIRAH"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729158312-7097268> rdfs:label "Amedeo Quondam"^^xsd:string .
+ns1:1729158312-7097268 rdfs:label "Quondam, Amedeo"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729158364-944431> rdfs:label "Beatrice Alfonzetti"^^xsd:string .
+ns1:1729158364-944431 rdfs:label "Alfonzetti, Beatrice"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729158569-0381424> rdfs:label "Dipartimento di Lettere e Culture Moderne (Sapienza Università  di Roma)"^^xsd:string .
+ns1:1729158569-0381424 rdfs:label "Dipartimento di Lettere e Culture Moderne (Sapienza Università  di Roma)"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729159676-1524916> rdfs:label "Biblioteca Italiana Project"^^xsd:string .
+ns1:1729159676-1524916 rdfs:label "Biblioteca Italiana Project"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729271032-3808162> rdfs:label "Biblioteca Italiana - Search Interface"^^xsd:string .
+ns1:1729271032-3808162 rdfs:label "Biblioteca Italiana - Search Interface"^^xsd:string .
+
+ns1:anonymous rdfs:label "anonymous" .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-F> skos:prefLabel "Italian studies and comparative literature - ACADEMIC FIELD"^^xsd:string .
-
-<https://www.iana.org/assignments/media-types/application/tei+xml> rdfs:label "TEI XML"^^xsd:string .
 
 <https://www.iccu.sbn.it/it/normative-standard/linee-guida-per-la-digitalizzazione-e-metadati/standard-mag-versione-2.0.1/index.html> rdfs:label "MAG"^^xsd:string .
 
 <https://www.loc.gov/standards/mix/> rdfs:label "MIX"^^xsd:string .
 
-<http://purl.org/spar/fabio/Anthology> rdfs:label "Text Collection"^^xsd:string .
+ns1:1729032657-3542836 rdfs:label "Sapienza University of Rome"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729032657-3542836> rdfs:label "Sapienza University of Rome"^^xsd:string .
-
-<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+ns1:TextCollection rdfs:label "Text Collection"^^xsd:string .
 

@@ -1,0 +1,1617 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://viaf.org/viaf/11145910982027060213> a schema:CreativeWork ;
+    rdfs:label "Mallius Theodorus de metris"^^xsd:string .
+
+<http://viaf.org/viaf/1162841932273040656> a schema:CreativeWork ;
+    rdfs:label "Instituta artium"^^xsd:string .
+
+<http://viaf.org/viaf/168147370754141442568> a schema:CreativeWork ;
+    rdfs:label "Origo gentis Romanorum"^^xsd:string .
+
+<http://viaf.org/viaf/175263425> a schema:CreativeWork ;
+    rdfs:label "Explanationes in rhetoricam Ciceronis"^^xsd:string .
+
+<http://viaf.org/viaf/175361913> a schema:CreativeWork ;
+    rdfs:label "Corpus iuris civilis: Authenticum"^^xsd:string .
+
+<http://viaf.org/viaf/176125216> a schema:CreativeWork ;
+    rdfs:label "De schematis lexeos"^^xsd:string .
+
+<http://viaf.org/viaf/176930448> a schema:CreativeWork ;
+    rdfs:label "De schematis dianoeas"^^xsd:string .
+
+<http://viaf.org/viaf/178122223> a schema:CreativeWork ;
+    rdfs:label "Rerum gestarum libri qui supersunt"^^xsd:string .
+
+<http://viaf.org/viaf/178476034> a schema:CreativeWork ;
+    rdfs:label "De diuisione"^^xsd:string .
+
+<http://viaf.org/viaf/178910365> a schema:CreativeWork ;
+    rdfs:label "In Statii Thebaida commentum"^^xsd:string .
+
+<http://viaf.org/viaf/179996118> a schema:CreativeWork ;
+    rdfs:label "De figuris"^^xsd:string .
+
+<http://viaf.org/viaf/180543116> a schema:CreativeWork ;
+    rdfs:label "Exempla elocutionum"^^xsd:string .
+
+<http://viaf.org/viaf/180774635> a schema:CreativeWork ;
+    rdfs:label "Praecepta artis rhetoricae"^^xsd:string .
+
+<http://viaf.org/viaf/181297939> a schema:CreativeWork ;
+    rdfs:label "De comoedia uel de fabula"^^xsd:string .
+
+<http://viaf.org/viaf/181518441> a schema:CreativeWork ;
+    rdfs:label "Gesta Hludowici imperatoris"^^xsd:string .
+
+<http://viaf.org/viaf/181542028> a schema:CreativeWork ;
+    rdfs:label "Epistulae (Ausonius)"^^xsd:string .
+
+<http://viaf.org/viaf/181744502> a schema:CreativeWork ;
+    rdfs:label "Rufinus, Commentaria in metra Terentiana"^^xsd:string .
+
+<http://viaf.org/viaf/182111535> a schema:CreativeWork ;
+    rdfs:label "De syllogismo categorico"^^xsd:string .
+
+<http://viaf.org/viaf/182589415> a schema:CreativeWork ;
+    rdfs:label "Institutiones oratoriae"^^xsd:string .
+
+<http://viaf.org/viaf/182963699> a schema:CreativeWork ;
+    rdfs:label "Partitiones"^^xsd:string .
+
+<http://viaf.org/viaf/183310206> a schema:CreativeWork ;
+    rdfs:label "De medicina (Cassius Felix)"^^xsd:string .
+
+<http://viaf.org/viaf/183476324> a schema:CreativeWork ;
+    rdfs:label "Reliquiae"^^xsd:string .
+
+<http://viaf.org/viaf/183739017> a schema:CreativeWork ;
+    rdfs:label "De fluminibus fontibus lacubus nemoribus paludibus montibus gentibus per litteras libellus"^^xsd:string .
+
+<http://viaf.org/viaf/184008492> a schema:CreativeWork ;
+    rdfs:label "Tituli ex corpore Ulpiani"^^xsd:string .
+
+<http://viaf.org/viaf/185572945> a schema:CreativeWork ;
+    rdfs:label "Artes grammaticae"^^xsd:string .
+
+<http://viaf.org/viaf/185795893> a schema:CreativeWork ;
+    rdfs:label "Orationes (Quintus Aurelius Symmachus)"^^xsd:string .
+
+<http://viaf.org/viaf/188290117> a schema:CreativeWork ;
+    rdfs:label "Pro Fundanio Fragmenta"^^xsd:string .
+
+<http://viaf.org/viaf/190445739> a schema:CreativeWork ;
+    rdfs:label "Pro Vatinio Fragmenta"^^xsd:string .
+
+<http://viaf.org/viaf/190519332> a schema:CreativeWork ;
+    rdfs:label "Mythographus Vaticanus I"^^xsd:string .
+
+<http://viaf.org/viaf/191523162> a schema:CreativeWork ;
+    rdfs:label "Interrogatio De Aere Alieno Milonis Fragmenta"^^xsd:string .
+
+<http://viaf.org/viaf/191523213> a schema:CreativeWork ;
+    rdfs:label "Cum A Ludis Contionem Avocavit Fragmenta"^^xsd:string .
+
+<http://viaf.org/viaf/193054810> a schema:CreativeWork ;
+    rdfs:label "Vita Vergilii (Donatus)"^^xsd:string .
+
+<http://viaf.org/viaf/197682114> a schema:CreativeWork ;
+    rdfs:label "Epistula ad Munatium"^^xsd:string .
+
+<http://viaf.org/viaf/198560606> a schema:CreativeWork ;
+    rdfs:label "De conceptu (de morbis mulierum)"^^xsd:string .
+
+<http://viaf.org/viaf/202971453> a schema:CreativeWork ;
+    rdfs:label "Collatio Alexandri et Dindimi"^^xsd:string .
+
+<http://viaf.org/viaf/204214907> a schema:CreativeWork ;
+    rdfs:label "Laterculus"^^xsd:string .
+
+<http://viaf.org/viaf/205786314> a schema:CreativeWork ;
+    rdfs:label "De rhetorica"^^xsd:string .
+
+<http://viaf.org/viaf/205863281> a schema:CreativeWork ;
+    rdfs:label "Liber de praenominibus"^^xsd:string .
+
+<http://viaf.org/viaf/205967769> a schema:CreativeWork ;
+    rdfs:label "Liber de aduerbio (in Charisio)"^^xsd:string .
+
+<http://viaf.org/viaf/206861007> a schema:CreativeWork ;
+    rdfs:label "Ars de uerbo"^^xsd:string .
+
+<http://viaf.org/viaf/207937835> a schema:CreativeWork ;
+    rdfs:label "Pro Oppio Fragmenta"^^xsd:string .
+
+<http://viaf.org/viaf/207937874> a schema:CreativeWork ;
+    rdfs:label "Pro Negotiatoribus Achaeis Fragmenta"^^xsd:string .
+
+<http://viaf.org/viaf/2117164422995720530001> a schema:CreativeWork ;
+    rdfs:label "De figuris sententiarum et elocutionis"^^xsd:string .
+
+<http://viaf.org/viaf/212904993> a schema:CreativeWork ;
+    rdfs:label "Cum Quaestor Lilybaeo Decederet Fragmenta"^^xsd:string .
+
+<http://viaf.org/viaf/213203661> a schema:CreativeWork ;
+    rdfs:label "Alexandri Magni Macedonis epitoma rerum gestarum"^^xsd:string .
+
+<http://viaf.org/viaf/213391467> a schema:CreativeWork ;
+    rdfs:label "Flumini uariatio limitis repositio (gromaticum opus)"^^xsd:string .
+
+<http://viaf.org/viaf/215981956> a schema:CreativeWork ;
+    rdfs:label "De Physiognomonia liber"^^xsd:string .
+
+<http://viaf.org/viaf/218108059> a schema:CreativeWork ;
+    rdfs:label "Contra Contionem Q Metelli Fragmenta"^^xsd:string .
+
+<http://viaf.org/viaf/218125673> a schema:CreativeWork ;
+    rdfs:label "Differentiae"^^xsd:string .
+
+<http://viaf.org/viaf/218339177> a schema:CreativeWork ;
+    rdfs:label "Tardarum passionum libri V"^^xsd:string .
+
+<http://viaf.org/viaf/219188179> a schema:CreativeWork ;
+    rdfs:label "In P Clodium Et C Curionem Fragmenta"^^xsd:string .
+
+<http://viaf.org/viaf/219960875> a schema:CreativeWork ;
+    rdfs:label "Pro Gallio Fragmenta"^^xsd:string .
+
+<http://viaf.org/viaf/241276609> a schema:CreativeWork ;
+    rdfs:label "De ratione metrorum"^^xsd:string .
+
+<http://viaf.org/viaf/250597152> a schema:CreativeWork ;
+    rdfs:label "Mathesis"^^xsd:string .
+
+<http://viaf.org/viaf/262140196> a schema:CreativeWork ;
+    rdfs:label "De orthographia (Cassiodorus)"^^xsd:string .
+
+<http://viaf.org/viaf/2721155191927882440005> a schema:CreativeWork ;
+    rdfs:label "In Donati artem minorem"^^xsd:string .
+
+<http://viaf.org/viaf/293115074> a schema:CreativeWork ;
+    rdfs:label "De differentiis topicis"^^xsd:string .
+
+<http://viaf.org/viaf/293715255> a schema:CreativeWork ;
+    rdfs:label "De hypotheticis syllogismis"^^xsd:string .
+
+<http://viaf.org/viaf/293758926> a schema:CreativeWork ;
+    rdfs:label "Synonima Ciceronis (in Charisio)"^^xsd:string .
+
+<http://viaf.org/viaf/301677728> a schema:CreativeWork ;
+    rdfs:label "Hegesippi qui dicitur Historiae libri 5"^^xsd:string .
+
+<http://viaf.org/viaf/306063129> a schema:CreativeWork ;
+    rdfs:label "Commentum in Ciceronis rhetorica"^^xsd:string .
+
+<http://viaf.org/viaf/307449856> a schema:CreativeWork ;
+    rdfs:label "Incerti auctoris tractatus de adtributis personae et negotio (siue Commentarius in Ciceronis de Inuentione)"^^xsd:string .
+
+<http://viaf.org/viaf/309499554> a schema:CreativeWork ;
+    rdfs:label "Celerum passionum libri III"^^xsd:string .
+
+<http://viaf.org/viaf/309503942> a schema:CreativeWork ;
+    rdfs:label "Breuiarium (Auienus)"^^xsd:string .
+
+<http://viaf.org/viaf/310726480> a schema:CreativeWork ;
+    rdfs:label "De ecclesiasticis officiis"^^xsd:string .
+
+<http://viaf.org/viaf/316748722> a schema:CreativeWork ;
+    rdfs:label "Ars Grammatica (Aemilius Asper)"^^xsd:string .
+
+<http://viaf.org/viaf/317282003> a schema:CreativeWork ;
+    rdfs:label "Codex Iustinianus (Codex repetitae praelectionis)"^^xsd:string .
+
+<http://viaf.org/viaf/3216148523899120970004> a schema:CreativeWork ;
+    rdfs:label "Relationes"^^xsd:string .
+
+<http://viaf.org/viaf/3285153895178202410007> a schema:CreativeWork ;
+    rdfs:label "De ethopoeia"^^xsd:string .
+
+<http://viaf.org/viaf/3364165326385416290000> a schema:CreativeWork ;
+    rdfs:label "De insitione"^^xsd:string .
+
+<http://viaf.org/viaf/35159474182527661576> a schema:CreativeWork ;
+    rdfs:label "Vita Vergilii (Probus)"^^xsd:string .
+
+<http://viaf.org/viaf/37159474184727661696> a schema:CreativeWork ;
+    rdfs:label "De barbarismis et metaplasmis"^^xsd:string .
+
+<http://viaf.org/viaf/3953152140033411100004> a schema:CreativeWork ;
+    rdfs:label "Epitoma de Tito Liuio"^^xsd:string .
+
+<http://viaf.org/viaf/4174693190326740186> a schema:CreativeWork ;
+    rdfs:label "Demensuratio prouinciarum"^^xsd:string .
+
+<http://viaf.org/viaf/4365158430389106260006> a schema:CreativeWork ;
+    rdfs:label "Curae boum ex corpore Gargili Martialis"^^xsd:string .
+
+<http://viaf.org/viaf/480165326570916290002> a schema:CreativeWork ;
+    rdfs:label "Praeceptum demonstratiuae materiae"^^xsd:string .
+
+<http://viaf.org/viaf/48167803555917772460> a schema:CreativeWork ;
+    rdfs:label "Commentum artis Donati"^^xsd:string .
+
+<http://viaf.org/viaf/5159474240427662131> a schema:CreativeWork ;
+    rdfs:label "Chronica (Cassiodorus)"^^xsd:string .
+
+<http://viaf.org/viaf/53167803610717772927> a schema:CreativeWork ;
+    rdfs:label "Mythologiarum libri"^^xsd:string .
+
+<http://viaf.org/viaf/5904163756440834480001> a schema:CreativeWork ;
+    rdfs:label "De controuersiis agrorum"^^xsd:string .
+
+<http://viaf.org/viaf/5983165272524610690007> a schema:CreativeWork ;
+    rdfs:label "Glossae"^^xsd:string .
+
+<http://viaf.org/viaf/6167803569117772736> a schema:CreativeWork ;
+    rdfs:label "Ars de orthographia"^^xsd:string .
+
+<http://viaf.org/viaf/6244159477601827990008> a schema:CreativeWork ;
+    rdfs:label "Mythographus Vaticanus II"^^xsd:string .
+
+<http://viaf.org/viaf/65167803143117771821> a schema:CreativeWork ;
+    rdfs:label "De herbis femininis"^^xsd:string .
+
+<http://viaf.org/viaf/6953155286598587180001> a schema:CreativeWork ;
+    rdfs:label "Euporiston libri III"^^xsd:string .
+
+<http://viaf.org/viaf/7387147270709035700003> a schema:CreativeWork ;
+    rdfs:label "Disputatio de somnio Scipionis"^^xsd:string .
+
+<http://viaf.org/viaf/7597165326585816290002> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Constantino imperatori (Romae a. 321 p. Chr.)"^^xsd:string .
+
+<http://viaf.org/viaf/78159474046727660381> a schema:CreativeWork ;
+    rdfs:label "In Donati artem maiorem"^^xsd:string .
+
+<http://viaf.org/viaf/8644164298409908630002> a schema:CreativeWork ;
+    rdfs:label "De nomine et uerbo (Consentius)"^^xsd:string .
+
+<http://viaf.org/viaf/91159474176127661198> a schema:CreativeWork ;
+    rdfs:label "De morte testamentoque Alexandri Magni"^^xsd:string .
+
+<http://viaf.org/viaf/9486169829201337320004> a schema:CreativeWork ;
+    rdfs:label "Cosmographia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q101454474> a schema:CreativeWork ;
+    rdfs:label "De herba uettonica liber"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102406021> a schema:CreativeWork ;
+    rdfs:label "De orthographia (Caper)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102406390> a schema:CreativeWork ;
+    rdfs:label "De uerbis dubiis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1035171> a schema:CreativeWork ;
+    rdfs:label "Captiui"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104588502> a schema:CreativeWork ;
+    rdfs:label "Tribunus Marianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1050641> a schema:CreativeWork ;
+    rdfs:label "Paraphrasis Themistiana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1051232> a schema:CreativeWork ;
+    rdfs:label "De Senectute"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105407954> a schema:CreativeWork ;
+    rdfs:label "Centimeter (Servius)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1055008> a schema:CreativeWork ;
+    rdfs:label "In Catilinam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1055599> a schema:CreativeWork ;
+    rdfs:label "Iustiniani Institutiones"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105626879> a schema:CreativeWork ;
+    rdfs:label "De metris Horatianis (Servius)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105688059> a schema:CreativeWork ;
+    rdfs:label "De b muta et u uocali"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105724986> a schema:CreativeWork ;
+    rdfs:label "De litteris, de syllabis, de metris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105750832> a schema:CreativeWork ;
+    rdfs:label "De orthographia (Velius Longus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105964132> a schema:CreativeWork ;
+    rdfs:label "Vita Vergilii (Phocas)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106088290> a schema:CreativeWork ;
+    rdfs:label "Rufinus,  De compositione et de numeris oratorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106194805> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Bobiense de nomine"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106195000> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Bobiense de accentibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106195001> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Bobiense de propriis nominibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106195456> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Bobiense de uersibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106195457> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Bobiense de finalibus syllabis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106195458> a schema:CreativeWork ;
+    rdfs:label "De structuris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106195460> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Bobiense de metris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106199> a schema:CreativeWork ;
+    rdfs:label "Bellum Gallicum (Caesar)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106204064> a schema:CreativeWork ;
+    rdfs:label "De orthographia liber (Scaurus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106220303> a schema:CreativeWork ;
+    rdfs:label "Bellum Gallicum (Aulus Hirtius)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106235095> a schema:CreativeWork ;
+    rdfs:label "De compositionibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106316246> a schema:CreativeWork ;
+    rdfs:label "Ars (siue de nomine et uerbo)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106318242> a schema:CreativeWork ;
+    rdfs:label "De finalibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106319111> a schema:CreativeWork ;
+    rdfs:label "Explanationes in Artem Donati"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106427720> a schema:CreativeWork ;
+    rdfs:label "Breviatio pedum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106427776> a schema:CreativeWork ;
+    rdfs:label "De metris Horatii (Caesius Bassus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106444348> a schema:CreativeWork ;
+    rdfs:label "Poeticae species Latinae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106481341> a schema:CreativeWork ;
+    rdfs:label "Altercatio Hadriani Augusti et Epicteti Philosophi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106485508> a schema:CreativeWork ;
+    rdfs:label "De condicionibus agrorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106490175> a schema:CreativeWork ;
+    rdfs:label "Grammatica Vergiliana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106498819> a schema:CreativeWork ;
+    rdfs:label "Genera Versuum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1093696> a schema:CreativeWork ;
+    rdfs:label "De metatione (uel munitionibus) castrorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q110905546> a schema:CreativeWork ;
+    rdfs:label "Prognosticum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q110929344> a schema:CreativeWork ;
+    rdfs:label "De uictu I"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q110930214> a schema:CreativeWork ;
+    rdfs:label "Gratiarum Actio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1180413> a schema:CreativeWork ;
+    rdfs:label "De Trinitate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1180565> a schema:CreativeWork ;
+    rdfs:label "Cato Agricultura"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1180596> a schema:CreativeWork ;
+    rdfs:label "De Brevitate Vitae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1180721> a schema:CreativeWork ;
+    rdfs:label "De Officiis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1180722> a schema:CreativeWork ;
+    rdfs:label "De Otio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1180753> a schema:CreativeWork ;
+    rdfs:label "De Vita Beata"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q11862232> a schema:CreativeWork ;
+    rdfs:label "Ad Helviam Matrem De Consolatione"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q11903437> a schema:CreativeWork ;
+    rdfs:label "Vita Caroli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q121077493> a schema:CreativeWork ;
+    rdfs:label "De cursu temporum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q121095409> a schema:CreativeWork ;
+    rdfs:label "Epitoma"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q121169705> a schema:CreativeWork ;
+    rdfs:label "De aetatibus mundi et hominis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1215277> a schema:CreativeWork ;
+    rdfs:label "Dialogus De Oratoribus (Tacitus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1215764> a schema:CreativeWork ;
+    rdfs:label "Curculio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1216194> a schema:CreativeWork ;
+    rdfs:label "Casina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1216225> a schema:CreativeWork ;
+    rdfs:label "Medicamina Faciei Femineae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q121840982> a schema:CreativeWork ;
+    rdfs:label "Opusculum (Julius Exsuperantius)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1218746> a schema:CreativeWork ;
+    rdfs:label "Historia Gothorum, Vandalorum, Sueborum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1218984> a schema:CreativeWork ;
+    rdfs:label "Epidicus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q122583893> a schema:CreativeWork ;
+    rdfs:label "Res gestae Alexandri Macedonis translatae ex Aesopo graeco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q122609652> a schema:CreativeWork ;
+    rdfs:label "Chronicon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1226154> a schema:CreativeWork ;
+    rdfs:label "Sermones (Horace)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1226213> a schema:CreativeWork ;
+    rdfs:label "Epistulae (Horace)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1229830> a schema:CreativeWork ;
+    rdfs:label "Gai Institutionum commentarii quattuor"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1234585> a schema:CreativeWork ;
+    rdfs:label "Aulularia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1236235> a schema:CreativeWork ;
+    rdfs:label "Fasti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1236392> a schema:CreativeWork ;
+    rdfs:label "Remedia Amoris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1236672> a schema:CreativeWork ;
+    rdfs:label "Heroidum Epistulae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124357614> a schema:CreativeWork ;
+    rdfs:label "Institutio de nomine et pronomine et uerbo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124421862> a schema:CreativeWork ;
+    rdfs:label "De natura humana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124421892> a schema:CreativeWork ;
+    rdfs:label "De numeris septenariis (De septimanis)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1244446> a schema:CreativeWork ;
+    rdfs:label "Agricola (Tacitus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1246446> a schema:CreativeWork ;
+    rdfs:label "Carmen Saeculare"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1246541> a schema:CreativeWork ;
+    rdfs:label "Epitoma rei militaris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1246926> a schema:CreativeWork ;
+    rdfs:label "Notitia urbis Constantinopolitanae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1247073> a schema:CreativeWork ;
+    rdfs:label "Historiae (Tacitus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1248970> a schema:CreativeWork ;
+    rdfs:label "Breuiarium ab urbe condita"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1250583> a schema:CreativeWork ;
+    rdfs:label "De origine actibusque Getarum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1268359> a schema:CreativeWork ;
+    rdfs:label "Chronica (Filocalus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1284504> a schema:CreativeWork ;
+    rdfs:label "Edictum Theodorici regis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12899569> a schema:CreativeWork ;
+    rdfs:label "Liber de Caesaribus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12899582> a schema:CreativeWork ;
+    rdfs:label "Ad Theodoricum regem Francorum epistula de obseruatione ciborum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12900294> a schema:CreativeWork ;
+    rdfs:label "Curtius Historiae Alexandri Magni"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12901306> a schema:CreativeWork ;
+    rdfs:label "Origo Constantini imperatoris (Excerpta Valesiana pars prior)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131002526> a schema:CreativeWork ;
+    rdfs:label "Chronica (Isidorus Hispalensis)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13156506> a schema:CreativeWork ;
+    rdfs:label "De Haruspicum Responso"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134221> a schema:CreativeWork ;
+    rdfs:label "De Monarchia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q135496203> a schema:CreativeWork ;
+    rdfs:label "Ars grammatica (Charisius)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13582394> a schema:CreativeWork ;
+    rdfs:label "Franciscus, Lumen fidei"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q136341582> a schema:CreativeWork ;
+    rdfs:label "Ars grammatica (Diomedes Grammaticus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q136341598> a schema:CreativeWork ;
+    rdfs:label "Ars"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q136389036> a schema:CreativeWork ;
+    rdfs:label "Commentum Terentii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15076351> a schema:CreativeWork ;
+    rdfs:label "In somnium Scipionis commentarii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15427808> a schema:CreativeWork ;
+    rdfs:label "Phoenissae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1559179> a schema:CreativeWork ;
+    rdfs:label "Pro Caelio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15804865> a schema:CreativeWork ;
+    rdfs:label "De medicamentis liber"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1620781> a schema:CreativeWork ;
+    rdfs:label "Fragmenta Historiarum (Sallustius)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1652808> a schema:CreativeWork ;
+    rdfs:label "Testamentum Porcelli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16548949> a schema:CreativeWork ;
+    rdfs:label "De Constantia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16666801> a schema:CreativeWork ;
+    rdfs:label "Notitia Galliarum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q167297> a schema:CreativeWork ;
+    rdfs:label "Codex Euricianus sive Edictum Eurici regis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18081> a schema:CreativeWork ;
+    rdfs:label "De Vulgari Eloquentia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18590824> a schema:CreativeWork ;
+    rdfs:label "Ars maior"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q187719> a schema:CreativeWork ;
+    rdfs:label "Digesta seu Pandectae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q188350> a schema:CreativeWork ;
+    rdfs:label "Lex Romana Burgundionum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19041705> a schema:CreativeWork ;
+    rdfs:label "Post Reditum In Senatu"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19166591> a schema:CreativeWork ;
+    rdfs:label "De die natali liber ad Q. Caerellium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19360348> a schema:CreativeWork ;
+    rdfs:label "Diuisio orbis terrarum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1948820> a schema:CreativeWork ;
+    rdfs:label "Collatio legum mosaicarum et romanarum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19739076> a schema:CreativeWork ;
+    rdfs:label "De Lege Agraria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q20008411> a schema:CreativeWork ;
+    rdfs:label "Post Reditum Ad Quirites"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q20064904> a schema:CreativeWork ;
+    rdfs:label "Franciscus, Laudato si'"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q204058> a schema:CreativeWork ;
+    rdfs:label "Cato Origines"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2044496> a schema:CreativeWork ;
+    rdfs:label "Liber Abbaci"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q20550811> a schema:CreativeWork ;
+    rdfs:label "De uiris illustribus urbis Romae"^^xsd:string,
+        "Liber de uiris illustribus urbis Romae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2099521> a schema:CreativeWork ;
+    rdfs:label "Epistulae (Plinius)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21036156> a schema:CreativeWork ;
+    rdfs:label "Pro Sulla"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21049990> a schema:CreativeWork ;
+    rdfs:label "In L Calpurnium Pisonem"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21082077> a schema:CreativeWork ;
+    rdfs:label "De Domo Sua"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21087370> a schema:CreativeWork ;
+    rdfs:label "Pro Balbo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q212318> a schema:CreativeWork ;
+    rdfs:label "De Ciuitate Dei"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21235491> a schema:CreativeWork ;
+    rdfs:label "Pro Scauro Fragmenta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21682519> a schema:CreativeWork ;
+    rdfs:label "In Verrem Actio Prima"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21682524> a schema:CreativeWork ;
+    rdfs:label "In Verrem Actio Secunda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2264770> a schema:CreativeWork ;
+    rdfs:label "De Providentia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q22683901> a schema:CreativeWork ;
+    rdfs:label "Digesta artis mulomedicinae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q242030> a schema:CreativeWork ;
+    rdfs:label "Apocolocyntosis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q24260645> a schema:CreativeWork ;
+    rdfs:label "Pro Flacco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q246732> a schema:CreativeWork ;
+    rdfs:label "Petronius Satiricon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2707099> a schema:CreativeWork ;
+    rdfs:label "Saturae (Juvenal)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27897677> a schema:CreativeWork ;
+    rdfs:label "Consultatio veteris cuiusdam iurisconsulti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q287323> a schema:CreativeWork ;
+    rdfs:label "P. Ovidii Tristia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2879649> a schema:CreativeWork ;
+    rdfs:label "Ad Polybium De Consolatione"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q30027082> a schema:CreativeWork ;
+    rdfs:label "Liber memorialis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3062214> a schema:CreativeWork ;
+    rdfs:label "Expositio totius mundi et gentium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q31291042> a schema:CreativeWork ;
+    rdfs:label "Pro Murena"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3320792> a schema:CreativeWork ;
+    rdfs:label "Agamemnon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3332727> a schema:CreativeWork ;
+    rdfs:label "Medea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3395604> a schema:CreativeWork ;
+    rdfs:label "Collectanea Rerum Memorabilium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3406173> a schema:CreativeWork ;
+    rdfs:label "Pro Marcello"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3406185> a schema:CreativeWork ;
+    rdfs:label "Pro Ligario"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3406195> a schema:CreativeWork ;
+    rdfs:label "Pro Rege Deiotaro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3414249> a schema:CreativeWork ;
+    rdfs:label "Querolus"^^xsd:string,
+        "Querolus sive Aulularia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3561146> a schema:CreativeWork ;
+    rdfs:label "Vita Terentii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3589112> a schema:CreativeWork ;
+    rdfs:label "Ephemeris belli troiani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3687423> a schema:CreativeWork ;
+    rdfs:label "Ad Marciam De Consolatione"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3694159> a schema:CreativeWork ;
+    rdfs:label "Elegiae (Tibullus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3702518> a schema:CreativeWork ;
+    rdfs:label "De excidio Troiae historia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3704098> a schema:CreativeWork ;
+    rdfs:label "De compendiosa doctrina libri XX"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3704115> a schema:CreativeWork ;
+    rdfs:label "De Ira"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3704154> a schema:CreativeWork ;
+    rdfs:label "De Provinciis Consularibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3704160> a schema:CreativeWork ;
+    rdfs:label "De Rege Alexandrino Fragmenta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3704175> a schema:CreativeWork ;
+    rdfs:label "De Tranquillitate Animi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3711964> a schema:CreativeWork ;
+    rdfs:label "Divinatio in Q Caecilium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3720304> a schema:CreativeWork ;
+    rdfs:label "Peregrinatio Egeriae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q372941> a schema:CreativeWork ;
+    rdfs:label "Confessiones"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3730666> a schema:CreativeWork ;
+    rdfs:label "Epistole"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3730671> a schema:CreativeWork ;
+    rdfs:label "P. Ovidii Epistulae ex Ponto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3730710> a schema:CreativeWork ;
+    rdfs:label "Epodi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3779919> a schema:CreativeWork ;
+    rdfs:label "Catullus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3782570> a schema:CreativeWork ;
+    rdfs:label "Halieutica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3785160> a schema:CreativeWork ;
+    rdfs:label "Hercules Oetaeus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3785162> a schema:CreativeWork ;
+    rdfs:label "Hercules Furens"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3791552> a schema:CreativeWork ;
+    rdfs:label "In Ibin"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3797192> a schema:CreativeWork ;
+    rdfs:label "In Vatinium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3799231> a schema:CreativeWork ;
+    rdfs:label "Institutiones (Cassiodorus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q387259> a schema:CreativeWork ;
+    rdfs:label "Bellum Africanum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3922211> a schema:CreativeWork ;
+    rdfs:label "Pro Caecina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3922215> a schema:CreativeWork ;
+    rdfs:label "Pro Archia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3922216> a schema:CreativeWork ;
+    rdfs:label "Pro Cornelio Fragmenta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3922219> a schema:CreativeWork ;
+    rdfs:label "Pro Fonteio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3922227> a schema:CreativeWork ;
+    rdfs:label "Pro Tullio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3922248> a schema:CreativeWork ;
+    rdfs:label "Pro Quinctio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3922251> a schema:CreativeWork ;
+    rdfs:label "Pro Sestio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3922258> a schema:CreativeWork ;
+    rdfs:label "Pro Roscio Amerino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3922269> a schema:CreativeWork ;
+    rdfs:label "Pro Vareno Fragmenta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3926645> a schema:CreativeWork ;
+    rdfs:label "Quaestio de aqua et terra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3950848> a schema:CreativeWork ;
+    rdfs:label "Saturnalia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3990982> a schema:CreativeWork ;
+    rdfs:label "Thyestes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3999195> a schema:CreativeWork ;
+    rdfs:label "Troades"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4101698> a schema:CreativeWork ;
+    rdfs:label "Pro Roscio Comoedo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42185392> a schema:CreativeWork ;
+    rdfs:label "De aere aquis locis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42189773> a schema:CreativeWork ;
+    rdfs:label "Expositio sermonum antiquorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42189774> a schema:CreativeWork ;
+    rdfs:label "Expositio Vergilianae continentiae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42194614> a schema:CreativeWork ;
+    rdfs:label "Pro Plancio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42197200> a schema:CreativeWork ;
+    rdfs:label "Vergilius orator an poeta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q426008> a schema:CreativeWork ;
+    rdfs:label "Epitome de Caesaribus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q428114> a schema:CreativeWork ;
+    rdfs:label "Germania (Tacitus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4300> a schema:CreativeWork ;
+    rdfs:label "Codex Theodosianus sive Theodosiani Libri XVI"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4328829> a schema:CreativeWork ;
+    rdfs:label "De nuptiis Philologiae et Mercurii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q44227030> a schema:CreativeWork ;
+    rdfs:label "Passio Sanctarum Perpetuae et Felicitatis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q474088> a schema:CreativeWork ;
+    rdfs:label "Amores"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q475025> a schema:CreativeWork ;
+    rdfs:label "Amphitruo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q476568> a schema:CreativeWork ;
+    rdfs:label "Appendix Probi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q48804971> a schema:CreativeWork ;
+    rdfs:label "Pro Rabirio Perduellionis Reo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q512256> a schema:CreativeWork ;
+    rdfs:label "Itinerarium Antonini Augusti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5152381> a schema:CreativeWork ;
+    rdfs:label "Commenta Bernensia in Lucanum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5244244> a schema:CreativeWork ;
+    rdfs:label "De Beneficiis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5244316> a schema:CreativeWork ;
+    rdfs:label "De Clementia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q530127> a schema:CreativeWork ;
+    rdfs:label "De rebus bellicis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q538574> a schema:CreativeWork ;
+    rdfs:label "Vita Karoli Imperatoris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q544948> a schema:CreativeWork ;
+    rdfs:label "Bellum Civile"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q546203> a schema:CreativeWork ;
+    rdfs:label "Eclogae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q54913598> a schema:CreativeWork ;
+    rdfs:label "Epistola Alexandri ad Aristotelem"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q56400682> a schema:CreativeWork ;
+    rdfs:label "Pro Rabirio Postumo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q564358> a schema:CreativeWork ;
+    rdfs:label "Annales (Tacitus)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q59727964> a schema:CreativeWork ;
+    rdfs:label "Adnotationes super Lucanum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q59729533> a schema:CreativeWork ;
+    rdfs:label "Inscriptiones latinae liberae rei publicae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q60220> a schema:CreativeWork ;
+    rdfs:label "Aeneis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q604091> a schema:CreativeWork ;
+    rdfs:label "Philippica Oratio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q604274> a schema:CreativeWork ;
+    rdfs:label "Summa contra Gentiles"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q63795> a schema:CreativeWork ;
+    rdfs:label "Panegyrici Latini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q644892> a schema:CreativeWork ;
+    rdfs:label "Regulae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q651309> a schema:CreativeWork ;
+    rdfs:label "Bellum Alexandrinum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q656577> a schema:CreativeWork ;
+    rdfs:label "Pro Milone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q665568> a schema:CreativeWork ;
+    rdfs:label "De Imperio Cn Pompei"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q669022> a schema:CreativeWork ;
+    rdfs:label "Asinaria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q669196> a schema:CreativeWork ;
+    rdfs:label "Jugurtha"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q674439> a schema:CreativeWork ;
+    rdfs:label "Georgica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q675210> a schema:CreativeWork ;
+    rdfs:label "De Amicitia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q677997> a schema:CreativeWork ;
+    rdfs:label "Ars Poetica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q678375> a schema:CreativeWork ;
+    rdfs:label "De bello ciuili inter Caesarem et Pompeium"^^xsd:string,
+        "Pharsalia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6806671> a schema:CreativeWork ;
+    rdfs:label "De medicina (Plinius junior)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q691007> a schema:CreativeWork ;
+    rdfs:label "Corpus Inscriptionum Latinarum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q704019> a schema:CreativeWork ;
+    rdfs:label "Ars Amatoria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q720535> a schema:CreativeWork ;
+    rdfs:label "Ad Lucilium Epistulae Morales"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q722678> a schema:CreativeWork ;
+    rdfs:label "Historia Augusta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7246714> a schema:CreativeWork ;
+    rdfs:label "Pro Cluentio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7362358> a schema:CreativeWork ;
+    rdfs:label "De summa temporum uel origine actibusque gentis Romanorum."^^xsd:string .
+
+<http://www.wikidata.org/entity/Q749747> a schema:CreativeWork ;
+    rdfs:label "Origo gentis Romanae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q776615> a schema:CreativeWork ;
+    rdfs:label "Catilina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q776772> a schema:CreativeWork ;
+    rdfs:label "Itinerarium Burdigalense"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q777435> a schema:CreativeWork ;
+    rdfs:label "Phaedra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q798026> a schema:CreativeWork ;
+    rdfs:label "Bacchides"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q813596> a schema:CreativeWork ;
+    rdfs:label "Itinerarium Gaditanum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q846551> a schema:CreativeWork ;
+    rdfs:label "Itinerarium Alexandri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q861927> a schema:CreativeWork ;
+    rdfs:label "Philosophiae consolatio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q861986> a schema:CreativeWork ;
+    rdfs:label "De Rerum Natura"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q868885> a schema:CreativeWork ;
+    rdfs:label "Constitutiones Sirmondianae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87143921> a schema:CreativeWork ;
+    rdfs:label "Persius Satirae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87213120> a schema:CreativeWork ;
+    rdfs:label "Epitoma historiarum Philippicarum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87401582> a schema:CreativeWork ;
+    rdfs:label "Plinius Panegyricus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87771448> a schema:CreativeWork ;
+    rdfs:label "Prodigiorum Liber"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q89390524> a schema:CreativeWork ;
+    rdfs:label "Album of dated Latin inscriptions"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q9160328> a schema:CreativeWork ;
+    rdfs:label "Ars minor"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q921273> a schema:CreativeWork ;
+    rdfs:label "Egloghe"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q943884> a schema:CreativeWork ;
+    rdfs:label "Carmina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q96704274> a schema:CreativeWork ;
+    rdfs:label "Ars veterinaria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q972143> a schema:CreativeWork ;
+    rdfs:label "Oedipus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q97379771> a schema:CreativeWork ;
+    rdfs:label "De definitionibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q974141> a schema:CreativeWork ;
+    rdfs:label "De re coquinaria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q98141585> a schema:CreativeWork ;
+    rdfs:label "Ars rhetorica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q98520176> a schema:CreativeWork ;
+    rdfs:label "De lapidibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q98918602> a schema:CreativeWork ;
+    rdfs:label "Franciscus, Fratres omnes"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729034329-548886/extraction-1755592940896-1/> prov:generatedAtTime "2025-10-09T09:37:56.128243"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1729034329-548886/extraction-1755592940896-1> .
+
+<https://w3id.org/dh-atlas/1759855878-7592738> a schema:CreativeWork ;
+    rdfs:label "Additamenta ad Theodorum Priscianum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855879-9958842> a schema:CreativeWork ;
+    rdfs:label "Adnotationes super Lucanum: supplementum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855886-6112268> a schema:CreativeWork ;
+    rdfs:label "Analytica posteriora Aristotelis latine uersa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855888-2650952> a schema:CreativeWork ;
+    rdfs:label "Analytica priora Aristotelis latine uersa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855889-587154> a schema:CreativeWork ;
+    rdfs:label "Analytica priora Aristotelis latine uersa (recensio Carnutensis, partes"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855890-820914> a schema:CreativeWork ;
+    rdfs:label "Anecdoton Holderi quod dicitur, scilicet excerpta ex Cassiodori libello de ordine generis Cassiodororum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855890-820915> a schema:CreativeWork ;
+    rdfs:label "Aphorismi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855893-1110232> a schema:CreativeWork ;
+    rdfs:label "Appendices legis Romanae Wisigothorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855897-0983078> a schema:CreativeWork ;
+    rdfs:label "Ars Bobiensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855897-0983079> a schema:CreativeWork ;
+    rdfs:label "Ars grammatica (Cledonius)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855906-0627556> a schema:CreativeWork ;
+    rdfs:label "Ars, sive Regulae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855907-8049097> a schema:CreativeWork ;
+    rdfs:label "Artis architectonicae priuatis usibus adbreuiatus liber"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855907-8049098> a schema:CreativeWork ;
+    rdfs:label "Asclepius"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855909-988768> a schema:CreativeWork ;
+    rdfs:label "Augustini Ars Breuiata"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855914-6475272> a schema:CreativeWork ;
+    rdfs:label "Bellum Hispanum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855918-2676802> a schema:CreativeWork ;
+    rdfs:label "Breuis expositio Vergilii Georgicorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855919-9848294> a schema:CreativeWork ;
+    rdfs:label "Capitularia Regnum Francorum complete"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855923-2403176> a schema:CreativeWork ;
+    rdfs:label "Categoriae Aristotelis Latine uersae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855924-46109> a schema:CreativeWork ;
+    rdfs:label "Categoriae Aristotelis Latine uersae (editio composita)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855925-7028286> a schema:CreativeWork ;
+    rdfs:label "Catholica nominum et uerborum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855928-7322886> a schema:CreativeWork ;
+    rdfs:label "Cato Fragmenta Reliqua"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855929-9179606> a schema:CreativeWork ;
+    rdfs:label "Cato Orationum Fragmenta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855934-099347> a schema:CreativeWork ;
+    rdfs:label "Cento nuptialis: epistula praef."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855944-2830596> a schema:CreativeWork ;
+    rdfs:label "Commentarii in diuinationem in Quintum Caecilium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855945-4910684> a schema:CreativeWork ;
+    rdfs:label "Commentarium de oratione et de octo partibus orationis Artis Secundae Donati"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855946-6906478> a schema:CreativeWork ;
+    rdfs:label "Commentarius in Vergilii Aeneidos libros"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855949-6752796> a schema:CreativeWork ;
+    rdfs:label "Commentum de agrorum qualitate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855950-8841305> a schema:CreativeWork ;
+    rdfs:label "Commentum de controuersiis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855953-8760843> a schema:CreativeWork ;
+    rdfs:label "Commonitorium Palladii de uita Bragmanorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855957-8507252> a schema:CreativeWork ;
+    rdfs:label "Corpus Epistularum Latinarum Papyris Ostracis Tabulis servatarum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855965-5370302> a schema:CreativeWork ;
+    rdfs:label "Curiosum Vrbis Romae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855978-3215531> a schema:CreativeWork ;
+    rdfs:label "De Metris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855980-5883863> a schema:CreativeWork ;
+    rdfs:label "De Taxone (Recensio α)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855981-794751> a schema:CreativeWork ;
+    rdfs:label "De Taxone (Recensio β)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855987-996761> a schema:CreativeWork ;
+    rdfs:label "De arte grammatica"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855987-996762> a schema:CreativeWork ;
+    rdfs:label "De aspiratione"^^xsd:string,
+        "De attributis personis et negotiis ex Ciceronis de Inuentione libro primo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759855997-8847706> a schema:CreativeWork ;
+    rdfs:label "De curis boum epitoma"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856008-1777065> a schema:CreativeWork ;
+    rdfs:label "De finalibus metrorum [De finalibus]"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856014-2195866> a schema:CreativeWork ;
+    rdfs:label "De idiomatibus casuum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856016-4291449> a schema:CreativeWork ;
+    rdfs:label "De littera, de syllaba, de pedibus, de accentibus, de distinctione"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856016-42914491> a schema:CreativeWork ;
+    rdfs:label "De metris Horatianis (Marius Victorinus)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856023-0394552> a schema:CreativeWork ;
+    rdfs:label "De metris omnibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856025-459007> a schema:CreativeWork ;
+    rdfs:label "De natura generis humani"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856025-459008> a schema:CreativeWork ;
+    rdfs:label "De nomine"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856025-459009> a schema:CreativeWork ;
+    rdfs:label "De nominibus gallicis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856031-0402398> a schema:CreativeWork ;
+    rdfs:label "De observantia ciborum (De uictu II)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856035-2640913> a schema:CreativeWork ;
+    rdfs:label "De pedibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856035-2640914> a schema:CreativeWork ;
+    rdfs:label "De philosophia et de partibus eius"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856040-069133> a schema:CreativeWork ;
+    rdfs:label "De regionibus Vrbis Romae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856041-7622964> a schema:CreativeWork ;
+    rdfs:label "De salutaribus praeceptis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856045-5511715> a schema:CreativeWork ;
+    rdfs:label "De sepulchris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856047-0402403> a schema:CreativeWork ;
+    rdfs:label "De simplici medicina liber"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856048-2520852> a schema:CreativeWork ;
+    rdfs:label "De sophisticis elenchis liber Aristotelis latine uersus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856049-5331945> a schema:CreativeWork ;
+    rdfs:label "De speciali significatione diaeticarum passionum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856050-7639925> a schema:CreativeWork ;
+    rdfs:label "De speciebus locutionis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856056-5063982> a schema:CreativeWork ;
+    rdfs:label "De uerborum Graeci et Latini differentiis vel societatibus excerpta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856057-746308> a schema:CreativeWork ;
+    rdfs:label "De uesicae uitiis capitulum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856060-7746801> a schema:CreativeWork ;
+    rdfs:label "De ultimis syllabis liber"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856061-9835336> a schema:CreativeWork ;
+    rdfs:label "Declamationum excerpta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856063-2187734> a schema:CreativeWork ;
+    rdfs:label "Decretum Gratiani Part I"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856064-412788> a schema:CreativeWork ;
+    rdfs:label "Decretum Gratiani Part II"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856065-624281> a schema:CreativeWork ;
+    rdfs:label "Decretum Gratiani Part III"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856066-8373456> a schema:CreativeWork ;
+    rdfs:label "Decretum provinciae Africae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856068-0420105> a schema:CreativeWork ;
+    rdfs:label "Dedicatio historiarum Gothorum, Vandalorum, Sueborum ad Sisenandum regem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856076-2134984> a schema:CreativeWork ;
+    rdfs:label "Donatiani fragmentum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856082-8680823> a schema:CreativeWork ;
+    rdfs:label "Epistula Porfyrii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856085-3474221> a schema:CreativeWork ;
+    rdfs:label "Epistula ad Optatianum Porfyrium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856086-5618777> a schema:CreativeWork ;
+    rdfs:label "Epistula ad Pentadium nepotem suum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856086-5618778> a schema:CreativeWork ;
+    rdfs:label "Epistulae (Symmachus)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856089-2523599> a schema:CreativeWork ;
+    rdfs:label "Epitoma (Iulius Paris)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856092-6516159> a schema:CreativeWork ;
+    rdfs:label "Epitome anonyma (quae gynaecia uocatur) recensio M"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856093-8671677> a schema:CreativeWork ;
+    rdfs:label "Epitome anonyma (quae gynaecia uocatur) recensio Li"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856095-088857> a schema:CreativeWork ;
+    rdfs:label "Epitome anonyma (quae gynaecia uocatur) recensio D"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856096-278127> a schema:CreativeWork ;
+    rdfs:label "Epitome anonyma (quae gynaecia uocatur) recensio G"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856097-4853957> a schema:CreativeWork ;
+    rdfs:label "Epitome anonyma (quae gynaecia uocatur) recensio C"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856098-6567562> a schema:CreativeWork ;
+    rdfs:label "Epitome anonyma (quae gynaecia uocatur) recensio L"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856099-8444486> a schema:CreativeWork ;
+    rdfs:label "Epitome anonyma (quae gynaecia uocatur) recensio E"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856101-0590777> a schema:CreativeWork ;
+    rdfs:label "Epitome anonyma (quae gynaecia uocatur) recensio P"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856102-2509081> a schema:CreativeWork ;
+    rdfs:label "Epitome anonyma (quae gynaecia uocatur) recensio Ba"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856105-6270502> a schema:CreativeWork ;
+    rdfs:label "Excerpta Valesiana pars posterior"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856106-8739228> a schema:CreativeWork ;
+    rdfs:label "Excerpta de Scauro et Palladio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856108-0758152> a schema:CreativeWork ;
+    rdfs:label "Excerpta de comoedia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856109-3009393> a schema:CreativeWork ;
+    rdfs:label "Excerpta rhetorica e codice Parisino 7530 edita"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856110-4963746> a schema:CreativeWork ;
+    rdfs:label "Excerpta: appendix Apicii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856114-0843582> a schema:CreativeWork ;
+    rdfs:label "Explanationes in bucolica Vergilii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856117-957191> a schema:CreativeWork ;
+    rdfs:label "Expositionis membrorum epitome anonyma altera uberior"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856117-957192> a schema:CreativeWork ;
+    rdfs:label "Fragmenta (Symmachus)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856117-957193> a schema:CreativeWork ;
+    rdfs:label "Fragmenta ( Gargilius Martialis Ps.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856122-9753416> a schema:CreativeWork ;
+    rdfs:label "Fragmenta de Gynaeciis Sorani"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856124-2455838> a schema:CreativeWork ;
+    rdfs:label "Fragmenta panegyrici prosa conscripti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856125-4935617> a schema:CreativeWork ;
+    rdfs:label "Fragmentum (antidotum) traditum cum pseudo-Apuleio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856126-7027807> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Berolinense de speciebus hexametri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856127-9073634> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Berolinense de heroo hexametro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856132-687252> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Bobiense de nomine et pronomine"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856133-8606315> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Bobiense de uerbo (ad Seuerianum)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856138-6390998> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Censorini (epitoma disciplinarum)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856139-8924587> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Leidense in artes Donati"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856141-0993156> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Leuantinum in artes Donati"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856142-3219237> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Monacense de barbarismo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856143-509141> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Parisinum de uerbo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856144-7043085> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Parisinum de iambico metro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856145-8962543> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Parisinum de rhythmo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856147-09818> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Parisinum de nominibus in ct"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856148-282786> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Parisinum de notis [= notarum quae uersibus apponi consuerunt laterculus]"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856149-4725113> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Parisinum de praepositionibus et uerbis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856150-6943164> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Sangallense de iambico trimetro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856151-8951209> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Sangallense de epodo octosyllabo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856153-0884044> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Sangallense de pentametro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856154-2811704> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Sangallense de scansione heroici uersus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856155-5616748> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Sangermanense de schematibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856156-746027> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Spangenberg"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856158-1448317> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Vaticanum de positura, de chria, de poemate, de versu, de accentibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856159-3616636> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Vindobonense de pedibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856160-5566149> a schema:CreativeWork ;
+    rdfs:label "Fragmentum Weissenburgense de caesuris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856161-7675948> a schema:CreativeWork ;
+    rdfs:label "Fragmentum de orthographia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856162-95972> a schema:CreativeWork ;
+    rdfs:label "Fragmentum de soloecismo et barbarismo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856167-836172> a schema:CreativeWork ;
+    rdfs:label "Fulgentii ut fingitur Planciadis super Thebaiden commentariolum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856173-8575342> a schema:CreativeWork ;
+    rdfs:label "Gynaeciorum Sorani e graeco uersorum et retractatorum quae exstant"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856179-1549149> a schema:CreativeWork ;
+    rdfs:label "Historia Apollonii regis Tyri recensio A"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856180-3281834> a schema:CreativeWork ;
+    rdfs:label "Historia Apollonii regis Tyri recensio B"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856197-388382> a schema:CreativeWork ;
+    rdfs:label "In Porphyrii Isagogen commentarii prima editio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856197-388384> a schema:CreativeWork ;
+    rdfs:label "In categorias Aristotelis commentarius"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856199-9086893> a schema:CreativeWork ;
+    rdfs:label "Incertarum Orationum Fragmenta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856207-0620282> a schema:CreativeWork ;
+    rdfs:label "Institutiones siue Ars"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856209-494793> a schema:CreativeWork ;
+    rdfs:label "Introductio ad syllogismos cathegoricus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856210-6638174> a schema:CreativeWork ;
+    rdfs:label "Iscrizioni Latine della Sardegna"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856216-7449582> a schema:CreativeWork ;
+    rdfs:label "Leges novellae ad Theodosianum pertinentes"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856218-4114056> a schema:CreativeWork ;
+    rdfs:label "Laudatio funebris in honorem Matidiae socrus; aliae orationis fragmentum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856219-617141> a schema:CreativeWork ;
+    rdfs:label "Le iscrizioni cristiane della Sardegna anteriori al VII secolo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856220-8119817> a schema:CreativeWork ;
+    rdfs:label "Le iscrizioni funerarie pagane di Karales"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856222-5343823> a schema:CreativeWork ;
+    rdfs:label "Libellus de statibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856225-9434786> a schema:CreativeWork ;
+    rdfs:label "Liber de asse"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856229-5474958> a schema:CreativeWork ;
+    rdfs:label "Liber medicinae recensio α"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856230-7766557> a schema:CreativeWork ;
+    rdfs:label "Liber medicinae recensio β"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856232-456743> a schema:CreativeWork ;
+    rdfs:label "Libri de physicis fragmentum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856233-816496> a schema:CreativeWork ;
+    rdfs:label "Libri minores [De arte metrica / de metris Terentii; De figuris numerorum; Epistula ad Symmachum; Praexercitamina rhetorica siue de rhetorica]"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856235-0460732> a schema:CreativeWork ;
+    rdfs:label "L’epigrafia latina in Sardegna dopo il C.I.L. X e l’E.E. VIII"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856238-9453044> a schema:CreativeWork ;
+    rdfs:label "Medicorum placita in cod. Bruxellensi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856252-2071917> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Augustoduni a. 297-8 - oratio pro instaurandis scholis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856254-611417> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Constantino filio Constantii (Treueris a. 313 p. Chr.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856255-801701> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Constantino imperatori (Treueris a. 312 p. Chr.) - Gratiarum actio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856257-0595922> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Constantio Caesari (Treueris a. 297-8)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856258-2368994> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Constantino imperatori (Treueris a. 310 p. Chr.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856259-4416618> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Iuliano imperatori (Constantinopoli a. 362 p. Chr.) - Gratiarum actio de consulatu suo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856260-6381018> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Maximiano et Constantino (Treueris? a. 307 p. Chr.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856261-8808424> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Maximiano et Diocletiano (Treueris a. 289 p. Chr.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856263-0628438> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Treueris? a. 291 p. Chr. - Genethliacus  Maximiani Augusti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856265-7228012> a schema:CreativeWork ;
+    rdfs:label "Pauli Diaconi Epitome"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856268-1746342> a schema:CreativeWork ;
+    rdfs:label "Peri hermeneias liber Aristotelis latine uersus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856269-4397833> a schema:CreativeWork ;
+    rdfs:label "Periochae Liuii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856276-3957665> a schema:CreativeWork ;
+    rdfs:label "Physiologus latinus rec. B"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856277-5948045> a schema:CreativeWork ;
+    rdfs:label "Physiologus latinus recensio Y"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856282-3238225> a schema:CreativeWork ;
+    rdfs:label "Porphyrii Isagoge e Graeco uersa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856286-2026317> a schema:CreativeWork ;
+    rdfs:label "Praeceptum de loco communi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856287-393256> a schema:CreativeWork ;
+    rdfs:label "Praeceptum deliberatiuae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856289-797992> a schema:CreativeWork ;
+    rdfs:label "Praefatio comm. in Verg. Eclogas"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856295-692125> a schema:CreativeWork ;
+    rdfs:label "Pro Manilio Fragmenta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856319-18544> a schema:CreativeWork ;
+    rdfs:label "Prologi historiarum Philippicarum Pompei Trogi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856321-6315293> a schema:CreativeWork ;
+    rdfs:label "Prouinciarum laterculus Veronensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856328-1154883> a schema:CreativeWork ;
+    rdfs:label "Rubrica de iure criminali"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856332-2337127> a schema:CreativeWork ;
+    rdfs:label "Scholia cod. Memmiani in Suetonii Iul. 1-32"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856333-465101> a schema:CreativeWork ;
+    rdfs:label "Scholia in Germanici Aratea Sangermanensia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856334-6546857> a schema:CreativeWork ;
+    rdfs:label "Scholia in Germanici Aratea Strozziana"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856335-824688> a schema:CreativeWork ;
+    rdfs:label "Scholia in Germanici Aratea Basileensia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856336-9935946> a schema:CreativeWork ;
+    rdfs:label "Scholia in Horatium glossarum G appendicis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856338-214079> a schema:CreativeWork ;
+    rdfs:label "Scholia in Optatianum Porfyrium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856339-3780441> a schema:CreativeWork ;
+    rdfs:label "Scholia in Statii Achilleida"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856340-5612903> a schema:CreativeWork ;
+    rdfs:label "Scholia in Verg. Ecl. et Georg. Bernensia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856341-7524636> a schema:CreativeWork ;
+    rdfs:label "Scholia in Verg. codicis Medicei"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856343-0034401> a schema:CreativeWork ;
+    rdfs:label "Scholia in Verg. codicis rescripti Veronensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856344-2368257> a schema:CreativeWork ;
+    rdfs:label "Scholia in orationes Ciceronis codicum Cluniacensis 498 et Ambrosiani C 29"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856345-4257872> a schema:CreativeWork ;
+    rdfs:label "Scholia in orationes Ciceronis Gronouiana codicis Voss. lat. Q 138"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856346-6509724> a schema:CreativeWork ;
+    rdfs:label "Scholia in orationes Ciceronis codicis rescripti Bobiensis (Ambrosiana recentiora)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856347-827497> a schema:CreativeWork ;
+    rdfs:label "Scholia in orationes Ciceronis codicis Vaticani rescripti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856349-0202386> a schema:CreativeWork ;
+    rdfs:label "Sententiarum receptarum libri quinque, qui uulgo Iulio Paulo adhuc"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856360-870096> a schema:CreativeWork ;
+    rdfs:label "Testimonia et fragmenta (Cornelius Labeo)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856363-719659> a schema:CreativeWork ;
+    rdfs:label "Timaeus, a Calcidio translatus commentarioque instructus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856367-5984147> a schema:CreativeWork ;
+    rdfs:label "Vindolanda writing tablets edited by Bowman and Thomas (1983-2003) and Bowman, Thomas and Tomlin (2010-2019)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856370-474168> a schema:CreativeWork ;
+    rdfs:label "Vita M. Annaei Lucani"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856370-474169> a schema:CreativeWork ;
+    rdfs:label "Vita Vergilii (Seruius)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856376-4532557> a schema:CreativeWork ;
+    rdfs:label "Vita Vergilii (Bernensis)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856377-672007> a schema:CreativeWork ;
+    rdfs:label "Vitae Vergilii (Philargirius)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856379-3548644> a schema:CreativeWork ;
+    rdfs:label "[Gaius]  Gai Institutionum epitome"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856380-6143801> a schema:CreativeWork ;
+    rdfs:label "[Priscianus] de accentibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856381-845271> a schema:CreativeWork ;
+    rdfs:label "[Victorini siue Palaemonis] Ars"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759856383-0769265> a schema:CreativeWork ;
+    rdfs:label "σχήματα λόγου"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q21162615> a schema:CreativeWork ;
+    rdfs:label "Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q3721321> a schema:CreativeWork ;
+    rdfs:label "Propertius Elegiae"^^xsd:string .
+
+<https://www.wikidata.org/wiki/Q16386312> a schema:CreativeWork ;
+    rdfs:label "In Senatu In Toga Candida Contra C Antonium Et L Catilinam Competitores Fragmenta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729034329-548886/extraction-1755592940896-1> prov:used <https://lila-erc.eu/sparql/lila_knowledge_base/sparql?query=PREFIX%20dc%3A%20%3Chttp%3A//purl.org/dc/elements/1.1/%3E%0APREFIX%20rdf%3A%20%3Chttp%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%3E%0APREFIX%20powla%3A%20%3Chttp%3A//purl.org/powla/powla.owl%23%3E%0ASELECT%20%3Flabel%0AWHERE%20%7B%20%3Furi%20%3Fpred%20powla%3ADocument%20%3B%20dc%3Atitle%20%3Flabel%20%7D%20order%20by%20%3Flabel> .
+

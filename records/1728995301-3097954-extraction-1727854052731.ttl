@@ -1,0 +1,26 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q1067> a schema:Person ;
+    rdfs:label "Dante Alighieri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1092462> a schema:CreativeWork ;
+    rdfs:label "Le Rime"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134221> a schema:CreativeWork ;
+    rdfs:label "De Monarchia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18081> a schema:CreativeWork ;
+    rdfs:label "De vulgari eloquentia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18084> a schema:CreativeWork ;
+    rdfs:label "Vita Nuova"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q666014> a schema:CreativeWork ;
+    rdfs:label "Convivio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728995301-3097954/extraction-1727854052731/> prov:generatedAtTime "2025-10-01T20:16:06.485460"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+

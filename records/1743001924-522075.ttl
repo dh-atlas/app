@@ -1,34 +1,34 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <https://w3id.org/dh-atlas/> .
-@prefix default2: <http://dbpedia.org/ontology/> .
-@prefix default3: <http://www.w3.org/ns/prov#> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix ns3: <https://w3id.org/dh-atlas/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-default1:1743001924-522075 a schema:Dataset,
-        default1:DigitalScholarlyEdition ;
+ns3:1743001924-522075 a schema:Dataset,
+        ns3:DigitalScholarlyEdition ;
     rdfs:label "Wiki Leopardi"@it ;
-    :additionalType default1:DigitalScholarlyEdition ;
-    :creator default1:1729185527-9907804 ;
-    :description "Piattaforma che accoglie alcuni progetti di lavoro sull'opera di Giacomo Leopardi"@it ;
-    :name "Wiki Leopardi"@it ;
-    default1:servedBy default1:1743001314-3909655 .
+    ns2:additionalType ns3:DigitalScholarlyEdition ;
+    ns2:creator ns3:1729185527-9907804 ;
+    ns2:description "Piattaforma che accoglie alcuni progetti di lavoro sull'opera di Giacomo Leopardi"@it ;
+    ns2:name "Wiki Leopardi"@it ;
+    ns3:servedBy ns3:1743001314-3909655 .
 
 <https://w3id.org/dh-atlas/1743001924-522075/> rdfs:label "Wiki Leopardi"@it ;
-    default2:currentStatus "modified"^^xsd:string ;
-    :name "Wiki Leopardi"@it ;
-    default3:generatedAtTime "2025-04-01T15:16:08.020000+00:00"^^xsd:dateTime ;
-    default3:wasAttributedTo default1:valentina-dot-rossetti7-at-unibo-dot-it ;
-    default3:wasInfluencedBy default1:sebastiano-dot-giacomin2-at-unibo-dot-it .
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "Wiki Leopardi"@it ;
+    prov:generatedAtTime "2025-04-01T15:16:08.020402"^^xsd:dateTime ;
+    prov:wasAttributedTo ns3:anonymous ;
+    prov:wasInfluencedBy ns3:sebastiano-dot-giacomin2-at-unibo-dot-it .
 
-default1:1729185527-9907804 rdfs:label "Italia, Paola"^^xsd:string .
+ns3:1729185527-9907804 rdfs:label "Italia, Paola"^^xsd:string .
 
-default1:1743001314-3909655 rdfs:label "Wiki Leopardi - Website"^^xsd:string .
+ns3:1743001314-3909655 rdfs:label "Wiki Leopardi - Website"^^xsd:string .
 
-default1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+ns3:anonymous rdfs:label "anonymous" .
 
-default1:valentina-dot-rossetti7-at-unibo-dot-it rdfs:label "valentina.rossetti7@unibo.it" .
+ns3:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
 
-default1:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
+ns3:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
 

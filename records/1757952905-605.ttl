@@ -1,0 +1,28 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757952905-605> a schema:Person ;
+    rdfs:label "Fischer, Frank"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1757952997-289> ;
+    schema:identifier <https://orcid.org/0000-0003-2419-6629> ;
+    schema:name "Fischer, Frank"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q57697383> .
+
+<https://w3id.org/dh-atlas/1757952905-605/> rdfs:label "Fischer, Frank"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T16:50:07.120878"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Fischer, Frank"@en .
+
+<http://www.wikidata.org/entity/Q57697383> rdfs:label "Frank Fischer"^^xsd:string .
+
+<https://orcid.org/0000-0003-2419-6629> rdfs:label "0000-0003-2419-6629"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757952997-289> rdfs:label "Free University of Berlin"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

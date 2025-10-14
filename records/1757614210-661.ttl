@@ -1,0 +1,25 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757614210-661> a schema:Person ;
+    rdfs:label "Materni, Marta"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1747039653-148> ;
+    schema:identifier <https://orcid.org/0000-0002-1953-709X> ;
+    schema:name "Materni, Marta"@en .
+
+<https://w3id.org/dh-atlas/1757614210-661/> rdfs:label "Materni, Marta"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T18:14:01.033993"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Materni, Marta"@en .
+
+<https://orcid.org/0000-0002-1953-709X> rdfs:label "0000-0002-1953-709X"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1747039653-148> rdfs:label "University of Padua"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

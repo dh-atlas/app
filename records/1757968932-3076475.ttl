@@ -1,0 +1,106 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1757968932-3076475 a schema:Dataset ;
+    rdfs:label "The Medieval Kingdom of Sicily Image Database"@en ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    dcterms:conformsTo <http://www.wikidata.org/entity/Q611299>,
+        <https://www.sah.org/publications-and-research/sahara> ;
+    dcterms:type <http://w3id.org/knot/taxonomy/image_database> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ART-01> ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns1:1757969028-703,
+        ns1:1757970030-036,
+        ns1:1757970118-566,
+        ns1:1757970165-969,
+        ns1:1757970309-703,
+        ns1:1757970424-882,
+        ns1:1757970535-866,
+        ns1:1757970582-01 ;
+    schema:datePublished "2023-01-01"^^xsd:date ;
+    schema:description "An Image Archive of Monuments and Sites in Southern Italy c. 1100 - c. 1450"@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/querying> ;
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/JPEG>,
+        <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    schema:license <https://w3id.org/italia/controlled-vocabulary/licences/A11_CCO10>,
+        <https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> ;
+    schema:name "The Medieval Kingdom of Sicily Image Database"@en ;
+    schema:producer ns1:1757971088-283 ;
+    schema:publisher ns1:1757969306-0689976 ;
+    schema:size "7008 images"@en ;
+    schema:url <https://koseodiah.org/index.php> ;
+    schema:usageInfo <https://koseodiah.org/usingsite.php> ;
+    schema:version "Summer 2025"@en ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/cataloging>,
+        <https://vocabs.dariah.eu/tadirah/gathering> ;
+    ns1:servedBy ns1:1757972959-902 .
+
+<https://w3id.org/dh-atlas/1757968932-3076475/> rdfs:label "The Medieval Kingdom of Sicily Image Database"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T21:52:55.637115"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "The Medieval Kingdom of Sicily Image Database"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/JPEG> skos:prefLabel "JPEG - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/TIFF> skos:prefLabel "TIFF - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://w3id.org/knot/taxonomy/image_database> skos:prefLabel "image database - KNOT"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q611299> rdfs:label "Art & Architecture Thesaurus"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/cataloging> skos:prefLabel "Cataloging - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/gathering> skos:prefLabel "Gathering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
+
+ns1:1757969028-703 rdfs:label "Kozlowski, Sarah K."^^xsd:string .
+
+ns1:1757969306-0689976 rdfs:label "The Edith O’Donnell Institute of Art History (University of Texas at Dallas)"^^xsd:string .
+
+ns1:1757970030-036 rdfs:label "Vitolo, Paola"^^xsd:string .
+
+ns1:1757970118-566 rdfs:label "Grlic, Olga"^^xsd:string .
+
+ns1:1757970165-969 rdfs:label "Williams, Joseph C."^^xsd:string .
+
+ns1:1757970309-703 rdfs:label "Alibhai, Ali"^^xsd:string .
+
+ns1:1757970424-882 rdfs:label "Bruzelius, Caroline"^^xsd:string .
+
+ns1:1757970535-866 rdfs:label "Tremmel, David"^^xsd:string .
+
+ns1:1757970582-01 rdfs:label "Saunders, Katrina"^^xsd:string .
+
+ns1:1757971088-283 rdfs:label "The Medieval Kingdom of Sicily Image Database Project"^^xsd:string .
+
+ns1:1757972959-902 rdfs:label "The Medieval Kingdom of Sicily Image Database - Search Interface"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ART-01> skos:prefLabel "History of medieval art - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/licences/A11_CCO10> skos:prefLabel "Creative Commons CC0 1.0 Universal - Public Domain Dedication (CC0 1.0) - LICENSES"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> skos:prefLabel "Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0) - LICENSES"^^xsd:string .
+
+<https://www.sah.org/publications-and-research/sahara> rdfs:label "Society of Architectural Historians Architecture Resources Archive (SAHARA)"^^xsd:string .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+

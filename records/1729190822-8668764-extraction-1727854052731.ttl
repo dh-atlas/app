@@ -1,0 +1,11 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q171834> a schema:Person ;
+    rdfs:label "Aldo Moro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729190822-8668764/extraction-1727854052731/> prov:generatedAtTime "2025-10-07T12:11:48.714704"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+

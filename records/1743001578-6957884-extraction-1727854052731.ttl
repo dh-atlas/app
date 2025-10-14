@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q1401> a schema:Person ;
+    rdfs:label "Petrarch"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q777574> a schema:CreativeWork ;
+    rdfs:label "Il Canzoniere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743001578-6957884/extraction-1727854052731/> prov:generatedAtTime "2025-09-17T09:54:21.145946"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+

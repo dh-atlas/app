@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757947652-634> a schema:Organization ;
+    rdfs:label "University of Bergamo"@en ;
+    schema:identifier <https://ror.org/02mbd5571> ;
+    schema:location <https://sws.geonames.org/3182164> ;
+    schema:name "University of Bergamo"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q45855> ;
+    schema:url <https://www.unibg.it/> .
+
+<https://w3id.org/dh-atlas/1757947652-634/> rdfs:label "University of Bergamo"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T15:03:36.799889"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "University of Bergamo"@en .
+
+<http://www.wikidata.org/entity/Q45855> rdfs:label "University of Bergamo"^^xsd:string .
+
+<https://sws.geonames.org/3182164> rdfs:label "Bergamo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757973620-587> a schema:Organization ;
+    rdfs:label "NVIDIA (Italy)"@en ;
+    schema:identifier <https://ror.org/04z2hsy54> ;
+    schema:location <https://sws.geonames.org/3173435> ;
+    schema:name "NVIDIA (Italy)"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q124845760> ;
+    schema:url <https://www.nvidia.com/it-it/> .
+
+<https://w3id.org/dh-atlas/1757973620-587/> rdfs:label "NVIDIA (Italy)"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T22:04:44.714278"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "NVIDIA (Italy)"@en .
+
+<http://www.wikidata.org/entity/Q124845760> rdfs:label "NVIDIA (Italy)"^^xsd:string .
+
+<https://sws.geonames.org/3173435> rdfs:label "Milan"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

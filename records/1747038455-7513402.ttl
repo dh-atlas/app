@@ -1,6 +1,6 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <https://w3id.org/dh-atlas/> .
-@prefix ns2: <http://schema.org/> .
-@prefix ns3: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
@@ -10,28 +10,34 @@
 ns1:1747038455-7513402 a schema:Dataset,
         ns1:TextCollection ;
     rdfs:label "RIALFrI - Digital Repertory of Medieval Franco-Italian Literature"@en ;
-    ns2:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-09> ;
-    ns2:additionalType ns1:TextCollection ;
-    ns2:citation <https://hdl.handle.net/11577/2526042> ;
-    ns2:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    ns2:contributor ns1:1729161349-6181638,
-        ns1:1747040396-23 ;
-    ns2:creator ns1:1747039339-405 ;
-    ns2:datePublished "2022-01-01"^^xsd:date ;
-    ns2:description "RIALFrI (Digital Repertory of Medieval Franco-Italian Literature) is a collection of medieval Franco-Italian literary texts written in Northern Italy between the 13th and 15th centuries. These works feature a unique hybrid language that combines French and Italian dialects. The collection is accessible via a website that offers a comprehensive field bibliography, manuscript and early book reproductions, introductory notes to individual texts, philological apparatuses, and linguistic analyses. A search engine allows users to explore the texts."@en ;
-    ns2:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-09> ;
+    schema:additionalType ns1:TextCollection ;
+    schema:citation <https://hdl.handle.net/11577/2526042> ;
+    schema:contributor ns1:1729161349-6181638,
+        ns1:1757614277-911 ;
+    schema:creator ns1:1747039339-405,
+        ns1:1747040396-23,
+        ns1:1757613930-455,
+        ns1:1757613977-751,
+        ns1:1757614018-245,
+        ns1:1757614063-711,
+        ns1:1757614161-902,
+        ns1:1757614210-661 ;
+    schema:datePublished "2022-01-01"^^xsd:date ;
+    schema:description "RIALFrI (Digital Repertory of Medieval Franco-Italian Literature) is a collection of medieval Franco-Italian literary texts written in Northern Italy between the 13th and 15th centuries. These works feature a unique hybrid language that combines French and Italian dialects. The collection is accessible via a website that offers a comprehensive field bibliography, manuscript and early book reproductions, introductory notes to individual texts, philological apparatuses, and linguistic analyses. A search engine allows users to explore the texts."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
         <https://vocabs.dariah.eu/tadirah/searching> ;
-    ns2:genre "poetry, letters, chivalric romance"@en ;
-    ns2:identifier "ISSN 2282-6920"@en ;
-    ns2:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+    schema:identifier "ISSN 2282-6920"@en ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/FRA>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
-    ns2:name "RIALFrI - Digital Repertory of Medieval Franco-Italian Literature"@en,
+    schema:name "RIALFrI - Digital Repertory of Medieval Franco-Italian Literature"@en,
         "RIALFrI - Repertorio Informatizzato Antica Letteratura Franco-Italiana"@it ;
-    ns2:publisher ns1:1747039653-148 ;
-    ns2:size "206 works"@en ;
-    ns2:url <https://www.rialfri.eu/> ;
-    ns2:version "2.0"@en ;
+    schema:publisher ns1:1747039653-148 ;
+    schema:size "206 works"@en ;
+    schema:url <https://www.rialfri.eu/> ;
+    schema:version "2.0"@en ;
     ns1:methodology <https://vocabs.dariah.eu/tadirah/collecting>,
         <https://vocabs.dariah.eu/tadirah/description>,
         <https://vocabs.dariah.eu/tadirah/editing>,
@@ -39,10 +45,11 @@ ns1:1747038455-7513402 a schema:Dataset,
         <https://vocabs.dariah.eu/tadirah/lemmatizing> .
 
 <https://w3id.org/dh-atlas/1747038455-7513402/> rdfs:label "RIALFrI - Digital Repertory of Medieval Franco-Italian Literature"@en ;
-    ns3:currentStatus "not modified"^^xsd:string ;
-    ns2:name "RIALFrI - Digital Repertory of Medieval Franco-Italian Literature"@en ;
-    prov:generatedAtTime "2025-05-12T09:13:02.092650"^^xsd:dateTime ;
-    prov:wasAttributedTo ns1:chiaramartignano-at-gmail-dot-com .
+    ns2:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T18:12:35.264612"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:chiaramartignano-at-gmail-dot-com ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "RIALFrI - Digital Repertory of Medieval Franco-Italian Literature"@en .
 
 <http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
 
@@ -68,13 +75,29 @@ ns1:1747038455-7513402 a schema:Dataset,
 
 ns1:1729161349-6181638 rdfs:label "Tessarolo, Luigi"^^xsd:string .
 
-ns1:1747039339-405 rdfs:label "Francesca Gambino"^^xsd:string .
+ns1:1747039339-405 rdfs:label "Gambino, Francesca"^^xsd:string .
 
 ns1:1747039653-148 rdfs:label "University of Padua"^^xsd:string .
 
-ns1:1747040396-23 rdfs:label "Serena Modena"^^xsd:string .
+ns1:1747040396-23 rdfs:label "Modena, Serena"^^xsd:string .
+
+ns1:1757613930-455 rdfs:label "Brugnolo, Furio"^^xsd:string .
+
+ns1:1757613977-751 rdfs:label "Peron, Gianfelice"^^xsd:string .
+
+ns1:1757614018-245 rdfs:label "Renzi, Lorenzo"^^xsd:string .
+
+ns1:1757614063-711 rdfs:label "Ceresato, Floriana"^^xsd:string .
+
+ns1:1757614161-902 rdfs:label "Fassanelli, Rachele"^^xsd:string .
+
+ns1:1757614210-661 rdfs:label "Materni, Marta"^^xsd:string .
+
+ns1:1757614277-911 rdfs:label "Visentin, Mirko"^^xsd:string .
 
 ns1:chiaramartignano-at-gmail-dot-com rdfs:label "chiaramartignano@gmail.com" .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-09> skos:prefLabel "Romance philology and linguistics - ACADEMIC FIELD"^^xsd:string .
 

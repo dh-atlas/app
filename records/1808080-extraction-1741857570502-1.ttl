@@ -1,0 +1,16 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q46408> rdfs:label "Georgia O" .
+
+<http://www.wikidata.org/entity/Q5589> rdfs:label "Henri Matisse" .
+
+<http://www.wikidata.org/entity/Q5593> rdfs:label "Pablo Picasso" .
+
+<https://w3id.org/dh-atlas/1808080/extraction-1741857570502-1/> prov:generatedAtTime "2025-03-17T09:37:08.562588"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1808080/extraction-1741857570502-1> .
+
+<https://w3id.org/dh-atlas/1808080/extraction-1741857570502-1> prov:used <http://sparqlanything:3000/sparql.anything?query=SELECT%20%3Flabel%20WHERE%20%7B%20%7BSELECT%20%3Flabel%20WHERE%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20SERVICE%20%3Cx-sparql-anything%3Ahttps%3A//raw.githubusercontent.com/art-institute-of-chicago/api-data/master/getting-started/someArtworks.csv%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fnode%20%3FkeyProperties%20%3Flabel%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20VALUES%20%3FkeyProperties%20%7B%20rdf%3A_5%20%7D%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20FILTER%28isLiteral%28%3Flabel%29%20%26%26%20datatype%28%3Flabel%29%20%3D%20xsd%3Astring%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%7D%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20GROUP%20BY%20%3Flabel%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20HAVING%20%28COUNT%28%3Flabel%29%20%3E%3D%205%29> .
+

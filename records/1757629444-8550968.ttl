@@ -1,0 +1,84 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix ns3: <http://ontosoft.org/software#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1757629444-8550968 a schema:Dataset,
+        ns1:Software ;
+    rdfs:label "SpiderGL"@en ;
+    ns3:hasCodeLocation <https://github.com/dibenedetto/SpiderGL> ;
+    ns3:hasImplementationLanguage <http://www.wikidata.org/entity/Q2005> ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-B>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-10-A1>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ANT-01>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ART-04> ;
+    schema:additionalType ns1:Software ;
+    schema:citation <https://doi.org/10.5194/isprsarchives-XXXVIII-5-W16-467-2011> ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns1:1757629716-484 ;
+    schema:datePublished "2013-01-01"^^xsd:date ;
+    schema:description "SpiderGL is a JavaScript 3D Graphics library which relies on WebGL for realtime rendering. SpiderGL provides typical structures and algorithms for realtime rendering to developers of 3D graphics web application,withoutforcingthem to comply with some specific paradigm (i.e. it is not a scene graph) nor preventing low level access to the underlying WebGL graphics layer. "@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/capturing>,
+        <https://vocabs.dariah.eu/tadirah/graphicsProgramming> ;
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/JS> ;
+    schema:isBasedOn <http://www.wikidata.org/entity/Q375913> ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/BSD_3_CLAUSE> ;
+    schema:name "SpiderGL"@en ;
+    schema:publisher ns1:1728998303-4028718,
+        ns1:1728999602-7282345,
+        ns1:1757614943-767 ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/programming> .
+
+<https://w3id.org/dh-atlas/1757629444-8550968/> rdfs:label "SpiderGL"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T22:43:59.661840"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:anonymous ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "SpiderGL"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/JS> skos:prefLabel "JavaScript - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/BSD_3_CLAUSE> skos:prefLabel "3-Clause BSD License - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2005> rdfs:label "JavaScript"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q375913> rdfs:label "WebGL"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/capturing> skos:prefLabel "Capturing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/graphicsProgramming> skos:prefLabel "Graphics Programming - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/programming> skos:prefLabel "Programming - TADIRAH"^^xsd:string .
+
+ns1:1728998303-4028718 rdfs:label "Istituto di Scienza e Tecnologie dell’Informazione “Alessandro Faedo” (CNR)"^^xsd:string .
+
+ns1:1728999602-7282345 rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+ns1:1757614943-767 rdfs:label "Visual Computing Lab (ISTI - CNR)"^^xsd:string .
+
+ns1:1757629716-484 rdfs:label "Di Benedetto, Marco"^^xsd:string .
+
+ns1:anonymous rdfs:label "anonymous" .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-B> skos:prefLabel "Art history - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-10-A1> skos:prefLabel "Archaeology - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ANT-01> skos:prefLabel "Prehistory and early history - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ART-04> skos:prefLabel "Museology, art and restoration criticism - ACADEMIC FIELD"^^xsd:string .
+
+ns1:Software rdfs:label "Software"^^xsd:string .
+

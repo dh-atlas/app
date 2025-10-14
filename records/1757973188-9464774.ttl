@@ -1,0 +1,96 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1757973188-9464774 a schema:Dataset,
+        ns1:LanguageModel ;
+    rdfs:label "Minerva 7B"@en ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-01-B>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-12> ;
+    schema:additionalType ns1:LanguageModel ;
+    schema:applicationCategory <https://huggingface.co/models?pipeline_tag=text-generation> ;
+    schema:contributor ns1:1757973553-81,
+        ns1:1757973719-452,
+        ns1:1757973945-917 ;
+    schema:creator ns1:1757973400-457 ;
+    schema:datePublished "2024-01-01"^^xsd:date ;
+    schema:description "Minerva 7B is the most powerful Langua Model in the Minerva AI LLMs, which is a family of Large Language Models pretrained from scratch in Italian developed by Sapienza NLP in collaboration with Future Artificial Intelligence Research (FAIR) and CINECA. The Minerva models are open (data and model) Italian-English LLMs, with approximately half of the pretraining data composed of Italian text. It is possible to chat with Minerva for free through the app."@en ;
+    schema:distribution <https://huggingface.co/sapienzanlp/Minerva-7B-base-v1.0> ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+        <https://vocabs.dariah.eu/tadirah/correcting>,
+        <https://vocabs.dariah.eu/tadirah/creating> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    schema:isBasedOn <https://huggingface.co/datasets/Babelscape/ALERT>,
+        <https://huggingface.co/datasets/HuggingFaceH4/ultrafeedback_binarized>,
+        <https://huggingface.co/datasets/efederici/evol-dpo-ita> ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/APACHE_2_0> ;
+    schema:name "Minerva 7B"@en ;
+    schema:publisher ns1:1729032657-3542836 ;
+    schema:size "7 billion parameters"@en ;
+    schema:url <https://minerva-ai.org/> ;
+    schema:usageInfo <https://minerva-ai.org/blog> ;
+    schema:version "1.0"@en ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/machineLearning>,
+        <https://vocabs.dariah.eu/tadirah/modeling> ;
+    ns1:servedBy ns1:1758275502-579 .
+
+<https://w3id.org/dh-atlas/1757973188-9464774/> rdfs:label "Minerva 7B"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-19T09:53:30.698259"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "Minerva 7B"@en .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/APACHE_2_0> skos:prefLabel "Apache License, Version 2.0 - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<https://huggingface.co/datasets/Babelscape/ALERT> rdfs:label "Babelscape/ALERT"^^xsd:string .
+
+<https://huggingface.co/datasets/HuggingFaceH4/ultrafeedback_binarized> rdfs:label "HuggingFaceH4"^^xsd:string .
+
+<https://huggingface.co/datasets/efederici/evol-dpo-ita> rdfs:label "efederici/evol-dpo-ita"^^xsd:string .
+
+<https://huggingface.co/models?pipeline_tag=text-generation> rdfs:label "Text Generation"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/correcting> skos:prefLabel "Correcting - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/creating> skos:prefLabel "Creating - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/machineLearning> skos:prefLabel "Machine Learning - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/modeling> skos:prefLabel "Modeling - TADIRAH"^^xsd:string .
+
+ns1:1729032657-3542836 rdfs:label "Sapienza University of Rome"^^xsd:string .
+
+ns1:1757973400-457 rdfs:label "Sapienza Natural Language Processing Group (Sapienza NLP)"^^xsd:string .
+
+ns1:1757973553-81 rdfs:label "Fiameni, Giuseppe"^^xsd:string .
+
+ns1:1757973719-452 rdfs:label "Orlandini, Sergio"^^xsd:string .
+
+ns1:1757973945-917 rdfs:label "Babelscape"^^xsd:string .
+
+ns1:1758275502-579 rdfs:label "Minerva - Open WebUI (Website)"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-01-B> skos:prefLabel "Informatics - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-12> skos:prefLabel "Italian linguistics - ACADEMIC FIELD"^^xsd:string .
+
+ns1:LanguageModel rdfs:label "Language Model"^^xsd:string .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+

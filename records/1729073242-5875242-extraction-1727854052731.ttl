@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q1273> a schema:Place ;
+    rdfs:label "Tuscany"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q624005> a schema:Thing ;
+    rdfs:label "CIDOC Conceptual Reference Model"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729073242-5875242/extraction-1727854052731/> prov:generatedAtTime "2025-09-17T21:53:26.043890"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+

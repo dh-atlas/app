@@ -1,0 +1,28 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758272528-813> a schema:ResearchProject ;
+    rdfs:label "Brancacci VR Project"@en ;
+    schema:description "The DHILab of CNR ISPC has been engaged in a project to enhance the Brancacci Chapel in Florence, in collaboration with the Municipality of Florence. The project is part of a broader research line focused on designing interactive experiences aimed at strengthening both the perception of authenticity and the sense of care and concern for cultural heritage."@en ;
+    schema:dissolutionDate "2023-01-01"^^xsd:date ;
+    schema:foundingDate "2021-01-01"^^xsd:date ;
+    schema:location <https://sws.geonames.org/3176959> ;
+    schema:name "Brancacci VR Project"@en ;
+    schema:url <https://www.ispc.cnr.it/it_it/terza-missione/technology-and-knowledge-transfer/brancacci/> .
+
+<https://w3id.org/dh-atlas/1758272528-813/> rdfs:label "Brancacci VR Project"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-19T09:22:20.528845"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Brancacci VR Project"@en .
+
+<https://sws.geonames.org/3176959> rdfs:label "Florence"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

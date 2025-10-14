@@ -1,0 +1,28 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758272291-231> a schema:Organization ;
+    rdfs:label "Florence Municipality"@en ;
+    schema:location <https://sws.geonames.org/3176959> ;
+    schema:name "Florence Municipality"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q113117780> ;
+    schema:url <https://www.comune.firenze.it/> .
+
+<https://w3id.org/dh-atlas/1758272291-231/> rdfs:label "Florence Municipality"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-19T09:21:27.198905"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Florence Municipality"@en .
+
+<http://www.wikidata.org/entity/Q113117780> rdfs:label "municipality of Florenze"^^xsd:string .
+
+<https://sws.geonames.org/3176959> rdfs:label "Florence"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

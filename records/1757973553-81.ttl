@@ -1,0 +1,25 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757973553-81> a schema:Person ;
+    rdfs:label "Fiameni, Giuseppe"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1757973620-587> ;
+    schema:identifier <https://orcid.org/0000-0001-8687-6609> ;
+    schema:name "Fiameni, Giuseppe"@en .
+
+<https://w3id.org/dh-atlas/1757973553-81/> rdfs:label "Fiameni, Giuseppe"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T22:04:25.111745"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Fiameni, Giuseppe"@en .
+
+<https://orcid.org/0000-0001-8687-6609> rdfs:label "0000-0001-8687-6609"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757973620-587> rdfs:label "NVIDIA (Italy)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

@@ -1,0 +1,11 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q826165> a schema:Thing ;
+    rdfs:label "Web Ontology Language"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757630912-9070814/extraction-1727854052731/> prov:generatedAtTime "2025-09-17T10:07:12.452561"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+

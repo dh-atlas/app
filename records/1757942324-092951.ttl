@@ -1,0 +1,26 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757942324-092951> a schema:Organization ;
+    rdfs:label "King's Digital Lab"@en ;
+    schema:location <https://sws.geonames.org/2643743> ;
+    schema:name "King's Digital Lab"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q76822545> ;
+    schema:url <https://kdl.kcl.ac.uk/> .
+
+<https://w3id.org/dh-atlas/1757942324-092951/> rdfs:label "King's Digital Lab"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T13:20:48.227774"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "King's Digital Lab"@en .
+
+<http://www.wikidata.org/entity/Q76822545> rdfs:label "King's Digital Lab"^^xsd:string .
+
+<https://sws.geonames.org/2643743> rdfs:label "London"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

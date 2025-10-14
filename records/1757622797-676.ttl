@@ -1,0 +1,24 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757622797-676> a schema:Dataset,
+        <https://w3id.org/dh-atlas/Software> ;
+    rdfs:label "Nexus"@en ;
+    schema:additionalType <https://w3id.org/dh-atlas/Software> ;
+    schema:description "Nexus is a collection of tools for streaming visualization of large 3D models in OpenGL (C++ and Javascript)."@en ;
+    schema:name "Nexus"@en ;
+    schema:url <https://vcg.isti.cnr.it/vcgtools/nexus/> .
+
+<https://w3id.org/dh-atlas/1757622797-676/> rdfs:label "Nexus"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T22:14:36.073024"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Nexus"@en .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/dh-atlas/Software> rdfs:label "Software"^^xsd:string .
+

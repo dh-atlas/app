@@ -1,0 +1,22 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757521990-316> a schema:SoftwareApplication ;
+    rdfs:label "EpiLexO Search"@en ;
+    schema:applicationCategory <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> ;
+    schema:name "EpiLexO Search"@en ;
+    schema:url <https://digitant.ilc.cnr.it/platform/texts> .
+
+<https://w3id.org/dh-atlas/1757521990-316/> rdfs:label "EpiLexO Search"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-10T16:41:31.472320"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "EpiLexO Search"@en .
+
+<http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

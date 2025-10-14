@@ -1,52 +1,52 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://purl.org/dc/terms/> .
-@prefix default2: <https://w3id.org/dh-atlas/> .
-@prefix default3: <http://dbpedia.org/ontology/> .
-@prefix default4: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix ns3: <https://w3id.org/dh-atlas/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-default2:1743001493-2825334 a schema:Dataset,
-        default2:DigitalScholarlyEdition ;
+ns3:1743001493-2825334 a schema:Dataset,
+        ns3:DigitalScholarlyEdition ;
     rdfs:label "Dante Alighieri: Commedia - A Digital Edition"@en ;
-    default1:conformsTo <http://www.wikidata.org/entity/Q780920>,
+    ns1:expressionOf <http://www.wikidata.org/entity/Q40185> ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    dcterms:conformsTo <http://www.wikidata.org/entity/Q780920>,
         <http://www.wikidata.org/entity/Q95728930> ;
-    default1:source <http://www.wikidata.org/entity/Q40185> ;
-    :about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-10>,
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-10>,
         <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-13> ;
-    :additionalType default2:DigitalScholarlyEdition ;
-    :conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    :creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
-    :creator default2:1743001740-919 ;
-    :description "This web site contains high-resolution full colour digital images and highly-detailed transcriptions of seven key early manuscripts of Dante’s Commedia – some of the most precious and beautiful surviving copies of the poem. It contains the text of two landmark print editions, those of Giorgio Petrocchi (1966) and Federico Sanguineti (2001). It offers a full word-by-word collation of the text, showing all variants at every word, viewable in either the original manuscript spelling or in a standardised form.A comprehensive introduction by the editor explains the methodology of the transcriptions, and gives detailed transcription notes, as well as descriptions, for each manuscript. It analyses the interrelationships between the manuscripts, testing the editorial hypothesis of manuscript relations which underlies the Sanguineti edition, for whom these seven manuscripts were both ‘necessary and sufficient’ to produce a scholarly critical edition of the poem. As well as providing all the primary evidence for scholars wishing to explore the Sanguineti edition and its relationship to the Petrocchi edition, and a detailed analysis of that evidence, the web site will be a valuable teaching tool for palaeographers, codicologists and textual critics.A new Preface (2021) explains how this second edition of the web site stands in relation to the first edition (2010). "@en ;
-    :educationalUse <https://vocabs.dariah.eu/tadirah/collating>,
+    schema:additionalType ns3:DigitalScholarlyEdition ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns3:1743001740-919 ;
+    schema:description "This web site contains high-resolution full colour digital images and highly-detailed transcriptions of seven key early manuscripts of The Divine Comedy (Divina Commedia) by Dante Alighieri – some of the most precious and beautiful surviving copies of the poem. It contains the text of two landmark print editions, those of Giorgio Petrocchi (1966) and Federico Sanguineti (2001). It offers a full word-by-word collation of the text, showing all variants at every word, viewable in either the original manuscript spelling or in a standardised form.A comprehensive introduction by the editor explains the methodology of the transcriptions, and gives detailed transcription notes, as well as descriptions, for each manuscript. It analyses the interrelationships between the manuscripts, testing the editorial hypothesis of manuscript relations which underlies the Sanguineti edition, for whom these seven manuscripts were both ‘necessary and sufficient’ to produce a scholarly critical edition of the poem. As well as providing all the primary evidence for scholars wishing to explore the Sanguineti edition and its relationship to the Petrocchi edition, and a detailed analysis of that evidence, the web site will be a valuable teaching tool for palaeographers, codicologists and textual critics. A new Preface (2021) explains how this second edition of the web site stands in relation to the first edition (2010)."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/collating>,
         <https://vocabs.dariah.eu/tadirah/encoding>,
         <https://vocabs.dariah.eu/tadirah/modeling>,
         <https://vocabs.dariah.eu/tadirah/publishing>,
         <https://vocabs.dariah.eu/tadirah/transcribing> ;
-    :encodingFormat <http://publications.europa.eu/resource/authority/file-type/XML> ;
-    :genre <http://www.wikidata.org/entity/Q5185279> ;
-    :identifier "ISBN: 1-904628-21-4"@en ;
-    :inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    schema:genre <https://sparql.cwrc.ca/ontologies/genre.html#longPoem>,
+        <https://sparql.cwrc.ca/ontologies/genre.html#poetry> ;
+    schema:identifier "ISBN: 1-904628-21-4"@en ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
-    :name "Dante Alighieri: Commedia - A Digital Edition"@en ;
-    :publisher default2:1743001909-74,
-        default2:1743001979-769 ;
-    :url <https://dantecommedia.it/> ;
-    :usageInfo <https://dantecommedia.it/Editorial%20Matter.pdf> ;
-    :version "Second edition"@en ;
-    default2:editionType <http://www.w3id.org/dh-atlas/CriticalEdition> ;
-    default2:referencedAuthor <http://www.wikidata.org/entity/Q1067> ;
-    default2:referencedWorkType <http://www.w3id.org/dh-atlas/SingleWork> .
+    schema:name "Dante Alighieri: Commedia - A Digital Edition"@en ;
+    schema:publisher ns3:1743001909-74,
+        ns3:1743001979-769 ;
+    schema:url <https://dantecommedia.it/> ;
+    schema:usageInfo <https://dantecommedia.it/Editorial%20Matter.pdf> ;
+    schema:version "Second edition"@en ;
+    ns3:referencedAuthor <http://www.wikidata.org/entity/Q1067> .
 
 <https://w3id.org/dh-atlas/1743001493-2825334/> rdfs:label "Dante Alighieri: Commedia - A Digital Edition"@en ;
-    default3:currentStatus "modified"^^xsd:string ;
-    :name "Dante Alighieri: Commedia - A Digital Edition"@en ;
-    default4:generatedAtTime "2025-04-01T16:19:24.234000+00:00"^^xsd:dateTime ;
-    default4:wasAttributedTo default2:elena-dot-spadini-at-unibas-dot-ch ;
-    default4:wasInfluencedBy default2:sebastiano-dot-giacomin2-at-unibo-dot-it .
+    ns2:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-16T14:36:33.187025"^^xsd:dateTime ;
+    prov:wasAttributedTo ns3:elena-dot-spadini-at-unibas-dot-ch ;
+    prov:wasInfluencedBy ns3:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:keywords <https://w3id.org/dh-atlas/1743001493-2825334/extraction-1727854052731/> ;
+    schema:name "Dante Alighieri: Commedia - A Digital Edition"@en .
 
 <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
 
@@ -58,19 +58,17 @@ default2:1743001493-2825334 a schema:Dataset,
 
 <http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
 
-<http://www.w3id.org/dh-atlas/CriticalEdition> rdfs:label "Critical Edition"^^xsd:string .
-
-<http://www.w3id.org/dh-atlas/SingleWork> rdfs:label "Single Work"^^xsd:string .
-
 <http://www.wikidata.org/entity/Q1067> rdfs:label "Dante Alighieri"^^xsd:string .
 
 <http://www.wikidata.org/entity/Q40185> rdfs:label "The Divine Comedy"^^xsd:string .
 
-<http://www.wikidata.org/entity/Q5185279> rdfs:label "poem"^^xsd:string .
-
 <http://www.wikidata.org/entity/Q780920> rdfs:label "Text Encoding Initiative"^^xsd:string .
 
 <http://www.wikidata.org/entity/Q95728930> rdfs:label "TEI P5"^^xsd:string .
+
+<https://sparql.cwrc.ca/ontologies/genre.html#longPoem> rdfs:label "Long Poem"^^xsd:string .
+
+<https://sparql.cwrc.ca/ontologies/genre.html#poetry> rdfs:label "Poetry"^^xsd:string .
 
 <https://vocabs.dariah.eu/tadirah/collating> skos:prefLabel "Collating - TADIRAH"^^xsd:string .
 
@@ -82,19 +80,19 @@ default2:1743001493-2825334 a schema:Dataset,
 
 <https://vocabs.dariah.eu/tadirah/transcribing> skos:prefLabel "Transcribing - TADIRAH"^^xsd:string .
 
-default2:1743001740-919 rdfs:label "Shaw, Prue"^^xsd:string .
+ns3:1743001740-919 rdfs:label "Shaw, Prue"^^xsd:string .
 
-default2:1743001909-74 rdfs:label "Fondazione Ezio Franceschini"^^xsd:string .
+ns3:1743001909-74 rdfs:label "Fondazione Ezio Franceschini"^^xsd:string .
 
-default2:1743001979-769 rdfs:label "Inkless Editions"^^xsd:string .
+ns3:1743001979-769 rdfs:label "Inkless Editions"^^xsd:string .
 
-default2:elena-dot-spadini-at-unibas-dot-ch rdfs:label "elena.spadini@unibas.ch" .
+ns3:elena-dot-spadini-at-unibas-dot-ch rdfs:label "elena.spadini@unibas.ch" .
 
-default2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+ns3:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-10> skos:prefLabel "Italian literature - ACADEMIC FIELD"^^xsd:string .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-13> skos:prefLabel "Philology of italian literature - ACADEMIC FIELD"^^xsd:string .
 
-default2:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
+ns3:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
 

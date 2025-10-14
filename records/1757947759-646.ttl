@@ -1,0 +1,26 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757947759-646> a schema:Organization ;
+    rdfs:label "SISMEL Edizioni del Galluzzo"@en ;
+    schema:location <https://sws.geonames.org/3176959> ;
+    schema:name "SISMEL Edizioni del Galluzzo"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q85138432> ;
+    schema:url <https://www.sismel.it/> .
+
+<https://w3id.org/dh-atlas/1757947759-646/> rdfs:label "SISMEL Edizioni del Galluzzo"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T15:04:12.484621"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "SISMEL Edizioni del Galluzzo"@en .
+
+<http://www.wikidata.org/entity/Q85138432> rdfs:label "SISMEL – Edizioni del Galluzzo"^^xsd:string .
+
+<https://sws.geonames.org/3176959> rdfs:label "Florence"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

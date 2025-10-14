@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757629716-484> a schema:Person ;
+    rdfs:label "Di Benedetto, Marco"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728998303-4028718> ;
+    schema:identifier <https://orcid.org/0000-0001-5781-7060> ;
+    schema:name "Di Benedetto, Marco"@en .
+
+<https://w3id.org/dh-atlas/1757629716-484/> rdfs:label "Di Benedetto, Marco"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T22:42:05.862987"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Di Benedetto, Marco"@en .
+
+<https://orcid.org/0000-0001-5781-7060> rdfs:label "0000-0001-5781-7060"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728998303-4028718> rdfs:label "Istituto di Scienza e Tecnologie dell’Informazione “Alessandro Faedo” (CNR)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

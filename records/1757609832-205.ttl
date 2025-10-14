@@ -1,0 +1,26 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757609832-205> a schema:Organization ;
+    rdfs:label "Scuola Normale Superiore"@en ;
+    schema:identifier <https://ror.org/03aydme10> ;
+    schema:location <https://sws.geonames.org/3170647> ;
+    schema:name "Scuola Normale Superiore"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q672416> ;
+    schema:url <https://www.sns.it/> .
+
+<https://w3id.org/dh-atlas/1757609832-205/> rdfs:label "Scuola Normale Superiore"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T17:28:39.829364"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Scuola Normale Superiore"@en .
+
+<http://www.wikidata.org/entity/Q672416> rdfs:label "Scuola Normale Superiore"^^xsd:string .
+
+<https://sws.geonames.org/3170647> rdfs:label "Pisa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

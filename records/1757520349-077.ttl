@@ -1,0 +1,30 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757520349-077> a schema:Person ;
+    rdfs:label "Bellandi, Andrea"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728999602-7282345>,
+        <https://w3id.org/dh-atlas/1729013958-5402913> ;
+    schema:identifier <https://orcid.org/0000-0002-1900-5616> ;
+    schema:name "Bellandi, Andrea"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q96601869> .
+
+<https://w3id.org/dh-atlas/1757520349-077/> rdfs:label "Bellandi, Andrea"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-10T16:39:53.223575"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Bellandi, Andrea"@en .
+
+<http://www.wikidata.org/entity/Q96601869> rdfs:label "Andrea Bellandi"^^xsd:string .
+
+<https://orcid.org/0000-0002-1900-5616> rdfs:label "0000-0002-1900-5616"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728999602-7282345> rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729013958-5402913> rdfs:label "Istituto di Linguistica Computazionale "^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

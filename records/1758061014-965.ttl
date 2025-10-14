@@ -1,0 +1,23 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758061014-965> a schema:Organization ;
+    rdfs:label "Istituto di Scienze del Patrimonio Culturale (CNR)"@it ;
+    schema:name "Istituto di Scienze del Patrimonio Culturale (CNR)"@it ;
+    schema:sameAs <http://www.wikidata.org/entity/Q125592016> ;
+    schema:url <https://www.ispc.cnr.it/en/> .
+
+<https://w3id.org/dh-atlas/1758061014-965/> rdfs:label "Istituto di Scienze del Patrimonio Culturale (CNR)"@it ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-16T22:19:29.346672"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Istituto di Scienze del Patrimonio Culturale (CNR)"@it .
+
+<http://www.wikidata.org/entity/Q125592016> rdfs:label "Institute of Heritage Science"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

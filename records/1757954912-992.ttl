@@ -1,0 +1,22 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757954912-992> a schema:ResearchProject ;
+    rdfs:label "Drama Corpora Project"@en ;
+    schema:description "The Drama Corpora Project aims to build an open digital humanities platform with richly annotated, interconnected drama corpora for computational analysis, network exploration, literary comparison, and cross-linguistic cultural research."@en ;
+    schema:foundingDate "2017-01-01"^^xsd:date ;
+    schema:name "Drama Corpora Project"@en ;
+    schema:url <https://dracor.org/> .
+
+<https://w3id.org/dh-atlas/1757954912-992/> rdfs:label "Drama Corpora Project"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T18:03:55.013935"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Drama Corpora Project"@en .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

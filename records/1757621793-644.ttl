@@ -1,0 +1,33 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757621793-644> a schema:Person ;
+    rdfs:label "Potenziani, Marco"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728998303-4028718>,
+        <https://w3id.org/dh-atlas/1728999602-7282345>,
+        <https://w3id.org/dh-atlas/1757614943-767> ;
+    schema:identifier <https://orcid.org/0000-0003-4644-4638> ;
+    schema:name "Potenziani, Marco"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q134175094> .
+
+<https://w3id.org/dh-atlas/1757621793-644/> rdfs:label "Potenziani, Marco"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T20:29:23.094964"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Potenziani, Marco"@en .
+
+<http://www.wikidata.org/entity/Q134175094> rdfs:label "Marco Potenziani"^^xsd:string .
+
+<https://orcid.org/0000-0003-4644-4638> rdfs:label "0000-0003-4644-4638"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728998303-4028718> rdfs:label "Istituto di Scienza e Tecnologie dell’Informazione “Alessandro Faedo” (CNR)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728999602-7282345> rdfs:label "National Research Council"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757614943-767> rdfs:label "Visual Computing Lab (ISTI - CNR)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

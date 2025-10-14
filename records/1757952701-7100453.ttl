@@ -1,0 +1,140 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1757952701-7100453 a schema:Dataset,
+        ns1:TextCollection ;
+    rdfs:label "Italian Drama Corpus"@en ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    dcterms:conformsTo <http://www.wikidata.org/entity/Q95728930> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-10> ;
+    schema:additionalType ns1:TextCollection ;
+    schema:citation <https://doi.org/10.5281/zenodo.4284002> ;
+    schema:contributor ns1:1757955138-978 ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns1:1757952905-605,
+        ns1:1757953184-415,
+        ns1:1757953405-492 ;
+    schema:datePublished "2020-02-03"^^xsd:date ;
+    schema:description "TEI-encoded corpus of Italian drama texts derived from the Biblioteca Italiana database. Hosted on DraCor."@en ;
+    schema:distribution <https://dracor.org/api/v1/corpora/ita/metadata>,
+        <https://dracor.org/api/v1/corpora/ita/metadata/csv> ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/discovering>,
+        <https://vocabs.dariah.eu/tadirah/querying> ;
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/CSV>,
+        <http://publications.europa.eu/resource/authority/file-type/JSON>,
+        <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    schema:genre <http://sparql.cwrc.ca/ontologies/genre#DramaticGenre> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/CC0> ;
+    schema:name "Italian Drama Corpus"@en ;
+    schema:producer ns1:1757954912-992 ;
+    schema:publisher ns1:1757952997-289,
+        ns1:1757953269-015 ;
+    schema:size "157 plays"@en ;
+    schema:spatialCoverage <https://sws.geonames.org/3175395> ;
+    schema:temporalCoverage <http://www.wikidata.org/entity/Q1404472>,
+        <http://www.wikidata.org/entity/Q51122>,
+        <http://www.wikidata.org/entity/Q6927>,
+        <http://www.wikidata.org/entity/Q6955>,
+        <http://www.wikidata.org/entity/Q7015>,
+        <http://www.wikidata.org/entity/Q7016>,
+        <http://www.wikidata.org/entity/Q7017>,
+        <http://www.wikidata.org/entity/Q7018> ;
+    schema:url <https://dracor.org/ita> ;
+    schema:usageInfo <https://github.com/dracor-org/itadracor> ;
+    schema:version "2025-04-21"@en ;
+    ns1:editionType <https://www.w3id.org/dh-atlas-vocabularies/etv/InterpretativeEdition> ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/encoding>,
+        <https://vocabs.dariah.eu/tadirah/gathering>,
+        <https://vocabs.dariah.eu/tadirah/linkedOpenData> ;
+    ns1:servedBy ns1:1757959474-686 ;
+    ns1:used ns1:1729156722-0141878 .
+
+<https://w3id.org/dh-atlas/1757952701-7100453/> rdfs:label "Italian Drama Corpus"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T18:06:33.981243"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "Italian Drama Corpus"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/CSV> skos:prefLabel "CSV - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/JSON> skos:prefLabel "JSON - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/XML> skos:prefLabel "XML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/CC0> skos:prefLabel "Creative Commons CC0 1.0 Universal - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#DramaticGenre> rdfs:label "Dramatic Genre"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1404472> rdfs:label "Italian Renaissance"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51122> rdfs:label "Unification of Italy"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6927> rdfs:label "20th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6955> rdfs:label "19th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7015> rdfs:label "18th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7016> rdfs:label "17th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7017> rdfs:label "16th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7018> rdfs:label "15th century"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q95728930> rdfs:label "TEI P5"^^xsd:string .
+
+<https://sws.geonames.org/3175395> rdfs:label "Italy"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/discovering> skos:prefLabel "Discovering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/encoding> skos:prefLabel "Encoding - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/gathering> skos:prefLabel "Gathering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/linkedOpenData> skos:prefLabel "Linked Open Data - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
+
+ns1:1729156722-0141878 rdfs:label "Biblioteca Italiana"^^xsd:string .
+
+ns1:1757952905-605 rdfs:label "Fischer, Frank"^^xsd:string .
+
+ns1:1757952997-289 rdfs:label "Free University of Berlin"^^xsd:string .
+
+ns1:1757953184-415 rdfs:label "Giovannini, Luca"^^xsd:string .
+
+ns1:1757953269-015 rdfs:label "University of Potsdam"^^xsd:string .
+
+ns1:1757953405-492 rdfs:label "Milling, Carsten"^^xsd:string .
+
+ns1:1757954912-992 rdfs:label "Drama Corpora Project"^^xsd:string .
+
+ns1:1757955138-978 rdfs:label "Sonkin, Michael"^^xsd:string .
+
+ns1:1757959474-686 rdfs:label "DraCor - SPARQL Endpoint"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-10> skos:prefLabel "Italian literature - ACADEMIC FIELD"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/InterpretativeEdition> rdfs:label "Interpretative Edition"^^xsd:string .
+
+ns1:TextCollection rdfs:label "Text Collection"^^xsd:string .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+

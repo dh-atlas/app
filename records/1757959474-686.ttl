@@ -1,0 +1,39 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757959474-686> a schema:SoftwareApplication ;
+    rdfs:label "DraCor - SPARQL Endpoint"@en ;
+    schema:applicationCategory <http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> ;
+    schema:description "A SPARQL endpoint to access the entire DraCor collection."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+        <https://vocabs.dariah.eu/tadirah/discovering>,
+        <https://vocabs.dariah.eu/tadirah/querying> ;
+    schema:isBasedOn <http://www.wikidata.org/entity/Q109376461> ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/APACHE_2_0> ;
+    schema:name "DraCor - SPARQL Endpoint"@en ;
+    schema:url <https://dracor.org/sparql> .
+
+<https://w3id.org/dh-atlas/1757959474-686/> rdfs:label "DraCor - SPARQL Endpoint"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T20:40:48.613713"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "DraCor - SPARQL Endpoint"@en .
+
+<http://publications.europa.eu/resource/authority/data-service-type/SPARQL_ENDPOINT> rdfs:label "SPARQL endpoint - DATA SERVICE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/APACHE_2_0> skos:prefLabel "Apache License, Version 2.0 - LICENCE"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q109376461> rdfs:label "Apache Jena Fuseki"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/discovering> skos:prefLabel "Discovering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

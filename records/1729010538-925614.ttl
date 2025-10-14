@@ -1,77 +1,71 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <http://schema.org/> .
-@prefix ns2: <http://www.w3.org/dh-atlas/> .
+@prefix ns1: <http://ontosoft.org/software#> .
+@prefix ns2: <https://w3id.org/dh-atlas/> .
 @prefix ns3: <http://dbpedia.org/ontology/> .
-@prefix ns4: <http://www.ebi.ac.uk/swo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/dh-atlas/1729010538-925614> a schema:Dataset ;
+ns2:1729010538-925614 a schema:Dataset,
+        ns2:Software ;
     rdfs:label "Edition Visualization Technology (EVT)"@en ;
-    dcterms:conformsTo <http://www.tei-c.org/> ;
-    dcterms:type <http://purl.org/spar/fabio/ComputerProgram> ;
-    ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-INF-01>,
-        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-15> ;
-    ns1:additionalType <http://purl.org/spar/fabio/ComputerProgram> ;
-    ns1:archivedAt <https://github.com/evt-project/evt-viewer/> ;
-    ns1:citation <https://doi.org/10.6092/issn.2532-8816/9322> ;
-    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    ns1:contributor <https://w3id.org/dh-atlas/1729012891-4846869>,
-        <https://w3id.org/dh-atlas/1729013005-982011>,
-        <https://w3id.org/dh-atlas/1729013548-0187488>,
-        <https://w3id.org/dh-atlas/1729013661-524171>,
-        <https://w3id.org/dh-atlas/1729013749-8693962>,
-        <https://w3id.org/dh-atlas/1729013826-8967187>,
-        <https://w3id.org/dh-atlas/1729014167-5649977> ;
-    ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
-    ns1:creator <https://w3id.org/dh-atlas/1729012720-1356587> ;
-    ns1:datePublished "2020-01-01"^^xsd:date ;
-    ns1:description "EVT (Edition Visualization Technology) is a light-weight, open source tool specifically designed to create digital editions from texts encoded according to the TEI XML schemas and Guidelines, freeing the scholars from the burden of web programming and enabling the final users to browse, explore and study digital editions by means of a user-friendly interface. The need for more flexibility and modularity led to a completely new infrastructure, based on MVC design pattern. The XSLT stylesheets have been abandoned in favor of a set of JavaScript parsers specifically written to retrieve edition content directly from the XML file. Edition data is then saved in a JSON structure, organized in such a way that it can be easily and rapidly accessed when needed. The final styling of documents is entrusted to CSS style-sheets and is easily customizable."@en ;
-    ns1:distribution <http://evt.labcd.unipi.it/releases/evt2-beta2.zip> ;
-    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/annotating>,
-        <https://vocabs.dariah.eu/tadirah/digitalPublishing> ;
-    ns1:identifier "http://hdl.handle.net/2318/1759002"@en ;
-    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
-    ns1:license <http://publications.europa.eu/resource/authority/licence/AGPL_3_0> ;
-    ns1:name "Edition Visualization Technology (EVT)"@en ;
-    ns1:producer <https://w3id.org/dh-atlas/1729014276-8894827> ;
-    ns1:publisher <https://w3id.org/dh-atlas/1728999885-461319>,
-        <https://w3id.org/dh-atlas/1729012150-9691675> ;
-    ns1:url <http://evt.labcd.unipi.it/> ;
-    ns1:usageInfo <https://github.com/evt-project/evt-viewer/blob/master/app/README.md> ;
-    ns1:version "beta 2.01"@en ;
-    ns4:SWO_0000086 <http://publications.europa.eu/resource/authority/file-type/XML> ;
-    ns4:SWO_0000087 <http://publications.europa.eu/resource/authority/file-type/CSS>,
-        <http://publications.europa.eu/resource/authority/file-type/HTML>,
-        <http://publications.europa.eu/resource/authority/file-type/JS> ;
-    ns4:SWO_0000741 <http://www.wikidata.org/entity/Q2005>,
+    ns1:hasCodeLocation <https://github.com/evt-project/evt-viewer/> ;
+    ns1:hasImplementationLanguage <http://www.wikidata.org/entity/Q2005>,
         <http://www.wikidata.org/entity/Q32110>,
         <http://www.wikidata.org/entity/Q46441> ;
+    ns1:hasOutput <http://publications.europa.eu/resource/authority/file-type/CSS>,
+        <http://publications.europa.eu/resource/authority/file-type/JS> ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    dcterms:conformsTo <http://www.tei-c.org/> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-INF-01>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-15> ;
+    schema:additionalType ns2:Software ;
+    schema:citation <https://doi.org/10.6092/issn.2532-8816/9322> ;
+    schema:contributor ns2:1729012891-4846869,
+        ns2:1729013005-982011,
+        ns2:1729013548-0187488,
+        ns2:1729013661-524171,
+        ns2:1729013749-8693962,
+        ns2:1729013826-8967187,
+        ns2:1729014167-5649977 ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
+    schema:creator ns2:1729012720-1356587 ;
+    schema:datePublished "2020-01-01"^^xsd:date ;
+    schema:description "EVT (Edition Visualization Technology) is a light-weight, open source tool specifically designed to create digital editions from texts encoded according to the TEI/XML schemas and Guidelines, freeing the scholars from the burden of web programming and enabling the final users to browse, explore and study digital editions by means of a user-friendly interface. The need for more flexibility and modularity led to a completely new infrastructure, based on Model–View–Controller design pattern. The XSLT stylesheets have been abandoned in favor of a set of JavaScript parsers specifically written to retrieve edition content directly from the XML file. Edition data is then saved in a JSON structure, organized in such a way that it can be easily and rapidly accessed when needed. The final styling of documents is entrusted to CSS style-sheets and is easily customizable."@en ;
+    schema:distribution <http://evt.labcd.unipi.it/releases/evt2-beta2.zip> ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/annotating>,
+        <https://vocabs.dariah.eu/tadirah/digitalPublishing> ;
+    schema:identifier "http://hdl.handle.net/2318/1759002"@en ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/AGPL_3_0> ;
+    schema:name "Edition Visualization Technology (EVT)"@en ;
+    schema:producer ns2:1729014276-8894827 ;
+    schema:publisher ns2:1728999885-461319,
+        ns2:1729012150-9691675 ;
+    schema:url <http://evt.labcd.unipi.it/> ;
+    schema:usageInfo <https://github.com/evt-project/evt-viewer/blob/master/app/README.md> ;
+    schema:version "beta 2.01"@en ;
     ns2:methodology <https://vocabs.dariah.eu/tadirah/programming> .
 
 <https://w3id.org/dh-atlas/1729010538-925614/> rdfs:label "Edition Visualization Technology (EVT)"@en ;
-    ns3:currentStatus "published"^^xsd:string ;
-    ns1:name "Edition Visualization Technology (EVT)"@en ;
-    prov:generatedAtTime "2024-10-15T22:05:16.315010"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
+    ns3:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-17T10:01:00.610418"^^xsd:dateTime ;
+    prov:wasAttributedTo ns2:anonymous ;
+    prov:wasInfluencedBy ns2:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:keywords <https://w3id.org/dh-atlas/1729010538-925614/extraction-1727854052731/> ;
+    schema:name "Edition Visualization Technology (EVT)"@en .
 
 <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS"^^xsd:string .
 
-<http://publications.europa.eu/resource/authority/file-type/CSS> rdfs:label "CSS"^^xsd:string .
+<http://publications.europa.eu/resource/authority/file-type/CSS> skos:prefLabel "CSS - FILE-TYPE"^^xsd:string .
 
-<http://publications.europa.eu/resource/authority/file-type/HTML> rdfs:label "HTML"^^xsd:string .
-
-<http://publications.europa.eu/resource/authority/file-type/JS> rdfs:label "JavaScript"^^xsd:string .
-
-<http://publications.europa.eu/resource/authority/file-type/XML> rdfs:label "XML"^^xsd:string .
+<http://publications.europa.eu/resource/authority/file-type/JS> skos:prefLabel "JavaScript - FILE-TYPE"^^xsd:string .
 
 <http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
 
-<http://publications.europa.eu/resource/authority/licence/AGPL_3_0> rdfs:label "GNU Affero General Public License v3.0 only - SOFTWARE LICENSES"^^xsd:string .
+<http://publications.europa.eu/resource/authority/licence/AGPL_3_0> skos:prefLabel "GNU Affero General Public License v3.0 only - SOFTWARE LICENSES"^^xsd:string .
 
 <http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
 
@@ -89,33 +83,35 @@
 
 <https://vocabs.dariah.eu/tadirah/programming> skos:prefLabel "Programming - TADIRAH"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1728999885-461319> rdfs:label "University of Pisa"^^xsd:string .
+ns2:1728999885-461319 rdfs:label "University of Pisa"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729012150-9691675> rdfs:label "Laboratorio di Cultura Digitale (Università di Pisa)"^^xsd:string .
+ns2:1729012150-9691675 rdfs:label "Laboratorio di Cultura Digitale (Università di Pisa)"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729012720-1356587> rdfs:label "Roberto Rosselli Del Turco"^^xsd:string .
+ns2:1729012720-1356587 rdfs:label "Rosselli Del Turco, Roberto"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729012891-4846869> rdfs:label "Chiara Martignano"^^xsd:string .
+ns2:1729012891-4846869 rdfs:label "Martignano, Chiara"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729013005-982011> rdfs:label "Chiara di Pietro"^^xsd:string .
+ns2:1729013005-982011 rdfs:label "di Pietro, Chiara"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729013548-0187488> rdfs:label "Simone Zenzaro"^^xsd:string .
+ns2:1729013548-0187488 rdfs:label "Zenzaro, Simone"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729013661-524171> rdfs:label "Federica Spinelli"^^xsd:string .
+ns2:1729013661-524171 rdfs:label "Spinelli, Federica"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729013749-8693962> rdfs:label "Jurgen Memaj"^^xsd:string .
+ns2:1729013749-8693962 rdfs:label "Memaj, Jurgen"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729013826-8967187> rdfs:label "Angelo Mario Del Grosso"^^xsd:string .
+ns2:1729013826-8967187 rdfs:label "Del Grosso, Angelo Mario"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729014167-5649977> rdfs:label "Giulia Cacioli"^^xsd:string .
+ns2:1729014167-5649977 rdfs:label "Cacioli, Giulia"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729014276-8894827> rdfs:label "Edition Visualization Technology (EVT) Project"^^xsd:string .
+ns2:1729014276-8894827 rdfs:label "Edition Visualization Technology (EVT) Project"^^xsd:string .
+
+ns2:anonymous rdfs:label "anonymous" .
+
+ns2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-INF-01> skos:prefLabel "Informatics - ACADEMIC FIELD"^^xsd:string .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-15> skos:prefLabel "Germanic philology - ACADEMIC FIELD"^^xsd:string .
 
-<http://purl.org/spar/fabio/ComputerProgram> rdfs:label "Software"^^xsd:string .
-
-<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+ns2:Software rdfs:label "Software"^^xsd:string .
 

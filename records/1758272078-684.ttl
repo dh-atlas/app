@@ -1,0 +1,28 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758272078-684> a schema:Organization ;
+    rdfs:label "Soprintendenza Archeologia, Belle Arti e Paesaggio per la città metropolitana di Firenze e la provincia di Prato"@it ;
+    schema:location <https://sws.geonames.org/3176959> ;
+    schema:name "Soprintendenza Archeologia, Belle Arti e Paesaggio per la città metropolitana di Firenze e la provincia di Prato"@it ;
+    schema:sameAs <http://www.wikidata.org/entity/Q117358606> ;
+    schema:url <https://soprintendenzafirenze.cultura.gov.it/> .
+
+<https://w3id.org/dh-atlas/1758272078-684/> rdfs:label "Soprintendenza Archeologia, Belle Arti e Paesaggio per la città metropolitana di Firenze e la provincia di Prato"@it ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-19T09:23:46.749734"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Soprintendenza Archeologia, Belle Arti e Paesaggio per la città metropolitana di Firenze e la provincia di Prato"@it .
+
+<http://www.wikidata.org/entity/Q117358606> rdfs:label "Soprintendenza Archeologia, belle arti e paesaggio per la città metropolitana di Firenze e le province di Pistoia e Prato"^^xsd:string .
+
+<https://sws.geonames.org/3176959> rdfs:label "Florence"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

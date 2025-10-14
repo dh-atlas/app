@@ -1,0 +1,28 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757952997-289> a schema:Organization ;
+    rdfs:label "Free University of Berlin"@en ;
+    schema:identifier <https://ror.org/046ak2485> ;
+    schema:location <https://sws.geonames.org/2950159> ;
+    schema:name "Freie Universität Berlin"@de,
+        "Free University of Berlin"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q153006> ;
+    schema:url <https://www.fu-berlin.de/> .
+
+<https://w3id.org/dh-atlas/1757952997-289/> rdfs:label "Free University of Berlin"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T16:51:43.753371"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Free University of Berlin"@en .
+
+<http://www.wikidata.org/entity/Q153006> rdfs:label "Freie Universität Berlin"^^xsd:string .
+
+<https://sws.geonames.org/2950159> rdfs:label "Berlin"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

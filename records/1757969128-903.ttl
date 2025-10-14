@@ -1,0 +1,30 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757969128-903> a schema:Organization ;
+    rdfs:label "University of Texas at Dallas"@en ;
+    schema:identifier <https://ror.org/049emcs32> ;
+    schema:location <https://sws.geonames.org/4722625> ;
+    schema:member <https://w3id.org/dh-atlas/1757969306-0689976> ;
+    schema:name "University of Texas at Dallas"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1781394> ;
+    schema:url <http://www.utdallas.edu/> .
+
+<https://w3id.org/dh-atlas/1757969128-903/> rdfs:label "University of Texas at Dallas"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T21:42:07.697526"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "University of Texas at Dallas"@en .
+
+<http://www.wikidata.org/entity/Q1781394> rdfs:label "University of Texas at Dallas"^^xsd:string .
+
+<https://sws.geonames.org/4722625> rdfs:label "Richardson"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757969306-0689976> rdfs:label "The Edith O’Donnell Institute of Art History (University of Texas at Dallas)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

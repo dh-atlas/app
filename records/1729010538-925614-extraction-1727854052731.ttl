@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q2063> a schema:Thing ;
+    rdfs:label "JSON"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q44860> a schema:Thing ;
+    rdfs:label "model–view–controller"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729010538-925614/extraction-1727854052731/> prov:generatedAtTime "2025-09-17T10:01:00.612333"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+

@@ -1,0 +1,1427 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://viaf.org/viaf/100177951> a schema:Person ;
+    rdfs:label "Magister Sex Principiorum"^^xsd:string .
+
+<http://viaf.org/viaf/125170858621407682136> a schema:Person ;
+    rdfs:label "Paganino da Sarzana"^^xsd:string .
+
+<http://viaf.org/viaf/126170858621407682138> a schema:Person ;
+    rdfs:label "Lupo degli Uberti"^^xsd:string .
+
+<http://viaf.org/viaf/131170858376707681568> a schema:Person ;
+    rdfs:label "Monaldo da Sofena"^^xsd:string .
+
+<http://viaf.org/viaf/1604159234825203372841> a schema:Person ;
+    rdfs:label "Petrus de Sancto Floro"^^xsd:string .
+
+<http://viaf.org/viaf/16117666> a schema:Person ;
+    rdfs:label "Maestro Rinuccino"^^xsd:string .
+
+<http://viaf.org/viaf/250888377> a schema:Person ;
+    rdfs:label "Joifre de Foixà"^^xsd:string .
+
+<http://viaf.org/viaf/307388128> a schema:Person ;
+    rdfs:label "Peire Ramon de Tolosa"^^xsd:string .
+
+<http://viaf.org/viaf/407159474070327660171> a schema:Person ;
+    rdfs:label "Azemar lo Negre"^^xsd:string .
+
+<http://viaf.org/viaf/873165264683910191522> a schema:Person ;
+    rdfs:label "Raimon Bistortz d'Arles"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1010248> a schema:Person ;
+    rdfs:label "Giacomino Pugliese"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q10133> a schema:Person ;
+    rdfs:label "Svetonio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q101711517> a schema:Person ;
+    rdfs:label "Tommaso da Faenza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102851> a schema:Person ;
+    rdfs:label "Boezio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104203619> a schema:Person ;
+    rdfs:label "Johannes de Fonte"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104537623> a schema:Person ;
+    rdfs:label "Bono da Lucca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1048> a schema:Person ;
+    rdfs:label "Giulio Cesare"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1067> a schema:Person ;
+    rdfs:label "Dante Alighieri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q107559257> a schema:Person ;
+    rdfs:label "Fabruzzo de' Lambertazzi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q108482934> a schema:Person ;
+    rdfs:label "Giovanni Quirini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q10882562> a schema:Person ;
+    rdfs:label "Alessandro di Roes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q109598> a schema:Person ;
+    rdfs:label "Tibullo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q110442811> a schema:Person ;
+    rdfs:label "Raimon de Castelnou"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1116934> a schema:Person ;
+    rdfs:label "Gilberto di Gembloux"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1149308> a schema:Person ;
+    rdfs:label "Rustico Filippi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1170511> a schema:Person ;
+    rdfs:label "Uc de Saint Circ"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q118081> a schema:Person ;
+    rdfs:label "Pietro da Morrone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q120178806> a schema:Person ;
+    rdfs:label "Guiraut lo Ros"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1222132> a schema:Person ;
+    rdfs:label "Radulphus Brito"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1226631> a schema:Person ;
+    rdfs:label "Dino Frescobaldi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1226654> a schema:Person ;
+    rdfs:label "Dino del Garbo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1227361> a schema:Person ;
+    rdfs:label "Giovanni da Procida"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1229700> a schema:Person ;
+    rdfs:label "Giovanni di Garlandia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1237387> a schema:Person ;
+    rdfs:label "Guiraut de Tholoza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1237726> a schema:Person ;
+    rdfs:label "Domenico Gundisalvo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1238197> a schema:Person ;
+    rdfs:label "Matteo di Vendôme"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124392671> a schema:Person ;
+    rdfs:label "Noffo Bonaguide"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1246333> a schema:Person ;
+    rdfs:label "Guittone d'Arezzo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1247917> a schema:Person ;
+    rdfs:label "Mondino dei Liuzzi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124831> a schema:Person ;
+    rdfs:label "Gregorio IX"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1248641> a schema:Person ;
+    rdfs:label "Bonvesin de la Riva"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1248842> a schema:Person ;
+    rdfs:label "Guido delle Colonne"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1272659> a schema:Person ;
+    rdfs:label "Restoro d'Arezzo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q128076> a schema:Person ;
+    rdfs:label "Innocenzo III"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q128538> a schema:Person ;
+    rdfs:label "Luca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q130221> a schema:Person ;
+    rdfs:label "Federico II di Svevia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131463> a schema:Person ;
+    rdfs:label "Clemente V"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1320120> a schema:Person ;
+    rdfs:label "Theodorus Priscianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q132473> a schema:Person ;
+    rdfs:label "Paolino da Nola"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1328999> a schema:Person ;
+    rdfs:label "Elias Cairel"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134189> a schema:Person ;
+    rdfs:label "Plotino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1343668> a schema:Person ;
+    rdfs:label "Enric"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1344799> a schema:Person ;
+    rdfs:label "Riccardo di San Vittore"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134646> a schema:Person ;
+    rdfs:label "Bonifacio VIII"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1394847> a schema:Person ;
+    rdfs:label "Giacomo da Lentini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1394860> a schema:Person ;
+    rdfs:label "Pier della Vigna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1395927> a schema:Person ;
+    rdfs:label "Guido Novello da Polenta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1398> a schema:Person ;
+    rdfs:label "Virgilio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q143854> a schema:Person ;
+    rdfs:label "Teofilo monaco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1491994> a schema:Person ;
+    rdfs:label "Goffredo di Vinsauf"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1527012> a schema:Person ;
+    rdfs:label "Girolamo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q152717> a schema:Person ;
+    rdfs:label "Enrico VII di Lussemburgo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1539547> a schema:Person ;
+    rdfs:label "Goffredo d’Auxerre"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1541> a schema:Person ;
+    rdfs:label "Cicerone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q154332> a schema:Person ;
+    rdfs:label "Alcuino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q154938> a schema:Person ;
+    rdfs:label "Beda il Venerabile"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15633592> a schema:Person ;
+    rdfs:label "Ubertino del Bianco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15633596> a schema:Person ;
+    rdfs:label "Onesto degli Onesti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15633602> a schema:Person ;
+    rdfs:label "Castra fiorentino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15633606> a schema:Person ;
+    rdfs:label "Bondie Dietaiuti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q158825> a schema:Person ;
+    rdfs:label "Geremia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q160424> a schema:Person ;
+    rdfs:label "Paolo Diacono"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q160441> a schema:Person ;
+    rdfs:label "Rabano Mauro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q160460> a schema:Person ;
+    rdfs:label "Alfarabi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1610316> a schema:Person ;
+    rdfs:label "Rigaut de Berbezilh"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16163351> a schema:Person ;
+    rdfs:label "Bertran Albaric"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1628129> a schema:Person ;
+    rdfs:label "Guillaume de Saint-Thierry"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q163079> a schema:Person ;
+    rdfs:label "Catullo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1636083> a schema:Person ;
+    rdfs:label "Remigio dei Girolami"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q165568> a schema:Person ;
+    rdfs:label "Giovanni XXII"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16562441> a schema:Person ;
+    rdfs:label "Guilhem Gausmar"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16657920> a schema:Person ;
+    rdfs:label "Bernart de Pradas"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q166876> a schema:Person ;
+    rdfs:label "Isidoro di Siviglia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16742870> a schema:Person ;
+    rdfs:label "Gotto Mantovano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q168707> a schema:Person ;
+    rdfs:label "Plinio il Giovane"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q169234> a schema:Person ;
+    rdfs:label "Rasis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q170512> a schema:Person ;
+    rdfs:label "Apuleio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q170871> a schema:Person ;
+    rdfs:label "Innocenzo V"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q171677> a schema:Person ;
+    rdfs:label "Ruggero Bacone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q172048> a schema:Person ;
+    rdfs:label "Publio Terenzio Afro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q172916> a schema:Person ;
+    rdfs:label "Pietro Ispano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q174929> a schema:Person ;
+    rdfs:label "Tertulliano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1771493> a schema:Person ;
+    rdfs:label "Albertet de Sisteron"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1772009> a schema:Person ;
+    rdfs:label "Guiraut de Calanso"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1775060> a schema:Person ;
+    rdfs:label "Bartolomeo da Bologna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1778218> a schema:Person ;
+    rdfs:label "Garin lo Brun"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1778227> a schema:Person ;
+    rdfs:label "Guilhem Ademar"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q179962> a schema:Person ;
+    rdfs:label "Giobbe"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18020485> a schema:Person ;
+    rdfs:label "Giacomo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q180671> a schema:Person ;
+    rdfs:label "Arato di Soli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18645188> a schema:Person ;
+    rdfs:label "Agostino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18719525> a schema:Person ;
+    rdfs:label "Ottone Morena"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q188411> a schema:Person ;
+    rdfs:label "Bernardo di Chiaravalle"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q188646> a schema:Person ;
+    rdfs:label "Lucano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q189108> a schema:Person ;
+    rdfs:label "Graziano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q190089> a schema:Person ;
+    rdfs:label "Duns Scotus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q191039> a schema:Person ;
+    rdfs:label "Germanico Giulio Cesare"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q192365> a schema:Person ;
+    rdfs:label "Cassiodoro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q193236> a schema:Person ;
+    rdfs:label "Floro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1936573> a schema:Person ;
+    rdfs:label "Gui d'Ussel"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q193660> a schema:Person ;
+    rdfs:label "Ramon Llull"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q193769> a schema:Person ;
+    rdfs:label "Quintiliano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q193800> a schema:Person ;
+    rdfs:label "Giovenale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q194064> a schema:Person ;
+    rdfs:label "Ezechiele"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1974885> a schema:Person ;
+    rdfs:label "Alexander Neckam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1984724> a schema:Person ;
+    rdfs:label "Niccolò de' Rossi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2006261> a schema:Person ;
+    rdfs:label "Guilhèm de Tudèla"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2008943> a schema:Person ;
+    rdfs:label "Romolus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q203829> a schema:Person ;
+    rdfs:label "Carlo I d'Angiò"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2039> a schema:Person ;
+    rdfs:label "Livio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2054> a schema:Person ;
+    rdfs:label "Seneca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q205947> a schema:Person ;
+    rdfs:label "Claudio Claudiano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q206119> a schema:Person ;
+    rdfs:label "Marco Terenzio Varrone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q206927> a schema:Person ;
+    rdfs:label "Frontino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q209102> a schema:Person ;
+    rdfs:label "Lattanzio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2098> a schema:Person ;
+    rdfs:label "Marco Valerio Marziale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2121581> a schema:Person ;
+    rdfs:label "Richart de Fournival"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21451057> a schema:Person ;
+    rdfs:label "Gottschalk"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2161> a schema:Person ;
+    rdfs:label "Tacito"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q222757> a schema:Person ;
+    rdfs:label "Jacques Bretel"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2245720> a schema:Person ;
+    rdfs:label "Cielo d'Alcamo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2281681> a schema:Person ;
+    rdfs:label "Guiraut Riquier"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2312678> a schema:Person ;
+    rdfs:label "Giovanni Balbi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2322314> a schema:Person ;
+    rdfs:label "Guillem de Cabestany"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q234593> a schema:Person ;
+    rdfs:label "Ausonio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q23830572> a schema:Person ;
+    rdfs:label "Guido da Baisio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q24228704> a schema:Person ;
+    rdfs:label "Bernardo da Bologna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2425465> a schema:Person ;
+    rdfs:label "Arnaut de Mareuil"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2426639> a schema:Person ;
+    rdfs:label "Peire d'Alvernhe"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2426784> a schema:Person ;
+    rdfs:label "Peirol"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2430407> a schema:Person ;
+    rdfs:label "Berenguier de Palazol"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q243203> a schema:Person ;
+    rdfs:label "Stazio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2435653> a schema:Person ;
+    rdfs:label "Pistoleta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2436555> a schema:Person ;
+    rdfs:label "Jean Renart"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q243873> a schema:Person ;
+    rdfs:label "Cadenet"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2444899> a schema:Person ;
+    rdfs:label "Matfre Ermengau"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2444910> a schema:Person ;
+    rdfs:label "Alegret"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q247137> a schema:Person ;
+    rdfs:label "Elio Donato"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2514828> a schema:Person ;
+    rdfs:label "Celio Aureliano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q258369> a schema:Person ;
+    rdfs:label "Pier Damiani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2636092> a schema:Person ;
+    rdfs:label "Aimeric de Belenoi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2636539> a schema:Person ;
+    rdfs:label "Perdigon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q264028> a schema:Person ;
+    rdfs:label "Giovanni di Salisbury"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q268107> a schema:Person ;
+    rdfs:label "Iohannes Cornubiensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q268552> a schema:Person ;
+    rdfs:label "Azalais de Porcairagues"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q273671> a schema:Person ;
+    rdfs:label "Seneca il Vecchio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2756217> a schema:Person ;
+    rdfs:label "Vital Du Four"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q278795> a schema:Person ;
+    rdfs:label "Cercamon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2832136> a schema:Person ;
+    rdfs:label "Alchero di Chiaravalle"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2871655> a schema:Person ;
+    rdfs:label "Agostino Trionfo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2891988> a schema:Person ;
+    rdfs:label "Baudouin de Condé"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2899420> a schema:Person ;
+    rdfs:label "Bertran d'Alamanon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q294800> a schema:Person ;
+    rdfs:label "Aulo Gellio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q295084> a schema:Person ;
+    rdfs:label "Nicodemo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q297515> a schema:Person ;
+    rdfs:label "Pomponio Mela"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q298376> a schema:Person ;
+    rdfs:label "Igino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q310076> a schema:Person ;
+    rdfs:label "Ulpiano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3107533> a schema:Person ;
+    rdfs:label "Giovanni del Virgilio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q311456> a schema:Person ;
+    rdfs:label "Orosio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3119556> a schema:Person ;
+    rdfs:label "Guilhem Molinier"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3119559> a schema:Person ;
+    rdfs:label "Guilhem Peire de Cazals"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q312420> a schema:Person ;
+    rdfs:label "Aulo Cornelio Celso"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q313460> a schema:Person ;
+    rdfs:label "Jacopo da Varazze"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q313924> a schema:Person ;
+    rdfs:label "Nicola Damasceno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q313934> a schema:Person ;
+    rdfs:label "Macrobio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3142526> a schema:Person ;
+    rdfs:label "Uc Brunenc"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q315149> a schema:Person ;
+    rdfs:label "Giovanni di Pian del Carpine"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q315347> a schema:Person ;
+    rdfs:label "Pietro Lombardo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q316876> a schema:Person ;
+    rdfs:label "Guido Cavalcanti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q317267> a schema:Person ;
+    rdfs:label "Jacopone da Todi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q317554> a schema:Person ;
+    rdfs:label "Ugo da San Vittore"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3176758> a schema:Person ;
+    rdfs:label "Jehan Bretel"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q318980> a schema:Person ;
+    rdfs:label "Raimondo di Peñafort"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q31966> a schema:Person ;
+    rdfs:label "Marco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q328138> a schema:Person ;
+    rdfs:label "Taddeo Alderotti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q328804> a schema:Person ;
+    rdfs:label "Giovanni"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q332785> a schema:Person ;
+    rdfs:label "Aulo Persio Flacco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3330884> a schema:Person ;
+    rdfs:label "Daude de Pradas"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3349311> a schema:Person ;
+    rdfs:label "Odofredo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q336550> a schema:Person ;
+    rdfs:label "Alfragano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q33923> a schema:Person ;
+    rdfs:label "Pietro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q339824> a schema:Person ;
+    rdfs:label "Accursio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3410332> a schema:Person ;
+    rdfs:label "Tolomeo da Lucca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3459546> a schema:Person ;
+    rdfs:label "Pons de Capduoill"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q347250> a schema:Person ;
+    rdfs:label "Prudenzio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q348087> a schema:Person ;
+    rdfs:label "Adalberto di Samaria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q348408> a schema:Person ;
+    rdfs:label "Marziano Capella"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q34943> a schema:Person ;
+    rdfs:label "Tolomeo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q352625> a schema:Person ;
+    rdfs:label "Giacomo da Viterbo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q354523> a schema:Person ;
+    rdfs:label "Tommaso da Celano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q355350> a schema:Person ;
+    rdfs:label "Servio Mario Onorato"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q355633> a schema:Person ;
+    rdfs:label "Cosma Indicopleuste"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q355903> a schema:Person ;
+    rdfs:label "Sigieri di Brabante"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q356433> a schema:Person ;
+    rdfs:label "Prisciano di Cesarea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q356509> a schema:Person ;
+    rdfs:label "Raimbaut de Vaqueiras"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q356568> a schema:Person ;
+    rdfs:label "Arnaldo da Villanova"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3603138> a schema:Person ;
+    rdfs:label "Abate di Tivoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3607122> a schema:Person ;
+    rdfs:label "Aimeric de Sarlat"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3607801> a schema:Person ;
+    rdfs:label "Alano Anglico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3608315> a schema:Person ;
+    rdfs:label "Alberto Gandino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3615796> a schema:Person ;
+    rdfs:label "Andrea Lancia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3618226> a schema:Person ;
+    rdfs:label "Anonimo Genovese"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3623553> a schema:Person ;
+    rdfs:label "Arnaut Catalan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3637998> a schema:Person ;
+    rdfs:label "Bene da Firenze"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3638824> a schema:Person ;
+    rdfs:label "Bernart d'Auriac"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3638960> a schema:Person ;
+    rdfs:label "Bertran del Pojet"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3639166> a schema:Person ;
+    rdfs:label "Betto Mettefuoco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3639723> a schema:Person ;
+    rdfs:label "Bichilino da Spello"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3640102> a schema:Person ;
+    rdfs:label "Bindo Bonichi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3642121> a schema:Person ;
+    rdfs:label "Bonifaci Calvo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3642199> a schema:Person ;
+    rdfs:label "Bono Giamboni"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q365835> a schema:Person ;
+    rdfs:label "Rufino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q366270> a schema:Person ;
+    rdfs:label "Guido Guinizzelli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q366328> a schema:Person ;
+    rdfs:label "Brunetto Latini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q366741> a schema:Person ;
+    rdfs:label "Rustichello da Pisa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3667545> a schema:Person ;
+    rdfs:label "Chiaro Davanzati"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q366793> a schema:Person ;
+    rdfs:label "Postumio Rufio Festo Avienio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3676238> a schema:Person ;
+    rdfs:label "Ciacco dell'Anguillara"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3702408> a schema:Person ;
+    rdfs:label "Dante da Maiano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q37085> a schema:Person ;
+    rdfs:label "Salomone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3747110> a schema:Person ;
+    rdfs:label "Falquet de Romans"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3748000> a schema:Person ;
+    rdfs:label "Forese Donati"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3750843> a schema:Person ;
+    rdfs:label "Francesco da Barberino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3750876> a schema:Person ;
+    rdfs:label "Francesco di Vannozzo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3757785> a schema:Person ;
+    rdfs:label "Galletto Pisano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3761618> a schema:Person ;
+    rdfs:label "Gerardo Patecchio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3761958> a schema:Person ;
+    rdfs:label "Giacomino da Verona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3763435> a schema:Person ;
+    rdfs:label "Gianni Alfani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3765185> a schema:Person ;
+    rdfs:label "Giordano da Pisa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3768420> a schema:Person ;
+    rdfs:label "Giovanni da Cascia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3768483> a schema:Person ;
+    rdfs:label "Giovanni di Fécamp"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3768996> a schema:Person ;
+    rdfs:label "Terramagnino da Pisa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3773247> a schema:Person ;
+    rdfs:label "Gonella degli Antelminelli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3778129> a schema:Person ;
+    rdfs:label "Gualtiero Anglico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3778875> a schema:Person ;
+    rdfs:label "Guglielmo Beroardi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3779053> a schema:Person ;
+    rdfs:label "Guglielmo da Cremona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3779408> a schema:Person ;
+    rdfs:label "Guido Orlandi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3779564> a schema:Person ;
+    rdfs:label "Guilhem de la Tor"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3779608> a schema:Person ;
+    rdfs:label "Guillem Augier Novella"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3779609> a schema:Person ;
+    rdfs:label "Guillem Magret"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3779617> a schema:Person ;
+    rdfs:label "Guillem de Saint Leidier"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3798681> a schema:Person ;
+    rdfs:label "Inghilfredi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q379991> a schema:Person ;
+    rdfs:label "Valerio Massimo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3805906> a schema:Person ;
+    rdfs:label "Jacopo Mostacci"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q380647> a schema:Person ;
+    rdfs:label "Egidio Romano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3807458> a schema:Person ;
+    rdfs:label "Jausbert de Puycibot"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3807829> a schema:Person ;
+    rdfs:label "Jehan de Nuevile"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q380845> a schema:Person ;
+    rdfs:label "Aelredo di Rievaulx"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3808791> a schema:Person ;
+    rdfs:label "Johan Esteve"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3808829> a schema:Person ;
+    rdfs:label "Giovanni d'Albusson"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q381966> a schema:Person ;
+    rdfs:label "Marcabru"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3826298> a schema:Person ;
+    rdfs:label "Lambert Ferri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3826861> a schema:Person ;
+    rdfs:label "Lanfranco Cigala"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3827021> a schema:Person ;
+    rdfs:label "Lapo Gianni"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3854783> a schema:Person ;
+    rdfs:label "Meo de' Tolomei"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3854784> a schema:Person ;
+    rdfs:label "Meo Abbracciavacca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3861185> a schema:Person ;
+    rdfs:label "Monte Andrea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q386985> a schema:Person ;
+    rdfs:label "Jacques de Cysoing"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3893368> a schema:Person ;
+    rdfs:label "Pannuccio dal Bagno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3894173> a schema:Person ;
+    rdfs:label "Paolo Lanfranchi da Pistoia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3894841> a schema:Person ;
+    rdfs:label "Papia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3898798> a schema:Person ;
+    rdfs:label "Peire Bremon Ricas Novas"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3898799> a schema:Person ;
+    rdfs:label "Peire Bremon lo Tort"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3904346> a schema:Person ;
+    rdfs:label "Pietro da Barsegapé"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3925351> a schema:Person ;
+    rdfs:label "Pucciandone Martelli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3929553> a schema:Person ;
+    rdfs:label "Raimon Jordan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3929853> a schema:Person ;
+    rdfs:label "Rambertino Buvalelli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3940255> a schema:Person ;
+    rdfs:label "Rolandino da Padova"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3942560> a schema:Person ;
+    rdfs:label "Ruggieri d'Amici"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3972670> a schema:Person ;
+    rdfs:label "Stefano Protonotaro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q39837> a schema:Person ;
+    rdfs:label "Averroè"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4002971> a schema:Person ;
+    rdfs:label "Uguccione da Lodi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4002974> a schema:Person ;
+    rdfs:label "Uguccione da Pisa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4214> a schema:Person ;
+    rdfs:label "Adam de la Halle"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42827> a schema:Person ;
+    rdfs:label "Gregorio Magno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q428694> a schema:Person ;
+    rdfs:label "Boezio di Dacia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4295> a schema:Person ;
+    rdfs:label "Pietro Abelardo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4298> a schema:Person ;
+    rdfs:label "Vegezio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4302> a schema:Person ;
+    rdfs:label "Chrétien de Troyes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4313> a schema:Person ;
+    rdfs:label "Alano di Lilla"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q433841> a schema:Person ;
+    rdfs:label "Giovanni di Sacrobosco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4340> a schema:Person ;
+    rdfs:label "Andrea Cappellano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4344> a schema:Person ;
+    rdfs:label "Arnaut Daniel"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q43600> a schema:Person ;
+    rdfs:label "Matteo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q43669> a schema:Person ;
+    rdfs:label "Tommaso"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q43689> a schema:Person ;
+    rdfs:label "Ambrogio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q43746> a schema:Person ;
+    rdfs:label "Bonaventura da Bagnoregio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q43939> a schema:Person ;
+    rdfs:label "Anselmo d'Aosta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q44385> a schema:Person ;
+    rdfs:label "Walther von der Vogelweide"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q445848> a schema:Person ;
+    rdfs:label "Artemidoro di Daldi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q449846> a schema:Person ;
+    rdfs:label "Dhuoda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4501> a schema:Person ;
+    rdfs:label "Bernart de Ventadorn"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q45053> a schema:Person ;
+    rdfs:label "Gioele"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4510> a schema:Person ;
+    rdfs:label "Bertran de Born"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q455162> a schema:Person ;
+    rdfs:label "Vincenzo di Beauvais"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q457968> a schema:Person ;
+    rdfs:label "Alessandro di Hales"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q465329> a schema:Person ;
+    rdfs:label "Stephen Langton"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q468641> a schema:Person ;
+    rdfs:label "Costantino l'Africano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q470795> a schema:Person ;
+    rdfs:label "Alpetragio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q472833> a schema:Person ;
+    rdfs:label "Aimone di Halberstadt"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q47595> a schema:Person ;
+    rdfs:label "Alfonso X di Castiglia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q495319> a schema:Person ;
+    rdfs:label "Andrea da Grosseto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q505931> a schema:Person ;
+    rdfs:label "Areteo di Cappadocia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5197> a schema:Person ;
+    rdfs:label "Gace Brulé"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5198> a schema:Person ;
+    rdfs:label "Gualtiero di Châtillon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5199> a schema:Person ;
+    rdfs:label "Le Châtelain de Coucy"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5201> a schema:Person ;
+    rdfs:label "Raimbaut d'Aurenga"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q52084523> a schema:Person ;
+    rdfs:label "Guido Ghislieri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q52166> a schema:Person ;
+    rdfs:label "Fedro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q523113> a schema:Person ;
+    rdfs:label "Bernardo Silvestre"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5254> a schema:Person ;
+    rdfs:label "Folchetto di Marsiglia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5260> a schema:Person ;
+    rdfs:label "Jaufré Rudel"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5264> a schema:Person ;
+    rdfs:label "Ippocrate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5269> a schema:Person ;
+    rdfs:label "Peire Vidal"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5271> a schema:Person ;
+    rdfs:label "Hugues d'Orléans"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q529302> a schema:Person ;
+    rdfs:label "Fulberto di Chartres"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q530026> a schema:Person ;
+    rdfs:label "Bonagiunta Orbicciani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5331803> a schema:Person ;
+    rdfs:label "Eberardo di Béthune"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5351> a schema:Person ;
+    rdfs:label "Guglielmo IX d'Aquitania"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q535494> a schema:Person ;
+    rdfs:label "Arrigo da Settimello"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5363> a schema:Person ;
+    rdfs:label "Maria de Ventadorn"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q537366> a schema:Person ;
+    rdfs:label "Peire Cardenal"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q542434> a schema:Person ;
+    rdfs:label "Boncompagno da Signa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q543191> a schema:Person ;
+    rdfs:label "Haly Abbas"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q543586> a schema:Person ;
+    rdfs:label "Onorio d'Autun"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q544925> a schema:Person ;
+    rdfs:label "Jean de Meung"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q545057> a schema:Person ;
+    rdfs:label "Raimon de Miraval"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q55226734> a schema:Person ;
+    rdfs:label "Natuccio Cinquino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q55713307> a schema:Person ;
+    rdfs:label "Gentile da Cingoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q559548> a schema:Person ;
+    rdfs:label "Michele Scoto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q561237> a schema:Person ;
+    rdfs:label "Gaucelm Faidit"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q561667> a schema:Person ;
+    rdfs:label "Ubertino da Casale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5623> a schema:Person ;
+    rdfs:label "Aimeric de Pegulhan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5659> a schema:Person ;
+    rdfs:label "Conon de Béthune"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q577742> a schema:Person ;
+    rdfs:label "Raimon Vidal"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q60059> a schema:Person ;
+    rdfs:label "Alberto Magno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q602977> a schema:Person ;
+    rdfs:label "Simone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q615260> a schema:Person ;
+    rdfs:label "Guglielmo di Conches"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6197> a schema:Person ;
+    rdfs:label "Orazio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q62055718> a schema:Person ;
+    rdfs:label "Lippo Pasci de' Bardi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6265751> a schema:Person ;
+    rdfs:label "Giovanni di Ford"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6265864> a schema:Person ;
+    rdfs:label "Jean de la Rochelle"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q634807> a schema:Person ;
+    rdfs:label "Archipoeta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q644181> a schema:Person ;
+    rdfs:label "Rinaldo d'Aquino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q649068> a schema:Person ;
+    rdfs:label "Guilhem de Berguedan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q654307> a schema:Person ;
+    rdfs:label "Marbodo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q654858> a schema:Person ;
+    rdfs:label "Pascasio Radberto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q658850> a schema:Person ;
+    rdfs:label "Ponç de la Guàrdia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q660359> a schema:Person ;
+    rdfs:label "Cecco Angiolieri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q665165> a schema:Person ;
+    rdfs:label "Sordello da Goito"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6691> a schema:Person ;
+    rdfs:label "Omero"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q673799> a schema:Person ;
+    rdfs:label "Giraut de Bornelh"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q67436457> a schema:Person ;
+    rdfs:label "Piero Asino degli Uberti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q675493> a schema:Person ;
+    rdfs:label "Enrico VII"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6789787> a schema:Person ;
+    rdfs:label "Matteo Plateario"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7001609> a schema:Person ;
+    rdfs:label "Guilhem de Mur"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q704179> a schema:Person ;
+    rdfs:label "Giovanni Villani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q704892> a schema:Person ;
+    rdfs:label "re Enzo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q708247> a schema:Person ;
+    rdfs:label "Gaio Mario Vittorino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q708539> a schema:Person ;
+    rdfs:label "Rodolfo il Glabro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q70991> a schema:Person ;
+    rdfs:label "Ildegarda di Bingen"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q712257> a schema:Person ;
+    rdfs:label "Incmaro di Reims"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q716994> a schema:Person ;
+    rdfs:label "Dino Compagni"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7170> a schema:Person ;
+    rdfs:label "Sallustio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q717037> a schema:Person ;
+    rdfs:label "Giovanni da Parigi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7198> a schema:Person ;
+    rdfs:label "Ovidio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q728592> a schema:Person ;
+    rdfs:label "Cecco d'Ascoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q731681> a schema:Person ;
+    rdfs:label "Ildeberto di Lavardin"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q734139> a schema:Person ;
+    rdfs:label "Guillem de Montanhagol"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q736348> a schema:Person ;
+    rdfs:label "Cino da Pistoia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q737321> a schema:Person ;
+    rdfs:label "Albertino Mussato"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q768555> a schema:Person ;
+    rdfs:label "Filippo il Cancelliere"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7702427> a schema:Person ;
+    rdfs:label "Terino da Castelfiorentino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q783253> a schema:Person ;
+    rdfs:label "Maslama ibn Ahmad al-Majriti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q785069> a schema:Person ;
+    rdfs:label "Sennuccio del Bene"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q79789> a schema:Person ;
+    rdfs:label "Federico Barbarossa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q799960> a schema:Person ;
+    rdfs:label "Salimbene de Adam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8011> a schema:Person ;
+    rdfs:label "Avicenna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8016774> a schema:Person ;
+    rdfs:label "Guglielmo Peraldo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q804774> a schema:Person ;
+    rdfs:label "Baudri de Bourgueil"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q826333> a schema:Person ;
+    rdfs:label "Bernardo da Pavia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q82778> a schema:Person ;
+    rdfs:label "Plinio il Vecchio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q85512391> a schema:Person ;
+    rdfs:label "Giovanni Monaco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q859> a schema:Person ;
+    rdfs:label "Platone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q868> a schema:Person ;
+    rdfs:label "Aristotele"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8747> a schema:Person ;
+    rdfs:label "Euclide"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8778> a schema:Person ;
+    rdfs:label "Galeno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q88209110> a schema:Person ;
+    rdfs:label "Gherardo da Castelfiorentino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8827> a schema:Person ;
+    rdfs:label "Properzio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q91016408> a schema:Person ;
+    rdfs:label "Arnaldo di Bonneval"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q9200> a schema:Person ;
+    rdfs:label "Paolo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q931898> a schema:Person ;
+    rdfs:label "Guglielmo d'Auxerre"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q932714> a schema:Person ;
+    rdfs:label "Fulgenzio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q95387795> a schema:Person ;
+    rdfs:label "Bacciarone di Baccone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q9546> a schema:Person ;
+    rdfs:label "Al-Ghazzali"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q956946> a schema:Person ;
+    rdfs:label "Giovanni da Capua"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q957503> a schema:Person ;
+    rdfs:label "Philippe de Remy"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q972805> a schema:Person ;
+    rdfs:label "Martin da Canal"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q97441221> a schema:Person ;
+    rdfs:label "Si. Gui. da Pistoia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q97441336> a schema:Person ;
+    rdfs:label "Lotto di ser Dato"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q97441387> a schema:Person ;
+    rdfs:label "Lemmo Orlandi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q97974153> a schema:Person ;
+    rdfs:label "Cione di Baglione"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q97992833> a schema:Person ;
+    rdfs:label "Mino da Colle"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q983064> a schema:Person ;
+    rdfs:label "Guido Faba"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q984476> a schema:Person ;
+    rdfs:label "Cerverí de Girona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q98507695> a schema:Person ;
+    rdfs:label "Gavaudan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q99020186> a schema:Person ;
+    rdfs:label "Filippo Ceffi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728995301-3097954/extraction-1755592940896-1/> prov:generatedAtTime "2025-10-01T20:16:07.146382"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1728995301-3097954/extraction-1755592940896-1> .
+
+<https://w3id.org/dh-atlas/1759314274-7662797> a schema:Person ;
+    rdfs:label "Enrico da Cremona"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314275-8128433> a schema:Person ;
+    rdfs:label "Gerardo di Solo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314277-2891557> a schema:Person ;
+    rdfs:label "Gherarducci Garisendi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314278-83905> a schema:Person ;
+    rdfs:label "Guillalmet"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314279-512715> a schema:Person ;
+    rdfs:label "Henri de Gauchi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314280-5921288> a schema:Person ;
+    rdfs:label "Lapo Salterelli"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314281-273615> a schema:Person ;
+    rdfs:label "Laurens de Blois"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314282-8912694> a schema:Person ;
+    rdfs:label "Lunardo del Guallacca"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314285-4073062> a schema:Person ;
+    rdfs:label "Tommaso (ps.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314286-088702> a schema:Person ;
+    rdfs:label "Ugo di Massa di Siena"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314290-5606935> a schema:Person ;
+    rdfs:label "Alessandro di Villadei"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314315-2914164> a schema:Person ;
+    rdfs:label "Ugo di San Caro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314335-749293> a schema:Person ;
+    rdfs:label "Teodolfo d'Orléans"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314337-0402236> a schema:Person ;
+    rdfs:label "Gauthier da Lilla"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314348-292111> a schema:Person ;
+    rdfs:label "Anonimo a Monte"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314351-1824307> a schema:Person ;
+    rdfs:label "Serlo di Wilton"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314354-4354672> a schema:Person ;
+    rdfs:label "Tebaldo I Re di Navarra"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314368-2925012> a schema:Person ;
+    rdfs:label "Bartolomeo Mocati"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314371-6551023> a schema:Person ;
+    rdfs:label "Jacopone (ps.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314372-3724> a schema:Person ;
+    rdfs:label "Maestro Francesco di Firenze"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314373-048442> a schema:Person ;
+    rdfs:label "Maestro Mauro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314374-410735> a schema:Person ;
+    rdfs:label "Mino del Pavesaio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314375-0808334> a schema:Person ;
+    rdfs:label "Mula da Pistoia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314376-714457> a schema:Person ;
+    rdfs:label "Pacino Angiulieri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314378-4812164> a schema:Person ;
+    rdfs:label "Peyre Trabustal"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314379-1558158> a schema:Person ;
+    rdfs:label "Pietro Morovelli"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314379-7981157> a schema:Person ;
+    rdfs:label "Pietro d'Alvernia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314380-9872122> a schema:Person ;
+    rdfs:label "Seneca (ps.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314381-6410115> a schema:Person ;
+    rdfs:label "Raimbaut de Beljoc"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314383-7091522> a schema:Person ;
+    rdfs:label "Ugolino Buzzola"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314384-4037426> a schema:Person ;
+    rdfs:label "Uguccione (ps.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314385-0944896> a schema:Person ;
+    rdfs:label "Grammatici medievali"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314401-7206886> a schema:Person ;
+    rdfs:label "Folgore di San Gimignano"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314419-6603565> a schema:Person ;
+    rdfs:label "Nicolò di Lira"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314428-8160443> a schema:Person ;
+    rdfs:label "Dionigi Areopagita (ps.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314431-233524> a schema:Person ;
+    rdfs:label "Ilario d'Orléans"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314434-2311933> a schema:Person ;
+    rdfs:label "Matteo Paterino"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314435-6845167> a schema:Person ;
+    rdfs:label "Neri de' Visdomini"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314439-3981779> a schema:Person ;
+    rdfs:label "Rinuccino Guidotti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314440-4965181> a schema:Person ;
+    rdfs:label "Scochetto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314441-1708767> a schema:Person ;
+    rdfs:label "Ser Pace"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314442-6444278> a schema:Person ;
+    rdfs:label "Vaquier Teriaz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314443-3491182> a schema:Person ;
+    rdfs:label "Burley (ps.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314444-4700203> a schema:Person ;
+    rdfs:label "Raimondo di Marsiglia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314463-416104> a schema:Person ;
+    rdfs:label "Jehans de Renti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314470-1708047> a schema:Person ;
+    rdfs:label "Matteo d'Aquasparta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314478-2484276> a schema:Person ;
+    rdfs:label "Aristotele (ps.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314481-9864972> a schema:Person ;
+    rdfs:label "Remigio d'Auxerre"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314495-6127207> a schema:Person ;
+    rdfs:label "Aldobrandino dei Mezzabati"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314496-7088304> a schema:Person ;
+    rdfs:label "Anonimo a Bonagiunta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314498-6566558> a schema:Person ;
+    rdfs:label "Caccia da Siena"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314499-3329287> a schema:Person ;
+    rdfs:label "Carnino Ghiberti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314500-4350379> a schema:Person ;
+    rdfs:label "Cavalcanti (ps.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314502-519716> a schema:Person ;
+    rdfs:label "Everardo Alemanno"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759314503-6371312> a schema:Person ;
+    rdfs:label "Francesco Ismera Beccanugi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728995301-3097954/extraction-1755592940896-1> prov:used <https://dantesources.dantenetwork.it/sparql?query=SELECT%20DISTINCT%20%3Flabel%20WHERE%20%7B%0A%20%3Fs%20a%20%3Chttp%3A//xmlns.com/foaf/0.1/Person%3E%20.%20%0A%20OPTIONAL%20%7B%20%3Fs%20%3Chttp%3A//xmlns.com/foaf/0.1/name%3E%20%3Flabel%20%0A%20%7D%20%7B%20%0A%20%7B%20%3Fs%20%3Fp%20%3Fo%20%7D%20UNION%20%7B%20%3Fx%20%3Fp2%20%3Fs%20%7D%20%7D%20%0A%7D%20GROUP%20BY%20%3Fs%20%3Flabel%20HAVING%20%28COUNT%28%3Fs%29%20%3E%3D%201%29%20> .
+

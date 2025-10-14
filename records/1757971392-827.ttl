@@ -1,0 +1,19 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757971392-827> a schema:Organization ;
+    rdfs:label "La Capraia - Center for the Art and Architectural History of Port Cities"@en ;
+    schema:name "La Capraia - Center for the Art and Architectural History of Port Cities"@en ;
+    schema:url <https://capodimonte.cultura.gov.it/la-capraia-centro-per-la-storia-dellarte-e-dellarchitettura-delle-citta-portuali/> .
+
+<https://w3id.org/dh-atlas/1757971392-827/> rdfs:label "La Capraia - Center for the Art and Architectural History of Port Cities"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T21:40:32.501608"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "La Capraia - Center for the Art and Architectural History of Port Cities"@en .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

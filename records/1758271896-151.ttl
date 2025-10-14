@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758271896-151> a schema:Person ;
+    rdfs:label "Bordignon, Alice"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728995806-349488> ;
+    schema:identifier <https://orcid.org/0009-0008-3556-0493> ;
+    schema:name "Bordignon, Alice"@en .
+
+<https://w3id.org/dh-atlas/1758271896-151/> rdfs:label "Bordignon, Alice"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-19T09:22:56.144924"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Bordignon, Alice"@en .
+
+<https://orcid.org/0009-0008-3556-0493> rdfs:label "0009-0008-3556-0493"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

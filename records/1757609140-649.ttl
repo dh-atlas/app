@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757609140-649> a schema:Person ;
+    rdfs:label "Arcidiacono, Salvatore"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1743001702-274> ;
+    schema:identifier <https://orcid.org/0000-0002-2540-041X> ;
+    schema:name "Arcidiacono, Salvatore"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q128034776> .
+
+<https://w3id.org/dh-atlas/1757609140-649/> rdfs:label "Arcidiacono, Salvatore"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T17:28:52.758481"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Arcidiacono, Salvatore"@en .
+
+<http://www.wikidata.org/entity/Q128034776> rdfs:label "Salvatore Arcidiacono"^^xsd:string .
+
+<https://orcid.org/0000-0002-2540-041X> rdfs:label "0000-0002-2540-041X"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743001702-274> rdfs:label "Università di Catania"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

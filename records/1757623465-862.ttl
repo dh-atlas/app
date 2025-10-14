@@ -1,0 +1,26 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757623465-862> a schema:ResearchProject ;
+    rdfs:label "3D-COFORM Project"@en ;
+    schema:description "The project covers all aspects of 3D capture and processing: shape semantics, material properties, metadata and provenance, and integration with texts and other media. It also focuses on search, research, and dissemination to both public and professionals. Alongside the technical work, it explores business models for 3D asset use, workflows for large-scale digitisation, socio-economic impact, and the creation of a Virtual Centre of Competence in 3D digitisation."@en ;
+    schema:dissolutionDate "2012-11-30"^^xsd:date ;
+    schema:foundingDate "2008-12-01"^^xsd:date ;
+    schema:funder <http://www.wikidata.org/entity/Q8880> ;
+    schema:identifier "FP7-ICT-231809"@en ;
+    schema:name "3D-COFORM Project"@en ;
+    schema:url <https://web.archive.org/web/20180514102115/https://www.3d-coform.eu/> .
+
+<https://w3id.org/dh-atlas/1757623465-862/> rdfs:label "3D-COFORM Project"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T22:14:36.347927"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "3D-COFORM Project"@en .
+
+<http://www.wikidata.org/entity/Q8880> rdfs:label "European Commission"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757970206-186> a schema:Organization ;
+    rdfs:label "University of Maryland, Baltimore"@en ;
+    schema:identifier <https://ror.org/04rq5mt64> ;
+    schema:location <https://sws.geonames.org/4347778> ;
+    schema:name "University of Maryland, Baltimore"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4119470> ;
+    schema:url <https://www.umaryland.edu/> .
+
+<https://w3id.org/dh-atlas/1757970206-186/> rdfs:label "University of Maryland, Baltimore"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T21:12:11.554143"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "University of Maryland, Baltimore"@en .
+
+<http://www.wikidata.org/entity/Q4119470> rdfs:label "University of Maryland, Baltimore"^^xsd:string .
+
+<https://sws.geonames.org/4347778> rdfs:label "Baltimore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

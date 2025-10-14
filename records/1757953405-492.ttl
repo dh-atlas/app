@@ -1,0 +1,28 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757953405-492> a schema:Person ;
+    rdfs:label "Milling, Carsten"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1757953269-015> ;
+    schema:identifier <https://orcid.org/0000-0003-0553-7512> ;
+    schema:name "Milling, Carsten"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q126596357> .
+
+<https://w3id.org/dh-atlas/1757953405-492/> rdfs:label "Milling, Carsten"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T16:52:07.246780"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Milling, Carsten"@en .
+
+<http://www.wikidata.org/entity/Q126596357> rdfs:label "Carsten Milling"^^xsd:string .
+
+<https://orcid.org/0000-0003-0553-7512> rdfs:label "0000-0003-0553-7512"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757953269-015> rdfs:label "University of Potsdam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

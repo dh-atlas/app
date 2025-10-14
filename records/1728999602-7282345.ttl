@@ -1,31 +1,39 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <http://schema.org/> .
-@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/dh-atlas/1728999602-7282345> a foaf:Agent,
-        schema:Organization ;
-    rdfs:label "Consiglio Nazionale delle Ricerche"@it ;
-    ns1:identifier "https://ror.org/04zaypm56"@en ;
-    ns1:location <https://sws.geonames.org/3169070> ;
-    ns1:name "National Research Council"@en,
-        "Consiglio Nazionale delle Ricerche"@it ;
-    ns1:sameAs <http://www.wikidata.org/entity/Q902464> ;
-    ns1:url <https://www.cnr.it/> .
+<https://w3id.org/dh-atlas/1728999602-7282345> a schema:Organization ;
+    rdfs:label "National Research Council"@en ;
+    schema:identifier <https://ror.org/04zaypm56> ;
+    schema:location <https://sws.geonames.org/3169070> ;
+    schema:member <https://w3id.org/dh-atlas/1728998303-4028718>,
+        <https://w3id.org/dh-atlas/1729013958-5402913>,
+        <https://w3id.org/dh-atlas/1743002657-995> ;
+    schema:name "National Research Council"@en,
+        "Consiglio Nazionale delle Ricerche (CNR)"@it ;
+    schema:sameAs <http://www.wikidata.org/entity/Q902464> ;
+    schema:url <https://www.cnr.it/> .
 
-<https://w3id.org/dh-atlas/1728999602-7282345/> rdfs:label "Consiglio Nazionale delle Ricerche"@it ;
-    ns2:currentStatus "published"^^xsd:string ;
-    ns1:name "Consiglio Nazionale delle Ricerche"@it ;
-    prov:generatedAtTime "2024-10-15T13:42:22.452631"^^xsd:dateTime ;
+<https://w3id.org/dh-atlas/1728999602-7282345/> rdfs:label "National Research Council"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T23:16:10.236348"^^xsd:dateTime ;
     prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "National Research Council"@en .
 
 <http://www.wikidata.org/entity/Q902464> rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
 
 <https://sws.geonames.org/3169070> rdfs:label "Rome"^^xsd:string .
 
+<https://w3id.org/dh-atlas/1728998303-4028718> rdfs:label "Istituto di Scienza e Tecnologie dell’Informazione “Alessandro Faedo” (CNR)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729013958-5402913> rdfs:label "Istituto di Linguistica Computazionale \"A. Zampolli\" (CNR)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743002657-995> rdfs:label "Istituto di Scienze e Tecnologie della Cognizione (CNR)"^^xsd:string .
+
 <https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
 

@@ -1,0 +1,23 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758272677-8939524> a schema:Organization ;
+    rdfs:label "Friends of Florence"@en ;
+    schema:location <https://sws.geonames.org/3176959> ;
+    schema:name "Friends of Florence"@en ;
+    schema:url <https://www.friendsofflorence.org/> .
+
+<https://w3id.org/dh-atlas/1758272677-8939524/> rdfs:label "Friends of Florence"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-19T09:06:52.742803"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Friends of Florence"@en .
+
+<https://sws.geonames.org/3176959> rdfs:label "Florence"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

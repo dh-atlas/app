@@ -1,0 +1,140 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1757518289-6366296 a schema:Dataset,
+        ns1:TextCollection ;
+    rdfs:label "DigItAnt Inscriptions Collection"@en ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    dcterms:conformsTo <http://www.wikidata.org/entity/Q5382396>,
+        <http://www.wikidata.org/entity/Q95728930> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-A>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-D> ;
+    schema:additionalType ns1:TextCollection ;
+    schema:citation <https://aclanthology.org/2022.lt4hala-1.9/>,
+        <https://doi.org/10.1145/3606703> ;
+    schema:contributor ns1:1757520228-343,
+        ns1:1757520285-54,
+        ns1:1757520349-077 ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns1:1757519925-211,
+        ns1:1757520079-069 ;
+    schema:description "A collection of texts (mostly epigraphic texts) that document the languages of Ancient Italy."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/concordance> ;
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    schema:genre <https://sparql.cwrc.ca/ontologies/genre#InformationalGenre> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ELL>,
+        <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA>,
+        <http://publications.europa.eu/resource/authority/language/LAT> ;
+    schema:license <https://w3id.org/italia/controlled-vocabulary/licences/C_Unknown> ;
+    schema:name "DigItAnt Inscriptions Collection"@en ;
+    schema:producer ns1:1757521624-812 ;
+    schema:publisher ns1:1729013958-5402913,
+        ns1:1757520454-677,
+        ns1:1757520838-94 ;
+    schema:size "626 texts"@en ;
+    schema:temporalCoverage <http://www.wikidata.org/entity/Q25296>,
+        <http://www.wikidata.org/entity/Q25297>,
+        <http://www.wikidata.org/entity/Q25300>,
+        <http://www.wikidata.org/entity/Q25321>,
+        <http://www.wikidata.org/entity/Q25335>,
+        <http://www.wikidata.org/entity/Q25339> ;
+    schema:url <https://digitant.ilc.cnr.it/platform/home> ;
+    schema:version "Unknown"@en ;
+    ns1:editionType <https://www.w3id.org/dh-atlas-vocabularies/etv/DiplomaticEdition>,
+        <https://www.w3id.org/dh-atlas-vocabularies/etv/FacsimileEdition>,
+        <https://www.w3id.org/dh-atlas-vocabularies/etv/InterpretativeEdition> ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/editing>,
+        <https://vocabs.dariah.eu/tadirah/gathering>,
+        <https://vocabs.dariah.eu/tadirah/interpreting> ;
+    ns1:servedBy ns1:1757521990-316 .
+
+<https://w3id.org/dh-atlas/1757518289-6366296/> rdfs:label "DigItAnt Inscriptions Collection"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-10T16:38:54.570714"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "DigItAnt Inscriptions Collection"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/XML> skos:prefLabel "XML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ELL> skos:prefLabel "Greek - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/LAT> skos:prefLabel "Latin - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25296> rdfs:label "6th century BC"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25297> rdfs:label "1st century BC"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25300> rdfs:label "2nd century BC"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25321> rdfs:label "3rd century BC"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25335> rdfs:label "4th century BC"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25339> rdfs:label "5th century BC"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5382396> rdfs:label "EpiDoc"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q95728930> rdfs:label "TEI P5"^^xsd:string .
+
+<https://sparql.cwrc.ca/ontologies/genre#InformationalGenre> rdfs:label "Informational Genre"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/concordance> skos:prefLabel "Concordance - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/editing> skos:prefLabel "Editing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/gathering> skos:prefLabel "Gathering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/interpreting> skos:prefLabel "Interpreting - TADIRAH"^^xsd:string .
+
+ns1:1729013958-5402913 rdfs:label "Istituto di Linguistica Computazionale \"A. Zampolli\" (CNR)"^^xsd:string .
+
+ns1:1757519925-211 rdfs:label "Murano, Francesca"^^xsd:string .
+
+ns1:1757520079-069 rdfs:label "Rigobianco, Luca"^^xsd:string .
+
+ns1:1757520228-343 rdfs:label "Quochi, Valeria"^^xsd:string .
+
+ns1:1757520285-54 rdfs:label "Mallia, Michele "^^xsd:string .
+
+ns1:1757520349-077 rdfs:label "Bellandi, Andrea"^^xsd:string .
+
+ns1:1757520454-677 rdfs:label "Department of Humanities (Ca' Foscari University of Venice)"^^xsd:string .
+
+ns1:1757520838-94 rdfs:label "Dipartimento di Lettere e Filosofia (Università di Firenze)"^^xsd:string .
+
+ns1:1757521624-812 rdfs:label "Languages and Cultures of Ancient Italy. Historical Linguistics and Digital Models (PRIN 2017 Program)"^^xsd:string .
+
+ns1:1757521990-316 rdfs:label "EpiLexO Search"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-A> skos:prefLabel "Archaeological sciences - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-D> skos:prefLabel "Sciences of antiquity - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/licences/C_Unknown> skos:prefLabel "Unknown License - LICENSES"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/DiplomaticEdition> rdfs:label "Diplomatic Edition"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/FacsimileEdition> rdfs:label "Facsimile Edition"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/InterpretativeEdition> rdfs:label "Interpretative Edition"^^xsd:string .
+
+ns1:TextCollection rdfs:label "Text Collection"^^xsd:string .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+

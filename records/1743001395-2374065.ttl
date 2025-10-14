@@ -1,42 +1,42 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://purl.org/dc/terms/> .
-@prefix default2: <https://w3id.org/dh-atlas/> .
-@prefix default3: <http://dbpedia.org/ontology/> .
-@prefix default4: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix ns3: <https://w3id.org/dh-atlas/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-default2:1743001395-2374065 a schema:Dataset,
-        default2:DigitalScholarlyEdition ;
+ns3:1743001395-2374065 a schema:Dataset,
+        ns3:DigitalScholarlyEdition ;
     rdfs:label "Edizione Nazionale dell’Opera Omnia di Luigi Pirandello"@it ;
-    default1:conformsTo <http://www.wikidata.org/entity/Q2115> ;
-    :about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-10-F1>,
+    dcterms:conformsTo <http://www.wikidata.org/entity/Q2115> ;
+    ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-10-F1>,
         <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-13> ;
-    :additionalType default2:DigitalScholarlyEdition ;
-    :citation <https://www.iris.unict.it/handle/20.500.11769/641578> ;
-    :conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    :creator default2:1743001563-768 ;
-    :description "Pirandello Nazionale è il portale che dal 2017 ospita l’Edizione digitale dell’Opera Omnia di Luigi Pirandello."@it ;
-    :encodingFormat <http://publications.europa.eu/resource/authority/file-type/XML> ;
-    :genre <http://www.wikidata.org/entity/Q11635>,
+    ns1:additionalType ns3:DigitalScholarlyEdition ;
+    ns1:citation <https://www.iris.unict.it/handle/20.500.11769/641578> ;
+    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns1:creator ns3:1743001563-768 ;
+    ns1:description "Pirandello Nazionale è il portale che dal 2017 ospita l’Edizione digitale dell’Opera Omnia di Luigi Pirandello."@it ;
+    ns1:encodingFormat <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    ns1:genre <http://www.wikidata.org/entity/Q11635>,
         <http://www.wikidata.org/entity/Q25379>,
         <http://www.wikidata.org/entity/Q49848>,
         <http://www.wikidata.org/entity/Q8261> ;
-    :inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
-    :name "Edizione Nazionale dell’Opera Omnia di Luigi Pirandello"@it ;
-    :url <https://www.pirandellonazionale.it/> ;
-    default2:editionType <http://www.w3id.org/dh-atlas/DigitalEdition> ;
-    default2:referencedWorkType <http://www.w3id.org/dh-atlas/CollectedWorks>,
+    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns1:name "Edizione Nazionale dell’Opera Omnia di Luigi Pirandello"@it ;
+    ns1:url <https://www.pirandellonazionale.it/> ;
+    ns3:editionType <http://www.w3id.org/dh-atlas/DigitalEdition> ;
+    ns3:referencedWorkType <http://www.w3id.org/dh-atlas/CollectedWorks>,
         <http://www.w3id.org/dh-atlas/CollectionOfTexts> .
 
 <https://w3id.org/dh-atlas/1743001395-2374065/> rdfs:label "Edizione Nazionale dell’Opera Omnia di Luigi Pirandello"@it ;
-    default3:currentStatus "modified"^^xsd:string ;
-    :name "Edizione Nazionale dell’Opera Omnia di Luigi Pirandello"@it ;
-    default4:generatedAtTime "2025-04-01T14:29:02.345000+00:00"^^xsd:dateTime ;
-    default4:wasAttributedTo default2:erica-dot-andreose2-at-unibo-dot-it ;
-    default4:wasInfluencedBy default2:sebastiano-dot-giacomin2-at-unibo-dot-it .
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Edizione Nazionale dell’Opera Omnia di Luigi Pirandello"@it ;
+    prov:generatedAtTime "2025-04-01T14:29:02.345582"^^xsd:dateTime ;
+    prov:wasAttributedTo ns3:anonymous ;
+    prov:wasInfluencedBy ns3:sebastiano-dot-giacomin2-at-unibo-dot-it .
 
 <http://publications.europa.eu/resource/authority/file-type/XML> skos:prefLabel "XML - FILE TYPE"^^xsd:string .
 
@@ -60,15 +60,15 @@ default2:1743001395-2374065 a schema:Dataset,
 
 <http://www.wikidata.org/entity/Q8261> rdfs:label "novel"^^xsd:string .
 
-default2:1743001563-768 rdfs:label "Centro di Informatica Umanistica dell'Università di Catania (CINUM)"^^xsd:string .
+ns3:1743001563-768 rdfs:label "Centro di Informatica Umanistica dell'Università di Catania (CINUM)"^^xsd:string .
 
-default2:erica-dot-andreose2-at-unibo-dot-it rdfs:label "erica.andreose2@unibo.it" .
+ns3:anonymous rdfs:label "anonymous" .
 
-default2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+ns3:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-10-F1> skos:prefLabel "Italian literature - ACADEMIC FIELD"^^xsd:string .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-13> skos:prefLabel "Philology of italian literature - ACADEMIC FIELD"^^xsd:string .
 
-default2:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
+ns3:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
 

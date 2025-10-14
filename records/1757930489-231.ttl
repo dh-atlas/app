@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757930489-231> a schema:Organization ;
+    rdfs:label "Charles University"@en ;
+    schema:identifier <https://ror.org/024d6js02> ;
+    schema:location <https://sws.geonames.org/3067696> ;
+    schema:name "Charles University"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q31519> ;
+    schema:url <https://www.cuni.cz/> .
+
+<https://w3id.org/dh-atlas/1757930489-231/> rdfs:label "Charles University"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T21:41:32.948099"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Charles University"@en .
+
+<http://www.wikidata.org/entity/Q31519> rdfs:label "Charles University"^^xsd:string .
+
+<https://sws.geonames.org/3067696> rdfs:label "Prague"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

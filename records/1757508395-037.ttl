@@ -1,0 +1,29 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757508395-037> a schema:Organization ;
+    rdfs:label "University of Pavia"@en ;
+    schema:identifier <https://ror.org/00s6t1f81> ;
+    schema:location <https://sws.geonames.org/3171366> ;
+    schema:name "University of Pavia"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q219317> ;
+    schema:url <http://www.unipv.eu/site/en/home.html> .
+
+<https://w3id.org/dh-atlas/1757508395-037/> rdfs:label "University of Pavia"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-10T13:05:14.215588"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "University of Pavia"@en .
+
+<http://www.wikidata.org/entity/Q219317> rdfs:label "University of Pavia"^^xsd:string .
+
+<https://sws.geonames.org/3171366> rdfs:label "Pavia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

@@ -1,0 +1,22 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757927745-956> a schema:Person ;
+    rdfs:label "Baroffio, Giacomo"@en ;
+    schema:name "Baroffio, Giacomo"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q85133227> .
+
+<https://w3id.org/dh-atlas/1757927745-956/> rdfs:label "Baroffio, Giacomo"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T10:22:20.497042"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Baroffio, Giacomo"@en .
+
+<http://www.wikidata.org/entity/Q85133227> rdfs:label "Giacomo Baroffio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

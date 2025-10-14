@@ -1,0 +1,30 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757615214-463> a schema:Person ;
+    rdfs:label "Callieri, Marco"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728998303-4028718> ;
+    schema:identifier <https://orcid.org/0000-0002-5832-680X> ;
+    schema:name "Callieri, Marco"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q93715951> .
+
+<https://w3id.org/dh-atlas/1757615214-463/> rdfs:label "Callieri, Marco"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T18:28:01.466253"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Callieri, Marco"@en .
+
+<http://www.wikidata.org/entity/Q93715951> rdfs:label "Marco Callieri"^^xsd:string .
+
+<https://orcid.org/0000-0002-5832-680X> rdfs:label "0000-0002-5832-680X"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728998303-4028718> rdfs:label "Istituto di Scienza e Tecnologie dell’Informazione “Alessandro Faedo” (CNR)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

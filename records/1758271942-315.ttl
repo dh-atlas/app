@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758271942-315> a schema:Person ;
+    rdfs:label "Bonanno, Vanessa"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728999602-7282345> ;
+    schema:identifier <https://orcid.org/0009-0002-1414-5879> ;
+    schema:name "Bonanno, Vanessa"@en .
+
+<https://w3id.org/dh-atlas/1758271942-315/> rdfs:label "Bonanno, Vanessa"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-19T09:23:09.277161"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Bonanno, Vanessa"@en .
+
+<https://orcid.org/0009-0002-1414-5879> rdfs:label "0009-0002-1414-5879"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728999602-7282345> rdfs:label "National Research Council"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

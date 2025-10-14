@@ -1,0 +1,1211 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://viaf.org/viaf/1167803164117771992> a schema:CreativeWork ;
+    rdfs:label "De dogmate Platonis"^^xsd:string .
+
+<http://viaf.org/viaf/124159474194927662055> a schema:CreativeWork ;
+    rdfs:label "De malo senectutis et senii"^^xsd:string .
+
+<http://viaf.org/viaf/1469159474378627662205> a schema:CreativeWork ;
+    rdfs:label "Metamorphoseon libri XI"^^xsd:string .
+
+<http://viaf.org/viaf/174072703> a schema:CreativeWork ;
+    rdfs:label "Aristotelis Analytica posteriora commentaria"^^xsd:string .
+
+<http://viaf.org/viaf/174442481> a schema:CreativeWork ;
+    rdfs:label "De differentia verbi divini et humani"^^xsd:string .
+
+<http://viaf.org/viaf/177988875> a schema:CreativeWork ;
+    rdfs:label "De causis proprietatum elementorum"^^xsd:string .
+
+<http://viaf.org/viaf/182636198> a schema:CreativeWork ;
+    rdfs:label "Cantare di Florio e Biancifiore"^^xsd:string .
+
+<http://viaf.org/viaf/184223186> a schema:CreativeWork ;
+    rdfs:label "De anima (Alberto Magno)"^^xsd:string .
+
+<http://viaf.org/viaf/185585975> a schema:CreativeWork ;
+    rdfs:label "De coelo et mundo"^^xsd:string .
+
+<http://viaf.org/viaf/194081273> a schema:CreativeWork ;
+    rdfs:label "De Genesi contra Manicheos"^^xsd:string .
+
+<http://viaf.org/viaf/209891279> a schema:CreativeWork ;
+    rdfs:label "De melancholia"^^xsd:string .
+
+<http://viaf.org/viaf/21167802704217770712> a schema:CreativeWork ;
+    rdfs:label "Commentaria in quattuor libros sententiarum"^^xsd:string .
+
+<http://viaf.org/viaf/212971558> a schema:CreativeWork ;
+    rdfs:label "De locis affectis"^^xsd:string .
+
+<http://viaf.org/viaf/214805304> a schema:CreativeWork ;
+    rdfs:label "Actus Francisci"^^xsd:string .
+
+<http://viaf.org/viaf/216211016> a schema:CreativeWork ;
+    rdfs:label "De animalibus (Alberto Magno)"^^xsd:string .
+
+<http://viaf.org/viaf/219159474046627660632> a schema:CreativeWork ;
+    rdfs:label "Concordanciae"^^xsd:string .
+
+<http://viaf.org/viaf/238159474047827660294> a schema:CreativeWork ;
+    rdfs:label "Commentarii in Vergilii Aeneidos libros"^^xsd:string .
+
+<http://viaf.org/viaf/29159474178827661385> a schema:CreativeWork ;
+    rdfs:label "Commentarii in evangelium Matthaei"^^xsd:string .
+
+<http://viaf.org/viaf/29167803121817771255> a schema:CreativeWork ;
+    rdfs:label "Contra falsos Ecclesie professores"^^xsd:string .
+
+<http://viaf.org/viaf/293848126> a schema:CreativeWork ;
+    rdfs:label "Ar resplan la flors enversa"^^xsd:string .
+
+<http://viaf.org/viaf/316650109> a schema:CreativeWork ;
+    rdfs:label "Commento alle Sentenze"^^xsd:string .
+
+<http://viaf.org/viaf/32159474046627660376> a schema:CreativeWork ;
+    rdfs:label "Commentarii in Genesim"^^xsd:string .
+
+<http://viaf.org/viaf/35159474185427661711> a schema:CreativeWork ;
+    rdfs:label "De diversitate fortunae et philosophiae consolatione"^^xsd:string .
+
+<http://viaf.org/viaf/3558159477664627990008> a schema:CreativeWork ;
+    rdfs:label "De caelo et mundo"^^xsd:string .
+
+<http://viaf.org/viaf/57159474318927662649> a schema:CreativeWork ;
+    rdfs:label "Super extremam partem Cantici canticorum sermones CXX"^^xsd:string .
+
+<http://viaf.org/viaf/69158367622801280189> a schema:CreativeWork ;
+    rdfs:label "Commento a Daniele"^^xsd:string .
+
+<http://viaf.org/viaf/89159474046427660805> a schema:CreativeWork ;
+    rdfs:label "De divinis nominibus"^^xsd:string .
+
+<http://viaf.org/viaf/90636401> a schema:CreativeWork ;
+    rdfs:label "Bel Gherardino"^^xsd:string .
+
+<http://viaf.org/viaf/980145858199323022449> a schema:CreativeWork ;
+    rdfs:label "De animalibus (Avicenna)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q10441412> a schema:CreativeWork ;
+    rdfs:label "Candelabrum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104789146> a schema:CreativeWork ;
+    rdfs:label "Controversiae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105716839> a schema:CreativeWork ;
+    rdfs:label "Cento Nuptialis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106046> a schema:CreativeWork ;
+    rdfs:label "Vangeli Sinottici"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106199> a schema:CreativeWork ;
+    rdfs:label "Commentarii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106959534> a schema:CreativeWork ;
+    rdfs:label "Aratea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q110769310> a schema:CreativeWork ;
+    rdfs:label "De causis et signis acutorum morborum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1142681> a schema:CreativeWork ;
+    rdfs:label "De libero arbitrio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q115790647> a schema:CreativeWork ;
+    rdfs:label "Commentarii in Isaiam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q116014977> a schema:CreativeWork ;
+    rdfs:label "Cort d'Amor"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1180585> a schema:CreativeWork ;
+    rdfs:label "De beata vita"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1180695> a schema:CreativeWork ;
+    rdfs:label "De lapidibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q11828236> a schema:CreativeWork ;
+    rdfs:label "Contra Academicos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1233156> a schema:CreativeWork ;
+    rdfs:label "Tusculanae Disputationes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124731950> a schema:CreativeWork ;
+    rdfs:label "De aeternitate mundi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q126934639> a schema:CreativeWork ;
+    rdfs:label "De intellectu et intelligibili"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12859263> a schema:CreativeWork ;
+    rdfs:label "Orator"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131085417> a schema:CreativeWork ;
+    rdfs:label "De gradibus humilitatis et superbiae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131310260> a schema:CreativeWork ;
+    rdfs:label "De institutione arithmetica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131429043> a schema:CreativeWork ;
+    rdfs:label "A Deu coman vos e·l vostre ric preç"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134169950> a schema:CreativeWork ;
+    rdfs:label "De cavendis vitiis et virtutibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134383984> a schema:CreativeWork ;
+    rdfs:label "Breviari d'amor"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134612664> a schema:CreativeWork ;
+    rdfs:label "Ars versificatoria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134694713> a schema:CreativeWork ;
+    rdfs:label "De Gratia et libero arbitrio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134726840> a schema:CreativeWork ;
+    rdfs:label "De differentiis verborum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q135457939> a schema:CreativeWork ;
+    rdfs:label "Amore, in cui disio ed ò speranza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1387966> a schema:CreativeWork ;
+    rdfs:label "Te Deum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1410832> a schema:CreativeWork ;
+    rdfs:label "Veni Creator Spiritus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15076351> a schema:CreativeWork ;
+    rdfs:label "Commentarii in Somnium Scipionis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15715550> a schema:CreativeWork ;
+    rdfs:label "De institutione musica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15885990> a schema:CreativeWork ;
+    rdfs:label "Timeo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16271759> a schema:CreativeWork ;
+    rdfs:label "Anticlaudianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q17083542> a schema:CreativeWork ;
+    rdfs:label "Chorographia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1735826> a schema:CreativeWork ;
+    rdfs:label "Categoriae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q17623754> a schema:CreativeWork ;
+    rdfs:label "Canzoniere"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q17628188> a schema:CreativeWork ;
+    rdfs:label "Cronica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18522134> a schema:CreativeWork ;
+    rdfs:label "De contemptu mundi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q185427> a schema:CreativeWork ;
+    rdfs:label "Chanson de Roland"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19125408> a schema:CreativeWork ;
+    rdfs:label "Amore fue invisibole criato"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19125451> a schema:CreativeWork ;
+    rdfs:label "Amorosa donna fina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19125493> a schema:CreativeWork ;
+    rdfs:label "Ancor che l'aigua per lo foco lassi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19126595> a schema:CreativeWork ;
+    rdfs:label "Caunoscenza penosa e angosciosa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19126734> a schema:CreativeWork ;
+    rdfs:label "Chi vedesse a Lucia un var capuzzo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19126745> a schema:CreativeWork ;
+    rdfs:label "Chi è questa che vèn, ch'ogn'om la mira"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19127029> a schema:CreativeWork ;
+    rdfs:label "Con gran disio pensando lungamente"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19136147> a schema:CreativeWork ;
+    rdfs:label "Can lo dous temps comensa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19137994> a schema:CreativeWork ;
+    rdfs:label "Chantars no pot gaire valer"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19141089> a schema:CreativeWork ;
+    rdfs:label "Sonetti de' mesi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19994688> a schema:CreativeWork ;
+    rdfs:label "Codex Iustinianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21601093> a schema:CreativeWork ;
+    rdfs:label "De iuventute et senectute"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q216383> a schema:CreativeWork ;
+    rdfs:label "Libri dei profeti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2249142> a schema:CreativeWork ;
+    rdfs:label "De Nilo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q243235> a schema:CreativeWork ;
+    rdfs:label "Academica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2527880> a schema:CreativeWork ;
+    rdfs:label "Cronaca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2533747> a schema:CreativeWork ;
+    rdfs:label "Anatomia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25382057> a schema:CreativeWork ;
+    rdfs:label "De arte metrica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27958789> a schema:CreativeWork ;
+    rdfs:label "Le Tournoi de Chauvency"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q287323> a schema:CreativeWork ;
+    rdfs:label "Tristia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2879649> a schema:CreativeWork ;
+    rdfs:label "Ad Polybium de consolatione"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3237443> a schema:CreativeWork ;
+    rdfs:label "Leys d'amors"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q331011> a schema:CreativeWork ;
+    rdfs:label "De caelo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3393179> a schema:CreativeWork ;
+    rdfs:label "De astronomia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3475305> a schema:CreativeWork ;
+    rdfs:label "De diversis artibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3481620> a schema:CreativeWork ;
+    rdfs:label "De divinatione per somnum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3607564> a schema:CreativeWork ;
+    rdfs:label "Al cor gentil rempaira sempre amore"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3614545> a schema:CreativeWork ;
+    rdfs:label "Amore amaro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3684102> a schema:CreativeWork ;
+    rdfs:label "Come il sole"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3688809> a schema:CreativeWork ;
+    rdfs:label "Contemplazione della morte"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3698471> a schema:CreativeWork ;
+    rdfs:label "Cronica delle cose occorrenti ne' tempi suoi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3704127> a schema:CreativeWork ;
+    rdfs:label "De lingua Latina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3704142> a schema:CreativeWork ;
+    rdfs:label "De paradiso"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3713933> a schema:CreativeWork ;
+    rdfs:label "Donna de paradiso"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3817870> a schema:CreativeWork ;
+    rdfs:label "Acerba etas"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3827677> a schema:CreativeWork ;
+    rdfs:label "Laude di Jacopone da Todi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q383653> a schema:CreativeWork ;
+    rdfs:label "Unam Sanctam Ecclesiam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3846733> a schema:CreativeWork ;
+    rdfs:label "Mare amoroso"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3860930> a schema:CreativeWork ;
+    rdfs:label "Monologion"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4016040> a schema:CreativeWork ;
+    rdfs:label "Voi, ch'avete mutata la maniera"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42188470> a schema:CreativeWork ;
+    rdfs:label "De ecclesiastica potestate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42188480> a schema:CreativeWork ;
+    rdfs:label "De Genesi ad litteram"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42188499> a schema:CreativeWork ;
+    rdfs:label "De Jerusalem celesti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42191504> a schema:CreativeWork ;
+    rdfs:label "Institutiones"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q466060> a schema:CreativeWork ;
+    rdfs:label "Liber canonis medicinae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4784776> a schema:CreativeWork ;
+    rdfs:label "Arbor vitae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q485206> a schema:CreativeWork ;
+    rdfs:label "Analytica posteriora"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q485217> a schema:CreativeWork ;
+    rdfs:label "Analytica priora"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q50478566> a schema:CreativeWork ;
+    rdfs:label "Ars medica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q53679527> a schema:CreativeWork ;
+    rdfs:label "Bestiario moralizzato di Gubbio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q54834493> a schema:CreativeWork ;
+    rdfs:label "De disciplina scolarium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q56245534> a schema:CreativeWork ;
+    rdfs:label "Novellino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q56488529> a schema:CreativeWork ;
+    rdfs:label "Aforismi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q61105> a schema:CreativeWork ;
+    rdfs:label "Cedrus Libani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q62052388> a schema:CreativeWork ;
+    rdfs:label "De causis et processu universitatis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q65130117> a schema:CreativeWork ;
+    rdfs:label "Ara·m platz, Giraut de Borneill"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q65346456> a schema:CreativeWork ;
+    rdfs:label "Speculum Naturale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q65346609> a schema:CreativeWork ;
+    rdfs:label "Speculum Historiale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q660519> a schema:CreativeWork ;
+    rdfs:label "Noctes Atticae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7320444> a schema:CreativeWork ;
+    rdfs:label "Rhetorica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q768515> a schema:CreativeWork ;
+    rdfs:label "Thebais"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q770041> a schema:CreativeWork ;
+    rdfs:label "Augustus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q776615> a schema:CreativeWork ;
+    rdfs:label "De Catilinae coniuratione"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7900282> a schema:CreativeWork ;
+    rdfs:label "Urbs beata Jerusalem dicta pacis visio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87763749> a schema:CreativeWork ;
+    rdfs:label "Commento all'Eneide"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q878443> a schema:CreativeWork ;
+    rdfs:label "Saturnalia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q911341> a schema:CreativeWork ;
+    rdfs:label "Breviloquium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728995301-3097954/extraction-1755592940896-3/> prov:generatedAtTime "2025-10-01T20:16:11.355506"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1728995301-3097954/extraction-1755592940896-3> .
+
+<https://w3id.org/dh-atlas/1759340261-4746451> a schema:CreativeWork ;
+    rdfs:label "Vidas provenzali"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340279-4751635> a schema:CreativeWork ;
+    rdfs:label "Pyeridum vox alma"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340287-2499137> a schema:CreativeWork ;
+    rdfs:label "De moto animalium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340289-1033542> a schema:CreativeWork ;
+    rdfs:label "A Bindo d'Alessio Donati"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340290-9526927> a schema:CreativeWork ;
+    rdfs:label "A chi nol sa non lasci Dio provare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340292-2524703> a schema:CreativeWork ;
+    rdfs:label "A cquei ch'è sommo dicitore altero"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340293-6265714> a schema:CreativeWork ;
+    rdfs:label "A gran honor viu cui jois es cobitz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340294-9455812> a schema:CreativeWork ;
+    rdfs:label "A la pus longa nuech de l'an"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340296-2663052> a schema:CreativeWork ;
+    rdfs:label "A me nom piace di, tal triega, fare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340297-642881> a schema:CreativeWork ;
+    rdfs:label "A me stesso di me pietate vène"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340299-0233188> a schema:CreativeWork ;
+    rdfs:label "A nulla guisa mi posso soffrire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340300-3954225> a schema:CreativeWork ;
+    rdfs:label "A penre m'er lo conort del salvatge"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340301-8444552> a schema:CreativeWork ;
+    rdfs:label "A quella amorosetta foresella"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340303-1869676> a schema:CreativeWork ;
+    rdfs:label "A renformare amore e fede e spera"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340304-5322883> a schema:CreativeWork ;
+    rdfs:label "A scuro loco conven lume clero"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340305-8607168> a schema:CreativeWork ;
+    rdfs:label "A·ssuon di trombe anzi che di corno"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340307-2045853> a schema:CreativeWork ;
+    rdfs:label "A tal è giunto el mondo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340308-5167317> a schema:CreativeWork ;
+    rdfs:label "A! tantas bonas chansos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340309-8598292> a schema:CreativeWork ;
+    rdfs:label "A te medesmo mi richiamo, Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340311-2091157> a schema:CreativeWork ;
+    rdfs:label "A vano sguardo e a falsi sembianti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340312-5264852> a schema:CreativeWork ;
+    rdfs:label "A vos, meillz de meill, qu'om ve"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340313-8968258> a schema:CreativeWork ;
+    rdfs:label "Ab cor lial, fin e certa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340315-2450333> a schema:CreativeWork ;
+    rdfs:label "Ab gai so cuindet e leri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340316-586851> a schema:CreativeWork ;
+    rdfs:label "Ab la verdura"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340318-0078328> a schema:CreativeWork ;
+    rdfs:label "Ab lo temps agradiu gai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340319-363113> a schema:CreativeWork ;
+    rdfs:label "Ab lo temps qe fai refreschar"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340320-6955392> a schema:CreativeWork ;
+    rdfs:label "Ab plazer receup et acuoill"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340322-5603607> a schema:CreativeWork ;
+    rdfs:label "Adan, d'amour vous demant"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340323-8853803> a schema:CreativeWork ;
+    rdfs:label "Adimorando 'n istrano paese"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340325-8051267> a schema:CreativeWork ;
+    rdfs:label "Aggio talento, s'eo savesse, dire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340327-156901> a schema:CreativeWork ;
+    rdfs:label "Ahi, Deo, chi vide mai tal malattia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340328-4996798> a schema:CreativeWork ;
+    rdfs:label "Ahi, bona donna, che è devenuto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340329-8167405> a schema:CreativeWork ;
+    rdfs:label "Ahi, con' mi dol vedere omo valente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340331-1447232> a schema:CreativeWork ;
+    rdfs:label "Ahi dolze e gaia terra fiorentina"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340332-4672053> a schema:CreativeWork ;
+    rdfs:label "Ahi, dolze terra aretina"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340333-8052545> a schema:CreativeWork ;
+    rdfs:label "Ahi gentil donna gaia ed amorosa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340335-213101> a schema:CreativeWork ;
+    rdfs:label "Ahi lasso, che li boni e li malvagi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340336-583085> a schema:CreativeWork ;
+    rdfs:label "Ahi, lasso, como mai trovar poria"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340337-8993511> a schema:CreativeWork ;
+    rdfs:label "Ahi lasso taupino!, altro che lasso"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340339-2397163> a schema:CreativeWork ;
+    rdfs:label "Ahi meve lasso"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340340-5937502> a schema:CreativeWork ;
+    rdfs:label "Ahi misero tapino, ora scoperchio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340341-9561896> a schema:CreativeWork ;
+    rdfs:label "Ahi, quant'ho che vergogni e che doglia aggio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340343-295289> a schema:CreativeWork ;
+    rdfs:label "Ai, Deo merzé, che fia di me, Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340344-6409595> a schema:CreativeWork ;
+    rdfs:label "Ai come spento son, oïmè lasso"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340345-9447684> a schema:CreativeWork ;
+    rdfs:label "Ai doloroso lasso, per cui s'amorta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340347-3029819> a schema:CreativeWork ;
+    rdfs:label "Aimè lasso, perché a figura d'omo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340348-6726618> a schema:CreativeWork ;
+    rdfs:label "Aimè tapino, che t'odo contare!"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340349-9965796> a schema:CreativeWork ;
+    rdfs:label "Aissi cum cel c'am'e non es amaz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340351-3377707> a schema:CreativeWork ;
+    rdfs:label "Aissi cum es coinda e gaia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340352-63264> a schema:CreativeWork ;
+    rdfs:label "Aissi cum sel qu'em poder de senhor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340353-9675417> a schema:CreativeWork ;
+    rdfs:label "Aissi cum selh qu'es vencutz e sobratz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340355-3539848> a schema:CreativeWork ;
+    rdfs:label "Aissi pert poder amors"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340357-235246> a schema:CreativeWork ;
+    rdfs:label "Al dessebrar del pais"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340358-587694> a schema:CreativeWork ;
+    rdfs:label "Al plus leu qu'ieu sai far chansos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340359-8964436> a schema:CreativeWork ;
+    rdfs:label "Al prim pres dels breus iorns braus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340361-2196608> a schema:CreativeWork ;
+    rdfs:label "Al vostro dir, che d'amor mi favella"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340362-5352526> a schema:CreativeWork ;
+    rdfs:label "Alberigol de Lando, appena cosa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340363-8463519> a schema:CreativeWork ;
+    rdfs:label "Allegoriae in Sacram Scripturam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340365-1602032> a schema:CreativeWork ;
+    rdfs:label "Allegrosi cantari"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340366-6034954> a schema:CreativeWork ;
+    rdfs:label "Alquanto scusa l'omo dicer fermo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340367-993857> a schema:CreativeWork ;
+    rdfs:label "Altra fiata aggio già, donne, parlato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340369-367447> a schema:CreativeWork ;
+    rdfs:label "Amando lungiamente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340370-7499356> a schema:CreativeWork ;
+    rdfs:label "Amic Arver, d'una res vos deman"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340372-0997725> a schema:CreativeWork ;
+    rdfs:label "Amic Guibert, ben a vii ans pasatz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340373-4788723> a schema:CreativeWork ;
+    rdfs:label "Amico caro meo, vetar non oso"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340374-8762727> a schema:CreativeWork ;
+    rdfs:label "Amico, i' saccio ben che sa' limare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340376-2642105> a schema:CreativeWork ;
+    rdfs:label "Amico, s'egualmente mi ricange"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340377-6387393> a schema:CreativeWork ;
+    rdfs:label "Amix Raynaut, una donna valent"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340379-0382137> a schema:CreativeWork ;
+    rdfs:label "Amor, c'à segnoria e libertate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340380-3721783> a schema:CreativeWork ;
+    rdfs:label "Amor, che lungiamente m'hai menato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340381-7514539> a schema:CreativeWork ;
+    rdfs:label "Amor che vien per le più dolci porte"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340383-0811784> a schema:CreativeWork ;
+    rdfs:label "Amor, che viene armato a doppio dardo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340384-4630241> a schema:CreativeWork ;
+    rdfs:label "Amore è uno desi[o] che ven da' core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340385-9111457> a schema:CreativeWork ;
+    rdfs:label "Amor, eo chero mia donna in domino"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340387-266223> a schema:CreativeWork ;
+    rdfs:label "Amor, la donna che tu me mostrasti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340388-5903962> a schema:CreativeWork ;
+    rdfs:label "Amor m'aucide, né da lui difesa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340389-93251> a schema:CreativeWork ;
+    rdfs:label "Amor mi fa sì fedelmente amare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340391-3649702> a schema:CreativeWork ;
+    rdfs:label "Amor, non ho podere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340392-6941185> a schema:CreativeWork ;
+    rdfs:label "Amor, nova ed antica vanitate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340394-0720685> a schema:CreativeWork ;
+    rdfs:label "Amor, se tu se' vago di costei"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340395-4300234> a schema:CreativeWork ;
+    rdfs:label "Amor tanto altamente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340397-3464105> a schema:CreativeWork ;
+    rdfs:label "Amore è uno spirito ch'ancide"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340399-2494395> a schema:CreativeWork ;
+    rdfs:label "Amore ha nascimento e foglia e fiore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340400-5902867> a schema:CreativeWork ;
+    rdfs:label "Amore, i' veggio ben che tua virtute"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340402-5266037> a schema:CreativeWork ;
+    rdfs:label "Amore, io non mi doglio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340403-8833077> a schema:CreativeWork ;
+    rdfs:label "Amore o gioia, bella gioia, sento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340405-2014096> a schema:CreativeWork ;
+    rdfs:label "Amore, onde vien l'acqua che lo core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340406-5201259> a schema:CreativeWork ;
+    rdfs:label "Amore, perché m'hai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340408-5254328> a schema:CreativeWork ;
+    rdfs:label "Amors m'a fach novelamen asire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340410-3783257> a schema:CreativeWork ;
+    rdfs:label "Amors, rics fora s'ieu vis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340413-5735896> a schema:CreativeWork ;
+    rdfs:label "Anc enemics q'ieu agues"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340414-887077> a schema:CreativeWork ;
+    rdfs:label "Anc mais de joy"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340416-2292714> a schema:CreativeWork ;
+    rdfs:label "Anc mais non vi temps ni sazo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340417-5764112> a schema:CreativeWork ;
+    rdfs:label "Anc no⋅m parti de solatz ni de chan"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340418-9350424> a schema:CreativeWork ;
+    rdfs:label "Anc no·s poc far maior anta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340420-2504168> a schema:CreativeWork ;
+    rdfs:label "Anc trobar clus ni braus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340422-1687698> a schema:CreativeWork ;
+    rdfs:label "Ancor non sacça la condictïone"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340423-5755377> a schema:CreativeWork ;
+    rdfs:label "Ancora ch'io sia stato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340424-93697> a schema:CreativeWork ;
+    rdfs:label "Angelica figura novamente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340426-2438412> a schema:CreativeWork ;
+    rdfs:label "Angioletta in sembianza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340428-2017477> a schema:CreativeWork ;
+    rdfs:label "Anzi ch'Amore ne la mente guidi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340429-6073294> a schema:CreativeWork ;
+    rdfs:label "Apparvemi Amor subitamente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340430-9706945> a schema:CreativeWork ;
+    rdfs:label "Ar' agues eu mil marcs de fin argen"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340432-3658354> a schema:CreativeWork ;
+    rdfs:label "Ar ai ben d'amor apres"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340433-8927577> a schema:CreativeWork ;
+    rdfs:label "Ar em al freit tems vengut"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340436-6182077> a schema:CreativeWork ;
+    rdfs:label "Ar vey qu'em vengut als jorns loncs"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340437-9855344> a schema:CreativeWork ;
+    rdfs:label "Ara m'agr' ops que m'aizis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340439-3361752> a schema:CreativeWork ;
+    rdfs:label "Ara·m digatz, Rambaut, si vos agrada"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340441-3204699> a schema:CreativeWork ;
+    rdfs:label "Ara sabrai s'a ges de cortezia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340442-6470988> a schema:CreativeWork ;
+    rdfs:label "Ara·m nafront li sospir"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340443-9516406> a schema:CreativeWork ;
+    rdfs:label "Aras s'esfors, n'Eveyos, vostre sens"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340448-9925907> a schema:CreativeWork ;
+    rdfs:label "Assai aggio celato e ricoverto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340450-3530145> a schema:CreativeWork ;
+    rdfs:label "Assai v'ho detto e dico tuttavia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340451-700835> a schema:CreativeWork ;
+    rdfs:label "Assignés chi, Griviler, jugement"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340453-0878422> a schema:CreativeWork ;
+    rdfs:label "Atressi con l'orifanz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340454-466631> a schema:CreativeWork ;
+    rdfs:label "Aucel no truob chantan"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340455-9087725> a schema:CreativeWork ;
+    rdfs:label "Audite la cagion de' miei sospiri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340457-8075848> a schema:CreativeWork ;
+    rdfs:label "Autumnali frigore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340459-1243904> a schema:CreativeWork ;
+    rdfs:label "Avant hier en un vert pre"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340460-481472> a schema:CreativeWork ;
+    rdfs:label "Ave, dolcissemu Iesu Christo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340461-907279> a schema:CreativeWork ;
+    rdfs:label "Avegna che partensa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340463-2660992> a schema:CreativeWork ;
+    rdfs:label "Avegna ched el m'aggia più per tempo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340464-7629924> a schema:CreativeWork ;
+    rdfs:label "Avete 'n vo' li fior' e la verdura"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340466-2718723> a schema:CreativeWork ;
+    rdfs:label "Babbo meo dolce, con' tu mal fai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340467-6350255> a schema:CreativeWork ;
+    rdfs:label "Ballata, poi che ti compuose Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340468-9560137> a schema:CreativeWork ;
+    rdfs:label "Ballatetta dolente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340470-2997627> a schema:CreativeWork ;
+    rdfs:label "Bannitio civitatis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340471-6848497> a schema:CreativeWork ;
+    rdfs:label "Baudoÿn, il sunt dui amant"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340473-0812807> a schema:CreativeWork ;
+    rdfs:label "Be·m cuidei de chantar sofrir"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340474-4051318> a schema:CreativeWork ;
+    rdfs:label "Be·m dizon, s'en mas chanssos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340475-7119658> a schema:CreativeWork ;
+    rdfs:label "Be volgra de totz chantadors"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340477-0428033> a schema:CreativeWork ;
+    rdfs:label "Beato Francesco, in te laudare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340479-659245> a schema:CreativeWork ;
+    rdfs:label "Bel m'es ab motz leugiers a far"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340481-0398512> a schema:CreativeWork ;
+    rdfs:label "Bele Aliz matin leva"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340482-3828807> a schema:CreativeWork ;
+    rdfs:label "Bele et bone cele por cui je chant"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340483-7102404> a schema:CreativeWork ;
+    rdfs:label "Bella e gentile, amica di pietate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340485-039217> a schema:CreativeWork ;
+    rdfs:label "Ben aggia l'amoroso e dolce core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340486-383571> a schema:CreativeWork ;
+    rdfs:label "Ben an mort mi e lor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340487-693716> a schema:CreativeWork ;
+    rdfs:label "Ben dico certo che non è riparo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340489-0151017> a schema:CreativeWork ;
+    rdfs:label "Ben farai canson plasen"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340490-3178363> a schema:CreativeWork ;
+    rdfs:label "Ben mi credea in tutto esser d'Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340491-6155715> a schema:CreativeWork ;
+    rdfs:label "Ben mi credea passar mio tempo omai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340492-9014988> a schema:CreativeWork ;
+    rdfs:label "Ben mi morraggio, s'eo non ho perdono"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340494-2129576> a schema:CreativeWork ;
+    rdfs:label "Ben si conosce lo servente e vede"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340495-521388> a schema:CreativeWork ;
+    rdfs:label "Ben so che fosti figliuol d'Alaghieri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340496-861849> a schema:CreativeWork ;
+    rdfs:label "Ben veggio, Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340498-197045> a schema:CreativeWork ;
+    rdfs:label "Ben volria saber d'Amor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340499-5516088> a schema:CreativeWork ;
+    rdfs:label "Bene è forte cosa il dolce sguardo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340500-9651258> a schema:CreativeWork ;
+    rdfs:label "Bene veggio ch'è chi te rabuffa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340502-3024895> a schema:CreativeWork ;
+    rdfs:label "Bernardo, quel de l'arco del Diamasco"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340504-3184903> a schema:CreativeWork ;
+    rdfs:label "Biau Phelipot Vrediere, je vous proi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340505-6620245> a schema:CreativeWork ;
+    rdfs:label "Bibbia Volgarizzata"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340507-040105> a schema:CreativeWork ;
+    rdfs:label "Biltà di donna e di saccente core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340508-3322701> a schema:CreativeWork ;
+    rdfs:label "Bòlzera che chiangesse lo quatraro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340509-6489549> a schema:CreativeWork ;
+    rdfs:label "Bon chantar fai al gent temps de pascor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340510-973711> a schema:CreativeWork ;
+    rdfs:label "Bona domna, un conseill vos deman"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340512-3416667> a schema:CreativeWork ;
+    rdfs:label "Bona dona, cuy ricx pretz fai valer"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340514-8021946> a schema:CreativeWork ;
+    rdfs:label "Cadenet, pro domna e gaia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340516-1573417> a schema:CreativeWork ;
+    rdfs:label "Can chai la fueilla"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340517-526343> a schema:CreativeWork ;
+    rdfs:label "Can l'erba fresch'e·lh folha par"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340519-4143274> a schema:CreativeWork ;
+    rdfs:label "Can vei la flor, l'erba vert e la folha"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340521-2607281> a schema:CreativeWork ;
+    rdfs:label "Cantar vuolh amorosamen"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340525-825585> a schema:CreativeWork ;
+    rdfs:label "Capitoli della Compagnia dei Portatori di Firenze"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340527-1728833> a schema:CreativeWork ;
+    rdfs:label "Car no m'abellis solatz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340528-5483098> a schema:CreativeWork ;
+    rdfs:label "Carmina (Paolino da Nola)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340529-8481693> a schema:CreativeWork ;
+    rdfs:label "Carmina (Alcuino)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340533-6482058> a schema:CreativeWork ;
+    rdfs:label "Cecco, se Deo t'allegre di Becchina"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340535-5940053> a schema:CreativeWork ;
+    rdfs:label "Cel que no vol auzir chanssos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340536-8768158> a schema:CreativeWork ;
+    rdfs:label "Celei cui am de cor e de saber"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340538-7507591> a schema:CreativeWork ;
+    rdfs:label "Cercando di trovar minera in oro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340540-096333> a schema:CreativeWork ;
+    rdfs:label "Certe mie rime a te mandar vogliendo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340541-4193943> a schema:CreativeWork ;
+    rdfs:label "Certo, Guitton, de lo mal tuo mi pesa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340542-815201> a schema:CreativeWork ;
+    rdfs:label "[A] certo, mala donna, mal'accatto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340544-400248> a schema:CreativeWork ;
+    rdfs:label "Certo non è de lo 'ntelletto acolto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340546-280271> a schema:CreativeWork ;
+    rdfs:label "Chi è misero e mendico, provi tutti e poi l'amico"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340548-1147535> a schema:CreativeWork ;
+    rdfs:label "Chi ‘mprima disse Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340549-4312694> a schema:CreativeWork ;
+    rdfs:label "Chi se medesmo inganna per negghienza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340551-337799> a schema:CreativeWork ;
+    rdfs:label "Chi vuol vedere mille persone grame"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340552-6406834> a schema:CreativeWork ;
+    rdfs:label "Chïunque altrüi blasma"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340554-5087504> a schema:CreativeWork ;
+    rdfs:label "Chronica in factis et circa facta Marchiae Trivixane"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340555-8951073> a schema:CreativeWork ;
+    rdfs:label "Ciascuna fresca e dolce fontanella"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340557-2621856> a schema:CreativeWork ;
+    rdfs:label "Ciò ch'io veggo di qua m'è mortal duolo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340558-6364923> a schema:CreativeWork ;
+    rdfs:label "Cobla in seis lengatges"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340560-5546126> a schema:CreativeWork ;
+    rdfs:label "Coll'occhi c'aio nel capo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340562-4536366> a schema:CreativeWork ;
+    rdfs:label "Come la tigra nel suo gran dolore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340563-8052669> a schema:CreativeWork ;
+    rdfs:label "Come non è con voi a questa festa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340565-1438208> a schema:CreativeWork ;
+    rdfs:label "Commentaria in octo libros Physicorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340573-5031197> a schema:CreativeWork ;
+    rdfs:label "Commentario alle Sentenze di Pietro Lombardo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340574-896267> a schema:CreativeWork ;
+    rdfs:label "Commentariorum in Isaiam libri tres"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340576-202195> a schema:CreativeWork ;
+    rdfs:label "Commentarium in librum aristotelis perihermeneias"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340577-5555804> a schema:CreativeWork ;
+    rdfs:label "Commento al De caelo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340579-1124372> a schema:CreativeWork ;
+    rdfs:label "Commento al De nuptiis Mercurii et Philologiae (Anonimo)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340580-4467447> a schema:CreativeWork ;
+    rdfs:label "Commento al De nuptiis Mercurii et Philologiae (Bernardo Silvestre)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340581-778404> a schema:CreativeWork ;
+    rdfs:label "Commento al De nuptiis Mercurii et Philologiae (Remigio d'Auxerre)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340585-0133314> a schema:CreativeWork ;
+    rdfs:label "Commento a De consolatione philosophiae di Boezio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340586-3739328> a schema:CreativeWork ;
+    rdfs:label "Commento a Osea"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340587-7141397> a schema:CreativeWork ;
+    rdfs:label "Commento ai Meteorologici"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340588-9950604> a schema:CreativeWork ;
+    rdfs:label "Commento al De anima"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340590-3304882> a schema:CreativeWork ;
+    rdfs:label "Commento al De divinatione"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340591-642111> a schema:CreativeWork ;
+    rdfs:label "Commento al De nuptiis Mercurii et Philologiae (Guglielmo di Conches)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340592-9512255> a schema:CreativeWork ;
+    rdfs:label "Commento alla Fisica"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340594-2368133> a schema:CreativeWork ;
+    rdfs:label "Commento alla Genesi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340595-555027> a schema:CreativeWork ;
+    rdfs:label "Commento alla Metafisica"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340596-8554797> a schema:CreativeWork ;
+    rdfs:label "Commento alla Poetica"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340599-4887476> a schema:CreativeWork ;
+    rdfs:label "Commento anonimo al De Consolatione di Boezio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340600-7980835> a schema:CreativeWork ;
+    rdfs:label "Commentum super nono almansoris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340602-1918697> a schema:CreativeWork ;
+    rdfs:label "Compendium de somno et vigilia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340604-1693144> a schema:CreativeWork ;
+    rdfs:label "Con più m'allungo, più m'è prossimana"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340607-0011277> a schema:CreativeWork ;
+    rdfs:label "Confessio theologica"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340608-3401537> a schema:CreativeWork ;
+    rdfs:label "Conortz, era sai eu be"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340609-7150931> a schema:CreativeWork ;
+    rdfs:label "Consaus d'amours"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340611-0747597> a schema:CreativeWork ;
+    rdfs:label "Considerando l'altèra valenza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340612-4003565> a schema:CreativeWork ;
+    rdfs:label "Considerando, una amorosa voglia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340614-3171625> a schema:CreativeWork ;
+    rdfs:label "Continuatio S.Thomae in Politicam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340617-6874845> a schema:CreativeWork ;
+    rdfs:label "Contra lo meo volere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340619-1083353> a schema:CreativeWork ;
+    rdfs:label "Contre la froidor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340620-430024> a schema:CreativeWork ;
+    rdfs:label "Convenni dimostrar lo meo savere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340621-801203> a schema:CreativeWork ;
+    rdfs:label "Coralment'ò me stesso 'n ira"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340623-1386232> a schema:CreativeWork ;
+    rdfs:label "Cori gentili e serventi d'amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340625-0783617> a schema:CreativeWork ;
+    rdfs:label "Cortesamen mou en mon cor mesclanza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340626-4219596> a schema:CreativeWork ;
+    rdfs:label "Credo savete ben, messer Onesto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340629-0606482> a schema:CreativeWork ;
+    rdfs:label "D'Amor son preso, sì che me ritrarne"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340630-4318447> a schema:CreativeWork ;
+    rdfs:label "D'Amors, qui m'a tolu a moi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340631-7856824> a schema:CreativeWork ;
+    rdfs:label "D'amor no·m lau, qu'anc non pogey tan aut"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340633-1608503> a schema:CreativeWork ;
+    rdfs:label "D'amor volendo trarne intendimento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340634-527922> a schema:CreativeWork ;
+    rdfs:label "D'un'amorosa voglia mi convene"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340635-8699224> a schema:CreativeWork ;
+    rdfs:label "Da che mi conven fare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340637-2017918> a schema:CreativeWork ;
+    rdfs:label "Da doglia e da rancura lo meo core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340638-5862715> a schema:CreativeWork ;
+    rdfs:label "Da più a uno face un sollegismo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340639-9299436> a schema:CreativeWork ;
+    rdfs:label "Da poi che la Natura ha fine posto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340641-2539804> a schema:CreativeWork ;
+    rdfs:label "Dal cor si move spirito in vedere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340642-6497836> a schema:CreativeWork ;
+    rdfs:label "Dal core mi vene che gli occhi mi tene"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340643-9953897> a schema:CreativeWork ;
+    rdfs:label "Dame d'honour plesant et gracieuxe"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340645-3459082> a schema:CreativeWork ;
+    rdfs:label "Dame, ensi est q'il m'en couvient aler"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340646-6793969> a schema:CreativeWork ;
+    rdfs:label "Dàmecte a·ssentire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340648-0396798> a schema:CreativeWork ;
+    rdfs:label "Dante Alighier, s'i' so bon begolardo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340649-3566856> a schema:CreativeWork ;
+    rdfs:label "Dante Allaghier, Cecco, 'l tu' servo e amico"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340650-7257473> a schema:CreativeWork ;
+    rdfs:label "Dante Alleghier, d'ogni senno pregiato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340652-1493986> a schema:CreativeWork ;
+    rdfs:label "Dante, i'non odo in quale albergo soni"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340653-5051324> a schema:CreativeWork ;
+    rdfs:label "Dante, un sospiro messagger del core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340654-8592138> a schema:CreativeWork ;
+    rdfs:label "Davante voi, madonna, son venuto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340657-609854> a schema:CreativeWork ;
+    rdfs:label "De generatione et corruptione (Alberto Magno)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340663-891368> a schema:CreativeWork ;
+    rdfs:label "De psalmorum libro exegesis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340668-551963> a schema:CreativeWork ;
+    rdfs:label "De anima sive liber sextus de naturalibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340674-374569> a schema:CreativeWork ;
+    rdfs:label "De bone amour et de leaul amie"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340675-7025027> a schema:CreativeWork ;
+    rdfs:label "De bono communi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340679-0880322> a schema:CreativeWork ;
+    rdfs:label "De cardinalibus operibus Christi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340683-654232> a schema:CreativeWork ;
+    rdfs:label "De chantar mi for' antremes"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340685-4033062> a schema:CreativeWork ;
+    rdfs:label "De conditione interioris homoris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340687-5365891> a schema:CreativeWork ;
+    rdfs:label "De coralmente amar"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340688-8856544> a schema:CreativeWork ;
+    rdfs:label "De çou, Robert de la Piere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340696-5133555> a schema:CreativeWork ;
+    rdfs:label "De divisione scientiarum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340699-7507527> a schema:CreativeWork ;
+    rdfs:label "De fin'amor son tuit mei pessamen"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340701-1026516> a schema:CreativeWork ;
+    rdfs:label "De fin amor vient sen et bonté"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340702-4379847> a schema:CreativeWork ;
+    rdfs:label "De genesi animalium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340706-0550075> a schema:CreativeWork ;
+    rdfs:label "De interpellatione Iob et David"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340708-0410762> a schema:CreativeWork ;
+    rdfs:label "De la mia donna vo' cantar con voi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340709-6933067> a schema:CreativeWork ;
+    rdfs:label "De la sal de Proenza·m doill"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759340711-6537457> a schema:CreativeWork ;
+    rdfs:label "De las serors d'En Guiran"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q131175> a schema:CreativeWork ;
+    rdfs:label "Vulgata (Bibbia)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q136030370> a schema:CreativeWork ;
+    rdfs:label "Carmina (Paolo Diacono)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q19141092> a schema:CreativeWork ;
+    rdfs:label "Sonetti della Semana"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q2155078> a schema:CreativeWork ;
+    rdfs:label "De Juventute et Senectute, De Vita et Morte, De Respiratione"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q3721321> a schema:CreativeWork ;
+    rdfs:label "Elegie (Properzio)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q3738146> a schema:CreativeWork ;
+    rdfs:label "Fabulae (Fedro)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q42196636> a schema:CreativeWork ;
+    rdfs:label "De anima intellectiva"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728995301-3097954/extraction-1755592940896-3> prov:used <https://dantesources.dantenetwork.it/sparql?query=SELECT%20DISTINCT%20%3Flabel%20%0AWHERE%20%7B%0A%20%3Fs%20a%20%3Chttp%3A//erlangen-crm.org/efrbroo/Work%3E%20%3B%0A%20%3Chttp%3A//purl.org/dc/terms/alternative%3E%20%3Flabel%20.%0A%7D%0ALIMIT%20400%0AOFFSET%20200> .
+

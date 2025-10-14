@@ -1,0 +1,1469 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://viaf.org/viaf/107159474046527660691> rdfs:label " Vita metrica Anselmi Lucensis episcopi"^^xsd:string .
+
+<http://viaf.org/viaf/1162420540632251892> rdfs:label " Qualitatis coniectura"^^xsd:string .
+
+<http://viaf.org/viaf/1163628315523460915> rdfs:label " Liber Inferni"^^xsd:string .
+
+<http://viaf.org/viaf/1167803571417772762> rdfs:label " Legenda ad usum chori"^^xsd:string .
+
+<http://viaf.org/viaf/128159474175427661157> rdfs:label " Antidotum in Facium"^^xsd:string .
+
+<http://viaf.org/viaf/140159474180927661507> rdfs:label " De latinae linguae reparatione"^^xsd:string .
+
+<http://viaf.org/viaf/1511159941672125440005> rdfs:label " Vita Barbati episcopi Beneventani"^^xsd:string .
+
+<http://viaf.org/viaf/153159474193927662044> rdfs:label " Liber de gestis in civitate Mediolani"^^xsd:string .
+
+<http://viaf.org/viaf/17167803107417771132> rdfs:label " De controversia mensium"^^xsd:string .
+
+<http://viaf.org/viaf/176698376> rdfs:label " Aurea Gemma"^^xsd:string .
+
+<http://viaf.org/viaf/183601397> rdfs:label " Iuris ciuilis"^^xsd:string .
+
+<http://viaf.org/viaf/185219694> rdfs:label " Rationes dictandi"^^xsd:string .
+
+<http://viaf.org/viaf/199744334> rdfs:label " Chronica Sancti Benedicti Casinensis"^^xsd:string .
+
+<http://viaf.org/viaf/2163628583023461595> rdfs:label " Annales Pisani"^^xsd:string .
+
+<http://viaf.org/viaf/2163628605123461897> rdfs:label " Chronicon Parmense"^^xsd:string .
+
+<http://viaf.org/viaf/217159474046727660887> rdfs:label " Flores Rhetorici"^^xsd:string .
+
+<http://viaf.org/viaf/22167802704417770286> rdfs:label " Expositio de symbolo Apostolorum"^^xsd:string .
+
+<http://viaf.org/viaf/225159474176327661201> rdfs:label " Chronicon Farfense"^^xsd:string .
+
+<http://viaf.org/viaf/23167803139817771734> rdfs:label " De subiecto theologie"^^xsd:string .
+
+<http://viaf.org/viaf/24159474046127660047> rdfs:label " Summa de vitiis et virtutibus"^^xsd:string .
+
+<http://viaf.org/viaf/25167803165817772015> rdfs:label " Liber mitis"^^xsd:string .
+
+<http://viaf.org/viaf/26167802704217770752> rdfs:label " Coniurationis commentarium"^^xsd:string .
+
+<http://viaf.org/viaf/27159474046327660490> rdfs:label " Legenda sancti Francisci versificata"^^xsd:string .
+
+<http://viaf.org/viaf/29159474047527660963> rdfs:label " Rota Veneris"^^xsd:string .
+
+<http://viaf.org/viaf/292416813> rdfs:label " Chronica monasterii Sancti Michaelis Clusini"^^xsd:string .
+
+<http://viaf.org/viaf/30167803166317772021> rdfs:label " Liber medicaminis"^^xsd:string .
+
+<http://viaf.org/viaf/313297525> rdfs:label " Carmen de gestis Frederici I imperatoris in Lombardia"^^xsd:string .
+
+<http://viaf.org/viaf/46159474311327662413> rdfs:label " Pomerium Rethorice"^^xsd:string .
+
+<http://viaf.org/viaf/51159474186327661766> rdfs:label " De rebus gestis Rogerii Calabriae et Siciliae Comitis et Roberti Guiscardi Ducis fratris eius"^^xsd:string .
+
+<http://viaf.org/viaf/55167803144717771879> rdfs:label " Chronicon marchiae Tarvisinae et Lombardiae"^^xsd:string .
+
+<http://viaf.org/viaf/55167803611017772949> rdfs:label " Eglogae"^^xsd:string .
+
+<http://viaf.org/viaf/64159474317327662626> rdfs:label " De bono pacis"^^xsd:string .
+
+<http://viaf.org/viaf/66159474046627660384> rdfs:label " Invective in Laurentium Vallam"^^xsd:string .
+
+<http://viaf.org/viaf/7159474331427662959> rdfs:label " Historia Mediolanensis"^^xsd:string .
+
+<http://viaf.org/viaf/83159474046327660655> rdfs:label " Tractatus utilissimus"^^xsd:string .
+
+<http://viaf.org/viaf/8810167807299218130000> rdfs:label " Sacrum commercium sancti Francisci cum domina Paupertate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q103271639> rdfs:label " Brevis introductio ad dictamen"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q10441412> rdfs:label " Candelabrum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104529602> rdfs:label " Introductiones prosaici dictaminis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104543083> rdfs:label " Gesta Roberti Wiscardi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105450835> rdfs:label " Liber peregrinationis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106041682> rdfs:label " Testamentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106589262> rdfs:label " Diaffonus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q107471791> rdfs:label " Exultet"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1087823> rdfs:label " Chronicon Casauriense"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q109480971> rdfs:label " Liber de Obsidione Ancone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q109913446> rdfs:label " Epistulae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1108828> rdfs:label " Mirabilia urbis Romae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q112248742> rdfs:label " Chronicon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q112317339> rdfs:label " Chronica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1134342> rdfs:label " Inter cetera"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1168196> rdfs:label " De balneis puteolanis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1192856> rdfs:label " Microcosmus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q120143930> rdfs:label " Historia Langobardorum Codicis Gothani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q123602586> rdfs:label " Liber ad Amicum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1236392> rdfs:label " Remedium Amoris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q123927271> rdfs:label " Sollicitudo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1241142> rdfs:label " Historia destructionis Troiae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124740037> rdfs:label " Chronica universalis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124864831> rdfs:label " Aesopi Fabulae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124864840> rdfs:label " Vita Alexandri Magni"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124864878> rdfs:label " Summa dictaminis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q125959093> rdfs:label " Dictamina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q126692546> rdfs:label " Chronica civitatis Ianuensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q126976677> rdfs:label " Novus Avianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q127513869> rdfs:label " Historiarum Florentini populi Libri XII"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q128550> rdfs:label " Cedrus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12902612> rdfs:label " Vita Sancti Francisci"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q130945295> rdfs:label " Alfonseis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q130999326> rdfs:label " Eulistea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131004219> rdfs:label " De vera nobilitate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131004282> rdfs:label " De infelicitate principum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131382411> rdfs:label " Carmina Latina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131395> rdfs:label " Dialogus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131461460> rdfs:label " De secretis mulierum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131519647> rdfs:label " Summa de arte dictandi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131800> rdfs:label " Sublimati"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q133733422> rdfs:label " Gesta Friderici"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q135152494> rdfs:label " Legenda sanctae Clarae virginis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q135658328> rdfs:label " Fabulae Aesopicae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q136341598> rdfs:label " Ars Grammatica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q14715548> rdfs:label " Rythmus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15> rdfs:label " Africa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16171003> rdfs:label " Ars brevis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1627205> rdfs:label " Honor Imperii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q17006571> rdfs:label " Carmen de Synodo Ticinensi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1749372> rdfs:label " Pantheon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q17628188> rdfs:label " Cronica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18081> rdfs:label " De vulgari eloquentia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18145956> rdfs:label " Donatus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1924253> rdfs:label " Scimus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19838053> rdfs:label " Actius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q201788> rdfs:label " Historia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2029407> rdfs:label " Ordo missae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q203066> rdfs:label " Relatio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2030819> rdfs:label " Origo Gentis Langobardorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q20850661> rdfs:label " Historia Frederici I"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21147582> rdfs:label " Carmina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2138721> rdfs:label " Regula"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25052218> rdfs:label " Annales Ceccanenses"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2552857> rdfs:label " Chronicon Salernitanum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27146170> rdfs:label " Ars amativa boni"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27507799> rdfs:label " Alectorius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2967349> rdfs:label " Chrysis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3007993> rdfs:label " Elegia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3055817> rdfs:label " Epistolae duorum amantium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q31411> rdfs:label " Opera poetica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q31837083> rdfs:label " Istoria Veneticorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q331046> rdfs:label " De regimine principum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q348087> rdfs:label " Praecepta dictaminum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3617892> rdfs:label " Annales Ianuenses"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3675949> rdfs:label " Chronicon Novaliciense"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3686306> rdfs:label " Concordia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q369258> rdfs:label " Versum de Mediolano civitate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3730666> rdfs:label " Epistole"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3822227> rdfs:label " De falso credita et ementita Constantini donatione"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3831578> rdfs:label " De rebus circa regni Siciliae curiam gestis"^^xsd:string,
+        " Liber de Regno Sicilie"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3893666> rdfs:label " De Paulino et Polla"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4010272> rdfs:label " Versus de Verona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4014913> rdfs:label " Vita scolastica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4159614> rdfs:label " Liber de episcopis Mettensibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42188455> rdfs:label " De corpore et sanguine Domini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42188957> rdfs:label " Directorium humanae vitae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42264258> rdfs:label " Liber de doctrina dicendi et tacendi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q465821> rdfs:label " Epistola"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4688565> rdfs:label " Aesopus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5114014> rdfs:label " Chronica parva ferrariensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q54800697> rdfs:label " Visio Alberici"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q54879005> rdfs:label " Liber philosophorum moralium antiquorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q549684> rdfs:label " Liber Augustalis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5553652> rdfs:label " Gesta Berengarii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q56244982> rdfs:label " Summa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q60390706> rdfs:label " Epistolae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6045037> rdfs:label " Inter alia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q60847402> rdfs:label " Historia ducum Venetorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q61105> rdfs:label " Cedrus Libani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q626510> rdfs:label " Benedictio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q646518> rdfs:label " Proslogion"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q660642> rdfs:label " Historia Langobardorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q677630> rdfs:label " Carmen de motibus Siculis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q679195> rdfs:label " Historia Romana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q704030> rdfs:label " Ars dictaminis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7767985> rdfs:label " Historia de duobus amantibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q83500> rdfs:label " Intellecto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8826> rdfs:label " Palma"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q899383> rdfs:label " Etsi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q911341> rdfs:label " Breviloquium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q929625> rdfs:label " De viris illustribus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q94271668> rdfs:label " Liber pontificalis Ecclesiae Ravennatis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q96377337> rdfs:label " Epistolae vagantes"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729030147-4807222/extraction-1755592940896-2/> prov:generatedAtTime "2025-10-02T21:24:03.020265"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1729030147-4807222/extraction-1755592940896-2> .
+
+<https://w3id.org/dh-atlas/1759438346-3393645> rdfs:label " Ad maiestatis nostrae presentiam nuper accedens"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438347-6002953> rdfs:label " Ad maiestatis nostrae presentiam accedens P. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438349-2231774> rdfs:label " Ad maiestatis nostrae presentiam accedens O."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438350-7858245> rdfs:label " Ad maiestatis nostrae presentiam accedens A. de"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438351-985391> rdfs:label " Ad maiestatis nostrae presentiam accedens A. cuius laudendis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438353-1845794> rdfs:label " Ad hoc summi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438354-7769802> rdfs:label " Ad extollenda"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438356-084041> rdfs:label " Ad expeditionem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438357-2755983> rdfs:label " Ad exaltationem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438358-4731371> rdfs:label " Ad euitanda"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438359-6691053> rdfs:label " Ad Viros Clarissimos Ancianos Inclite Bononie"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438361-2352643> rdfs:label " Ad Heinricum IV. imperatorem libri VII"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438363-0053735> rdfs:label " Accedens nuper"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438364-2200294> rdfs:label " Absit michi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438365-4057872> rdfs:label " Ad maiestatis nostrae presentiam ueniens"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438366-590196> rdfs:label " Ad nostrae maiestatis presentiam accedens A. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438367-775301> rdfs:label " Ad nostrae maiestatis presentiam accedens I. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438369-0397875> rdfs:label " Ad nostram accedens presentiam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438370-2157578> rdfs:label " Ad renouanda"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438371-3778155> rdfs:label " Ad reserandam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438372-577204> rdfs:label " Ad uos est hoc uerbum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438373-7956204> rdfs:label " Adauctae Nobis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438377-3043625> rdfs:label " Affectione solita"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438378-996887> rdfs:label " Agiographia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438381-2269096> rdfs:label " Amico uocali"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438384-6989975> rdfs:label " Annales Sanctae Trinitatis Veronenses"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438385-8829732> rdfs:label " Annales Venetici breves"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438387-094033> rdfs:label " Annales Veronenses antiqui"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438388-301202> rdfs:label " Annales breves Veronenses"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438389-501836> rdfs:label " Annales veteres Veronenses"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438390-7472653> rdfs:label " Annalium Philippi Crassuli de rebus Tarentinis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438393-6361363> rdfs:label " Antiqui patres"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438394-8365178> rdfs:label " Antonii Panormitae in Alfonsi regis dicta aut facta memoratu digna"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438396-0255296> rdfs:label " Ardens semper"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438397-3120892> rdfs:label " Ars Arengandi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438400-4690228> rdfs:label " Assise regum regni Siciliae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438401-7247396> rdfs:label " Auberti Ihoannis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438402-9626265> rdfs:label " Audita summis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438404-2065175> rdfs:label " Auditiis et intellectis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438405-3892474> rdfs:label " Audito nuper"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438407-8329153> rdfs:label " Balnea Puteolana"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438409-073212> rdfs:label " Bartholomeus ciuis Lucanis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438410-3063083> rdfs:label " Bartholomeus ciuis Senensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438411-9845762> rdfs:label " Benigne recepit excellentia nostra litteras quos misisti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438413-163461> rdfs:label " Benigne recepit excellentia nostra litteras, quas nostro culmini destinasti, et quae continebantur in eis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438414-3486211> rdfs:label " Benigne recepit excellentia nostra litteras, quas nostro culmini destinasti. Et plene intellectis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438415-544696> rdfs:label " Benigne receptis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438416-7618086> rdfs:label " Benignitate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438418-0382366> rdfs:label " Bilogus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438419-7240055> rdfs:label " Brevis descriptio festi gloriosissimae Virginis Mariae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438420-9295917> rdfs:label " Brevis doctrina dictaminis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438422-6440434> rdfs:label " Bucolicon carmen"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438423-8642375> rdfs:label " Bulla canonizationis Sanctae Clarae Assisiensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438425-556377> rdfs:label " Carmen de Ambrosio grammatico"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438428-9541988> rdfs:label " Carmen ex S. Salvatore Telesino"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438430-138135> rdfs:label " Carmen in victoria Pisanorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438432-3930786> rdfs:label " Caroli II regis epistolae per Iohannem Capuanum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438433-657442> rdfs:label " Casualis uindictae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438434-8730288> rdfs:label " Casus filii tui"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438436-081713> rdfs:label " Causam appellationis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438437-2916198> rdfs:label " Causam appellationis a sententia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438441-7371476> rdfs:label " Chronica monasterii Casinensis, IV 58"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438449-585013> rdfs:label " Chronicon Vulturnense, I"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438450-755696> rdfs:label " Chronicon Vulturnense, II"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438451-971578> rdfs:label " Chronicon Vulturnense, III"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438454-8943276> rdfs:label " Circa uos nostrae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438456-10857> rdfs:label " Collegerunt pontifices"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438457-2935457> rdfs:label " Comentum Tullii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438458-5154936> rdfs:label " Comentum in tertiam Ierarchiam Dionisii que est De Divinis Nominibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438459-7786906> rdfs:label " Commoditatibus fidelium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438461-0782704> rdfs:label " Communem et debitam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438462-2958567> rdfs:label " Communem omnium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438463-6946268> rdfs:label " Compendiosa doctrina"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438464-879588> rdfs:label " Conclusiones sive Theses DCCCC Romae anno 486, publice disputandae, sed non admissae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438467-8642461> rdfs:label " Conquerente I. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438469-0656233> rdfs:label " Constitutio archiepiscopi Capuani"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438470-4716365> rdfs:label " Constitutiones Romandiolae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438471-6942809> rdfs:label " Constitutum consulum Comunis Pistorie"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438472-908368> rdfs:label " Consueta benignitate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438474-1340873> rdfs:label " Consueuit innata"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438475-3509877> rdfs:label " Contingit interdum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438476-5672028> rdfs:label " Contra Felicem Urgellitanum episcopum libri tres"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438477-8014495> rdfs:label " Corda uestra"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438479-0788138> rdfs:label " Crebe nostrorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438480-2571871> rdfs:label " Credere firmiter"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438481-9545527> rdfs:label " Cum A. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438483-1176848> rdfs:label " Cum B. comitem de Laureto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438484-324097> rdfs:label " Cum Ferrarienses"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438485-5327744> rdfs:label " Cum Roma"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438486-7254488> rdfs:label " Cum ad depopulationem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438487-9352372> rdfs:label " Cum ad expurgandum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438489-1368499> rdfs:label " Cum ad solubrem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438490-344618> rdfs:label " Cum ad supplicationem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438491-5275276> rdfs:label " Cum de prudentia R. Filangierii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438492-721482> rdfs:label " Cum de prudentia et fidelitate I de... castellanum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438493-9095755> rdfs:label " Cum de prudentia et fidelitate I. de... capitaneum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438495-09436> rdfs:label " Cum de prudentia et fidelitate T. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438496-3112774> rdfs:label " Cum ex zelo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438497-579474> rdfs:label " Cum inter ceteros"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438498-7810824> rdfs:label " Cum magistrum G. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438500-008937> rdfs:label " Cum magnae deuotionis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438501-2286174> rdfs:label " Cum multipliciter"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438502-4479406> rdfs:label " Cum nomina castellanorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438503-6302946> rdfs:label " Cum per litterarum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438504-8147745> rdfs:label " Cum post sedatos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438506-0484097> rdfs:label " Cum post sedatos iam fluctus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438507-2956924> rdfs:label " Cum pro congregando"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438508-500215> rdfs:label " Cum pro gratis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438509-7054088> rdfs:label " Cum pro quibusdam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438510-888681> rdfs:label " Cum scias nos libenter"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438512-065371> rdfs:label " Cum sit Christus caput"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438513-2654824> rdfs:label " Cum uires excellentiae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438514-4538693> rdfs:label " Cum... et..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438515-6624656> rdfs:label " Curam et sollicitudinem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438516-878074> rdfs:label " Curas nostras"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438518-0757213> rdfs:label " De Gallica Petri Damiani profectione et eius ultramontano itinere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438519-8197892> rdfs:label " De Verbis Romanae Locutionis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438521-0418184> rdfs:label " De balneis Viterbiensibus (ex ms. New York, Library of Medicine, Folio 200832)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438522-2684677> rdfs:label " De balneis Viterbiensibus (ex. ms. Firenze, BML, Magliabechiano XV.7.89)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438523-9859576> rdfs:label " De bono comuni"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438528-253795> rdfs:label " De dubio accentu"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438529-927427> rdfs:label " De figuris secundum Iohannem de Virgilio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438531-2923896> rdfs:label " De fulgari thronei (duci Austriae)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438534-2384899> rdfs:label " De miseria humane conditionis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438535-4487221> rdfs:label " De montibus, silvis, fontibus, lacubus, fluminibus, stagnis seu paludibus et de diversis nominibus maris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438536-682083> rdfs:label " De more medicorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438537-8674479> rdfs:label " De ordine docendi et studendi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438539-0640512> rdfs:label " De paenitentia regum et de investitura regali collectanea"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438540-3103929> rdfs:label " De peccato usure"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438541-7305052> rdfs:label " De ratione scribendi, libri tres"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438543-409019> rdfs:label " De rebus gestis Frederici II. Imperatoris ejusque filiorum Conradi et Manfredi Apuliae et Siciliae regum. 20-258"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438550-5841203> rdfs:label " De tua fidelitate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438551-7377422> rdfs:label " De tua prudentia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438552-965012> rdfs:label " De urinis, secundum Mattheum de Archiepiscopo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438554-1652305> rdfs:label " De uxore cerdonis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438556-3498607> rdfs:label " De vita Sancti Benedicti et de officio divino secundum eius doctrinam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438557-569433> rdfs:label " De vita servanda a regum liberis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438559-270732> rdfs:label " Debita reuerentia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438560-4811742> rdfs:label " Decreta Lanfranci pro ordine Sancti Benedicti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438561-717142> rdfs:label " Defensio Heinrici IV. regis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438562-953914> rdfs:label " Delectat nos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438564-2118006> rdfs:label " Deo propitio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438565-4253469> rdfs:label " Descriptio basilicae Vaticanae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438566-68068> rdfs:label " Determinatio utrum sit licitum vendere mercationes ad terminum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438567-8864498> rdfs:label " Detestabile"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438569-0657542> rdfs:label " Deuotionis tuae litteras quas per P. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438570-2643187> rdfs:label " Deuotionis tuae litteras quos nostro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438571-967366> rdfs:label " Dialogi de miraculis Sancti Benedicti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438573-133323> rdfs:label " Dialogi de prescientia Dei et predestinatione electorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438575-307302> rdfs:label " Dictamina ex manuscripto Parisiensi lat. 866"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438576-5065882> rdfs:label " Dictamina ex manuscripto angelicano 54"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438577-7012918> rdfs:label " Dictamina rhetorica"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438578-9315815> rdfs:label " Dicus est principium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438580-1328287> rdfs:label " Dignum esse"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438581-3495166> rdfs:label " Diligenter audiuimus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438583-0642226> rdfs:label " Discedentes de Regno"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438584-3186424> rdfs:label " Disceptatio synodalis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438585-5163977> rdfs:label " Diuinis et humanis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438587-2096598> rdfs:label " Dudum per litteras"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438588-4445953> rdfs:label " Dum Imperii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438589-6727724> rdfs:label " Dum debitorum nostrorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438590-865526> rdfs:label " Ecce quod magistrum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438593-3041937> rdfs:label " Egritudines tocius corporis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438595-4226146> rdfs:label " Elegia ad Florentiam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438596-7162726> rdfs:label " Epicedium in Hippolytam Sfortiam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438598-5116541> rdfs:label " Epistola Adelaidae Taurinensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438599-7079844> rdfs:label " Epistola Adelheidae imperatricis (995)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438600-951308> rdfs:label " Epistola Flavio Blondo Foroliviensi (VI 0)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438602-1210804> rdfs:label " Epistola ad Cerdanum cardinalem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438603-3682878> rdfs:label " Epistola ad Ermentrudem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438604-5639062> rdfs:label " Epistola ad Henricum III Angliae regem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438605-7322958> rdfs:label " Epistola ad Petrum Panormitanum ecclesie thesaurarium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438606-9299505> rdfs:label " Epistola ad Petrum de desolatione Siciliae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438608-111192> rdfs:label " Epistola ad amicum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438609-3002377> rdfs:label " Epistola ad sanctam Agnetem de Praga [III]"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438610-4799473> rdfs:label " Epistola ad sanctam Agnetem de Praga [II]"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438611-6451433> rdfs:label " Epistola ad sanctam Agnetem de Praga [IV]"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438612-795794> rdfs:label " Epistola ad sanctam Agnetem de Praga [I]"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438614-0178437> rdfs:label " Epistola episcopi ad papam pro fidelitate imperatoris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438615-2228703> rdfs:label " Epistola pontificalis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438616-4023788> rdfs:label " Epistola rationalibus Apulis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438617-6536803> rdfs:label " Epistola universis prelatis inferioribus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438619-33646> rdfs:label " Epistolae Tegernsienses"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438620-5028377> rdfs:label " Epistolae ad Franciscum Petrarcam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438622-2084665> rdfs:label " Epistolae latinae anonymi auctoris (metà XII secolo)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438623-4162846> rdfs:label " Epistolae latinae anonymorum auctorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438625-1362355> rdfs:label " Epistolarum libri VI"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438626-324716> rdfs:label " Epistolarum libri VI. Tomus II"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438628-0251746> rdfs:label " Epistole ad ecclesiam triumphantem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438629-2100646> rdfs:label " Epistole stravaganti e altri componimenti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438630-9531076> rdfs:label " Equum Hispanum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438632-6751666> rdfs:label " Etsi ad perfectionem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438633-8668618> rdfs:label " Etsi causae nostrae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438635-0435193> rdfs:label " Etsi causarum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438636-2608337> rdfs:label " Etsi clementiae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438637-443718> rdfs:label " Etsi culpae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438638-638896> rdfs:label " Etsi fortuna"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438639-8591883> rdfs:label " Etsi generali"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438641-0556946> rdfs:label " Etsi magnificientiae nostrae gratiam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438642-2447228> rdfs:label " Etsi mera"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438643-4508367> rdfs:label " Etsi munificentiae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438644-6475992> rdfs:label " Etsi nobiscum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438645-850762> rdfs:label " Etsi potentiae nostrae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438647-0700653> rdfs:label " Etsi prouenientium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438648-28234> rdfs:label " Etsi tam iusta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438649-4846432> rdfs:label " Etsi uolatilis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438650-683981> rdfs:label " Etsi utilium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438652-401344> rdfs:label " Evidentia Ecerinidis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438653-7390327> rdfs:label " Ex feruore charitatis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438654-9841542> rdfs:label " Ex relatione"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438656-534418> rdfs:label " Ex uotiua"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438657-759317> rdfs:label " Excerpta ex libris Pompei Festi de verborum significatu"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438659-0631452> rdfs:label " Exempla exordiorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438660-2735465> rdfs:label " Expectabam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438661-4805517> rdfs:label " Expectantes expectastis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438662-7863784> rdfs:label " Expectationum uestrarum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438664-0230765> rdfs:label " Expositio Breviloquii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438666-453771> rdfs:label " Expositio super Poetriam novam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438667-6672456> rdfs:label " Exposuit ecellentiae nostrae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438669-3632596> rdfs:label " Exultet iam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438671-0670521> rdfs:label " Fateor pater"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438672-2664075> rdfs:label " Fauorabilis petitio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438673-5112047> rdfs:label " Fidelitatem solitam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438674-7367983> rdfs:label " Fidelitati tuae duximus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438675-9496164> rdfs:label " Fidelitati tuae notum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438677-1003113> rdfs:label " Fidelitatis uestrae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438678-2705238> rdfs:label " Fidelium nostrorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438679-482016> rdfs:label " Fidelium nostrorum eterna"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438680-7148235> rdfs:label " Fidem et deuotionem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438683-20042> rdfs:label " Flos Medicinae Scholae Salerni"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438684-4289882> rdfs:label " Formularium florentinum artis notariae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438685-8244526> rdfs:label " Frequenter uobis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438687-0197754> rdfs:label " Fridericus et cetera Inconsutilem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438688-22109> rdfs:label " Fridericus et cetera Patarenorum complices"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438689-434384> rdfs:label " Fridericus et cetera Viterbiensibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438690-6233644> rdfs:label " Fridericus et cetera dilectis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438691-8666139> rdfs:label " Furiosam superbiam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438693-0759778> rdfs:label " Gaudere te uolumus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438694-304916> rdfs:label " Gaudium quod super"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438695-5364242> rdfs:label " Geminari uidentur"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438696-7597373> rdfs:label " Generali qua"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438698-0207477> rdfs:label " Generalis subiectorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438700-8461587> rdfs:label " Gloriosa epistola ad imperatorem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438702-0956497> rdfs:label " Graphia aureae urbis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438703-3829656> rdfs:label " Grata est in conspectu"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438704-6036599> rdfs:label " Grata satis est"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438706-0176468> rdfs:label " Gratanter recepimus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438707-2025836> rdfs:label " Gratum gerimus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438708-4340682> rdfs:label " Grauis admodum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438709-7442293> rdfs:label " Guidonis Girardi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438710-9885492> rdfs:label " Habet et merito"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438714-2844434> rdfs:label " Historia Langobardorum Florentina"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438716-74305> rdfs:label " Historia Mongalorum (ca. 250)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438718-5203376> rdfs:label " Historia Sicula ab ingressu Normannorum in Apuliam usque ad annum 282"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438719-7750258> rdfs:label " Historia custodum Aretinorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438721-5204012> rdfs:label " Historia de preliis Alexandri Magni (rec. I 3)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438723-744587> rdfs:label " Historia translationis corporis s. Agathae virginis martyris Constantinopoli Catanam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438725-5019217> rdfs:label " Historiarum ab inclinatione Romanorum quartae decadis liber secundus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438727-246115> rdfs:label " Hucusque satis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438728-4548285> rdfs:label " Hymnus de sancto Othone (hymhOth) BHL 639"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438729-6732264> rdfs:label " Hystoria de via et recuperatione Antiochiae atque Ierusolymarum (olim tudebodus imitatus et continuatus)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438731-0081127> rdfs:label " Ignominiosi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438732-3112817> rdfs:label " Illa fruimur"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438733-5344908> rdfs:label " Illos felices"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438734-821846> rdfs:label " Imperatoriae celsitudinis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438736-1156898> rdfs:label " Imperialis beneuolentia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438737-3182538> rdfs:label " Imperialis maiestas"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438738-539856> rdfs:label " In Dei nomine"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438739-8132293> rdfs:label " In exemplum nostrorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438741-0426548> rdfs:label " In exordio nascentis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438742-2597961> rdfs:label " In extollendis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438743-693678> rdfs:label " In inuidiam omnium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438745-0388877> rdfs:label " In nostrae maiestatis presentia B. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438746-2939577> rdfs:label " In nostrae maiestatis presentia constitutis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438747-53571> rdfs:label " In omnes epistulas Pauli commentarii, cum glossula interiecta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438748-8619666> rdfs:label " Incipit ars dictandi (Introducendis in artem dictandi)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438750-0776155> rdfs:label " Innata cordi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438751-3350477> rdfs:label " Innatum uobis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438752-5662632> rdfs:label " Innocentius IV papa per Iordanum de Terracina"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438753-887736> rdfs:label " Intellectis hiis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438755-073005> rdfs:label " Intellectis per uos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438756-9872754> rdfs:label " Intellecto nuper"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438758-223803> rdfs:label " Intellecto nuper quod nonnulli"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438759-4477942> rdfs:label " Inter accidentium multiplices"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438761-7240899> rdfs:label " Inter gratitudines"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438762-9328349> rdfs:label " Inter nos iam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438764-126212> rdfs:label " Inter rerum molimina"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438765-3861215> rdfs:label " Introductiones de notitia versificandi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438766-6294308> rdfs:label " Introductiones dictandi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438768-3407898> rdfs:label " Introductiones prosaici dictaminis, exordia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438769-6692004> rdfs:label " Introduzione all'Apocalisse"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438771-0853305> rdfs:label " Inuiti trahimur"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438774-7741115> rdfs:label " Itinerarium Federici secundi (Narratio qualiter imperator Federicus reaquisivit regnum s[ibi] rebel[latu]m quando accessit ad aquirendum Jerusalem et sepulcrum Cristi)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438776-0451708> rdfs:label " Iudicis ad amicum epistola"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438778-5315175> rdfs:label " Latentis hostis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438779-745051> rdfs:label " Lecta nuper"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438780-967784> rdfs:label " Lectis gratanter"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438785-1942725> rdfs:label " Legenda versificata sanctae Clarae Assisiensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438786-4322865> rdfs:label " Leuate in circuitu"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438787-6409528> rdfs:label " Libellus sacrosyllabus episcoporum Italiae contra Elipandum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438789-591262> rdfs:label " Liber Guillelmi falconarii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438792-4525764> rdfs:label " Liber Pergaminus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438797-5276248> rdfs:label " Liber de gestis in civitate Mediolani (commentum)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438798-7547393> rdfs:label " Liber de temporibus et etatibus. Continuatio Regina et Cronica Imperatorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438799-945964> rdfs:label " Liber gestorum recentium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438805-219743> rdfs:label " Liber sapientie collectus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438806-6196704> rdfs:label " Libri Nicolai de Jamsilla De rebus gestis Frederici II. Imperatoris ejusque filiorum continuatio anonyma"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438807-852529> rdfs:label " Licet a primis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438809-0714462> rdfs:label " Licet ad prosequenda"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438810-3108237> rdfs:label " Licet ad quarumlibet"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438811-5581205> rdfs:label " Licet prae suis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438812-9736633> rdfs:label " Licet... qui"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438814-2180345> rdfs:label " Litteras tuas"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438815-5395322> rdfs:label " Lugubrem filii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438816-766668> rdfs:label " Magister Guido Vacchetta magistro Iohanni de Virgilio et responsiva"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438818-4061244> rdfs:label " Magistrorum epistola ad imperatorem pro suo negotio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438819-6212907> rdfs:label " Magnum nouum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438820-8812103> rdfs:label " Memoria seculorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438822-6267934> rdfs:label " Milites uestri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438824-044274> rdfs:label " Milites uestros"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438825-2826025> rdfs:label " Mini de Colle Vallis Elsae Epistolae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438826-999575> rdfs:label " Miracula sancti Iuuenalis martyris Beneventi operata (BHL 463m)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438828-2611792> rdfs:label " Miraculum anno MCCXXXIII a s. Iuvenale patratum (BHL 466)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438829-706587> rdfs:label " Mirati satis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438830-9997826> rdfs:label " Misericordia pii patris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438832-2474642> rdfs:label " Missas nuper"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438833-5263338> rdfs:label " Multae sunt quae uobis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438834-7820325> rdfs:label " Multiplices epistole que diversis et variis negotiis utiliter possunt accomodari"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438836-0534694> rdfs:label " Multum nostris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438837-3005605> rdfs:label " Ne diuino instinctu"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438838-5261385> rdfs:label " Ne fama"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438839-7547643> rdfs:label " Ne fama preambula quae multorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438841-0328007> rdfs:label " Ne per excogitatae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438842-2541025> rdfs:label " Ne per impunitatem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438843-4795468> rdfs:label " Nicolaus de Firmo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438844-7008152> rdfs:label " Nobile opus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438845-9289443> rdfs:label " Nobili mulieri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438847-175668> rdfs:label " Nobis in uoto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438848-3627486> rdfs:label " Nondum me"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438849-5720103> rdfs:label " Noster instanter"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438850-8192804> rdfs:label " Notiam tuam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438852-050676> rdfs:label " Notum facimus fidelitati quod... fidelis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438853-2677934> rdfs:label " Notum facimus fidelitati uestrae, quod nos P. et R."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438854-4676113> rdfs:label " Notum facimus uniuersis quod nos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438855-670506> rdfs:label " Notum facimus uniuersis quod... maiestati"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438856-8856077> rdfs:label " Notum facimus uniuersitati uestrae quod nos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438858-0670714> rdfs:label " Notum facimus uniuersitati uestrae quod...de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438859-2604027> rdfs:label " Notum fieri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438861-107469> rdfs:label " Nuper ad audientiam celsitudinis nostrae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438862-3294249> rdfs:label " Nuper ad audientiam nostram R. comitis Casertani"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438863-5846305> rdfs:label " Nuper dum terra"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438864-7763982> rdfs:label " Nuper in Regno"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438866-012256> rdfs:label " Nuper paiensibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438867-324321> rdfs:label " Occupatis nobis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438868-5784378> rdfs:label " Officium sancti Francisci"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438869-7991786> rdfs:label " Olim ad supplicationem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438871-708954> rdfs:label " Opus in nobis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438872-9423616> rdfs:label " Oratio Demosthenis Pro Ctesiphonte"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438874-1533363> rdfs:label " Ordinamenta magistrorum et statuta eorum (255)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438877-423184> rdfs:label " Passio Arialdi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438878-6545165> rdfs:label " Passio S. Felicis Nolensis (Recensio Visigotica)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438879-8700006> rdfs:label " Passio beati Arialdi martyris qui ad sanctum Dionysium tumulatur"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438881-1128955> rdfs:label " Passio et translatio Aquisgranum sanctorum Coronae et Victoris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438882-3782215> rdfs:label " Passio s. Lucii pape et martyris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438883-545587> rdfs:label " Passio s. Proculi episcopi et martyris (BHL 6957)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438884-774889> rdfs:label " Passio s. Sauinae martyris (BHL 7407)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438885-9842248> rdfs:label " Passio sanctarum Seraphiae et Sauinae (BHL 7586)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438887-186238> rdfs:label " Passio sancti Leopardi (BHL 4888)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438888-386529> rdfs:label " Passio sancti Medici (BHL 5877-5877a)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438889-6158726> rdfs:label " Passio sancti Valentini episcopi martyris (BHL 8460)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438890-826854> rdfs:label " Passio sanctorum Victoris et Coronae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438892-1069858> rdfs:label " Passio ss. XII Syrorum (BHL 620, 622, 6955)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438893-3596756> rdfs:label " Pater mi quam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438894-6213987> rdfs:label " Pati nolentes"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438895-8921304> rdfs:label " Pensantes amoris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438897-1052468> rdfs:label " Per presens scriptum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438898-3518538> rdfs:label " Per tuorum operum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438899-6380055> rdfs:label " Perfectae sollicitudinis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438900-963286> rdfs:label " Peteriti laboris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438902-1866717> rdfs:label " Petitionem G. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438903-367258> rdfs:label " Petrus et Ihoannes de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438904-667383> rdfs:label " Planctus Evandri de morte Pallantis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438905-9202154> rdfs:label " Plenam dant"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438907-1716971> rdfs:label " Plene scimus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438909-7282813> rdfs:label " Porrecta G. et E."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438910-9597888> rdfs:label " Postquam preter"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438912-7135508> rdfs:label " Precepta prosaici dictaminis secundum Tullium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438913-9887247> rdfs:label " Preconia Frederici"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438915-2663107> rdfs:label " Presentiam tuam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438916-511551> rdfs:label " Presto nobis est"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438917-720893> rdfs:label " Preteritae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438918-9698281> rdfs:label " Pridem contra moniales"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438920-2034614> rdfs:label " Pro parte Communis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438921-4085698> rdfs:label " Pro parte Conuentis monasterii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438922-6379666> rdfs:label " Pro parte M. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438923-8651547> rdfs:label " Pro parte O. et B."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438925-0983715> rdfs:label " Pro parte O. et T."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438926-4459174> rdfs:label " Pro parte conuentus heremi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438927-6873302> rdfs:label " Pro parte uniuersitatis Cesanae, nostrorum fidelium, nuper extitit"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438928-8882668> rdfs:label " Pro parte uniuersitatis Cesenae, Nostrorum fidelium nostrae fuit"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438930-1277707> rdfs:label " Pro parte uniuersitatis castri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438931-3370025> rdfs:label " Pro parte uniuersitatis ciuitatis Aretinae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438932-5180357> rdfs:label " Pro parte uniuersitatis hominum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438933-7319713> rdfs:label " Pro parte... Prioris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438934-953477> rdfs:label " Pro parte... abbatis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438936-1599867> rdfs:label " Processus Pisanorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438937-427187> rdfs:label " Prompta uos deuotione"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438939-177213> rdfs:label " Prudenter"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438940-379332> rdfs:label " Prudenter precidenda"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438941-7421932> rdfs:label " Pulchrum in subditis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438942-9934793> rdfs:label " Pungitiue nos tangit"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438944-2769144> rdfs:label " Pura fides"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438945-4860532> rdfs:label " Quaestiones super modos significandi et super gramaticam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438946-7610655> rdfs:label " Quaestiones supra Prisciano Minori"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438949-2963033> rdfs:label " Qualiter iura"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438950-5410297> rdfs:label " Qualiter post"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438951-7923307> rdfs:label " Quam sit fauorabilis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438952-99972> rdfs:label " Quamquam fides"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438954-2234097> rdfs:label " Quanta sit fidei"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438955-4448323> rdfs:label " Quanta sit fidei uestrae constantia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438956-6959226> rdfs:label " Quantae audaciae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438957-9409463> rdfs:label " Quantum et qualiter"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438959-1602683> rdfs:label " Quantumcumque"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438960-3677876> rdfs:label " Querelam B. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438961-6075194> rdfs:label " Querelam C. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438962-8186824> rdfs:label " Questionis arduae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438964-041193> rdfs:label " Quia constant nobis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438965-26877> rdfs:label " Quia de T. de N."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438966-4764566> rdfs:label " Quia nostrae innotuit"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438967-686313> rdfs:label " Quia sicut ex relatione"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438968-8965707> rdfs:label " Quia uestrae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438970-1217067> rdfs:label " Quod ad publicae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438971-2891202> rdfs:label " Quod causae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438972-5310287> rdfs:label " Quod de nimis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438973-73348> rdfs:label " Quod filium tuum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438976-2043068> rdfs:label " Rationes dictandi prosaice"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438977-4399772> rdfs:label " Rationes dictandi, exordia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438978-6725593> rdfs:label " Rationes diversarum mutationum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438979-9258265> rdfs:label " Recepit excellentia nostra"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438981-1833463> rdfs:label " Recollecte super Poetria Magistri Gualfredi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438982-3790436> rdfs:label " Regiae serenitatis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438983-6258597> rdfs:label " Regnantibus nobis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438985-4256155> rdfs:label " Regulae ortographie per alphabetum compilate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438987-2074902> rdfs:label " Relatio aedificationis ecclesiae cathedralis Mutinensis et translationis Sancti Geminiani"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438988-4366546> rdfs:label " Relatio de electione Dominici Silvi Venetorum ducis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438989-7044497> rdfs:label " Rem perniciosam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438991-4466836> rdfs:label " Repetentibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438992-7277644> rdfs:label " Reprobatio nefandi sermonis editi per Radulphum de quodam Nemine heretico et dampnato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438993-9513347> rdfs:label " Rerum Sicularum libri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438995-1938977> rdfs:label " Rerum gestarum Alfonsi regis libri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438996-4458258> rdfs:label " Responsiva eiusdem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438997-6531634> rdfs:label " Responsiva superioris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759438998-8999307> rdfs:label " Rhetorica novissima"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439000-1217835> rdfs:label " Rhythmus de captivitate Ludovici imperatoris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439001-334756> rdfs:label " Romanus honor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439006-1741242> rdfs:label " Satis honoris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439007-4107873> rdfs:label " Satis nobis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439008-6001873> rdfs:label " Satis nobis cedit ad gloriam et nostris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439009-8674889> rdfs:label " Satis nos pungit"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439011-0727212> rdfs:label " Satis potest"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439012-287951> rdfs:label " Satis preclaros"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439014-0041695> rdfs:label " Scimus et experti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439015-2735465> rdfs:label " Scire potest uestrae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439016-504445> rdfs:label " Scriptum super Libros Sententiarum, II"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439017-7793539> rdfs:label " Scriptum super Libros Sententiarum, III"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439019-0331335> rdfs:label " Sedentibus super"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439020-266243> rdfs:label " Semper crescit"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439021-5083375> rdfs:label " Semper hactenus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439022-7486775> rdfs:label " Sepe contigit"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439023-9593441> rdfs:label " Sermo de beato Fulgentio episcopo (BHL 3207d)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439025-1696002> rdfs:label " Sermo de s. Anastasio confessore (BHL 407b)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439026-3684626> rdfs:label " Sermo de virtute et Sermo de transitu Sancti Constantii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439027-601826> rdfs:label " Sermo de vita beati Cassii Narniensis episcopi (BHL 638-639)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439028-8134212> rdfs:label " Sermo domini Uberti venerabilis abbatis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439030-0388098> rdfs:label " Sermo super evangelium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439031-2196329> rdfs:label " Sermones de pace"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439032-4487298> rdfs:label " Si casum et causam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439033-6563344> rdfs:label " Si hylater"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439034-9075897> rdfs:label " Si multae uel de multis aliquae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439036-1467228> rdfs:label " Sie consueuit aliquando"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439037-380272> rdfs:label " Sine litterarum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439038-623734> rdfs:label " Socero et socrui"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439039-857354> rdfs:label " Solet studiosus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439041-0865333> rdfs:label " Solita benignitate recepit nostra serenitas litteras quas nostro culmini destinasti et quae continebantur"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439042-2732744> rdfs:label " Solita benignitate recepit nostra serenitas litteras, quas misisti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439043-486263> rdfs:label " Solita benignitate recepit nostra serenitas litteras, quas nostro culmini destinasti. Et intellectis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439044-7033389> rdfs:label " Solita benignitate recepit serenitas nostra litteras"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439046-4559073> rdfs:label " Speciali quadam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439047-6708615> rdfs:label " Statuta Comunis Mergotii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439048-9040496> rdfs:label " Statuta insule et ripperie Horte"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439050-3276963> rdfs:label " Statuta vallis Diverii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439051-5910914> rdfs:label " Sub simplicis humilitatis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439052-8156939> rdfs:label " Subditi ad episcopum commendabilis epistola"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439054-534481> rdfs:label " Subministrante nouorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439058-5381777> rdfs:label " Summa notarie"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439059-73869> rdfs:label " Summa salutationum (codice ambrosiano)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439060-9342139> rdfs:label " Summa salutationum (codice parigino)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439062-153899> rdfs:label " Summula dictaminis a magistro Guidone alto stilo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439063-3870256> rdfs:label " Suo magistro Roffrido di Beneuento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439064-5971613> rdfs:label " Super eo quod de"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439065-9435878> rdfs:label " Supplicarunt excellentiae nostrae... et..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439067-1853535> rdfs:label " Supplicauerunt"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439068-408152> rdfs:label " Supplicauit excellentiae nostrae I. de"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439069-6504753> rdfs:label " Supplicauit excellentiae nostrae R. de Papia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439070-898884> rdfs:label " Supplicauit excellentiae nostrae R. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439072-0901082> rdfs:label " Supplicauit excellentiae nostrae S. de..."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439073-327287> rdfs:label " Suprascriptiones litterarum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439074-5451713> rdfs:label " Tanta est bonae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439075-92009> rdfs:label " Tantus nos amor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439077-155364> rdfs:label " Te retargutionis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439078-4268262> rdfs:label " Tenore presentium notum facimus uniuersis quod misericordia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439079-6479092> rdfs:label " Tenore presentium notum facimus uniuersis quod nos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439080-8640149> rdfs:label " Tenuit hactenus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439082-0912228> rdfs:label " Tesditti syndici"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439083-8668337> rdfs:label " Tetigit"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439085-1182318> rdfs:label " Thomasiis de Sabaudia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439086-3135962> rdfs:label " Tot sunt opera"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439087-935289> rdfs:label " Tractatus comparativorum secundum Iohannem de Virgilio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439089-1645257> rdfs:label " Tractatus de coniunctionibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439090-4062238> rdfs:label " Tractatus de dictamine"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439092-2149713> rdfs:label " Tractatus de iustitia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439093-4635947> rdfs:label " Tractatus de lapide philosophico"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439094-656865> rdfs:label " Tractatus in arte alchemiae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439095-905161> rdfs:label " Tractatus inpersonalium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439097-1437218> rdfs:label " Tractatus positionum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439099-601029> rdfs:label " Translatio Iuvenalis et Cassi episcoporum Narniensium Lucam (BHL 465 e 465a)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439100-8388789> rdfs:label " Translatio Sancti Mercurii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439102-0923429> rdfs:label " Translatio et miracula sanctorum Senesii et Theopontii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439103-3475432> rdfs:label " Tua nuper"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439104-5786881> rdfs:label " Tuae fidelitatis litteras"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439105-8396888> rdfs:label " Tum perfectae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439107-123366> rdfs:label " Tunc nomen nostrum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439108-3803031> rdfs:label " Ursus, De nomine - Adbreviatio artis grammaticae (Codex Casanatensis 086, folia r-r)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439109-6619196> rdfs:label " V Tabule Salutationum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439110-9156823> rdfs:label " Vagentibus adhuc"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439112-1645575> rdfs:label " Vellemus potius"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439113-406199> rdfs:label " Venientibus ad presentium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439115-0963347> rdfs:label " Versus de Anna sorore Didonis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439118-3024979> rdfs:label " Vestrorum corda"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439119-897519> rdfs:label " Victorioso exercitu"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439316-1376474> rdfs:label " Virum Industrium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439317-9322457> rdfs:label " Visio Philiberti (vel Fulberti)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439319-6200974> rdfs:label " Vita Anselmi abbatis Nonantulani"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439321-2008784> rdfs:label " Vita Anselmi episcopi Lucensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439323-6823068> rdfs:label " Vita Bononii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439324-874523> rdfs:label " Vita Iohannis Gualberti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439326-1708472> rdfs:label " Vita S. Iohannis Confessoris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439327-9635522> rdfs:label " Vita Sancti Othonis (vitOth) BHL 6390"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439329-2154377> rdfs:label " Vita b. Vrsi abbatis (BHL 8455b)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439330-4446285> rdfs:label " Vita beati Romualdi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439331-6959038> rdfs:label " Vita et obitus s. Iuuenalis episcopi Narniensis (recensio Beneventana)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439332-894644> rdfs:label " Vita et passio sanctae Christinae virginis et martyris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439336-5388913> rdfs:label " Vita s. Iuuenalis episcopi Narniensis (BHL 464 recensio Narniensis)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439337-7547584> rdfs:label " Vita sancti Gemini A"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439338-9403174> rdfs:label " Vita sancti Gemini B"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439340-5576205> rdfs:label " Vita sancti Symeonis monachi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439342-6521382> rdfs:label " Vita secunda S. Bernardi episcopi Parmensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439343-8600357> rdfs:label " Vitae quatuor priorum abbatum Cavensium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439345-058245> rdfs:label " Vniuersis hominibus de Monte Flascone"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439346-3004978> rdfs:label " [Proprium S. Felicis] In Festo Sancti Felicis Episcopi et Martiris Nolani (EX BREVIARIO NOLANO MANUSCRIPTO, ff. 384v - 390v)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439347-5476103> rdfs:label " [Liber de natura falconum]"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439348-8887131> rdfs:label " [In] infrascripta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439351-4586818> rdfs:label " Vtinam in magnis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439352-6617925> rdfs:label " Vt uota fidelium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439353-8640475> rdfs:label " Vt uictoriosi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439355-0225544> rdfs:label " Vt uestrae deuotionis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439356-2447083> rdfs:label " Vt iustorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439357-4870605> rdfs:label " Vt iustitiam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439358-700167> rdfs:label " Vt de felicibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439359-9021418> rdfs:label " Volentes deuotionem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439361-0932896> rdfs:label " Vocatus nuper"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439362-3104017> rdfs:label " Vobis serenissime imperator"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439363-52053> rdfs:label " Vobis non alii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759439364-7591622> rdfs:label " Vniuersis uicariis"^^xsd:string .
+
+<https://www.viaf.org/viaf/182946496> rdfs:label " Adversus Iudeos"^^xsd:string .
+
+<https://www.viaf.org/viaf/188301067> rdfs:label " De rebus gestis Rogerii Siciliae regis (27-35)"^^xsd:string .
+
+<https://www.viaf.org/viaf/195842233> rdfs:label " De scismate Hildebrandi"^^xsd:string .
+
+<https://www.viaf.org/viaf/217394234> rdfs:label " Ysagoge"^^xsd:string .
+
+<https://www.viaf.org/viaf/2746160728554710380001> rdfs:label " Vita prima S. Bernardi episcopi Parmensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729030147-4807222/extraction-1755592940896-2> prov:used <?query=PREFIX%20xyz%3A%20%3Chttp%3A//sparql.xyz/facade-x/data/%3E%0APREFIX%20ns%3A%20%3Chttp%3A//sparql.xyz/facade-x/ns/%3E%0APREFIX%20rdf%3A%20%3Chttp%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%3E%0APREFIX%20fx%3A%20%3Chttp%3A//sparql.xyz/facade-x/ns/%3E%0APREFIX%20skos%3A%20%3Chttp%3A//www.w3.org/2004/02/skos/core%23%3E%0APREFIX%20what%3A%20%3Chttps%3A//html.spec.whatwg.org/%23%3E%0APREFIX%20xhtml%3A%20%3Chttp%3A//www.w3.org/1999/xhtml%23%3E%0APREFIX%20ex%3A%20%3Chttp%3A//www.example.com/%3E%0APREFIX%20xsd%3A%20%3Chttp%3A//www.w3.org/2001/XMLSchema%23%3E%20SELECT%20DISTINCT%20%3Flabel%20WHERE%20%7B%0A%20SERVICE%20%3Cx-sparql-anything%3A%3E%20%7B%0A%20fx%3Aproperties%20fx%3Alocation%20%22https%3A//alim.unisi.it/dl/%22%20.%0A%20fx%3Aproperties%20fx%3Ablank-nodes%20%22false%22%20.%0A%20fx%3Aproperties%20fx%3Amedia-type%20%22text/html%22%20.%0A%20fx%3Aproperties%20fx%3Ahtml.browser%20%22firefox%22%20.%0A%20fx%3Aproperties%20fx%3Ahtml.browser.wait%20%225%22%20.%20%0A%20fx%3Aproperties%20fx%3Ahtml.selector%20%22%23title_s%20%3E%20li%20%3E%20a%22%20.%0A%20fx%3Aproperties%20fx%3Ahttp.header.User-Agent%20%22Mozilla/5.0%20%28X11%3B%20Ubuntu%3B%20Linux%20x86_64%3B%20rv%3A78.0%29%20Gecko/20100101%20Firefox/78.0%22%20.%0A%20%3Froot%20a%20fx%3Aroot%20.%0A%20%3Froot%20%3Fp%20%3Fs%20.%0A%20%3Fs%20what%3AinnerText%20%3FfullText%20.%20OPTIONAL%20%7B%0A%20%3Fs%20%3FhasChild%20%3Fchild%20.%0A%20%3Fchild%20what%3AinnerText%20%3FchildText%20.%0A%20%7D%0A%20BIND%28%0A%20IF%28BOUND%28%3FchildText%29%2C%0A%20REPLACE%28%3FfullText%2C%20%3FchildText%2C%20%22%22%29%2C%0A%20%3FfullText%0A%20%29%20AS%20%3Flabel%0A%20%29%0A%20%7D%0A%7D> .
+

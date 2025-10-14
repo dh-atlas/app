@@ -1,0 +1,32 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757521624-812> a schema:ResearchProject ;
+    rdfs:label "Languages and Cultures of Ancient Italy. Historical Linguistics and Digital Models (PRIN 2017 Program)"@en ;
+    schema:description "The main objective of the project is to investigate the cultures of ancient Italy on the basis of their linguistic documentation (7th - 1stc. B.C.) by means of digital tools specifically tailored for their peculiarities. "@en ;
+    schema:dissolutionDate "2023-01-20"^^xsd:date ;
+    schema:foundingDate "2020-01-20"^^xsd:date ;
+    schema:identifier "Prot. 2017XJLE8J, CUP: H74I17000150003"@en ;
+    schema:member <https://w3id.org/dh-atlas/1728999602-7282345>,
+        <https://w3id.org/dh-atlas/1729012784-159052>,
+        <https://w3id.org/dh-atlas/1729200890-684812> ;
+    schema:name "Languages and Cultures of Ancient Italy. Historical Linguistics and Digital Models (PRIN 2017 Program)"@en .
+
+<https://w3id.org/dh-atlas/1757521624-812/> rdfs:label "Languages and Cultures of Ancient Italy. Historical Linguistics and Digital Models (PRIN 2017 Program)"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-10T21:22:57.336906"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Languages and Cultures of Ancient Italy. Historical Linguistics and Digital Models (PRIN 2017 Program)"@en .
+
+<https://w3id.org/dh-atlas/1728999602-7282345> rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729200890-684812> rdfs:label "University of Florence"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

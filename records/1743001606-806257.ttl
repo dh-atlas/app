@@ -1,39 +1,39 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://purl.org/dc/terms/> .
-@prefix default2: <https://w3id.org/dh-atlas/> .
-@prefix default3: <http://dbpedia.org/ontology/> .
-@prefix default4: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <https://w3id.org/dh-atlas/> .
+@prefix ns3: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-default2:1743001606-806257 a schema:Dataset,
-        default2:DigitalScholarlyEdition ;
+ns2:1743001606-806257 a schema:Dataset,
+        ns2:DigitalScholarlyEdition ;
     rdfs:label "I Capricci di un Re DIGITAL"@it ;
-    default1:conformsTo <http://www.wikidata.org/entity/Q126980263> ;
-    :about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-13> ;
-    :additionalType default2:DigitalScholarlyEdition ;
-    :citation <https://www.iris.unict.it/handle/20.500.11769/602349> ;
-    :conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    :creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
-    :datePublished "2023-02-02"^^xsd:date ;
-    :description "Edizione digitale de I Capricci d’un Re"@it ;
-    :encodingFormat <http://publications.europa.eu/resource/authority/file-type/XML> ;
-    :inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
-    :name "I Capricci di un Re DIGITAL"@it ;
-    :url <https://www.operestefanopulvirenti.it/evt_ICDR1/> ;
-    default2:editionType <http://www.w3id.org/dh-atlas/DigitalEdition> ;
-    default2:referencedWorkType <http://www.w3id.org/dh-atlas/SingleWork> ;
-    default2:servedBy default2:1743002979-879 ;
-    default2:used default2:1729010538-925614 .
+    dcterms:conformsTo <http://www.wikidata.org/entity/Q126980263> ;
+    ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-13> ;
+    ns1:additionalType ns2:DigitalScholarlyEdition ;
+    ns1:citation <https://www.iris.unict.it/handle/20.500.11769/602349> ;
+    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    ns1:datePublished "2023-02-02"^^xsd:date ;
+    ns1:description "Edizione digitale de I Capricci d’un Re"@it ;
+    ns1:encodingFormat <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns1:name "I Capricci di un Re DIGITAL"@it ;
+    ns1:url <https://www.operestefanopulvirenti.it/evt_ICDR1/> ;
+    ns2:editionType <http://www.w3id.org/dh-atlas/DigitalEdition> ;
+    ns2:referencedWorkType <http://www.w3id.org/dh-atlas/SingleWork> ;
+    ns2:servedBy ns2:1743002979-879 ;
+    ns2:used ns2:1729010538-925614 .
 
 <https://w3id.org/dh-atlas/1743001606-806257/> rdfs:label "I Capricci di un Re DIGITAL"@it ;
-    default3:currentStatus "modified"^^xsd:string ;
-    :name "I Capricci di un Re DIGITAL"@it ;
-    default4:generatedAtTime "2025-03-31T15:29:41.390000+00:00"^^xsd:dateTime ;
-    default4:wasAttributedTo default2:tommaso-dot-battisti5-at-unibo-dot-it ;
-    default4:wasInfluencedBy default2:sebastiano-dot-giacomin2-at-unibo-dot-it .
+    ns3:currentStatus "modified"^^xsd:string ;
+    ns1:name "I Capricci di un Re DIGITAL"@it ;
+    prov:generatedAtTime "2025-03-31T15:29:41.390384"^^xsd:dateTime ;
+    prov:wasAttributedTo ns2:anonymous ;
+    prov:wasInfluencedBy ns2:sebastiano-dot-giacomin2-at-unibo-dot-it .
 
 <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
 
@@ -49,15 +49,15 @@ default2:1743001606-806257 a schema:Dataset,
 
 <http://www.wikidata.org/entity/Q126980263> rdfs:label "XML-TEI Stand-off Markup: One Step Beyond"^^xsd:string .
 
-default2:1729010538-925614 rdfs:label "Edition Visualization Technology (EVT)"^^xsd:string .
+ns2:1729010538-925614 rdfs:label "Edition Visualization Technology (EVT)"^^xsd:string .
 
-default2:1743002979-879 rdfs:label "I Capricci di un Re DIGITAL"^^xsd:string .
+ns2:1743002979-879 rdfs:label "I Capricci di un Re DIGITAL"^^xsd:string .
 
-default2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+ns2:anonymous rdfs:label "anonymous" .
 
-default2:tommaso-dot-battisti5-at-unibo-dot-it rdfs:label "tommaso.battisti5@unibo.it" .
+ns2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-13> skos:prefLabel "Philology of italian literature - ACADEMIC FIELD"^^xsd:string .
 
-default2:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
+ns2:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
 

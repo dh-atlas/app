@@ -1,0 +1,33 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757971088-283> a schema:ResearchProject ;
+    rdfs:label "The Medieval Kingdom of Sicily Image Database Project"@en ;
+    schema:description "Founded in 2011 at Duke University by Caroline Bruzelius, The Medieval Kingdom of Sicily Image Database Project is now housed at the Edith O’Donnell Institute of Art History, in collaboration with the Dipartimento di Architettura, Università degli Studi di Napoli “Federico II” and the Center for the Art and Architectural History of Port Cities “La Capraia” at the Museo e Real Bosco di Capodimonte. The project is co-led by Sarah K. Kozlowski and Paola Vitolo, and involves scholars and students in the United States and Italy."@en ;
+    schema:foundingDate "2011-01-01"^^xsd:date ;
+    schema:member <https://w3id.org/dh-atlas/1729170068-2115734>,
+        <https://w3id.org/dh-atlas/1757969306-0689976>,
+        <https://w3id.org/dh-atlas/1757970457-331>,
+        <https://w3id.org/dh-atlas/1757971392-827> ;
+    schema:name "The Medieval Kingdom of Sicily Image Database Project"@en ;
+    schema:url <https://koseodiah.org/rationale.php> .
+
+<https://w3id.org/dh-atlas/1757971088-283/> rdfs:label "The Medieval Kingdom of Sicily Image Database Project"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T21:40:32.799312"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "The Medieval Kingdom of Sicily Image Database Project"@en .
+
+<https://w3id.org/dh-atlas/1729170068-2115734> rdfs:label "University of Naples Federico II"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757969306-0689976> rdfs:label "The Edith O’Donnell Institute of Art History (University of Texas at Dallas)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757970457-331> rdfs:label "Duke University"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757971392-827> rdfs:label "La Capraia - Center for the Art and Architectural History of Port Cities"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

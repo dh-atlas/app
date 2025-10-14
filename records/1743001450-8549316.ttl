@@ -1,6 +1,6 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://dbpedia.org/ontology/> .
-@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -9,28 +9,28 @@
 <https://w3id.org/dh-atlas/1743001450-8549316> a schema:Dataset,
         <https://w3id.org/dh-atlas/DigitalScholarlyEdition> ;
     rdfs:label "Francesco Guicciardini: History of Italy"@en ;
-    :additionalType <https://w3id.org/dh-atlas/DigitalScholarlyEdition> ;
-    :description "The \"Storia d'Italia\" project is a digital edition initiative dedicated to Francesco Guicciardini's (1483-1540) masterpiece of the same name. Led by an international team coordinated by Paola Moreno, the project focuses on the opening of the work, analyzing eight autograph manuscripts that document the author's complex writing process. The digital edition offers various visualization modes: a semi-diplomatic version with facsimile, reading versions of the \"first draft\" and \"revised text,\" and a visualization by textual segments that allows comparison between different versions. Using XML-TEI encoding and modifying the EVT (Edition Visualization Technology) platform, the project makes the complex textual genesis accessible and comprehensible, offering access to Guicciardini's writing and thinking workshop."@en,
+    ns1:additionalType <https://w3id.org/dh-atlas/DigitalScholarlyEdition> ;
+    ns1:description "The \"Storia d'Italia\" project is a digital edition initiative dedicated to Francesco Guicciardini's (1483-1540) masterpiece of the same name. Led by an international team coordinated by Paola Moreno, the project focuses on the opening of the work, analyzing eight autograph manuscripts that document the author's complex writing process. The digital edition offers various visualization modes: a semi-diplomatic version with facsimile, reading versions of the \"first draft\" and \"revised text,\" and a visualization by textual segments that allows comparison between different versions. Using XML-TEI encoding and modifying the EVT (Edition Visualization Technology) platform, the project makes the complex textual genesis accessible and comprehensible, offering access to Guicciardini's writing and thinking workshop."@en,
         "Le projet \"Storia d'Italia\" est une initiative d'édition numérique consacrée à l'œuvre homonyme de Francesco Guicciardini (1483-1540). Dirigé par une équipe internationale coordonnée par Paola Moreno, le projet se concentre sur l'exorde de l'œuvre, en analysant huit manuscrits autographes qui témoignent du processus d'écriture tourmenté de l'auteur. L'édition numérique offre différents modes de visualisation : une version semi-diplomatique avec fac-similé, des versions de lecture du \"premier jet\" et du \"texte révisé\", et une visualisation par segments textuels permettant la comparaison entre différentes rédactions. En utilisant l'encodage XML-TEI et en modifiant la plateforme EVT (Edition Visualization Technology), le projet rend accessible et compréhensible la genèse textuelle complexe, offrant un accès extraordinaire à l'atelier d'écriture et de pensée de Guicciardini."@fr,
         "Il progetto \"Storia d'Italia\" è un'iniziativa di edizione digitale dedicata all'opera omonima di Francesco Guicciardini (1483-1540). Guidato da un'équipe internazionale coordinata da Paola Moreno, il progetto si concentra sull'esordio dell'opera, analizzando gli otto manoscritti autografi che testimoniano il processo di scrittura dell'autore. L'edizione digitale offre diverse modalità di visualizzazione: una versione semi-diplomatica con facsimile a fronte, versioni di lettura del \"primo getto\" e del \"testo revisionato\", e una visualizzazione per segmenti testuali che consente il confronto tra le diverse redazioni. Utilizzando la codifica XML-TEI e modificando la piattaforma EVT (Edition Visualization Technology), il progetto rende accessibile e comprensibile la complessa genesi testuale, offrendo uno straordinario accesso al laboratorio di scrittura e pensiero di Guicciardini."@it ;
-    :educationalUse <https://vocabs.dariah.eu/tadirah/annotating>,
+    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/annotating>,
         <https://vocabs.dariah.eu/tadirah/digitalPublishing>,
         <https://vocabs.dariah.eu/tadirah/editing>,
         <https://vocabs.dariah.eu/tadirah/opticalCharacterRecognition>,
         <https://vocabs.dariah.eu/tadirah/publishing>,
         <https://vocabs.dariah.eu/tadirah/transcribing> ;
-    :name "Francesco Guicciardini: History of Italy"@en,
+    ns1:name "Francesco Guicciardini: History of Italy"@en,
         "Histoire d’Italie de Francesco Guicciardini"@fr,
         "Francesco Guicciardini: Storia d'Italia"@it ;
-    :url <https://guicciardini-storia-italia.huma-num.fr/> ;
-    :usageInfo <https://guicciardini-storia-italia.huma-num.fr/> .
+    ns1:url <https://guicciardini-storia-italia.huma-num.fr/> ;
+    ns1:usageInfo <https://guicciardini-storia-italia.huma-num.fr/> .
 
 <https://w3id.org/dh-atlas/1743001450-8549316/> rdfs:label "Francesco Guicciardini: History of Italy"@en ;
-    default1:currentStatus "modified"^^xsd:string ;
-    :name "Francesco Guicciardini: History of Italy"@en ;
-    default2:generatedAtTime "2025-04-01T18:27:24.403000+00:00"^^xsd:dateTime ;
-    default2:wasAttributedTo <https://w3id.org/dh-atlas/andrea-dot-schimmenti2-at-unibo-dot-it> ;
-    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Francesco Guicciardini: History of Italy"@en ;
+    prov:generatedAtTime "2025-04-01T18:27:24.403995"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
 
 <https://vocabs.dariah.eu/tadirah/annotating> skos:prefLabel "Annotating - TADIRAH"^^xsd:string .
 
@@ -44,7 +44,7 @@
 
 <https://vocabs.dariah.eu/tadirah/transcribing> skos:prefLabel "Transcribing - TADIRAH"^^xsd:string .
 
-<https://w3id.org/dh-atlas/andrea-dot-schimmenti2-at-unibo-dot-it> rdfs:label "andrea.schimmenti2@unibo.it" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 
 <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
 

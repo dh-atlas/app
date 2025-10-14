@@ -1,0 +1,123 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1757508120-9840105 a schema:Dataset,
+        ns1:TextCollection ;
+    rdfs:label "ItalArt Textual Corpus"@en ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-B>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-10-F3> ;
+    schema:additionalType ns1:TextCollection ;
+    schema:contributor ns1:1757609140-649,
+        ns1:1757609735-954,
+        ns1:1757609876-258,
+        ns1:1757609922-291 ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns1:1757608819-25 ;
+    schema:datePublished "2020-01-01"^^xsd:date ;
+    schema:description "The ItalArt corpus collects practical texts in Italian vernacular language relating to the arts (contracts, allocations, letters, petitions, payment notes, etc.), covering the period from the earliest records to the late Renaissance, and to produce a glossary of technical terminology derived from the corpus."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/querying> ;
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    schema:genre <http://sparql.cwrc.ca/ontologies/genre#petition>,
+        <https://sparql.cwrc.ca/ontologies/genre#letter>,
+        <https://sparql.cwrc.ca/ontologies/genre#memoir> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/FRA>,
+        <http://publications.europa.eu/resource/authority/language/ITA>,
+        <http://publications.europa.eu/resource/authority/language/LAT> ;
+    schema:license <https://w3id.org/italia/controlled-vocabulary/licences/C_Unknown> ;
+    schema:name "ItalArt Textual Corpus"@en ;
+    schema:producer ns1:1757610251-47 ;
+    schema:publisher ns1:1757610059-356 ;
+    schema:size "717 documents"@en ;
+    schema:spatialCoverage <https://sws.geonames.org/3169070> ;
+    schema:temporalCoverage <http://www.wikidata.org/entity/Q1404472> ;
+    schema:url <http://italart.ovi.cnr.it/> ;
+    schema:usageInfo <http://italart.ovi.cnr.it/premessa> ;
+    schema:version "Unknown"@en ;
+    ns1:editionType <https://www.w3id.org/dh-atlas-vocabularies/etv/DiplomaticEdition>,
+        <https://www.w3id.org/dh-atlas-vocabularies/etv/FacsimileEdition>,
+        <https://www.w3id.org/dh-atlas-vocabularies/etv/InterpretativeEdition> ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/editing>,
+        <https://vocabs.dariah.eu/tadirah/gathering>,
+        <https://vocabs.dariah.eu/tadirah/lemmatizing> ;
+    ns1:noteOnResearchProduct "The release date was inferred from the corpus' website but is not certain."@en ;
+    ns1:servedBy ns1:1757610300-035,
+        ns1:1757610364-987 .
+
+<https://w3id.org/dh-atlas/1757508120-9840105/> rdfs:label "ItalArt Textual Corpus"@en ;
+    ns2:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T17:16:40.961851"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "ItalArt Textual Corpus"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/XML> skos:prefLabel "XML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/FRA> skos:prefLabel "French - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/LAT> skos:prefLabel "Latin - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#petition> rdfs:label "Petition"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1404472> rdfs:label "Italian Renaissance"^^xsd:string .
+
+<https://sparql.cwrc.ca/ontologies/genre#letter> rdfs:label "Letter"^^xsd:string .
+
+<https://sparql.cwrc.ca/ontologies/genre#memoir> rdfs:label "Memoir"^^xsd:string .
+
+<https://sws.geonames.org/3169070> rdfs:label "Rome"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/editing> skos:prefLabel "Editing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/gathering> skos:prefLabel "Gathering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/lemmatizing> skos:prefLabel "Lemmatizing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
+
+ns1:1757608819-25 rdfs:label "Aresti, Alessandro"^^xsd:string .
+
+ns1:1757609140-649 rdfs:label "Arcidiacono, Salvatore"^^xsd:string .
+
+ns1:1757609735-954 rdfs:label "Leonardi, Lino"^^xsd:string .
+
+ns1:1757609876-258 rdfs:label "Canetto, Andrea"^^xsd:string .
+
+ns1:1757609922-291 rdfs:label "Regini, Irene"^^xsd:string .
+
+ns1:1757610059-356 rdfs:label " Opera del Vocabolario Italiano (OVI)"^^xsd:string .
+
+ns1:1757610251-47 rdfs:label "ItalArt Research Project"^^xsd:string .
+
+ns1:1757610300-035 rdfs:label "ItalArt (Website)"^^xsd:string .
+
+ns1:1757610364-987 rdfs:label "GattoWeb (Corpus ItalArt)"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-B> skos:prefLabel "Art history - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-10-F3> skos:prefLabel "Italian linguistics and philology - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/licences/C_Unknown> skos:prefLabel "Unknown License - LICENSES"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/DiplomaticEdition> rdfs:label "Diplomatic Edition"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/FacsimileEdition> rdfs:label "Facsimile Edition"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/InterpretativeEdition> rdfs:label "Interpretative Edition"^^xsd:string .
+
+ns1:TextCollection rdfs:label "Text Collection"^^xsd:string .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+

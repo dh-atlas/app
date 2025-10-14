@@ -1,0 +1,89 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <https://w3id.org/dh-atlas/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:1758060615-906372 a schema:Dataset,
+        ns2:3DDigitalTwin ;
+    rdfs:label "BrancacciPOV"@en ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ART-01> ;
+    schema:additionalType ns2:3DDigitalTwin ;
+    schema:contributor ns2:1758271896-151,
+        ns2:1758271942-315,
+        ns2:1758271984-364 ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns2:1758060795-941,
+        ns2:1758061095-771,
+        ns2:1758061191-183,
+        ns2:1758061269-55,
+        ns2:1758061339-485 ;
+    schema:datePublished "2022-10-01"^^xsd:date ;
+    schema:description "A 3D model of the Brancacci Chapel, named after Felice Brancacci, in Florence, explorable via a web application."@en ;
+    schema:exampleOfWork <http://www.wikidata.org/entity/Q1996075> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    schema:name "BrancacciPOV"@en ;
+    schema:producer ns2:1758272528-813 ;
+    schema:publisher ns2:1758061014-965,
+        ns2:1758272078-684,
+        ns2:1758272291-231 ;
+    schema:url <http://brancaccipov.cnr.it/> ;
+    ns2:servedBy ns2:1758273123-896 .
+
+<https://w3id.org/dh-atlas/1758060615-906372/> rdfs:label "BrancacciPOV"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-19T09:19:36.627462"^^xsd:dateTime ;
+    prov:wasAttributedTo ns2:anonymous ;
+    prov:wasInfluencedBy ns2:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:keywords <https://w3id.org/dh-atlas/1758060615-906372/extraction-1727854052731/> ;
+    schema:name "BrancacciPOV"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1996075> rdfs:label "Brancacci Chapel"^^xsd:string .
+
+ns2:1758060795-941 rdfs:label "Pescarin, Sofia"^^xsd:string .
+
+ns2:1758061014-965 rdfs:label "Istituto di Scienze del Patrimonio Culturale (CNR)"^^xsd:string .
+
+ns2:1758061095-771 rdfs:label "Cerato, Ivana"^^xsd:string .
+
+ns2:1758061191-183 rdfs:label "Manganelli Del Fà, Rachele"^^xsd:string .
+
+ns2:1758061269-55 rdfs:label "Massidda, Marcello"^^xsd:string .
+
+ns2:1758061339-485 rdfs:label "Pocobelli, Giorgio Franco"^^xsd:string .
+
+ns2:1758271896-151 rdfs:label "Bordignon, Alice"^^xsd:string .
+
+ns2:1758271942-315 rdfs:label "Bonanno, Vanessa"^^xsd:string .
+
+ns2:1758271984-364 rdfs:label "Marasco, Alessandra"^^xsd:string .
+
+ns2:1758272078-684 rdfs:label "Soprintendenza Archeologia, Belle Arti e Paesaggio per la città metropolitana di Firenze e la provincia di Prato"^^xsd:string .
+
+ns2:1758272291-231 rdfs:label "Florence Municipality"^^xsd:string .
+
+ns2:1758272528-813 rdfs:label "Brancacci VR Project"^^xsd:string .
+
+ns2:1758273123-896 rdfs:label "Brancacci App (Website)"^^xsd:string .
+
+ns2:anonymous rdfs:label "anonymous" .
+
+ns2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ART-01> skos:prefLabel "History of medieval art - ACADEMIC FIELD"^^xsd:string .
+
+ns2:3DDigitalTwin rdfs:label "3D Digital Twin"^^xsd:string .
+

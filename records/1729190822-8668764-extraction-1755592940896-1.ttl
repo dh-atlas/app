@@ -1,0 +1,1848 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q1> a schema:Place ;
+    rdfs:label "Cosmo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q100> a schema:Place ;
+    rdfs:label "Boston"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q100272072> a schema:Place ;
+    rdfs:label "Nord Africa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1007> a schema:Place ;
+    rdfs:label "Guinea Bissau"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1008> a schema:Place ;
+    rdfs:label "Costa d'Avorio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1009> a schema:Place ;
+    rdfs:label "Camerun"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1014> a schema:Place ;
+    rdfs:label "Liberia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1015> a schema:Place ;
+    rdfs:label "Capodistria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q101551> a schema:Place ;
+    rdfs:label "San Pellegrino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1016> a schema:Place ;
+    rdfs:label "Libia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q101690296> a schema:Place ;
+    rdfs:label "Cecchignola"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1017> a schema:Place ;
+    rdfs:label "Aquisgrana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1017096> a schema:Place ;
+    rdfs:label "Villa Regina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1019> a schema:Place ;
+    rdfs:label "Madagascar"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1019424> a schema:Place ;
+    rdfs:label "Rufisque"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1020> a schema:Place ;
+    rdfs:label "Malawi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1025108> a schema:Place ;
+    rdfs:label "Cadenabbia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1025312> a schema:Place ;
+    rdfs:label "Cadore"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1028> a schema:Place ;
+    rdfs:label "Maghreb"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1029> a schema:Place ;
+    rdfs:label "Mozambico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102911> a schema:Place ;
+    rdfs:label "Olanda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1033> a schema:Place ;
+    rdfs:label "Nigeria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1036> a schema:Place ;
+    rdfs:label "Uganda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q10389> a schema:Place ;
+    rdfs:label "Bandung"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1041> a schema:Place ;
+    rdfs:label "Senegal"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1045> a schema:Place ;
+    rdfs:label "Somalia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1049> a schema:Place ;
+    rdfs:label "Sudan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1049920> a schema:Place ;
+    rdfs:label "Castro Pretorio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1052040> a schema:Place ;
+    rdfs:label "Cayor"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1070940> a schema:Place ;
+    rdfs:label "Asia del Pacifico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1083> a schema:Place ;
+    rdfs:label "Salerno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1083910> a schema:Place ;
+    rdfs:label "Glassboro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1085> a schema:Place ;
+    rdfs:label "Praga"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1125309> a schema:Place ;
+    rdfs:label "Confederazione Generale dell'Industria Italiana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1127320> a schema:Place ;
+    rdfs:label "Italia centrale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1135779> a schema:Place ;
+    rdfs:label "Emilia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1136614> a schema:Place ;
+    rdfs:label "Palazzo Barberini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q114> a schema:Place ;
+    rdfs:label "Kenia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1146299> a schema:Place ;
+    rdfs:label "Custoza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q115> a schema:Place ;
+    rdfs:label "Etiopia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1156> a schema:Place ;
+    rdfs:label "Bombay"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q11568> a schema:Place ;
+    rdfs:label "Darwin"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q116592> a schema:Place ;
+    rdfs:label "Cassino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q116706> a schema:Place ;
+    rdfs:label "Ceccano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q116840> a schema:Place ;
+    rdfs:label "Fiuggi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q117> a schema:Place ;
+    rdfs:label "Ghana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q11708> a schema:Place ;
+    rdfs:label "Sud-Est Asiatico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q118771> a schema:Place ;
+    rdfs:label "Rio Negro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1203182> a schema:Place ;
+    rdfs:label "Paesi in via di sviluppo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1210> a schema:Place ;
+    rdfs:label "Lombardia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1216> a schema:Place ;
+    rdfs:label "Piemonte"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1218> a schema:Place ;
+    rdfs:label "Gerusalemme"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1222> a schema:Place ;
+    rdfs:label "Val D'Aosta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1237> a schema:Place ;
+    rdfs:label "Trentino-Alto Adige"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1239> a schema:Place ;
+    rdfs:label "Oceano Indiano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q123941> a schema:Place ;
+    rdfs:label "Chiaravalle"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1242205> a schema:Place ;
+    rdfs:label "Polesine"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1243> a schema:Place ;
+    rdfs:label "Veneto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124554> a schema:Place ;
+    rdfs:label "Osimo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1247> a schema:Place ;
+    rdfs:label "Mar dei Caraibi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1250> a schema:Place ;
+    rdfs:label "Friuli"^^xsd:string,
+        "Friuli – Venezia Giulia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q125121589> a schema:Place ;
+    rdfs:label "Piazza di San Giovanni in Laterano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1256> a schema:Place ;
+    rdfs:label "Liguria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12585> a schema:Place ;
+    rdfs:label "America Latina"^^xsd:string,
+        "paesi latinoamericani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1263> a schema:Place ;
+    rdfs:label "Emilia Romagna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1267485> a schema:Place ;
+    rdfs:label "Villa Madama"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1273> a schema:Place ;
+    rdfs:label "Toscana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1279> a schema:Place ;
+    rdfs:label "Marche"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1280> a schema:Place ;
+    rdfs:label "Umbria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q128086> a schema:Place ;
+    rdfs:label "Formia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q128134> a schema:Place ;
+    rdfs:label "Ponza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1282> a schema:Place ;
+    rdfs:label "Lazio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q128206> a schema:Place ;
+    rdfs:label "Sezze"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1282314> a schema:Place ;
+    rdfs:label "Akosombo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1284> a schema:Place ;
+    rdfs:label "Abruzzo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q128499> a schema:Place ;
+    rdfs:label "Yalta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1286> a schema:Place ;
+    rdfs:label "Alpi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1308> a schema:Place ;
+    rdfs:label "Como"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131323> a schema:Place ;
+    rdfs:label "Misurata"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13137> a schema:Place ;
+    rdfs:label "Teramo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13138> a schema:Place ;
+    rdfs:label "Chieti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13298> a schema:Place ;
+    rdfs:label "Graz"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13320> a schema:Place ;
+    rdfs:label "Savona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q133274> a schema:Place ;
+    rdfs:label "Cremlino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13329> a schema:Place ;
+    rdfs:label "Piacenza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1335> a schema:Place ;
+    rdfs:label "Montevideo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13362> a schema:Place ;
+    rdfs:label "Ferrara"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13364> a schema:Place ;
+    rdfs:label "Ravenna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13367> a schema:Place ;
+    rdfs:label "Forlì"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13369> a schema:Place ;
+    rdfs:label "Rimini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13370> a schema:Place ;
+    rdfs:label "Massa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13373> a schema:Place ;
+    rdfs:label "Lucca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13375> a schema:Place ;
+    rdfs:label "Pisa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13377> a schema:Place ;
+    rdfs:label "Prato"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13386> a schema:Place ;
+    rdfs:label "Lecce"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13395> a schema:Place ;
+    rdfs:label "Viterbo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13396> a schema:Place ;
+    rdfs:label "Rieti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1341> a schema:Place ;
+    rdfs:label "Togliatti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13410> a schema:Place ;
+    rdfs:label "Latina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13433> a schema:Place ;
+    rdfs:label "Avellino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13437> a schema:Place ;
+    rdfs:label "Benevento"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1345> a schema:Place ;
+    rdfs:label "Filadelfia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13450> a schema:Place ;
+    rdfs:label "Isernia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134514> a schema:Place ;
+    rdfs:label "Suez"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13464> a schema:Place ;
+    rdfs:label "Foggia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13470> a schema:Place ;
+    rdfs:label "Barletta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134762> a schema:Place ;
+    rdfs:label "Eilat"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13486> a schema:Place ;
+    rdfs:label "Andria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13495> a schema:Place ;
+    rdfs:label "Trani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13496> a schema:Place ;
+    rdfs:label "Brindisi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13498> a schema:Place ;
+    rdfs:label "Taranto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13616> a schema:Place ;
+    rdfs:label "Matera"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13619> a schema:Place ;
+    rdfs:label "Cosenza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1362> a schema:Place ;
+    rdfs:label "Islamabad"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13629> a schema:Place ;
+    rdfs:label "Sassari"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13649> a schema:Place ;
+    rdfs:label "Nuoro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1365493> a schema:Place ;
+    rdfs:label "Repubblica di Pisa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13664> a schema:Place ;
+    rdfs:label "Trapani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13666> a schema:Place ;
+    rdfs:label "Messina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13670> a schema:Place ;
+    rdfs:label "Siracusa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13680> a schema:Place ;
+    rdfs:label "Caltanissetta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q138473> a schema:Place ;
+    rdfs:label "Arco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q13924> a schema:Place ;
+    rdfs:label "Mare Adriatico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q14112> a schema:Place ;
+    rdfs:label "Corsica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1414323> a schema:Place ;
+    rdfs:label "Europa Nord-Occidentale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q142> a schema:Place ;
+    rdfs:label "Francia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q143487> a schema:Place ;
+    rdfs:label "Mondo arabo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1438> a schema:Place ;
+    rdfs:label "Campania"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1443> a schema:Place ;
+    rdfs:label "Molise"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1447> a schema:Place ;
+    rdfs:label "Puglia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1449> a schema:Place ;
+    rdfs:label "Genova"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q145> a schema:Place ;
+    rdfs:label "Gran Bretagna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1452> a schema:Place ;
+    rdfs:label "Basilicata"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1458> a schema:Place ;
+    rdfs:label "Calabria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1460> a schema:Place ;
+    rdfs:label "Sicilia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1462> a schema:Place ;
+    rdfs:label "Sardegna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q14623011> a schema:Place ;
+    rdfs:label "Tlatelolco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1468834> a schema:Place ;
+    rdfs:label "Val Venosta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q148> a schema:Place ;
+    rdfs:label "Cina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1486> a schema:Place ;
+    rdfs:label "Buenos Aires"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1489> a schema:Place ;
+    rdfs:label "Città del Messico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1490> a schema:Place ;
+    rdfs:label "Tokio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15> a schema:Place ;
+    rdfs:label "Africa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15124> a schema:Place ;
+    rdfs:label "Alto Adige"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1515> a schema:Place ;
+    rdfs:label "Abidjan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15180> a schema:Place ;
+    rdfs:label "U.R.S.S."^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1524> a schema:Place ;
+    rdfs:label "Atene"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1530> a schema:Place ;
+    rdfs:label "Bagdad"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1533> a schema:Place ;
+    rdfs:label "Caracas"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q153809> a schema:Place ;
+    rdfs:label "Tirolo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q154849> a schema:Place ;
+    rdfs:label "Granducato di Toscana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15499> a schema:Place ;
+    rdfs:label "Paraná"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q155> a schema:Place ;
+    rdfs:label "Brasile"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q159> a schema:Place ;
+    rdfs:label "Russia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15924> a schema:Place ;
+    rdfs:label "Tolmino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q159605> a schema:Place ;
+    rdfs:label "Tivoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16> a schema:Place ;
+    rdfs:label "Canada"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q160381> a schema:Place ;
+    rdfs:label "Occidente"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q160636> a schema:Place ;
+    rdfs:label "Rio Grande"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16123> a schema:Place ;
+    rdfs:label "Provincia di Bari"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q162022> a schema:Place ;
+    rdfs:label "Malines"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16205> a schema:Place ;
+    rdfs:label "Massa Carrara"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16289> a schema:Place ;
+    rdfs:label "Trentino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1647> a schema:Place ;
+    rdfs:label "Fiume"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q165154> a schema:Place ;
+    rdfs:label "Regno di Sardegna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q165198> a schema:Place ;
+    rdfs:label "Cirenaica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16577567> a schema:Place ;
+    rdfs:label "Medio Oriente"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q166> a schema:Place ;
+    rdfs:label "Mar Nero"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1663> a schema:Place ;
+    rdfs:label "Spalato"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16869> a schema:Place ;
+    rdfs:label "Costantinopoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1693> a schema:Place ;
+    rdfs:label "Mare del Nord"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16957> a schema:Place ;
+    rdfs:label "Germania Est"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q17> a schema:Place ;
+    rdfs:label "Giappone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q170468> a schema:Place ;
+    rdfs:label "Repubblica Araba Unita"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1711> a schema:Place ;
+    rdfs:label "Potsdam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1726> a schema:Place ;
+    rdfs:label "Monaco di Baviera"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q172640> a schema:Place ;
+    rdfs:label "Nord Vietnam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q173065> a schema:Place ;
+    rdfs:label "Regno di Napoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q174> a schema:Place ;
+    rdfs:label "San Paolo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1741> a schema:Place ;
+    rdfs:label "Vienna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1748> a schema:Place ;
+    rdfs:label "Copenaghen"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1754> a schema:Place ;
+    rdfs:label "Stoccolma"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1755046> a schema:Place ;
+    rdfs:label "Palazzo Madama"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1757> a schema:Place ;
+    rdfs:label "Helsinki"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1761> a schema:Place ;
+    rdfs:label "Dublino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1764> a schema:Place ;
+    rdfs:label "Reykjavik"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q17669> a schema:Place ;
+    rdfs:label "Serravalle Scrivia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1781> a schema:Place ;
+    rdfs:label "Budapest"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18> a schema:Place ;
+    rdfs:label "America del Sud"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q180194> a schema:Place ;
+    rdfs:label "Terzo Mondo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q180522> a schema:Place ;
+    rdfs:label "Aqaba"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q180573> a schema:Place ;
+    rdfs:label "Sud Vietnam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18097> a schema:Place ;
+    rdfs:label "Corea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q183> a schema:Place ;
+    rdfs:label "Germania"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q184345> a schema:Place ;
+    rdfs:label "Viña del Mar"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q184382> a schema:Place ;
+    rdfs:label "Pampa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18473830> a schema:Place ;
+    rdfs:label "Fundres"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1854> a schema:Place ;
+    rdfs:label "Ho Chi Minh"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1858> a schema:Place ;
+    rdfs:label "Hanoi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1861> a schema:Place ;
+    rdfs:label "Bangkok"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q187712> a schema:Place ;
+    rdfs:label "Abu Dhabi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q189> a schema:Place ;
+    rdfs:label "Islanda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1891> a schema:Place ;
+    rdfs:label "Bologna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1897> a schema:Place ;
+    rdfs:label "Cagliari"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1903> a schema:Place ;
+    rdfs:label "Catania"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1906> a schema:Place ;
+    rdfs:label "Caserta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q191119> a schema:Place ;
+    rdfs:label "Rambouillet"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1911690> a schema:Place ;
+    rdfs:label "Isola Maddalena"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q191759> a schema:Place ;
+    rdfs:label "Ventimiglia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19275> a schema:Place ;
+    rdfs:label "San Severo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1930> a schema:Place ;
+    rdfs:label "Ottawa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19300> a schema:Place ;
+    rdfs:label "Molfetta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19326> a schema:Place ;
+    rdfs:label "Fiumicino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1961631> a schema:Place ;
+    rdfs:label "Serravalle"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1963> a schema:Place ;
+    rdfs:label "Khartum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19660> a schema:Place ;
+    rdfs:label "Bucarest"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q20> a schema:Place ;
+    rdfs:label "Norvegia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q200938> a schema:Place ;
+    rdfs:label "Loreto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2019442> a schema:Place ;
+    rdfs:label "Camaldoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q202760> a schema:Place ;
+    rdfs:label "Isonzo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2028> a schema:Place ;
+    rdfs:label "Verona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2044> a schema:Place ;
+    rdfs:label "Firenze"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2047548> a schema:Place ;
+    rdfs:label "Palazzo Chigi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q207989> a schema:Place ;
+    rdfs:label "Mezzogiorno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q209344> a schema:Place ;
+    rdfs:label "Università di Roma"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21> a schema:Place ;
+    rdfs:label "Inghilterra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21195> a schema:Place ;
+    rdfs:label "Scandinavia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q213462> a schema:Place ;
+    rdfs:label "Piave"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q216085> a schema:Place ;
+    rdfs:label "Viminale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q217133> a schema:Place ;
+    rdfs:label "Forte dei Marmi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q218> a schema:Place ;
+    rdfs:label "Romania"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21864013> a schema:Place ;
+    rdfs:label "Cima Vallona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q219> a schema:Place ;
+    rdfs:label "Bulgaria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q22> a schema:Place ;
+    rdfs:label "Scozia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q220> a schema:Place ;
+    rdfs:label "Roma"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q221377> a schema:Place ;
+    rdfs:label "Viareggio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q222> a schema:Place ;
+    rdfs:label "Albania"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q223079> a schema:Place ;
+    rdfs:label "Quirinale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q22335> a schema:Place ;
+    rdfs:label "Vaiont"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q224> a schema:Place ;
+    rdfs:label "Croazia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q22502> a schema:Place ;
+    rdfs:label "Formosa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2250397> a schema:Place ;
+    rdfs:label "Italia meridionale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2289221> a schema:Place ;
+    rdfs:label "Vietnam meridionale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q229> a schema:Place ;
+    rdfs:label "Cipro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2316315> a schema:Place ;
+    rdfs:label "Ceneda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q23187> a schema:Place ;
+    rdfs:label "Canosa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q23247> a schema:Place ;
+    rdfs:label "Belgirate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q233> a schema:Place ;
+    rdfs:label "Malta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q23325> a schema:Place ;
+    rdfs:label "Domodossola"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q23406> a schema:Place ;
+    rdfs:label "Mar Rosso"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q23635> a schema:Place ;
+    rdfs:label "Bermude"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q237> a schema:Place ;
+    rdfs:label "Città del Vaticano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q23700> a schema:Place ;
+    rdfs:label "Stresa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q23726> a schema:Place ;
+    rdfs:label "Villadossola"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q23792> a schema:Place ;
+    rdfs:label "Palestina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q23800> a schema:Place ;
+    rdfs:label "La Valletta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q239> a schema:Place ;
+    rdfs:label "Bruxelles"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q241> a schema:Place ;
+    rdfs:label "Cuba"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q241791> a schema:Place ;
+    rdfs:label "Bracciano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q242105> a schema:Place ;
+    rdfs:label "Castel Gandolfo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q242513> a schema:Place ;
+    rdfs:label "Ciampino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q242533> a schema:Place ;
+    rdfs:label "Civitavecchia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2428694> a schema:Place ;
+    rdfs:label "Vietnam settentrionale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q244347> a schema:Place ;
+    rdfs:label "Gorée"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q244482> a schema:Place ;
+    rdfs:label "Romagna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2449> a schema:Place ;
+    rdfs:label "Mogadiscio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q24639> a schema:Place ;
+    rdfs:label "Vancouver"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2467> a schema:Place ;
+    rdfs:label "Nassau"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25> a schema:Place ;
+    rdfs:label "Galles"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q252> a schema:Place ;
+    rdfs:label "Indonesia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q255568> a schema:Place ;
+    rdfs:label "Ortisei"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q258> a schema:Place ;
+    rdfs:label "Sud Africa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q26> a schema:Place ;
+    rdfs:label "Irlanda del Nord"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q262> a schema:Place ;
+    rdfs:label "Algeria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2634> a schema:Place ;
+    rdfs:label "Napoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2656> a schema:Place ;
+    rdfs:label "Palermo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q266975> a schema:Place ;
+    rdfs:label "Santa Margherita ligure"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27> a schema:Place ;
+    rdfs:label "Irlanda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q270> a schema:Place ;
+    rdfs:label "Varsavia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q270225> a schema:Place ;
+    rdfs:label "Kindu"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2704> a schema:Place ;
+    rdfs:label "Pescara"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27231> a schema:Place ;
+    rdfs:label "Asia Orientale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q273779> a schema:Place ;
+    rdfs:label "Saint Louis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27381> a schema:Place ;
+    rdfs:label "Africa del Nord"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27394> a schema:Place ;
+    rdfs:label "Africa Australe"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27407> a schema:Place ;
+    rdfs:label "Africa Orientale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27433> a schema:Place ;
+    rdfs:label "Africa Centrale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27449> a schema:Place ;
+    rdfs:label "Europa Meridionale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27468> a schema:Place ;
+    rdfs:label "Est Europa"^^xsd:string,
+        "Europa Orientale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27479> a schema:Place ;
+    rdfs:label "Europa Settentrionale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27496> a schema:Place ;
+    rdfs:label "Europa Occidentale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27509> a schema:Place ;
+    rdfs:label "Europa Centrale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2751> a schema:Place ;
+    rdfs:label "Siena"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q275635> a schema:Place ;
+    rdfs:label "Massaua"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27611> a schema:Place ;
+    rdfs:label "America centrale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q277627> a schema:Place ;
+    rdfs:label "Guglionesi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q277643> a schema:Place ;
+    rdfs:label "Larino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q279> a schema:Place ;
+    rdfs:label "Modena"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2790> a schema:Place ;
+    rdfs:label "Udine"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q28> a schema:Place ;
+    rdfs:label "Ungheria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2807> a schema:Place ;
+    rdfs:label "Madrid"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2887> a schema:Place ;
+    rdfs:label "Santiago"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q29> a schema:Place ;
+    rdfs:label "Spagna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q298> a schema:Place ;
+    rdfs:label "Cile"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q30> a schema:Place ;
+    rdfs:label "America"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q30565> a schema:Place ;
+    rdfs:label "Melfi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q309202> a schema:Place ;
+    rdfs:label "Camp David"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q31> a schema:Place ;
+    rdfs:label "Belgio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q317729> a schema:Place ;
+    rdfs:label "Gymnich"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3199089> a schema:Place ;
+    rdfs:label "Kossou"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q32> a schema:Place ;
+    rdfs:label "Lussemburgo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3206> a schema:Place ;
+    rdfs:label "Australia Occidentale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q33> a schema:Place ;
+    rdfs:label "Finlandia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3367> a schema:Place ;
+    rdfs:label "Aosta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3376> a schema:Place ;
+    rdfs:label "Trento"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3382248> a schema:Place ;
+    rdfs:label "Piazza Fontana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3392> a schema:Place ;
+    rdfs:label "Nilo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q33935> a schema:Place ;
+    rdfs:label "Tel Aviv"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q33946> a schema:Place ;
+    rdfs:label "Cecoslovacchia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q34> a schema:Place ;
+    rdfs:label "Svezia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3415> a schema:Place ;
+    rdfs:label "Ancona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3437> a schema:Place ;
+    rdfs:label "Perugia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q34589> a schema:Place ;
+    rdfs:label "Eufrate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q34675> a schema:Place ;
+    rdfs:label "Golfo Persico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q347330> a schema:Place ;
+    rdfs:label "Carlo Scarascia Mugnozza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3476> a schema:Place ;
+    rdfs:label "L'Aquila"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q34820> a schema:Place ;
+    rdfs:label "San Domingo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q34925> a schema:Place ;
+    rdfs:label "Campidoglio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3497> a schema:Place ;
+    rdfs:label "Campobasso"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q34972> a schema:Place ;
+    rdfs:label "Cogne"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q35> a schema:Place ;
+    rdfs:label "Danimarca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3519> a schema:Place ;
+    rdfs:label "Bari"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q35295> a schema:Place ;
+    rdfs:label "Prè Saint Didier"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3543> a schema:Place ;
+    rdfs:label "Potenza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3551> a schema:Place ;
+    rdfs:label "Rabat"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q35600> a schema:Place ;
+    rdfs:label "Urali"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3561> a schema:Place ;
+    rdfs:label "Algeri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3572> a schema:Place ;
+    rdfs:label "Tunisi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3579> a schema:Place ;
+    rdfs:label "Tripoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q36> a schema:Place ;
+    rdfs:label "Polonia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q36074> a schema:Place ;
+    rdfs:label "Queensland"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3616> a schema:Place ;
+    rdfs:label "Teheran"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3618115> a schema:Place ;
+    rdfs:label "Caporetto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3624> a schema:Place ;
+    rdfs:label "Addis Abeba"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3630> a schema:Place ;
+    rdfs:label "Giakarta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3640> a schema:Place ;
+    rdfs:label "Ankara"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3642> a schema:Place ;
+    rdfs:label "Asmara"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3658289> a schema:Place ;
+    rdfs:label "Oborishte"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3658359> a schema:Place ;
+    rdfs:label "Regina Coeli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q36600> a schema:Place ;
+    rdfs:label "Aja"^^xsd:string,
+        "L'Aia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q36678> a schema:Place ;
+    rdfs:label "Cisgiordania"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q36704> a schema:Place ;
+    rdfs:label "Iugoslavia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q36755> a schema:Place ;
+    rdfs:label "Sinai"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3685181> a schema:Place ;
+    rdfs:label "Complesso Monumentale di San Michele a Ripa Grande"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3686508> a schema:Place ;
+    rdfs:label "Confagricoltura"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3692> a schema:Place ;
+    rdfs:label "Riyad"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3711> a schema:Place ;
+    rdfs:label "Belgrado"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3718> a schema:Place ;
+    rdfs:label "Dakar"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3734597> a schema:Place ;
+    rdfs:label "Eur"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q374365> a schema:Place ;
+    rdfs:label "Gedda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3744601> a schema:Place ;
+    rdfs:label "Fiera del Levante"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3766> a schema:Place ;
+    rdfs:label "Damasco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3792> a schema:Place ;
+    rdfs:label "Lomé"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q38> a schema:Place ;
+    rdfs:label "Italia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3808> a schema:Place ;
+    rdfs:label "Yaounde"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3820> a schema:Place ;
+    rdfs:label "Beirut"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3825871> a schema:Place ;
+    rdfs:label "Lago della Duchessa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3838> a schema:Place ;
+    rdfs:label "Kinshasa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3840731> a schema:Place ;
+    rdfs:label "Lungotevere Ripa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q384544> a schema:Place ;
+    rdfs:label "Karlovy Vary"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3856> a schema:Place ;
+    rdfs:label "Nicosia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3881> a schema:Place ;
+    rdfs:label "Lusaka"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3883> a schema:Place ;
+    rdfs:label "Catanzaro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q38882> a schema:Place ;
+    rdfs:label "Mar Tirreno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3890240> a schema:Place ;
+    rdfs:label "Palazzo Giustiniani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3891738> a schema:Place ;
+    rdfs:label "Palese"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q39> a schema:Place ;
+    rdfs:label "Svizzera"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3902009> a schema:Place ;
+    rdfs:label "Piano del Sale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3902403> a schema:Place ;
+    rdfs:label "Piazza del Gesù"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3902437> a schema:Place ;
+    rdfs:label "Piazza della Loggia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q39109> a schema:Place ;
+    rdfs:label "Minas Gerais"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q391167> a schema:Place ;
+    rdfs:label "Ozieri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q391980> a schema:Place ;
+    rdfs:label "Territorio Libero di Trieste"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3931253> a schema:Place ;
+    rdfs:label "Rebibbia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q398> a schema:Place ;
+    rdfs:label "Bahrein"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q40> a schema:Place ;
+    rdfs:label "Austria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q40030> a schema:Place ;
+    rdfs:label "Rio Grande do Sul"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q40059> a schema:Place ;
+    rdfs:label "Fiume Giordano (Israele, Siria, Giordania, West Bank)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4011866> a schema:Place ;
+    rdfs:label "Villa Carpegna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q402903> a schema:Place ;
+    rdfs:label "Valle Aurina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q40297> a schema:Place ;
+    rdfs:label "Ispra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q403> a schema:Place ;
+    rdfs:label "Serbia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q40556> a schema:Place ;
+    rdfs:label "Corno d'Africa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q408> a schema:Place ;
+    rdfs:label "Australia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q40816> a schema:Place ;
+    rdfs:label "Bengasi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q41> a schema:Place ;
+    rdfs:label "Grecia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q41115> a schema:Place ;
+    rdfs:label "Santa Catarina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q41329> a schema:Place ;
+    rdfs:label "Linz"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q414> a schema:Place ;
+    rdfs:label "Argentina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q41753> a schema:Place ;
+    rdfs:label "Klagenfurt"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42225> a schema:Place ;
+    rdfs:label "Estremo Oriente"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42298> a schema:Place ;
+    rdfs:label "Codogno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42327> a schema:Place ;
+    rdfs:label "Monzambano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q424> a schema:Place ;
+    rdfs:label "Cambogia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42945> a schema:Place ;
+    rdfs:label "Goito"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q43> a schema:Place ;
+    rdfs:label "Turchia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4301> a schema:Place ;
+    rdfs:label "Arusha"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q43048> a schema:Place ;
+    rdfs:label "Rodi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4345530> a schema:Place ;
+    rdfs:label "Italia settentrionale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q43467> a schema:Place ;
+    rdfs:label "Indocina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q44112> a schema:Place ;
+    rdfs:label "Cirene"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4412> a schema:Place ;
+    rdfs:label "Africa Occidentale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q44241> a schema:Place ;
+    rdfs:label "San Juan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q44642> a schema:Place ;
+    rdfs:label "Federazione delle Repubbliche Arabe"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q44749> a schema:Place ;
+    rdfs:label "Vojvodina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q44797> a schema:Place ;
+    rdfs:label "Mendoza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q45> a schema:Place ;
+    rdfs:label "Portogallo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q458> a schema:Place ;
+    rdfs:label "Europa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q468405> a schema:Place ;
+    rdfs:label "Laterano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q472> a schema:Place ;
+    rdfs:label "Sofia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q47251> a schema:Place ;
+    rdfs:label "Valdagno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q47578> a schema:Place ;
+    rdfs:label "Vittorio Veneto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q478258> a schema:Place ;
+    rdfs:label "Caltagirone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q48> a schema:Place ;
+    rdfs:label "Asia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q48175> a schema:Place ;
+    rdfs:label "Luoghi Santi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q48214> a schema:Place ;
+    rdfs:label "Vicino Oriente"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q48278> a schema:Place ;
+    rdfs:label "Medellin"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q49> a schema:Place ;
+    rdfs:label "America del Nord"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q490> a schema:Place ;
+    rdfs:label "Milano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4918> a schema:Place ;
+    rdfs:label "Mar Mediterraneo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4948> a schema:Place ;
+    rdfs:label "Repubblica di Venezia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q495> a schema:Place ;
+    rdfs:label "Torino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q498934> a schema:Place ;
+    rdfs:label "Redipuglia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q50157> a schema:Place ;
+    rdfs:label "Sulmona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5092> a schema:Place ;
+    rdfs:label "Baltimora"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51288> a schema:Place ;
+    rdfs:label "San Salvo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51420> a schema:Place ;
+    rdfs:label "Atri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51810> a schema:Place ;
+    rdfs:label "Acquaviva delle Fonti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51811> a schema:Place ;
+    rdfs:label "Adelfia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51829> a schema:Place ;
+    rdfs:label "Gravina di Puglia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51842> a schema:Place ;
+    rdfs:label "Polignano a Mare"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51852> a schema:Place ;
+    rdfs:label "Terlizzi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51853> a schema:Place ;
+    rdfs:label "Toritto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q51875> a schema:Place ;
+    rdfs:label "San Pancrazio Salentino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q525358> a schema:Place ;
+    rdfs:label "Italia insulare"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q53133> a schema:Place ;
+    rdfs:label "Monfalcone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q53202> a schema:Place ;
+    rdfs:label "Vajont"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q537113> a schema:Place ;
+    rdfs:label "Modane"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q538> a schema:Place ;
+    rdfs:label "Oceania"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q53928> a schema:Place ;
+    rdfs:label "Paola"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q53969> a schema:Place ;
+    rdfs:label "San Giovanni in Fiore"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q541405> a schema:Place ;
+    rdfs:label "Mestre"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q545> a schema:Place ;
+    rdfs:label "Mar Baltico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q546> a schema:Place ;
+    rdfs:label "Trieste"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q54619> a schema:Place ;
+    rdfs:label "Locri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q54633> a schema:Place ;
+    rdfs:label "Palmi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q55> a schema:Place ;
+    rdfs:label "Paesi Bassi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q55934> a schema:Place ;
+    rdfs:label "Pastrengo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q56036> a schema:Place ;
+    rdfs:label "Berlino Ovest"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q56037> a schema:Place ;
+    rdfs:label "Berlino Est"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q569253> a schema:Place ;
+    rdfs:label "Basilica di Santa Maria degli Angeli e dei Martiri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5776> a schema:Place ;
+    rdfs:label "Betlemme"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q578170> a schema:Place ;
+    rdfs:label "Stati Uniti d'America"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q585> a schema:Place ;
+    rdfs:label "Oslo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q586> a schema:Place ;
+    rdfs:label "Bonn"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q58894> a schema:Place ;
+    rdfs:label "Santa Maria Capua Vetere"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5968> a schema:Place ;
+    rdfs:label "Cuneo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q597> a schema:Place ;
+    rdfs:label "Lisbona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q60> a schema:Place ;
+    rdfs:label "New York"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6008933> a schema:Place ;
+    rdfs:label "Mediterraneo Occidentale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q60140> a schema:Place ;
+    rdfs:label "Subcontinente indiano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6046> a schema:Place ;
+    rdfs:label "Novara"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q61> a schema:Place ;
+    rdfs:label "Washington"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q617> a schema:Place ;
+    rdfs:label "Padova"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q62> a schema:Place ;
+    rdfs:label "San Francisco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6221> a schema:Place ;
+    rdfs:label "Brescia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6231> a schema:Place ;
+    rdfs:label "Cremona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q623424> a schema:Place ;
+    rdfs:label "Gran San Bernardo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6237> a schema:Place ;
+    rdfs:label "Lecco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6247> a schema:Place ;
+    rdfs:label "Mantova"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6252> a schema:Place ;
+    rdfs:label "Monza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q626> a schema:Place ;
+    rdfs:label "Volga"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q628> a schema:Place ;
+    rdfs:label "Bergamo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6285> a schema:Place ;
+    rdfs:label "Varese"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q638761> a schema:Place ;
+    rdfs:label "Fosse Ardeatine"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q639912> a schema:Place ;
+    rdfs:label "Istria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q64> a schema:Place ;
+    rdfs:label "Berlino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q641> a schema:Place ;
+    rdfs:label "Venezia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6414> a schema:Place ;
+    rdfs:label "Lago di Garda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q649> a schema:Place ;
+    rdfs:label "Mosca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6500954> a schema:Place ;
+    rdfs:label "Zaire"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6526> a schema:Place ;
+    rdfs:label "Bolzano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6537> a schema:Place ;
+    rdfs:label "Vicenza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6558> a schema:Place ;
+    rdfs:label "Belluno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q656> a schema:Place ;
+    rdfs:label "Leningrado"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6572> a schema:Place ;
+    rdfs:label "Rovigo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6596> a schema:Place ;
+    rdfs:label "Gorizia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6602> a schema:Place ;
+    rdfs:label "Strasburgo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6606> a schema:Place ;
+    rdfs:label "Pordenone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q664> a schema:Place ;
+    rdfs:label "Nuova Zelanda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6671> a schema:Place ;
+    rdfs:label "Cittadella"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q668> a schema:Place ;
+    rdfs:label "India"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6681> a schema:Place ;
+    rdfs:label "Crotone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6697> a schema:Place ;
+    rdfs:label "Empoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6716> a schema:Place ;
+    rdfs:label "Grosseto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6737> a schema:Place ;
+    rdfs:label "Castellamare di Stabia"^^xsd:string,
+        "Castellammare di Stabia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6761> a schema:Place ;
+    rdfs:label "Livorno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q68111> a schema:Place ;
+    rdfs:label "Chiasso"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q685105> a schema:Place ;
+    rdfs:label "Valtellina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q692719> a schema:Place ;
+    rdfs:label "Monte Mario"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q698451> a schema:Place ;
+    rdfs:label "Val Pusteria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q70> a schema:Place ;
+    rdfs:label "Berna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q71> a schema:Place ;
+    rdfs:label "Ginevra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q711> a schema:Place ;
+    rdfs:label "Mongolia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q713750> a schema:Place ;
+    rdfs:label "Germania Federale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q717> a schema:Place ;
+    rdfs:label "Venezuela"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q71832> a schema:Place ;
+    rdfs:label "Bacoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q72> a schema:Place ;
+    rdfs:label "Zurigo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q72425> a schema:Place ;
+    rdfs:label "Pozzuoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q726143> a schema:Place ;
+    rdfs:label "Tema"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q72672> a schema:Place ;
+    rdfs:label "Sorrento"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q739> a schema:Place ;
+    rdfs:label "Colombia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q77> a schema:Place ;
+    rdfs:label "Uruguay"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q771> a schema:Place ;
+    rdfs:label "Massachusets"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q771405> a schema:Place ;
+    rdfs:label "Asia del sud"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q781417> a schema:Place ;
+    rdfs:label "Montecitorio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7835> a schema:Place ;
+    rdfs:label "Crimea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q786> a schema:Place ;
+    rdfs:label "Repubblica Dominicana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q788> a schema:Place ;
+    rdfs:label "Mar Glaciale Artico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q79> a schema:Place ;
+    rdfs:label "Egitto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q794> a schema:Place ;
+    rdfs:label "Iran"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q796> a schema:Place ;
+    rdfs:label "Irak"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q801> a schema:Place ;
+    rdfs:label "Israele"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q805> a schema:Place ;
+    rdfs:label "Yemen"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q80652> a schema:Place ;
+    rdfs:label "Battipaglia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q808771> a schema:Place ;
+    rdfs:label "Barra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q810> a schema:Place ;
+    rdfs:label "Giordania"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q81474> a schema:Place ;
+    rdfs:label "Sala Consilina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q81483> a schema:Place ;
+    rdfs:label "Levante"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q815348> a schema:Place ;
+    rdfs:label "DC"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q817> a schema:Place ;
+    rdfs:label "Kuwait"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q819> a schema:Place ;
+    rdfs:label "Laos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q82112> a schema:Place ;
+    rdfs:label "Messico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q822> a schema:Place ;
+    rdfs:label "Libano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q83210> a schema:Place ;
+    rdfs:label "Golan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q83286> a schema:Place ;
+    rdfs:label "Jugoslavia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q83369> a schema:Place ;
+    rdfs:label "San Ginesio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q84> a schema:Place ;
+    rdfs:label "Londra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q842> a schema:Place ;
+    rdfs:label "Oman"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q843> a schema:Place ;
+    rdfs:label "Pakistan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q845540> a schema:Place ;
+    rdfs:label "San Salvador"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q846> a schema:Place ;
+    rdfs:label "Qatar"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8471> a schema:Place ;
+    rdfs:label "Reggio Calabria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q84771100> a schema:Place ;
+    rdfs:label "piazzale Clodio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q849846> a schema:Place ;
+    rdfs:label "Piazza della Signoria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q85> a schema:Place ;
+    rdfs:label "Cairo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q851> a schema:Place ;
+    rdfs:label "Arabia Saudita"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q858> a schema:Place ;
+    rdfs:label "Siria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q865> a schema:Place ;
+    rdfs:label "Taiwan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8673> a schema:Place ;
+    rdfs:label "Lagos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8686> a schema:Place ;
+    rdfs:label "Shanghai"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q869> a schema:Place ;
+    rdfs:label "Thailandia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87> a schema:Place ;
+    rdfs:label "Alessandria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q878> a schema:Place ;
+    rdfs:label "Emirati Arabi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q881> a schema:Place ;
+    rdfs:label "Viet Nam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q899> a schema:Place ;
+    rdfs:label "Canale di Suez"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q90> a schema:Place ;
+    rdfs:label "Parigi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q902> a schema:Place ;
+    rdfs:label "Bangladesh"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q9039> a schema:Place ;
+    rdfs:label "Bardonecchia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q916> a schema:Place ;
+    rdfs:label "Angola"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q917> a schema:Place ;
+    rdfs:label "Bhutan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q924> a schema:Place ;
+    rdfs:label "Tanzania"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q929> a schema:Place ;
+    rdfs:label "Repubblica Centrafricana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q9326> a schema:Place ;
+    rdfs:label "Vientiane"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q948> a schema:Place ;
+    rdfs:label "Tunisia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q94936> a schema:Place ;
+    rdfs:label "Marzabotto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q953> a schema:Place ;
+    rdfs:label "Zambia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q954> a schema:Place ;
+    rdfs:label "Rhodesia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q956> a schema:Place ;
+    rdfs:label "Pechino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q97> a schema:Place ;
+    rdfs:label "Atlantico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q974> a schema:Place ;
+    rdfs:label "Congo"^^xsd:string,
+        "République Démocratique du Congo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q979837> a schema:Place ;
+    rdfs:label "Oslavia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q98> a schema:Place ;
+    rdfs:label "Oceano Pacifico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q986> a schema:Place ;
+    rdfs:label "Eritrea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q988> a schema:Place ;
+    rdfs:label "Almelo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q988673> a schema:Place ;
+    rdfs:label "Premuda"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q99> a schema:Place ;
+    rdfs:label "California"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q995695> a schema:Place ;
+    rdfs:label "Puerto Cabello"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q99950> a schema:Place ;
+    rdfs:label "Predappio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729190822-8668764/extraction-1755592940896-1/> prov:generatedAtTime "2025-10-07T12:11:48.968005"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1729190822-8668764/extraction-1755592940896-1> .
+
+<https://w3id.org/dh-atlas/1759839108-9690847> a schema:Place ;
+    rdfs:label "Malaku"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9702587> a schema:Place ;
+    rdfs:label "Togliattigrad"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9717202> a schema:Place ;
+    rdfs:label "Africa Centro Orientale"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-972599> a schema:Place ;
+    rdfs:label "Piazza San Ferdinando"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9739087> a schema:Place ;
+    rdfs:label "Tripolitania"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9747837> a schema:Place ;
+    rdfs:label "Paesi Arabi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-976528> a schema:Place ;
+    rdfs:label "Repubblica Araba Egiziana"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9820929> a schema:Place ;
+    rdfs:label "Europa Sud-Orientale"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-982537> a schema:Place ;
+    rdfs:label "Italia centrosettentrionale"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9838305> a schema:Place ;
+    rdfs:label "Mediterraneo Orientale"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9855478> a schema:Place ;
+    rdfs:label "Mai Mefales"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-986228> a schema:Place ;
+    rdfs:label "Inga"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-988973> a schema:Place ;
+    rdfs:label "Repubblica Italiana"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9893696> a schema:Place ;
+    rdfs:label "Matanzas"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9897723> a schema:Place ;
+    rdfs:label "Saadun Ela"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-991225> a schema:Place ;
+    rdfs:label "Fiera dell'agricoltura di Foggia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-991823> a schema:Place ;
+    rdfs:label "Mar Mediterraneo Centrale"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9922378> a schema:Place ;
+    rdfs:label "Oriente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-994287> a schema:Place ;
+    rdfs:label "Mar Mediterraneo Orientale"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-9944937> a schema:Place ;
+    rdfs:label "Barce"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759839108-995178> a schema:Place ;
+    rdfs:label "Paesi del terzo mondo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729190822-8668764/extraction-1755592940896-1> rdfs:comment "{'uri': 'AUTHORITY', 'label': 'LABEL'}" ;
+    prov:used <https://aldomorodigitale.unibo.it/api/indices/places?date%5B%5D=1930&date%5B%5D=1978&selAllDate=true> .
+

@@ -1,0 +1,674 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://viaf.org/viaf/100187638> a schema:Person ;
+    rdfs:label " Aegidius Columna Romanus"^^xsd:string .
+
+<http://viaf.org/viaf/100198644> a schema:Person ;
+    rdfs:label " Iacobus de Varagine"^^xsd:string .
+
+<http://viaf.org/viaf/13102089> a schema:Person ;
+    rdfs:label " Hadrianus I papa"^^xsd:string .
+
+<http://viaf.org/viaf/17217928> a schema:Person ;
+    rdfs:label " Antonius Beccadellus"^^xsd:string .
+
+<http://viaf.org/viaf/1996852> a schema:Person ;
+    rdfs:label " Gregorius II papa"^^xsd:string .
+
+<http://viaf.org/viaf/2035171191163058030000> a schema:Person ;
+    rdfs:label " Bonfilius de Aretio"^^xsd:string .
+
+<http://viaf.org/viaf/205167803105517771080> a schema:Person ;
+    rdfs:label " Girolamo da Viterbo"^^xsd:string .
+
+<http://viaf.org/viaf/227434221> a schema:Person ;
+    rdfs:label " Clemens IV papa"^^xsd:string .
+
+<http://viaf.org/viaf/259955440> a schema:Person ;
+    rdfs:label " Stephanus magister"^^xsd:string .
+
+<http://viaf.org/viaf/27319301> a schema:Person ;
+    rdfs:label " Hermolaus Barbarus Senior"^^xsd:string .
+
+<http://viaf.org/viaf/316427601> a schema:Person ;
+    rdfs:label " Brandolinus Aurelius Lippus"^^xsd:string .
+
+<http://viaf.org/viaf/32352380> a schema:Person ;
+    rdfs:label " Caffarus"^^xsd:string .
+
+<http://viaf.org/viaf/39733388> a schema:Person ;
+    rdfs:label " Hugo Venusinus abate"^^xsd:string .
+
+<http://viaf.org/viaf/41992761> a schema:Person ;
+    rdfs:label " Gregorius X papa"^^xsd:string .
+
+<http://viaf.org/viaf/42197297> a schema:Person ;
+    rdfs:label " Guillelmus Lucensis"^^xsd:string .
+
+<http://viaf.org/viaf/429159474306727662208> a schema:Person ;
+    rdfs:label " Ursus Beneventanus"^^xsd:string .
+
+<http://viaf.org/viaf/53090931> a schema:Person ;
+    rdfs:label " Gothofredus de Bussero"^^xsd:string .
+
+<http://viaf.org/viaf/5339147270469635700007> a schema:Person ;
+    rdfs:label " Gregorius III papa"^^xsd:string .
+
+<http://viaf.org/viaf/54539354> a schema:Person ;
+    rdfs:label " Hugo Bononiensis"^^xsd:string .
+
+<http://viaf.org/viaf/57348019> a schema:Person ;
+    rdfs:label " Thomasinus Armannini"^^xsd:string .
+
+<http://viaf.org/viaf/680145857099622922249> a schema:Person ;
+    rdfs:label " Petrus Cantinelli"^^xsd:string .
+
+<http://viaf.org/viaf/75148120850094791735> a schema:Person ;
+    rdfs:label " Andreas Bergomatis"^^xsd:string .
+
+<http://viaf.org/viaf/9037167867569923060002> a schema:Person ;
+    rdfs:label " Gregorius VII papa"^^xsd:string .
+
+<http://viaf.org/viaf/9919481> a schema:Person ;
+    rdfs:label " Iohannes Iovianus Pontanus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q101437> a schema:Person ;
+    rdfs:label " Aeneas Silvius Piccolomini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q101543680> a schema:Person ;
+    rdfs:label " Gerardus Falconarius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q101880291> a schema:Person ;
+    rdfs:label " Pax de Ferraria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102045662> a schema:Person ;
+    rdfs:label " Hugo Atratus de Evesham"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102298604> a schema:Person ;
+    rdfs:label " Iacobus Veronensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102440251> a schema:Person ;
+    rdfs:label " Paulus Camaldulensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102440975> a schema:Person ;
+    rdfs:label " Rufinus Sorrentinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102855745> a schema:Person ;
+    rdfs:label " Ventura Pergamensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102878151> a schema:Person ;
+    rdfs:label " Dancus rex"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102884191> a schema:Person ;
+    rdfs:label " Richardus de Montenigro"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q103819100> a schema:Person ;
+    rdfs:label " Gorus Aretinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q103839046> a schema:Person ;
+    rdfs:label " Petrus Grassus de Neapoli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104010447> a schema:Person ;
+    rdfs:label " Nicolaus de Rocca clericus"^^xsd:string,
+        " Nicolaus de Rocca senior"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104113301> a schema:Person ;
+    rdfs:label " Manfredus de Astino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104527655> a schema:Person ;
+    rdfs:label " Astensis Poeta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104529570> a schema:Person ;
+    rdfs:label " Bernardus Magister"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104536499> a schema:Person ;
+    rdfs:label " Nicolaus Marsilii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104537623> a schema:Person ;
+    rdfs:label " Bonus Lucensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104543264> a schema:Person ;
+    rdfs:label " Guillelmus falconarius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104551101> a schema:Person ;
+    rdfs:label " Dominicus Tinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104552295> a schema:Person ;
+    rdfs:label " Leonardus de Benevento"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104553232> a schema:Person ;
+    rdfs:label " Bartholomaeus Caputus de Benevento"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q104553352> a schema:Person ;
+    rdfs:label " Dominicus de Rocca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105069182> a schema:Person ;
+    rdfs:label " Iohannes Monachus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105450702> a schema:Person ;
+    rdfs:label " Hubertus abbas"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105757452> a schema:Person ;
+    rdfs:label " Rainaldus Capuanus cancellarius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q108764841> a schema:Person ;
+    rdfs:label " Petrus Pisanus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1095179> a schema:Person ;
+    rdfs:label " Romualdus Salernitanus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q116161022> a schema:Person ;
+    rdfs:label " Gaufridus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12270006> a schema:Person ;
+    rdfs:label " Porcellius Pandonius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1236187> a schema:Person ;
+    rdfs:label " Gasparinus Barzizza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124382955> a schema:Person ;
+    rdfs:label " Paulus I papa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1248641> a schema:Person ;
+    rdfs:label " Bonvesinus de Ripa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1248842> a schema:Person ;
+    rdfs:label " Guido de Columnis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1362183> a schema:Person ;
+    rdfs:label " Iohannes de Marignollis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1385832> a schema:Person ;
+    rdfs:label " Alexander Telesinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1394860> a schema:Person ;
+    rdfs:label " Petrus de Vinea"^^xsd:string,
+        " Pier della Vigna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1401> a schema:Person ;
+    rdfs:label " Franciscus Petrarca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q160424> a schema:Person ;
+    rdfs:label " Paulus Diaconus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16268126> a schema:Person ;
+    rdfs:label " Andreas Strumensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16268412> a schema:Person ;
+    rdfs:label " Iohannes Bonandree"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q168443> a schema:Person ;
+    rdfs:label " Guillelmus Apuliensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q17388475> a schema:Person ;
+    rdfs:label " Iacobus de Dinanto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1772060> a schema:Person ;
+    rdfs:label " Iohannes de Castrocoeli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1818805> a schema:Person ;
+    rdfs:label " Leo Archipresbiter Neapolitanus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q182128> a schema:Person ;
+    rdfs:label " Giovanni Pico della Mirandola"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q191107> a schema:Person ;
+    rdfs:label " Clara Assisiensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q192238> a schema:Person ;
+    rdfs:label " Guido Aretinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q193660> a schema:Person ;
+    rdfs:label " Raimundus Lullus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q199991> a schema:Person ;
+    rdfs:label " Ioachim de Flore"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2080968> a schema:Person ;
+    rdfs:label " Petrus Diaconus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21208646> a schema:Person ;
+    rdfs:label " Matthaeus de libris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q214115> a schema:Person ;
+    rdfs:label " Laurentius Valla"^^xsd:string,
+        " Laurentius Vallensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q21545524> a schema:Person ;
+    rdfs:label " Rinucius Aretinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q227724> a schema:Person ;
+    rdfs:label " Desiderius abbas Casinensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2280386> a schema:Person ;
+    rdfs:label " Sicardus Cremonensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q239820> a schema:Person ;
+    rdfs:label " Ricoldus de Monte Crucis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2428445> a schema:Person ;
+    rdfs:label " Thomas Capuanus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q24994679> a schema:Person ;
+    rdfs:label " Stephanus de Sancto Georgio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q250414> a schema:Person ;
+    rdfs:label " Angelus Politianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q258369> a schema:Person ;
+    rdfs:label " Petrus Damiani"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q26260569> a schema:Person ;
+    rdfs:label " Dominicus Bandinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2784023> a schema:Person ;
+    rdfs:label " Henricus Abrincensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2815269> a schema:Person ;
+    rdfs:label " Rolandus Cremonensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2831705> a schema:Person ;
+    rdfs:label " Albertanus Brixiensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q28375136> a schema:Person ;
+    rdfs:label " Bernardus Marango"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3081034> a schema:Person ;
+    rdfs:label " Franciscus Nelli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3106871> a schema:Person ;
+    rdfs:label " Iordanus cardinalis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3107533> a schema:Person ;
+    rdfs:label " Iohannes de Virgilio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q314488> a schema:Person ;
+    rdfs:label " Leonardus Bruni"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q317098> a schema:Person ;
+    rdfs:label " Lanfrancus Ticinensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q318254> a schema:Person ;
+    rdfs:label " Poggio Bracciolini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q329232> a schema:Person ;
+    rdfs:label " Iulianus de Spira"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3388210> a schema:Person ;
+    rdfs:label " Petrus de Mulio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q348087> a schema:Person ;
+    rdfs:label " Adalbertus Samaritanus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q349351> a schema:Person ;
+    rdfs:label " Ryccardus de Sancto Germano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q354523> a schema:Person ;
+    rdfs:label " Thomas de Celano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3616135> a schema:Person ;
+    rdfs:label " Andreas de Perusio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3623639> a schema:Person ;
+    rdfs:label " Arnulfus Mediolanensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3629754> a schema:Person ;
+    rdfs:label " Aulus Ianus Parrhasius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3635444> a schema:Person ;
+    rdfs:label " Bartholomaeus de Sancto Concordio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3637998> a schema:Person ;
+    rdfs:label " Bene Florentinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3639723> a schema:Person ;
+    rdfs:label " Bichilinus de Spelo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q373309> a schema:Person ;
+    rdfs:label " Hugo Falcandus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q37470272> a schema:Person ;
+    rdfs:label " Cofone"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3766806> a schema:Person ;
+    rdfs:label " Iohannes Berardi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3768443> a schema:Person ;
+    rdfs:label " Iohannes Diaconus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3769468> a schema:Person ;
+    rdfs:label " Iulius episcopus Florentinorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q377613> a schema:Person ;
+    rdfs:label " Adelaide of Burgundy"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3776547> a schema:Person ;
+    rdfs:label " Gregorius de Catino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3791439> a schema:Person ;
+    rdfs:label " Iacobus Beneventanus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q379733> a schema:Person ;
+    rdfs:label " Odoricus de Porto Naonis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3826790> a schema:Person ;
+    rdfs:label " Landulphus Senior"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3898931> a schema:Person ;
+    rdfs:label " Peregrinus de Castello"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3927850> a schema:Person ;
+    rdfs:label " Quilichinus De Spoleto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3934658> a schema:Person ;
+    rdfs:label " Richardus Venusinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3944190> a schema:Person ;
+    rdfs:label " Saba Malaspina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3984768> a schema:Person ;
+    rdfs:label " Terrisius de Atina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4002974> a schema:Person ;
+    rdfs:label " Hugutio Pisanus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q41577920> a schema:Person ;
+    rdfs:label " Iohannes de Appia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q41616229> a schema:Person ;
+    rdfs:label " Guizzardus Bononiensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q41618330> a schema:Person ;
+    rdfs:label " Stephanardus de Vicomercato"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q43939> a schema:Person ;
+    rdfs:label " Anselmus Cantuariensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q47088195> a schema:Person ;
+    rdfs:label " Nicolaus de Jamsilla"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q535494> a schema:Person ;
+    rdfs:label " Henricus Septimellensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q542434> a schema:Person ;
+    rdfs:label " Boncompagnus de Signa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q55713307> a schema:Person ;
+    rdfs:label " Gentilis de Cingulo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q614256> a schema:Person ;
+    rdfs:label " Gotifredus Viterbiensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q61483749> a schema:Person ;
+    rdfs:label " Iohannes Bononiensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q618986> a schema:Person ;
+    rdfs:label " Gaufredus Malaterra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q62549378> a schema:Person ;
+    rdfs:label " Rangerius Lucensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q662424> a schema:Person ;
+    rdfs:label " Agnellus Ravennas"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q707723> a schema:Person ;
+    rdfs:label " Petrus de Ebulo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q708493> a schema:Person ;
+    rdfs:label " Marcus Antonius Sabellicus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7132819> a schema:Person ;
+    rdfs:label " Papias"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7179201> a schema:Person ;
+    rdfs:label " Petrus Crassus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q738554> a schema:Person ;
+    rdfs:label " Paulinus Aquileiensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q769129> a schema:Person ;
+    rdfs:label " Ratherius Veronensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q773623> a schema:Person ;
+    rdfs:label " Benevenutus de Imola"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q79789> a schema:Person ;
+    rdfs:label " Fredericus I imperator"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q799960> a schema:Person ;
+    rdfs:label " Salimbene de Adam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8063919> a schema:Person ;
+    rdfs:label " Zacharias papa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q809500> a schema:Person ;
+    rdfs:label " Bartholomaeus Facius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q810966> a schema:Person ;
+    rdfs:label " Battista Guarino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q85512284> a schema:Person ;
+    rdfs:label " Guaiferius Casinensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87181552> a schema:Person ;
+    rdfs:label " Bonifacius Veronensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87182605> a schema:Person ;
+    rdfs:label " Bardo presbyter"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87182612> a schema:Person ;
+    rdfs:label " Wido episcopus Ferrariensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87204826> a schema:Person ;
+    rdfs:label " Benzo Albensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87645703> a schema:Person ;
+    rdfs:label " Bartholomaeus de Regno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q88486342> a schema:Person ;
+    rdfs:label " Albericus Casinensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q9438> a schema:Person ;
+    rdfs:label " Thomas Aquinas"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q97992833> a schema:Person ;
+    rdfs:label " Minus de Colle Vallis Elsae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q983064> a schema:Person ;
+    rdfs:label " Guido Faba"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q98518110> a schema:Person ;
+    rdfs:label " Albertus Miliolus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729030147-4807222/extraction-1755592940896-1/> prov:generatedAtTime "2025-10-02T21:24:02.378756"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1729030147-4807222/extraction-1755592940896-1> .
+
+<https://w3id.org/dh-atlas/1759435104-297428> a schema:Person ;
+    rdfs:label " A. episcopus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435109-6951756> a schema:Person ;
+    rdfs:label " Anonimo (pseudo Hugonis Falcandi)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435119-4614851> a schema:Person ;
+    rdfs:label " Benedictus saec. XIII post med."^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435136-4148984> a schema:Person ;
+    rdfs:label " Constantinus antipapa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435140-9267035> a schema:Person ;
+    rdfs:label " Dantes Alagherii (et Iohannes de Virgilio)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435148-0706637> a schema:Person ;
+    rdfs:label " G. clericus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435149-323837> a schema:Person ;
+    rdfs:label " G. rector Bononiensium"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435167-5380187> a schema:Person ;
+    rdfs:label " Guido magister (opera dubbia)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435168-7193415> a schema:Person ;
+    rdfs:label " Guido magister (scuola) metà XII secolo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435181-955706> a schema:Person ;
+    rdfs:label " I. iudex"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435185-8878381> a schema:Person ;
+    rdfs:label " Iacoponus Tudertinus (attr.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435187-6577892> a schema:Person ;
+    rdfs:label " Iohannes (attr.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435191-8775823> a schema:Person ;
+    rdfs:label " Iohannes Capuanus (de Capua) e Iordanus Terracinensis (de Terracina)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435194-856245> a schema:Person ;
+    rdfs:label " Iohannes Laudensis (attr.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435197-0255954> a schema:Person ;
+    rdfs:label " Iohannes de Capua notarius fl. 130-160"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435198-257205> a schema:Person ;
+    rdfs:label " Iohannes de Capua notarius m. 292"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435202-919184> a schema:Person ;
+    rdfs:label " Iohannes de Procida (attr.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435206-149626> a schema:Person ;
+    rdfs:label " Jhoannes medicus Gregorii medici filius"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435213-3468182> a schema:Person ;
+    rdfs:label " Lupatus de Lupatis pseudo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435214-59818> a schema:Person ;
+    rdfs:label " Magistri Bononienses"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435218-1988719> a schema:Person ;
+    rdfs:label " Martinus de Fano (attr.)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435220-7207963> a schema:Person ;
+    rdfs:label " Matheus Rubeus Ursinus cardinalis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435222-473077> a schema:Person ;
+    rdfs:label " Mattheus de Archiepiscopo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435225-3887231> a schema:Person ;
+    rdfs:label " Moyses Pergamensis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435229-1318607> a schema:Person ;
+    rdfs:label " Otto Morena et continuatores"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435237-0604658> a schema:Person ;
+    rdfs:label " Petrus Mallii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435239-280954> a schema:Person ;
+    rdfs:label " Petrus de Loro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435240-4998388> a schema:Person ;
+    rdfs:label " Petrus de Loro et alii"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435258-7318528> a schema:Person ;
+    rdfs:label " [Alexander IV]"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435263-6238325> a schema:Person ;
+    rdfs:label " Walterius Anglicus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759435269-020047> a schema:Person ;
+    rdfs:label " Thomas Aquinas (pseudo)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q102361202> a schema:Person ;
+    rdfs:label " Rivanellus Julianus"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q104552196> a schema:Person ;
+    rdfs:label " A. Teramensis archipresbyter"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q104600749> a schema:Person ;
+    rdfs:label " Henricus rex n. 235 ca., m. 253/254 ca."^^xsd:string .
+
+<https://www.wikidata.org/entity/Q1067> a schema:Person ;
+    rdfs:label " Dantes Alagherii"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q128076> a schema:Person ;
+    rdfs:label " Lotharius cardinalis (Innocentius III)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q130221> a schema:Person ;
+    rdfs:label " Fridericus II imperator"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q134666> a schema:Person ;
+    rdfs:label " Stephanus III papa"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q1402> a schema:Person ;
+    rdfs:label " Iohannes Boccaccius"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q157179> a schema:Person ;
+    rdfs:label " Conradus IV imperator"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q1636083> a schema:Person ;
+    rdfs:label " Remigius Florentinus (Remigius Girolami)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q164889> a schema:Person ;
+    rdfs:label " Manfredus Siciliae rex"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q1909428> a schema:Person ;
+    rdfs:label " Matheus Bononinesis"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q211789> a schema:Person ;
+    rdfs:label " Stephanus II papa"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q275998> a schema:Person ;
+    rdfs:label " Adelaide of Turin and Susa"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q283387> a schema:Person ;
+    rdfs:label " Alphanus Archiep. Salernitanus"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q314488> a schema:Person ;
+    rdfs:label " Brunus Leonardus Aretinus"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q315149> a schema:Person ;
+    rdfs:label " Iohannes de Plano Carpini (ca. 90-252)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q372219> a schema:Person ;
+    rdfs:label " Iohannes de Montecorvino"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q3760962> a schema:Person ;
+    rdfs:label " Gerardus episcopus Bononiensis"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q3761042> a schema:Person ;
+    rdfs:label " Gerius Aretinus (170 c.a - ante 1339)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q3852753> a schema:Person ;
+    rdfs:label " Mauritius Ep. Catanensis"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q3934689> a schema:Person ;
+    rdfs:label " Ricobaldus de Ferraria"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q4018216> a schema:Person ;
+    rdfs:label " Warmundus Eporediensis episcopus"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q434834> a schema:Person ;
+    rdfs:label " Blondus Flavius Foroliviensis"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q4942096> a schema:Person ;
+    rdfs:label " Bonizo episcopus Sutriensis"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q57798> a schema:Person ;
+    rdfs:label " Eduardus I Anglorum rex"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q81833> a schema:Person ;
+    rdfs:label " Alphonsus I rex Aragoniae"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q87344606> a schema:Person ;
+    rdfs:label " Crassullus Angelus (Philippus)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q99673029> a schema:Person ;
+    rdfs:label " Zuppardus Matthaeus"^^xsd:string .
+
+<https://www.wikidata.org/wiki/Q775879> a schema:Person ;
+    rdfs:label " Landulphus Junior sive de Sancto Paulo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729030147-4807222/extraction-1755592940896-1> prov:used <file:/app/records/?query=PREFIX%20xyz%3A%20%3Chttp%3A//sparql.xyz/facade-x/data/%3E%0APREFIX%20ns%3A%20%3Chttp%3A//sparql.xyz/facade-x/ns/%3E%0APREFIX%20rdf%3A%20%3Chttp%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%3E%0APREFIX%20fx%3A%20%3Chttp%3A//sparql.xyz/facade-x/ns/%3E%0APREFIX%20skos%3A%20%3Chttp%3A//www.w3.org/2004/02/skos/core%23%3E%0APREFIX%20what%3A%20%3Chttps%3A//html.spec.whatwg.org/%23%3E%0APREFIX%20xhtml%3A%20%3Chttp%3A//www.w3.org/1999/xhtml%23%3E%0APREFIX%20ex%3A%20%3Chttp%3A//www.example.com/%3E%0APREFIX%20xsd%3A%20%3Chttp%3A//www.w3.org/2001/XMLSchema%23%3E%20SELECT%20DISTINCT%20%3Flabel%20WHERE%20%7B%0A%20SERVICE%20%3Cx-sparql-anything%3A%3E%20%7B%0A%20fx%3Aproperties%20fx%3Alocation%20%22https%3A//alim.unisi.it/dl/%22%20.%0A%20fx%3Aproperties%20fx%3Ablank-nodes%20%22false%22%20.%0A%20fx%3Aproperties%20fx%3Amedia-type%20%22text/html%22%20.%0A%20fx%3Aproperties%20fx%3Ahtml.browser%20%22firefox%22%20.%0A%20fx%3Aproperties%20fx%3Ahtml.browser.wait%20%225%22%20.%20%0A%20fx%3Aproperties%20fx%3Ahtml.selector%20%22%23author_s%20%3E%20li%20%3E%20a%22%20.%0A%20fx%3Aproperties%20fx%3Ahttp.header.User-Agent%20%22Mozilla/5.0%20%28X11%3B%20Ubuntu%3B%20Linux%20x86_64%3B%20rv%3A78.0%29%20Gecko/20100101%20Firefox/78.0%22%20.%0A%20%3Froot%20a%20fx%3Aroot%20.%0A%20%3Froot%20%3Fp%20%3Fs%20.%0A%20%3Fs%20what%3AinnerText%20%3FfullText%20.%20OPTIONAL%20%7B%0A%20%3Fs%20%3FhasChild%20%3Fchild%20.%0A%20%3Fchild%20what%3AinnerText%20%3FchildText%20.%0A%20%7D%0A%20BIND%28%0A%20IF%28BOUND%28%3FchildText%29%2C%0A%20REPLACE%28%3FfullText%2C%20%3FchildText%2C%20%22%22%29%2C%0A%20%3FfullText%0A%20%29%20AS%20%3Flabel%0A%20%29%0A%20%7D%0A%7D> .
+

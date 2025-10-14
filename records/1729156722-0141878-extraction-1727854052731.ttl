@@ -1,0 +1,17 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q216665> a schema:Thing ;
+    rdfs:label "incunable"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3639591> a schema:Thing ;
+    rdfs:label "Biblioteca Italiana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q38> a schema:Place ;
+    rdfs:label "Italy"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729156722-0141878/extraction-1727854052731/> prov:generatedAtTime "2025-10-03T15:14:06.077436"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+

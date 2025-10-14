@@ -1,7 +1,7 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://dbpedia.org/ontology/> .
-@prefix default2: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -9,23 +9,23 @@
 <https://w3id.org/dh-atlas/1743001909-74> a foaf:Agent,
         schema:Organization ;
     rdfs:label "Fondazione Ezio Franceschini"@en ;
-    :location <https://sws.geonames.org/3176959> ;
-    :name "Fondazione Ezio Franceschini"@en ;
-    :sameAs <http://www.wikidata.org/entity/Q81170606> ;
-    :url <https://fefonlus.it> .
+    ns1:location <https://sws.geonames.org/3176959> ;
+    ns1:name "Fondazione Ezio Franceschini"@en ;
+    ns1:sameAs <http://www.wikidata.org/entity/Q81170606> ;
+    ns1:url <https://fefonlus.it> .
 
 <https://w3id.org/dh-atlas/1743001909-74/> rdfs:label "Fondazione Ezio Franceschini"@en ;
-    default1:currentStatus "modified"^^xsd:string ;
-    :name "Fondazione Ezio Franceschini"@en ;
-    default2:generatedAtTime "2025-04-01T15:42:22.566000+00:00"^^xsd:dateTime ;
-    default2:wasAttributedTo <https://w3id.org/dh-atlas/elena-dot-spadini-at-unibas-dot-ch> ;
-    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Fondazione Ezio Franceschini"@en ;
+    prov:generatedAtTime "2025-04-01T15:42:22.566843"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
 
 <http://www.wikidata.org/entity/Q81170606> rdfs:label "Fondazione Ezio Franceschini onlus, Firenze (FI)"^^xsd:string .
 
 <https://sws.geonames.org/3176959> rdfs:label "Florence"^^xsd:string .
 
-<https://w3id.org/dh-atlas/elena-dot-spadini-at-unibas-dot-ch> rdfs:label "elena.spadini@unibas.ch" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 
 <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
 

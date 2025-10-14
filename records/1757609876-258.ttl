@@ -1,0 +1,21 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757609876-258> a schema:Person ;
+    rdfs:label "Canetto, Andrea"@en ;
+    schema:identifier <https://orcid.org/0009-0003-1699-2884> ;
+    schema:name "Canetto, Andrea"@en .
+
+<https://w3id.org/dh-atlas/1757609876-258/> rdfs:label "Canetto, Andrea"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T17:19:40.504634"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Canetto, Andrea"@en .
+
+<https://orcid.org/0009-0003-1699-2884> rdfs:label "0009-0003-1699-2884"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

@@ -1,0 +1,58 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757610686-600931> a schema:Dataset,
+        <https://w3id.org/dh-atlas/Software> ;
+    rdfs:label "GattoWeb"@en ;
+    schema:additionalType <https://w3id.org/dh-atlas/Software> ;
+    schema:contributor <https://w3id.org/dh-atlas/1757776693-148>,
+        <https://w3id.org/dh-atlas/1757777329-531>,
+        <https://w3id.org/dh-atlas/1757777398-878> ;
+    schema:creator <https://w3id.org/dh-atlas/1757776638-229> ;
+    schema:datePublished "2025-10-01"^^xsd:date ;
+    schema:description "GattoWeb is an online lexicographic tool enabling advanced searches in textual corpora. It supports relational database queries, lemma-based navigation, and linguistic analysis, aiding research on historical Italian language resources. It is the Web version of GATTO  (Gestione degli Archivi Testuali del Tesoro delle Origini)"@en ;
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/FRA>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    schema:name "GattoWeb"@en ;
+    schema:publisher <https://w3id.org/dh-atlas/1728999602-7282345>,
+        <https://w3id.org/dh-atlas/1757610059-356> .
+
+<https://w3id.org/dh-atlas/1757610686-600931/> rdfs:label "GattoWeb"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-13T15:30:53.383929"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "GattoWeb"@en .
+
+<http://publications.europa.eu/resource/authority/file-type/HTML> skos:prefLabel "HTML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/FRA> skos:prefLabel "French - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728999602-7282345> rdfs:label "National Research Council"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757610059-356> rdfs:label " Opera del Vocabolario Italiano (OVI)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757776638-229> rdfs:label "Iorio-Fili, Domenico"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757776693-148> rdfs:label "Boccellari, Andrea"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757777329-531> rdfs:label "Guadagnini, Elisa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757777398-878> rdfs:label "Simpson, Kate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/dh-atlas/Software> rdfs:label "Software"^^xsd:string .
+

@@ -1,38 +1,37 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://dbpedia.org/ontology/> .
-@prefix default2: <http://www.w3.org/ns/prov#> .
-@prefix default3: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/dh-atlas/1743001828-7172835> a schema:Dataset,
         <https://w3id.org/dh-atlas/LinkedOpenData> ;
     rdfs:label "ARIADNE Plus Linked Open Data "@en ;
-    :about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-A>,
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-A>,
         <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-10-A1> ;
-    :additionalType <https://w3id.org/dh-atlas/LinkedOpenData> ;
-    :creator <https://w3id.org/dh-atlas/1743001949-42> ;
-    :datePublished "2022-11-28"^^xsd:date ;
-    :description "The data infrastructure serving the archaeological community worldwide"@en ;
-    :inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
-    :license <http://publications.europa.eu/resource/authority/licence/CC_BYNC> ;
-    :name "ARIADNE Plus Linked Open Data "@en ;
-    :producer <https://w3id.org/dh-atlas/1743001384-2700465> ;
-    :url <https://ariadne.d4science.org/web/ariadneplus_lab/> .
+    schema:additionalType <https://w3id.org/dh-atlas/LinkedOpenData> ;
+    schema:creator <https://w3id.org/dh-atlas/1743001949-42> ;
+    schema:datePublished "2022-11-28"^^xsd:date ;
+    schema:description "The data infrastructure serving the archaeological community worldwide"@en ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/CC_BYNC> ;
+    schema:name "ARIADNE Plus Linked Open Data "@en ;
+    schema:producer <https://w3id.org/dh-atlas/1743001384-2700465> ;
+    schema:url <https://ariadne.d4science.org/web/ariadneplus_lab/> .
 
 <https://w3id.org/dh-atlas/1743001828-7172835/> rdfs:label "ARIADNE Plus Linked Open Data "@en ;
-    default1:currentStatus "modified"^^xsd:string ;
-    :name "ARIADNE Plus Linked Open Data "@en ;
-    default2:generatedAtTime "2025-04-01T16:23:52.267000+00:00"^^xsd:dateTime ;
-    default2:wasAttributedTo <https://w3id.org/dh-atlas/bianca-dot-gualandi4-at-unibo-dot-it> ;
-    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-13T13:59:17.189602"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/bianca-dot-gualandi4-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "ARIADNE Plus Linked Open Data "@en .
 
-<http://publications.europa.eu/resource/authority/language/ENG> default3:prefLabel "English - LANGUAGE"^^xsd:string .
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
 
-<http://publications.europa.eu/resource/authority/licence/CC_BYNC> default3:prefLabel "Creative Commons Attribution–NonCommercial 4.0 International - LICENCE"^^xsd:string .
+<http://publications.europa.eu/resource/authority/licence/CC_BYNC> skos:prefLabel "Creative Commons Attribution–NonCommercial 4.0 International - LICENCE"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1743001384-2700465> rdfs:label " ARIADNE Rerearch Infrastructure"^^xsd:string .
+<https://w3id.org/dh-atlas/1743001384-2700465> rdfs:label "ARIADNE Rerearch Infrastructure"^^xsd:string .
 
 <https://w3id.org/dh-atlas/1743001949-42> rdfs:label "ARIADNE Research Infrastructure AISBL"^^xsd:string .
 
@@ -40,9 +39,9 @@
 
 <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
 
-<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-A> default3:prefLabel "Archaeological sciences - ACADEMIC FIELD"^^xsd:string .
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-A> skos:prefLabel "Archaeological sciences - ACADEMIC FIELD"^^xsd:string .
 
-<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-10-A1> default3:prefLabel "Archaeology - ACADEMIC FIELD"^^xsd:string .
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-10-A1> skos:prefLabel "Archaeology - ACADEMIC FIELD"^^xsd:string .
 
 <https://w3id.org/dh-atlas/LinkedOpenData> rdfs:label "Linked Open Data"^^xsd:string .
 

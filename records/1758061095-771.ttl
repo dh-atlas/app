@@ -1,0 +1,31 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758061095-771> a schema:Person ;
+    rdfs:label "Cerato, Ivana"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728999602-7282345>,
+        <https://w3id.org/dh-atlas/1758061014-965> ;
+    schema:identifier <https://orcid.org/0000-0002-4490-5827> ;
+    schema:name "Cerato, Ivana"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q68463100> .
+
+<https://w3id.org/dh-atlas/1758061095-771/> rdfs:label "Cerato, Ivana"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-16T22:19:40.949806"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Cerato, Ivana"@en .
+
+<http://www.wikidata.org/entity/Q68463100> rdfs:label "Ivana Cerato"^^xsd:string .
+
+<https://orcid.org/0000-0002-4490-5827> rdfs:label "0000-0002-4490-5827"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728999602-7282345> rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1758061014-965> rdfs:label "Istituto di Scienze del Patrimonio Culturale (CNR)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

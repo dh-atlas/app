@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757776693-148> a schema:Person ;
+    rdfs:label "Boccellari, Andrea"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728999602-7282345>,
+        <https://w3id.org/dh-atlas/1757610059-356> ;
+    schema:identifier <https://orcid.org/0000-0002-6499-1566> ;
+    schema:name "Boccellari, Andrea"@en .
+
+<https://w3id.org/dh-atlas/1757776693-148/> rdfs:label "Boccellari, Andrea"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-13T15:30:53.770034"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Boccellari, Andrea"@en .
+
+<https://orcid.org/0000-0002-6499-1566> rdfs:label "0000-0002-6499-1566"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728999602-7282345> rdfs:label "National Research Council"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757610059-356> rdfs:label " Opera del Vocabolario Italiano (OVI)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

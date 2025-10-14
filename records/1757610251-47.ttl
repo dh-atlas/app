@@ -1,0 +1,19 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757610251-47> a schema:ResearchProject ;
+    rdfs:label "ItalArt Research Project"@en ;
+    schema:name "ItalArt Research Project"@en ;
+    schema:url <http://italart.ovi.cnr.it/> .
+
+<https://w3id.org/dh-atlas/1757610251-47/> rdfs:label "ItalArt Research Project"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T17:27:58.092179"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "ItalArt Research Project"@en .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

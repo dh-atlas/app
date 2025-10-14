@@ -1,63 +1,65 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <http://schema.org/> .
-@prefix ns2: <http://www.w3.org/dh-atlas/> .
-@prefix ns3: <http://purl.org/atlas/> .
-@prefix ns4: <http://dbpedia.org/ontology/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns3: <http://dbpedia.org/ontology/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/dh-atlas/1729019160-8370216> a schema:Dataset ;
+ns1:1729019160-8370216 a schema:Dataset,
+        ns1:DigitalScholarlyEdition ;
     rdfs:label "Codice Pelavicino Digital Edition"@en ;
-    ns3:editionType ns2:DocumentaryEdition ;
-    ns3:notesOnSource "Original manuscript"@en ;
+    ns2:accompaniedBy <https://pelavicino.labcd.unipi.it/evt> ;
+    ns2:expressionOf <http://www.wikidata.org/entity/Q16542764> ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
     dcterms:conformsTo <http://www.tei-c.org/> ;
-    dcterms:type <http://purl.org/spar/fabio/MetadataDocument> ;
-    dcterms:references <https://www.mirabileweb.it/manuscript/sarzana-(la-spezia)-archivio-capitolare-lunense-sa-manuscript/245466> ;
-    ns1:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-01> ;
-    ns1:additionalType <http://purl.org/spar/fabio/MetadataDocument> ;
-    ns1:citation <https://doi.org/10.6092/issn.2532-8816/7232> ;
-    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    ns1:contributor <https://w3id.org/dh-atlas/1729012720-1356587>,
-        <https://w3id.org/dh-atlas/1729013826-8967187>,
-        <https://w3id.org/dh-atlas/1729025064-083151>,
-        <https://w3id.org/dh-atlas/1729025155-4855695>,
-        <https://w3id.org/dh-atlas/1729025360-3497832>,
-        <https://w3id.org/dh-atlas/1729025500-0782747> ;
-    ns1:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
-    ns1:creator <https://w3id.org/dh-atlas/1729022344-7692862> ;
-    ns1:datePublished "2020-12-01"^^xsd:date ;
-    ns1:description "The Codice Pelavicino Edizione Digitale project created a digital edition of the manuscript using the open-source EVT software, enabling in-depth study without physical consultation."@en ;
-    ns1:distribution <https://dspace-clarin-it.ilc.cnr.it/repository/xmlui/handle/20.500.11752/OPEN-1012/allzip> ;
-    ns1:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-01> ;
+    schema:additionalType ns1:DigitalScholarlyEdition ;
+    schema:citation <https://doi.org/10.6092/issn.2532-8816/7232> ;
+    schema:contributor ns1:1729012720-1356587,
+        ns1:1729013826-8967187,
+        ns1:1729025064-083151,
+        ns1:1729025155-4855695,
+        ns1:1729025360-3497832,
+        ns1:1729025500-0782747 ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns1:1729022344-7692862 ;
+    schema:datePublished "2020-12-01"^^xsd:date ;
+    schema:description "The Codice Pelavicino Edizione Digitale project created a digital edition of the manuscript using the open-source EVT software, enabling in-depth study without physical consultation."@en ;
+    schema:distribution <https://dspace-clarin-it.ilc.cnr.it/repository/xmlui/handle/20.500.11752/OPEN-1012/allzip> ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
         <https://vocabs.dariah.eu/tadirah/disseminating>,
         <https://vocabs.dariah.eu/tadirah/interpreting> ;
-    ns1:encodingFormat <https://www.iana.org/assignments/media-types/application/tei+xml> ;
-    ns1:identifier "https://doi.org/10.13131/978-88-944430-2-8"@en ;
-    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ITA>,
+    schema:identifier "https://doi.org/10.13131/978-88-944430-2-8"@en ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ITA>,
         <http://publications.europa.eu/resource/authority/language/LAT> ;
-    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> ;
-    ns1:name "Codice Pelavicino Digital Edition"@en ;
-    ns1:producer <https://w3id.org/dh-atlas/1729022061-9765942> ;
-    ns1:publisher <https://w3id.org/dh-atlas/1728999885-461319>,
-        <https://w3id.org/dh-atlas/1729012150-9691675> ;
-    ns1:url <https://pelavicino.labcd.unipi.it/evt/> ;
-    ns1:usageInfo <https://pelavicino.labcd.unipi.it/il-progetto/> ;
-    ns1:version "2"@en ;
-    ns2:methodology <https://vocabs.dariah.eu/tadirah/annotating>,
+    schema:license <https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> ;
+    schema:name "Codice Pelavicino Digital Edition"@en ;
+    schema:producer ns1:1729022061-9765942 ;
+    schema:publisher ns1:1728999885-461319,
+        ns1:1729012150-9691675 ;
+    schema:url <https://pelavicino.labcd.unipi.it/evt/> ;
+    schema:usageInfo <https://pelavicino.labcd.unipi.it/il-progetto/> ;
+    schema:version "2"@en ;
+    ns1:editionType <https://www.w3id.org/dh-atlas-vocabularies/etv/DocumentaryEdition> ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/annotating>,
         <https://vocabs.dariah.eu/tadirah/capturing>,
         <https://vocabs.dariah.eu/tadirah/transcribing> ;
-    ns2:servedBy <https://w3id.org/dh-atlas/1729025808-504942> ;
-    ns2:used <https://w3id.org/dh-atlas/1729010538-925614> .
+    ns1:noteOnResearchProduct "Original manuscript"@en ;
+    ns1:referencedAuthor <http://www.wikidata.org/entity/Q108482794>,
+        <http://www.wikidata.org/entity/Q713321> ;
+    ns1:servedBy ns1:1729025808-504942 ;
+    ns1:used ns1:1729010538-925614 .
 
 <https://w3id.org/dh-atlas/1729019160-8370216/> rdfs:label "Codice Pelavicino Digital Edition"@en ;
-    ns4:currentStatus "published"^^xsd:string ;
-    ns1:name "Codice Pelavicino Digital Edition"@en ;
-    prov:generatedAtTime "2024-10-18T00:28:32.421238"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
-    prov:wasInfluencedBy <https://w3id.org/dh-atlas/anonymous> .
+    ns3:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-17T22:55:14.585288"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:anonymous ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:mentions <https://w3id.org/dh-atlas/1729019160-8370216/extraction-1755592940896-1/> ;
+    schema:name "Codice Pelavicino Digital Edition"@en .
 
 <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
 
@@ -69,7 +71,11 @@
 
 <http://www.tei-c.org/> rdfs:label "TEI"^^xsd:string .
 
-ns2:DocumentaryEdition rdfs:label "Documentary edition"^^xsd:string .
+<http://www.wikidata.org/entity/Q108482794> rdfs:label "Enrico da Fucecchio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16542764> rdfs:label "Codice Pelavicino"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q713321> rdfs:label "Oberto Pallavicino"^^xsd:string .
 
 <https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
 
@@ -83,39 +89,39 @@ ns2:DocumentaryEdition rdfs:label "Documentary edition"^^xsd:string .
 
 <https://vocabs.dariah.eu/tadirah/transcribing> skos:prefLabel "Transcribing - TADIRAH"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1728999885-461319> rdfs:label "University of Pisa"^^xsd:string .
+ns1:1728999885-461319 rdfs:label "University of Pisa"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729010538-925614> rdfs:label "Edition Visualization Technology (EVT)"^^xsd:string .
+ns1:1729010538-925614 rdfs:label "Edition Visualization Technology (EVT)"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729012150-9691675> rdfs:label "Laboratorio di Cultura Digitale (Università di Pisa)"^^xsd:string .
+ns1:1729012150-9691675 rdfs:label "Laboratorio di Cultura Digitale (Università di Pisa)"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729012720-1356587> rdfs:label "Roberto Rosselli Del Turco"^^xsd:string .
+ns1:1729012720-1356587 rdfs:label "Rosselli Del Turco, Roberto"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729013826-8967187> rdfs:label "Angelo Mario Del Grosso"^^xsd:string .
+ns1:1729013826-8967187 rdfs:label "Del Grosso, Angelo Mario"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729022061-9765942> rdfs:label "Codice Pelavicino Digitale Project"^^xsd:string .
+ns1:1729022061-9765942 rdfs:label "Codice Pelavicino Digitale Project"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729022344-7692862> rdfs:label "Enrica Salvatori"^^xsd:string .
+ns1:1729022344-7692862 rdfs:label "Salvatori, Enrica"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729025064-083151> rdfs:label "Edilio Riccardini"^^xsd:string .
+ns1:1729025064-083151 rdfs:label "Riccardini, Edilio"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729025155-4855695> rdfs:label "Laura Balletto"^^xsd:string .
+ns1:1729025155-4855695 rdfs:label "Balletto, Laura"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729025360-3497832> rdfs:label "Chiara Alzetta"^^xsd:string .
+ns1:1729025360-3497832 rdfs:label "Alzetta, Chiara"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729025500-0782747> rdfs:label "Alessio Miaschi"^^xsd:string .
+ns1:1729025500-0782747 rdfs:label "Miaschi, Alessio"^^xsd:string .
 
-<https://w3id.org/dh-atlas/1729025808-504942> rdfs:label "Codice Pelavicino Digital Edition - EVT viewer (Website)"^^xsd:string .
+ns1:1729025808-504942 rdfs:label "Codice Pelavicino Digital Edition - EVT viewer (Website)"^^xsd:string .
+
+ns1:anonymous rdfs:label "anonymous" .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
 
 <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-01> skos:prefLabel "Medieval history - ACADEMIC FIELD"^^xsd:string .
 
-<https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> rdfs:label "Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0)"^^xsd:string .
+<https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> skos:prefLabel "Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0)"^^xsd:string .
 
-<https://www.iana.org/assignments/media-types/application/tei+xml> rdfs:label "TEI XML"^^xsd:string .
+<https://www.w3id.org/dh-atlas-vocabularies/etv/DocumentaryEdition> rdfs:label "Documentary Edition"^^xsd:string .
 
-<http://purl.org/spar/fabio/MetadataDocument> rdfs:label "Digital Scholarly Edition"^^xsd:string .
-
-<https://www.mirabileweb.it/manuscript/sarzana-(la-spezia)-archivio-capitolare-lunense-sa-manuscript/245466> rdfs:label "Sarzana (La Spezia), Archivio Capitolare Lunense-Sarzanense «Codice Pelavicino»"^^xsd:string .
-
-<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+ns1:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
 

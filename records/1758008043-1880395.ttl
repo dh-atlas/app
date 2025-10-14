@@ -1,0 +1,133 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ns3: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1758008043-1880395 a schema:Dataset,
+        ns1:DigitalScholarlyEdition ;
+    rdfs:label "De rebus Siculis Carmen"@en ;
+    ns2:accompaniedBy <http://web.unibas.it/bup/evt2/pde/index.html> ;
+    ns2:associatedResource <https://iiif.biblissima.fr/collections/manifest/d92b29eb083557bd6df3993adc4a15a95cb614fb> ;
+    ns2:expressionOf <http://www.wikidata.org/entity/Q677630> ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    dcterms:conformsTo <http://www.wikidata.org/entity/Q95728930> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-E>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-01> ;
+    schema:additionalType ns1:DigitalScholarlyEdition ;
+    schema:contributor ns1:1758008164-688,
+        ns1:1758012105-424 ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns1:1729031012-1601634 ;
+    schema:datePublished "2024-01-01"^^xsd:date ;
+    schema:description "TEI-XML edition of Il De rebus Siculis carmen (also known as Carmen de motibus Siculis or Liber ad honorem Augusti) by Petrus de Ebulo; utilizing EVT - Edition Visualization Technology."@en ;
+    schema:distribution <https://web.unibas.it/bup/Libri/Petrus%20de%20Ebulo.pdf>,
+        <https://web.unibas.it/bup/evt2/pde/data/text/petrusdeebulo.xml> ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+        <https://vocabs.dariah.eu/tadirah/disseminating>,
+        <https://vocabs.dariah.eu/tadirah/interpreting> ;
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/PDF>,
+        <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    schema:genre <http://sparql.cwrc.ca/ontologies/genre#epic>,
+        <http://sparql.cwrc.ca/ontologies/genre#longPoem>,
+        <http://sparql.cwrc.ca/ontologies/genre#poetry> ;
+    schema:identifier "ISBN: 978-88-31309-02-8"@en ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ITA>,
+        <http://publications.europa.eu/resource/authority/language/LAT> ;
+    schema:isPartOf ns1:1729175944-0618887 ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/CC_BYNCND_4_0> ;
+    schema:name "De rebus Siculis Carmen"@en ;
+    schema:publisher ns1:1729175638-1024349 ;
+    schema:size "224 pages"@en ;
+    schema:url <http://web.unibas.it/bup/evt2/pde/index.html> ;
+    schema:version "2"@en ;
+    ns1:editionType <https://www.w3id.org/dh-atlas-vocabularies/etv/CriticalEdition>,
+        <https://www.w3id.org/dh-atlas-vocabularies/etv/InterpretativeEdition> ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/annotating>,
+        <https://vocabs.dariah.eu/tadirah/capturing>,
+        <https://vocabs.dariah.eu/tadirah/editing>,
+        <https://vocabs.dariah.eu/tadirah/linkedOpenData> ;
+    ns1:referencedAuthor <http://www.wikidata.org/entity/Q707723> ;
+    ns1:servedBy ns1:1758016255-289 ;
+    ns1:used ns1:1729010538-925614 .
+
+<https://w3id.org/dh-atlas/1758008043-1880395/> rdfs:label "De rebus Siculis Carmen"@en ;
+    ns3:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-16T09:54:43.153466"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:anonymous ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:keywords <https://w3id.org/dh-atlas/1758008043-1880395/extraction-1727854052731/> ;
+    schema:name "De rebus Siculis Carmen"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/PDF> skos:prefLabel "PDF - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/XML> skos:prefLabel "XML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/LAT> skos:prefLabel "Latin - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/CC_BYNCND_4_0> skos:prefLabel "Creative Commons Attribution–NonCommercial–NoDerivs 4.0 International - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#epic> rdfs:label "Epic"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#longPoem> rdfs:label "Long Poem"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#poetry> rdfs:label "Poetry"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q677630> rdfs:label "Liber ad honorem Augusti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q707723> rdfs:label "Peter of Eboli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q95728930> rdfs:label "TEI P5"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/annotating> skos:prefLabel "Annotating - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/capturing> skos:prefLabel "Capturing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/disseminating> skos:prefLabel "Disseminating - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/editing> skos:prefLabel "Editing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/interpreting> skos:prefLabel "Interpreting - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/linkedOpenData> skos:prefLabel "Linked Open Data - TADIRAH"^^xsd:string .
+
+ns1:1729010538-925614 rdfs:label "Edition Visualization Technology (EVT)"^^xsd:string .
+
+ns1:1729031012-1601634 rdfs:label "Delle Donne, Fulvio"^^xsd:string .
+
+ns1:1729175638-1024349 rdfs:label "Basilicata University Press"^^xsd:string .
+
+ns1:1729175944-0618887 rdfs:label "BUP Basilicata University Press - Digital Humanities"^^xsd:string .
+
+ns1:1758008164-688 rdfs:label "Brescia, Angela"^^xsd:string .
+
+ns1:1758012105-424 rdfs:label "Pavoni, Martina"^^xsd:string .
+
+ns1:1758016255-289 rdfs:label "De rebus Siculis Carmen - EVT viewer (Website) "^^xsd:string .
+
+ns1:anonymous rdfs:label "anonymous" .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-E> skos:prefLabel "Medieval latin and romance philologies and literatures - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-01> skos:prefLabel "Medieval history - ACADEMIC FIELD"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/CriticalEdition> rdfs:label "Critical Edition"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/InterpretativeEdition> rdfs:label "Interpretative Edition"^^xsd:string .
+
+ns1:DigitalScholarlyEdition rdfs:label "Digital Scholarly Edition"^^xsd:string .
+

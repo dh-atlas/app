@@ -1,0 +1,428 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q1001949> a schema:Person ;
+    rdfs:label "Charisius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102851> a schema:Person ;
+    rdfs:label "Boethius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1048> a schema:Person ;
+    rdfs:label "Julius Caesar"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1056198> a schema:Person ;
+    rdfs:label "Aquila Romanus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1067> a schema:Person ;
+    rdfs:label " Dante Alighieri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q108915320> a schema:Person ;
+    rdfs:label "Clodianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q109598> a schema:Person ;
+    rdfs:label "Tibullus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q110323052> a schema:Person ;
+    rdfs:label "Hippocrates Latinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1133857> a schema:Person ;
+    rdfs:label "Cornelius Labeo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1164905> a schema:Person ;
+    rdfs:label "Marius Plotius Sacerdos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q11921316> a schema:Person ;
+    rdfs:label "Eutyches"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q11923645> a schema:Person ;
+    rdfs:label "Plinius junior"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q11944269> a schema:Person ;
+    rdfs:label "Quintus Julius Hilarianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q11954435> a schema:Person ;
+    rdfs:label "Velius Longus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q120727392> a schema:Person ;
+    rdfs:label "Sergius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1226908> a schema:Person ;
+    rdfs:label "Diomedes Grammaticus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1228531> a schema:Person ;
+    rdfs:label "Publilius Optatianus Porfyrius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1287418> a schema:Person ;
+    rdfs:label "Sextus Placitus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12875839> a schema:Person ;
+    rdfs:label "Damigeron"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131548> a schema:Person ;
+    rdfs:label "Jordanes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1320120> a schema:Person ;
+    rdfs:label "Theodorus Priscianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1373405> a schema:Person ;
+    rdfs:label "Eugraphius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1373954> a schema:Person ;
+    rdfs:label "Eumenius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1398> a schema:Person ;
+    rdfs:label "Virgil"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1398914> a schema:Person ;
+    rdfs:label "Favonius Eulogius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1427> a schema:Person ;
+    rdfs:label "Hadrian"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1454878> a schema:Person ;
+    rdfs:label "Aggenus Urbicus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1460007> a schema:Person ;
+    rdfs:label "Vindicianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1474972> a schema:Person ;
+    rdfs:label "Furius Dionysius Filocalus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1541> a schema:Person ;
+    rdfs:label "Cicero"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q154526> a schema:Person ;
+    rdfs:label "Einhard"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q155669> a schema:Person ;
+    rdfs:label "Charles IV"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15634893> a schema:Person ;
+    rdfs:label "Grillius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q159798> a schema:Person ;
+    rdfs:label "Honorius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q160935> a schema:Person ;
+    rdfs:label "Symmachus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q163079> a schema:Person ;
+    rdfs:label "Catullus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q166876> a schema:Person ;
+    rdfs:label "Isidore of Seville"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q172198> a schema:Person ;
+    rdfs:label "Ammianus Marcellinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1799823> a schema:Person ;
+    rdfs:label "Lactantius Placidus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q180081> a schema:Person ;
+    rdfs:label "Cato the Elder"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q181983> a schema:Person ;
+    rdfs:label "Polemius Silvius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q183420> a schema:Person ;
+    rdfs:label "Nonius Marcellus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q185206> a schema:Person ;
+    rdfs:label "Priscian of Lydia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q188646> a schema:Person ;
+    rdfs:label "Lucan"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q192365> a schema:Person ;
+    rdfs:label "Cassiodorus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q193800> a schema:Person ;
+    rdfs:label "Juvenal"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19717378> a schema:Person ;
+    rdfs:label "Maximus Victorinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q20004918> a schema:Person ;
+    rdfs:label "Julius Rufinianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2054> a schema:Person ;
+    rdfs:label "Seneca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q210853> a schema:Person ;
+    rdfs:label "Justin"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2161> a schema:Person ;
+    rdfs:label "Tacitus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q221223> a schema:Person ;
+    rdfs:label "Hyginus Gromaticus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q234593> a schema:Person ;
+    rdfs:label "Ausonius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q24409516> a schema:Person ;
+    rdfs:label "Donatus, Aelius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q247137> a schema:Person ;
+    rdfs:label "Aelius Donatus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q248628> a schema:Person ;
+    rdfs:label "Julius Paulus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2514828> a schema:Person ;
+    rdfs:label "Caelius Aurelianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25510573> a schema:Person ;
+    rdfs:label "Dioscorides Latinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q275606> a schema:Person ;
+    rdfs:label "Aurelius Victor"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q28229532> a schema:Person ;
+    rdfs:label "Sulpicius Victor"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q28229535> a schema:Person ;
+    rdfs:label "Iulius Severianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q28441319> a schema:Person ;
+    rdfs:label "Audax"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2994436> a schema:Person ;
+    rdfs:label "Publius Consentius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q30939794> a schema:Person ;
+    rdfs:label "Fortunatianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q313934> a schema:Person ;
+    rdfs:label "Macrobius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q314694> a schema:Person ;
+    rdfs:label "Eutropius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q316483> a schema:Person ;
+    rdfs:label "Lucius Annaeus Florus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3189849> a schema:Person ;
+    rdfs:label "Julius Exsuperantius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3207287> a schema:Person ;
+    rdfs:label "Gaius Julius Victor"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3290266> a schema:Person ;
+    rdfs:label "Marcus Junius Nypsus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q332785> a schema:Person ;
+    rdfs:label "Persius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3381349> a schema:Person ;
+    rdfs:label "Phocas Grammaticus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3396074> a schema:Person ;
+    rdfs:label "Pompeius Grammaticus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q343875> a schema:Person ;
+    rdfs:label "Anthimus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q348408> a schema:Person ;
+    rdfs:label "Martianus Capella"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3502629> a schema:Person ;
+    rdfs:label "Muscio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q354990> a schema:Person ;
+    rdfs:label "Aulus Hirtius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q355350> a schema:Person ;
+    rdfs:label "Servius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q355720> a schema:Person ;
+    rdfs:label "Quintus Aurelius Symmachus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3624745> a schema:Person ;
+    rdfs:label "Siculus Flaccus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q366793> a schema:Person ;
+    rdfs:label "Avienus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q367422> a schema:Person ;
+    rdfs:label "Julius Firmicus Maternus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3769739> a schema:Person ;
+    rdfs:label "Julius Paris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4282541> a schema:Person ;
+    rdfs:label "Martinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4298> a schema:Person ;
+    rdfs:label "Vegetius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q431367> a schema:Person ;
+    rdfs:label "Vibius Sequester"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q444285> a schema:Person ;
+    rdfs:label "Asconius Pedianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q450675> a schema:Person ;
+    rdfs:label "Pope Francis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q452681> a schema:Person ;
+    rdfs:label "Amalarius of Metz"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4687746> a schema:Person ;
+    rdfs:label "Aemilius Asper"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q47154> a schema:Person ;
+    rdfs:label "Lucretius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q47160> a schema:Person ;
+    rdfs:label "Plautus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q47180> a schema:Person ;
+    rdfs:label "Petronius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q475001> a schema:Person ;
+    rdfs:label "Dictys Cretensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5023939> a schema:Person ;
+    rdfs:label "Calpurnius Flaccus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q503230> a schema:Person ;
+    rdfs:label "Hegesippus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q518973> a schema:Person ;
+    rdfs:label "Agroecius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q531952> a schema:Person ;
+    rdfs:label "Quintus Gargilius Martialis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q535060> a schema:Person ;
+    rdfs:label "Terentianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5374414> a schema:Person ;
+    rdfs:label "Emporius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q544378> a schema:Person ;
+    rdfs:label "Dares Phrygius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q549041> a schema:Person ;
+    rdfs:label "Gratian"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q561353> a schema:Person ;
+    rdfs:label "Rutilius Taurus Aemilianus Palladius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5655743> a schema:Person ;
+    rdfs:label "Marcus Cetius Faventinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5959> a schema:Person ;
+    rdfs:label "Quintus Curtius Rufus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q618599> a schema:Person ;
+    rdfs:label "Apicius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6197> a schema:Person ;
+    rdfs:label "Horace"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q644086> a schema:Person ;
+    rdfs:label "Cassius Felix"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q647013> a schema:Person ;
+    rdfs:label "Thegan of Trier"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q653919> a schema:Person ;
+    rdfs:label "Marcellinus Comes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q666127> a schema:Person ;
+    rdfs:label "Festus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q670338> a schema:Person ;
+    rdfs:label "Nazarius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q682860> a schema:Person ;
+    rdfs:label "Julius Obsequens"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q707449> a schema:Person ;
+    rdfs:label "Censorinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q708247> a schema:Person ;
+    rdfs:label "Gaius Marius Victorinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q716824> a schema:Person ;
+    rdfs:label "Arusianus Messius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7198> a schema:Person ;
+    rdfs:label "Ovid"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q722683> a schema:Person ;
+    rdfs:label "Marcus Valerius Probus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q729244> a schema:Person ;
+    rdfs:label "Calcidius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q747578> a schema:Person ;
+    rdfs:label "Cledonius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q765147> a schema:Person ;
+    rdfs:label "Ianuarius Nepotianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q772773> a schema:Person ;
+    rdfs:label "Antonius Musa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q782401> a schema:Person ;
+    rdfs:label "Sallustius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q788340> a schema:Person ;
+    rdfs:label "Pelagonius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q7907918> a schema:Person ;
+    rdfs:label "Vacca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8018> a schema:Person ;
+    rdfs:label "Augustine of Hippo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8208327> a schema:Person ;
+    rdfs:label "Atilius Fortunatianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q82778> a schema:Person ;
+    rdfs:label "Pliny the Elder"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8413> a schema:Person ;
+    rdfs:label "Constantine the Great"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q868078> a schema:Person ;
+    rdfs:label "Marcellus Empiricus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8763> a schema:Person ;
+    rdfs:label "Fibonacci"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q8827> a schema:Person ;
+    rdfs:label "Propertius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q911087> a schema:Person ;
+    rdfs:label "Vinidarius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q92158257> a schema:Person ;
+    rdfs:label "Julius Romanus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q930459> a schema:Person ;
+    rdfs:label "Merobaudes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q932714> a schema:Person ;
+    rdfs:label "Fabius Planciades Fulgentius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q9334638> a schema:Person ;
+    rdfs:label "Scriptores Historiae Augustae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q9438> a schema:Person ;
+    rdfs:label "Thomas Aquinas"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q975318> a schema:Person ;
+    rdfs:label "Granius Licinianus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729034329-548886/extraction-1755592940896-2/> prov:generatedAtTime "2025-10-09T09:37:57.271889"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1729034329-548886/extraction-1755592940896-2> .
+
+<https://w3id.org/dh-atlas/1729034329-548886/extraction-1755592940896-2> prov:used <https://lila-erc.eu/sparql/lila_knowledge_base/sparql?query=PREFIX%20dc%3A%20%3Chttp%3A//purl.org/dc/elements/1.1/%3E%0APREFIX%20rdf%3A%20%3Chttp%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%3E%0APREFIX%20powla%3A%20%3Chttp%3A//purl.org/powla/powla.owl%23%3E%0ASELECT%20DISTINCT%20%3Furi%0AWHERE%20%7B%20%3Fwork%20%3Fpred%20powla%3ADocument%20%3B%20%3Chttp%3A//purl.org/dc/terms/creator%3E%20%3Furi%20%0A%20FILTER%28CONTAINS%28STR%28%3Furi%29%2C%20%22wikidata.org%22%29%29%0A%7D> .
+

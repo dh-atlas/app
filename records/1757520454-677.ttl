@@ -1,0 +1,22 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757520454-677> a schema:Organization ;
+    rdfs:label "Department of Humanities (Ca' Foscari University of Venice)"@en ;
+    schema:name "Department of Humanities (Ca' Foscari University of Venice)"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q641> ;
+    schema:url <https://www.unive.it/dep.humanities> .
+
+<https://w3id.org/dh-atlas/1757520454-677/> rdfs:label "Department of Humanities (Ca' Foscari University of Venice)"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-10T16:43:26.154278"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Department of Humanities (Ca' Foscari University of Venice)"@en .
+
+<http://www.wikidata.org/entity/Q641> rdfs:label "Venice"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

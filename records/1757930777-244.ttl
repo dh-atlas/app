@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757930777-244> a schema:Organization ;
+    rdfs:label "University of Geneva"@en ;
+    schema:identifier <https://ror.org/01swzsf04> ;
+    schema:location <https://sws.geonames.org/2660646> ;
+    schema:name "University of Geneva"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q503473> ;
+    schema:url <https://www.unige.ch/> .
+
+<https://w3id.org/dh-atlas/1757930777-244/> rdfs:label "University of Geneva"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T21:41:58.756421"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "University of Geneva"@en .
+
+<http://www.wikidata.org/entity/Q503473> rdfs:label "University of Geneva"^^xsd:string .
+
+<https://sws.geonames.org/2660646> rdfs:label "Geneva"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

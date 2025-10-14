@@ -1,0 +1,26 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757610364-987> a schema:SoftwareApplication ;
+    rdfs:label "GattoWeb (Corpus ItalArt)"@en ;
+    schema:applicationCategory <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> ;
+    schema:isBasedOn <https://w3id.org/dh-atlas/1757610686-600931> ;
+    schema:name "GattoWeb (Corpus ItalArt)"@en ;
+    schema:url <http://italartweb.ovi.cnr.it/CatForm01.aspx> ;
+    schema:usageInfo <http://italartweb.ovi.cnr.it/HelpPages/Help01.html> .
+
+<https://w3id.org/dh-atlas/1757610364-987/> rdfs:label "GattoWeb (Corpus ItalArt)"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T17:19:17.837427"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "GattoWeb (Corpus ItalArt)"@en .
+
+<http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757610686-600931> rdfs:label "GattoWeb"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

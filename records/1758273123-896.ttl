@@ -1,0 +1,30 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758273123-896> a schema:WebSite ;
+    rdfs:label "Brancacci App (Website)"@en ;
+    schema:description "Brancacci App is a prototype app that enhances the experience of visiting the Brancacci Chapel in Florence, allowing users to engage with guided narratives and immersive, interactive content that strengthens the perception of authenticity and care for cultural heritage."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/digitalPublishing> ;
+    schema:isBasedOn <https://w3id.org/dh-atlas/1758273081-7024553> ;
+    schema:name "Brancacci App (Website)"@en ;
+    schema:url <https://app.brancaccipov.cnr.it/a/brancapp/> .
+
+<https://w3id.org/dh-atlas/1758273123-896/> rdfs:label "Brancacci App (Website)"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-19T09:35:54.470558"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Brancacci App (Website)"@en .
+
+<https://vocabs.dariah.eu/tadirah/digitalPublishing> skos:prefLabel "Digital Publishing - TADIRAH"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1758273081-7024553> rdfs:label "ATON"^^xsd:string .
+
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

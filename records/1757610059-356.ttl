@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757610059-356> a schema:Organization ;
+    rdfs:label "Opera del Vocabolario Italiano (OVI)"@en ;
+    schema:identifier <https://ror.org/02rzxrg25> ;
+    schema:location <https://sws.geonames.org/3176959> ;
+    schema:name "Opera del Vocabolario Italiano (OVI)"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q111274167> ;
+    schema:url <http://www.ovi.cnr.it/index.php/en/> .
+
+<https://w3id.org/dh-atlas/1757610059-356/> rdfs:label "Opera del Vocabolario Italiano (OVI)"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T18:29:23.971157"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Opera del Vocabolario Italiano (OVI)"@en .
+
+<http://www.wikidata.org/entity/Q111274167> rdfs:label "Opera del Vocabolario Italiano"^^xsd:string .
+
+<https://sws.geonames.org/3176959> rdfs:label "Florence"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

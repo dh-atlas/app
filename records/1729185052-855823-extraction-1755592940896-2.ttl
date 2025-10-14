@@ -1,0 +1,32 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q13373> a schema:Place ;
+    rdfs:label "Lucca"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q142> a schema:Place ;
+    rdfs:label "Francia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2044> a schema:Place ;
+    rdfs:label "Firenze"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q220> a schema:Place ;
+    rdfs:label "Roma"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q52080> a schema:Place ;
+    rdfs:label "Cortona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q617> a schema:Place ;
+    rdfs:label "Padova"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6259> a schema:Place ;
+    rdfs:label "Pavia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729185052-855823/extraction-1755592940896-2/> prov:generatedAtTime "2025-10-07T15:05:32.258632"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1729185052-855823/extraction-1755592940896-2> .
+
+<https://w3id.org/dh-atlas/1729185052-855823/extraction-1755592940896-2> prov:used <http://sparqlanything:3000/sparql.anything?query=SELECT%20DISTINCT%20%3Flabel%20WHERE%20%7B%20%7BSELECT%20%28GROUP_CONCAT%28%3FnamePart%3B%20separator%3D%22%20%22%29%20AS%20%3Flabel%29%20WHERE%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20SERVICE%20%3Cx-sparql-anything%3Ahttps%3A//raw.githubusercontent.com/ValentinaPasqual/ProgettoVasto/refs/heads/master/evt2beta2/data/text/pilot_proemio.xml%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fname%20a%20%3FkeyClass%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20VALUES%20%3FkeyClass%20%7B%20%3Chttp%3A//www.tei-c.org/ns/1.0%23place%3E%20%7D%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fname%20%28rdf%3A_1%7Crdf%3A_2%7C%3Chttp%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23nodeID%3E%29%2A%20%3FdescendantNode%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3FdescendantNode%20rdf%3A_1%20%3FnamePart%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20FILTER%28isLiteral%28%3FnamePart%29%20%26%26%20datatype%28%3FnamePart%29%20%3D%20xsd%3Astring%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20GROUP%20BY%20%3Fname%20%7D%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%23regexFilter%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20GROUP%20BY%20%3Flabel%20HAVING%20%28COUNT%28%3Flabel%29%20%3E%3D%201%29%0A%20%20%20%20%20%20%20%20> .
+

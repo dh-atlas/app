@@ -1,0 +1,17 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q57656> a schema:Person ;
+    rdfs:label "Erwin Panofsky"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q624005> a schema:Thing ;
+    rdfs:label "CIDOC Conceptual Reference Model"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q9627017> a schema:Thing ;
+    rdfs:label "Ar.Co"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1742999374-4329665/extraction-1727854052731/> prov:generatedAtTime "2025-09-17T10:20:25.811056"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+

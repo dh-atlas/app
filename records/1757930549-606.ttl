@@ -1,0 +1,28 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757930549-606> a schema:Person ;
+    rdfs:label "Sivo, Francesca"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1757930584-686> ;
+    schema:identifier <https://orcid.org/0000-0003-0372-2490> ;
+    schema:name "Sivo, Francesca"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q112173874> .
+
+<https://w3id.org/dh-atlas/1757930549-606/> rdfs:label "Sivo, Francesca"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T10:20:42.690448"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Sivo, Francesca"@en .
+
+<http://www.wikidata.org/entity/Q112173874> rdfs:label "Francesca Sivo"^^xsd:string .
+
+<https://orcid.org/0000-0003-0372-2490> rdfs:label "0000-0003-0372-2490"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757930584-686> rdfs:label "University of Foggia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

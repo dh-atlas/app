@@ -1,0 +1,85 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/dh-atlas/> .
+@prefix ns2: <http://ontosoft.org/software#> .
+@prefix ns3: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:1757630912-9070814 a schema:Dataset,
+        ns1:Software ;
+    rdfs:label "LODE (Live OWL Documentation Environment)"@en ;
+    ns2:hasCodeLocation <https://github.com/essepuntato/LODE> ;
+    ns2:hasImplementationLanguage <http://www.wikidata.org/entity/Q251> ;
+    ns2:hasInput <http://publications.europa.eu/resource/authority/file-type/OWL> ;
+    ns2:hasOutput <http://publications.europa.eu/resource/authority/file-type/CSS>,
+        <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    schema:additionalType ns1:Software ;
+    schema:citation <http://dx.doi.org/10.4018/jswis.2013010102>,
+        <https://doi.org/10.1007/978-3-642-33876-2_35> ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns1:1728944010-053 ;
+    schema:datePublished "2012-01-01"^^xsd:date ;
+    schema:description "Live OWL Documentation Environment (LODE) is a service that automatically extracts classes, object properties, data properties, named individuals, annotation properties, general axioms and namespace declarations from an OWL (Web Ontology Language) and OWL2 ontology, and renders them as ordered lists, together with their textual definitions, in a human-readable HTML page designed for browsing and navigation by means of embedded links."@en ;
+    schema:distribution <https://github.com/essepuntato/LODE> ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/dataVisualization>,
+        <https://vocabs.dariah.eu/tadirah/digitalPublishing> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/ISC> ;
+    schema:name "LODE (Live OWL Documentation Environment)"@en ;
+    schema:publisher ns1:1728999602-7282345,
+        ns1:1743002657-995,
+        ns1:1757631074-011 ;
+    schema:url <https://essepuntato.it/lode/> ;
+    schema:usageInfo <https://essepuntato.it/lode/> ;
+    schema:version "Unspecified"@en ;
+    ns1:methodology <https://vocabs.dariah.eu/tadirah/programming> ;
+    ns1:used <https://www.w3.org/Style/CSS/Overview.en.html> .
+
+<https://w3id.org/dh-atlas/1757630912-9070814/> rdfs:label "LODE (Live OWL Documentation Environment)"@en ;
+    ns3:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-17T10:07:12.451258"^^xsd:dateTime ;
+    prov:wasAttributedTo ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    prov:wasInfluencedBy ns1:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:keywords <https://w3id.org/dh-atlas/1757630912-9070814/extraction-1727854052731/> ;
+    schema:name "LODE (Live OWL Documentation Environment)"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/CSS> skos:prefLabel "CSS - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/HTML> skos:prefLabel "HTML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/OWL> skos:prefLabel "OWL - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/ISC> skos:prefLabel "ISC License (ISC) - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q251> rdfs:label "Java"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/dataVisualization> skos:prefLabel "Data Visualization - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/digitalPublishing> skos:prefLabel "Digital Publishing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/programming> skos:prefLabel "Programming - TADIRAH"^^xsd:string .
+
+ns1:1728944010-053 rdfs:label "Peroni, Silvio"^^xsd:string .
+
+ns1:1728999602-7282345 rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+ns1:1743002657-995 rdfs:label "Istituto di Scienze e Tecnologie della Cognizione (CNR)"^^xsd:string .
+
+ns1:1757631074-011 rdfs:label "Semantic Technology Laboratory (STLab)"^^xsd:string .
+
+<https://www.w3.org/Style/CSS/Overview.en.html> rdfs:label "W3C CSSs for Recommendation documents"^^xsd:string .
+
+ns1:Software rdfs:label "Software"^^xsd:string .
+
+ns1:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+

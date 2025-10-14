@@ -1,6 +1,6 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <http://schema.org/> .
-@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
@@ -9,23 +9,25 @@
 <https://w3id.org/dh-atlas/1742292618-959493> a foaf:Agent,
         schema:Person ;
     rdfs:label "Giacomini, Sebastiano"@en ;
-    ns1:affiliation <https://w3id.org/dh-atlas/1728995806-349488> ;
-    ns1:identifier <https://orcid.org/0000-0002-2435-5987> ;
-    ns1:name "Giacomini, Sebastiano"@en ;
-    ns1:sameAs <http://www.wikidata.org/entity/Q132131532> .
+    ns2:affiliation <https://w3id.org/dh-atlas/1728995806-349488> ;
+    ns2:identifier <https://orcid.org/0009-0007-7813-0939> ;
+    ns2:name "Giacomini, Sebastiano"@en ;
+    ns2:sameAs <http://www.wikidata.org/entity/Q132131532> .
 
 <https://w3id.org/dh-atlas/1742292618-959493/> rdfs:label "Giacomini, Sebastiano"@en ;
-    ns2:currentStatus "published"^^xsd:string ;
-    ns1:name "Giacomini, Sebastiano"@en ;
-    prov:generatedAtTime "2025-03-18T10:48:16.052401"^^xsd:dateTime ;
-    prov:wasAttributedTo <https://w3id.org/dh-atlas/marilena-dot-daquino2-at-unibo-dot-it> ;
-    prov:wasInfluencedBy <https://w3id.org/dh-atlas/marilena-dot-daquino2-at-unibo-dot-it> .
+    ns1:currentStatus "published"^^xsd:string ;
+    ns2:name "Giacomini, Sebastiano"@en ;
+    prov:generatedAtTime "2025-03-23T11:06:18.348866"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
 
 <http://www.wikidata.org/entity/Q132131532> rdfs:label "Sebastiano Giacomini"^^xsd:string .
 
-<https://orcid.org/0000-0002-2435-5987> rdfs:label "0000-0002-2435-5987"^^xsd:string .
+<https://orcid.org/0009-0007-7813-0939> rdfs:label "0009-0007-7813-0939"^^xsd:string .
 
 <https://w3id.org/dh-atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
 
-<https://w3id.org/dh-atlas/marilena-dot-daquino2-at-unibo-dot-it> rdfs:label "marilena.daquino2@unibo.it" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
 

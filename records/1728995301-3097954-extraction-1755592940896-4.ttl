@@ -1,0 +1,1010 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://viaf.org/viaf/115159474314827662503> rdfs:label "Lamentatio beate Marie de Filio"^^xsd:string .
+
+<http://viaf.org/viaf/127159474331827662947> rdfs:label "Expositio Virgilianae continentiae"^^xsd:string .
+
+<http://viaf.org/viaf/13167803535517772211> rdfs:label "Libro de' vizi e delle virtudi"^^xsd:string .
+
+<http://viaf.org/viaf/14167802703817770360> rdfs:label "Liber quaestionum hebraicarum in Genesim"^^xsd:string .
+
+<http://viaf.org/viaf/14167802703917770181> rdfs:label "De retardatione accidentium senectutis"^^xsd:string .
+
+<http://viaf.org/viaf/14167802704017770356> rdfs:label "Liber interpretationis hebraicorum nominum"^^xsd:string .
+
+<http://viaf.org/viaf/1589160245383652640006> rdfs:label "De summo bono"^^xsd:string .
+
+<http://viaf.org/viaf/16159474326327662830> rdfs:label "Epistole (Paolino da Nola)"^^xsd:string .
+
+<http://viaf.org/viaf/175473949> rdfs:label "Lettere (Guittone d'Arezzo)"^^xsd:string .
+
+<http://viaf.org/viaf/176424655> rdfs:label "Metaphysica (Al-Ghazzali)"^^xsd:string .
+
+<http://viaf.org/viaf/177078660> rdfs:label "Epistolario (Gilberto di Gembloux)"^^xsd:string .
+
+<http://viaf.org/viaf/179920586> rdfs:label "Fatti dei Romani"^^xsd:string .
+
+<http://viaf.org/viaf/183477960> rdfs:label "La Mort le roi Arthur"^^xsd:string .
+
+<http://viaf.org/viaf/195878936> rdfs:label "Liber subtilitatum diversarum naturarum creaturarum"^^xsd:string .
+
+<http://viaf.org/viaf/213199983> rdfs:label "De natura et origine animae"^^xsd:string .
+
+<http://viaf.org/viaf/2173159820905914000008> rdfs:label "Explanatio psalmorum"^^xsd:string .
+
+<http://viaf.org/viaf/219993508> rdfs:label "Meteororum"^^xsd:string .
+
+<http://viaf.org/viaf/264257655> rdfs:label "Libro dei sogni"^^xsd:string .
+
+<http://viaf.org/viaf/28159474183427661636> rdfs:label "Epistolae (Albertino Mussato)"^^xsd:string .
+
+<http://viaf.org/viaf/294738220> rdfs:label "De substantiis separatis"^^xsd:string .
+
+<http://viaf.org/viaf/312385833> rdfs:label "De animalibus (Aristotele)"^^xsd:string .
+
+<http://viaf.org/viaf/3159474169327661089> rdfs:label "Epistole (Pier Damiani)"^^xsd:string .
+
+<http://viaf.org/viaf/4169156253569608110001> rdfs:label "Liber de spiritu et anima"^^xsd:string .
+
+<http://viaf.org/viaf/46159474324727662779> rdfs:label "Elementarium doctrinae rudimentum"^^xsd:string .
+
+<http://viaf.org/viaf/46167803572717772777> rdfs:label "De substantia orbis"^^xsd:string .
+
+<http://viaf.org/viaf/53167803610717772927> rdfs:label "Mythologiarum libri"^^xsd:string .
+
+<http://viaf.org/viaf/54167802704417770880> rdfs:label "Glossa ad Institutiones"^^xsd:string .
+
+<http://viaf.org/viaf/5476156762953741300002> rdfs:label "De memoria et reminiscentia (Alberto Magno)"^^xsd:string .
+
+<http://viaf.org/viaf/64167802704417770658> rdfs:label "De natura locorum"^^xsd:string .
+
+<http://viaf.org/viaf/6424154741656153110000> rdfs:label "Epistole (Alcuino)"^^xsd:string .
+
+<http://viaf.org/viaf/80159474046327660863> rdfs:label "De regimine christiano"^^xsd:string .
+
+<http://viaf.org/viaf/85159474190427661882> rdfs:label "De natura et dignitate amoris"^^xsd:string .
+
+<http://viaf.org/viaf/96385217> rdfs:label "Manerius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q101500386> rdfs:label "De motibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q10270096> rdfs:label "Economico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105482782> rdfs:label "De nuptiis Mercurii et Philologiae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105971325> rdfs:label "De passione Domini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106000405> rdfs:label "Gemma purpurea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106095061> rdfs:label "Descriptio Orbis Terrae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106589262> rdfs:label "Diaffonus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q107042799> rdfs:label "De mineralibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q110243743> rdfs:label "Lapidario"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q110322085> rdfs:label "Laborintus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q111994011> rdfs:label "Homiliae in Evangelia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q111994012> rdfs:label "Historiarum libri quinque"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q113020854> rdfs:label "Quaestiones disputatae de veritate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q113470867> rdfs:label "Morte, perché m'hai fatta sì gran guerra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q113634836> rdfs:label "Non creda alcun, quand'ode dir canaglia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q121296389> rdfs:label "Liber Sex Principiorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1222658> rdfs:label "Moralia in Iob"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q122997166> rdfs:label "De vita et moribus philosophorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q124863419> rdfs:label "Metaphysicorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q127278262> rdfs:label "Historiae adversus paganos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12899583> rdfs:label "De planctu naturae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12900075> rdfs:label "Gioiosamente canto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12900663> rdfs:label "La mia gran pena e lo gravoso affanno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q129736013> rdfs:label "Noi siàn le triste penne isbigotite"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q130369090> rdfs:label "De virginibus velandis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131429050> rdfs:label "Domna, vos m'avez et Amors"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q131476263> rdfs:label "Graecismus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q132168910> rdfs:label "De philosophia mundi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q132634794> rdfs:label "Fresca rosa novella"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q132772447> rdfs:label "La forte e nova mia disaventura"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q133249449> rdfs:label "La dolce vista e 'l bel guardo soave"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q133256660> rdfs:label "Io fu' 'n su l'alto e 'n sul beato monte"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q133860881> rdfs:label "De remediis fortuitorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q133939390> rdfs:label "Declamationes de colloquio Simonis cum Jesu"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134694621> rdfs:label "De virtutibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q134968311> rdfs:label "Istoria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q135426646> rdfs:label "Documenti d'Amore"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q135658811> rdfs:label "Dit d'amour"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q136030129> rdfs:label "De statu interioris hominis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15804866> rdfs:label "De morbis acutis et chronicis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q17154448> rdfs:label "La Rettorica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q18620316> rdfs:label "De ordine"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19077276> rdfs:label "De oratione"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19128386> rdfs:label "Del meo voler dir l'ombra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19128645> rdfs:label "Detto del gatto lupesco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19130580> rdfs:label "Gravosa dimoranza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19131850> rdfs:label "In un boschetto trova' pasturella"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19131857> rdfs:label "In un gravoso affanno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19132884> rdfs:label "L'intelligenza"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19170786> rdfs:label "Farai un vers pos mi sonelh"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19177956> rdfs:label "L'autrier avint en cel autre païs"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19177960> rdfs:label "L'autrier jost' una sebissa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19177968> rdfs:label "L'autrier"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19191228> rdfs:label "Lancan folhon bosc e jarric"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19527109> rdfs:label "Lo dous cossire"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2409069> rdfs:label "Metalogicus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25688755> rdfs:label "Domna, tant vos ai preiada"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q28407483> rdfs:label "Liber introductorius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q29023906> rdfs:label "Exposition"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3026844> rdfs:label "Didascalicon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3113493> rdfs:label "Liber aggregationis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3155953> rdfs:label "Itinerarium mentis in Deum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3227737> rdfs:label "Le Tournoi des Dames"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3481637> rdfs:label "De somno et vigilia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3712458> rdfs:label "Doctrinale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3721344> rdfs:label "Elementi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3730710> rdfs:label "Epodi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3740482> rdfs:label "Favolello"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3785885> rdfs:label "Historia Mongalorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3835916> rdfs:label "Lo vostro bel saluto e 'l gentil sguardo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42188556> rdfs:label "De naturis rerum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42188619> rdfs:label "De spirituali amicitia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42188957> rdfs:label "Directorium humanae vitae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42189049> rdfs:label "Divinae Institutiones"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42189383> rdfs:label "Enarrationes in Psalmos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42189533> rdfs:label "L'Escoufle"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42189636> rdfs:label "Les estoires de Venise"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42191504> rdfs:label "Institutiones grammaticae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q48833498> rdfs:label "Meravigliosamente"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5244799> rdfs:label "De veritate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5421600> rdfs:label "Expositio in Matthaeum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q54879005> rdfs:label "Liber philosophorum moralium antiquorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5690515> rdfs:label "Liber manualis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5834994> rdfs:label "Epitomae de Tito Livio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q5982161> rdfs:label "Lucidario"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q62052532> rdfs:label "Facta et dicta memorabilia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q63526550> rdfs:label "Lo ferm voler qu'el cor m'intra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q63526697> rdfs:label "Non puosc mudar un chantar non esparja"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q6909170> rdfs:label "Moralium dogma philosophorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q749168> rdfs:label "Liber extra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87198553> rdfs:label "De musica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q88975093> rdfs:label "Estuans intrinsecus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q99673736> rdfs:label "De quantitate animae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728995301-3097954/extraction-1755592940896-4/> prov:generatedAtTime "2025-10-01T20:16:11.833846"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1728995301-3097954/extraction-1755592940896-4> .
+
+<https://w3id.org/dh-atlas/1759341743-6305413> rdfs:label "De natura rerum liber"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341751-1497898> rdfs:label "De ramis cadunt folia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341757-041703> rdfs:label "De regno ad regem Cypri (De regimine principum)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341760-3407142> rdfs:label "De sensu et sensato (Alberto Magno)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341761-728164> rdfs:label "De servir bon senhor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341763-489919> rdfs:label "De sirventes aurai gran ren perdutz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341773-8118472> rdfs:label "De vergiliana continentia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341778-8287241> rdfs:label "Degno è che che dice omo el defenda"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341780-153898> rdfs:label "Degno son io ch'io mora"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341781-4709237> rdfs:label "Deh avrestú veduto messer Piero"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341782-844522> rdfs:label "Deh, giovanetta! de' begli occhi tuoi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341784-2040675> rdfs:label "Deh guata, Ciampol, ben questa vecchiuzza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341785-5541856> rdfs:label "Deh, non celate a gli occhi quel diletto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341786-984351> rdfs:label "Deh, piacciavi donare al mio cor vita"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341788-293605> rdfs:label "Deh, spiriti miei, quando mi vedete"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341789-6274557> rdfs:label "Deiosta·ls breus jorns e·ls loncs sers"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341791-5382276> rdfs:label "Del sieu tort farai esmenda"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341792-8496714> rdfs:label "Dels quatre mestiers valens"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341794-2016525> rdfs:label "Deo, po' m'hai degnato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341795-5487535> rdfs:label "Derivationes Magnae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341797-9777205> rdfs:label "Dezamparatz, ses companho"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341799-3052177> rdfs:label "Di cantare ho talento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341800-6566396> rdfs:label "Di ciò ch'audivi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341801-9673007> rdfs:label "Di ciò che è stato sé dimandatore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341803-3116202> rdfs:label "Di dolor convien cantare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341804-665084> rdfs:label "Di fermo sofferire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341805-9889562> rdfs:label "Di lontana riviera"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341807-3233287> rdfs:label "Di lungia parte aducemi l'amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341808-709056> rdfs:label "Di vil matera mi conven parlare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341810-0265467> rdfs:label "Di voi mi stringe tanto lo disire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341811-9319148> rdfs:label "Dialoghi (Cicerone)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341813-806848> rdfs:label "Digatz vostr'esciennza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341815-7743533> rdfs:label "Dis dou dragon"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341817-0974965> rdfs:label "Disïoso cantare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341819-0174515> rdfs:label "Dit de Tunis"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341820-9038086> rdfs:label "Divinae Sapientiae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341822-2920034> rdfs:label "Divisio philosophiae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341823-6252127> rdfs:label "Dixem'Amor: Questa donna più vol te"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341824-9456005> rdfs:label "Doctrina d'acort"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341826-2758298> rdfs:label "Doctrina de compondre dictatz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341828-6766894> rdfs:label "Dolc' è il pensier che mi notrica 'l core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341830-063387> rdfs:label "Dolce coninzamento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341831-427671> rdfs:label "Dolente, lasso, già non m'asecuro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341832-7789388> rdfs:label "Dolente, tristo, e pien di smarrimento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341834-1077397> rdfs:label "Dollioso mi partìo e for racordato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341835-4233437> rdfs:label "Doloroza dogliensa in dir m'adduce"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341836-7633781> rdfs:label "Dolze d'amore amico, e' ve riscrivo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341838-128722> rdfs:label "Dolze meo drudo, e vatène"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341839-4580104> rdfs:label "Domna, genser qu'eu no sai dir"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341842-3450832> rdfs:label "Dona, la genser qu'om veya"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341843-6720307> rdfs:label "Donna, ciascun fa canto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341845-0012407> rdfs:label "Donna, dagli occhi tuoi par che si mova"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341846-3343005> rdfs:label "Donna, di voi mi lamento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341847-6443887> rdfs:label "Donna, il beato punto ch'e' m'avenne"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341848-9722226> rdfs:label "Donna, l'amor mi sforza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341850-306929> rdfs:label "Donna, la disïanza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341851-5924606> rdfs:label "Donna, lo fermo core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341852-9421713> rdfs:label "Donna me prega, – per ch'eo voglio dire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341854-2684705> rdfs:label "Donna, se 'l prego de la mente mia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341855-6402135> rdfs:label "Donna vostr' adorneçe"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341856-9592795> rdfs:label "Donna, vostre belleze"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341858-2925272> rdfs:label "Donne, la donna mia ha d'un disdegno"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341859-6340353> rdfs:label "Donque mi parto, lasso, almen de dire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341860-959627> rdfs:label "Dovunque eo vo o vegno o volgo o giro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341862-3099933> rdfs:label "E·l tremini d'estiu"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341863-6701243> rdfs:label "E' non è legno di sì forti nocchi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341865-2782307> rdfs:label "E' non ha tante gocciole nel mare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341867-1832106> rdfs:label "Ed eo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341868-5318227> rdfs:label "El dous temps quan la flor s'espan"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341869-8819003> rdfs:label "El fuggir di Min Zeppa, quando sente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341871-2054534> rdfs:label "El temps que.l rossignols s'esgau"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341875-7751162> rdfs:label "En Giraldon, un ioc vos part d'amors"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341877-8893805> rdfs:label "En Nicolet, d'un sognie qu'ieu sognava"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341879-2239478> rdfs:label "En abril, quant vei verdejar"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341880-5579221> rdfs:label "En amor truep tan de mal senhoratge"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341881-993585> rdfs:label "En aquest son gai e leugier"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341883-3173873> rdfs:label "En breu brisara∙l temps braus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341884-6453545> rdfs:label "En estiu, qan crida·l iais"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341886-21618> rdfs:label "En seumeillant m'avint une vesion"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341887-5774713> rdfs:label "En tal hai mess mo cor e mo conssir"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341888-922323> rdfs:label "En un vergier sotz fuella d'albespi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341890-2219138> rdfs:label "Enaissi·m pren cum fai al pescador"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341892-1916416> rdfs:label "Encyclica in forma maiori"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341893-5234873> rdfs:label "Eneide, volgarizzamento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341894-9626908> rdfs:label "Entre Copin et Bourgois"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341896-4031725> rdfs:label "Entre·l Taur e·l doble signe"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341897-7609446> rdfs:label "Eo non mi credo, 'n om, tanto savere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341899-464259> rdfs:label "Eo non son quelli che chera perdono"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341900-800273> rdfs:label "Eo sono Amor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341902-1285727> rdfs:label "Eo sono assiso e man so' gota tegno"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341904-7861657> rdfs:label "Epistolarum Liber"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341910-1968448> rdfs:label "Epistula Ad Paulinum De Studio Scripturarum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341911-5018077> rdfs:label "Epithalamium dictum Honorio Augusto et Mariae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341913-9506469> rdfs:label "Er ausiretz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341915-2457273> rdfs:label "Er quant s'embla·l foill del fraisse"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341916-632673> rdfs:label "Era in penser d'amor quand' i' trovai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341918-0294714> rdfs:label "Era l'aire sereno e lo bel tempo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341919-426011> rdfs:label "Era·m don Dieus que repaire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341920-787716> rdfs:label "Era pus l'ivernz franh las brotz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341922-112195> rdfs:label "Era tutta soletta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341923-522635> rdfs:label "Eras quan vey verdeyar"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341924-9570024> rdfs:label "Esordii di varie maniere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341928-48486> rdfs:label "Explanatio super Canticum Mariae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341929-7970004> rdfs:label "Explicatio in Cantica Canticorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341933-0732648> rdfs:label "Expositio libri Posteriorum Analyticorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341935-592326> rdfs:label "Falco, dona avinen"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341936-8963552> rdfs:label "Far vuoill un nou sirventes"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341940-8148885> rdfs:label "Fede, spen e caritate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341942-1632109> rdfs:label "Fera cagione e dura"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341943-495686> rdfs:label "Feruto sono, e chi è di me ferente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341944-8161747> rdfs:label "Feruto sono isvariatamente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341946-1989021> rdfs:label "Figlio mio dilettoso, in faccia laude"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341947-550714> rdfs:label "Fior di beltà"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341948-9116757> rdfs:label "Fiore di filosofi e di molti savi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341950-2835095> rdfs:label "Freit ni ven, no·m posc destreigner"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341952-1922524> rdfs:label "Fuilhetas, ges autres vergiers"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341953-5873892> rdfs:label "Gaia donna piacente e dilettosa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341954-9419672> rdfs:label "Gaucelm Faidit, eu vos deman"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341956-8450496> rdfs:label "Gent ant saubut miei uoill vensser mon cor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341958-2203403> rdfs:label "Gentil donna cortese e dibonare"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341959-54952> rdfs:label "Gentil' donne valenti, ora m'aitate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341960-9029264> rdfs:label "Gentil donzella, di pregio nomata"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341962-2213736> rdfs:label "Gentil madonna, la vertù d'amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341963-5131562> rdfs:label "Gentile ed amorosa ed avenente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341964-8392565> rdfs:label "Ges cil que·s blasmon d'amor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341966-164535> rdfs:label "Ges eu non vei com hom guidar si deia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341967-4860365> rdfs:label "Già non porà la vostra dolce cera"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341968-8438385> rdfs:label "Gianni, quel Guido salute"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341971-4833596> rdfs:label "Gioia gioiosa piagente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341973-373058> rdfs:label "Giorno né notte non fino pensando"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341974-697197> rdfs:label "Giovane, che cosí leggiadramente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341976-1244605> rdfs:label "Gli occhi di quella gentil foresetta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341977-431439> rdfs:label "Gloria vera e onor tutto orrato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341978-7767425> rdfs:label "Glosae super Timaeum (Guglielmo di Conches)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341980-1808643> rdfs:label "Glossa ad Antiquorum habet"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341982-8211527> rdfs:label "Glossa perpetua"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341985-2299042> rdfs:label "Gravoso affanno e pena"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341986-5515068> rdfs:label "Grazi'e mercé"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341987-8725379> rdfs:label "Greve puot'on piacere a tutta gente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341989-1718533> rdfs:label "Guai a chi nel tormento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341990-495212> rdfs:label "Guardando a voi, in parlare e 'n sembianti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341991-8136697> rdfs:label "Guardate en che beltà"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341993-1558793> rdfs:label "Guata, Manetto, quella scrignutuzza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341994-4755065> rdfs:label "Guato una donna dov' io la scontrai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341995-80886> rdfs:label "Gui d'Uissel be·m pesa de vos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341997-138581> rdfs:label "Guido, quel Gianni ch'a te fu l'altrieri"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341998-5089135> rdfs:label "Guiraut Riquier, pus qu'es sabens"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759341999-8530443> rdfs:label "Heroides, volgarizzamento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342002-8804476> rdfs:label "Hom ditz que gaugz non es senes amor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342004-9127324> rdfs:label "Homiliae in Hiezechihelem prophetam"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342006-2321985> rdfs:label "Homo ke bene spera"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342007-5814123> rdfs:label "Hueimais de vos non aten"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342008-9188118> rdfs:label "Hui matin a la jornée"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342010-2665598> rdfs:label "Humils, forfaitz, repres e penedens"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342011-6231885> rdfs:label "I' parlo, e non so a cui"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342012-9450405> rdfs:label "I' prego voi che di dolor parlate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342014-2597866> rdfs:label "I' son chiamata nova ballatella"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342015-6231756> rdfs:label "I' son sì fatto d'una visione"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342016-9606512> rdfs:label "I' son sì magro, che quasi traluco (Cecco Angiolieri)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342018-2510085> rdfs:label "I' son sì magro, che quasi traluco (Meo de' Tolomei)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342019-5962534> rdfs:label "I' trovo 'l cor feruto nella mente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342020-9134817> rdfs:label "I' veggio star sul canto de la nave"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342022-254663> rdfs:label "I' vegno 'l giorno a·tte 'nfinite volte"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342023-567924> rdfs:label "I' vidi donne co la donna mia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342024-871268> rdfs:label "Ieu no mudaria"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342026-2321012> rdfs:label "Il carroccio amoroso"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342028-8856943> rdfs:label "Il parpaglion che fere a la lumera"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342030-1988075> rdfs:label "In Evangelia S. Matthaei et S. Joannis commentaria"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342031-5712976> rdfs:label "In abito di saggia messaggiera"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342033-0243614> rdfs:label "In bivio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342034-45619> rdfs:label "In gioi mi tegno tut[t]a la mia pena"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342035-852568> rdfs:label "In libros Aristotelis De caelo et mundo expositio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342037-1921403> rdfs:label "In librum Aristotelis De generatione et corruptione expositio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342038-5380132> rdfs:label "In quella parte ove luce la stella"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342039-9069645> rdfs:label "In sancti Iuliani et Basilisse"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342042-4110599> rdfs:label "Inportuna veneris"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342044-424096> rdfs:label "Introduzione alla logica"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342045-8233683> rdfs:label "Invettiva contro Abelardo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342047-1426241> rdfs:label "Io che nel tempo reo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342048-5462763> rdfs:label "Io era tutto fuor di stato amaro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342049-937558> rdfs:label "Io fo ben boto a Dio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342051-8894227> rdfs:label "Io m'ag[g]io posto in core a Dio servire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342053-2146103> rdfs:label "Io maladico il dì ch'io vidi imprima"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342054-558815> rdfs:label "Io mi sono tucto dato a trager oro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342055-9436018> rdfs:label "Io no lo dico a voi sentenzïando"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342057-2828846> rdfs:label "Io non domando, Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342058-620547> rdfs:label "Io non pensava che lo cor giammai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342059-9857328> rdfs:label "Io non posso celar lo mio dolore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342061-2971296> rdfs:label "Io non posso celare né covrire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342062-620425> rdfs:label "Io son sì vago de la bella luce"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342063-941853> rdfs:label "Io t'apresento questa donzeletta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342065-2335303> rdfs:label "Io temo che la mia disaventura"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342066-5604336> rdfs:label "Bernardo, io veggio ch'una donna vene"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342067-857742> rdfs:label "Io vidi li occhi dove Amor si mise"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342069-4679077> rdfs:label "Ire d'amor que en mon cor repaire (Gace Brulé)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342070-8270004> rdfs:label "Ire d'amor que en mon cor repaire (Tebaldo I)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342072-1985476> rdfs:label "Ispessamente movomi lo giorno"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342073-533866> rdfs:label "Ispesse volte voi vegno a vedere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342074-9032984> rdfs:label "Ispesso di gioia nascie ed inconinza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342076-8656213> rdfs:label "Itineraria et alia geographica"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342088-7741358> rdfs:label "Iuramentum fidelitatis Casalis Monferrati"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342098-144222> rdfs:label "Ja tant no cugey que'm trigues"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342105-223227> rdfs:label "Je prins conget d'amours en souspirant"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342112-2567117> rdfs:label "Je sui jonete et jolie"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342120-1184804> rdfs:label "Jehan de Grieviler, sage"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342121-4501438> rdfs:label "Jois sia comensamens"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342122-8338208> rdfs:label "Karitatz ez amors e fes"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342124-1655118> rdfs:label "L'alma mia trist'è seguitando 'l core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342125-482147> rdfs:label "L'alta speranza che mi reca Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342126-8443854> rdfs:label "L'altra notte mi venne una gran tosse"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342128-1390114> rdfs:label "L'altrer, lo primer jorn d'aost"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342129-4723694> rdfs:label "L'altr[i]er, dormendo, a me se venne Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342130-8008218> rdfs:label "L'altrier sì mi ferìo una tal ticca"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342132-146019> rdfs:label "L'anima mia vilment' è sbigotita"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342133-56528> rdfs:label "L'anima mia, che si va peregrina"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342134-8660903> rdfs:label "L' aura amara"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342136-2016459> rdfs:label "L'autr' ier al gai tems de Pascor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342137-5205717> rdfs:label "L'autre dia, per un mati"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342138-8750513> rdfs:label "L'autre jorn m'anava"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342140-2422369> rdfs:label "L'autre jour en un jardin"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342141-6053417> rdfs:label "L'autre jour me chivachai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342144-3219113> rdfs:label "L'autrier cavalcava"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342145-6691353> rdfs:label "L'autrier errai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342147-6294024> rdfs:label "L'autrier, lonc un bosc fullos"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342149-0110743> rdfs:label "L'autrier par un matinet"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342150-3826053> rdfs:label "L'autrier trobey la bergeira d'antan"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342152-8751662> rdfs:label "L'omo fo creato vertüoso"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342154-238364> rdfs:label "L'uom che conosce tegno ch'aggi ardire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342157-5619154> rdfs:label "La bella, che 'l tempo misura"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342158-9142063> rdfs:label "La canzone morale del pregio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342160-6372476> rdfs:label "La composizione del mondo colle sue cascioni"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342162-0486362> rdfs:label "La corona amorosa (o corona di casistica amorosa)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342163-4079924> rdfs:label "La dilettosa cera"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342165-4194527> rdfs:label "La dolorosa mente, ched eo porto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342166-7603414> rdfs:label "La dolorosa vita che si prova"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342168-0909142> rdfs:label "La doloroza e mia grave dogliensa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342169-4604855> rdfs:label "La douce voiz du louseignol sauvage"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342171-3650959> rdfs:label "La gioia e l'alegranza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342172-6983104> rdfs:label "La gioven donna cui appello Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342174-0355477> rdfs:label "La invidia a me à dato sì de morso"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342175-384757> rdfs:label "La Metaura di Aristotile"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342176-7827654> rdfs:label "La mia disiderosa e dolze vita"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342178-109416> rdfs:label "La mia gran benenanza e lo disire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342180-039718> rdfs:label "La mia vit'è sì fort'e dura e fera"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342181-3600101> rdfs:label "La'namuranza - disïusa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342182-7242239> rdfs:label "La 'ntelligenza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342184-0759017> rdfs:label "La partenza che fo dolorosa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342185-429195> rdfs:label "La planeta mi pare oscurata"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342187-3808246> rdfs:label "Laig faill cor e sabers e senz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342188-7488227> rdfs:label "Lambert, il sont doi amant"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342191-5350842> rdfs:label "Lamentomi di mia disavventura"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342193-478845> rdfs:label "Lanqan vinc en Lombardia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342195-4163663> rdfs:label "Las, ço qe m'es al cor plus fins e gars"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342196-7830508> rdfs:label "Lasso! ch'amando la mia vita more"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342198-1649168> rdfs:label "Lasso, el pensero e lo voler non stagna"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342199-7602737> rdfs:label "Lasso, en che mal punto ed en che fella"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342201-161933> rdfs:label "Lasso, merzé cherere"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342202-5798545> rdfs:label "Lasso, pensando quanto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342203-9489417> rdfs:label "Lasso, per ben servir son adastiato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342205-3445487> rdfs:label "Laudario di Santa Maria della Scala"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342206-7381191> rdfs:label "Le Rime di Francesco di Vannozzo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342208-688207> rdfs:label "Le dolorose pene che 'l meo core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342210-147505> rdfs:label "Le feste di San Giovanni"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342211-5461273> rdfs:label "Le mantel mautaillié"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342212-908572> rdfs:label "Lectura super codicem"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342214-2453957> rdfs:label "Lecturae in Digestum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342216-678983> rdfs:label "Les souhaits du paysan"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342218-0801344> rdfs:label "Lettera a Gianni Bentivegna"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342220-287511> rdfs:label "Lettera epica"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342222-9804966> rdfs:label "Li jus de pelerin"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342224-3677204> rdfs:label "Li mey dezir"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342225-7526848> rdfs:label "Li mie' foll' occhi, che prima guardaro"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342227-1335518> rdfs:label "Li vostri occhi gentili e pien' d'amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342228-587947> rdfs:label "Libellus de processione Spiritus Sancti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342231-37601> rdfs:label "Liber Aesopi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342232-7951715> rdfs:label "Liber Amicitiae"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342235-2975132> rdfs:label "Liber cursuum planetarum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342236-6922543> rdfs:label "Liber de anima seu sextus de naturalibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342238-048813> rdfs:label "Liber de dictis philosophorum antiquorum"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342239-3946376> rdfs:label "Liber de philosophia prima sive de scientia divina"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342240-7695007> rdfs:label "Liber de quattuor virtutibus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342247-7407157> rdfs:label "Liber phisionomie"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342252-0112498> rdfs:label "Libro (Uguccione da Lodi)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342256-1295688> rdfs:label "Lisetta voi de la vergogna sciorre"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342257-5092545> rdfs:label "Livio volgarizzato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342258-9429567> rdfs:label "Livres dou gouvernement des rois"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342260-3478918> rdfs:label "Livro del governamento dei re e dei principi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342261-7097743> rdfs:label "Lo clar temps vei brunezir"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342263-116661> rdfs:label "Lo dolce ed amoroso pla­ci­mento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342265-7848434> rdfs:label "Lo doutz chans d'un auzel"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342267-9239135> rdfs:label "Lo fermo intendimento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342269-3435535> rdfs:label "Lo fin piacer di quell'adorno viso"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342270-7417438> rdfs:label "Lo fin pregio avanzato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342272-1945772> rdfs:label "Lo gens temps de pascor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342273-5492747> rdfs:label "Lo gran pregio di voi sì vola pari"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342274-8763459> rdfs:label "Lo meo gravoso affanno e lo dolore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342276-1718533> rdfs:label "Lo meo lontano gire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342277-5090632> rdfs:label "Lo 'namorato core"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342278-8751693> rdfs:label "Lo nomo c' à', percontradio si mostra"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342280-2506957> rdfs:label "Lo 'ntelletto d'amor ch'io solo porto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342281-6092012> rdfs:label "Lo statuto signorile di Chiarentana"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342282-9889772> rdfs:label "Lo vers comenssa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342284-9532516> rdfs:label "Lo vostro fermo dir fino ed orrato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342286-3666732> rdfs:label "Long temps ai agutz cossiriers"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342287-7505639> rdfs:label "Lontana dimoranza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342289-1375756> rdfs:label "Los Aplechs"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342290-496916> rdfs:label "Los mals d'Amor ai eu ben totz apres"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342292-5350604> rdfs:label "Lungiamente portai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342293-8782916> rdfs:label "Luntan vi son"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342295-300473> rdfs:label "Madonna, amor non chere gentilezza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342296-7337723> rdfs:label "Madonna, dir vo voglio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342298-045242> rdfs:label "Madonna, io nonn-audivi dicer mai"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342299-4069064> rdfs:label "Madonna, 'l fino amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342300-7099233> rdfs:label "Madonna, la pietate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342302-0820243> rdfs:label "Madonna mia, quel di ch'Amor consente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342303-4106722> rdfs:label "Madonna, perch'avegna novitate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342304-8672614> rdfs:label "Madonna, unque per forza non dimando"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342306-2152476> rdfs:label "Madonna, voi isguardando senti' amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342307-5810862> rdfs:label "Magni baroni certo e regi quasi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342308-9124806> rdfs:label "Mainta gens mi malrazona"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342310-3470738> rdfs:label "Mais ai de talan que no suelh"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342311-721407> rdfs:label "Maledetto e distrutto sia da Dio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342313-1709223> rdfs:label "Mamma, lo temp' è venuto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342315-8919864> rdfs:label "Mante stagione veggio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342317-2929873> rdfs:label "Me piace dir como sento d'amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342318-6164021> rdfs:label "Mei oill an gran manentia"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342319-9657555> rdfs:label "Membrando l'amoroso dipartire"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342321-3263037> rdfs:label "Memoriale de prerogativa Imperii Romani"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342323-29983> rdfs:label "Memoriali bolognesi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342324-985087> rdfs:label "Mente ed umìle e più di mille sporte"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342326-3154974> rdfs:label "Meo sir, cangiato veggioti il talento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342328-2764976> rdfs:label "Messer Berto Frescubaldi, Iddio"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342329-6119957> rdfs:label "Messer Bottaccio amico, ogni animale"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342330-962045> rdfs:label "Messer Gentil, la ricca e nova pianta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342332-269468> rdfs:label "Messer Giovanni amico, 'n vostro amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342333-600409> rdfs:label "Messer Petro da Massa legato"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342335-3330941> rdfs:label "Messer, lo mal che ne la mente siede"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342339-127849> rdfs:label "Meteorologica (Averroé)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342341-9727595> rdfs:label "Metti lo sol nell'acqua"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342343-3495274> rdfs:label "Molte fiate Amor, quando mi desta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342344-7099261> rdfs:label "Molti l'amore apellano dietate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342346-007253> rdfs:label "Molti lungo tempo hanno"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342347-3370628> rdfs:label "Molti omini vanno ragionando"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342348-642997> rdfs:label "Molto s'avene a chi à potestate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342351-136392> rdfs:label "Moralium dogma philosophorum (Guglielmo di Conches)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342352-519234> rdfs:label "Morte avversara, poich'io son contento"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342353-8413053> rdfs:label "Morte gentil rimedio de' cattivi"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342355-734708> rdfs:label "Mout m'es bel el tems d'estiou"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342357-0710905> rdfs:label "Mout mi platz lo doutz temps d'abril"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342358-4763129> rdfs:label "Moviti, Pietate, e va incarnata"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342359-7880602> rdfs:label "Movo canto amoroso novamente"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342362-7232213> rdfs:label "N'Albert, eu sui en gran error"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342364-0362587> rdfs:label "N'Eble, chauzes en la meillor"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342365-3394244> rdfs:label "N'Ugo, vostre semblan digatz"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342366-6353316> rdfs:label "Naturalmente chere ogni amadore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342367-9148533> rdfs:label "Nel vostro viso angelico amoroso"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342369-2366092> rdfs:label "No spero di trovar giammai pietate"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342370-5731814> rdfs:label "Nobilis, apta"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342372-5053492> rdfs:label "Non avene d'allegranza"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342373-8605413> rdfs:label "Non che 'n presenza de la vista umana"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342375-7803686> rdfs:label "Non credo che 'n madonna sia venuto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342377-0935957> rdfs:label "Non cura nave la roca d'Amore"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342378-4271219> rdfs:label "Non estarai, per ome qe·m casti"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342379-7551007> rdfs:label "Non già per gioia ch'aggia mi conforto"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342381-1123059> rdfs:label "Non perch'eo v'aggia, donna, fatto offesa"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1759342382-954003> rdfs:label "Non saccio a che corinzi lo meo dire"^^xsd:string .
+
+<https://www.viaf.org/viaf/176857844> rdfs:label "De spiritu et respiratione"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q20988014> rdfs:label "Il libro completo dell'arte medica"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q331046> rdfs:label "De regimine principum (Tolomeo da Lucca)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q3481665> rdfs:label "De memoria et reminiscentia (Aristotele)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q3694159> rdfs:label "Elegie (Tibullo)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q3779919> rdfs:label "Liber (Catullo)"^^xsd:string .
+
+<https://www.wikidata.org/entity/Q92729242> rdfs:label "De regimine principum (Egidio Romano)"^^xsd:string .
+
+<https://www.wikidata.org/wiki/Q3481637> rdfs:label "De somno et vigilia (Aristotele)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728995301-3097954/extraction-1755592940896-4> prov:used <https://dantesources.dantenetwork.it/sparql?query=SELECT%20DISTINCT%20%3Flabel%20%0AWHERE%20%7B%0A%20%3Fs%20a%20%3Chttp%3A//erlangen-crm.org/efrbroo/Work%3E%20%3B%0A%20%3Chttp%3A//purl.org/dc/terms/alternative%3E%20%3Flabel%20.%0A%7D%0ALIMIT%20500%0AOFFSET%20600> .
+

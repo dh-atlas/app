@@ -1,0 +1,1295 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q101247360> a schema:CreativeWork ;
+    rdfs:label "Amphitruo, argumenta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q101331652> a schema:CreativeWork ;
+    rdfs:label "epigramma Pacuvi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102256603> a schema:CreativeWork ;
+    rdfs:label "carmen de ternarii numeri excellentia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102402648> a schema:CreativeWork ;
+    rdfs:label "Valerius Proculus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102402715> a schema:CreativeWork ;
+    rdfs:label "Aradius Rufinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102402719> a schema:CreativeWork ;
+    rdfs:label "Anicius Iulianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102402722> a schema:CreativeWork ;
+    rdfs:label "Petronius Probianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102402725> a schema:CreativeWork ;
+    rdfs:label "Verinus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102413536> a schema:CreativeWork ;
+    rdfs:label "inscriptio Toletana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q102434392> a schema:CreativeWork ;
+    rdfs:label "Psalmus contra partem Donati"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q103285999> a schema:CreativeWork ;
+    rdfs:label "de rosis nascentibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1035171> a schema:CreativeWork ;
+    rdfs:label "Captivi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1043624> a schema:CreativeWork ;
+    rdfs:label "Carmen Arvale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1043717> a schema:CreativeWork ;
+    rdfs:label "Carmen Saliare"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105069816> a schema:CreativeWork ;
+    rdfs:label "Cupido cruciatus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105069861> a schema:CreativeWork ;
+    rdfs:label "Concubitus Martis et Veneris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1053646> a schema:CreativeWork ;
+    rdfs:label "Cento Vergilianus de laudibus Christi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105441365> a schema:CreativeWork ;
+    rdfs:label "de actibus apostolorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105548610> a schema:CreativeWork ;
+    rdfs:label "carmen ad Flavianum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105554545> a schema:CreativeWork ;
+    rdfs:label "Prognostica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105555151> a schema:CreativeWork ;
+    rdfs:label "Epithalamium de Nuptiis Honorii Augusti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105555616> a schema:CreativeWork ;
+    rdfs:label "de bello Gildonico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105556628> a schema:CreativeWork ;
+    rdfs:label "De raptu Proserpinae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105561391> a schema:CreativeWork ;
+    rdfs:label "Bellum Histricum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105563878> a schema:CreativeWork ;
+    rdfs:label "Epigram"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105570802> a schema:CreativeWork ;
+    rdfs:label "de vita Martini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105573882> a schema:CreativeWork ;
+    rdfs:label "Ardeatis templi inscriptio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105623896> a schema:CreativeWork ;
+    rdfs:label "Carmen de ingratis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105626918> a schema:CreativeWork ;
+    rdfs:label "De Bello Germanico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105633787> a schema:CreativeWork ;
+    rdfs:label "epitaphium haereseon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105635786> a schema:CreativeWork ;
+    rdfs:label "de nativitate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105635951> a schema:CreativeWork ;
+    rdfs:label "carmen ad Augustinum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105651882> a schema:CreativeWork ;
+    rdfs:label "de visitatione nepotuli sui"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105653372> a schema:CreativeWork ;
+    rdfs:label "versus in festivitate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105688597> a schema:CreativeWork ;
+    rdfs:label "carminum fragmenta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105691521> a schema:CreativeWork ;
+    rdfs:label "carminis fragmentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105695119> a schema:CreativeWork ;
+    rdfs:label "pater ad filium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105696513> a schema:CreativeWork ;
+    rdfs:label "protrepticus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711674> a schema:CreativeWork ;
+    rdfs:label "periocha Iliados"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711675> a schema:CreativeWork ;
+    rdfs:label "periocha Odyssiae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711676> a schema:CreativeWork ;
+    rdfs:label "Andria, periocha"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711677> a schema:CreativeWork ;
+    rdfs:label "Hautontimorumenos, periocha"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711678> a schema:CreativeWork ;
+    rdfs:label "Eunuchus, periocha"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711679> a schema:CreativeWork ;
+    rdfs:label "Phormio, periocha"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711680> a schema:CreativeWork ;
+    rdfs:label "Hecyra, periocha"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711681> a schema:CreativeWork ;
+    rdfs:label "Adelphoe, periocha"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711977> a schema:CreativeWork ;
+    rdfs:label "Asinaria, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711978> a schema:CreativeWork ;
+    rdfs:label "Aulularia, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711979> a schema:CreativeWork ;
+    rdfs:label "Captivi, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711980> a schema:CreativeWork ;
+    rdfs:label "Casina, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711981> a schema:CreativeWork ;
+    rdfs:label "Cistellaria, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711982> a schema:CreativeWork ;
+    rdfs:label "Curculio, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711983> a schema:CreativeWork ;
+    rdfs:label "Epidicus, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711984> a schema:CreativeWork ;
+    rdfs:label "Menaechmi, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711985> a schema:CreativeWork ;
+    rdfs:label "Mercator, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711987> a schema:CreativeWork ;
+    rdfs:label "Miles gloriosus, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711991> a schema:CreativeWork ;
+    rdfs:label "Mostellaria, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711992> a schema:CreativeWork ;
+    rdfs:label "Persa, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711994> a schema:CreativeWork ;
+    rdfs:label "Poenulus, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711995> a schema:CreativeWork ;
+    rdfs:label "Pseudolus, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711996> a schema:CreativeWork ;
+    rdfs:label "Rudens, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711997> a schema:CreativeWork ;
+    rdfs:label "Stichus, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711998> a schema:CreativeWork ;
+    rdfs:label "Trinummus, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105711999> a schema:CreativeWork ;
+    rdfs:label "Truculentus, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105715659> a schema:CreativeWork ;
+    rdfs:label "Elegiae, Liber I"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105715660> a schema:CreativeWork ;
+    rdfs:label "Elegiae, Liber III"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105715661> a schema:CreativeWork ;
+    rdfs:label "Elegiae, Liber II"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105715663> a schema:CreativeWork ;
+    rdfs:label "Elegiae, Liber IV"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105715976> a schema:CreativeWork ;
+    rdfs:label "Cathemerinon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105716426> a schema:CreativeWork ;
+    rdfs:label "De rerum natura"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105716531> a schema:CreativeWork ;
+    rdfs:label "versus de Bobuleno"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105716661> a schema:CreativeWork ;
+    rdfs:label "Bissula"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105716839> a schema:CreativeWork ;
+    rdfs:label "Cento nuptialis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105716951> a schema:CreativeWork ;
+    rdfs:label "monosticha recapitulationis septem dierum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105716977> a schema:CreativeWork ;
+    rdfs:label "Pro itineris et navigii prosperitate"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105724045> a schema:CreativeWork ;
+    rdfs:label "Caesares"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105724734> a schema:CreativeWork ;
+    rdfs:label "e Parmenide conversa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105724986> a schema:CreativeWork ;
+    rdfs:label "de litteris, de syllabis, de metris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725228> a schema:CreativeWork ;
+    rdfs:label "de lege domini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725389> a schema:CreativeWork ;
+    rdfs:label "carminum liber I"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725390> a schema:CreativeWork ;
+    rdfs:label "carminum liber II"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725391> a schema:CreativeWork ;
+    rdfs:label "carminum liber III"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725392> a schema:CreativeWork ;
+    rdfs:label "carminum liber IV"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725393> a schema:CreativeWork ;
+    rdfs:label "carminum liber V"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725395> a schema:CreativeWork ;
+    rdfs:label "carminum liber VI"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725396> a schema:CreativeWork ;
+    rdfs:label "carminum liber VII"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725397> a schema:CreativeWork ;
+    rdfs:label "carminum liber VIII"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725398> a schema:CreativeWork ;
+    rdfs:label "carminum liber IX"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725399> a schema:CreativeWork ;
+    rdfs:label "carminum liber X"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105725400> a schema:CreativeWork ;
+    rdfs:label "carminum liber XI"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726008> a schema:CreativeWork ;
+    rdfs:label "Versus de Sodoma"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726344> a schema:CreativeWork ;
+    rdfs:label "Carmen de Iona"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726702> a schema:CreativeWork ;
+    rdfs:label "epigrammata 1"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726703> a schema:CreativeWork ;
+    rdfs:label "epigrammata 3"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726704> a schema:CreativeWork ;
+    rdfs:label "epigrammata 5"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726705> a schema:CreativeWork ;
+    rdfs:label "epigrammata 6"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726711> a schema:CreativeWork ;
+    rdfs:label "epigrammata 11"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726712> a schema:CreativeWork ;
+    rdfs:label "epigrammata 12"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726713> a schema:CreativeWork ;
+    rdfs:label "epigrammata 14"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726714> a schema:CreativeWork ;
+    rdfs:label "epigrammata 13"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726718> a schema:CreativeWork ;
+    rdfs:label "epigrammata 7"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726719> a schema:CreativeWork ;
+    rdfs:label "epigrammata 8"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726720> a schema:CreativeWork ;
+    rdfs:label "epigrammata 10"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726721> a schema:CreativeWork ;
+    rdfs:label "epigrammata 2"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726722> a schema:CreativeWork ;
+    rdfs:label "epigrammata 9"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105726723> a schema:CreativeWork ;
+    rdfs:label "epigrammata 4"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105729769> a schema:CreativeWork ;
+    rdfs:label "fabulae - Liber II"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105729770> a schema:CreativeWork ;
+    rdfs:label "fabulae - Liber III"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105729771> a schema:CreativeWork ;
+    rdfs:label "fabulae - Liber I"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105729772> a schema:CreativeWork ;
+    rdfs:label "fabulae - Liber IV"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105729774> a schema:CreativeWork ;
+    rdfs:label "fabulae - Liber V"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105731873> a schema:CreativeWork ;
+    rdfs:label "Carmen paschale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105737391> a schema:CreativeWork ;
+    rdfs:label "De Iesu Christo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105737578> a schema:CreativeWork ;
+    rdfs:label "fragment of a carmen of Volumnius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105739541> a schema:CreativeWork ;
+    rdfs:label "carmen adversus Marcionem"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105740299> a schema:CreativeWork ;
+    rdfs:label "liber geneseos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105740319> a schema:CreativeWork ;
+    rdfs:label "carmen in laudem Anastasii imperatoris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105740333> a schema:CreativeWork ;
+    rdfs:label "versus in tumulo Monicae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105740766> a schema:CreativeWork ;
+    rdfs:label "lamentum paenitentiae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105742912> a schema:CreativeWork ;
+    rdfs:label "carmen ad quendam senatorem"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105743528> a schema:CreativeWork ;
+    rdfs:label "De Pascha"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105743692> a schema:CreativeWork ;
+    rdfs:label "introductory epigram of the love elegies"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105744372> a schema:CreativeWork ;
+    rdfs:label "Ad coniugem suam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105744942> a schema:CreativeWork ;
+    rdfs:label "Amores. Book 1"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105744943> a schema:CreativeWork ;
+    rdfs:label "Amores. Book 2"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105744945> a schema:CreativeWork ;
+    rdfs:label "Amores. Book 3"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105745568> a schema:CreativeWork ;
+    rdfs:label "ex Ponto 1"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105745570> a schema:CreativeWork ;
+    rdfs:label "ex Ponto 2"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105745571> a schema:CreativeWork ;
+    rdfs:label "ex Ponto 3"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105745572> a schema:CreativeWork ;
+    rdfs:label "ex Ponto 4"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105747336> a schema:CreativeWork ;
+    rdfs:label "elegiae 1"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105747337> a schema:CreativeWork ;
+    rdfs:label "elegiae 2"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105747338> a schema:CreativeWork ;
+    rdfs:label "elegiae 3"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105748112> a schema:CreativeWork ;
+    rdfs:label "de satisfactione paenitentiae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105749181> a schema:CreativeWork ;
+    rdfs:label "Silvae 1"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105749182> a schema:CreativeWork ;
+    rdfs:label "Silvae 2"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105749183> a schema:CreativeWork ;
+    rdfs:label "Silvae 3"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105749184> a schema:CreativeWork ;
+    rdfs:label "Silvae 4"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105749186> a schema:CreativeWork ;
+    rdfs:label "Silvae 5"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105750939> a schema:CreativeWork ;
+    rdfs:label "carmen de ingratis, argumentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105751049> a schema:CreativeWork ;
+    rdfs:label "Panegyricus dictus Probino et Olybrio consulibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105751090> a schema:CreativeWork ;
+    rdfs:label "carmen de providentia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105751202> a schema:CreativeWork ;
+    rdfs:label "hymnus in laudem Severini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105755778> a schema:CreativeWork ;
+    rdfs:label "tabula"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105756090> a schema:CreativeWork ;
+    rdfs:label "Versus alleluiaticus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105756674> a schema:CreativeWork ;
+    rdfs:label "precatio ad Christum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105757203> a schema:CreativeWork ;
+    rdfs:label "Versus de naturis rerum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105757302> a schema:CreativeWork ;
+    rdfs:label "epistula ad Florianum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105758491> a schema:CreativeWork ;
+    rdfs:label "fescennini de nuptiis Honorii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105758505> a schema:CreativeWork ;
+    rdfs:label "carmen de Christo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105758511> a schema:CreativeWork ;
+    rdfs:label "carmen de eclipsibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105758516> a schema:CreativeWork ;
+    rdfs:label "de Christi beneficiis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105762643> a schema:CreativeWork ;
+    rdfs:label "de fabrica mundi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105763126> a schema:CreativeWork ;
+    rdfs:label "Eucharisticos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105816309> a schema:CreativeWork ;
+    rdfs:label "ad Hadrianum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105816351> a schema:CreativeWork ;
+    rdfs:label "de mortibus boum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105817757> a schema:CreativeWork ;
+    rdfs:label "Hymnus de Christo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105823185> a schema:CreativeWork ;
+    rdfs:label "versus ad Sethum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105830141> a schema:CreativeWork ;
+    rdfs:label "versus ad Fidolium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105830422> a schema:CreativeWork ;
+    rdfs:label "de evangelio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105830651> a schema:CreativeWork ;
+    rdfs:label "iudicium coci et pistoris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105830809> a schema:CreativeWork ;
+    rdfs:label "Cynegeticon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105928808> a schema:CreativeWork ;
+    rdfs:label "carmina apologetica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105949749> a schema:CreativeWork ;
+    rdfs:label "panegyricus dictus Honorio sextum consuli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105949837> a schema:CreativeWork ;
+    rdfs:label "panegyricus in laudem Anastasii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105964132> a schema:CreativeWork ;
+    rdfs:label "carmen de vita Vergilii"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105964285> a schema:CreativeWork ;
+    rdfs:label "Dittochaeon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105964907> a schema:CreativeWork ;
+    rdfs:label "Saturae 1"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105967437> a schema:CreativeWork ;
+    rdfs:label "epigrammation apud Varronem"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105968602> a schema:CreativeWork ;
+    rdfs:label "Saturae 2"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105969337> a schema:CreativeWork ;
+    rdfs:label "Vita Columbani et discipulorum eius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105970567> a schema:CreativeWork ;
+    rdfs:label "versus de orantibus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105970599> a schema:CreativeWork ;
+    rdfs:label "versus ad Hunaldum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105970670> a schema:CreativeWork ;
+    rdfs:label "panegyricus poeticus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105970742> a schema:CreativeWork ;
+    rdfs:label "Ilias"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105971055> a schema:CreativeWork ;
+    rdfs:label "versus in Benedicti laudem"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105971325> a schema:CreativeWork ;
+    rdfs:label "de passione domini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105971405> a schema:CreativeWork ;
+    rdfs:label "versus in basilica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105974319> a schema:CreativeWork ;
+    rdfs:label "panegyricus dictus Mallio Theodoro consuli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105974549> a schema:CreativeWork ;
+    rdfs:label "in Eutropium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105974747> a schema:CreativeWork ;
+    rdfs:label "panegyricus in laudem Iustini Augusti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105974772> a schema:CreativeWork ;
+    rdfs:label "apotheosis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105975223> a schema:CreativeWork ;
+    rdfs:label "e Graecis conversa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105975569> a schema:CreativeWork ;
+    rdfs:label "alethia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105975783> a schema:CreativeWork ;
+    rdfs:label "versus in refectorio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105975985> a schema:CreativeWork ;
+    rdfs:label "Nux"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105977714> a schema:CreativeWork ;
+    rdfs:label "de consulatu Stilichonis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105977989> a schema:CreativeWork ;
+    rdfs:label "de re rustica, liber X"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105978070> a schema:CreativeWork ;
+    rdfs:label "deuteronomium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105978559> a schema:CreativeWork ;
+    rdfs:label "sententiae Balbi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105979758> a schema:CreativeWork ;
+    rdfs:label "versus de calice"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105979889> a schema:CreativeWork ;
+    rdfs:label "tristicha"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105987367> a schema:CreativeWork ;
+    rdfs:label "epistula ad Vigilium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105988058> a schema:CreativeWork ;
+    rdfs:label "In historiam praefatio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105988273> a schema:CreativeWork ;
+    rdfs:label "versus Orphici"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105997106> a schema:CreativeWork ;
+    rdfs:label "fragment of Marullus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q105997626> a schema:CreativeWork ;
+    rdfs:label "carmen epist. 8 insertum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106020106> a schema:CreativeWork ;
+    rdfs:label "Choliambi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106020887> a schema:CreativeWork ;
+    rdfs:label "de aucupio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106034221> a schema:CreativeWork ;
+    rdfs:label "praefationes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106034878> a schema:CreativeWork ;
+    rdfs:label "contra Symmachum, praefationes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106035267> a schema:CreativeWork ;
+    rdfs:label "epilogus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106035678> a schema:CreativeWork ;
+    rdfs:label "epitaph of Marius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106036214> a schema:CreativeWork ;
+    rdfs:label "versus ex Columbano"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106036362> a schema:CreativeWork ;
+    rdfs:label "in metra Terentiana"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106045901> a schema:CreativeWork ;
+    rdfs:label "in Euangelia, 8-10"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106046358> a schema:CreativeWork ;
+    rdfs:label "epitaph of Naevius"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106048795> a schema:CreativeWork ;
+    rdfs:label "instructiones 1"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106048798> a schema:CreativeWork ;
+    rdfs:label "instructiones 2"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106052402> a schema:CreativeWork ;
+    rdfs:label "praeceptum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106057493> a schema:CreativeWork ;
+    rdfs:label "Numeri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106064586> a schema:CreativeWork ;
+    rdfs:label "Iesu Nave"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106064995> a schema:CreativeWork ;
+    rdfs:label "leviticus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106065164> a schema:CreativeWork ;
+    rdfs:label "exodus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106065457> a schema:CreativeWork ;
+    rdfs:label "iudicum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106066460> a schema:CreativeWork ;
+    rdfs:label "epitaph"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106066989> a schema:CreativeWork ;
+    rdfs:label "Catalepta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106069492> a schema:CreativeWork ;
+    rdfs:label "Dirae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106069968> a schema:CreativeWork ;
+    rdfs:label "Culex"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106071380> a schema:CreativeWork ;
+    rdfs:label "elogium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106085535> a schema:CreativeWork ;
+    rdfs:label "quid hoc novi est"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106086338> a schema:CreativeWork ;
+    rdfs:label "Priapea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106087392> a schema:CreativeWork ;
+    rdfs:label "Sententiae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106088290> a schema:CreativeWork ;
+    rdfs:label "De numeris oratorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106088486> a schema:CreativeWork ;
+    rdfs:label "carmen epist. 2, 19 insertum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106088823> a schema:CreativeWork ;
+    rdfs:label "Hexaemeron"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106088824> a schema:CreativeWork ;
+    rdfs:label "satisfactio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106088825> a schema:CreativeWork ;
+    rdfs:label "Rhetorica, opusc. 6"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106088826> a schema:CreativeWork ;
+    rdfs:label "Grammatica, opusc. 6"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106088827> a schema:CreativeWork ;
+    rdfs:label "Fides, opusc. 6"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106088828> a schema:CreativeWork ;
+    rdfs:label "Castitas, opusc. 6"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106088829> a schema:CreativeWork ;
+    rdfs:label "Verecundia, opusc. 6"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106089163> a schema:CreativeWork ;
+    rdfs:label "Aenigmata"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106089250> a schema:CreativeWork ;
+    rdfs:label "hymnus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106089373> a schema:CreativeWork ;
+    rdfs:label "versus Sibyllae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106089452> a schema:CreativeWork ;
+    rdfs:label "De herediolo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106092523> a schema:CreativeWork ;
+    rdfs:label "hexasticha in Aeneidos libris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106093049> a schema:CreativeWork ;
+    rdfs:label "Proverbia Senecae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106093185> a schema:CreativeWork ;
+    rdfs:label "ephemeris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106093955> a schema:CreativeWork ;
+    rdfs:label "in Genesin"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106095813> a schema:CreativeWork ;
+    rdfs:label "liber de moribus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106096014> a schema:CreativeWork ;
+    rdfs:label "carmina 1"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106096015> a schema:CreativeWork ;
+    rdfs:label "carmina 2"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106096016> a schema:CreativeWork ;
+    rdfs:label "carmina 4"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106096017> a schema:CreativeWork ;
+    rdfs:label "carmina 3"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106097109> a schema:CreativeWork ;
+    rdfs:label "Carmina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106097764> a schema:CreativeWork ;
+    rdfs:label "Lorica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106097835> a schema:CreativeWork ;
+    rdfs:label "argumenta Aeneidos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098134> a schema:CreativeWork ;
+    rdfs:label "disticha de vetere nouoque Testamento"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098137> a schema:CreativeWork ;
+    rdfs:label "Atellanae fragmentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098138> a schema:CreativeWork ;
+    rdfs:label "epistula ad Parthenium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098146> a schema:CreativeWork ;
+    rdfs:label "carmen"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098147> a schema:CreativeWork ;
+    rdfs:label "filius ad patrem"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098148> a schema:CreativeWork ;
+    rdfs:label "epicedion in patrem"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098151> a schema:CreativeWork ;
+    rdfs:label "Epitaphia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098152> a schema:CreativeWork ;
+    rdfs:label "Epigrammata"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098153> a schema:CreativeWork ;
+    rdfs:label "Eclogae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098154> a schema:CreativeWork ;
+    rdfs:label "epistulae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098155> a schema:CreativeWork ;
+    rdfs:label "Oratio consulis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098156> a schema:CreativeWork ;
+    rdfs:label "elogia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098165> a schema:CreativeWork ;
+    rdfs:label "versus metrici"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098172> a schema:CreativeWork ;
+    rdfs:label "Praefationes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098407> a schema:CreativeWork ;
+    rdfs:label "Epistulae 1"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106098408> a schema:CreativeWork ;
+    rdfs:label "Epistulae 2"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106099178> a schema:CreativeWork ;
+    rdfs:label "Genethliacos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106099725> a schema:CreativeWork ;
+    rdfs:label "versus Paschales"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100243> a schema:CreativeWork ;
+    rdfs:label "Fasti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100246> a schema:CreativeWork ;
+    rdfs:label "In Rufinum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100247> a schema:CreativeWork ;
+    rdfs:label "panegyricus dictus Honorio tertium consuli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100248> a schema:CreativeWork ;
+    rdfs:label "hymni"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100249> a schema:CreativeWork ;
+    rdfs:label "Celeuma seu Carmen navale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100251> a schema:CreativeWork ;
+    rdfs:label "versus in subscritione codicis Hegesippi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100252> a schema:CreativeWork ;
+    rdfs:label "versus in mulieres"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100254> a schema:CreativeWork ;
+    rdfs:label "De laudibus dei"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100255> a schema:CreativeWork ;
+    rdfs:label "panegyricus dictus Honorio quartum consuli"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100256> a schema:CreativeWork ;
+    rdfs:label "Romulea, fragmentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100258> a schema:CreativeWork ;
+    rdfs:label "carmina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100260> a schema:CreativeWork ;
+    rdfs:label "Romulea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100261> a schema:CreativeWork ;
+    rdfs:label "fragmenta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100264> a schema:CreativeWork ;
+    rdfs:label "oratio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100266> a schema:CreativeWork ;
+    rdfs:label "mimorum fragmenta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100267> a schema:CreativeWork ;
+    rdfs:label "epigramma"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100268> a schema:CreativeWork ;
+    rdfs:label "Arateorum fragmenta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100275> a schema:CreativeWork ;
+    rdfs:label "fragmentum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100277> a schema:CreativeWork ;
+    rdfs:label "elegiae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100279> a schema:CreativeWork ;
+    rdfs:label "elegiarum appendix"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100284> a schema:CreativeWork ;
+    rdfs:label "versus in Naevium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100286> a schema:CreativeWork ;
+    rdfs:label "Cypriae Iliadis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100287> a schema:CreativeWork ;
+    rdfs:label "Carmina minora"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100298> a schema:CreativeWork ;
+    rdfs:label "epigrammata"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100306> a schema:CreativeWork ;
+    rdfs:label "mimi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100310> a schema:CreativeWork ;
+    rdfs:label "sententiae, appendix"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100539> a schema:CreativeWork ;
+    rdfs:label "hymnus de ratione temporum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106100545> a schema:CreativeWork ;
+    rdfs:label "carminum appendix"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106387464> a schema:CreativeWork ;
+    rdfs:label "Neaera"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q106474510> a schema:CreativeWork ;
+    rdfs:label "versus in Metellos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q110930192> a schema:CreativeWork ;
+    rdfs:label "Precationes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1114951> a schema:CreativeWork ;
+    rdfs:label "De reditu suo"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1128387> a schema:CreativeWork ;
+    rdfs:label "Laus Pisonis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1215764> a schema:CreativeWork ;
+    rdfs:label "Curculio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1216194> a schema:CreativeWork ;
+    rdfs:label "Casina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1216225> a schema:CreativeWork ;
+    rdfs:label "Medicamina Faciei Femineae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1217045> a schema:CreativeWork ;
+    rdfs:label "Phormio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1218984> a schema:CreativeWork ;
+    rdfs:label "Epidicus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1219433> a schema:CreativeWork ;
+    rdfs:label "Punica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1219666> a schema:CreativeWork ;
+    rdfs:label "Stichus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1219682> a schema:CreativeWork ;
+    rdfs:label "Trinummus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1220978> a schema:CreativeWork ;
+    rdfs:label "Ilias Latina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1226518> a schema:CreativeWork ;
+    rdfs:label "Rudens"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1229481> a schema:CreativeWork ;
+    rdfs:label "Distichs of Cato"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1229879> a schema:CreativeWork ;
+    rdfs:label "Poenulus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1230918> a schema:CreativeWork ;
+    rdfs:label "Miles gloriosus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1233598> a schema:CreativeWork ;
+    rdfs:label "Eunuchus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1233645> a schema:CreativeWork ;
+    rdfs:label "Andria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1233667> a schema:CreativeWork ;
+    rdfs:label "Pseudolus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1234585> a schema:CreativeWork ;
+    rdfs:label "Aulularia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1234955> a schema:CreativeWork ;
+    rdfs:label "Priapeia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1235754> a schema:CreativeWork ;
+    rdfs:label "Mostellaria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1236392> a schema:CreativeWork ;
+    rdfs:label "Remedia amoris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1236672> a schema:CreativeWork ;
+    rdfs:label "Heroides"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1240100> a schema:CreativeWork ;
+    rdfs:label "Menaechmi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1246446> a schema:CreativeWork ;
+    rdfs:label "Carmen saeculare"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12899576> a schema:CreativeWork ;
+    rdfs:label "De insitione"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12899580> a schema:CreativeWork ;
+    rdfs:label "De medicina praecepta"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q12901105> a schema:CreativeWork ;
+    rdfs:label "Moretum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15059087> a schema:CreativeWork ;
+    rdfs:label "Agamemnon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15427808> a schema:CreativeWork ;
+    rdfs:label "Phoenissae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15783827> a schema:CreativeWork ;
+    rdfs:label "Aratea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q15804865> a schema:CreativeWork ;
+    rdfs:label "De medicamentis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q16167593> a schema:CreativeWork ;
+    rdfs:label "Appendix Perottina"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q1684171> a schema:CreativeWork ;
+    rdfs:label "Mosella"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q17331159> a schema:CreativeWork ;
+    rdfs:label "Elegiae in Maecenatem"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q184742> a schema:CreativeWork ;
+    rdfs:label "Metamorphoses"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19170562> a schema:CreativeWork ;
+    rdfs:label "Fabulae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q19738757> a schema:CreativeWork ;
+    rdfs:label "Phaenomena"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q20552073> a schema:CreativeWork ;
+    rdfs:label "Ciris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q20552117> a schema:CreativeWork ;
+    rdfs:label "Liber spectaculorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q242030> a schema:CreativeWork ;
+    rdfs:label "Apocolocyntosis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q246732> a schema:CreativeWork ;
+    rdfs:label "Satyricon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2523113> a schema:CreativeWork ;
+    rdfs:label "Vidularia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25302864> a schema:CreativeWork ;
+    rdfs:label "Astronomica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25338519> a schema:CreativeWork ;
+    rdfs:label "Eclogues of Nemesianus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25381482> a schema:CreativeWork ;
+    rdfs:label "Griphus ternarii numeri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q25511102> a schema:CreativeWork ;
+    rdfs:label "Bellum civile"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2708117> a schema:CreativeWork ;
+    rdfs:label "Thebaid"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q27972553> a schema:CreativeWork ;
+    rdfs:label "Consolatio ad Liviam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q28457401> a schema:CreativeWork ;
+    rdfs:label "Cynegetica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q287323> a schema:CreativeWork ;
+    rdfs:label "Tristia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3006491> a schema:CreativeWork ;
+    rdfs:label "Ora Maritima"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q302029> a schema:CreativeWork ;
+    rdfs:label "Achilleid"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q30545639> a schema:CreativeWork ;
+    rdfs:label "Iohannis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3332727> a schema:CreativeWork ;
+    rdfs:label "Medea"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q355342> a schema:CreativeWork ;
+    rdfs:label "Adelphoe"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3617890> a schema:CreativeWork ;
+    rdfs:label "Annales"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3618230> a schema:CreativeWork ;
+    rdfs:label "Laudes Domini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3704089> a schema:CreativeWork ;
+    rdfs:label "De bello Gothico"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3730710> a schema:CreativeWork ;
+    rdfs:label "Epodes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3735205> a schema:CreativeWork ;
+    rdfs:label "Evangeliorum libri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3779919> a schema:CreativeWork ;
+    rdfs:label "Poetry of Catullus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3782570> a schema:CreativeWork ;
+    rdfs:label "Halieutica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3785160> a schema:CreativeWork ;
+    rdfs:label "Hercules Oetaeus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3785162> a schema:CreativeWork ;
+    rdfs:label "Hercules Furens"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3787859> a schema:CreativeWork ;
+    rdfs:label "Hymns"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3791552> a schema:CreativeWork ;
+    rdfs:label "Ibis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3844953> a schema:CreativeWork ;
+    rdfs:label "Mantua me genuit, Calabri rapuere, tenet nunc Parthenope; cecini pascua rura duces"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3885491> a schema:CreativeWork ;
+    rdfs:label "Ordo urbium nobilium"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3885530> a schema:CreativeWork ;
+    rdfs:label "Orestes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3922533> a schema:CreativeWork ;
+    rdfs:label "proem of the Aeneid"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3950815> a schema:CreativeWork ;
+    rdfs:label "Saturae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3990982> a schema:CreativeWork ;
+    rdfs:label "Thyestes"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3999195> a schema:CreativeWork ;
+    rdfs:label "Troades"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42187680> a schema:CreativeWork ;
+    rdfs:label "Carmen apologeticum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42188219> a schema:CreativeWork ;
+    rdfs:label "Contra Symmachum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42189213> a schema:CreativeWork ;
+    rdfs:label "Eclogues"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42190704> a schema:CreativeWork ;
+    rdfs:label "Hamartigenia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42192480> a schema:CreativeWork ;
+    rdfs:label "Ludus septem sapientum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42194050> a schema:CreativeWork ;
+    rdfs:label "Parentalia (Ausonius)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42194647> a schema:CreativeWork ;
+    rdfs:label "Professores Burdigalenses"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42195304> a schema:CreativeWork ;
+    rdfs:label "Satisfactio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42196293> a schema:CreativeWork ;
+    rdfs:label "Technopaegnion"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42197145> a schema:CreativeWork ;
+    rdfs:label "Variae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q42197378> a schema:CreativeWork ;
+    rdfs:label "vita Martini"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4328829> a schema:CreativeWork ;
+    rdfs:label "The Marriage of Philology and Mercury"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q4713006> a schema:CreativeWork ;
+    rdfs:label "Alcestis Barcinonensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q47500820> a schema:CreativeWork ;
+    rdfs:label "Commonitorium (Orientius)"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q475025> a schema:CreativeWork ;
+    rdfs:label "Amphitryon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q545258> a schema:CreativeWork ;
+    rdfs:label "Hecyra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q547694> a schema:CreativeWork ;
+    rdfs:label "Persa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q56927382> a schema:CreativeWork ;
+    rdfs:label "Phoenix"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q572519> a schema:CreativeWork ;
+    rdfs:label "Latin Anthology"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q582867> a schema:CreativeWork ;
+    rdfs:label "Psychomachia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q60220> a schema:CreativeWork ;
+    rdfs:label "Aeneid"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q617142> a schema:CreativeWork ;
+    rdfs:label "Cistellaria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q64543212> a schema:CreativeWork ;
+    rdfs:label "Carmen de Bello Aegyptiaco"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q64543385> a schema:CreativeWork ;
+    rdfs:label "Precatio Terrae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q64547166> a schema:CreativeWork ;
+    rdfs:label "Precatio Omnium Herbarum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q646990> a schema:CreativeWork ;
+    rdfs:label "Octavia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q648918> a schema:CreativeWork ;
+    rdfs:label "Argonautica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q652185> a schema:CreativeWork ;
+    rdfs:label "Truculentus"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q65556461> a schema:CreativeWork ;
+    rdfs:label "Versus cuiusdam Scotti de alfabeto"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q65556463> a schema:CreativeWork ;
+    rdfs:label "Carmen navale"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q65556465> a schema:CreativeWork ;
+    rdfs:label "Carmen Sibyllae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q65556472> a schema:CreativeWork ;
+    rdfs:label "epigrammata Bobiensia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q65562121> a schema:CreativeWork ;
+    rdfs:label "epitaphium Sabiniani papae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q65562122> a schema:CreativeWork ;
+    rdfs:label "epigramma de Crassitio"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q65562123> a schema:CreativeWork ;
+    rdfs:label "elogium Asbadi"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q659210> a schema:CreativeWork ;
+    rdfs:label "Saturae Menippeae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q66023606> a schema:CreativeWork ;
+    rdfs:label "Aegritudo Perdicae"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q66134045> a schema:CreativeWork ;
+    rdfs:label "Panegyricus in Messallam"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q66134643> a schema:CreativeWork ;
+    rdfs:label "sylloge cod. Elnonensis"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q66385338> a schema:CreativeWork ;
+    rdfs:label "Carmen de Martyrio Maccabaeorum"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q668614> a schema:CreativeWork ;
+    rdfs:label "Liber Peristephanon"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q669022> a schema:CreativeWork ;
+    rdfs:label "Asinaria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q674439> a schema:CreativeWork ;
+    rdfs:label "Georgics"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q677997> a schema:CreativeWork ;
+    rdfs:label "Ars Poetica"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q678375> a schema:CreativeWork ;
+    rdfs:label "Pharsalia"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q678909> a schema:CreativeWork ;
+    rdfs:label "Heauton Timorumenos"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q704019> a schema:CreativeWork ;
+    rdfs:label "Ars amatoria"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q763533> a schema:CreativeWork ;
+    rdfs:label "Pervigilium Veneris"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q777435> a schema:CreativeWork ;
+    rdfs:label "Phaedra"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q798026> a schema:CreativeWork ;
+    rdfs:label "Bacchides"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q858639> a schema:CreativeWork ;
+    rdfs:label "Carmen ad Flavium Felicem"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q861927> a schema:CreativeWork ;
+    rdfs:label "The Consolation of Philosophy"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q868982> a schema:CreativeWork ;
+    rdfs:label "Copa"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87143921> a schema:CreativeWork ;
+    rdfs:label "Satires"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q87771446> a schema:CreativeWork ;
+    rdfs:label "Aetna"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q972126> a schema:CreativeWork ;
+    rdfs:label "Mercator"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q972143> a schema:CreativeWork ;
+    rdfs:label "Oedipus"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729160920-6521974/extraction-1755592940896-2/> prov:generatedAtTime "2025-10-07T14:08:21.891373"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasGeneratedBy <https://w3id.org/dh-atlas/1729160920-6521974/extraction-1755592940896-2> .
+
+<https://w3id.org/dh-atlas/1729160920-6521974/extraction-1755592940896-2> prov:used <https://query.wikidata.org/sparql?query=PREFIX%20wdt%3A%20%3Chttp%3A//www.wikidata.org/prop/direct/%3E%0APREFIX%20wikibase%3A%20%3Chttp%3A//wikiba.se/ontology%23%3E%0APREFIX%20bd%3A%20%3Chttp%3A//www.bigdata.com/rdf%23%3E%0ASELECT%20%3Furi%20%3Flabel%0AWHERE%20%7B%0A%20%3Furi%20wdt%3AP8312%20%3Fwebsite%20.%0A%20%3Furi%20rdfs%3Alabel%20%3Flabel%20.%0A%20FILTER%28LANG%28%3Flabel%29%20%3D%20%22en%22%29%0A%7D> .
+

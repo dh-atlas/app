@@ -1,0 +1,30 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757520079-069> a schema:Person ;
+    rdfs:label "Rigobianco, Luca"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1729012784-159052>,
+        <https://w3id.org/dh-atlas/1729200890-684812> ;
+    schema:identifier <https://orcid.org/0000-0003-2810-8665> ;
+    schema:name "Rigobianco, Luca"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q123472027> .
+
+<https://w3id.org/dh-atlas/1757520079-069/> rdfs:label "Rigobianco, Luca"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-10T16:40:54.202084"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Rigobianco, Luca"@en .
+
+<http://www.wikidata.org/entity/Q123472027> rdfs:label "Luca Rigobianco"^^xsd:string .
+
+<https://orcid.org/0000-0003-2810-8665> rdfs:label "0000-0003-2810-8665"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729012784-159052> rdfs:label "Ca' Foscari University of Venice"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729200890-684812> rdfs:label "University of Florence"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

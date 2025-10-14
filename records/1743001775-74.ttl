@@ -1,25 +1,28 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://dbpedia.org/ontology/> .
-@prefix default2: <http://www.w3.org/ns/prov#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/dh-atlas/1743001775-74> a foaf:Agent,
-        schema:Person ;
+<https://w3id.org/dh-atlas/1743001775-74> a schema:Person ;
     rdfs:label "Spampinato, Daria"@en ;
-    :affiliation <https://w3id.org/dh-atlas/1743002657-995> ;
-    :name "Spampinato, Daria"@en .
+    schema:affiliation <https://w3id.org/dh-atlas/1743002657-995> ;
+    schema:identifier <https://orcid.org/0000-0001-5524-7463> ;
+    schema:name "Spampinato, Daria"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q97095948> .
 
 <https://w3id.org/dh-atlas/1743001775-74/> rdfs:label "Spampinato, Daria"@en ;
-    default1:currentStatus "modified"^^xsd:string ;
-    :name "Spampinato, Daria"@en ;
-    default2:generatedAtTime "2025-04-01T16:26:14.520000+00:00"^^xsd:dateTime ;
-    default2:wasAttributedTo <https://w3id.org/dh-atlas/chiara-dot-manca5-at-unibo-dot-it> ;
-    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T23:18:31.274977"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/chiara-dot-manca5-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Spampinato, Daria"@en .
 
-<https://w3id.org/dh-atlas/1743002657-995> rdfs:label "Istituto di Scienze e Tecnologie della Cognizione - CNR"^^xsd:string .
+<http://www.wikidata.org/entity/Q97095948> rdfs:label "Daria Spampinato"^^xsd:string .
+
+<https://orcid.org/0000-0001-5524-7463> rdfs:label "0000-0001-5524-7463"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743002657-995> rdfs:label "Istituto di Scienze e Tecnologie della Cognizione (CNR)"^^xsd:string .
 
 <https://w3id.org/dh-atlas/chiara-dot-manca5-at-unibo-dot-it> rdfs:label "chiara.manca5@unibo.it" .
 

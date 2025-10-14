@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757608819-25> a schema:Person ;
+    rdfs:label "Aresti, Alessandro"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1757608885-089> ;
+    schema:identifier <https://orcid.org/0000-0003-1224-0186> ;
+    schema:name "Aresti, Alessandro"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q120906993> .
+
+<https://w3id.org/dh-atlas/1757608819-25/> rdfs:label "Aresti, Alessandro"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T17:29:03.920298"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Aresti, Alessandro"@en .
+
+<http://www.wikidata.org/entity/Q120906993> rdfs:label "Alessandro Aresti"^^xsd:string .
+
+<https://orcid.org/0000-0003-1224-0186> rdfs:label "0000-0003-1224-0186"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757608885-089> rdfs:label "University of Cagliari"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

@@ -1,0 +1,25 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757930957-523> a schema:Person ;
+    rdfs:label "D'Angelo, Edoardo"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1729030640-1172316> ;
+    schema:name "D'Angelo, Edoardo"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q109736743> .
+
+<https://w3id.org/dh-atlas/1757930957-523/> rdfs:label "D'Angelo, Edoardo"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T10:20:18.619265"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "D'Angelo, Edoardo"@en .
+
+<http://www.wikidata.org/entity/Q109736743> rdfs:label "Edoardo D'Angelo"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729030640-1172316> rdfs:label "Suor Orsola Benincasa University of Naples"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

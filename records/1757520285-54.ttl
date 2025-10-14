@@ -1,0 +1,27 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757520285-54> a schema:Person ;
+    rdfs:label "Mallia, Michele"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728999602-7282345>,
+        <https://w3id.org/dh-atlas/1729013958-5402913> ;
+    schema:identifier <https://orcid.org/0009-0001-0223-4711> ;
+    schema:name "Mallia, Michele"@en .
+
+<https://w3id.org/dh-atlas/1757520285-54/> rdfs:label "Mallia, Michele"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-10T16:40:20.708696"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Mallia, Michele"@en .
+
+<https://orcid.org/0009-0001-0223-4711> rdfs:label "0009-0001-0223-4711"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728999602-7282345> rdfs:label "Consiglio Nazionale delle Ricerche"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729013958-5402913> rdfs:label "Istituto di Linguistica Computazionale "^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

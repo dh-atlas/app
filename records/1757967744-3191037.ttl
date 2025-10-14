@@ -1,0 +1,41 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757967744-3191037> a schema:SoftwareApplication ;
+    rdfs:label "DraCor - API"@en ;
+    schema:applicationCategory <http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> ;
+    schema:description "The eXistdb application providing the API for DraCor."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/analyzing>,
+        <https://vocabs.dariah.eu/tadirah/discovering>,
+        <https://vocabs.dariah.eu/tadirah/querying>,
+        <https://vocabs.dariah.eu/tadirah/textCategorization> ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/MIT> ;
+    schema:name "DraCor - API"@en ;
+    schema:url <https://dracor.org/api/v1> ;
+    schema:usageInfo <https://dracor-org.github.io/dracor-notebooks/api-tutorial/api-tutorial.html> .
+
+<https://w3id.org/dh-atlas/1757967744-3191037/> rdfs:label "DraCor - API"@en ;
+    ns1:currentStatus "published"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T20:39:01.598724"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "DraCor - API"@en .
+
+<http://publications.europa.eu/resource/authority/data-service-type/HUMAN_INTERACTION> rdfs:label "Human interaction service - DATA SERVICE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/MIT> skos:prefLabel "The MIT License - LICENCE"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/analyzing> skos:prefLabel "Analyzing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/discovering> skos:prefLabel "Discovering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/textCategorization> skos:prefLabel "Text Categorization - TADIRAH"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

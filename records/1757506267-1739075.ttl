@@ -1,0 +1,109 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <https://w3id.org/dh-atlas/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:1757506267-1739075 a schema:Dataset,
+        ns2:TextCollection ;
+    rdfs:label "Codice Diplomatico della Lombardia medievale (CDLM)"@en ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-E>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-01> ;
+    schema:additionalType ns2:TextCollection ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns2:1757508318-622 ;
+    schema:datePublished "2000-01-01"^^xsd:date ;
+    schema:description "Collection of digital editions of lombard medieval charters and documents, spanning between the 8th and the 12th century."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/querying> ;
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/XML> ;
+    schema:genre <http://sparql.cwrc.ca/ontologies/genre#IllustratedForm> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ITA>,
+        <http://publications.europa.eu/resource/authority/language/LAT> ;
+    schema:license <https://w3id.org/italia/controlled-vocabulary/licences/C_Unknown> ;
+    schema:name "Codice Diplomatico della Lombardia medievale (CDLM)"@en,
+        "Collezione di testi del Codice Diplomatico della Lombardia medievale (CDLM)"@it ;
+    schema:publisher ns2:1757508395-037,
+        ns2:1757509355-78 ;
+    schema:spatialCoverage <https://sws.geonames.org/3171364>,
+        <https://sws.geonames.org/3173434>,
+        <https://sws.geonames.org/3177837>,
+        <https://sws.geonames.org/3178227>,
+        <https://sws.geonames.org/3181553>,
+        <https://sws.geonames.org/3182163>,
+        <https://sws.geonames.org/6458617> ;
+    schema:url <https://www.lombardiabeniculturali.it/cdlm/> ;
+    schema:usageInfo <https://www.lombardiabeniculturali.it/cdlm/edizioni/> ;
+    schema:version "Unknown"@en ;
+    ns2:editionType <https://www.w3id.org/dh-atlas-vocabularies/etv/Best-manuscriptEdition>,
+        <https://www.w3id.org/dh-atlas-vocabularies/etv/InterpretativeEdition> ;
+    ns2:methodology <https://vocabs.dariah.eu/tadirah/editing>,
+        <https://vocabs.dariah.eu/tadirah/gathering> ;
+    ns2:servedBy ns2:1757508906-74 .
+
+<https://w3id.org/dh-atlas/1757506267-1739075/> rdfs:label "Codice Diplomatico della Lombardia medievale (CDLM)"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-10T21:52:40.689571"^^xsd:dateTime ;
+    prov:wasAttributedTo ns2:anonymous ;
+    prov:wasInfluencedBy ns2:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "Codice Diplomatico della Lombardia medievale (CDLM)"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/XML> skos:prefLabel "XML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/LAT> skos:prefLabel "Latin - LANGUAGE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://sparql.cwrc.ca/ontologies/genre#IllustratedForm> rdfs:label "Illustrated Form"^^xsd:string .
+
+<https://sws.geonames.org/3171364> rdfs:label "Province of Pavia"^^xsd:string .
+
+<https://sws.geonames.org/3173434> rdfs:label "Province of Milan"^^xsd:string .
+
+<https://sws.geonames.org/3177837> rdfs:label "Province of Cremona"^^xsd:string .
+
+<https://sws.geonames.org/3178227> rdfs:label "Province of Como"^^xsd:string .
+
+<https://sws.geonames.org/3181553> rdfs:label "Province of Brescia"^^xsd:string .
+
+<https://sws.geonames.org/3182163> rdfs:label "Province of Bergamo"^^xsd:string .
+
+<https://sws.geonames.org/6458617> rdfs:label "Province of Lodi"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/editing> skos:prefLabel "Editing - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/gathering> skos:prefLabel "Gathering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
+
+ns2:1757508318-622 rdfs:label "Ansani, Michele"^^xsd:string .
+
+ns2:1757508395-037 rdfs:label "University of Pavia"^^xsd:string .
+
+ns2:1757508906-74 rdfs:label "Codice Diplomatico Della Lombardia: Motore di Ricerca"^^xsd:string .
+
+ns2:1757509355-78 rdfs:label "Lombardy Region"^^xsd:string .
+
+ns2:anonymous rdfs:label "anonymous" .
+
+ns2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-E> skos:prefLabel "Medieval latin and romance philologies and literatures - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-M-STO-01> skos:prefLabel "Medieval history - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/licences/C_Unknown> skos:prefLabel "Unknown License - LICENSES"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/Best-manuscriptEdition> rdfs:label "Best-manuscript Edition"^^xsd:string .
+
+<https://www.w3id.org/dh-atlas-vocabularies/etv/InterpretativeEdition> rdfs:label "Interpretative Edition"^^xsd:string .
+
+ns2:TextCollection rdfs:label "Text Collection"^^xsd:string .
+

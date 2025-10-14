@@ -1,6 +1,6 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://dbpedia.org/ontology/> .
-@prefix default2: <http://www.w3.org/ns/prov#> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -9,20 +9,20 @@
 <https://w3id.org/dh-atlas/1743001587-1776307> a schema:Dataset,
         <https://w3id.org/dh-atlas/DigitalScholarlyEdition> ;
     rdfs:label "Progetto Saba"@en ;
-    :additionalType <https://w3id.org/dh-atlas/DigitalScholarlyEdition> ;
-    :conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
-    :datePublished "2019-01-01"^^xsd:date ;
-    :description "Riproduzione digitale del Canzoniere manoscritto del 1919-1920 affiancata dalla trascrizione annotata delle poesie in esso contenute"@en ;
-    :inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
-    :name "Progetto Saba"@en,
+    ns1:additionalType <https://w3id.org/dh-atlas/DigitalScholarlyEdition> ;
+    ns1:conditionsOfAccess <http://purl.org/coar/access_right/c_abf2> ;
+    ns1:datePublished "2019-01-01"^^xsd:date ;
+    ns1:description "Riproduzione digitale del Canzoniere manoscritto del 1919-1920 affiancata dalla trascrizione annotata delle poesie in esso contenute"@en ;
+    ns1:inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns1:name "Progetto Saba"@en,
         "Progetto Saba"@it .
 
 <https://w3id.org/dh-atlas/1743001587-1776307/> rdfs:label "Progetto Saba"@en ;
-    default1:currentStatus "modified"^^xsd:string ;
-    :name "Progetto Saba"@en ;
-    default2:generatedAtTime "2025-04-02T09:35:35.974000+00:00"^^xsd:dateTime ;
-    default2:wasAttributedTo <https://w3id.org/dh-atlas/antonella-dot-negri-at-cultura-dot-gov-dot-it> ;
-    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Progetto Saba"@en ;
+    prov:generatedAtTime "2025-04-02T09:35:35.974941"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/antonella-dot-negri-at-cultura-dot-gov-dot-it> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
 
 <http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
 

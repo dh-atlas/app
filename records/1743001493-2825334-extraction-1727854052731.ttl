@@ -1,0 +1,17 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.wikidata.org/entity/Q1067> a schema:Person ;
+    rdfs:label "Dante Alighieri"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q3741899> a schema:Person ;
+    rdfs:label "Federico Sanguineti"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q40185> a schema:CreativeWork ;
+    rdfs:label "The Divine Comedy"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1743001493-2825334/extraction-1727854052731/> prov:generatedAtTime "2025-09-16T14:36:33.187896"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+

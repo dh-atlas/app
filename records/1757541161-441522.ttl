@@ -1,0 +1,60 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <https://w3id.org/dh-atlas/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:1757541161-441522 a schema:Dataset ;
+    rdfs:label "Corago Catalogue"@en ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    dcterms:type <http://w3id.org/knot/taxonomy/digital_catalogue> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-10> ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
+    schema:creator ns2:1757541266-073 ;
+    schema:datePublished "2025-05-20"^^xsd:date ;
+    schema:description "The Corago project aims to provide scholars with an organised and verified information base on Italian opera from the 17th century to the early 20th century."@en ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/querying> ;
+    schema:identifier "http://dx.doi.org/10.6092/UNIBO/CORAGO"@en ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ITA> ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0> ;
+    schema:name "Corago Catalogue"@en ;
+    schema:producer ns2:1757541468-639 ;
+    schema:publisher ns2:1728995806-349488 ;
+    schema:size "58,500 editions catalogued; 73,500 copies reproduced and accessible online, from 38,800 editions; 14,850 operas catalogued; 41,700 performances described."@en ;
+    schema:url <https://corago.unibo.it/> ;
+    ns2:methodology <https://vocabs.dariah.eu/tadirah/gathering> .
+
+<https://w3id.org/dh-atlas/1757541161-441522/> rdfs:label "Corago Catalogue"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T16:32:48.987454"^^xsd:dateTime ;
+    prov:wasAttributedTo ns2:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    prov:wasInfluencedBy ns2:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "Corago Catalogue"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> skos:prefLabel "under development - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ITA> skos:prefLabel "Italian - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0> skos:prefLabel "Creative Commons Attribution–NonCommercial–NoDerivs 3.0 Unported - LICENCE"^^xsd:string .
+
+<http://purl.org/coar/access_right/c_abf2> rdfs:label "open access"^^xsd:string .
+
+<http://w3id.org/knot/taxonomy/digital_catalogue> skos:prefLabel "digital catalogue - KNOT"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/gathering> skos:prefLabel "Gathering - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/querying> skos:prefLabel "Querying - TADIRAH"^^xsd:string .
+
+ns2:1728995806-349488 rdfs:label "University of Bologna"^^xsd:string .
+
+ns2:1757541266-073 rdfs:label "Pompilio, Angelo"^^xsd:string .
+
+ns2:1757541468-639 rdfs:label "Corago"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-FIL-LET-10> skos:prefLabel "Italian literature - ACADEMIC FIELD"^^xsd:string .
+
+ns2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+

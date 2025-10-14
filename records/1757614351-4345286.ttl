@@ -1,0 +1,107 @@
+@prefix ns1: <http://ontosoft.org/software#> .
+@prefix ns2: <https://w3id.org/dh-atlas/> .
+@prefix ns3: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns2:1757614351-4345286 a schema:Dataset,
+        ns2:Software ;
+    rdfs:label "3DHOP (3D Heritage Online Presenter)"@en ;
+    ns1:hasCodeLocation <https://github.com/cnr-isti-vclab/3DHOP> ;
+    ns1:hasImplementationLanguage <http://www.wikidata.org/entity/Q2005> ;
+    ns1:hasOutput <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+    schema:about <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ANT-07>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ANT-08>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-OR-05>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-OR-06>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-OR-11>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-OR-16>,
+        <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-OR-20> ;
+    schema:additionalType ns2:Software ;
+    schema:citation <https://doi.org/10.1016/j.cag.2015.07.001> ;
+    schema:contributor ns2:1757615214-463,
+        ns2:1757621793-644,
+        ns2:1757622585-254 ;
+    schema:creativeWorkStatus <http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> ;
+    schema:creator ns2:1757614943-767 ;
+    schema:datePublished "2020-06-18"^^xsd:date ;
+    schema:description "3DHOP (3D Heritage Online Presenter) is an open-source framework for the creation of interactive Web presentations of high-resolution 3D models, oriented to the Cultural Heritage field. 3DHOP target audience ranges from the museum curators with some IT experience to the experienced Web designers who want to embed 3D contents in their creations, from students in the CH field to small companies developing web applications for museum and CH institutions."@en ;
+    schema:distribution <https://3dhop.net/download.php> ;
+    schema:educationalUse <https://vocabs.dariah.eu/tadirah/dataVisualization>,
+        <https://vocabs.dariah.eu/tadirah/publishing> ;
+    schema:encodingFormat <http://publications.europa.eu/resource/authority/file-type/JS> ;
+    schema:inLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    schema:isBasedOn ns2:1757629444-8550968 ;
+    schema:isPartOf ns2:1757622797-676 ;
+    schema:license <http://publications.europa.eu/resource/authority/licence/GPL_3_0> ;
+    schema:name "3DHOP (3D Heritage Online Presenter)"@en ;
+    schema:producer ns2:1757623465-862 ;
+    schema:publisher ns2:1728998303-4028718 ;
+    schema:url <https://3dhop.net/>,
+        <https://vcg.isti.cnr.it/vcgtools/nexus/> ;
+    schema:usageInfo <https://github.com/cnr-isti-vclab/3DHOP> ;
+    schema:version "4.3"@en ;
+    ns2:methodology <https://vocabs.dariah.eu/tadirah/programming> .
+
+<https://w3id.org/dh-atlas/1757614351-4345286/> rdfs:label "3DHOP (3D Heritage Online Presenter)"@en ;
+    ns3:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-11T22:44:39.262729"^^xsd:dateTime ;
+    prov:wasAttributedTo ns2:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    prov:wasInfluencedBy ns2:sebastiano-dot-giacomin2-at-unibo-dot-it ;
+    schema:name "3DHOP (3D Heritage Online Presenter)"@en .
+
+<http://publications.europa.eu/resource/authority/dataset-status/COMPLETED> skos:prefLabel "completed - DATASET STATUS"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/HTML> skos:prefLabel "HTML - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/file-type/JS> skos:prefLabel "JavaScript - FILE TYPE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:prefLabel "English - LANGUAGE"^^xsd:string .
+
+<http://publications.europa.eu/resource/authority/licence/GPL_3_0> skos:prefLabel "GNU General Public License v3.0 only - LICENCE"^^xsd:string .
+
+<http://www.wikidata.org/entity/Q2005> rdfs:label "JavaScript"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/dataVisualization> skos:prefLabel "Data Visualization - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/programming> skos:prefLabel "Programming - TADIRAH"^^xsd:string .
+
+<https://vocabs.dariah.eu/tadirah/publishing> skos:prefLabel "Publishing - TADIRAH"^^xsd:string .
+
+ns2:1728998303-4028718 rdfs:label "Istituto di Scienza e Tecnologie dell’Informazione “Alessandro Faedo” (CNR)"^^xsd:string .
+
+ns2:1757614943-767 rdfs:label "Visual Computing Lab (ISTI - CNR)"^^xsd:string .
+
+ns2:1757615214-463 rdfs:label "Callieri, Marco"^^xsd:string .
+
+ns2:1757621793-644 rdfs:label "Potenziani, Marco"^^xsd:string .
+
+ns2:1757622585-254 rdfs:label "Ponchio, Federico"^^xsd:string .
+
+ns2:1757622797-676 rdfs:label "Nexus"^^xsd:string .
+
+ns2:1757623465-862 rdfs:label "3D-COFORM Project"^^xsd:string .
+
+ns2:1757629444-8550968 rdfs:label "SpiderGL"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ANT-07> skos:prefLabel "Classical archaeology - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-ANT-08> skos:prefLabel "Christian and medieval archaeology - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-OR-05> skos:prefLabel "Ancient near east archaeology and art history - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-OR-06> skos:prefLabel "Phoenician and punic archaeology - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-OR-11> skos:prefLabel "Muslim archaeology and art history - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-OR-16> skos:prefLabel "Indian and central asian archaeology and art history - ACADEMIC FIELD"^^xsd:string .
+
+<https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-L-OR-20> skos:prefLabel "East asian archaeology, art history and philosophy - ACADEMIC FIELD"^^xsd:string .
+
+ns2:Software rdfs:label "Software"^^xsd:string .
+
+ns2:sebastiano-dot-giacomin2-at-unibo-dot-it rdfs:label "sebastiano.giacomin2@unibo.it" .
+

@@ -1,0 +1,30 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758061191-183> a schema:Person ;
+    rdfs:label "Manganelli Del Fà, Rachele"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728999602-7282345>,
+        <https://w3id.org/dh-atlas/1758061014-965> ;
+    schema:identifier <https://orcid.org/0000-0002-4767-5684> ;
+    schema:name "Manganelli Del Fà, Rachele"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q91879403> .
+
+<https://w3id.org/dh-atlas/1758061191-183/> rdfs:label "Manganelli Del Fà, Rachele"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-16T22:26:05.532257"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Manganelli Del Fà, Rachele"@en .
+
+<http://www.wikidata.org/entity/Q91879403> rdfs:label "Rachele Manganelli Del Fá"^^xsd:string .
+
+<https://orcid.org/0000-0002-4767-5684> rdfs:label "0000-0002-4767-5684"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728999602-7282345> rdfs:label "National Research Council"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1758061014-965> rdfs:label "Istituto di Scienze del Patrimonio Culturale (CNR)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

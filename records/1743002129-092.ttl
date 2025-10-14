@@ -1,7 +1,7 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://dbpedia.org/ontology/> .
-@prefix default2: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -9,17 +9,17 @@
 <https://w3id.org/dh-atlas/1743002129-092> a foaf:Agent,
         schema:Person ;
     rdfs:label "Gangemi, Aldo"@en ;
-    :affiliation <https://w3id.org/dh-atlas/1728995806-349488> ;
-    :identifier <https://orcid.org/0000-0001-5568-2684> ;
-    :name "Gangemi, Aldo"@en ;
-    :sameAs <http://www.wikidata.org/entity/Q30103138> .
+    ns1:affiliation <https://w3id.org/dh-atlas/1728995806-349488> ;
+    ns1:identifier <https://orcid.org/0000-0001-5568-2684> ;
+    ns1:name "Gangemi, Aldo"@en ;
+    ns1:sameAs <http://www.wikidata.org/entity/Q30103138> .
 
 <https://w3id.org/dh-atlas/1743002129-092/> rdfs:label "Gangemi, Aldo"@en ;
-    default1:currentStatus "modified"^^xsd:string ;
-    :name "Gangemi, Aldo"@en ;
-    default2:generatedAtTime "2025-04-01T14:33:26.847000+00:00"^^xsd:dateTime ;
-    default2:wasAttributedTo <https://w3id.org/dh-atlas/b-dot-sartini-at-lmu-dot-de> ;
-    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+    ns2:currentStatus "modified"^^xsd:string ;
+    ns1:name "Gangemi, Aldo"@en ;
+    prov:generatedAtTime "2025-04-01T14:33:26.847953"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
 
 <http://www.wikidata.org/entity/Q30103138> rdfs:label "Aldo Gangemi"^^xsd:string .
 
@@ -27,7 +27,7 @@
 
 <https://w3id.org/dh-atlas/1728995806-349488> rdfs:label "University of Bologna"^^xsd:string .
 
-<https://w3id.org/dh-atlas/b-dot-sartini-at-lmu-dot-de> rdfs:label "b.sartini@lmu.de" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 
 <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
 

@@ -1,7 +1,7 @@
-@prefix : <http://schema.org/> .
-@prefix default1: <http://dbpedia.org/ontology/> .
-@prefix default2: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -9,16 +9,16 @@
 <https://w3id.org/dh-atlas/1743002902-286> a foaf:Agent,
         schema:Person ;
     rdfs:label "Riva, Massimo"@en ;
-    :name "Riva, Massimo"@en .
+    ns2:name "Riva, Massimo"@en .
 
 <https://w3id.org/dh-atlas/1743002902-286/> rdfs:label "Riva, Massimo"@en ;
-    default1:currentStatus "modified"^^xsd:string ;
-    :name "Riva, Massimo"@en ;
-    default2:generatedAtTime "2025-03-31T16:11:47.228000+00:00"^^xsd:dateTime ;
-    default2:wasAttributedTo <https://w3id.org/dh-atlas/giulia-dot-renda3-at-unibo-dot-it> ;
-    default2:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
+    ns1:currentStatus "modified"^^xsd:string ;
+    ns2:name "Riva, Massimo"@en ;
+    prov:generatedAtTime "2025-03-31T16:11:47.228551"^^xsd:dateTime ;
+    prov:wasAttributedTo <https://w3id.org/dh-atlas/anonymous> ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> .
 
-<https://w3id.org/dh-atlas/giulia-dot-renda3-at-unibo-dot-it> rdfs:label "giulia.renda3@unibo.it" .
+<https://w3id.org/dh-atlas/anonymous> rdfs:label "anonymous" .
 
 <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
 

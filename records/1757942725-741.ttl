@@ -1,0 +1,30 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757942725-741> a schema:Person ;
+    rdfs:label "Ciula, Arianna"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1757942324-092951>,
+        <https://w3id.org/dh-atlas/1757942750-99> ;
+    schema:identifier <https://orcid.org/0000-0003-4247-1073> ;
+    schema:name "Ciula, Arianna"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q57478862> .
+
+<https://w3id.org/dh-atlas/1757942725-741/> rdfs:label "Ciula, Arianna"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T14:57:44.931142"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Ciula, Arianna"@en .
+
+<http://www.wikidata.org/entity/Q57478862> rdfs:label "Arianna Ciula"^^xsd:string .
+
+<https://orcid.org/0000-0003-4247-1073> rdfs:label "0000-0003-4247-1073"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757942324-092951> rdfs:label "King"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1757942750-99> rdfs:label "King's College London"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

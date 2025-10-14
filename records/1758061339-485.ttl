@@ -1,0 +1,33 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1758061339-485> a schema:Person ;
+    rdfs:label "Pocobelli, Giorgio Franco"@en ;
+    schema:affiliation <https://w3id.org/dh-atlas/1728999602-7282345>,
+        <https://w3id.org/dh-atlas/1729200890-684812>,
+        <https://w3id.org/dh-atlas/1758061014-965> ;
+    schema:identifier <https://orcid.org/0000-0002-9473-8529> ;
+    schema:name "Pocobelli, Giorgio Franco"@en ;
+    schema:sameAs <http://www.wikidata.org/entity/Q120907210> .
+
+<https://w3id.org/dh-atlas/1758061339-485/> rdfs:label "Pocobelli, Giorgio Franco"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-16T22:26:06.288125"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "Pocobelli, Giorgio Franco"@en .
+
+<http://www.wikidata.org/entity/Q120907210> rdfs:label "Giorgio Franco Pocobelli"^^xsd:string .
+
+<https://orcid.org/0000-0002-9473-8529> rdfs:label "0000-0002-9473-8529"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1728999602-7282345> rdfs:label "National Research Council"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1729200890-684812> rdfs:label "University of Florence"^^xsd:string .
+
+<https://w3id.org/dh-atlas/1758061014-965> rdfs:label "Istituto di Scienze del Patrimonio Culturale (CNR)"^^xsd:string .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+

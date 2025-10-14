@@ -1,0 +1,20 @@
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/dh-atlas/1757972959-902> a schema:WebSite ;
+    rdfs:label "The Medieval Kingdom of Sicily Image Database - Search Interface"@en ;
+    schema:description "The database offers multiple search options, including Cities & Sites, Artist/Creator, Collection, and an Advanced Image Search, enabling flexible exploration of medieval monuments and artworks."@en ;
+    schema:name "The Medieval Kingdom of Sicily Image Database - Search Interface"@en ;
+    schema:url <https://koseodiah.org/citylist.php> .
+
+<https://w3id.org/dh-atlas/1757972959-902/> rdfs:label "The Medieval Kingdom of Sicily Image Database - Search Interface"@en ;
+    ns1:currentStatus "modified"^^xsd:string ;
+    prov:generatedAtTime "2025-09-15T21:52:55.746708"^^xsd:dateTime ;
+    prov:wasInfluencedBy <https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> ;
+    schema:name "The Medieval Kingdom of Sicily Image Database - Search Interface"@en .
+
+<https://w3id.org/dh-atlas/sebastiano-dot-giacomin2-at-unibo-dot-it> rdfs:label "sebastiano.giacomin2@unibo.it" .
+
