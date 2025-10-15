@@ -16,19 +16,19 @@ $var main_lang = main_lang
 				$ width_class += properties[field][2]
 				<section class="info-item $width_class">
 						$if isinstance(value[0],str):
-							<h4 class="articleSubtitle">$field </h4>
+							<h3 class="articleSubtitle">$field </h3>
 							$if properties[field][1]=="Date" and (value[0].startswith("-") or len(value[0]) == 4):
 								$ value = value[0].replace("-", "") + " B.C." if value[0].startswith("-") else value[0].lstrip('0')
 							$else:
 								$ value = value[0]
 							<p property="$properties[field][0]">$value</p>
 						$elif isinstance(value[0],tuple):
-							<h4 class="articleSubtitle">$field </h4>
+							<h3 class="articleSubtitle">$field </h3>
 							$for literal in value:
 								<p property="$properties[field][0]" xml:lang="$literal[1]">$literal[0]</p>
 						$else:
 							$if len(value[0][1]) > 0:
-								<h4 class="articleSubtitle">$field </h4>
+								<h3 class="articleSubtitle">$field </h3>
 								$for uri_value in value:
 									$if uri_value[0].startswith('Q'):
 										<!-- wikidata uri -->
@@ -115,16 +115,20 @@ $var main_lang = main_lang
 			$if graphID in knowledge_extractor and len(knowledge_extractor[graphID]) > 0:
 				$for field in knowledge_extractor[graphID]:
 					$if len(knowledge_extractor[graphID][field]) > 0:
-						<section class="info-item col-md-5 col-sm-12">
-							<h4 class="articleSubtitle">$knowledge_extractor[graphID+'_view']['field_name'] </h4>
-							$for n in range(len(knowledge_extractor[graphID][field])):
-								$for extracted_keyword in knowledge_extractor[graphID][field][n]["metadata"]["output"]:
-									<p property="$knowledge_extractor[graphID+'_view']['property']">
-										<link property="sameAs" url="$extracted_keyword['uri']['value']"/>
-										<a class="uri" target='_blank' href="term?id=$extracted_keyword['uri']['value']">
-											$extracted_keyword['label']['value']
-										</a>
-									</p>
+						<section class="circles row">
+                            <section class="info-graphic col-md-4"><i class="fas fa-quote-left"></i><p>$knowledge_extractor[graphID+'_view']['field_name'] </p></section>
+                            <section class="info-graphic-items col-md-8">
+								$for n in range(len(knowledge_extractor[graphID][field])):
+									$ keyword_class = knowledge_extractor[graphID][field][n]["metadata"]["class"]
+									$for extracted_keyword in knowledge_extractor[graphID][field][n]["metadata"]["output"]:
+										<span class="box-small" property="$knowledge_extractor[graphID+'_view']['property']">
+											$ label = keyword_class["label"] if "label" in keyword_class else ""
+											<link property="sameAs" url="$extracted_keyword['uri']['value']"/>
+											<a class="uri" data-class="$label" target='_blank' href="term?id=$extracted_keyword['uri']['value']">
+												$extracted_keyword['label']['value']
+											</a>
+										</span>
+							</section>
 						</section>
 			<section class="info-item col-md-5 col-sm-12 keywords">
 				<script type="text/javascript">
@@ -158,7 +162,7 @@ $var main_lang = main_lang
 	</section>
 	<hr/>
 	<!-- <section class="info-item">
-		<h4 class="articleSubtitle">URI</h4>
+		<h3 class="articleSubtitle">URI</h3>
 		<span class="small"></span>
 		<p></p>
 	</section> -->
@@ -178,7 +182,7 @@ $if inverses_by_class != {}:
 							$ property_url, property_label = property.split(',',2)
 							<section class="inverse-property">
 								<span>
-									<h4 class="articleSubtitle"><span class="tip" data-toggle="tooltip" data-placement="bottom" title="$property_url"><i class="fas fa-info-circle"></i></span> $property_label</h4>
+									<h3 class="articleSubtitle"><span class="tip" data-toggle="tooltip" data-placement="bottom" title="$property_url"><i class="fas fa-info-circle"></i></span> $property_label</h3>
 								</span>
 							</section>
 							<section class="inverse-property">
