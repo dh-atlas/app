@@ -58,7 +58,9 @@ $def with (content)
 					$else:
 							<button class="btn btn-dark" onclick="window.location.href='logout'" role="button" id="dropdownMenuLink">Logout</button>
 					<form action='' method='POST' id="create_form_menu">
-				    <button class="btn btn-dark" name="action" value="createRecord$time_now()" type="submit">Add a resource</button>
+					$if content.user == 'anonymous' or content.user == 'unknown':
+						$if content.is_git_auth != True:
+				    		<button class="btn btn-dark" name="action" value="createRecord$time_now()" type="submit">Add a resource</button>
 				  </form>
 				</section>
 				<div class="searchmenu col-lg-3 col-md-12 col-sm-12">
@@ -86,7 +88,6 @@ $def with (content)
 					<p><a href="records">Explore</a></p>
 					<p><a href="charts-visualization">Charts</a></p>
 					<p><a href="sparql">SPARQL endpoint</a></p>
-					<p><a href="model">Data model</a></p>
 					<p><a href="documentation">Editorial guidelines</a></p>
 				</section>
 				<section class="col-md-2 col-sm-10">
