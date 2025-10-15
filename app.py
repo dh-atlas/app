@@ -641,13 +641,15 @@ class Record(object):
 		ask_form = u.change_template_names(is_git_auth)
 		descriptions_dict = u.get_templates_description()
 		f = forms.get_form(ask_form,True)
-
-		return render.record(record_form=f, pageID=name, user=user,
-							alert=False, limit=50,
-							is_git_auth=is_git_auth,invalid=False,
-							project=conf.myProject,template=None,
-							query_templates=None,knowledge_extractor=set(),
-							main_lang=conf.mainLang,descriptions_dict=descriptions_dict)
+		if logged_in:
+			return render.record(record_form=f, pageID=name, user=user,
+								alert=False, limit=50,
+								is_git_auth=is_git_auth,invalid=False,
+								project=conf.myProject,template=None,
+								query_templates=None,knowledge_extractor=set(),
+								main_lang=conf.mainLang,descriptions_dict=descriptions_dict)
+		else:
+			raise web.seeother(prefixLocal+'gitauth')
 
 	def POST(self, name):
 		""" Submit a new record
@@ -670,65 +672,69 @@ class Record(object):
 		#block_user, limit = u.check_ip(str(web.ctx['ip']), str(datetime.datetime.now()) )
 		whereto = '/' if user == 'anonymous' else '/welcome-1'
 		descriptions_dict= u.get_templates_description()
+		logged_in = True if user != 'anonymous' else False
 
-		# form validation (ask_class)
-		if not f.validates():
-			u.log_output('SUBMIT INVALID FORM', session['logged_in'], session['username'],name)
-			return render.record(record_form=f, pageID=name, user=user, alert=False,
-								limit=50, is_git_auth=is_git_auth,invalid=True,
-								project=conf.myProject,template=None,
-								query_templates=None,knowledge_extractor=set(),
-								main_lang=conf.mainLang,descriptions_dict=descriptions_dict)
-		else:
-			recordData = web.input()
-
-			# load the template selected by the user
-			if 'res_name' in recordData:
-				if recordData.res_name != 'None':
-					f = forms.get_form(recordData.res_name,processed_templates=[])
-					query_templates = u.get_query_templates(recordData.res_name)
-					extractor = u.has_extractor(recordData.res_name)
-					keywords_classes = u.get_keywords_classes(recordData.res_name)
-					return render.record(record_form=f, pageID=name, user=user, alert=False,
-									limit=50, is_git_auth=is_git_auth,invalid=False,
-									project=conf.myProject,template=recordData.res_name,
-									query_templates=query_templates,knowledge_extractor=extractor,
-									main_lang=conf.mainLang,descriptions_dict=descriptions_dict,
-									keywords_classes=keywords_classes)
-				else:
-					raise web.seeother(prefixLocal+'record-'+name)
-
-			if 'action' in recordData:
-				create_record(recordData)
-
-			recordID = recordData.recordID if 'recordID' in recordData else None
-			templateID = recordData.templateID if 'templateID' in recordData else None
-			invalid_input = recordData.invalid_input if 'invalid_input' in recordData else None
-			u.log_output('CREATED RECORD', session['logged_in'], session['username'],recordID)
-
-			if recordID:
-				if invalid_input:
-					f = forms.get_form(templateID)
-					query_templates = u.get_query_templates(recordData.res_name)
-					extractor = u.has_extractor(templateID)
-					return render.record(record_form=f, pageID=name, user=user, alert=False,
+		if logged_in:
+			# form validation (ask_class)
+			if not f.validates():
+				u.log_output('SUBMIT INVALID FORM', session['logged_in'], session['username'],name)
+				return render.record(record_form=f, pageID=name, user=user, alert=False,
 									limit=50, is_git_auth=is_git_auth,invalid=True,
-									project=conf.myProject,template=templateID,
-									query_templates=query_templates,knowledge_extractor=extractor,
+									project=conf.myProject,template=None,
+									query_templates=None,knowledge_extractor=set(),
 									main_lang=conf.mainLang,descriptions_dict=descriptions_dict)
-				else:
-					#u.update_knowledge_extraction(recordData,KNOWLEDGE_EXTRACTION)
-					userID = user.replace('@','-at-').replace('.','-dot-')
-					file_path = mapping.inputToRDF(recordData, userID, 'not modified', tpl_form=templateID)
-					if conf.github_backup == "True":
-						try:
-							github_sync.push(file_path,"main", session['gituser'], session['username'], session['bearer_token'])
-						except Exception as e:
-							print(e)
-
-					raise web.seeother(whereto)
 			else:
-				create_record(recordData)
+				recordData = web.input()
+
+				# load the template selected by the user
+				if 'res_name' in recordData:
+					if recordData.res_name != 'None':
+						f = forms.get_form(recordData.res_name,processed_templates=[])
+						query_templates = u.get_query_templates(recordData.res_name)
+						extractor = u.has_extractor(recordData.res_name)
+						keywords_classes = u.get_keywords_classes(recordData.res_name)
+						return render.record(record_form=f, pageID=name, user=user, alert=False,
+										limit=50, is_git_auth=is_git_auth,invalid=False,
+										project=conf.myProject,template=recordData.res_name,
+										query_templates=query_templates,knowledge_extractor=extractor,
+										main_lang=conf.mainLang,descriptions_dict=descriptions_dict,
+										keywords_classes=keywords_classes)
+					else:
+						raise web.seeother(prefixLocal+'record-'+name)
+
+				if 'action' in recordData:
+					create_record(recordData)
+
+				recordID = recordData.recordID if 'recordID' in recordData else None
+				templateID = recordData.templateID if 'templateID' in recordData else None
+				invalid_input = recordData.invalid_input if 'invalid_input' in recordData else None
+				u.log_output('CREATED RECORD', session['logged_in'], session['username'],recordID)
+
+				if recordID:
+					if invalid_input:
+						f = forms.get_form(templateID)
+						query_templates = u.get_query_templates(recordData.res_name)
+						extractor = u.has_extractor(templateID)
+						return render.record(record_form=f, pageID=name, user=user, alert=False,
+										limit=50, is_git_auth=is_git_auth,invalid=True,
+										project=conf.myProject,template=templateID,
+										query_templates=query_templates,knowledge_extractor=extractor,
+										main_lang=conf.mainLang,descriptions_dict=descriptions_dict)
+					else:
+						#u.update_knowledge_extraction(recordData,KNOWLEDGE_EXTRACTION)
+						userID = user.replace('@','-at-').replace('.','-dot-')
+						file_path = mapping.inputToRDF(recordData, userID, 'not modified', tpl_form=templateID)
+						if conf.github_backup == "True":
+							try:
+								github_sync.push(file_path,"main", session['gituser'], session['username'], session['bearer_token'])
+							except Exception as e:
+								print(e)
+
+						raise web.seeother(whereto)
+				else:
+					create_record(recordData)
+		else:
+			raise web.seeother(prefixLocal+'gitauth')
 
 # FORM: modify a record (only logged in users)
 
