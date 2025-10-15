@@ -6,6 +6,7 @@ from rdflib import URIRef , XSD, Namespace , Literal, Graph
 from rdflib.namespace import OWL, DC , DCTERMS, RDF , RDFS
 from rdflib.plugins.sparql import prepareQuery
 from pymantic import sparql
+import json
 import utils as u
 import urllib.parse
 import re
@@ -663,7 +664,7 @@ def retrieve_extractions(res_uri_list, view=False):
 				res_dict[uri_id] = {field_id : []}
 
 			# TODO : CHECK THE FOLLOWING IF STATEMENT
-			if view==True:
+			if view:
 				res_dict[uri_id+'_view'] = {
 					'property': rdf_property,
 					'field_name': field_name
@@ -718,10 +719,13 @@ def retrieve_extractions(res_uri_list, view=False):
 
 				# Sparql metadata
 				else:
+					url, query = link.split("?query=") if len(link.split("?query=")) == 2 else "", link.replace("?query=", "")
 					res_dict[uri_id][field_id][-1]["metadata"]['type'] = 'sparql'
-					url, query = link.split("?query=")
 					res_dict[uri_id][field_id][-1]["metadata"]['url'] = url
-					res_dict[uri_id][field_id][-1]["metadata"]['query'] = query
+					if view:
+						res_dict[uri_id][field_id][-1]["metadata"]['query'] = query
+					else:
+						res_dict[uri_id][field_id][-1]["metadata"]['query'] = query.replace("'", "\\'").replace('"', "'")
 			
 			# Retrieve the keywords populating each extraction graph
 			for n in range(len(res_dict[uri_id][field_id])):
@@ -738,13 +742,18 @@ def retrieve_extractions(res_uri_list, view=False):
 				# find class for extracted entities
 				entity_class = next((result.get("class", {}).get("value") 
 					for result in graph_results if result.get("class", {}).get("value") is not None ), "None")
-				res_dict[uri_id][field_id][n]["metadata"]["class"] = entity_class
+				if view and entity_class != "None":
+					extraction_classes = u.get_keywords_classes(view)
+					res_dict[uri_id][field_id][n]["metadata"]["class"] = { "uri" : entity_class.strip() , "label" : extraction_classes[entity_class].strip()}
+				else:
+					res_dict[uri_id][field_id][n]["metadata"]["class"] = entity_class
 
 				if view:
-					res_dict[uri_id][field_id][n]["metadata"]['output'] = [{"uri": {"value": urllib.parse.quote(res["uri"]["value"],safe=""), "type":res["uri"]["type"]}, "label": {"value": res["label"]["value"], "type":res["label"]["type"]}} for res in graph_results]
+					res_dict[uri_id][field_id][n]["metadata"]['output'] = [{"uri": {"value": urllib.parse.quote(res["uri"]["value"],safe="").strip(), "type":res["uri"]["type"]}, "label": {"value": res["label"]["value"].strip(), "type":res["label"]["type"]}} for res in graph_results]
 				else:
-					res_dict[uri_id][field_id][n]["metadata"]['output'] = [{"uri": {"value": res["uri"]["value"], "type":res["uri"]["type"]}, "label": {"value": res["label"]["value"], "type":res["label"]["type"]}} for res in graph_results]
-
+					res_dict[uri_id][field_id][n]["metadata"]['output'] = [{"uri": {"value": res["uri"]["value"].strip(), "type":res["uri"]["type"]}, "label": {"value": res["label"]["value"].strip(), "type":res["label"]["type"]}} for res in graph_results]
+	if not view:
+		res_dict = json.dumps(res_dict, ensure_ascii=False)
 	print(res_dict)
 	return res_dict
 
@@ -798,61 +807,134 @@ def get_records_from_object(graph_uri):
 
 # DATA EXTRACTION form SERVICES
 
-def entity_reconciliation(uri,service):
+def entity_reconciliation(uri,service,find,secondary_service="viaf",language="en"):
 
-	# set query params
+	# set query
 	base_url = ""
 	params = {}
 	if service == "wd":
+
+		# set headers
 		base_url = "https://wikidata.org/w/api.php"
 		headers = { 
 			"Accept": "application/json",
 			"User-Agent": "ATLAS/1.0 (https://github.com/dh-atlas/app; mailto:sebastiano.giacomin2@unibo.it)"
 		}
-		params = {
-			"action": "wbsearchentities",
-			"search": uri,
-			"format": "json",
-			"language": "it"
-		}
+
+		# set params
+		if find == "uri":
+			params = {
+				"action": "wbsearchentities",
+				"search": uri,
+				"format": "json",
+				"language": language,
+			}
+		elif find == "label":
+			params = {
+				"action": "wbgetentities",
+				"ids": uri.rsplit("/", 1)[1],
+				"format": "json",
+				"languages": language
+			}
+
 	elif service == "viaf":
-		base_url = "https://www.viaf.org/viaf/AutoSuggest"
+
+		# set headers
 		headers = {
 			"Accept": "application/json",
 			"Accept-Encoding": "deflate, br, identity",
 			"User-Agent": "Mozilla/5.0 (compatible; VIAFbot/1.0)",
 		}
-		params = {"query": uri}
+
+		# set params
+		if find == "uri":
+			base_url = "https://www.viaf.org/viaf/AutoSuggest"
+			params = {"query": uri}
+		elif find == "label":
+			base_url = f"https://viaf.org/viaf/{uri}/viaf.json"
+			params = {}
 		
-		""" response = requests.get("https://www.viaf.org/viaf/AutoSuggest", headers=headers, params=params) """
 	elif service == "geonames":
-		base_url = "http://api.geonames.org/searchJSON"
-		params = {
-            "q": uri,
-            "username": "palread", 
-            "maxRows": 1
-        }
+
+		# set params
+		if find == "uri":
+			base_url = "http://api.geonames.org/searchJSON"
+			params = {
+				"q": uri,
+				"username": "palread", 
+				"maxRows": 1
+			}
+		elif find == "label":
+			base_url = "http://api.geonames.org/getJSON"
+			params = {
+				"geonameId": uri,
+				"username": "palread"
+			}
 	
-	# execute the query and retrieve the URI
-	try:
-		response = requests.get(base_url, params=params, headers=headers)
-		response.raise_for_status()  # Check if the request was successful
-		data = response.json()  # Parse the JSON response
-		print(data)
-		if service == "wd" and len(data["search"]) > 0:
-			new_uri = data["search"][0]["concepturi"]
-		elif service == "viaf" and data["result"] != None:
-			new_uri = mapping.VIAF + data["result"][0]["viafid"]
-		elif service == "geonames" and len(data["geonames"]) > 0:
-			new_uri = mapping.GEO + str(data["geonames"][0]["geonameId"])
-		else:
+	if find == "uri":
+		# execute the query and retrieve the URI
+		try:
+			response = requests.get(base_url, params=params, headers=headers)
+			response.raise_for_status()  # Check if the request was successful
+			data = response.json()  # Parse the JSON response
+			print(data)
+			if service == "wd":
+				if len(data["search"]) > 0:
+					new_uri = data["search"][0]["concepturi"]
+				elif language == "en":
+					new_uri = entity_reconciliation(uri,"wd",language="it")
+				elif secondary_service:
+					new_uri = entity_reconciliation(uri,secondary_service)
+			elif service == "viaf" and data["result"] != None:
+				new_uri = mapping.VIAF + data["result"][0]["viafid"]
+			elif service == "geonames" and len(data["geonames"]) > 0:
+				new_uri = mapping.GEO + str(data["geonames"][0]["geonameId"])
+			else:
+				new_uri = conf.base+str(time.time()).replace('.','-')
+			return new_uri
+		
+		except requests.exceptions.HTTPError as http_err:
+			print(f"HTTP error occurred: {http_err}")
 			new_uri = conf.base+str(time.time()).replace('.','-')
-		return new_uri
-	
-	except requests.exceptions.HTTPError as http_err:
-		print(f"HTTP error occurred: {http_err}")
-	except Exception as err:
-		print(f"Other error occurred: {err}")
+			return new_uri
+		except Exception as err:
+			print(f"Other error occurred: {err}")
+			new_uri = conf.base+str(time.time()).replace('.','-')
+			return new_uri
+		
+	elif find == "label":
+		# execute the query and retrieve the Label
+		try:
+			response = requests.get(base_url, params=params, headers=headers)
+			response.raise_for_status()
+			data = response.json()
+			print(data)
+
+			if service == "wd":
+				entity_id = uri.rsplit("/", 1)[1]
+				labels = data["entities"][entity_id]["labels"]
+				if language in labels:
+					return labels[language]["value"]
+				elif "en" in labels:  # fallback to english
+					return labels["en"]["value"]
+				else:
+					return list(labels.values())[0]["value"]  # first available language
+
+			elif service == "viaf":
+				if "mainHeadings" in data and "data" in data["mainHeadings"]:
+					return data["mainHeadings"]["data"]["text"]
+				elif "name" in data:
+					return data["name"]
+				else:
+					return None
+
+			elif service == "geonames":
+				return data.get("name")
+
+		except Exception as err:
+			print(f"Error occurred: {err}")
+			return "No label"
+
 
 # GET LATITUDE AND LONGITUDE GIVEN A GEONAMES URI
 def geonames_geocoding(geonames_uri):
@@ -910,7 +992,6 @@ def SPARQLAnything(query_str,endpoint=None):
 	sparql.setQuery(query)
 	sparql.setReturnFormat(JSON)
 	results = sparql.query().convert()
-	
 	return results
 
 def getChartData(chart):

@@ -377,6 +377,7 @@ def updateTemplateList(res_name=None,res_type=None,remove=False):
 		res = {}
 		res["name"] = res_name
 		res["short_name"] = res_name.replace(' ','_').lower()
+		res["description"] = ""
 		res["type"] = res_type
 		res["template"] = RESOURCE_TEMPLATES+'template-'+res_name.replace(' ','_').lower()+'.json'
 		res["hidden"] = "False"

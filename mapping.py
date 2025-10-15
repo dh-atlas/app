@@ -308,7 +308,7 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 						extraction_url+=encoded_query
 					if 'results' in extraction['metadata']:
 						extraction_access_keys = extraction['metadata']['results']
-				elif extraction_type == 'sparql':
+				elif extraction_type in ['sparql', 'website']:
 					query = extraction['metadata']['query'].replace("'","\"")
 					encoded_query = urllib.parse.quote(query)
 					extraction_url+="?query="+encoded_query
@@ -341,10 +341,11 @@ def inputToRDF(recordData, userID, stage, graphToClear=None,tpl_form=None):
 
 					# store the extraction output
 					for keyword in extracted_keywords:
+						keyword_uri = recordData[keyword] if recordData[keyword] not in ["null", ""] else base + str(time.time()).replace('.','-')
 						label = keyword.replace("keyword_"+recordID+"-"+field['id']+"-"+extraction_num+"_","")
-						wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDFS.label,  Literal(label, datatype="http://www.w3.org/2001/XMLSchema#string")))
+						wd_extraction.add(( URIRef(urllib.parse.unquote(keyword_uri).strip()), RDFS.label,  Literal(label, datatype="http://www.w3.org/2001/XMLSchema#string")))
 						if extraction_class != "None":
-							wd_extraction.add(( URIRef(urllib.parse.unquote(recordData[keyword])), RDF.type,  URIRef(extraction_class)))
+							wd_extraction.add(( URIRef(urllib.parse.unquote(keyword_uri).strip()), RDF.type,  URIRef(extraction_class)))
 
 					# DUMP TTL: prepare the records directory and filename for the extraction
 					filename = f"{recordID}-extraction-{field['id']}-{extraction_num}.ttl"

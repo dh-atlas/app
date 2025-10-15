@@ -1155,7 +1155,8 @@ class View(object):
 			data = dict(queries.getData(record+'/',res_template,res_subclasses))
 			stage = data['stage'][0] if 'stage' in data else 'draft'
 			previous_extractors = u.has_extractor(res_template, name, res_subclasses=res_subclasses)
-			extractions_data = queries.retrieve_extractions(previous_extractors,view=True)
+			extractions_data = queries.retrieve_extractions(previous_extractors,view=res_template)
+
 
 			with open(res_template) as tpl_form:
 				all_fields = json.load(tpl_form)
@@ -1205,7 +1206,6 @@ class View(object):
 				templates = json.load(tpl_list)
 
 
-			result_class = "; ".join(sorted(result_class.split("; ")))
 			for k in list(class_sorted.keys()):
 
 				# retrieve the corresponding template
@@ -1544,12 +1544,17 @@ class Sparqlanything(object):
 
 					count = 0 
 					for result in results["results"]["bindings"]:
+						if "label" not in result and "uri" in result:
+							uri = result["uri"]["value"]
+							label = queries.entity_reconciliation(uri, service, find="label", language=conf.mainLang)
+							result["label"] = {"value": label, "type": "literal"}
+
 						if "uri" not in result:
 							result["uri"] = {"value": result["label"]["value"], "type": "uri"}
 
 						uri = result["uri"]["value"]
 						if not (uri.startswith("http://") or uri.startswith("https://")):
-							result["uri"]["value"] = queries.entity_reconciliation(uri, service)
+							result["uri"]["value"] = queries.entity_reconciliation(uri, service, find="uri", language=conf.mainLang)
 
 						count += 1
 						yield f"data: {json.dumps({'count': count})}\n\n" # current count
