@@ -556,48 +556,53 @@ function searchWorldcat(searchterm) {
 // SEARCH CATALOGUE
 // search bar menu
 function searchCatalogue(searchterm) {
-    $('#'+searchterm).off('keyup').on('keyup', function(e) {
-        $("#searchresultmenu").show();
-        var q = $('#'+searchterm).val();
-        var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (STR(?o) AS ?o_str) "+inGraph+" where { ?o bds:search '"+q+"*'. ?o bds:minRelevance '0.3'^^xsd:double . graph ?g {?g rdfs:label ?gLabel . ?s rdfs:label ?o ; a ?class .}}"
-        var encoded = encodeURIComponent(query)
-        if (q == '') { $("#searchresultmenu").hide();}
-        $.ajax({
-            type: 'GET',
-            url: myPublicEndpoint+'?query=' + encoded,
-            headers: { Accept: 'application/sparql-results+json; charset=utf-8'},
-            success: function(returnedJson) {
-                $("#searchresultmenu").empty();
-                // autocomplete positioning
-                setSearchResult(searchterm);
+  $('#' + searchterm).off('keyup').on('keyup', function (e) {
+    $("#searchresultmenu").show();
+    var q = $('#' + searchterm).val();
+    var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (STR(?o) AS ?o_str) " + inGraph + " where { ?o bds:search '" + q + "*'. ?o bds:minRelevance '0.3'^^xsd:double . graph ?g { ?s rdfs:label ?o ; a ?class .}}";
+    var encoded = encodeURIComponent(query);
+    if (q == '') { $("#searchresultmenu").hide(); return; }
+    $.ajax({
+      type: 'GET',
+      url: myPublicEndpoint + '?query=' + encoded,
+      headers: { Accept: 'application/sparql-results+json; charset=utf-8' },
+      success: function (returnedJson) {
+        $("#searchresultmenu").empty();
+        // autocomplete positioning
+        setSearchResult(searchterm);
 
-                // if no result
-                if (!returnedJson.length) {
-                    $("#searchresultmenu").empty();
-                    var nores = "<div class='wditem noresults'>Searching...</div>";
-                    $("#searchresultmenu").append(nores);
-                    // remove messages after 1 second
-                    setTimeout(function(){
-                        if ($('.noresults').length > 0) {
-                        $('.noresults').remove();
-                        }
-                        }, 1000);
-                };
-
-                // process results
-                for (i = 0; i < returnedJson.results.bindings.length; i++) {
-                    var myUrl = returnedJson.results.bindings[i].s.value;
-                    // exclude named graphs from results
-                    if ( myUrl.substring(myUrl.length-1) != "/") {
-                        var resID = myUrl.substr(myUrl.lastIndexOf('/') + 1)
-                        $("#searchresultmenu").append("<div class='wditem'><a class='blue orangeText' target='_blank' href='view-"+resID+"'><i class='fas fa-external-link-alt'></i> " + returnedJson.results.bindings[i].o_str.value + "</a></div>");
-                    };
-                };
-
+        // if no result
+        if (!returnedJson.results.bindings.length) {
+          $("#searchresultmenu").empty();
+          var nores = "<div class='wditem noresults'>Searching...</div>";
+          $("#searchresultmenu").append(nores);
+          // remove messages after 1 second
+          setTimeout(function () {
+            if ($('.noresults').length > 0) {
+              $('.noresults').remove();
             }
-        });
+          }, 1000);
+          return;
+        };
+
+        const seenLabels = new Set();
+
+        // process results
+        for (i = 0; i < returnedJson.results.bindings.length; i++) {
+          var myUrl = returnedJson.results.bindings[i].s.value;
+          if (myUrl.substring(myUrl.length - 1) != "/") {
+            var resID = myUrl.substr(myUrl.lastIndexOf('/') + 1);
+            var label = returnedJson.results.bindings[i].o_str.value;
+            var normalized = label.trim().toLowerCase().replace(/\s+/g, ' ');
+            if (seenLabels.has(normalized)) continue;
+            seenLabels.add(normalized);
+            $("#searchresultmenu").append("<div class='wditem'><a class='blue orangeText' target='_blank' href='term?id=" + resID + "'><i class='fas fa-external-link-alt'></i> " + label + "</a></div>");
+          };
+        };
+      }
     });
-};
+  });
+}
 
 // search catalogue through advanced triple patterns
 function searchCatalogueAdvanced(searchterm) {
@@ -1663,7 +1668,23 @@ function generateExtractionTagList(subtemplate,extractorId,recordId,results,id) 
                 var uri = results[idx][key].value;
             }
         }
-        table.find("#graph-" + id).append("<span class='tag' data-id='" + uri + "'>" + label + "</span><input type='hidden' name='keyword_"+id+"_"+label+"' value='"+encodeURIComponent(uri)+"'/>");
+        let $graph = table.find("#graph-" + id);
+
+        // create the <span> element
+        let $span = $("<span>")
+            .addClass("tag")
+            .attr("data-id", uri)
+            .text(label);
+
+        // create the hidden <input>
+        let $input = $("<input>")
+            .attr("type", "hidden")
+            .attr("name", "keyword_" + id + "_" + label) // set name
+            .val(encodeURIComponent(uri));  // set value 
+
+        // append both elements to the target container
+        $graph.append($span, $input);
+
     }
     table.removeClass('hidden');
     table.next("span").css({'margin-top': '3.5em'});
@@ -1719,6 +1740,7 @@ function generateExtractor(ul,recordId,modifyId=null) {
                 <option value='api'>API</option>\
                 <option value='sparql'>SPARQL</option>\
                 <option value='file'>Static File</option>\
+                <option value='web'>Website</option>\
             </select>\
         </section>\
         <section class='row extractor-0'>\
@@ -1849,96 +1871,197 @@ function addExtractionForm(element,recordId,extractorId,extractionInternalId) {
             <select class='custom-select' id='extract-entity-type' name='extract-entity-type'>"+
                 classOptions +
             "</select>\
-        </section><hr>";
+        </section><hr class='extractor-1'>";
     }
     
 
-    if (extractionType == 'api') {
-        var form = $(prepend+"<section class='row extractor-1'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>API access point<br><span class='comment'>url of the API</span></label>\
-            <input type='text' id='ApiUrl' placeholder='e.g.: https://exampleApi.org/search'></input>\
-        </section>\
-        <section class='row extractor-1'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>QUERY PARAMETERS<br><span class='comment'>write one value per row</span></label>\
-            <div class='extraction-form-div'>\
-                <span class='extraction-form-label-large'>KEY</span><span class='extraction-form-label-large'>VALUE</span>\
-            </div>\
-            <p class='extractor-comment'>No parameters available: add a new one</p><span class='add-parameter'>Add new <i class='fas fa-plus'></i></span>\
-        </section>\
-        <section class='row extractor-1'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>RESULT DICTIONARY<br><span class='comment'>write one value per row</span></label>\
-            <div class='extraction-form-div'>\
-                <span class='extraction-form-label-large'>KEY</span><span class='extraction-form-label-large'>VALUE</span>\
-            </div>\
-            <div class='extraction-form-div api-results-parameter'>\
-                <input type='text' class='extraction-form-input-large' value='Array'><input type='text' class='extraction-form-input-large'>\
-            </div>\
-            <div class='extraction-form-div api-results-parameter'>\
-                <input type='text' class='extraction-form-input-large' value='URI'><input type='text' class='extraction-form-input-large'>\
-            </div>\
-            <div class='extraction-form-div api-results-parameter'>\
-                <input type='text' class='extraction-form-input-large' value='Label'><input type='text' class='extraction-form-input-large'>\
-            </div>\
-        </section>\
-        <section class='row extractor-1'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>FILTER RESULTS<br><span class='comment'>write one value per row</span></label>\
-            <div class='extraction-form-div'>\
-                <span class='extraction-form-label-small'>TYPE</span><span class='extraction-form-label-small'>VARIABLE</span><span class='extraction-form-label-small'>VALUE</span>\
-            </div>\
-            <p class='extractor-comment'>No parameters available: add a new one</p><span class='add-filter'>Add new <i class='fas fa-plus'></i></span>\
-        </section>\
-        ")
-    } else if (extractionType == 'sparql') {
-        var form = $(prepend+"<section class='row extractor-1'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>SPARQL endpoint<br><span class='comment'>url of the endpoint</span></label>\
-            <input type='text' id='SparqlUrl' placeholder='e.g.: https://exampleSparql.org/sparql'></input>\
-        </section>\
-            <section class='row extractor-1'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>QUERY<br><span class='comment'>a sparql query to be performed</span></label>\
-            <div id='yasqe' class='col-md-12' data-id='"+extractionId+"'>\
-        </section>");
-    } else if (extractionType == 'file') {
-        var form = $(prepend+"<section class='row extractor-1'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>FILE URL<br><span class='comment'>a URL to an external resource (.json, .csv, and .xml formats allowed)</span></label>\
-            <input type='text' id='FileUrl' placeholder='http://externalResource.csv'></input>\
-        </section>\
-        <section class='row extractor-1'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>QUERY METHOD<br><span class='comment'>how to access your data</span></label>\
-            <select onchange='fileExtractionType(this)' class='custom-select' name='extractor' id='ExtractionType'>\
-                <option value='None'>Select</option>\
-                <option value='manual'>MANUAL (parse the file and build a query)</option>\
-                <option value='sparql'>SPARQL</option>\
-            </select>\
-        </section>\
-        <section class='row extractor-1'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>CSV HEADER (CSV only)</label>\
-            <div class='col-md-12' style='text-align: left !important; margin-left: 5px'>\
-                <input type='checkbox' id='hasHeader' name='hasHeader'>\
-                <span class='comment'>tick this box if the first row of your CSV file contains column names</span>\
-            </div>\
-        </section>\
-        <section class='row extractor-1 manual-extraction' style='display: none;'>\
-            <input id='parse-file' class='btn btn-dark extractor-1' style='margin-left:20px;' type='button' value='Parse File' onClick='parseFile(this)'>\
-        </section>\
-        <section class='row extractor-1 sparql-extraction' style='display: none;'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>QUERY<br><span class='comment'>a sparql query to be performed</span></label>\
-            <div id='yasqe' class='col-md-12' data-id='"+extractionId+"'>\
-        </section>\
-        <section class='row extractor-1 manual-query' style='display: none;'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>KEYS<br><span class='comment'>the set of keys to be retrieved</span></label>\
-            <input type='text' id='file-keys' placeholder='firstName'></input>\
-            <div class='tags-extraction'></div>\
-        </section>\
-        <section class='row extractor-1 manual-query' style='display: none;'>\
-            <label class='col-md-12' style='text-align: left !important; margin-left: 5px'>FILTERS<br><span class='comment'>filter your keys</span></label>\
-            <div class='extraction-form-div'>\
-                <span class='extraction-form-label-large'>TYPE</span><span class='extraction-form-label-large'>VALUE</span>\
-            </div>\
-            <p class='extractor-comment'>No filter available: add a new one</p><span class='add-filter'>Add new <i class='fas fa-plus'></i></span>\
-        </section>");
-    } else {
-        var form = "";
+    let form = "";
+    if (extractionType === 'api') {
+    form = $(prepend + `
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            API ACCESS POINT<br>
+            <span class='comment'>URL of the API</span>
+        </label>
+        <input type='text' id='ApiUrl' placeholder='https://exampleApi.org/search'>
+        </section>
+
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            QUERY PARAMETERS<br>
+            <span class='comment'>Write one value per row</span>
+        </label>
+        <div class='extraction-form-div'>
+            <span class='extraction-form-label-large'>KEY</span>
+            <span class='extraction-form-label-large'>VALUE</span>
+        </div>
+        <p class='extractor-comment'>No parameters available: add a new one</p>
+        <span class='add-parameter'>Add new <i class='fas fa-plus'></i></span>
+        </section>
+
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            RESULT DICTIONARY<br>
+            <span class='comment'>Write one value per row</span>
+        </label>
+        <div class='extraction-form-div'>
+            <span class='extraction-form-label-large'>KEY</span>
+            <span class='extraction-form-label-large'>VALUE</span>
+        </div>
+
+        <div class='extraction-form-div api-results-parameter'>
+            <input type='text' class='extraction-form-input-large' value='Array'>
+            <input type='text' class='extraction-form-input-large'>
+        </div>
+        <div class='extraction-form-div api-results-parameter'>
+            <input type='text' class='extraction-form-input-large' value='URI'>
+            <input type='text' class='extraction-form-input-large'>
+        </div>
+        <div class='extraction-form-div api-results-parameter'>
+            <input type='text' class='extraction-form-input-large' value='Label'>
+            <input type='text' class='extraction-form-input-large'>
+        </div>
+        </section>
+
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            FILTER RESULTS<br>
+            <span class='comment'>Write one value per row</span>
+        </label>
+        <div class='extraction-form-div'>
+            <span class='extraction-form-label-small'>TYPE</span>
+            <span class='extraction-form-label-small'>VARIABLE</span>
+            <span class='extraction-form-label-small'>VALUE</span>
+        </div>
+        <p class='extractor-comment'>No parameters available: add a new one</p>
+        <span class='add-filter'>Add new <i class='fas fa-plus'></i></span>
+        </section>
+    `);
+
+    } else if (extractionType === 'sparql') {
+    form = $(prepend + `
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            SPARQL ENDPOINT<br>
+            <span class='comment'>URL of the SPARQL endpoint</span>
+        </label>
+        <input type='text' id='SparqlUrl' placeholder='https://exampleSparql.org/sparql'>
+        </section>
+
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            QUERY<br>
+            <span class='comment'>A SPARQL query to be performed</span>
+        </label>
+        <div id='yasqe' class='col-md-12' data-id='${extractionId}'></div>
+        </section>
+    `);
+
+    } else if (extractionType === 'file') {
+    form = $(prepend + `
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            FILE URL<br>
+            <span class='comment'>A URL to an external resource (.json, .csv, .xml)</span>
+        </label>
+        <input type='text' id='FileUrl' placeholder='http://externalResource.csv'>
+        </section>
+
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            QUERY METHOD<br>
+            <span class='comment'>How to access your data</span>
+        </label>
+        <select onchange='fileExtractionType(this)' class='custom-select' name='extractor' id='ExtractionType'>
+            <option value='None'>Select</option>
+            <option value='manual'>MANUAL (parse the file and build a query)</option>
+            <option value='sparql'>SPARQL</option>
+        </select>
+        </section>
+
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            CSV HEADER (CSV only)
+        </label>
+        <div class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            <input type='checkbox' id='hasHeader' name='hasHeader'>
+            <span class='comment'>Tick this box if the first row of your CSV file contains column names</span>
+        </div>
+        </section>
+
+        <section class='row extractor-1 manual-extraction' style='display:none;'>
+        <input id='parse-file' class='btn btn-dark extractor-1' style='margin-left:20px;' 
+                type='button' value='Parse File' onClick='parseFile(this)'>
+        </section>
+
+        <section class='row extractor-1 sparql-extraction' style='display:none;'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            QUERY<br><span class='comment'>A SPARQL query to be performed</span>
+        </label>
+        <div id='yasqe' class='col-md-12' data-id='${extractionId}'></div>
+        </section>
+
+        <section class='row extractor-1 manual-query' style='display:none;'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            KEYS<br><span class='comment'>The set of keys to be retrieved</span>
+        </label>
+        <input type='text' id='file-keys' placeholder='firstName'>
+        <div class='tags-extraction'></div>
+        </section>
+
+        <section class='row extractor-1 manual-query' style='display:none;'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            FILTERS<br><span class='comment'>Filter your keys</span>
+        </label>
+        <div class='extraction-form-div'>
+            <span class='extraction-form-label-large'>TYPE</span>
+            <span class='extraction-form-label-large'>VALUE</span>
+        </div>
+        <p class='extractor-comment'>No filter available: add a new one</p>
+        <span class='add-filter'>Add new <i class='fas fa-plus'></i></span>
+        </section>
+    `);
+
+    } else if (extractionType === 'web') {
+    form = $(prepend + `
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            WEBSITE URL<br>
+            <span class='comment'>A URL to an external website</span>
+        </label>
+        <input type='text' id='WebsiteUrl' placeholder='http://example.org/'>
+        </section>
+
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            HTML SELECTOR<br>
+            <span class='comment'>A CSS selector to search for in the loaded DOM</span>
+        </label>
+        <input type='text' id='WebsiteSelector' placeholder='section.container > ul > li.result'>
+        </section>
+
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            HTML ATTRIBUTE<br>
+            <span class='comment'>An attribute whose value should be extracted (leave blank for inner text)</span>
+        </label>
+        <input type='text' id='WebsiteAttribute' placeholder='title'>
+        </section>
+
+        <section class='row extractor-1'>
+        <label class='col-md-12' style='text-align:left!important; margin-left:5px'>
+            REGEX (Pattern & Replacement)<br>
+            <span class='comment'>A regex pattern and replacement to transform the extracted text</span>
+        </label>
+        <input type='text' id='WebsiteRegex' placeholder='"^(.*),\\\\s*(.*)$" , "$2 $1"'>
+        </section>
+    `);
     }
+
+    else {
+    form = "";
+    }
+
 
     // navigation button
     var buttons = $("<hr class='extractor-1'>\
@@ -2099,6 +2222,20 @@ function nextExtractor(element, recordId, id, type) {
             objectItem["keys"] = keysArray;
             objectItem["filters"] = filtersArray
         }
+    } else if (type == "web") {
+        objectItem["type"] = "web";
+        var webUrl = extractionBlockField.find('#WebsiteUrl').val();
+        var selector = extractionBlockField.find('#WebsiteSelector').val();
+        var attribute = extractionBlockField.find('#WebsiteAttribute').val();
+        var regex = extractionBlockField.find('#WebsiteRegex').val();
+        objectItem["url"] = webUrl;
+        objectItem["selector"] = selector;
+        objectItem["attribute"] = attribute;
+        objectItem["regex"] = regex;
+
+        // get the query
+        var websiteQuery = buildWebQuery(webUrl,selector,attribute,regex);
+        objectItem["query"] = websiteQuery;
     }
 
     // get selected entity class (if any)
@@ -2129,7 +2266,7 @@ function nextExtractor(element, recordId, id, type) {
             hidePopup();
             showErrorPopup("Query Canceled", "The query has been stopped by the user.");
         })
-    } else if (type == "file" || type == 'sparql') {
+    } else if (type == "file" || type == 'sparql' || type == "web") {
         // FILE QUERY and SPARQL QUERY:
         callSparqlanything(objectItem,id,recordId,type);
     }
@@ -2301,6 +2438,8 @@ function callSparqlanything(objectItem, id, recordId, type) {
         encoded = encodeURIComponent(q.includes("<x-sparql-anything:"+endpoint+">") ? q : q.replace("{", "{ SERVICE <x-sparql-anything:"+endpoint+"> {").replace("}", "}}"));
     } else if (type === 'sparql') {
         encoded = encodeURIComponent(q);
+    } else if (type === 'web') {
+        encoded = encodeURIComponent(q);
     };
 
     // get the URL to send the query
@@ -2350,7 +2489,7 @@ function callSparqlanything(objectItem, id, recordId, type) {
     };
 }
 
-// build SPARQL query from manual paramaters
+// build SPARQL query on static files from manual paramaters
 function buildQuery(fileURL, keys, queryFilters) {
     // this function first create the main query then add filters
 
@@ -2456,6 +2595,49 @@ function buildQuery(fileURL, keys, queryFilters) {
     return [query, keysArray, filtersArray]
 }
 
+// build SPARQL query on websites from manual parameters
+function buildWebQuery(webUrl,selector,attribute,regex) {
+    let query = `PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+PREFIX ns: <http://sparql.xyz/facade-x/ns/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX fx: <http://sparql.xyz/facade-x/ns/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX what: <https://html.spec.whatwg.org/#>
+PREFIX xhtml: <http://www.w3.org/1999/xhtml#>
+PREFIX ex: <http://www.example.com/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?label WHERE {
+SERVICE <x-sparql-anything:> {
+    fx:properties
+    fx:location "${webUrl}" ;
+    fx:blank-nodes "false" ;
+    fx:media-type "text/html" ;
+    fx:html.browser "firefox" ;
+    fx:html.browser.wait "5" ;
+    fx:http.header.User-Agent "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0" ;
+    fx:html.selector "${selector}" .
+`
+    var objectVariable = regex ? "?o" : "?label";
+    if (attribute) {
+        console.log(attribute);
+        query += `?s xhtml:${attribute} ${objectVariable} .\n`;
+    } else {
+        query += `?s what:innerText ${objectVariable} .\n`;
+    }
+ 
+    if (regex) {
+        console.log(regex);
+        query += `BIND(REPLACE(?o, ${regex}) AS ?label) .\n`
+    }
+
+    query += `  }
+}
+`;  
+    console.log(query);
+    return query
+}
+
 
 /* Results handling */
 
@@ -2534,7 +2716,7 @@ function showExtractionResult(jsonData,type,extractionId,recordId,objectItem=nul
             }
         });
 
-    } else if (type==='sparql' || type==='file') {
+    } else if (type==='sparql' || type==='file' || type==='web') {
 
         var labels = ["label", "uri"]
         var tr = $('<tr></tr>');
@@ -2569,7 +2751,7 @@ function showExtractionResult(jsonData,type,extractionId,recordId,objectItem=nul
     resultSection.append(resultTable);
     resultSection.find('i.fa-edit').each(function(index, element) {
         $(element).on('click', function() {
-            modifyExtractionResult($(this),index,extractionId,recordId);
+            modifyExtractionResult($(this),Math.floor(index/2),extractionId,recordId);
         });
     });
 
@@ -2593,7 +2775,7 @@ function modifyExtractionResult(icon,index,extractionId,recordId) {
 
     const [extractorId, extractionCountStr] = extractionId.split('-');
     const extractionCount = parseInt(extractionCountStr);
-
+    console.log(icon,index,extractionId,recordId,extractionCount)
     // remove previous Event Listeners on click and get the Element to be modified
     $(icon).off("click");
     var stringElement = $(icon).prev();

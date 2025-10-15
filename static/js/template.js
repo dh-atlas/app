@@ -1087,18 +1087,11 @@ function storeLabelURI(index, fieldId, uri, label, ul, block) {
         <label class='add-option'>ADD NEW VALUE <i class='fas fa-plus-circle' onclick='addLabelURI(this, \""+fieldId+"\")'></i></label>\
     </li>"));
     block.remove();
-
-    // add an option for subclass restriction in case a new subclass value has been defined
-    if (ul.attr("id").split("__").includes("subclass")) {
-        subclasses[uri] = label;
-        var currentIndex = ul.closest("section.block_field").data("id");
-        updateSubclassRestrictionField(currentIndex);
-    }
     updateindex();
 
 }
 
-// subclass list update
+/* // subclass list update
 function updateSubclassRestrictionField(currentIndex,obj=null,showOther=null) {
     // generate currentIndex when modifying "Other" option
     currentIndex = currentIndex != "" ? currentIndex : $(obj).closest("section.block_field").data("id");
@@ -1149,7 +1142,7 @@ function updateSubclassRestrictionField(currentIndex,obj=null,showOther=null) {
     });
     updateindex();
 
-}
+} */
 
 
 

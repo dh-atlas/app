@@ -546,6 +546,11 @@ $(document).ready(function() {
     $(this).on('click', nlpText($(this).attr('id')))
   })
 
+  // sort keywords by class (view)
+  $('.info-graphic-items').each(function() {
+    sortKeywordsByClass(this);
+  })
+
 });
 
 $(window).on('resize', function() {
@@ -914,7 +919,7 @@ function visualize_subrecord(el) {
   }
 
     var calledValue = $(this);
-    var calledRecord = externalLink.attr('href').replace("term", "view");
+    var calledRecord = externalLink.attr('href').replace("term?id=", "view-");
     $.ajax({
       type:'GET',
       url:calledRecord,
@@ -953,8 +958,9 @@ function visualize_subrecord(el) {
           });
 
       },
-      error:function() {
-          console.log("Error: requested resource is not available");
+      error:function(err) {
+          console.log("Error: requested resource is not available"),
+          console.log(err);
       }
     })
   }); 
@@ -1353,6 +1359,39 @@ function loadKeywords(graphId, prop) {
 
 }
 
+function sortKeywordsByClass(elem) {
+  console.log("here")
+  var classesArray = [];
+  var sectionsObj = {};
+
+  var section = $(elem).closest("section");
+  var keywords = section.find("a");
+  keywords.each(function() {
+    var kwClass = $(this).data("class") !== "" ? $(this).data("class") : "Thing";
+    if (classesArray.includes(kwClass)) {
+      sectionsObj[kwClass].push($(this).closest("span"));
+    } else {
+      sectionsObj[kwClass] = [$(this).closest("span")];
+      classesArray.push(kwClass);
+    }
+  });
+  console.log(sectionsObj)
+  Object.keys(sectionsObj).forEach(function(key) {
+    var innerSection = $("<section style='border-bottom: 1px solid #aaa; max-height: 400px; overflow-y: scroll; margin-bottom: 2em;'></section>");
+    sectionsObj[key].forEach(function(el) {
+      innerSection.append(el);
+    });
+
+    var outerSection = $("<section></section>");
+    outerSection.append("<h3 class='articleSubtitle'>" + key + "</h3>");
+    outerSection.append(innerSection);
+
+    section.append(outerSection);
+  });
+
+}
+
+
 // lookup when creating new records
 function checkPriorRecords(elem) {
   $('.' + elem).on('click', function() {
@@ -1646,7 +1685,7 @@ function processQueryResults(returnedJson, elemID, prop, typeProp, typeField, el
       knowledgeExtractor = "fieldType='KnowledgeExtractor'";
     }
 
-    const result = `<button onclick=getRecordsByPropValue(this,'.${elemID}results','${elemClass}','${elemSubclass}','${xsdProp}',${knowledgeExtractor}) id='${res}' class='queryGroup' data-property='${prop}' data-value='${res}' data-toggle='collapse' data-target='#${elemID}results' aria-expanded='false' aria-controls='${elemID}results' class='info_collapse' ${extractionClass}>${resLabel} (${count})</button>`;
+    const result = `<button onclick=getRecordsByPropValue(this,'.${elemID}results','${elemClass}','${elemSubclass}','${xsdProp}',${knowledgeExtractor}) id='${res}' class='queryGroup' data-property='${prop}' data-value='${res}' aria-expanded='false' aria-controls='${elemID}results' class='info_collapse' ${extractionClass}>${resLabel} (${count})</button>`;
     if (!allresults.includes(result)) {
       allresults.push(result);
       results.push($(result).hide());
@@ -1662,7 +1701,14 @@ function processQueryResults(returnedJson, elemID, prop, typeProp, typeField, el
     $("#"+elemID).next(".showMore").off("click").on("click", function() {
       ++counter;
       const limit = counter*len+len;
-      $("#"+elemID).find("button:lt("+limit+")").show('smooth');
+      $("#"+elemID).find("button:lt("+limit+")").show('smooth')
+      
+      // hide showMore if no button is hidden
+      const allButtons = $("#"+elemID).find('button');
+      const allVisible = allButtons.length > 0 && allButtons.filter(':visible').length === allButtons.length;
+      if (allVisible) {
+        $("#"+elemID).next(".showMore").hide()
+      };
     });
   } else if (results.length > 0 && results.length <= len) {
     $("#"+elemID).find("button:not(.showMore)").show('smooth');
@@ -1729,9 +1775,9 @@ function getKeywordsValue(elemID, elemClass, extractionClasses, extractionProper
             var count = returnedJson.results.bindings[i].count.value;
             if (countresults.length < 5) {countresults.push({count: parseInt(count), label: resLabel });}
 
-            var extractionClass = "data-extraction-class='"+returnedJson.results.bindings[i].class.value+"'";;
+            var extractionClass = returnedJson.results.bindings[i].class ? "data-extraction-class='"+returnedJson.results.bindings[i].class.value+"'" : "data-extraction-class=''";
             var knowledgeExtractor = "fieldType='KnowledgeExtractor'";
-            var result = "<button onclick=getRecordsByPropValue(this,'."+elemID+"results','"+elemClass+"','','"+JSON.stringify(extractionProperties)+"',"+knowledgeExtractor+") id='"+res+"' class='queryGroup' data-value='"+res+"' data-toggle='collapse' data-target='#"+elemID+"results' aria-expanded='false' aria-controls='"+elemID+"results' class='info_collapse' "+extractionClass+">"+resLabel+" ("+count+")</button>";
+            var result = "<button onclick=getRecordsByPropValue(this,'."+elemID+"results','"+elemClass+"','','"+JSON.stringify(extractionProperties)+"',"+knowledgeExtractor+") id='"+res+"' class='queryGroup' data-value='"+res+"' aria-expanded='false' aria-controls='"+elemID+"results' class='info_collapse' "+extractionClass+">"+resLabel+" ("+count+")</button>";
             if (allresults.indexOf(result) === -1) {
               allresults.push(result);
               results.push($(result).hide());
@@ -1810,48 +1856,78 @@ function getKeywordsValue(elemID, elemClass, extractionClasses, extractionProper
 
 // get records by value and property in EXPLORE
 function getRecordsByPropValue(el, resElem, elemClass='', elemSubclass='', typeProp=false, fieldType=null) {
-  if (elemClass.length) {var class_restriction = "?s a <"+elemClass+"> . "} else {var class_restriction = ''};
-  if (elemSubclass.length) {class_restriction += "?s a <"+elemSubclass+"> . "};
-  $(el).toggleClass("alphaActive");
-  if ($(resElem).length) {$(resElem).empty();}
-  var prop = $(el).data("property");
-  if (fieldType == 'KnowledgeExtractor') {
-    var val = $(el).data("value");
-    var query = "select distinct ?s ?sLabel ?prop "+inGraph+" where { GRAPH ?g { ?g ?prop ?extractionGraph . BIND(IRI(SUBSTR(STR(?g), 1, STRLEN(STR(?g)) - 1)) AS ?s) ?s rdfs:label ?sLabel . "+class_restriction+"  } GRAPH ?extractionGraph{ <"+val+"> rdfs:label ?entity } ?g <http://dbpedia.org/ontology/currentStatus> ?stage .  } ORDER BY ?sLabel"
-  } else if (typeProp == 'false') {
-    var val = $(el).data("value");
-    var query = "select distinct ?s ?sLabel "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> <"+val+">; rdfs:label ?sLabel . "+class_restriction+" } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } ORDER BY ?sLabel"
-  } else {
-    var val = '"'+$(el).data("value")+ '"^^xsd:'+typeProp.charAt(0).toLowerCase() + typeProp.slice(1);
-    var query = "select distinct ?s ?sLabel "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> "+val+"; rdfs:label ?sLabel . "+class_restriction+" } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } ORDER BY ?sLabel"
+  const $el = $(el);
+  const $res = $(resElem);
+
+  $('button.queryGroup').not($el).removeClass('alphaActive');
+  if ($el.hasClass('alphaActive')) return;
+  $el.addClass('alphaActive');
+
+  if (!$res.hasClass('show')) {
+    $res.collapse('show');
   }
+
+  $res.empty();
+  const resTop = $res.offset().top;
+  const resBottom = resTop + $res.outerHeight();
+  const viewportTop = $(window).scrollTop();
+  const viewportBottom = viewportTop + $(window).height();
+  if (resBottom > viewportBottom || resTop < viewportTop) {
+    $('html, body').animate({
+      scrollTop: resTop - ($(window).height() / 2) + ($res.outerHeight() / 2)
+    }, 600);
+  }
+
+  let class_restriction = '';
+  if (elemClass.length) { class_restriction = "?s a <"+elemClass+"> . "; }
+  if (elemSubclass.length) { class_restriction += "?s a <"+elemSubclass+"> . "; }
+
+  const prop = $el.data("property");
+  let query = '';
+  let val = $el.data("value");
+
+  if (fieldType === 'KnowledgeExtractor') {
+    query = "select distinct ?s ?sLabel ?prop "+inGraph+" where { GRAPH ?g { ?g ?prop ?extractionGraph . BIND(IRI(SUBSTR(STR(?g), 1, STRLEN(STR(?g)) - 1)) AS ?s) ?s rdfs:label ?sLabel . "+class_restriction+"  } GRAPH ?extractionGraph{ <"+val+"> rdfs:label ?entity } ?g <http://dbpedia.org/ontology/currentStatus> ?stage .  } ORDER BY ?sLabel";
+  } else if (typeProp === 'false') {
+    query = "select distinct ?s ?sLabel "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> <"+val+">; rdfs:label ?sLabel . "+class_restriction+" } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } ORDER BY ?sLabel";
+  } else {
+    val = '"'+val+'"^^xsd:'+typeProp.charAt(0).toLowerCase() + typeProp.slice(1);
+    query = "select distinct ?s ?sLabel "+inGraph+" where { GRAPH ?g { ?s <"+prop+"> "+val+"; rdfs:label ?sLabel . "+class_restriction+" } ?g <http://dbpedia.org/ontology/currentStatus> ?stage . FILTER( str(?stage) != 'not modified' ) } ORDER BY ?sLabel";
+  }
+
   console.log(query);
-  var encoded = encodeURIComponent(query);
+  const encoded = encodeURIComponent(query);
+
   $.ajax({
-        type: 'GET',
-        url: myPublicEndpoint+'?query=' + encoded,
-        headers: { Accept: 'application/sparql-results+json'},
-        success: function(returnedJson) {
-          for (i = 0; i < returnedJson.results.bindings.length; i++) {
-            var res = returnedJson.results.bindings[i].s.value;
-            var resID = res.substr(res.lastIndexOf('/') + 1)
-            var resLabel = returnedJson.results.bindings[i].sLabel.value;
-            var record = $("<section><a href='view-"+resID+"'>"+resLabel+"</a></section>");
-            if (returnedJson.results.bindings[i].prop) {
-              var propDict = JSON.parse(typeProp);
-              var propUri = returnedJson.results.bindings[i].prop.value;
-              console.log(propDict, propUri)
-              var propLabel = propUri in propDict ? propDict[propUri] : "";
-              if (propLabel.length) {
-                record.append("<span class='tip' data-toggle='tooltip' data-placement='bottom' title='' data-original-title='"+propLabel+"'><i class='fas fa-info-circle'></i></span>")
-              }
-            }
-            $(resElem).append(record);
-            $('.tip').tooltip();
-          };
+    type: 'GET',
+    url: myPublicEndpoint+'?query=' + encoded,
+    headers: { Accept: 'application/sparql-results+json'},
+    beforeSend: function() {
+      $res.html("<p class='loading'>Loading Records...</p>");
+    },
+    success: function(returnedJson) {
+      $res.empty();
+      for (let i = 0; i < returnedJson.results.bindings.length; i++) {
+        const res = returnedJson.results.bindings[i].s.value;
+        const resID = res.substr(res.lastIndexOf('/') + 1);
+        const resLabel = returnedJson.results.bindings[i].sLabel.value;
+        const record = $("<section><a href='view-"+resID+"'>"+resLabel+"</a></section>");
+        if (returnedJson.results.bindings[i].prop) {
+          const propDict = JSON.parse(typeProp);
+          const propUri = returnedJson.results.bindings[i].prop.value;
+          const propLabel = propUri in propDict ? propDict[propUri] : "";
+          if (propLabel.length) {
+            record.append("<span class='tip' data-toggle='tooltip' data-placement='bottom' title='' data-original-title='"+propLabel+"'><i class='fas fa-info-circle'></i></span>");
+          }
         }
+        $res.append(record);
+        $('.tip').tooltip();
+      }
+    }
   });
-};
+}
+
+
 
 function filterBySubclass(btn) {
   let subclassURI = $(btn).attr("value");
