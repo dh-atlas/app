@@ -1287,6 +1287,7 @@ class Term(object):
 		extractions_data = queries.describe_extraction_term(uri)
 		appears_in_extractions = [result["graph"]["value"][:-1] for result in extractions_data["results"]["bindings"] ] \
 			if extractions_data != None else []
+		hide_link = True if (len(appears_in_extractions) > 0 and len(appears_in) == 0) and conf.base in uri else False
 		appears_in.extend(appears_in_extractions)
 		appears_in = list(set(appears_in))
 
@@ -1310,7 +1311,7 @@ class Term(object):
 		return render.term(user=session['username'], label=label, count=count,
 						is_git_auth=is_git_auth,project=conf.myProject,base=conf.base,
 						uri=uri,name=name,results=results_by_class,map=map_coordinates,
-						main_lang=conf.mainLang)
+						hide_link=hide_link,main_lang=conf.mainLang)
 
 	def POST(self,name):
 		""" controlled vocabulary term web page

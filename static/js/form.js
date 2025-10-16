@@ -559,7 +559,7 @@ function searchCatalogue(searchterm) {
   $('#' + searchterm).off('keyup').on('keyup', function (e) {
     $("#searchresultmenu").show();
     var q = $('#' + searchterm).val();
-    var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?s (STR(?o) AS ?o_str) " + inGraph + " where { ?o bds:search '" + q + "*'. ?o bds:minRelevance '0.3'^^xsd:double . graph ?g { ?s rdfs:label ?o ; a ?class .}}";
+    var query = "prefix bds: <http://www.bigdata.com/rdf/search#> select distinct ?g ?s (STR(?o) AS ?o_str) " + inGraph + " where { ?o bds:search '" + q + "*'. ?o bds:minRelevance '0.3'^^xsd:double . graph ?g { ?s rdfs:label ?o ; a ?class .}}";
     var encoded = encodeURIComponent(query);
     if (q == '') { $("#searchresultmenu").hide(); return; }
     $.ajax({
@@ -590,13 +590,19 @@ function searchCatalogue(searchterm) {
         // process results
         for (i = 0; i < returnedJson.results.bindings.length; i++) {
           var myUrl = returnedJson.results.bindings[i].s.value;
+          var graphUri = returnedJson.results.bindings[i].g.value;
           if (myUrl.substring(myUrl.length - 1) != "/") {
             var resID = myUrl.substr(myUrl.lastIndexOf('/') + 1);
             var label = returnedJson.results.bindings[i].o_str.value;
             var normalized = label.trim().toLowerCase().replace(/\s+/g, ' ');
             if (seenLabels.has(normalized)) continue;
             seenLabels.add(normalized);
-            $("#searchresultmenu").append("<div class='wditem'><a class='blue orangeText' target='_blank' href='term?id=" + resID + "'><i class='fas fa-external-link-alt'></i> " + label + "</a></div>");
+            if (graphUri.includes(resID)) {
+                $("#searchresultmenu").append("<div class='wditem'><a class='blue orangeText' target='_blank' href='view-" + resID + "'><i class='fas fa-external-link-alt'></i> " + label + "</a></div>");
+            }
+            else {
+                $("#searchresultmenu").append("<div class='wditem'><a class='blue orangeText' target='_blank' href='term?id=" + resID + "'><i class='fas fa-external-link-alt'></i> " + label + "</a></div>");
+            }
           };
         };
       }

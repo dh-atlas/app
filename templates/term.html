@@ -1,4 +1,4 @@
-$def with (user,label,count,is_git_auth,project,base,uri,name,results,map,main_lang)
+$def with (user,label,count,is_git_auth,project,base,uri,name,results,map,hide_link,main_lang)
 
 $var user = user
 $var is_git_auth = is_git_auth
@@ -14,14 +14,15 @@ $var main_lang = main_lang
 	<section class="col-md-7">
 		$if label:
 			<h2 class="articleTitle">$label</h2>
-			$if uri == base + name:
-				<section class="info-item">
-					<h3 class="articleSubtitle">View </h3><a href="view-$name">record</a>
-				</section>
-			$else:
-				<section class="info-item">
-					<h3 class="articleSubtitle">View </h3><a href="$uri">link</a>
-				</section>
+			$if not hide_link:
+				$if uri == base + name:
+					<section class="info-item">
+						<h3 class="articleSubtitle">View </h3><a href="view-$name">record</a>
+					</section>
+				$else:
+					<section class="info-item">
+						<h3 class="articleSubtitle">View </h3><a href="$uri">link</a>
+					</section>
 			<section class="info-item">
 				$ s = 's' if count > 1 else ''
 				<h3 class="articleSubtitle">Appears in $count resource$s</h3>
