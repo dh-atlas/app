@@ -13,7 +13,9 @@ Online platform: [https://projects.dharc.unibo.it/atlas](https://projects.dharc.
 
 ### Version 2.0
 
-**Previous version:** 1.0 ([https://doi.org/10.5281/zenodo.15482298](https://doi.org/10.5281/zenodo.15482298))
+**Current version DOI:** [https://doi.org/10.5281/zenodo.17369521](https://doi.org/10.5281/zenodo.17369521)
+
+**Previous version:** 1.0 | [https://doi.org/10.5281/zenodo.15482298](https://doi.org/10.5281/zenodo.15482298)
 
 **Major updates:**
 
