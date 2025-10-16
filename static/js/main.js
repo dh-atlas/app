@@ -1727,7 +1727,7 @@ function processQueryResults(returnedJson, elemID, prop, typeProp, typeField, el
 
   // generate mini-charts
   if (!$(`#${elemID}-chart`).length) {
-    $("#"+elemID).closest(".change_background").find(".col-md-4").eq(0).append($(`<div id='${elemID}-chart' class='mini-chart'></div>`));
+    $("#"+elemID).closest(".change_background").find(".col-md-5").eq(0).append($(`<div id='${elemID}-chart' class='mini-chart'></div>`));
   } else {
     $(`#${elemID}-chart`).replaceWith($(`<div id='${elemID}-chart' class='mini-chart'></div>`));
   }
@@ -1840,7 +1840,7 @@ function getKeywordsValue(elemID, elemClass, extractionClasses, extractionProper
           
           /* // prepare charts
           if (! ($("#"+elemID+"-chart").length)) {
-            $("#"+elemID).closest(".change_background").find(".col-md-4").eq(0).append($("<div id='"+elemID+"-chart' class='mini-chart'></div>"));
+            $("#"+elemID).closest(".change_background").find(".col-md-5").eq(0).append($("<div id='"+elemID+"-chart' class='mini-chart'></div>"));
           } else {
             $("#"+elemID+"-chart").replaceWith($("<div id='"+elemID+"-chart' class='mini-chart'></div>"));
           } 

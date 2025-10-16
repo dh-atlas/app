@@ -484,14 +484,14 @@ function removeCounter(element) {
 /// VISUALIZATION ///
 /////////////////////
 
-// Charts (bar-chart, pie-chart, donut-chart, semicircle-chart)
+// Charts (bar-chart)
 function barchart(elid, data_x, data_y, data) {
   am5.ready(function() {
-    var root = am5.Root.new(elid);
+    const root = am5.Root.new(elid);
     root.setThemes([am5themes_Animated.new(root)]);
 
-    // Create chart
-    var chart = root.container.children.push(am5xy.XYChart.new(root, {
+    // Chart container
+    const chart = root.container.children.push(am5xy.XYChart.new(root, {
       panX: true,
       panY: true,
       wheelX: "panX",
@@ -499,38 +499,43 @@ function barchart(elid, data_x, data_y, data) {
       pinchZoomX: true
     }));
 
-    // Add cursor
-    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+    // Cursor
+    const cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
     cursor.lineY.set("visible", false);
 
-    // X-axis renderer (categories)
-    var xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 30 });
+    // --- X-Axis (categories) ---
+    const xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 30 });
     xRenderer.labels.template.setAll({
-      rotation: -90,
-      centerY: am5.p100,
-      centerX: am5.p100,
-      oversizedBehavior: "truncate",
-      maxHeight: 150,
-      textAlign: "center",
+      rotation: -90,                 // vertical orientation
+      centerY: am5.p50,              // balanced vertically
+      centerX: am5.p100,             // anchor right edge
+      dy: 10,                        // slight downward offset
+      textAlign: "right",            // aligns visually with bar
+      oversizedBehavior: "truncate", // cut off long text
+      maxHeight: 150,                 // maximum label width
       fill: am5.color(0x333333),
       fontSize: 14,
-      fontWeight: "300"
+      fontWeight: "300",
+      ellipsis: "…"                  // show ellipsis when truncated
     });
+
+    // Keep label rotation consistent during zoom/pan
+    xRenderer.labels.template.adapters.add("rotation", () => -90);
+
     xRenderer.grid.template.setAll({
       stroke: am5.color(0xcccccc),
       strokeOpacity: 0.5,
       strokeDasharray: [2, 2]
     });
 
-    // Create X-axis (no tooltip to avoid duplicate hover popup)
-    var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+    const xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
       maxDeviation: 0.3,
       categoryField: data_x,
       renderer: xRenderer
     }));
 
-    // Create Y-axis (values)
-    var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+    // --- Y-Axis (values) ---
+    const yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
       maxDeviation: 0.3,
       renderer: am5xy.AxisRendererY.new(root, {})
     }));
@@ -543,8 +548,8 @@ function barchart(elid, data_x, data_y, data) {
       strokeOpacity: 0.6
     });
 
-    // Create series
-    var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+    // --- Series (bars) ---
+    const series = chart.series.push(am5xy.ColumnSeries.new(root, {
       name: "Series 1",
       xAxis: xAxis,
       yAxis: yAxis,
@@ -553,19 +558,19 @@ function barchart(elid, data_x, data_y, data) {
       sequencedInterpolation: true
     }));
 
-    // Apply custom color set
+    // Custom color palette
     chart.set("colors", am5.ColorSet.new(root, {
       colors: generatePaletteForAmCharts(data.length),
       reuse: true
     }));
-    series.columns.template.adapters.add("fill", function(fill, target) {
-      return chart.get("colors").getIndex(series.columns.indexOf(target));
-    });
-    series.columns.template.adapters.add("stroke", function(stroke, target) {
-      return chart.get("colors").getIndex(series.columns.indexOf(target));
-    });
+    series.columns.template.adapters.add("fill", (fill, target) =>
+      chart.get("colors").getIndex(series.columns.indexOf(target))
+    );
+    series.columns.template.adapters.add("stroke", (stroke, target) =>
+      chart.get("colors").getIndex(series.columns.indexOf(target))
+    );
 
-    // Tooltip for series
+    // Tooltip styling
     series.set("tooltip", am5.Tooltip.new(root, {
       pointerOrientation: "vertical",
       labelText: "{categoryX}: [bold]{valueY}[/]",
@@ -585,18 +590,18 @@ function barchart(elid, data_x, data_y, data) {
       fontSize: 13,
       textAlign: "center",
       oversizedBehavior: "wrap",
-      maxWidth: 270,
+      maxWidth: 270
     });
 
-    // Set data
+    // Data + animation
     xAxis.data.setAll(data);
     series.data.setAll(data);
-
-    // Animate
     series.appear(1000);
     chart.appear(1000, 100);
   });
 }
+
+
 
 
 function invertedBarchart(elid, data_x, data_y, data) {
