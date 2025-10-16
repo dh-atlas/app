@@ -59,7 +59,7 @@
   "placeholder": "",
   "restricted": [],
   "disambiguate": "False",
-  "browse": "False",
+  "browse": "True",
   "mandatory": "False",
   "hidden": "False",
   "searchWikidata": "False",

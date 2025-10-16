@@ -86,7 +86,7 @@
   "label": "Affiliation",
   "restricted": [],
   "disambiguate": "False",
-  "browse": "False",
+  "browse": "True",
   "mandatory": "False",
   "hidden": "False",
   "value": "URI",
